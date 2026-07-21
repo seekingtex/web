@@ -13,14 +13,14 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-const categories: { key: ProductRecord['category']; label: string; desc: string }[] = [
-  { key: 'sun-protection', label: 'Sun Protection Fabrics', desc: 'UPF 50+ rated fabrics tested per AATCC 183. Available in woven and knitted constructions.' },
-  { key: 'waterproof', label: 'Waterproof Breathable Fabrics', desc: 'Microporous membrane and coated fabrics with hydrostatic pressure testing per AATCC 127.' },
-  { key: 'quick-dry', label: 'Quick-Dry Moisture Wicking Fabrics', desc: 'Moisture management fabrics with capillary-action wicking and rapid evaporation.' },
-  { key: 'antibacterial', label: '7A Antibacterial Fabrics', desc: 'Antimicrobial treated fabrics tested per GB/T 20944.3 with >99% bacterial reduction.' },
-  { key: 'stretch', label: '4-Way Stretch Fabrics', desc: 'Elastane-blended knits and wovens with warp and weft elasticity for maximum freedom of movement.' },
-  { key: 'breathable', label: 'Breathable Mesh Fabrics', desc: 'Engineered ventilation fabrics for sportswear, workwear, and lining applications.' },
-  { key: 'eco-friendly', label: 'Eco-Friendly Recycled Fabrics', desc: 'GRS-certified recycled polyester and nylon fabrics from post-consumer and pre-consumer waste.' },
+const categories: { key: string; label: string; desc: string }[] = [
+  { key: 'SUN_PROTECTION', label: 'Sun Protection Fabrics', desc: 'UPF 50+ rated fabrics tested per AATCC 183. Available in woven and knitted constructions.' },
+  { key: 'WATERPROOF', label: 'Waterproof Breathable Fabrics', desc: 'Microporous membrane and coated fabrics with hydrostatic pressure testing per AATCC 127.' },
+  { key: 'QUICK_DRY', label: 'Quick-Dry Moisture Wicking Fabrics', desc: 'Moisture management fabrics with capillary-action wicking and rapid evaporation.' },
+  { key: 'ANTIBACTERIAL', label: '7A Antibacterial Fabrics', desc: 'Antimicrobial treated fabrics tested per GB/T 20944.3 with >99% bacterial reduction.' },
+  { key: 'STRETCH', label: '4-Way Stretch Fabrics', desc: 'Elastane-blended knits and wovens with warp and weft elasticity for maximum freedom of movement.' },
+  { key: 'BREATHABLE', label: 'Breathable Mesh Fabrics', desc: 'Engineered ventilation fabrics for sportswear, workwear, and lining applications.' },
+  { key: 'ECO_FRIENDLY', label: 'Eco-Friendly Recycled Fabrics', desc: 'GRS-certified recycled polyester and nylon fabrics from post-consumer and pre-consumer waste.' },
 ];
 
 const catProducts = categories.map((cat) => ({

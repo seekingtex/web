@@ -42,7 +42,7 @@ const getSpec = (p: (typeof products)[number], label: string) => {
     <div class="mt-12 space-y-16">
       {
         (['woven', 'knit', 'coated'] as const).map((cat) => {
-          const catProducts = products.filter((p) => p.category === cat);
+          const catProducts = products.filter((p) => p.category === (cat as any));
           if (catProducts.length === 0) return null;
           const catLabel = catProducts[0]?.categoryLabel || cat;
           return (

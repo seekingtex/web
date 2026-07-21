@@ -12,7 +12,6 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
-import { SITE } from 'astrowind:config';
 
 const crumbs = [
   { name: 'Home', href: `/${lang}/` },

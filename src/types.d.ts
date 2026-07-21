@@ -82,6 +82,8 @@ export interface Product {
   metadata?: MetaData;
   Content?: AstroComponentFactory;
   readingTime?: number;
+  environment?: string[];
+  water_condition?: string[];
 }
 
 export interface MetaData {

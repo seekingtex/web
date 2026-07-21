@@ -5,7 +5,7 @@ import { defaultLang, ui } from '~/i18n/config';
 import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
 import RelatedPages from '~/components/content/RelatedPages.astro';
 
-const { lang } = Astro.params;
+const { lang = defaultLang } = Astro.params;
 const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
 
 const metadata = {

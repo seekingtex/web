@@ -21,7 +21,7 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-const categories: { key: ProductRecord['category']; label: string; desc: string }[] = [
+const categories: { key: string; label: string; desc: string }[] = [
   { key: 'RIB', label: t('techspecs.rib'), desc: t('techspecs.ribDesc') },
   { key: 'INFLATABLE', label: t('techspecs.inflatable'), desc: t('techspecs.inflatableDesc') },
   { key: 'SUP', label: t('techspecs.sup'), desc: t('techspecs.supDesc') },
@@ -30,7 +30,7 @@ const categories: { key: ProductRecord['category']; label: string; desc: string 
 
 const catProducts = categories.map((cat) => ({
   ...cat,
-  items: products.filter((p) => p.category === cat.key),
+  items: products.filter((p) => p.category === (cat.key as any)),
 }));
 ---
 

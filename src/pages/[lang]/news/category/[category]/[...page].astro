@@ -43,16 +43,17 @@ export const getStaticPaths = async () => {
   return paths;
 };
 
-const { lang } = Astro.params;
+const params = Astro.params as { lang: string; category: string; page?: string[] };
+const { lang, category } = params;
 const { paginatedPosts, currentPage, totalPages, categoryTitle } = Astro.props;
 
 const prevUrl =
   currentPage > 1
     ? currentPage === 2
-      ? `/${lang}/news/category/${Astro.params.category}/`
-      : `/${lang}/news/category/${Astro.params.category}/${currentPage - 1}/`
+      ? `/${lang}/news/category/${category}/`
+      : `/${lang}/news/category/${category}/${currentPage - 1}/`
     : undefined;
-const nextUrl = currentPage < totalPages ? `/${lang}/news/category/${Astro.params.category}/${currentPage + 1}/` : undefined;
+const nextUrl = currentPage < totalPages ? `/${lang}/news/category/${category}/${currentPage + 1}/` : undefined;
 
 const metadata = {
   title: `Category '${categoryTitle}'${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,

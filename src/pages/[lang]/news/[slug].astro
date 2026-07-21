@@ -28,7 +28,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 const { lang } = Astro.params;
-const { post } = Astro.props;
+const { post } = Astro.props as { post: Post };
 
 const url = getCanonical(getPermalink(post.permalink, 'post'));
 const image = (await findImage(post.image)) as ImageMetadata | string | undefined;
