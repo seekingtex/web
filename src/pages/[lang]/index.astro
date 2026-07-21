@@ -410,7 +410,7 @@ const trustBarItems = rawTrustBar.length
   <!-- Trust Bar -->
   <section class="border-b border-gray-100 bg-white">
     <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-12 gap-y-2 text-xs font-medium text-gray-500 uppercase tracking-wider">
-      {trustBarItems.map((item: { label: string }) => (
+      {trustBarItems.map((item: any) => (
         <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> {item.label}</span>
       ))}
     </div>
@@ -1192,7 +1192,7 @@ const trustBarItems = rawTrustBar.length
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
       {
-        testimonialItems.map((item: { name: string; quote: string; rating: number }) => (
+        testimonialItems.map((item: any) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-6">
             <div class="flex text-amber-400 text-lg">{'★'.repeat(item.rating)}</div>
             <p class="mt-4 text-gray-600 text-sm italic">{item.quote}</p>
@@ -1303,7 +1303,7 @@ const trustBarItems = rawTrustBar.length
       </div>
       <div class="grid md:grid-cols-4 gap-6">
         {
-          learnCards.map((card: { href: string; image: string; title: string }) => (
+          learnCards.map((card: any) => (
             <a
               href={card.href}
               class="group bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"
@@ -1382,7 +1382,7 @@ const trustBarItems = rawTrustBar.length
         ))}
       </div>
       <div class="space-y-4" data-faq-list>
-        {faqItems.map((item: { q: string; a: string; category: string }) => (
+        {faqItems.map((item: any) => (
           <details data-faq-item data-category={item.category} class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
             <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
               <span>{item.q}</span>
