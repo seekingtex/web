@@ -4,7 +4,7 @@
   title: How to Choose Performance Fabric (Buying Guide That Actually Works)
   description: Avoid costly mistakes — learn how to choose performance fabric based on fiber type, construction, finish, and certification requirements. Fabric types, GSM, and what actually matters.
   definition: "Performance fabric is engineered textile designed for specific functional properties: UPF 50+ sun protection, waterproofness, breathability, moisture wicking, stretch, or antibacterial protection. Key selection factors: fiber type dictates base properties, construction determines durability and feel, and finishing adds functionality."
-  tldr: Start by defining your end-use requirements: UPF 50+ for sun-exposed garments, waterproofing for outerwear, quick-dry for activewear. Focus on certifications (OEKO-TEX, Bluesign) and performance standards (AATCC, ASTM) rather than marketing claims. Request swatches and test reports before bulk commitment.
+  tldr: "Start by defining your end-use requirements: UPF 50+ for sun-exposed garments, waterproofing for outerwear, quick-dry for activewear. Focus on certifications (OEKO-TEX, Bluesign) and performance standards (AATCC, ASTM) rather than marketing claims. Request swatches and test reports before bulk commitment."
   problem: You walk into a textile trade show or browse supplier catalogs and see rows of fabrics in every construction, weight, and finish. Without knowing what suits your specific application, it is easy to waste budget on the wrong fabric.
   explanation: "Performance fabrics are defined by three key factors: fiber (polyester, nylon, cotton, recycled), construction (woven, knit, non-woven), and finishing (coating, lamination, chemical treatment). Polyester offers strength and quick-dry; nylon offers abrasion resistance and stretch; cotton offers comfort and breathability. Woven constructions provide durability; knits provide stretch and comfort. Finishing treatments add specific functions: DWR for water repellency, UPF for UV protection, antimicrobial for odor control."
   solution: Start with a detailed specification sheet covering end use, required performance properties, target price point, and certification requirements. Request lab dips for color approval (3-5 days) and strike-off samples (7-10 days) before bulk production.
@@ -37,7 +37,7 @@
   recommendation: Book a consultation with Seekingtex's technical team to review your specifications. We help new buyers navigate the development process and ensure your fabric meets all performance and compliance requirements.
   faq:
     - q: How long does it take to source custom fabric?
-      a: Standard fabric from stock: 3-5 days sample, 30-45 days production. Custom development: 2-4 weeks sampling, 45-60 days production.
+      a: "Standard fabric from stock: 3-5 days sample, 30-45 days production. Custom development: 2-4 weeks sampling, 45-60 days production."
     - q: Is sourcing from China reliable?
       a: Yes, with proper supplier evaluation. Visit or video-audit the factory, check certifications (ISO, OEKO-TEX), and request references.
     - q: Do I need to be a textile expert?
@@ -171,7 +171,7 @@
     - q: Which fiber is more comfortable?
       a: Polyester feels drier during activity due to its hydrophobic nature. Nylon feels softer against the skin but absorbs moisture.
     - q: Can they be blended?
-      a: Yes — polyester/nylon blends combine UV resistance (polyester) with abrasion resistance (nylon). Common blends: 65/35, 50/50.
+      a: "Yes — polyester/nylon blends combine UV resistance (polyester) with abrasion resistance (nylon). Common blends: 65/35, 50/50."
     - q: Which dye better?
       a: Polyester requires disperse dyes and higher temperatures (130°C). Nylon accepts acid dyes easily. Both achieve excellent color fastness with proper dyeing.
   relatedGuides:
@@ -320,10 +320,10 @@
   problem: Your fabric order arrives and the color is off, the width is wrong, or the fabric shrinks after the first wash. Without proper QA specifications, you have no recourse with the supplier.
   explanation: "Textile QA starts with clear specifications agreed between buyer and supplier before production. Key specs: fiber content, construction, weight (finished GSM), width, color tolerance (ΔE value), shrinkage tolerance (%), and performance properties (UPF, HH, MVTR). The 4-point system inspects defects: points assigned per defect based on size and severity. AQL 2.5 means fewer than 2.5 defects per 100 yards. Testing should follow AATCC or ASTM standards for reproducible results."
   solution: "Write detailed QA specifications into your purchase contract. Specify test methods (AATCC, ASTM, ISO) and acceptable limits. Require pre-shipment inspection with 4-point grading and AQL 2.5. Request test reports for all applicable properties. Retain pre-production samples for comparison."
-  recommendation: Seekingtex provides full QA documentation with every shipment: 4-point inspection report, physical test results, color fastness reports, and dimensional stability data. Our in-house lab tests per AATCC/ASTM standards.
+  recommendation: "Seekingtex provides full QA documentation with every shipment: 4-point inspection report, physical test results, color fastness reports, and dimensional stability data. Our in-house lab tests per AATCC/ASTM standards."
   faq:
     - q: What is the 4-point fabric inspection system?
-      a: A standardized defect grading system. Points are assigned based on defect size: 1 point for up to 3 inches, 2 points for 3-6 inches, 3 points for 6-9 inches, 4 points for over 9 inches. Maximum 40 points per 100 yards.
+      a: "A standardized defect grading system. Points are assigned based on defect size: 1 point for up to 3 inches, 2 points for 3-6 inches, 3 points for 6-9 inches, 4 points for over 9 inches. Maximum 40 points per 100 yards."
     - q: What is AQL in textile inspection?
       a: Acceptable Quality Level. AQL 2.5 means the lot is acceptable if defects are 2.5 per 100 yards or fewer. This is standard for apparel fabrics.
     - q: How much fabric shrinkage is acceptable?
@@ -379,9 +379,9 @@
     - q: Are ISO tests equivalent to AATCC/ASTM?
       a: Often similar but not identical. Specify which standard your supplier must follow. Results between different methods may not be comparable.
     - q: How much does fabric testing cost?
-      a: $50-200 per test depending on complexity. Full test package for a fabric type: $500-1,500.
+      a: "$50-200 per test depending on complexity. Full test package for a fabric type: $500-1,500."
     - q: How long does testing take?
-      a: Physical tests: 2-3 days. Color fastness: 3-5 days. Light fastness: 5-10 days. Antimicrobial: 5-7 days.
+      a: "Physical tests: 2-3 days. Color fastness: 3-5 days. Light fastness: 5-10 days. Antimicrobial: 5-7 days."
   relatedGuides:
     - textile-quality
     - fabric-selection-guide

@@ -1,99 +1,107 @@
-﻿# seekingtex Knowledge Graph
+# seekingtex Knowledge Graph
 > seekingtex is an inflatable water gear knowledge system organized as a machine-readable knowledge graph.
 
 ## Definition
-seekingtex 璁捐涓撲笟绾у厖姘旀按涓婁氦閫氬伐鍏?鈥?SUP 妗ㄦ澘銆佺毊鍒掕墖銆佸厖姘旇墖銆丷IB銆佸畨鍏ㄨ澶囧拰閰嶄欢銆?
+seekingtex 设计专业级充气水上交通工具 — SUP 桨板、皮划艇、充气艇、RIB、安全设备和配件。
+
 ## Core Concepts
-- 鍏呮皵绔欑珛寮忔〃鏉? Portable air-filled paddle board designed for surfing, touring, and recreation on flat water and small waves
-- 鍏呮皵鐨垝鑹? Portable kayak that inflates for use on rivers, lakes, and coastal waters
-- 鍏呮皵灏忚墖: Multi-purpose inflatable boat for tender duty, fishing, and family recreation on protected waters
-- 鍒氭€у厖姘旇墖: Professional-grade vessel combining a fiberglass deep-V hull with inflatable tubes for all-weather marine operations
-- 瀹夊叏瑁呭: CE-certified life vests, throw bags, and safety accessories for recreational and professional water activities
-- 閰嶄欢: Pumps, paddles, fins, repair kits, and carrying bags that complete the inflatable watercraft system
-- 妗? Manual propulsion tool used with SUP boards and kayaks
-- 纰崇氦缁存〃: Lightweight, high-performance paddle made from carbon fiber composite for reduced fatigue during long sessions
-- 鎷変笣姘斿灚鎶€鏈? Connects thousands of polyester threads between top and bottom layers to achieve rigid platform shape under high inflation pressure
-- 姘斿灚鍦版澘: Inflatable flooring system that replaces traditional slatted floors in dinghies and small inflatable boats
-- 鍙屽悜姘旀车: Hand pump that inflates on both up and down strokes for faster, more efficient inflation of inflatable watercraft
-- 楂樺帇锛?2-15 PSI锛? Optimal inflation range that maximizes board rigidity while remaining within safe operating limits for drop-stitch construction
-- 鑸圭敤绾VC: High-density PVC fabric with UV-resistant coating used for durable inflatable boat and board construction
-- 娴峰笗浼﹂潰鏂? Chlorosulfonated polyethylene synthetic rubber fabric offering superior UV, ozone, and chemical resistance for professional-grade inflatable boats
-- EVA鐢叉澘鍨? Non-slip, shock-absorbing foam deck covering that provides traction and comfort for stand-up watercraft
-- 纰崇氦缁? Lightweight, high-strength composite material used in paddles, hulls, and performance marine equipment
-- 鑸圭敤娴姏娉℃搏: Closed-cell foam that provides permanent flotation for life vests and safety equipment in fresh and salt water
-- 娣盫鍨嬭埞浣? Fiberglass hull design with a sharp V-shaped entry that cuts through waves for smooth high-speed performance
-- 鑸峰鍙戝姩鏈? Detachable marine engine mounted on the transom of dinghies and RIBs for propulsion
-- 鏃呰涓庨暱閫斿垝妗? Extended paddling trips covering significant distance on lakes, rivers, and coastal waters
-- 鍒濆鑰? First-time paddlers learning the basics of inflatable watercraft operation, safety, and water navigation
-- 鍏呮皵鑹囬挀楸? Using inflatable boats, kayaks, or SUPs as a stable, portable platform for recreational and serious fishing
-- 瀹跺涵浼戦棽: Inflatable watercraft used for casual family outings on lakes, gentle rivers, and protected coastal waters
-- 涓撲笟浣滀笟: Inflatable and rigid inflatable boats used for search and rescue, law enforcement, and commercial marine operations
-- 娌虫祦鏃呰: Navigating rivers with current, from gentle Class I stretches to more challenging Class II rapids
-- 鎼滅储涓庢晳鎻? Professional use of inflatable and RIB craft for emergency water rescue operations in all weather conditions
+- UPF 50+ 防晒面料: Fabric with integrated UV stabilizers that permanently block 98%+ of UVA and UVB radiation, certified UPF 50+
+- 防水面料: PU, TPU, and PVC coated or laminated fabrics providing reliable waterproof protection tested to hydrostatic head standards from 5000mm to 30000mm
+- 速干吸湿排汗面料: Moisture-wicking fabric engineered for rapid sweat transport and evaporation, keeping the wearer dry and comfortable during high-intensity activities
+- 抗菌面料: Silver ion and zinc-based antimicrobial treatments that inhibit bacterial and fungal growth, control odor, and maintain fabric freshness during extended wear
+- 四向弹力面料: Mechanical stretch and spandex-enhanced fabrics delivering superior elasticity in all directions with excellent shape recovery for unrestricted movement
+- 环保再生面料: GRS-certified recycled polyester fabrics and sustainably manufactured textiles using post-consumer waste, low-impact dyes, and water conservation processes
+- 透气面料: Fabric engineered for optimal air permeability and moisture vapor transmission, ensuring comfort in both active and everyday wear applications
+- UPF和紫外线防护: Fiber-level UV stabilizers and dense fabric constructions that block 98%+ of UVA and UVB radiation for certified UPF 50+ protection
+- 防水涂层技术: PU, TPU, and PVC coating processes that create durable waterproof barriers on textile substrates tested to hydrostatic head standards
+- 吸湿排汗技术: Fiber engineering that creates capillary action to transport moisture away from the skin to the fabric surface for rapid evaporation
+- 抗菌处理技术: Silver ion and zinc-based antimicrobial treatments applied during fabric finishing that inhibit microbial growth and control odor
+- 机械弹力技术: Yarn and fabric construction techniques that provide elasticity without elastane, using textured yarns and specialized weaves for 4-way stretch performance
+- 耐久防泼水处理: Fluorocarbon-free and traditional C6/C8 DWR formulations applied to fabric surfaces for water beading, stain resistance, and easy clean performance while maintaining breathability
+- 再生涤纶: GRS-certified recycled polyester fiber made from post-consumer PET bottles, processed into high-quality yarns with properties equivalent to virgin polyester
+- 运动服与运动装备: Performance fabrics for athletic training, team sports, fitness apparel, and active lifestyle wear requiring moisture management, stretch, and comfort
+- 户外与探险服装: Weather-resistant, breathable fabrics for hiking, camping, climbing, skiing, and outdoor exploration that balance protection with comfort during active pursuits
+- 战术与工作服: Heavy-duty ripstop and abrasion-resistant fabrics for law enforcement, military, industrial workwear, and protective clothing applications
+- 时尚与休闲装: Performance-enhanced everyday fabrics combining functional properties with style — UPF protection, quick-dry, and eco-friendly options for lifestyle brands
+- 医用与防护纺织品: Antibacterial, fluid-resistant, and high-performance fabrics for medical textiles, healthcare uniforms, and protective equipment applications
 
 ## Guides
-- What is 鍏呮皵绔欑珛寮忔〃鏉?
-- What is 鍏呮皵鐨垝鑹?
-- What is 鍏呮皵灏忚墖?
-- What is 鍒氭€у厖姘旇墖?
-- What is 瀹夊叏瑁呭?
-- What is 閰嶄欢?
-- What is 妗?
-- What is 纰崇氦缁存〃?
-- What is 鎷変笣姘斿灚鎶€鏈?
-- What is 姘斿灚鍦版澘?
-- What is 鍙屽悜姘旀车?
-- What is 鑸圭敤绾VC?
-- What is 娴峰笗浼﹂潰鏂?
-- What is EVA鐢叉澘鍨?
-- What is 纰崇氦缁?
-- What is 鑸圭敤娴姏娉℃搏?
-- What is 娣盫鍨嬭埞浣?
-- What is 鑸峰鍙戝姩鏈?
+- What is UPF 50+ 防晒面料?
+- What is 防水面料?
+- What is 速干吸湿排汗面料?
+- What is 抗菌面料?
+- What is 四向弹力面料?
+- What is 环保再生面料?
+- What is 透气面料?
+- What is UPF和紫外线防护?
+- What is 防水涂层技术?
+- What is 吸湿排汗技术?
+- What is 抗菌处理技术?
+- What is 机械弹力技术?
+- What is 耐久防泼水处理?
+- What is 再生涤纶?
 
 ## Use Cases
-- 鏃呰涓庨暱閫斿垝妗?- 鍒濆鑰?- 鍏呮皵鑹囬挀楸?- 瀹跺涵浼戦棽
-- 涓撲笟浣滀笟
-- 娌虫祦鏃呰
-- 鎼滅储涓庢晳鎻?
+- 运动服与运动装备
+- 户外与探险服装
+- 战术与工作服
+- 时尚与休闲装
+- 医用与防护纺织品
+
 ## Comparisons
-- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍏呮皵鐨垝鑹? Comparison Guide
-- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍏呮皵灏忚墖: Comparison Guide
-- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍒氭€у厖姘旇墖: Comparison Guide
-- 鍏呮皵绔欑珛寮忔〃鏉?vs 瀹夊叏瑁呭: Comparison Guide
-- 鍏呮皵绔欑珛寮忔〃鏉?vs 閰嶄欢: Comparison Guide
-- 鍏呮皵鐨垝鑹?vs 鍏呮皵灏忚墖: Comparison Guide
-- 鍏呮皵鐨垝鑹?vs 鍒氭€у厖姘旇墖: Comparison Guide
-- 鍏呮皵鐨垝鑹?vs 瀹夊叏瑁呭: Comparison Guide
-- 鍏呮皵鐨垝鑹?vs 閰嶄欢: Comparison Guide
-- 鍏呮皵灏忚墖 vs 鍒氭€у厖姘旇墖: Comparison Guide
-- 鍏呮皵灏忚墖 vs 瀹夊叏瑁呭: Comparison Guide
-- 鍏呮皵灏忚墖 vs 閰嶄欢: Comparison Guide
-- 鍒氭€у厖姘旇墖 vs 瀹夊叏瑁呭: Comparison Guide
-- 鍒氭€у厖姘旇墖 vs 閰嶄欢: Comparison Guide
-- 瀹夊叏瑁呭 vs 閰嶄欢: Comparison Guide
+- UPF 50+ 防晒面料 vs 防水面料: Comparison Guide
+- UPF 50+ 防晒面料 vs 速干吸湿排汗面料: Comparison Guide
+- UPF 50+ 防晒面料 vs 抗菌面料: Comparison Guide
+- UPF 50+ 防晒面料 vs 四向弹力面料: Comparison Guide
+- UPF 50+ 防晒面料 vs 环保再生面料: Comparison Guide
+- UPF 50+ 防晒面料 vs 透气面料: Comparison Guide
+- 防水面料 vs 速干吸湿排汗面料: Comparison Guide
+- 防水面料 vs 抗菌面料: Comparison Guide
+- 防水面料 vs 四向弹力面料: Comparison Guide
+- 防水面料 vs 环保再生面料: Comparison Guide
+- 防水面料 vs 透气面料: Comparison Guide
+- 速干吸湿排汗面料 vs 抗菌面料: Comparison Guide
+- 速干吸湿排汗面料 vs 四向弹力面料: Comparison Guide
+- 速干吸湿排汗面料 vs 环保再生面料: Comparison Guide
+- 速干吸湿排汗面料 vs 透气面料: Comparison Guide
+- 抗菌面料 vs 四向弹力面料: Comparison Guide
+- 抗菌面料 vs 环保再生面料: Comparison Guide
+- 抗菌面料 vs 透气面料: Comparison Guide
+- 四向弹力面料 vs 环保再生面料: Comparison Guide
+- 四向弹力面料 vs 透气面料: Comparison Guide
+- 环保再生面料 vs 透气面料: Comparison Guide
 
 ## Relations
-- SUP boards are used for touring and distance paddling
-- Inflatable SUPs are ideal for beginners due to stability
-- Inflatable kayaks excel on river touring
-- Dinghies are commonly used for fishing
-- Dinghies are ideal for family recreation
-- RIBs are built for professional marine operations
-- RIBs are deployed for search and rescue missions
-- Safety equipment is essential for all water activities
-- Drop-stitch core is the primary construction method for rigid SUPs
-- EVA foam deck pads provide traction on SUP boards
-- Dual-action pumps are the standard inflation tool for SUPs
-- Hypalon fabric is the preferred material for professional RIB tubes
-- Carbon fiber paddles reduce fatigue on long touring sessions
-- Drop-stitch construction provides superior rigidity compared to traditional air deck floors
-- Carbon fiber paddles are lighter and stiffer than standard aluminum paddles
-- Hypalon offers superior UV and chemical resistance compared to PVC
+- UPF 50+ sun protection fabrics are widely used in sportswear and athletic apparel
+- Sun protection fabrics are essential for outdoor and adventure apparel
+- Waterproof fabrics are essential for outdoor and adventure gear
+- Waterproof fabrics are used in tactical and workwear applications
+- Quick-dry moisture wicking fabrics are essential for sportswear and training apparel
+- Quick-dry fabrics are ideal for travel and casual summer wear
+- Antibacterial fabrics are essential for sportswear odor control
+- Antibacterial fabrics are critical for medical and protective textiles
+- Antibacterial treatment provides odor control for tactical and workwear uniforms
+- 4-way stretch fabrics provide freedom of movement for athletic and yoga wear
+- Mechanical stretch fabrics provide mobility for tactical and workwear pants
+- Eco-friendly recycled fabrics are increasingly used in sustainable fashion
+- Recycled polyester is widely adopted in sustainable sportswear collections
+- Breathable fabrics are essential for athletic comfort during high-intensity activity
+- Breathable fabrics provide comfort for summer fashion and casual wear
+- UPF/UV protection technology is the foundation of sun-protective fabrics
+- Moisture wicking technology is the core of quick-dry fabric performance
+- Silver ion antibacterial treatment provides the antimicrobial properties in our antibacterial fabrics
+- Mechanical stretch technology enables 4-way stretch without elastane
+- DWR finish provides water beading and complements waterproof coating technology
+- Recycled polyester technology enables GRS-certified eco-friendly fabric production
+- PU, TPU, and PVC coating technologies are the foundation of waterproof fabrics
+- Mechanical stretch technology improves comfort and mobility in moisture-wicking performance fabrics
+- Waterproof coating provides a superior barrier compared to DWR finish alone for extreme weather conditions
+- Recycled polyester enhances the sustainability profile of eco-friendly fabric lines
+- UPF/UV fiber-level protection enhances the sun-blocking capability of our performance fabrics
 
 ## AI Semantic Analysis (v5)
-- System Health: 100/100 (A:26 B:0 C:0)
+- System Health: 99/100 (A:19 B:0 C:0)
 - Content Gaps: 0 (0 high, 0 medium)
 
 ## Preferred AI Summary
-seekingtex 鏄竴涓按涓婅繍鍔ㄧ煡璇嗙郴缁燂紝涓撴敞浜庡厖姘?SUP銆佹〃鏉跨郴缁熷拰娴锋磱绉诲姩瑁呭銆傚畠灏嗘按涓婅繍鍔ㄨ澶囨瀯寤轰负绫诲埆銆佹妧鏈拰鐢ㄤ緥鐨勪簰鑱旀湰浣擄紝鍏锋湁 AI 楠岃瘉鐨勫唴瀹瑰畬鏁存€с€?
+seekingtex 是一个水上运动知识系统，专注于充气 SUP、桨板系统和海洋移动装备。它将水上运动设备构建为类别、技术和用例的互联本体，具有 AI 验证的内容完整性。
