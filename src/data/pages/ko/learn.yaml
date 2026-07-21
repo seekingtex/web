@@ -1,0 +1,73 @@
+﻿hero:
+  tagline: '靾橃儊 韮愴棙 歆€鞁?
+  title: '頃欖姷'
+  subtitle: |
+    臧€鞚措摐, 韸滍啝毽柤 氚?鞁傅 攵勳劃 鈥旍瀽鞁犼皭 鞛堦矊 氍检潉 韮愴棙頃橂姅 雿?頃勳殧頃?氇摖 瓴?<br />
+    觳?氩堨Ц SUP 靹犿儩攵€韯?瓿犼笁 旮办垹 毵堨姢韯瓣箤歆€.
+  taglineSection: '氇摖 韺摛霟ゼ 鞙勴暅 歆€鞁? 齑堧炒鞛愲秬韯?鞝勲臧€旯岇.'
+
+featured:
+  tagline: '於旍矞 欤检牅'
+  title: '頃欖姷 鞐爼 鞁滌瀾頃橁赴'
+  subtitle: '靾橃儊 鞀ろ彫旄犽ゼ 觳橃潓 鞝戫晿瓯半倶 霠堧波鞐呾潉 鞗愴晿霌? 鞖半Μ鞚?臧€鞚措摐臧€ 霃勳檧霌滊雼堧嫟.'
+  items:
+    - title: 'SUP 旮办磮'
+      description: '齑堧炒鞛愱皜 鞎岇晞鞎?頃?氇摖 瓴?鈥旊炒霌?鞙犿槙, 韺摛 韥赴, 鞛愳劯 氚?觳偁 韺?'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: '韺届敖鞁?vs 頃橂摐 氤措摐'
+      description: '鞏措姁 瓴冹澊 雼轨嫚鞐愱矊 鞝來暕頃犼箤鞖? 頊措寑靹? 靹彪姤, 雮搓惮靹?氚?牍勳毄鞚?牍勱祼頃╇媹雼?'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: '靾橃儊 鞎堨爠'
+      description: '氇摖 韺摛霟皜 鞎岇晞鞎?頃?頃勳垬 鞎堨爠 歆€鞁?鈥旊偁鞌? PFD, 鞛愱赴 甑“ 霌?'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: '鞛 臧€鞚措摐'
+      description: 'PVC vs Hypalon, 霌滊… 鞀ろ嫲旃?旮办垹 鈥旍灔牍勱皜 氍挫棁鞙茧 毵岆摛鞏挫電旍 鞚错暣頃橃劯鞖?'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP 靷澊歃?臧€鞚措摐'
+      description: '觳挫, 旮办垹 氚?韺摛毵?鞀ろ儉鞚检棎 毵炿姅 鞓皵毳?氤措摐 旮胳澊, 雱堧箘 氚?攵€頂茧ゼ 彀眷溂靹胳殧.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: '欷戧笁 旮办垹'
+      description: '瓿犼笁 鞀ろ姼搿滍伂, 須岇爠 旮办垹搿?韺摛毵?靾橃鞚?雴掛澊靹胳殧.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: '旃错厡瓿犽Μ'
+  title: '欤检牅氤?韮愴棙'
+  subtitle: '氇摖 頃欖姷 旖橅厫旄犼皜 旮办垹 靾橃瓿?甏€鞁偓氤勲 鞝曤Μ霅橃柎 鞛堨姷雼堧嫟.'
+  columns:
+    - title: '齑堦笁'
+      items:
+        - 'SUP 旮办磮 鈥旍棳旮办劀 鞁滌瀾頃橃劯鞖?
+        - '韺届敖鞁?vs 頃橂摐 氤措摐'
+        - '靾橃儊 鞎堨爠 頃勳垬'
+        - 'SUP 靹犿儩 氚╇矔'
+        - '韼岉攧 氚?韺?臧€鞚措摐'
+    - title: '欷戧笁'
+      items:
+        - '韺摛毵?旮办垹'
+        - '韺届敖鞁?旮办垹'
+        - '鞛 彀胳“'
+        - 'PVC vs Hypalon 牍勱祼'
+        - '霌滊… 鞀ろ嫲旃?旖旍柎 靹る獏'
+    - title: '瓿犼笁 氚?鞝勲臧€'
+      items:
+        - '頃寑 鞖挫榿'
+        - '靸侅梾鞖?鞛ル箘'
+        - '鞎堨爠 氚?甑“ 頂勲韱犾綔'
+        - '毵烄钉 鞝滌瀾 氚?OEM'
+
+cta:
+  title: '鞎勳 歆堧鞚?鞛堨溂鞁犼皜鞖?'
+  subtitle: 'AI 臧€鞚措摐鞐愱矊 鞛ル箘, 鞎堨爠 氚?旮办垹鞐?雽€頃?毵烄钉順?雼惦硛鞚?氍检柎氤挫劯鞖?'
+  actions:
+    - variant: primary
+      text: '鞗岉劙 鞏措摐氚旍澊鞝€ AI鞐愱矊 氍检柎氤搓赴'
+      href: '#ai-guide'
+    - text: '氇摖 臧€鞚措摐 氤搓赴'
+      href: '/academy'

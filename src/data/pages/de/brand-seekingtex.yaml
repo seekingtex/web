@@ -1,0 +1,29 @@
+hero:
+  tagline: Marke
+  title: '{BRAND}'
+  subtitle: Ozean-Performance f眉r jeden Surfer
+  cta: Ausr眉stung entdecken 鈫?  cta_link: /products
+  secondary_cta: Surfen lernen
+  secondary_cta_link: /guides
+
+position:
+  tagline: Position
+  subtitle: Ozean-Performance f眉r jeden Surfer
+
+products_section:
+  tagline: Produkte
+  cta: Alle Produkte 鈫?  cta_link: /products
+
+global_section:
+  tagline: Global
+  title: In {count} Regionen erh盲ltlich
+
+social_section:
+  tagline: Soziales
+  title: Was Surfer lesen
+  read_guide: Leitfaden lesen 鈫?
+cta_section:
+  title: Starten Sie Ihre Ozean-Reise
+  subtitle: Jedes Produkt CE-zertifiziert. Mit Garantie. F眉r echten Surfsport entwickelt.
+  cta_suffix: '鈫?
+  secondary_cta: 脺ber {BRAND}

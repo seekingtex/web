@@ -1,0 +1,208 @@
+hero:
+  tagline: 'Engineering Performance Fabrics'
+  title: 'Seekingtex'
+  subtitle: |
+    A leading manufacturer of high-performance functional fabrics<br />
+    for sportswear, outdoor apparel, and tactical gear<br />
+    serving brands worldwide since 2012.
+  taglineSection: 'Innovation in textiles. Performance in every thread. Trusted by global brands.'
+  actions:
+    - variant: primary
+      text: Browse products
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Learn more
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Seekingtex functional fabric manufacturing facility — high-performance textile production
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-fabrics.webp
+        alt: Seekingtex functional fabric production facility overview — textile manufacturing workshop
+      tagline: Welcome
+      title: |
+        Engineered for performance. <br />
+        Built for <span class="text-sky-300">everyday wear</span>.
+      subtitle: Premium functional fabrics for sportswear, outdoor apparel, and tactical applications.
+      actions:
+        - text: Browse products
+          href: /products
+          variant: primary
+        - text: Get a quote
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-quality.webp
+        alt: Seekingtex fabric quality control and testing laboratory
+      tagline: Craftsmanship
+      title: |
+        Fabrics that outperform expectations. <br />
+        Quality that builds trust.
+      subtitle: OEKO-TEX certified materials. SGS tested. Global brands rely on our quality.
+      actions:
+        - text: Our story
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/hero-support.webp
+        alt: Seekingtex customer service and technical support team
+      tagline: Support
+      title: |
+        Engineered before delivered. <br />
+        Supported long after.
+      subtitle: Dedicated technical support team. Fast sample delivery. OEM/ODM partnership from concept to production.
+      actions:
+        - text: Contact us
+          href: /contact
+          variant: primary
+        - text: Get a quote
+          href: /contact
+          variant: secondary
+
+features:
+  id: features
+  tagline: Why Seekingtex
+  title: What you get with Seekingtex
+  subtitle: Decades of textile engineering experience, distilled into focused product lines. Quality tested, performance verified, globally trusted.
+  columns: 2
+  items:
+    - title: Premium raw materials
+      description: Sourcing the finest fibers and chemicals from leading global suppliers for consistent quality.
+      icon: tabler:shield-check
+    - title: Production-ready quality
+      description: Every batch is tested for colorfastness, dimensional stability, and performance properties before shipping.
+      icon: tabler:certificate
+    - title: Customized solutions
+      description: Develop custom fabric specifications — weight, composition, finish, color — to match your exact requirements.
+      icon: tabler:layout-grid
+    - title: Honest specifications
+      description: Real performance data, real test results. No marketing inflation, ever.
+      icon: tabler:ruler-measure
+    - title: Fast sample delivery
+      description: Sample orders processed within 3-5 days. Bulk production with reliable lead times.
+      icon: tabler:truck-delivery
+    - title: Lifetime technical support
+      description: Direct line to our textile engineers for technical questions, development support, and after-sales service.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: Featured products
+  subtitle: Hand-picked from our current catalog — the most popular functional fabrics this season.
+  linkText: View all products
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Built different
+  title: Every product tells a story of craftsmanship
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Quality you can see, feel and measure</h3>
+  items:
+    - title: Designed for real performance
+      description: Every fabric is engineered for specific applications — sportswear, outdoor gear, or tactical apparel — so you get the right textile for your product.
+    - title: Made with premium materials
+      description: From polyester to nylon to specialty blends, every material is selected for performance, durability, and comfort.
+    - title: Tested before it reaches you
+      description: Every batch is tested for UPF rating, water resistance, tensile strength, and performance properties before leaving our facility.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Seekingtex textile production facility — quality craftsmanship in Kunshan workshop
+
+steps:
+  title: Your journey to the perfect fabric, simplified
+  items:
+    - title: 'Step 1: <span class="font-medium">Specify</span>'
+      description: Define your fabric requirements — performance properties, weight, composition, finish, and target application.
+      icon: tabler:search
+    - title: 'Step 2: <span class="font-medium">Sample</span>'
+      description: We develop samples matching your specifications with fast turnaround. Revisions included until perfect.
+      icon: tabler:shopping-cart
+    - title: 'Step 3: <span class="font-medium">Approve</span>'
+      description: Approve the final sample and confirm your production quantity. We handle quality control and testing certification.
+      icon: tabler:package
+    - title: 'Step 4: <span class="font-medium">Produce</span>'
+      description: Bulk production begins with rigorous in-process quality checks. Regular progress updates throughout.
+      icon: tabler:waves
+    - title: 'Step 5: <span class="font-medium">Deliver</span>'
+      description: Your order ships from our facility with complete test reports and certification documents.
+      icon: tabler:heart
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Seekingtex fabric quality testing process — performance textile production
+
+blog_latest:
+  title: From the journal
+  information: |
+    Articles, technical notes and case studies from our textile engineering team.
+    New entries are added whenever a new technology is developed, a standard is updated, or a project is worth sharing.
+
+faqs:
+  title: Frequently Asked Questions
+  subtitle: Common enquiries about Seekingtex functional fabrics, sampling, MOQ, shipping, and OEM/ODM partnerships. If yours is not here, drop us a line.
+  columns: 2
+  items:
+    - title: What is the minimum order quantity (MOQ) for Seekingtex fabrics?
+      description: "Our standard MOQ is 1000 meters per color per specification. For first-time customers and sample orders, we offer lower quantities at competitive rates. Contact us for specific requirements."
+      icon: tabler:truck-delivery
+      category: all
+    - title: How long does sample development take?
+      description: "Standard sample development takes 3-5 business days. Custom development may require 7-10 days depending on complexity. We prioritize fast turnaround for all sample requests."
+      icon: tabler:clock
+      category: all
+    - title: What certifications do Seekingtex fabrics hold?
+      description: "Our fabrics are OEKO-TEX Standard 100 certified, REACH compliant, and many styles carry BLUESIGN, GRS, and UV Standard 801 certifications. Specific certifications vary by product."
+      icon: tabler:shield-check
+      category: all
+    - title: Do you offer custom fabric development?
+      description: "Yes, we offer full OEM/ODM fabric development services — custom compositions, weights, finishes, colors, and performance properties. Our R&D team works closely with your specification requirements."
+      icon: tabler:settings
+      category: all
+    - title: What is the typical lead time for bulk production?
+      description: "Standard bulk production lead time is 25-35 days from sample approval and deposit confirmation. Rush orders may be accommodated depending on production capacity."
+      icon: tabler:calendar-clock
+      category: all
+    - title: What payment terms do you accept?
+      description: "We accept T/T (wire transfer), L/C at sight, and other mutually agreed payment methods. Standard terms are 30% deposit, 70% before shipment for new customers."
+      icon: tabler:currency-dollar
+      category: all
+    - title: Do you provide fabric testing reports?
+      description: "Yes, all shipments include complete quality test reports covering physical properties, colorfastness, dimensional stability, and performance specifications. Third-party testing is available upon request."
+      icon: tabler:file-text
+      category: all
+    - title: Can you match specific Pantone colors?
+      description: "Yes, we can match any Pantone color. Our color laboratory uses advanced spectrophotometry for precise color matching. Minimum color-matching charge may apply for custom colors."
+      icon: tabler:palette
+      category: all
+    - title: What fabric widths are available?
+      description: "Our standard fabric width is 58/60 inches (147/152 cm). Custom widths are available for bulk orders subject to production feasibility."
+      icon: tabler:layout-list
+      category: all
+    - title: Do you ship internationally?
+      description: "Yes, we ship worldwide via sea freight, air freight, and express courier (DHL, FedEx, UPS). We handle all export documentation and customs clearance support."
+      icon: tabler:world
+      category: all
+    - title: What is the difference between UPF 50+ and standard fabrics?
+      description: "UPF 50+ fabrics block 98% of harmful UV radiation, offering excellent sun protection. Standard fabrics typically provide UPF 5-15. Our sun protection fabrics are independently tested and certified to UV Standard 801."
+      icon: tabler:sun
+      category: all
+    - title: Are your waterproof fabrics eco-friendly?
+      description: "We offer both standard and eco-friendly options. Our PFAS-free waterproof fabrics use environmentally sustainable DWR treatments without compromising performance. Check individual product specifications."
+      icon: tabler:leaf
+      category: all
+
+cta:
+  title: |
+    Ready to elevate your products? <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">We are here to help.</span>
+  subtitle: All fabrics OEKO-TEX certified, every shipment backed by quality guarantee. Contact us for samples, quotes, or technical support.
+  actions:
+    - variant: primary
+      text: Browse all products
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Talk to our team
+      href: /contact

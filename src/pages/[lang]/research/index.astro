@@ -1,0 +1,89 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import researchData from '~/data/site/research.yaml';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `Research & Knowledge Center | ${SITE.name}`,
+  description: `In-depth technical research on functional fabrics: UPF/UV protection technology, waterproof breathable systems, textile certifications, fabric weight and thickness, and OEM/ODM sourcing.`,
+  ignoreTitleTemplate: true,
+};
+
+interface ResearchTopic { slug: string; category: string; readTime: string }
+
+const topics: ResearchTopic[] = (researchData as any)?.topics ?? [];
+
+const topicMeta: Record<string, { titleKey: string; descKey: string }> = {
+  'drop-stitch-technology': { titleKey: 'home.research.dropStitch', descKey: 'home.research.dropStitch.desc' },
+  'pvc-vs-hypalon': { titleKey: 'home.research.pvcHypalon', descKey: 'home.research.pvcHypalon.desc' },
+  'ce-certification-guide': { titleKey: 'home.research.ceCertification', descKey: 'home.research.ceCertification.desc' },
+  'fabric-weight-thickness-guide': { titleKey: 'home.research.fabricWeightThickness', descKey: 'home.research.fabricWeightThickness.desc' },
+  'fabric-oem-odm-buyer-guide': { titleKey: 'home.research.fabricOemBuyer', descKey: 'home.research.fabricOemBuyer.desc' },
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Research & Knowledge Center',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.title')}</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('home.research.tagline')}</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">{t('home.research.title')}</h1>
+      <p class="mt-4 text-lg text-gray-500">{t('home.research.subtitle')}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        topics.map((tpc) => {
+          const meta = topicMeta[tpc.slug];
+          if (!meta) return null;
+          return (
+            <a
+              href={`/${lang}/research/${tpc.slug}`}
+              class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+                  {tpc.category}
+                </span>
+                <span class="text-xs text-gray-400">{tpc.readTime}</span>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                {t(meta.titleKey)}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 flex-1">{t(meta.descKey)}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                {t('home.research.read')}
+              </span>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>

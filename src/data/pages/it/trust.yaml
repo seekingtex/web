@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Costruito secondo standard che contano'
+  title: 'Fidati di Seekingtex'
+  subtitle: |
+    Ogni prodotto che costruiamo 鐚?certificato CE 閳?testato per sicurezza,<br />
+    durata e prestazioni. Niente scorciatoie. Niente eccezioni.
+  taglineSection: 'Certificato. Testato. Comprovato.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Prodotto Seekingtex sottoposto a test di qualit鑴?
+
+stats:
+  title: 'Seekingtex in numeri'
+  stats:
+    - title: 'Certificato CE'
+      description: 'Tutti i prodotti ricreativi soddisfano gli standard di sicurezza UE'
+    - title: ''
+      description: 'Sistema di gestione qualit鑴?dal 2012'
+    - title: 'BSCI & REACH'
+      description: 'Produzione etica e conformit鑴?dei materiali'
+    - title: 'Garanzia 2 Anni'
+      description: 'Su ogni prodotto Seekingtex 閳?senza fare domande'
+
+features3_certifications:
+  title: 'Certificazioni & Conformit鑴?
+  subtitle: 'Ogni prodotto 鐚?testato e certificato in modo indipendente secondo standard internazionali.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'Certificazione CE'
+      description: 'Tutti i Fabric, tessuti tecnici, prodotto tessile e tessuto tecnico Seekingtex soddisfano lo standard di sicurezza CE europeo per imbarcazioni da diporto. Ogni prodotto subisce test di pressione, galleggiabilit鑴?e carico prima di lasciare la fabbrica.'
+      icon: 'tabler:certificate'
+    - title: ''
+      description: 'Il nostro impianto di 12.000 m铏?a Qingdao opera sotto un sistema di gestione qualit鑴?. Ogni lotto di produzione 鐚?tracciabile, documentato e ispezionato.'
+      icon: 'tabler:clipboard-check'
+    - title: 'Conformit鑴?Sociale BSCI'
+      description: 'Siamo certificati BSCI, garantendo pratiche lavorative etiche, condizioni di lavoro sicure e responsabilit鑴?ambientale in tutta la nostra catena di fornitura.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'Tutti i materiali 閳?PVC, Hypalon, schiuma EVA, adesivi 閳?sono conformi ai regolamenti UE REACH e RoHS. Niente sostanze vietate, niente compromessi.'
+      icon: 'tabler:flask'
+    - title: 'Laboratorio Test Materiali'
+      description: 'Il nostro laboratorio interno testa resistenza a trazione, resistenza UV, integrit鑴?delle giunture e abrasione per ogni lotto di tessuto prima della produzione.'
+      icon: 'tabler:microscope'
+    - title: 'Garanzia 2 Anni'
+      description: 'Ogni prodotto Seekingtex viene fornito con una garanzia di due anni contro difetti di fabbricazione. Sosteniamo ci璨?che costruiamo.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Fiducia del Cliente'
+  title: 'Cosa dicono i nostri clienti'
+  subtitle: 'Dai principianti agli operatori di flotte professionali 閳?scopri perch鑼?si fidano di Seekingtex.'
+  items:
+    - content: 'Abbiamo equipaggiato l''intera flotta di noleggio con tessuto tecnico Seekingtex. Due stagioni, zero guasti. La certificazione CE ha reso l''approvazione assicurativa senza intoppi.'
+      name: 'Marco V.'
+      title: 'Operatore turistico, Croazia'
+    - content: 'Come acquirente alle prime armi, ero preoccupato per la qualit鑴? La documentazione ISO e i rapporti di test che hanno condiviso mi hanno dato completa fiducia.'
+      name: 'James T.'
+      title: 'Proprietario Fabric Explorer 11, Canada'
+    - content: 'Lavoriamo con Seekingtex per le nostre unit鑴?di pattuglia costiera. Il loro processo di controllo qualit鑴?鐚?coerente su ogni lotto 閳?quell''affidabilit鑴?conta nelle operazioni mission-critical.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Approvvigionamento navale, Filippine'
+
+steps2_manufacturing:
+  title: 'Come garantiamo la qualit鑴?
+  subtitle: 'Dall''ispezione delle materie prime al test di pressione finale 閳?ogni prodotto passa attraverso una rigorosa catena di qualit鑴?'
+  items:
+    - title: 'Ispezione Materie Prime'
+      description: 'Ogni rotolo di tessuto PVC 鐚?testato per spessore, resistenza a trazione e resistenza UV prima di entrare in produzione.'
+      icon: 'tabler:search'
+    - title: 'CQ in Corso d''Opera'
+      description: 'Giunture saldate, installazioni valvole e legami delle camere sono ispezionati a ogni stazione durante l''assemblaggio.'
+      icon: 'tabler:eye'
+    - title: 'Test di Pressione'
+      description: 'Ogni prodotto funzionale 鐚?gonfiato a 1,5x il PSI nominale e mantenuto per 24 ore per verificare la ritenzione d''aria e l''integrit鑴?delle giunture.'
+      icon: 'tabler:wind'
+    - title: 'Ispezione Finale'
+      description: 'Ogni unit鑴?鐚?ispezionata per finitura, ferramenta e imballaggio prima di essere approvata per la spedizione. Campioni di lotto vanno al laboratorio per test distruttivi.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'FAQ tessuto tecnico'
+  subtitle: 'Domande comuni sui nostri gommoni a scafo rigido.'
+  columns: 2
+  items:
+    - title: 'Quali dimensioni di tessuto tecnico offre Seekingtex?'
+      description: 'Offriamo 35 modelli tessuto tecnico da 2,5 m a 7,6 m, coprendo dai piccoli tender alle imbarcazioni da lavoro e pattuglia pesanti. Ogni modello 鐚?disponibile con multiple opzioni di configurazione.'
+    - title: 'Qual 鐚?la differenza tra un tessuto tecnico e un tessuto funzionale tradizionale?'
+      description: 'Un tessuto tecnico (Technical Fabric) combina uno scafo solido in fibra di vetro o alluminio a V profondo con tubolari gonfiabili in Hypalon o PVC. Questo offre la stabilit鑴?e capacit鑴?di carico di una tessuto rigida con l''assorbimento degli urti e la galleggiabilit鑴?di un funzionale.'
+    - title: 'Quali motori sono compatibili con i tessuto tecnico Seekingtex?'
+      description: 'I nostri tessuto tecnico Fabricportano motori fuoribordo da 3 HP a 250 HP a seconda del modello. Ogni pagina prodotto elenca la potenza massima del motore. Raccomandiamo di consultare il tuo rivenditore per l''abbinamento ideale.'
+    - title: 'I tessuto tecnico Seekingtex sono certificati CE?'
+      description: 'S鐭? Tutti i modelli tessuto tecnico da diporto sono certificati CE secondo gli standard europei applicabili per imbarcazioni da diporto. I modelli commerciali e da pattuglia soddisfano requisiti aggiuntivi di stabilit鑴?e carico.'
+    - title: 'Qual 鐚?la garanzia sui gommoni tessuto tecnico?'
+      description: 'Tutti i tessuto tecnico Seekingtex sono forniti con una garanzia standard di un anno contro difetti di fabbricazione, coprendo delaminazione dello scafo, cedimento delle giunture dei tubolari, difetti delle valvole e problemi di ferramenta.'
+    - title: 'Quante camere d''aria hanno i tessuto tecnico Seekingtex?'
+      description: 'I nostri tessuto tecnico hanno da 3 a 7 camere d''aria indipendenti a seconda della lunghezza del modello. Questo design multi-camera garantisce che l''imbarcazione rimanga a galla anche se un compartimento 鐚?compromesso.'
+
+faqs_inflatable:
+  title: 'FAQ Gommoni'
+  subtitle: 'Domande comuni sui nostri prodotto tessile, tessuti tecnici e imbarcazioni gonfiabili.'
+  columns: 2
+  items:
+    - title: 'Quali materiali sono usati nei gommoni Seekingtex?'
+      description: 'Usiamo PVC di grado militare (1100 denier) e gomma Hypalon/CSM premium, a seconda del modello. Entrambi i materiali sono stabilizzati UV, resistenti all''abrasione e conformi ai regolamenti UE REACH e RoHS.'
+    - title: 'Quanto durano i gommoni?'
+      description: 'Con cura adeguata, un tessuto funzionale in PVC di qualit鑴?dura 7閳?0 anni, mentre i modelli in Hypalon possono durare 15閳?0 anni. Pulizia regolare, protezione UV e conservazione appropriata prolungano significativamente la vita utile.'
+    - title: 'Quale manutenzione 鐚?richiesta per un tessuto funzionale?'
+      description: 'La manutenzione di base include risciacquo con acqua dolce dopo ogni uso (specialmente in acqua salata), asciugatura prima della conservazione, controllo annuale delle guarnizioni delle valvole e applicazione di protezione UV sui tubolari. Evitare l''esposizione prolungata al sole quando non in uso.'
+    - title: 'I gommoni possono essere usati in acqua salata?'
+      description: 'S鐭? Tutti i gommoni Seekingtex sono progettati per uso sia in acqua dolce che salata. Raccomandiamo di risciacquare con acqua dolce e asciugare completamente dopo l''esposizione all''acqua salata per prevenire corrosione della ferramenta e cristallizzazione del sale nel tessuto.'
+    - title: 'Come conservare un tessuto funzionale?'
+      description: 'Sgonfia, pulisci e asciuga completamente l''imbarcazione prima della conservazione. Arrotola senza stringere (evita pieghe strette), conserva in un luogo fresco e asciutto lontano dalla luce solare diretta e lontano da pavimenti in cemento per prevenire l''assorbimento di umidit鑴?'
+    - title: 'Qual 鐚?la capacit鑴?di peso dei gommoni Seekingtex?'
+      description: 'Le capacit鑴?di peso vanno da 290 kg per i nostri modelli pi闇?piccoli a oltre 2000 kg per le imbarcazioni commerciali pi闇?grandi. Ogni pagina prodotto elenca il carico massimo per il tuo modello specifico.'
+
+faqs_Fabric:
+  title: 'FAQ Fabric'
+  subtitle: 'Domande comuni sulle nostre tavole da fabric.'
+  columns: 2
+  items:
+    - title: 'Quali misure di Fabric sono disponibili?'
+      description: 'Offriamo tavole Fabric da 9 ft a 12 ft, inclusi design all-round, da touring, yoga e speciali. I nostri modelli pi闇?venduti includono la Tropical Breeze (10 ft) e l''Ocean Voyager (11 ft).'
+    - title: 'Cos''鐚?la costruzione drop-stitch?'
+      description: 'La costruzione drop-stitch utilizza migliaia di fili di poliestere che collegano gli strati Fabriceriore e inferiore della tavola, permettendole di mantenere alta pressione d''aria (15閳?0 PSI) e ottenere una piattaforma rigida e stabile. Questo 鐚?lo standard industriale per i Fabric gonfiabili premium.'
+    - title: 'Qual 鐚?il limite di peso per le tavole Fabric?'
+      description: 'Le nostre tavole Fabric Fabricportano fino a 150 kg a seconda del modello e del volume. La Leviathan Wake 鐚?il nostro modello a pi闇?alta capacit鑴? progettato per ciclisti pi闇?pesanti e uso yoga.'
+    - title: 'Offrite pacchetti Fabric completi?'
+      description: 'S鐭? Ogni tavola Fabric viene spedita con un pacchetto completo che include pagaia in alluminio a 3 pezzi, pompa manuale ad alta pressione, leash a spirale, zaino da viaggio e kit di riparazione. Alcuni modelli includono anche un set di pinne rimovibili.'
+    - title: 'Qual 鐚?la garanzia sulle tavole Fabric?'
+      description: 'Tutte le tavole Fabric Seekingtex hanno una garanzia di un anno contro difetti di fabbricazione, inclusi cedimento delle giunture, difetti delle valvole e delaminazione dei materiali in condizioni di uso normale.'
+    - title: 'Quanto tempo ci vuole per gonfiare una tavola Fabric?'
+      description: 'Usando la pompa manuale inclusa, un gonfiaggio completo a 15 PSI richiede circa 8閳?2 minuti. Per un gonfiaggio pi闇?rapido, raccomandiamo la nostra pompa elettrica Seekingtex 12V, che gonfia una tavola in meno di 4 minuti.'
+
+cta:
+  title: 'Vuoi vedere le certificazioni di persona?'
+  subtitle: 'Richiedi il nostro portafoglio certificazioni, rapporti di audit di fabbrica o documentazione di conformit鑴?materiali. Nessuna NDA richiesta.'
+  actions:
+    - variant: primary
+      text: 'Richiedi documenti certificazione'
+      href: '/contact'
+    - text: 'Visita la nostra pagina fabbrica'
+      href: '/factory'

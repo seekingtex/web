@@ -1,0 +1,111 @@
+hero:
+  tagline: 工厂
+  title: 工厂与制造
+  subtitle: 12,000平方米集成制造——从原材料到成品面料
+
+intro:
+  - 作为 **青岛沃特雷德集团有限公司** 的工厂品牌，Seekingtex控制生产的每个阶段——从原材料到成品面料的最后交付前检查。我们在青岛经济开发区的制造设施占地12,000平方米，拥有专门的PVC切割、管热封、玻璃钢RIB面料体生产、SUP数字印刷、最终装配和质量测试车间。
+  - 通过将设计、工程、原型制作、制造和测试整合在同一屋檐下，我们消除了合同制造的低效率，并保持对建造质量、材料选择和交付时间的直接控制。
+
+stats:
+  - value: 12,000平方米
+    label: 制造面积
+  - value: 200+
+    label: 熟练工人
+  - value: 15,000+
+    label: 年产量
+  - value: 
+    label: 质量认证
+
+workshops_section:
+  tagline: 车间
+  title: 制造车间
+  workshops:
+    - title: PVC切割与材料准备
+      description: 自动CNC切割机以亚毫米精度处理PVC、Hypalon和滴塑面料。计算机优化排版最小化材料浪费。
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: 管焊接与热封
+      description: 专用焊接车间配备热封机和RF介质压力机。热风热封机粘合PVC管室，RF焊接产生超过要求的高强度气密接缝。
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: RIB面料体生产——玻璃钢
+      description: RIB面料体采用手糊玻璃钢成型，使用聚酯和乙烯基酯树脂系统。每层手工辊涂和真空袋压以确保质量一致。
+      image: /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+    - title: SUP印刷与装饰
+      description: SUP板采用数字印刷进行全彩图形装饰，丝网印刷用于标志和重复图案。数字打印机产生照片质量的甲板设计。
+      image: /images/seekingtex/products/sup-series/sup-medusa-glow-1.webp
+    - title: 最终装配与安装
+      description: 装配线上玻璃钢面料体和PVC管对接、安装发动机、连接转向和控制系统以及布线。每艘面料都经过100点装配检查清单。
+      image: /images/seekingtex/hero/factory-gate.webp
+    - title: 质量测试与检验
+      description: 每艘成品面料在发货前都经过强制性气密性测试、接缝剥离验证和全面系统检查。质量实验室独立于生产运营。
+      image: /images/seekingtex/factory/Pressure Testing.jpeg
+
+equipment_section:
+  tagline: 设备
+  title: 关键制造设备
+  view_full: 查看完整设备列表 →
+  view_full_link: /factory/equipment
+  items:
+    - name: 自动PVC切割机
+      spec: CNC控制，精度0.1mm
+    - name: 热封机
+      spec: 热风，200°C–600°C，用于管粘合
+    - name: RF介质焊接压力机
+      spec: 15 kW，气密接缝焊接
+    - name: 玻璃钢手糊模具
+      spec: RIB面料体长达6m
+    - name: 数字打印机
+      spec: 全彩SUP甲板图形
+    - name: 丝网印刷机
+      spec: 多色标志印刷
+
+qc_section:
+  tagline: 质量控制
+  title: 测试与质量保证流程
+  subtitle: 每艘面料在发货前都经过强制测试。质量实验室独立于生产运营并直接向管理层报告。
+  steps:
+    - step: '1'
+      title: 原材料检验
+      desc: PVC、Hypalon和滴塑面料在进入生产前经过拉伸测试、撕裂传播和抗紫外线验证。
+    - step: '2'
+      title: 48小时气密性测试
+      desc: 每个管室功能性至额定压力的125%并保持48小时。压力下降超过5%将自动触发拒收和接缝重新检查。
+    - step: '3'
+      title: 负载与平衡测试
+      desc: 成品面料加载至最大额定容量并测试稳定性、干舷和操控性。
+
+oem_section:
+  tagline: OEM项目
+  title: 品牌与OEM合作案例研究
+  subtitle: 从概念到集装箱——我们如何帮助全球品牌推出和扩展其功能性面料产品线。
+  cases:
+    - challenge: 欧洲户外零售商需要自有品牌SUP产品线，具有独特甲板图形、环保PVC和零售就绪包装——全部在60天内交付。
+      solution: 开发定制数字打印文件，采购符合REACH的PVC，将取样从3轮减少到1轮。
+      result: 从签署PO到FOB 55天。2,400件，4个SKU。第一批集装箱到达前已下重复订单。
+    - challenge: 美国纺织行业初创公司需要高性能滴塑皮艇，具有定制面料体形状、联合品牌包装和BSCI认证。
+      solution: 修改现有滴塑皮艇模具，开发联合品牌包装，提供完整BSCI审计文件。
+      result: 成功进入3家美国主要户外连锁店。第一年5,000+件，售罄率98%。
+    - challenge: 澳大利亚分销商需要CE认证的RIB系列，具有定制管颜色、Hypalon升级选项和符合澳大利亚标准AS 1799。
+      solution: 生产4种管颜色变体的预生产样品，从日本供应商采购CSM Hypalon，协调第三方AS 1799合规测试。
+      result: 3型号RIB系列在澳新市场推出，随后赢得12艘巡逻RIB的政府招标。
+
+faq_section:
+  tagline: 常见问题
+  title: B2B和OEM常见问题
+  questions:
+    - q: OEM功能性SUP板的最小订单量（MOQ）是多少？
+      a: 标准OEM型号的MOQ从5–10艘起。定制模具和自有品牌项目根据复杂度需要至少200艘。新品牌推出可提供试订单和样品运行。
+    - q: Seekingtex是否持有BSCI认证？
+      a: 是的。我们的工厂保持有效的BSCI社会合规认证。我们还持有质量管理认证，所有产品均带有CE认证。每批OEM货物均提供REACH和RoHS合规文件。
+    - q: OEM订单的典型交货期是多少？
+      a: 标准交货期为确认PO和定金后30-45天。定制模具开发增加15-20天。我们为紧急订单和季节性高峰期提供加急生产。
+    - q: 你们能按FOB青岛或CIF运送到我们的港口吗？
+      a: 是的。我们按FOB青岛、CIF全球主要港口和DDP为合格合作伙伴发货。我们的物流团队管理集装箱预订、出口文件和清关。我们发货到全球50多个国家。
+
+b2b_moq: '标准MOQ：每型号5–10艘（SUP/皮艇/滴塑）。技术面料 MOQ：2-5艘。欢迎新合作伙伴的试订单。'
+
+process_cta:
+  title: 查看我们的制造流程
+  desc: 跟随一艘面料经历生产的每个阶段——从原材料到海上就绪的成品。
+  label: 查看生产流程 →
+  link: /factory/process

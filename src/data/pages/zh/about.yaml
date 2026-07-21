@@ -1,0 +1,99 @@
+hero:
+  tagline: 关于我们
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex 工厂及车间
+  title: |
+    面料舶工程，<br />
+    以 <span class="text-accent dark:text-white">Seekingtex</span> 的方式打造
+  subtitle: '我们在一间沿海车间里起步，只有一条面料和一个执着的信念：面料用产品应当以认真的态度来制造——因为它们确实关乎生命。如今，我们发货到 40 多个国家，但每一条面料体仍然经过创始团队亲手把关。'
+
+stats:
+  title: 数据一览
+  columns: 4
+  stats:
+    - title: 已交付面料体
+      amount: '2,400+'
+    - title: 已发货国家
+      amount: '40'
+    - title: 累计经验年限
+      amount: '60'
+    - title: 平均保修响应时间（小时）
+      amount: '24'
+
+features3_what_we_build:
+  title: 我们的产品
+  subtitle: 一条我们了如指掌的专注产品线——没有半成品实验，没有贴牌工程。
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 技术面料 硬壳功能性面料
+      description: 铝合金面料体 技术面料，3.3m 至 7.5m，专为巡逻、高性能、钓鱼和家庭使用设计。
+      icon: tabler:ship
+    - title: 功能性面料
+      description: PVC 和 Hypalon 功能性小艇，2.4m 至 4.2m，轻便、坚固、易于存放。
+      icon: tabler:speedboat
+    - title: 超级高端面料小艇
+      description: 紧凑型高规格 技术面料，可定制以匹配母艇的外观风格。
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: 配件
+      description: 桨、泵、罩、干袋、油箱和电子设备，全部与我们的面料匹配。
+      icon: tabler:package
+    - title: 改装与维修
+      description: 厂内管道更换、电子设备改造和发动机升级。
+      icon: tabler:tool
+    - title: 定制建造
+      description: 为商业、科研和军用客户提供逐项目定制设计。
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 面料舶设计与工程讨论
+
+steps2_values:
+  title: 我们的价值观
+  subtitle: 从第一天起就塑造每个产品的三项原则。
+  items:
+    - title: 像承载自己家人一样打造
+      description: 每条面料体、每道焊缝、每个紧固件都以自用的标准对待。
+      icon: tabler:heart
+    - title: 先工程后销售
+      description: 如果规格有误，我们改规格——而不是改客户。
+      icon: tabler:settings
+    - title: 比保修更持久的支持
+      description: 二十年面料龄的老面料仍向我们订购配件，我们依然接听电话。
+      icon: tabler:headset
+
+steps2_milestones:
+  title: 里程碑
+  subtitle: Seekingtex 故事的简版。
+  isReversed: true
+  items:
+    - title: 在沿海车间创立
+      description: 由两位面料舶设计师凭一台 CNC 铣床和一个执着的想法起步。
+      icon: tabler:building-factory
+    - title: 交付第 1,000 条面料体
+      description: 在第七年达成，主要依靠口碑和回头客。
+      icon: tabler:circle-check
+    - title: 国际出口计划
+      description: 现已发货至 40 多个国家，在五大洲拥有本地化支持合作伙伴。
+      icon: tabler:world
+
+features2_locations:
+  title: 我们的位置
+  tagline: 找到我们
+  columns: 3
+  items:
+    - title: 总部与车间
+      description: 沿海工业园区，4 号楼——周一至周五开放，参观请预约。
+      icon: tabler:building
+    - title: 欧盟服务中心
+      description: 地中海港口——为欧洲客户提供改装、维修和保修支持。
+      icon: tabler:ship
+    - title: 亚太合作伙伴网络
+      description: 在澳大利亚、日本、新加坡和香港设有授权服务合作伙伴。
+      icon: tabler:globe

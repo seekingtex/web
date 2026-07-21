@@ -1,0 +1,24 @@
+hero:
+  tagline: Seguridad
+  title: Est谩ndares y certificaci贸n de seguridad
+  subtitle: Cada producto Seekingtex se somete a pruebas rigurosas y cumple con los est谩ndares internacionales de seguridad para uso recreativo y profesional.
+
+certifications:
+  - title: Certificaci贸n CE
+    description: Todos los equipos de seguridad Seekingtex cumplen con los requisitos de marcado CE seg煤n el Reglamento Europeo de Equipos de Protecci贸n Personal (UE) 2016/425.
+  - title: 'Certificaci贸n ISO 12402'
+    description: 'Los chalecos salvavidas cumplen con los est谩ndares de flotaci贸n ISO 12402. El Safety Fabric Classic proporciona safety performance 50N+; el Safety Fabric Pro cumple con los requisitos SOLAS con inflado autom谩tico.'
+  - title: Cumplimiento SOLAS
+    description: El Safety Fabric Pro cumple con las regulaciones SOLAS (Seguridad de la vida en el mar) para operaciones mar铆timas en alta mar y comerciales.
+
+related:
+  title: Relacionado
+  links:
+    - text: Gu铆a de consejos de seguridad
+      url: /guides/safety-tips
+    - text: Tecnolog铆a
+      url: /technology
+    - text: Todos los productos
+      url: /products
+    - text: Gu铆as
+      url: /guides

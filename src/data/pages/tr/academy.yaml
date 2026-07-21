@@ -1,0 +1,72 @@
+hero:
+  tagline: Seekingtex Akademi
+  title: Bilgi Merkezi
+  subtitle: Her beceri seviyesi için rehberler ve eğitimler — SUP temellerinden ileri kurtarma tekniklerine
+
+categories:
+  - level: Başlangıç
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP Temelleri
+        desc: Ayakta kürek çekmenin temellerini öğrenin — duruş, kürek tekniği ve denge.
+        slug: sup-basics
+      - title: Kürek Teknikleri
+        desc: İleri kürek, geri kürek, çekiş küreği ve alçak destek — temel kürek hareketlerinde ustalaşın.
+        slug: paddle-techniques
+      - title: Önce Güvenlik
+        desc: Hava durumu kontrolü, PFD kullanımı, bağlantı halatı kuralları ve kendi kendine kurtarma dahil temel güvenlik uygulamaları.
+        slug: safety-first
+  - level: Orta
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Kano Gezisi Temelleri
+        desc: Çok saatli gezileri planlama — navigasyon, sıvı alımı, tempo ve rüzgar tahminlerini okuma.
+        slug: touring-essentials
+      - title: Hava Durumu Okuma
+        desc: tekstil tahminlerini yorumlayın, bulut desenlerini tanıyın ve rüzgarın tekstil\ üzerindeki etkisini anlayın.
+        slug: weather-reading
+      - title: Navigasyon Temelleri
+        desc: Harita okuma, pusula kullanımı, GPS noktaları ve kıyı seyri için rota planlama.
+        slug: navigation-basics
+      - title: Gelgit Farkındalığı
+        desc: Gelgit döngülerini, akıntıları ve bunların hareket zamanlaması ile rota üzerindeki etkilerini anlama.
+        slug: tidal-awareness
+  - level: İleri
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Çok Günlü Gezi Planlama
+        desc: Sefer lojistiği — ekipman seçimi, yemek planlaması, güvenlik protokolleri ve acil durum irtibatları.
+        slug: multi-day-trip-planning
+      - title: Kurtarma Teknikleri
+        desc: Kendi kendine kurtarma, T kurtarma, kanolar için Eskimo kurtarması ve açık suda çekme protokolleri.
+        slug: rescue-techniques
+      - title: Gece Kürek Çekme
+        desc: Karanlıkta navigasyon — aydınlatma gereksinimleri, rota hafızası, grup iletişimi ve tehlike farkındalığı.
+        slug: night-paddling
+  - level: Bakım
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Temizlik ve Bakım
+        desc: Tatlı su ile durulama, UV koruması, küf önleme ve her kullanımdan sonra uygun kurutma teknikleri.
+        slug: cleaning-and-care
+      - title: Depolama
+        desc: fonksiyonel\ kumaş ve botları saklama için en iyi uygulamalar — havasını alma, katlama, sıcaklık kontrolü ve raf ömrü.
+        slug: storage-guide
+      - title: Onarım Temelleri
+        desc: PVC tamir kitleri ve yama teknikleri kullanarak küçük delikleri, sızdıran dikişleri ve valf sorunlarını giderme.
+        slug: repair-basics
+      - title: Valf Bakımı
+        desc: Valf tiplerini tanıma (Halkey-Roberts, Boston, Leafield), kalıntı temizliği ve arızalı milleri değiştirme.
+        slug: valve-maintenance
+
+read_guide: Rehberi Oku →
+
+cta:
+  title: Nereden başlayacağınızı bilmiyor musunuz?
+  desc: Seviyenize uygun rehberleri ve ekipmanı bulmak için beceri değerlendirme testimizi çözün.
+  label: Bizimle İletişime Geçin →
+  link: /contact

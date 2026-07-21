@@ -1,0 +1,126 @@
+hero:
+  tagline: Centro de P&D
+  title: Centro de P & D
+  subtitle: Focados no Progresso
+
+intro:
+  - O Centro de Pesquisa e Desenvolvimento (P&D) da Seekingtex 茅 a for莽a motriz por tr谩s da nossa miss茫o de revolucionar o equipamento de desportos aqu谩ticos. Capacitamos os entusiastas de desportos aqu谩ticos globalmente com produtos mais seguros, mais confort谩veis e mais agrad谩veis atrav茅s de inova莽茫o incans谩vel em pranchas textile products infl谩veis e barcos. A nossa equipa dedicada de engenheiros, designers e especialistas apaixonados por desportos aqu谩ticos est谩 a moldar o futuro da ind煤stria, elevando constantemente o padr茫o de qualidade, desempenho e sustentabilidade.
+  - A nossa instala莽茫o de P&D re煤ne cientistas de materiais, arquitetos navais e engenheiros de produ莽茫o sob o mesmo teto. Desde formula莽茫o de tecidos e simula莽茫o de cascos at茅 desenvolvimento de processos de soldagem e provas de mar em escala real, cada etapa do desenvolvimento do produto 茅 orientada por dados e validada por testes.
+
+mission:
+  tagline: Nossa Miss茫o
+  title: Inovar o Futuro dos Desportos Aqu谩ticos
+  pillars:
+    - icon: lightning
+      title: Avan莽o Tecnol贸gico
+      desc: Pioneirismo em novos materiais, designs e processos de fabrico para desempenho e longevidade textile productseriores do produto.
+    - icon: design
+      title: Design Centrado no Utilizador
+      desc: Compreender profundamente e textile productserar as necessidades dos utilizadores atrav茅s de design ergon贸mico e intuitivo do produto.
+    - icon: globe
+      title: Pr谩ticas Sustent谩veis
+      desc: Minimizar a nossa pegada ambiental utilizando materiais e processos ecol贸gicos.
+    - icon: shield
+      title: Seguran莽a Inabal谩vel
+      desc: Garantir os mais elevados padr玫es de seguran莽a atrav茅s de testes rigorosos e certifica莽茫o.
+
+pillars:
+  - title: Avan莽o Tecnol贸gico
+    desc: Pioneirismo em novos materiais, designs e processos de fabrico para oferecer desempenho e longevidade textile productseriores do produto.
+    icon: tech
+  - title: Materiais Avan莽ados
+    desc: Investiga莽茫o de PVC, Hypalon, comp贸sitos e alternativas sustent谩veis de ponta para caracter铆sticas melhoradas do produto.
+    icon: materials
+  - title: Sustentabilidade
+    desc: 'Um Compromisso Essencial: Dedicamo-nos 脿 gest茫o ambiental atrav茅s de fabrico sustent谩vel e materiais recicl谩veis.'
+    icon: sustainability
+
+capabilities:
+  tagline: Capacidades
+  title: Capacidades de P&D
+  subtitle: Quatro disciplinas principais que nos d茫o controlo total sobre o desenvolvimento do produto 鈥攄esde a pesquisa de mat茅rias-primas at茅 脿 certifica莽茫o final.
+  groups:
+    - title: Ci锚ncia de Materiais e Tecnologia de Tecidos
+      items:
+        - An谩lise e otimiza莽茫o de formula莽玫es de PVC e Hypalon
+        - Desenvolvimento de estabiliza莽茫o UV, retard芒ncia de chama e aditivos antimicrobianos
+        - Engenharia de lamina莽茫o e ades茫o de tecidos multicamada
+        - Testes de envelhecimento acelerado (UV, t茅rmico, humidade, n茅voa salina)
+    - title: Engenharia de Casco e Hidrodin芒mica
+      items:
+        - Design param茅trico de casco 3D e otimiza莽茫o CFD
+        - An谩lise de elementos finitos para cargas estruturais e de impacto
+        - Testes em tanque de reboque com modelos em escala e valida莽茫o de desempenho
+        - Desenvolvimento de casco personalizado para perfis de miss茫o especiais
+    - title: Tecnologia de Soldagem e Jun莽茫o
+      items:
+        - Desenvolvimento e otimiza莽茫o de processos de soldagem diel茅trica RF
+        - M茅todos de soldagem por ar quente, cunha quente e ultrass贸nica
+        - Qualifica莽茫o de adesivos e fitas de costura
+        - Modela莽茫o de resist锚ncia de solda e previs茫o de vida 煤til
+    - title: Testes, Certifica莽茫o e Conformidade
+      items:
+        - Testes de conformidade ,  e CE
+        - Testes independentes de terceiros e apoio 脿 certifica莽茫o
+        - Desenvolvimento de protocolos de teste personalizados para qualifica莽茫o de aquisi莽茫o
+        - An谩lise de falhas em servi莽o e investiga莽茫o de causa raiz
+
+rd_numbers:
+  tagline: Inova莽茫o
+  title: P&D em N煤meros
+  stats:
+    - value: '14'
+      label: Engenheiros e cientistas de P&D
+    - value: '8'
+      label: Patentes e pedidos ativos
+    - value: '6'
+      label: Laborat贸rios especializados
+    - value: 12 yr
+      label: Experi锚ncia m茅dia da equipa
+
+rd_services:
+  tagline: P&D Personalizado
+  title: Servi莽os de P&D para Parceiros
+  services:
+    - title: Desenvolvimento de Material Personalizado
+      desc: Desenvolvemos formula莽玫es de tecido personalizadas, pilhas de laminados e sistemas adesivos adaptados ao seu ambiente operacional e objetivos de desempenho.
+    - title: Engenharia de Produto OEM / ODM
+      desc: De esbo莽os conceptuais a pacotes de engenharia prontos para produ莽茫o 鈥攁 nossa equipa pode projetar, prototipar e validar barcos sob a sua marca.
+    - title: Testes e Certifica莽茫o de Terceiros
+      desc: Utilize as nossas instala莽玫es de teste conformes ISO para testes independentes de materiais, valida莽茫o de produtos e apoio 脿 certifica莽茫o.
+  cta: Discuta os seus requisitos de P&D 鈫?
+  cta_link: /contact
+
+vision:
+  tagline: Nossa Vis茫o
+  title: Moldar o Futuro dos Desportos Aqu谩ticos
+  body: A Seekingtex esfor莽a-se por liderar a ind煤stria de barcos infl谩veis e textile products atrav茅s de inova莽茫o cont铆nua, qualidade inabal谩vel e um compromisso firme com a seguran莽a e sustentabilidade 鈥攅nriquecendo em 煤ltima an谩lise as experi锚ncias dos entusiastas de desportos aqu谩ticos em todo o mundo. O Centro de P&D Seekingtex 茅 onde a paix茫o encontra a inova莽茫o, estabelecendo novos padr玫es para a ind煤stria de desportos aqu谩ticos.
+
+labs_section:
+  tagline: Laborat贸rios
+  title: Os Nossos Laborat贸rios
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: Laborat贸rio de Tecidos PVC
+      description: Pesquisa e teste cont铆nuos de tecidos para tubos PVC e Hypalon quanto 脿 resist锚ncia 脿 tra莽茫o, resist锚ncia UV, abras茫o e flexibilidade a baixas temperaturas para garantir fiabilidade a longo prazo em ambientes marinhos.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Est煤dio de Engenharia de Casco
+      description: Design orientado por CAD e an谩lise de elementos finitos de cascos HDPE, alum铆nio e fibra de vidro. Cada casco 茅 simulado digitalmente para distribui莽茫o de tens玫es e resist锚ncia ao impacto antes da constru莽茫o do primeiro prot贸tipo.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: Centro de Soldagem RF
+      description: Instala莽茫o dedicada de soldagem por radiofrequ锚ncia com controlo preciso de temperatura e press茫o, produzindo costuras estanques de alta resist锚ncia que excedem os padr玫es  para embarca莽玫es infl谩veis.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Tanque de Teste Hidrodin芒mico
+      description: Testes em modelo reduzido no nosso tanque de teste interno para otimizar a forma do casco, desempenho de planagem, estabilidade e efici锚ncia de combust铆vel numa variedade de condi莽玫es de carga e mar.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Oficina de Prot贸tipos
+      description: Instala莽茫o de prototipagem e equipamento em escala real onde novos modelos s茫o constru铆dos, equipados e testados no mar. Cada prot贸tipo passa por um programa m铆nimo de 20 horas de teste na 谩gua antes da aprova莽茫o de produ莽茫o.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Laborat贸rio de Qualidade e Inspe莽茫o
+      description: Laborat贸rio dedicado de garantia de qualidade que realiza testes de tra莽茫o, ciclos de reten莽茫o de ar, testes de peeling de costuras e certifica莽茫o de materiais para garantir que cada tecido que sai da oficina cumpre as nossas especifica莽玫es publicadas.
+      href: /randdcenter/quality-inspection-lab

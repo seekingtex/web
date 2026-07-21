@@ -1,0 +1,46 @@
+hero:
+  tagline: Asigurarea calității
+  title: Testare de performanță și calitate
+  subtitle: Fiecare barcă gonflabilă și placă SUP Seekingtex trece prin teste riguroase de performanță și calitate la centrul nostru CD înainte de expediere.
+stats:
+  - value: 100%
+    label: Unități testate la presiune
+  - value: '8'
+    label: Protocoale de testare
+  - value: 'ISO 9001'
+    label: Certificat de calitate
+  - value: 3 ani
+    label: Garanție limitată
+tests:
+  - title: Testare la presiune
+    description: Camerele gonflabile sunt supuse la presiuni ce depășesc limitele de operare recomandate pentru perioade îndelungate.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Testare la impact
+    description: Produsele sunt supuse la impacturi controlate din diferite greutăți și unghiuri.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Testare rezistență UV
+    description: Produsele finite sunt expuse la lumină solară simulată pentru perioade îndelungate.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Testare rezistență la abraziune
+    description: Probele de material sunt frecate de suprafețe abrazive pentru un număr specificat de cicluri.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Testare la temperaturi scăzute
+    description: Produsele sunt testate în medii reci pentru funcționalitate și durabilitate.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Testare flotabilitate și sarcină
+    description: Produsele sunt testate cu diferite greutăți pentru a determina capacitatea maximă de încărcare.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Testare manevrabilitate
+    description: Produsele sunt testate pentru răspunsul la intrarea vâslei sau motorului.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Testare etanșeitate
+    description: Produsele complet asamblate sunt scufundate sau supuse la stropire cu apă pentru a verifica scurgerile.
+    image: /images/seekingtex/factory/producing department2.jpeg
+testing_section:
+  tagline: Proceduri de testare
+  title: Testare amănunțită în toate fazele
+commitment:
+  title: Angajamentul nostru
+  body: Prin aceste proceduri riguroase de testare, {SITE} oferă clienților certitudinea că bărcile noastre gonflabile și plăcile SUP nu sunt doar de înaltă performanță, ci și construite să dureze.
+  cta: Solicită documentația de testare
+  cta_link: /contact

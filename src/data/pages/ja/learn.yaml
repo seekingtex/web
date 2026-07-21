@@ -1,0 +1,72 @@
+﻿hero:
+  tagline: '姘存帰绱伄鐭ヨ瓨'
+  title: '瀛︺伓'
+  subtitle: |
+    銈偆銉夈€併儊銉ャ兗銉堛儶銈儷銆佹繁鎺樸倞 鈥?鑷俊銈掓寔銇ｃ仸姘淬倰鎺㈢储銇欍倠銇熴倎銇?br />
+    蹇呰銇仚銇广仸銆傚垵銈併仸銇甋UP閬搞伋銇嬨倝楂樺害銇儐銈儖銉冦偗銇繏寰椼伨銇с€?  taglineSection: '銇欍伖銇︺伄銉戙儔銉┿兗銇仧銈併伄鐭ヨ瓨銆傚垵蹇冭€呫亱銈夈儣銉儠銈с儍銈枫儳銉娿儷銇俱仹銆?
+
+featured:
+  tagline: '娉ㄧ洰銇儓銉斻儍銈?
+  title: '瀛︾繏銇梾銈掑銈併倛銇?
+  subtitle: '銈︺偐銉笺偪銉笺偣銉濄兗銉勩亴鍒濄倎銇︺仹銈傘€併偣銈儷銈儍銉椼倰鐩寚銇椼仸銇勩仸銈傘€佺銇熴仭銇偓銈ゃ儔銇屽蹇溿仐銇俱仚銆?
+  items:
+    - title: 'SUP銇熀绀?
+      description: '鍒濆績鑰呫亴鐭ャ倠銇广亶銇欍伖銇?鈥?銉溿兗銉夈伄绋銆併儜銉夈儷銇偟銈ゃ偤銆併偣銈裤兂銈广€佸垵鏃ャ伄銉掋兂銉堛€?
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: '銈ゃ兂銉曘儸銉笺偪銉栥儷 vs 銉忋兗銉夈儨銉笺儔'
+      description: '銇┿仭銈夈亴閬┿仐銇︺亜銇俱仚銇嬶紵鎼哄腐鎬с€併儜銉曘偐銉笺優銉炽偣銆佽€愪箙鎬с€併偝銈广儓銈掓瘮杓冦仐銇俱仚銆?
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: '姘翠笂瀹夊叏'
+      description: '銇欍伖銇︺伄銉戙儔銉┿兗銇屾寔銇ゃ伖銇嶅繀闋堝畨鍏ㄧ煡璀?鈥?澶╁€欍€丳FD銆佽嚜宸辨晳鍔┿仾銇┿€?
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: '鏉愭枡銈偆銉?
+      description: 'PVC vs 銉忋偆銉戙儹銉炽€併儔銉儍銉椼偣銉嗐儍銉佹妧琛撱€併儑銉嬨兗銉畾鏍?鈥?銈偄銇礌鏉愩倰鐞嗚В銇欍倠銆?
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP銈点偆銈恒偓銈ゃ儔'
+      description: '浣撻噸銆併偣銈儷銆併儜銉夈儶銉炽偘銈广偪銈ゃ儷銇仼銇椼仧銉溿兗銉夈伄闀枫仌銆佸箙銆佸閲忋倰瑕嬨仱銇戙伨銇椼倗銇嗐€?
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: '涓礆銉嗐偗銉嬨儍銈?
+      description: '楂樺害銇偣銉堛儹銉笺偗銆佹棆鍥炪儐銈儖銉冦偗銆佽崚銈屻仧姘村煙銇儚銉炽儔銉兂銈般仹銉戙儔銉兂銈般倰銉儥銉偄銉冦儣銆?
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: '銈儐銈淬儶銉?
+  title: '銉堛償銉冦偗鍒ャ伀鎺仚'
+  subtitle: '銇欍伖銇︺伄瀛︾繏銈炽兂銉嗐兂銉勩倰銈广偔銉儸銉欍儷銇ㄨ垐鍛冲垾銇暣鐞嗐€?
+  columns:
+    - title: '鍒濆績鑰?
+      items:
+        - 'SUP銇熀绀?鈥?銇撱亾銇嬨倝濮嬨倎銈堛亞'
+        - '銈ゃ兂銉曘儸銉笺偪銉栥儷 vs 銉忋兗銉夈儨銉笺儔'
+        - '姘翠笂瀹夊叏銇?essentials'
+        - 'SUP銇伕銇虫柟'
+        - '銉濄兂銉楋紗銉戙儍銈偓銈ゃ儔'
+    - title: '涓礆'
+      items:
+        - '銉戙儔銉兂銈般儐銈儖銉冦偗'
+        - '銈ゃ兂銉曘儸銉笺偪銉栥儷鎶€琛?
+        - '鏉愭枡銉儠銈°儸銉炽偣'
+        - 'PVC vs 銉忋偆銉戙儹銉虫瘮杓?
+        - '銉夈儹銉冦儣銈广儐銉冦儊銈炽偄瑙ｈ'
+    - title: '涓婄礆锛嗐儣銉儠銈с儍銈枫儳銉娿儷'
+      items:
+        - '銉曘儶銉笺儓銈儦銉兗銈枫儳銉?
+        - '鍟嗘キ銈般儸銉笺儔姗熷櫒'
+        - '瀹夊叏锛嗘晳鍔┿儣銉儓銈炽儷'
+        - '銈偣銈裤儬銉撱儷銉夛紗OEM'
+
+cta:
+  title: '銇俱仩璩晱銇屻亗銈娿伨銇欍亱锛?
+  subtitle: 'AI銈偆銉夈伀灏嬨伃銇︺€併偖銈€佸畨鍏ㄦ€с€併儐銈儖銉冦偗銇仱銇勩仸銉戙兗銈姐儕銉┿偆銈恒仌銈屻仧鍥炵瓟銈掑緱銇俱仐銈囥亞銆?
+  actions:
+    - variant: primary
+      text: '銈︺偐銉笺偪銉笺偄銉夈儛銈ゃ偠銉糀I銇唱鍟?
+      href: '#ai-guide'
+    - text: '銇欍伖銇︺伄銈偆銉夈倰瑕嬨倠'
+      href: '/academy'

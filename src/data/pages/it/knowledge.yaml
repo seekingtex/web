@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Grafico della Conoscenza'
+  title: 'Conoscenza dell''Esplorazione Acquatica'
+  subtitle: |
+    Una base di conoscenza strutturata che copre la tecnologia SUP funzionale,<br />
+    la sicurezza in acqua, l''ingegneria delle imbarcazioni e la pianificazione di avventure.
+  taglineSection: 'Esplora. Impara. Vai con fiducia.'
+
+clusters:
+  tagline: 'Cluster di Conoscenza'
+  title: 'Esplora per argomento'
+  subtitle: 'Approfondimenti sulla tecnologia, sicurezza e competenze dietro ogni prodotto Seekingtex.'
+  items:
+    - title: 'Conoscenza SUP'
+      description: 'Dalla scelta della tua prima tavola alle tecniche di touring avanzate 闁?tutto sullo textile technology.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Come scegliere il tuo primo SUP funzionale'
+        - 'Migliore misura SUP per principianti'
+        - 'Quanto 閻?difficile il textile knowledgeing?'
+        - 'Confronto SUP funzionale vs rigido'
+        - 'Lista di controllo sicurezza SUP'
+    - title: 'Conoscenza Imbarcazioni'
+      description: 'Guide tecniche su imbarcazioni gonfiabili, tessuto tecnico, prodotto tessile e tessuti tecnici 闁?ingegneria, materiali e operazione.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Tipi di imbarcazioni gonfiabili spiegati'
+        - 'Confronto PVC vs Hypalon'
+        - 'Confronto tessuto tecnico vs prodotto tessile'
+        - 'Approfondimento tecnologia drop-stitch'
+        - 'Guida ai materiali marini'
+    - title: 'Conoscenza Sicurezza'
+      description: 'Conoscenze essenziali di sicurezza per ogni tessile 闁?dalla scelta del giubbotto alla lettura del meteo alle tecniche di autorescue.'
+      icon: 'tabler:shield'
+      topics:
+        - 'Lista di controllo sicurezza SUP'
+        - 'Serve un giubbotto di salvataggio?'
+        - 'Guida alla sicurezza in paddle oceanico'
+        - 'Sicurezza fluviale per tessuti tecnici gonfiabili'
+        - 'Consapevolezza delle condizioni meteorologiche e idriche'
+    - title: 'Tecnologia'
+      description: 'L''ingegneria dietro i prodotti Seekingtex 闁?materiali, metodi di costruzione e test di qualit閼?'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Tecnologia PVC per uso tessile'
+        - 'Nucleo drop-stitch spiegato'
+        - 'Perch閼?il PSI 閻?importante per i SUP gonfiabili'
+        - 'Saldatura RF vs incollaggio adesivo'
+        - 'Test di qualit閼?e certificazione'
+
+featured_guides:
+  tagline: 'Guide in Evidenza'
+  title: 'Risorse di conoscenza pi闂?popolari'
+  items:
+    - title: 'Basi del SUP'
+      href: '/learn/fabrics'
+    - title: 'funzionale vs Tavola Rigida'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Guida alla Sicurezza in Acqua'
+      href: '/learn/quality-standards'
+    - title: 'Riferimento Materiali'
+      href: '/learn/materials'
+    - title: 'Guida alle Misure SUP'
+      href: '/size-guide'
+
+cta:
+  title: 'Inizia a esplorare'
+  subtitle: 'Immergiti nella nostra base di conoscenza e ottieni le informazioni necessarie per la tua prossima avventura in acqua.'
+  actions:
+    - variant: primary
+      text: 'Sfoglia tutte le guide'
+      href: '/academy'
+    - text: 'Esplora il Grafico della Conoscenza'
+      href: '/knowledge'

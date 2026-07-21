@@ -1,0 +1,108 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('compare.supVsKayak.title') || 'Cotton vs Polyester — Which Fabric Is Right for You?'}`,
+  description: t('compare.supVsKayak.desc') || 'Compare cotton and polyester fabrics across breathability, durability, cost, care, and use cases. Find the right textile for your needs.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.supVsKayak.headline') || 'Cotton vs Polyester — Which Fabric Is Right for You?',
+      description: t('compare.supVsKayak.desc') || 'Compare cotton and polyester fabrics across breathability, durability, cost, care, and use cases.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: `https://seekingtex.com/${lang}/compare/sup-vs-kayak` }}
+  />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: t('home') || 'Home', href: `/${lang}/` }, { name: t('compare.label') || 'Compare', href: `/${lang}/compare` }, { name: t('compare.supVsKayak.short') || 'Cotton vs Polyester' }]} />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700">&larr; {t('compare.backToProducts') || 'Products'}</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('compare.supVsKayak.heading') || 'Cotton vs Polyester Fabric'}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('compare.supVsKayak.subtitle') || 'A practical comparison to help you choose the right fabric for your application, performance needs, and budget.'}</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsKayak.col1Title') || 'Cotton'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.stability') || 'Breathability:'}</strong> {t('compare.supVsKayak.stabilityDesc') || 'Natural fiber allows excellent air circulation. Comfortable against skin for extended wear. Ideal in hot, dry climates.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.speed') || 'Moisture Absorption:'}</strong> {t('compare.supVsKayak.speedDesc') || 'Highly absorbent (up to 27% of dry weight). Absorbs sweat away from skin but stays wet, causing discomfort during physical activity.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.storage') || 'Durability:'}</strong> {t('compare.supVsKayak.storageDesc') || 'Moderate strength. Prone to shrinking and wrinkling. Can mildew if stored damp. Susceptible to UV degradation.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.learning') || 'Care:'}</strong> {t('compare.supVsKayak.learningDesc') || 'Machine washable but shrinks. Requires ironing. Color fading with repeated washing.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.bestFor') || 'Best for:'}</strong> {t('compare.supVsKayak.bestForDesc') || 'Casual wear, bedding, towels, denim, home textiles, environmentally conscious consumers (organic cotton).'}</span></li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsKayak.col2Title') || 'Polyester'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.stability') || 'Breathability:'}</strong> {t('compare.supVsKayak.kayakStabilityDesc') || 'Less breathable than cotton in natural state. Engineered wicking finishes improve moisture management for active use.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.speed') || 'Moisture Absorption:'}</strong> {t('compare.supVsKayak.kayakSpeedDesc') || 'Hydrophobic — absorbs only 0.4% of dry weight. Wicks moisture to surface for evaporation. Stays dry during activity.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.storage') || 'Durability:'}</strong> {t('compare.supVsKayak.kayakStorageDesc') || 'Strong, abrasion-resistant. UV-resistant options available. Resists shrinking, stretching, and mildew. Holds shape after washing.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.learning') || 'Care:'}</strong> {t('compare.supVsKayak.kayakLearningDesc') || 'Machine washable. Quick drying. No ironing needed. Colorfast. Resists wrinkles and stains.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsKayak.bestFor') || 'Best for:'}</strong> {t('compare.supVsKayak.kayakBestForDesc') || 'Sportswear, outdoor gear, uniforms, workwear, technical textiles, performance apparel, travel clothing.'}</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">{t('compare.supVsKayak.tableTitle') || 'Quick Decision Guide'}</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">{t('compare.supVsKayak.short') || 'Cotton'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">{t('compare.supVsKayak.kayakShort') || 'Polyester'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              [t('compare.supVsKayak.r1') || 'Breathability', t('compare.supVsKayak.r1a') || 'Excellent (natural)', t('compare.supVsKayak.r1b') || 'Moderate (treated for performance)'],
+              [t('compare.supVsKayak.r2') || 'Moisture Management', t('compare.supVsKayak.r2a') || 'Absorbs (stays wet)', t('compare.supVsKayak.r2b') || 'Wicks (stays dry)'],
+              [t('compare.supVsKayak.r3') || 'Durability', t('compare.supVsKayak.r3a') || 'Moderate', t('compare.supVsKayak.r3b') || 'High'],
+              [t('compare.supVsKayak.r4') || 'UV Resistance', t('compare.supVsKayak.r4a') || 'Poor', t('compare.supVsKayak.r4b') || 'Excellent (with stabilizers)'],
+              [t('compare.supVsKayak.r5') || 'Wrinkle Resistance', t('compare.supVsKayak.r5a') || 'Poor (wrinkles easily)', t('compare.supVsKayak.r5b') || 'Excellent'],
+              [t('compare.supVsKayak.r6') || 'Shrinkage', t('compare.supVsKayak.r6a') || 'Significant', t('compare.supVsKayak.r6b') || 'Minimal'],
+              [t('compare.supVsKayak.r7') || 'Drying Speed', t('compare.supVsKayak.r7a') || 'Slow', t('compare.supVsKayak.r7b') || 'Fast'],
+              [t('compare.supVsKayak.r8') || 'Environmental Impact', t('compare.supVsKayak.r8a') || 'Biodegradable, high water use', t('compare.supVsKayak.r8b') || 'Non-biodegradable, lower water use'],
+              [t('compare.supVsKayak.r9') || 'Cost per Yard', t('compare.supVsKayak.r9a') || '$0.60-$3.00', t('compare.supVsKayak.r9b') || '$0.80-$2.50'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsKayak.recTitle') || 'Which Should You Choose?'}</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">{t('compare.supVsKayak.recDesc') || 'Choose cotton for natural comfort, breathability, and softness in everyday clothing, bedding, and home textiles. Choose polyester for durability, moisture management, and performance in sportswear, outdoor gear, and technical applications. Many products use cotton-polyester blends (e.g., 50/50 or 65/35) to combine the comfort of cotton with the performance of polyester.'}</p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a href={`/${lang}/products`} class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">{t('compare.browseProducts') || 'Browse Products'}</a>
+        <a href={`/${lang}/guides`} class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">{t('compare.readGuides') || 'Read Guides'}</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>{t('compare.supVsKayak.aiBlock') || 'Comprehensive comparison between cotton (natural cellulose fiber) and polyester (synthetic polymer fiber) for textile applications. Covers breathability, moisture absorption, UV resistance, wrinkle resistance, shrinkage, drying speed, environmental impact, and cost per yard. Cotton offers excellent breathability and natural comfort but absorbs moisture, shrinks, and wrinkles. Polyester offers superior moisture wicking, durability, UV resistance, wrinkle resistance, and quick drying but is less breathable naturally. Cotton-polyester blends combine the best of both fibers.'}</p>
+  </section>
+</Layout>

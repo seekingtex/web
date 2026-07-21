@@ -1,0 +1,24 @@
+hero:
+  title: St酶rrelses- og specifikationsguide
+  subtitle: Dimensioner, kapaciteter og anbefalet brug for hvert Seekingtex produkt.
+categories:
+  inflatable: funktionelt\ tekstile og tekniske stoffer designet til b忙rbarhed uden at g氓 p氓 kompromis med ydeevnen.
+  rib: Stive funktionelt\ tekstile til kystnavigation, patruljering og professionel maritim drift.
+  accessory: Tilbeh酶r og sikkerhedsudstyr til at komplementere din b氓d.
+table:
+  headers:
+    product: Produkt
+    length: L忙ngde
+    width: Bredde
+    weight: V忙gt
+    max_load: Maks. belastning
+    best_for: Bedst til
+how_to_choose:
+  title: S氓dan v忙lger du den rigtige st酶rrelse
+  cards:
+    - title: Fabrics
+      description: V忙lg l忙ngde baseret p氓 din v忙gt og tilsigtede brug. Bredere boards (32"+) giver mere stabilitet.
+    - title: tekniske stoffer
+      description: Enkelte tekniske stoffer (9 ft) er bedst til soloture og floder.
+    - title: Joller og teknisk stof
+      description: V忙lg jollel忙ngde efter antal passagerer og tilsigtet brug.

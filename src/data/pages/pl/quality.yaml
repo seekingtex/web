@@ -1,0 +1,50 @@
+hero:
+  tagline: Zapewnienie jakości
+  title: Testy wydajności i jakości
+  subtitle: Każda łódź pneumatyczna i SUP Seekingtex przechodzi rygorystyczne testy wydajności i jakości w naszym Centrum B+R przed wysyłką. Nasze kompleksowe testy zapewniają namacalny dowód doskonałości produktu.
+
+stats:
+  - value: 100%
+    label: Jednostek testowanych ciśnieniowo
+  - value: '8'
+    label: Protokoły testowe
+  - value: 'ISO 9001'
+    label: Certyfikat jakości
+  - value: 3-Year
+    label: Ograniczona gwarancja
+
+tests:
+  - title: Test ciśnienia
+    description: Komory pneumatyczne są poddawane ciśnieniu przekraczającemu zalecane limity robocze przez dłuższy czas. Weryfikuje to szczelność i integralność strukturalną materiału oraz szwów, zapewniając, że produkt wytrzyma zamierzone użytkowanie i potencjalne nadmierne napompowanie bez awarii lub przecieków.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Test udarności
+    description: Produkty są poddawane kontrolowanym uderzeniom o różnej wadze i pod różnymi kątami. Ocena odporności materiału na przebicia, rozdarcia i uszkodzenia spowodowane kolizjami z przeszkodami w wodzie, wykazując trwałość i długowieczność.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Test odporności na promieniowanie UV
+    description: Gotowe produkty są wystawiane na symulowane światło słoneczne przez dłuższy czas w celu oceny odporności materiału na degradację, blaknięcie i osłabienie spowodowane długotrwałą ekspozycją na UV —kluczowe dla łodzi używanych w tropikalnych i silnie nasłonecznionych środowiskach.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Test odporności na ścieranie
+    description: Próbki materiału są pocierane o powierzchnie ścierne przez określoną liczbę cykli pod kontrolowanym ciśnieniem. Mierzy to zdolność materiału do wytrzymywania zużycia wynikającego z wielokrotnego użytku, kontaktu z piaskiem, skałami lub innymi powierzchniami, zapewniając długoterminową trwałość.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Test wydajności w niskich temperaturach
+    description: Produkty są testowane w zimnych środowiskach w celu oceny funkcjonalności i trwałości w różnych warunkach temperaturowych, zapobiegając sztywności lub pękaniu w chłodniejszych wodach. Niezbędne dla łodzi przeznaczonych do użytku zimowego lub na dużych szerokościach geograficznych.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Test wyporności i nośności
+    description: Produkty są testowane z różnymi obciążeniami w celu określenia maksymalnej nośności i zapewnienia bezpiecznego wsparcia dla użytkowników i sprzętu. Każdy model ma zweryfikowaną nośność przed wprowadzeniem do sprzedaży.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Test manewrowości
+    description: Produkty są testowane pod kątem reakcji na wiosłowanie lub sterowanie silnikiem, oceniając promień skrętu i łatwość prowadzenia. Próby na wodzie potwierdzają, że rzeczywiste prowadzenie odpowiada specyfikacjom projektowym.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Test wodoszczelności
+    description: W pełni zmontowane produkty są zanurzane lub poddawane działaniu wody w celu sprawdzenia wszelkich przecieków przez szwy, zawory lub materiały. Każda łódź przechodzi obowiązkową kontrolę wodoszczelności przed wysyłką.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Procedury testowe
+  title: Rygorystyczne testy na każdym etapie
+
+commitment:
+  title: Nasze zobowiązanie
+  body: Dzięki tym rygorystycznym procedurom testowym {SITE} zapewnia klientom pewność, że nasze funkcjonalne tkaniny i łodzie są nie tylko wydajne, ale także zbudowane, by służyć latami —gwarantując niezliczone przyjemne i bezpieczne przygody na wodzie. Nasze laboratorium jakości działa niezależnie od produkcji i raportuje bezpośrednio do zarządu.
+  cta: Poproś o dokumentację testów
+  cta_link: /contact

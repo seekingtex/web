@@ -1,0 +1,27 @@
+hero:
+  title: 尺寸与规格指南
+  subtitle: 每款 Seekingtex 产品的尺寸、容量和推荐用途。
+
+categories:
+  inflatable: 功能性SUP和功能性面料，专为便携性而设计，同时不牺牲性能。根据您的体重和纺织技术风格选择合适的尺寸。
+  rib: 刚性面料体功能性面料，适用于沿海航行、巡逻和专业海事作业。根据长度和发动机功率选择。
+  accessory: 配件和安全装备，以补充您的面料艇。通用尺寸，多种选择。
+
+table:
+  headers:
+    product: 产品
+    length: 长度
+    width: 宽度
+    weight: 重量
+    max_load: 最大负载
+    best_for: 最佳用途
+
+how_to_choose:
+  title: 如何选择合适的尺寸
+  cards:
+    - title: SUP 功能性面料
+      description: 根据体重和预期用途选择长度。更宽的板（32"+）提供更好的稳定性。更长的板（11-12英尺）更适合 touring。较重的划手需要更大容量的板。
+    - title: 功能性面料
+      description: 单人功能性面料（9英尺）最适合单独旅行和河流。双人功能性面料（12英尺）可容纳两名划手或一名成人加装备。检查承重能力以包括装备在内的总负载。
+    - title: 小艇和RIB
+      description: 根据乘客数量和预期用途选择小艇长度。较大的RIB（4.5米+）适合离岸和救援。较小的小艇（2.7米）可作为补给艇和钓鱼平台。

@@ -1,0 +1,96 @@
+hero:
+  tagline: Meist盲
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex-tehdas ja ty枚paja
+  title: |
+    Meritekniikkaa, <br />
+    rakennettu <span class="text-accent dark:text-white">Seekingtex</span>-tavalla
+  subtitle: 'Aloitimme rannikkopajassa yhdell盲 veneell盲 ja itsep盲isell盲 uskomuksella: merituotteiden tulee olla suunniteltuja huolella, koska ne ovat t盲rkeit盲. Nyky盲盲n toimitamme yli 40 maahan, mutta jokainen runko kulkee edelleen samojen k盲sien l盲pi, jotka perustivat yrityksen.'
+
+stats:
+  title: Lukuina
+  columns: 4
+  stats:
+    - title: Toimitettuja runkoja
+      amount: '2,400+'
+    - title: Maita, joihin toimitetaan
+      amount: '40'
+    - title: Yhdistetty kokemus vuosina
+      amount: '60'
+    - title: Keskim盲盲r盲inen takuuvaste (tunteja)
+      amount: '24'
+
+features3_what_we_build:
+  title: Mit盲 rakennamme
+  subtitle: Keskittynyt tuotevalikoima, jonka tunnemme perusteellisesti 鈥?ei puolivalmiita kokeiluja, ei merkkituotteiden uudelleenbr盲nd盲yst盲.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: tekninen kangas-veneet
+      description: Alumiinirunkoiset tekninen kangas-veneet 3,3 m 鈥?7,5 m. Suunniteltu partiointiin, sukellukseen, kalastukseen ja perhek盲ytt枚枚n.
+      icon: tabler:ship
+    - title: Kumiveneet
+      description: PVC- ja Hypalon-kumiveneet 2,4 m 鈥?4,2 m. Kevyit盲, kest盲vi盲 ja helppoja s盲ilytt盲盲.
+      icon: tabler:speedboat
+    - title: Superjahtien tenderit
+      description: Kompaktit, huippuluokan tekninen kangas-veneet, jotka on rakennettu vastaamaan emoaluksesi ilmett盲.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Varusteet
+      description: Airot, pumput, suojat, kuivalaukut, polttoaines盲ili枚t ja elektroniikka. Kaikki yhteensopivia veneidemme kanssa.
+      icon: tabler:package
+    - title: Kunnostus ja korjaus
+      description: Oma putkien vaihto, elektroniikan p盲ivitys ja moottorip盲ivitykset.
+      icon: tabler:tool
+    - title: R盲盲t盲l枚idyt rakennusprojektit
+      description: Projekti kerrallaan suunnittelua kaupallisiin, tieteellisiin ja sotilaallisiin tarpeisiin.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Veneen suunnittelu- ja insin枚枚rity枚keskustelu
+
+steps2_values:
+  title: Arvomme
+  subtitle: Kolme periaatetta, jotka ovat muokanneet jokaista tuotetta ensimm盲isest盲 p盲iv盲st盲 l盲htien.
+  items:
+    - title: Rakenna kuin se kantaisi perhett盲si
+      description: Jokaista runkoa, hitsi盲 ja kiinnitint盲 k盲sitell盲盲n kuin oma perheemme k盲ytt盲isi sit盲.
+      icon: tabler:heart
+    - title: Suunnittele ennen kuin myymme
+      description: Jos m盲盲rittely on v盲盲r盲, muutamme m盲盲rittely盲 鈥?emme koskaan asiakasta.
+      icon: tabler:settings
+    - title: Tuki, joka kest盲盲 takuuta pidemp盲盲n
+      description: Kaksikymment盲 vuotta vanhat rungot soittavat edelleen meille varaosia varten, ja vastaamme yh盲.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Virstanpylv盲盲t
+  subtitle: Lyhyt versio Seekingtexin tarinasta.
+  isReversed: true
+  items:
+    - title: Perustettu rannikkopajassa
+      description: Kahden laivainsin枚枚rin perustama, CNC-koneella ja itsep盲isell盲 idealla.
+      icon: tabler:building-factory
+    - title: Ensimm盲iset 1 000 runkoa toimitettu
+      description: Saavutettu seitsem盲nten盲 vuotena, p盲盲asiassa puskaradion ja toistuvien asiakkaiden kautta.
+      icon: tabler:circle-check
+    - title: Kansainv盲linen vientiohjelma
+      description: Toimitamme nyt yli 40 maahan, paikallisia tukikumppaneita viidell盲 mantereella.
+      icon: tabler:world
+
+features2_locations:
+  title: Toimipisteemme
+  tagline: L枚yd盲 meid盲t
+  columns: 3
+  items:
+    - title: P盲盲konttori ja ty枚paja
+      description: Rannikon teollisuuspuisto, rakennus 4 鈥?avoinna ma鈥損e vierailuille sopimuksen mukaan.
+    - title: EU-huoltokeskus
+      description: V盲limeren satama 鈥?kunnostus, korjaus ja takuutuki Euroopan asiakkaille.
+    - title: APAC-kumppaniverkosto
+      description: Valtuutetut huoltokumppanit Australiassa, Japanissa, Singaporessa ja Hongkongissa.

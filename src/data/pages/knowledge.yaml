@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Knowledge Graph'
+  title: 'Fabric & Textile Knowledge'
+  subtitle: |
+    A structured knowledge base covering fabric technology,<br />
+    textile engineering, quality standards, and material science.
+  taglineSection: 'Learn. Source. Innovate.'
+
+clusters:
+  tagline: 'Knowledge Clusters'
+  title: 'Explore by topic'
+  subtitle: 'Deep dives into the technology, engineering, and application of performance textiles.'
+  items:
+    - title: 'Fabric Technology'
+      description: 'From fiber types to finished fabrics — everything about textile construction, performance finishes, and material science.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'How to choose the right performance fabric'
+        - 'Understanding fabric weight and GSM'
+        - 'Woven vs knit fabric comparison'
+        - 'Fabric finishes: DWR, UPF, FR, antibacterial'
+        - 'Coating and lamination technologies'
+    - title: 'Textile Engineering'
+      description: 'Technical guides on weaving, knitting, dyeing, coating, and quality testing — the engineering behind performance textiles.'
+      icon: 'tabler:settings'
+      topics:
+        - 'Fabric construction methods explained'
+        - 'Yarn types and fiber properties'
+        - 'Dyeing methods: piece, yarn, solution'
+        - 'Quality control in textile manufacturing'
+        - 'Textile testing standards and methods'
+    - title: 'Certifications & Compliance'
+      description: 'Essential knowledge on textile certifications — OEKO-TEX, REACH, GRS, bluesign, and how to ensure regulatory compliance.'
+      icon: 'tabler:certificate'
+      topics:
+        - 'OEKO-TEX Standard 100 explained'
+        - 'REACH compliance for textile imports'
+        - 'GRS certification for recycled fabrics'
+        - 'ISO 9001 and ISO 14001 in textiles'
+        - 'Understanding chemical compliance'
+    - title: 'Sustainable Textiles'
+      description: 'The latest in sustainable textile innovation — recycled fibers, bio-based materials, low-impact dyes, and circular economy practices.'
+      icon: 'tabler:leaf'
+      topics:
+        - 'Recycled polyester vs virgin polyester'
+        - 'Eco-friendly fabric finishes'
+        - 'Water conservation in textile dyeing'
+        - 'Low-impact and natural dyeing'
+        - 'Circular textile economy basics'
+
+featured_guides:
+  tagline: 'Featured Guides'
+  title: 'Most popular knowledge resources'
+  items:
+    - title: 'Fabric Basics'
+      href: '/learn/fabric-basics'
+    - title: 'Woven vs Knit'
+      href: '/compare/woven-vs-knit'
+    - title: 'Performance Finishes Guide'
+      href: '/learn/performance-finishes'
+    - title: 'Certifications Reference'
+      href: '/learn/certifications'
+    - title: 'Fabric Weight Guide'
+      href: '/size-guide'
+
+cta:
+  title: 'Start exploring'
+  subtitle: 'Browse our knowledge base and get the information you need for your next fabric sourcing project.'
+  actions:
+    - variant: primary
+      text: 'Browse all guides'
+      href: '/academy'
+    - text: 'Explore Knowledge Graph'
+      href: '/knowledge'

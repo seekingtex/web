@@ -1,0 +1,23 @@
+hero:
+  tagline: 저널
+  title: Seekingtex 저널
+  subtitle: Seekingtex 팀의 최신 소식, 섬유 모험 및 제품 이야기.
+
+meta:
+  read_more: 더 읽기
+  published: 게시일
+  by: 작성자
+  browse_all: 모든 기사 보기
+  categories: 카테고리
+  subscribe: 저널 구독하기
+
+categories:
+  all: 전체
+  adventures: 모험
+  product: 제품
+  tips: 팁
+  culture: 문화
+
+featured: 추천 기사
+latest: 최신 기사
+no_articles: 현재 기사가 없습니다.

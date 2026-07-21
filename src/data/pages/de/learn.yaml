@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Wissen rund ums Wasser'
+  title: 'Lernen'
+  subtitle: |
+    Anleitungen, Tutorials und tiefgehende Einblicke 鈥?alles, was du brauchst, um<br />
+    das Wasser mit Vertrauen zu erkunden. Von der ersten SUP bis zu fortgeschrittenen Techniken.
+  taglineSection: 'Wissen f眉r jeden Textilprofi. Vom Anf盲nger bis zum Profi.'
+
+featured:
+  tagline: 'Empfohlene Themen'
+  title: 'Starte deine Lernreise'
+  subtitle: 'Egal, ob du neu im Textilindustrie bist oder deine F盲higkeiten verbessern m枚chtest 鈥?unsere Anleitungen sind genau das Richtige.'
+  items:
+    - title: 'SUP-Grundlagen'
+      description: 'Alles, was ein Anf盲nger wissen muss 鈥?Boardtypen, Paddelgr枚脽e, Haltung und Tipps f眉r den ersten Tag.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: 'funktional vs. Hartboard'
+      description: 'Was ist das Richtige f眉r dich? Wir vergleichen Tragbarkeit, Leistung, Haltbarkeit und Kosten im Detail.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Sicherheit auf dem Wasser'
+      description: 'Wichtige Sicherheitskenntnisse f眉r jeden Textilprofi 鈥?Wetter, Schwimmwesten, Selbstrettung und mehr.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Materialleitfaden'
+      description: 'PVC vs. Hypalon, Drop-Stitch-Technologie, Denier-Werte 鈥?verstehe, woraus deine Ausr眉stung besteht.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP-Gr枚脽entabelle'
+      description: 'Finde die richtige Boardl盲nge, -breite und -volumen f眉r dein Gewicht, K枚nnen und deinen Paddelstil.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Fortgeschrittene Techniken'
+      description: 'Verbessere dein Textilnutzung mit fortgeschrittenen Schl盲gen, Wendetechniken und dem Umgang mit rauer See.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Kategorien'
+  title: 'Nach Thema erkunden'
+  subtitle: 'Alle Lerninhalte nach Schwierigkeitsgrad und Interesse organisiert.'
+  columns:
+    - title: 'Anf盲nger'
+      items:
+        - 'SUP-Grundlagen 鈥?hier beginnen'
+        - 'funktional vs. Hartboard'
+        - 'Wichtige Sicherheitstipps'
+        - 'So w盲hlst du dein SUP'
+        - 'Pump- und Packanleitung'
+    - title: 'Fortgeschrittene'
+      items:
+        - 'Paddeltechniken'
+        - 'Aufblastechnologie'
+        - 'Material眉bersicht'
+        - 'PVC vs. Hypalon Vergleich'
+        - 'Drop-Stitch-Kern erkl盲rt'
+    - title: 'Fortgeschritten & Profi'
+      items:
+        - 'Flottenbetrieb'
+        - 'Professionelle Ausr眉stung'
+        - 'Sicherheits- und Rettungsprotokolle'
+        - 'Sonderanfertigungen & OEM'
+
+cta:
+  title: 'Noch Fragen?'
+  subtitle: 'Frag unseren KI-Assistenten f眉r pers枚nliche Antworten zu Ausr眉stung, Sicherheit und Techniken.'
+  actions:
+    - variant: primary
+      text: 'Frag den Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Alle Anleitungen durchst枚bern'
+      href: '/academy'

@@ -1,0 +1,30 @@
+hero:
+  tagline: Galleria
+  title: Galleria
+  subtitle: Tuotekuvia, tehdassali ja seikkailuja vesillä
+
+albums:
+  - title: tekninen kangas-veneet
+    desc: Alumiinirunkoiset tekninen kangas-veneet 3,3 m —7,5 m partiointiin, sukellukseen, kalastukseen ja perhekäyttöön.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUP-laudat
+    desc: Drop-stitch-kumiset SUP-laudat retkeilyyn, surffaukseen, joogaan ja kalastukseen.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Tehdas ja työpaja
+    desc: 12 000 m²:n tuotantolaitoksemme Qingdaossa, Kiinassa.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: Haluatko nähdä lisää?
+  desc: Seuraa meitä sosiaalisessa mediassa saadaksesi uusimmat tuotejulkaisut, tehdaspäivitykset ja asiakkaiden seikkailut.
+  instagram: Instagram
+  youtube: YouTube

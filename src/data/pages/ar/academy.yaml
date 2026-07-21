@@ -1,0 +1,72 @@
+hero:
+  tagline: Seekingtex Academy
+  title: مركز التعلم
+  subtitle: أدلة وبرامج تعليمية لكل مستوى مهارة — من أساسيات SUP إلى تقنيات الإنقاذ المتقدمة
+
+categories:
+  - level: مبتدئ
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: أساسيات SUP
+        desc: تعلم أساسيات التجديف الوقوف — الوضعية، تقنية الضربة، والتوازن.
+        slug: sup-basics
+      - title: تقنيات المجذاف
+        desc: الضربة الأمامية، الضربة الجانبية، ضربة السحب، والدعامة المنخفضة — أتقن حركات المجذاف الأساسية.
+        slug: paddle-techniques
+      - title: السلامة أولاً
+        desc: ممارسات السلامة الأساسية بما في ذلك فحص الطقس، استخدام PFD، قواعد حبل الربط، والإنقاذ الذاتي.
+        slug: safety-first
+  - level: متوسط
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: أساسيات الجولات
+        desc: تخطيط جولات التجديف لعدة ساعات — الملاحة، الترطيب، السرعة، وقراءة توقعات الرياح.
+        slug: touring-essentials
+      - title: قراءة الطقس
+        desc: تفسير التوقعات النسيجية، تحديد أنماط السحب، وفهم تأثيرات الرياح على الماء.
+        slug: weather-reading
+      - title: أساسيات الملاحة
+        desc: قراءة الخرائط، استخدام البوصلة، نقاط GPS، وتخطيط الطريق للتجديف الساحلي.
+        slug: navigation-basics
+      - title: الوعي بالمد والجزر
+        desc: فهم دورات المد والجزر والتيارات وكيف تؤثر على توقيت الانطلاق والطريق.
+        slug: tidal-awareness
+  - level: متقدم
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: تخطيط الرحلات متعددة الأيام
+        desc: لوجستيات البعثة — اختيار المعدات، تخطيط الطعام، بروتوكولات السلامة، وجهات الاتصال في حالات الطوارئ.
+        slug: multi-day-trip-planning
+      - title: تقنيات الإنقاذ
+        desc: الإنقاذ الذاتي، إنقاذ T، الإنقاذ الإسكيمو للكاياك، وبروتوكولات القطر في المياه المفتوحة.
+        slug: rescue-techniques
+      - title: التجديل الليلي
+        desc: الملاحة بعد حلول الظلام — متطلبات الإضاءة، ذاكرة الطريق، التواصل الجماعي، والوعي بالمخاطر.
+        slug: night-paddling
+  - level: الصيانة
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: التنظيف والعناية
+        desc: الشطف بالماء العذب، الحماية من الأشعة فوق البنفسجية، منع العفن، وتقنيات التجفيف المناسبة بعد كل جلسة.
+        slug: cleaning-and-care
+      - title: دليل التخزين
+        desc: أفضل الممارسات لتخزين الألواح والقوارب القابلة للنفخ — التفريغ، الطي، التحكم في درجة الحرارة، والعمر الافتراضي.
+        slug: storage-guide
+      - title: أساسيات الإصلاح
+        desc: إصلاح الثقوب الصغيرة، تسربات الدرزات، ومشاكل الصمامات باستخدام مجموعات إصلاح PVC وتقنيات الرقعة.
+        slug: repair-basics
+      - title: صيانة الصمامات
+        desc: تحديد أنواع الصمامات (Halkey-Roberts، Boston، Leafield)، تنظيف الحطام، واستبدال السيقان التالفة.
+        slug: valve-maintenance
+
+read_guide: اقرأ الدليل →
+
+cta:
+  title: لست متأكداً من أين تبدأ؟
+  desc: قم بإجراء اختبار تقييم المهارات لدينا للعثور على الأدلة والمعدات المناسبة لمستواك.
+  label: اتصل بنا →
+  link: /contact

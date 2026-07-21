@@ -1,0 +1,177 @@
+hero:
+  tagline: '繊維の信頼できる冒険をエンジニアリング'
+  title: 'Seekingtex'
+  subtitle: |
+    家族、探検家、プロフェッショナルのための<br />
+    機能性SUP、ボート、繊維装備を生み出すグローバルウォーターエクスプロレーションブランドです。
+  taglineSection: '探検のために設計され、信頼性のためにエンジニアリングされ、グローバルパートナーのために構築されました。'
+  actions:
+    - variant: primary
+      text: 製品を見る
+      href: /products
+      icon: tabler:shopping-bag
+    - text: 詳しく見る
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Seekingtex ヒーロー画像
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: Seekingtex 工場および施設概要
+      tagline: ようこそ
+      title: |
+        水のために設計され。<br />
+        <span class="text-sky-300">船上の暮らし</span>のために造られた。
+      subtitle: 繊維専門家と愛好家のためのプレミアム機能性ボート、技術ファブリック、エンジニアリング製品。
+      actions:
+        - text: 製品を見る
+          href: /products
+          variant: primary
+        - text: 見積もりを依頼
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: 繊維のSeekingtexボート
+      tagline: 職人技
+      title: |
+        保証期間を超えて長持ちする船体。<br />
+        船体を超えて長く続くサービス。
+      subtitle: 繊維グレード素材。アルミ溶接。20年前のボートでも部品の問い合わせがあります。
+      actions:
+        - text: 私たちのストーリー
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: 繊維のSeekingtex機能性ボート
+      tagline: サポート
+      title: |
+        販売前にエンジニアリング。<br />
+        販売後も長期にサポート。
+      subtitle: 40か国以上の認定サービスパートナー。20年前の船体からも部品の問い合わせが来ます — そして私たちは今も対応します。
+      actions:
+        - text: お問い合わせ
+          href: /contact
+          variant: primary
+        - text: 価格を見る
+          href: /pricing
+          variant: secondary
+
+features:
+  id: features
+  tagline: Seekingtexを選ぶ理由
+  title: Seekingtexで得られるもの
+  subtitle: 数十年の造船経験を1つの集中した製品ラインに凝縮。頑丈に造り、海上でテストされ、生涯サポート。
+  columns: 2
+  items:
+    - title: 繊維グレード素材
+      description: UV、摩耗、耐海水性に優れた高耐久PVC、Hypalon、アルミ船体。
+      icon: tabler:shield-check
+    - title: 生産品質
+      description: すべての船体は圧力テスト済み、すべての溶接は検査済み。私たち自身が水に出したいものだけを出荷します。
+      icon: tabler:certificate
+    - title: モジュラーデザイン
+      description: チューブレイアウト、コンソール位置、燃料容量、アクセサリーを用途に合わせてカスタマイズ可能。
+      icon: tabler:layout-grid
+    - title: 正直なスペック
+      description: 実際の負荷定格、実際の寸法、実際の重量。マーケティングによる水増しは一切ありません。
+      icon: tabler:ruler-measure
+    - title: 迅速な納品とスペアパーツ
+      description: 一般的なモデルは数日で出荷。純正スペアと消耗品は年中在庫。
+      icon: tabler:truck-delivery
+    - title: 生涯サポート
+      description: 技術的な質問、修理、改装のアドバイスについてはエンジニアリングチームに直接連絡可能。
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: 厳選製品
+  subtitle: 現在のカタログから厳選 — 今シーズン最も人気のモデル。
+  linkText: すべての製品を見る
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: 工場見学
+  title: 船体図面から納品まで、すべての工程を自社で一貫
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">見て、触れて、測れる品質</h3>
+  items:
+    - title: 設計士による設計
+      description: 船体ラインは自社で描かれ、最初のプロトタイプが水に浮かぶ前にCFD解析を繰り返します。
+    - title: 自社工場で溶接・組立
+      description: チューブ溶接、コンソールフィットアウト、艤装が一つの屋根の下で行われ、すべての工程で品質を管理。
+    - title: 出荷前に海上テスト
+      description: すべてのモデルは、滑走、旋回、最高速度、負荷処理をカバーする数時間の海上テストを完了。
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Seekingtex生産工場
+
+steps:
+  title: スペックシートから進水まで5つのステップ
+  items:
+    - title: 'ステップ1：<span class="font-medium">設定</span>'
+      description: モデルを選び、オプションを選択し、オンラインまたは電話で見積もりを依頼。チームは1営業日以内に回答。
+      icon: tabler:list-numbers
+    - title: 'ステップ2：<span class="font-medium">確認</span>'
+      description: スペック、リードタイム、総費用を書面で確認。驚きも隠れた費用もありません。
+      icon: tabler:checks
+    - title: 'ステップ3：<span class="font-medium">製造</span>'
+      description: 工場で生産開始。主要なマイルストーンで進捗写真をお送りします。
+      icon: tabler:tool
+    - title: 'ステップ4：<span class="font-medium">納品</span>'
+      description: クレードルに固定、シュリンクラップ包装、海上または航空で出荷。通関手続きはすべて対応。
+      icon: tabler:truck-loading
+    - title: 'ステップ5：<span class="font-medium">サポート</span>'
+      description: 2年間の船体保証に加え、生涯技術サポート。スペアパーツは48時間以内に出荷。
+      icon: tabler:headset
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Seekingtex製造工程
+
+blog_latest:
+  title: ブログ
+  information: |
+    エンジニアリングチームからの記事、テクニカルノート、ケーススタディ。
+    プロジェクトが出荷されたとき、規格が更新されたとき、または誰かが語る価値のあるストーリーがあるときに、新しいエントリーが追加されます。
+
+faqs:
+  title: よくある質問
+  subtitle: Seekingtexの機能性ボート、保証、配送、OEM/ODMパートナーシップに関するよくあるお問い合わせ。ここにない場合は、お問い合わせください。
+  columns: 2
+  items:
+    - title: Seekingtexの米国倉庫はどこですか？配送にはどのくらい時間がかかりますか？
+      description: 米国の倉庫はカリフォルニア州モントクレアにあります。西海岸：2〜3日。中部：3〜4日。東海岸：4〜5日。国際配送も可能です — 個別の見積もりについてはお問い合わせください。
+      icon: tabler:truck-delivery
+    - title: Seekingtexの機能性ボートの保証ポリシーは？
+      description: Seekingtexの機能性繊維製品には、チューブ生地の完全性、シームの気密性、ガラス繊維船体構造、およびインフレーションバルブに対して5年間の限定保証が付いています。工場取付アクセサリーは1年間保証。業務用：1年間限定保証。完全な利用規約は保証ページでご確認いただけます。
+      icon: tabler:shield-check
+    - title: Seekingtexのボートには登録書類が含まれていますか？
+      description: はい、すべてのSeekingtex機能性ボートには登録に必要な書類が含まれています。製造元証明書は取扱説明書の裏ページにあり、ダウンロード可能なコピーはリクエストに応じてご利用いただけます。米国沿岸警備隊の製造承認済み。
+      icon: tabler:file-text
+    - title: Seekingtexのボートは米国沿岸警備隊の承認を受けていますか？
+      description: はい、Seekingtexの機能性ボートは米国沿岸警備隊（USCG）の製造承認を受けています。当工場はEU市場向けのCE認証および認証も取得しています。
+      icon: tabler:flag
+    - title: 製品のパッケージが破損して到着した場合はどうすればよいですか？
+      description: Seekingtexの製品パッケージが破損して到着した場合は、配送を拒否し、送り主に返送してください。サポートチームにご連絡いただければ、直ちに代替品を発送します。
+      icon: tabler:package
+    - title: 推定配達日までに製品が届かない場合はどうなりますか？
+      description: Seekingtexが提供する配送時間は推定であり、保証されません。発送後、荷物の受取りはお客様の責任となります。指定された配送場所に荷物が置かれた場合、配送をもって所有権が移転します。
+      icon: tabler:calendar-clock
+
+cta:
+  title: |
+    OEM/ODMプロジェクトを<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">始めませんか</span>？
+  subtitle: ご要件をお知らせください。1営業日以内にカスタム見積もり、最小ロット詳細、リードタイムをご提供します。
+  actions:
+    - variant: primary
+      text: 見積もりを依頼
+      href: /contact
+      icon: tabler:message-circle
+    - text: 工場見学
+      href: /factory

@@ -1,0 +1,9 @@
+badge: 'Top Guides'
+heading: 'Start here before you source'
+description: 'Three essential guides that cover fabric selection, quality evaluation, and working with a textile manufacturer.'
+guides:
+  - 'how-to-choose-performance-fabrics'
+  - 'understanding-fabric-certifications'
+  - 'textile-sourcing-guide-for-beginners'
+browseText: 'Browse all 20 guides and resources →'
+browseHref: '/v2'

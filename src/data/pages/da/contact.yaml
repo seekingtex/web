@@ -1,0 +1,134 @@
+hero:
+  tagline: Kontakt
+  title: Kontakt Seekingtex
+  subtitle: Vi er her for at hj忙lpe dig. Kontakt os vedr酶rende produktsp酶rgsm氓l, OEM/ODM partnerskaber eller andre sp酶rgsm氓l.
+  image: /images/seekingtex/hero/contact-banner.webp
+  imageAlt: Kontakt Seekingtex
+
+contact_form:
+  id: form
+  title: Send os en besked
+  subtitle: Tilbud, tekniske sp酶rgsm氓l eller partnerskabshenvendelser 鈥?skriv til os. Vi svarer inden for 茅n arbejdsdag.
+  email_to: gzb@seekingtex.com
+  submit_button: Send foresp酶rgsel 鈫?F氓 et tilbud
+  success_message: Tak! Din besked er landet i vores indbakke. Vi svarer inden for 茅n arbejdsdag.
+  error_message: Noget gik galt ved afsendelse af din besked. Pr酶v igen eller send os en e-mail direkte.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: l酶s venligst f酶lgende'
+  fields:
+    - name: firstName
+      label: Fornavn
+      row: 1
+    - name: lastName
+      label: Efternavn
+      row: 1
+    - name: companyName
+      label: Virksomhedsnavn
+      row: 2
+    - name: address
+      label: Adresse
+      row: 3
+    - name: zip
+      label: Postnummer
+      row: 4
+    - name: country
+      label: Land
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Forventet ordrem忙ngde
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: V忙lg forventet m忙ngde...
+        - value: sample
+          label: Kun pr酶ver / prototyper
+        - value: '5-10'
+          label: 50鈥?00 enheder (standard MOQ)
+        - value: '100-500'
+          label: 100鈥?00 enheder
+        - value: '500-plus'
+          label: 500+ enheder (volumenpriser)
+    - name: customization
+      label: Brug for tilpasning?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: V忙lg tilpasningstype...
+        - value: none
+          label: Standardprodukt (uden tilpasning)
+        - value: logo
+          label: Kun tilpasset logo / branding
+        - value: full
+          label: Fuld OEM (st酶rrelse, farve, grafik, emballage)
+        - value: consultation
+          label: Ikke sikker 鈥?har brug for r氓dgivning
+    - name: productInterest
+      label: Produktkategorier af interesse
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: Emne
+      row: 9
+    - name: message
+      label: Besked
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Andre m氓der at kontakte os
+  columns: 3
+  items:
+    - title: Salgshenvendelser
+      description: Tilbud, konfigurationer, forhandlerans酶gninger og bulkordrer.
+      icon: tabler:shopping-bag
+    - title: Teknisk support
+      description: Garanti, reparationer, reservedele og driftsrelaterede sp酶rgsm氓l.
+      icon: tabler:tool
+    - title: Presse og partnerskaber
+      description: Medies忙t, sponsorater og branchesamarbejde.
+      icon: tabler:news
+    - title: Telefon
+      description: +86 13305324192
+      icon: tabler:headset
+    - title: E-mail
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: Hovedkontor
+      description: Economic Development Zone, Laixi, Qingdao, Kina, 266600
+      icon: tabler:map-pin
+map:
+  title: Vores beliggenhed
+  subtitle: Bes酶g os p氓 hovedkontoret
+  address: Economic Development Zone, Laixi, Qingdao, Kina, 266600
+  zoom: 15

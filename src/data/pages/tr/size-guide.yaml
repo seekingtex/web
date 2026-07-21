@@ -1,0 +1,27 @@
+hero:
+  title: Beden ve Özellik Rehberi
+  subtitle: Her Seekingtex ürünü için boyutlar, kapasiteler ve önerilen kullanım alanları.
+
+categories:
+  inflatable: Taşınabilirlikten ödün vermeden performans sunmak üzere tasarlanmış fonksiyonel kumaşlar'lar ve kanolar. Kilonuza ve kürek çekme stilinize uygun doğru boyutu seçin.
+  rib: Kıyı seyirleri, devriyeler ve profesyonel tekstil operasyonları için sert gövdeli fonksiyonel kumaşlarlar. Uzunluk ve motor gücüne göre seçim yapın.
+  accessory: Su ekipmanlarınızı tamamlayan aksesuarlar ve güvenlik donanımı. Çoklu seçeneklerle evrensel boyutlar.
+
+table:
+  headers:
+    product: Ürün
+    length: Uzunluk
+    width: Genişlik
+    weight: Ağırlık
+    max_load: Maks. Yük
+    best_for: En Uygun
+
+how_to_choose:
+  title: Doğru Boyutu Seçme
+  cards:
+    - title: SUP Tahtaları
+      description: Uzunluğu kilonuza ve kullanım amacınıza göre seçin. Daha geniş tahtalar (32"+) daha fazla denge sağlar. Daha uzun tahtalar (11-12 ft) turistik gezilerde rotayı daha iyi korur. Daha ağır kürekçiler daha yüksek hacimli tahtalara ihtiyaç duyar.
+    - title: Kanolar
+      description: Tek kişilik kanolar (9 ft) solo seyahatler ve nehirler için en iyisidir. Tandem kanolar (12 ft) iki kürekçiyi veya ekipmanlı bir yetişkini alır. Ekipman dahil toplam yük için taşıma kapasitesini kontrol edin.
+    - title: Botlar ve teknik kumaş'ler
+      description: kuma[ss] uzunluğunu yolcu sayısına ve kullanım amacına göre seçin. Daha büyük teknik kumaş'ler (4,5 m+) açık tekstil ve kurtarma için uygundur. Daha küçük botlar (2,7 m) tender ve balıkçı platformları olarak kullanılır.

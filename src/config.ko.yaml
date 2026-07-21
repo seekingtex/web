@@ -1,0 +1,121 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Seekingtex | 기능성 원단 제조업체 — 자외선 차단, 방수, 속건 & 고성능 직물
+    template: '%s — Seekingtex'
+  description: 'Seekingtex는 자외선 차단 (UPF 50+), 방수, 속건, 항균 및 고성능 원단을 전문으로 하는 선도적인 기능성 원단 제조업체입니다. 스포츠웨어, 야외복, 전술 장비용 OEM/ODM 서비스를 제공합니다.'
+  keywords:
+    - Seekingtex
+    - 기능성 원단 제조업체
+    - 자외선 차단 원단
+    - UPF 50+ 원단
+    - 방수 원단
+    - 속건 원단
+    - 고성능 원단
+    - 스포츠웨어 원단
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: ko_KR
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+# Per-language site settings
+siteSettings:
+  siteName: 'Seekingtex (시킹텍스)'
+  siteTagline: 'Seekingtex (시킹텍스) — 기능성 원단 제조업체 — 자외선 차단, 방수, 속건 & 고성능 직물'
+  siteDescription: 'Seekingtex (시킹텍스)는 UPF 50+ 자외선 차단, 방수/통기성, 속건, 항균 및 신축성 원단을 전문으로 하는 선도적인 고성능 기능성 원단 제조업체입니다. 스포츠웨어, 야외 장비 및 산업용 애플리케이션을 위한 OEM/ODM, 글로벌 배송 서비스를 제공합니다.'
+  organization:
+    name: 'Seekingtex (시킹텍스)'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex (시킹텍스)'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. 모든 권리 보유.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: '안녕하세요, 기능성 원단에 대해 문의하고 싶습니다.'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

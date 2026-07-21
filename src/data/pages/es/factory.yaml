@@ -1,0 +1,111 @@
+hero:
+  tagline: F谩brica
+  title: F谩brica y fabricaci贸n
+  subtitle: 12.000 m虏 de fabricaci贸n integrada 鈥?de la materia prima al tejido terminado
+
+intro:
+  - Como marca de f谩brica de **Qingdao Vatrad Group Co., Ltd.**, Seekingtex controla cada etapa de la producci贸n 鈥?desde la llegada de las materias primas de PVC y fibra de vidrio hasta la inspecci贸n final previa a la entrega del tejido terminado. Nuestra instalaci贸n de fabricaci贸n en la Zona de Desarrollo Econ贸mico de Qingdao abarca 12.000 metros cuadrados y alberga talleres dedicados al corte de PVC, el termosellado de tubos, la producci贸n de cascos tejido tecnico de fibra de vidrio, la impresi贸n digital de tejido funcional, el ensamblaje final y las pruebas de calidad.
+  - Al integrar el dise帽o, la ingenier铆a, el prototipado, la fabricaci贸n y las pruebas bajo un mismo techo, eliminamos las ineficiencias de la fabricaci贸n por contrato y mantenemos un control directo sobre la calidad de construcci贸n, la selecci贸n de materiales y los plazos de entrega. Cada tejido que sale de nuestro taller es construido por nuestra gente, con nuestros equipos, seg煤n nuestros est谩ndares.
+
+stats:
+  - value: 12,000 m2
+    label: Superficie de fabricaci贸n
+  - value: 200+
+    label: Trabajadores cualificados
+  - value: 15,000+
+    label: Barcos producidos anualmente
+  - value: 
+    label: Calidad certificada
+
+workshops_section:
+  tagline: Talleres
+  title: Talleres de fabricaci贸n
+  workshops:
+    - title: Corte de PVC y preparaci贸n de materiales
+      description: Las m谩quinas de corte CNC autom谩ticas procesan telas de PVC, Hypalon y technical con precisi贸n submilim茅trica. El anidado optimizado por computadora minimiza el desperdicio de material y garantiza que cada panel cumpla con sus especificaciones dimensionales antes de la soldadura.
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: Soldadura y termosellado de tubos
+      description: Taller de soldadura dedicado con m谩quinas de termosellado y prensas diel茅ctricas RF. Las selladoras de aire caliente unen y fusionan las c谩maras de los tubos de PVC, mientras que las soldaduras RF producen costuras herm茅ticas de alta resistencia que superan los requisitos.
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: Producci贸n de cascos tejido tecnico 鈥?fibra de vidrio
+      description: Los cascos de los botes tejido tecnico se producen mediante moldeo de fibra de vidrio con laminado manual, con sistemas de resina de poli茅ster y vinil茅ster. Cada capa se enrolla a mano y se embolsa al vac铆o para lograr una calidad constante. La cabina de aplicaci贸n de gelcoat proporciona un acabado textil de alto brillo y resistente a los rayos UV.
+      image: /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+    - title: Impresi贸n y decoraci贸n de tejido funcional
+      description: Las tejido funcional se decoran mediante impresi贸n digital para gr谩ficos a todo color y serigraf铆a para logotipos y patrones repetitivos. Las impresoras digitales producen dise帽os de cubierta con calidad fotogr谩fica, mientras que la serigraf铆a ofrece marcas de marca duraderas y v铆vidas.
+      image: /images/seekingtex/products/tejido funcional-series/tejido funcional-medusa-glow-1.webp
+    - title: Ensamblaje final y aparejado
+      description: L铆nea de ensamblaje donde se acoplan los cascos de fibra de vidrio y los tubos de PVC, se montan los motores, se conectan la direcci贸n y los controles, y se cablean los sistemas el茅ctricos. Cada tejido sigue una lista de verificaci贸n de ensamblaje de 100 puntos aprobada por el jefe de equipo.
+      image: /images/seekingtex/hero/factory-gate.webp
+    - title: Pruebas de calidad e inspecci贸n
+      description: Cada tejido terminado se somete a pruebas obligatorias de retenci贸n de aire, verificaci贸n del pelado de costuras y una comprobaci贸n completa de sistemas antes del env铆o. Nuestro laboratorio de calidad opera de forma independiente de la producci贸n y reporta directamente a la direcci贸n.
+      image: /images/seekingtex/factory/Pressure Testing.jpeg
+
+equipment_section:
+  tagline: Equipamiento
+  title: Equipamiento clave de fabricaci贸n
+  view_full: Ver lista completa de equipamiento 鈫?
+  view_full_link: /factory/equipment
+  items:
+    - name: M谩quina de corte autom谩tico de PVC
+      spec: Controlada por CNC, precisi贸n de 0,1 mm
+    - name: M谩quina de termosellado 
+      spec: Aire caliente, 200掳C鈥?00 掳C, para uni贸n de tubos
+    - name: Prensa de soldadura diel茅ctrica RF
+      spec: 15 kW, soldadura de costuras herm茅ticas
+    - name: Moldes de laminado manual de fibra de vidrio
+      spec: Cascos tejido tecnico de hasta 6 m
+    - name: Impresora digital 
+      spec: Gr谩ficos de cubierta de tejido funcional a todo color
+    - name: M谩quina de serigraf铆a 
+      spec: Impresi贸n de logotipos multicolor
+
+qc_section:
+  tagline: Control de calidad
+  title: Proceso de pruebas y garant铆a de calidad
+  subtitle: Cada tejido se somete a pruebas obligatorias antes del env铆o. Nuestro laboratorio de calidad opera de forma independiente de la producci贸n y reporta directamente a la direcci贸n.
+  steps:
+    - step: '1'
+      title: Inspecci贸n de materias primas
+      desc: Las telas de PVC, Hypalon y technical se someten a pruebas de tracci贸n (), propagaci贸n de desgarros y verificaci贸n de resistencia a los rayos UV antes de que cualquier lote entre en producci贸n.
+    - step: '2'
+      title: Prueba de retenci贸n de aire de 48 horas
+      desc: Cada c谩mara de tubo se infla al 125% de la presi贸n nominal y se mantiene durante 48 horas. Una ca铆da de presi贸n inferior al 5% activa el rechazo autom谩tico y la reinspecci贸n de las costuras.
+    - step: '3'
+      title: Prueba de carga y equilibrio
+      desc: Los barcos terminados se cargan hasta su capacidad nominal m谩xima y se prueban para verificar estabilidad, francobordo y manejo. Cada embarcaci贸n se prueba en el agua antes de la inspecci贸n final.
+
+oem_section:
+  tagline: Proyectos OEM
+  title: Estudios de caso de alianzas de marca y OEM
+  subtitle: Del concepto al contenedor 鈥?c贸mo ayudamos a las marcas globales a lanzar y escalar sus l铆neas de embarcaciones inflables.
+  cases:
+    - challenge: Un minorista de art铆culos de exterior europeo necesitaba una l铆nea de tejido funcional de marca privada con gr谩ficos de cubierta 煤nicos, PVC ecol贸gico y embalaje listo para la venta minorista, todo entregado en 60 d铆as.
+      solution: Desarrollamos archivos de impresi贸n digital personalizados, obtuvimos PVC conforme a REACH y comprimimos el muestreo de 3 rondas a 1 al ubicar el equipo de dise帽o en nuestra f谩brica de Qingdao.
+      result: 55 d铆as desde el pedido firmado hasta el FOB. 2.400 unidades en 4 SKU. Pedido de repetici贸n realizado antes de que llegara el primer contenedor.
+    - challenge: Una startup estadounidense de deportes acu谩ticos necesitaba un tejidos tecnicos technical de alto rendimiento con forma de casco personalizada, embalaje de marca compartida y certificaci贸n BSCI para su colocaci贸n minorista.
+      solution: Adaptamos un molde de tejidos tecnicos technical existente con un perfil de rocker modificado, desarrollamos la obra gr谩fica del embalaje de marca compartida y proporcionamos la documentaci贸n completa de la auditor铆a BSCI.
+      result: Listado con 茅xito en 3 grandes cadenas de exterior de EE. UU. M谩s de 5.000 unidades en el primer a帽o con una tasa de venta del 98%.
+    - challenge: Un distribuidor australiano requer铆a una gama de tejido tecnico con certificaci贸n CE con colores de tubo personalizados, opci贸n de mejora a Hypalon y cumplimiento de la norma australiana AS 1799.
+      solution: Produjimos muestras de preproducci贸n con 4 variantes de color de tubo, obtuvimos Hypalon CSM de un proveedor japon茅s y coordinamos las pruebas de cumplimiento de terceros de la AS 1799.
+      result: Gama de tejido tecnico de 3 modelos lanzada en el mercado AU/NZ. Seguida por la adjudicaci贸n de una licitaci贸n gubernamental de 12 tejido tecnico de patrulla.
+
+faq_section:
+  tagline: Preguntas frecuentes
+  title: Preguntas frecuentes B2B y OEM
+  questions:
+    - q: 驴Cu谩l es la cantidad m铆nima de pedido (MOQ) para tejido funcional inflables OEM?
+      a: El MOQ comienza en 5鈥?0 unidades para los modelos OEM est谩ndar. Los moldes personalizados y los proyectos de marca privada requieren un m铆nimo de 200 unidades seg煤n la complejidad. Hay pedidos de prueba y series de muestra disponibles para el lanzamiento de nuevas marcas.
+    - q: 驴Seekingtex posee la certificaci贸n BSCI?
+      a: S铆. Nuestra f谩brica mantiene una certificaci贸n v谩lida de cumplimiento social BSCI (informe de auditor铆a disponible bajo solicitud). Tambi茅n contamos con la certificaci贸n de gesti贸n de calidad y todos los productos llevan la certificaci贸n CE. Documentaci贸n de cumplimiento de REACH y RoHS proporcionada con cada env铆o OEM.
+    - q: 驴Cu谩l es el plazo de entrega t铆pico para un pedido OEM?
+      a: El plazo de entrega est谩ndar es de 30 a 45 d铆as desde el pedido confirmado y el dep贸sito. El desarrollo de moldes personalizados a帽ade de 15 a 20 d铆as para el utillaje. Ofrecemos producci贸n acelerada para pedidos urgentes y picos de temporada durante la ventana previa al verano (ene鈥搈ar).
+    - q: 驴Pueden enviar FOB Qingdao o CIF a nuestro puerto?
+      a: S铆. Enviamos FOB Qingdao, CIF a los principales puertos globales y DDP para socios cualificados. Nuestro equipo de log铆stica gestiona la reserva de contenedores, la documentaci贸n de exportaci贸n y el despacho de aduanas. Enviamos a m谩s de 50 pa铆ses en los mercados de la UE, EE. UU., AU y Asia.
+
+b2b_moq: 'MOQ est谩ndar: 5鈥?0 unidades por modelo (tejido funcional/tejidos tecnicos/technical). MOQ de tejido tecnico: 2鈥? unidades. Se aceptan pedidos de prueba para nuevas alianzas.'
+
+process_cta:
+  title: Conoce nuestro proceso de fabricaci贸n
+  desc: Sigue un tejido a trav茅s de cada etapa de la producci贸n 鈥?de la materia prima a la embarcaci贸n lista para navegar.
+  label: Ver proceso de producci贸n 鈫?
+  link: /factory/process

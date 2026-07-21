@@ -1,0 +1,230 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
+
+const metadata = {
+  title: 'Textile Industry Guide — Complete Resource on Fabric Types, Manufacturing, Selection & Standards',
+  description: 'A comprehensive guide to the textile industry covering fabric types, manufacturing processes, material comparisons, selection criteria, quality standards, and care.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd type="Article" article={{
+    headline: 'Textile Industry Guide — The Complete Resource',
+    description: 'A comprehensive guide to the textile industry covering fabric types, manufacturing methods, material comparisons, selection criteria, quality standards, and care.',
+    datePublished: '2026-07-07',
+  }} data={{ url: 'https://seekingtex.com/marine-industry/' }} />
+
+  <JsonLd type="BreadcrumbList" breadcrumbs={[
+    { name: 'Home', href: '/' },
+    { name: 'Textile Industry', href: '/marine-industry' },
+    { name: 'Textile Industry Guide', href: '/marine-industry/' },
+  ]} />
+
+  <AiQuickAnswer
+    entityType="Guide"
+    quickAnswer="The textile industry encompasses the design, production, and distribution of fabrics — from natural fibers like cotton and wool to synthetic fibers like polyester and nylon. Modern textile manufacturing includes spinning, weaving, knitting, dyeing, printing, coating, and finishing. Fabrics range from basic apparel textiles to high-performance technical fabrics with UPF 50+, waterproof, flame-retardant, and antibacterial properties."
+    facts={[
+      { label: 'Global Market Size', value: '$1.2T (2026)' },
+      { label: 'Key Fiber Types', value: 'Polyester / Cotton / Nylon' },
+      { label: 'Major Certifications', value: 'OEKO-TEX / ISO / GRS' },
+      { label: 'China Export Share', value: '~35% (Global)' },
+    ]}
+  />
+
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <h1 class="text-4xl font-semibold text-gray-900">Textile Industry Guide</h1>
+    <p class="mt-4 text-lg text-gray-500">The definitive resource on functional fabrics — from basic textiles to high-performance technical fabrics and specialty materials.</p>
+
+    <nav class="mt-8 flex flex-wrap gap-2">
+      {['Fabric Types', 'Manufacturing', 'Materials', 'Selection', 'Quality', 'Care', 'Standards'].map((section) => (
+        <a href={`#${section.toLowerCase().replace(/\s+/g, '-')}`} class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition">{section}</a>
+      ))}
+    </nav>
+
+    <section id="fabric-types" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Types of Fabrics</h2>
+      <div class="mt-8 grid gap-6">
+        {[
+          { title: 'Woven Fabrics', desc: 'Fabrics constructed by interlacing warp and weft yarns at right angles. Strong, dimensionally stable, and available in plain, twill, satin, and specialized weaves. Used for apparel, workwear, uniforms, and industrial applications.', icon: '🧵' },
+          { title: 'Knit Fabrics', desc: 'Fabrics formed by interlocking loops of yarn. Stretchable, comfortable, and drapable. Available in single jersey, double knit, rib, and interlock constructions. Used for activewear, sportswear, base layers, and casual apparel.', icon: '🔄' },
+          { title: 'Non-Woven Fabrics', desc: 'Engineered fabrics made from bonded fibers (mechanical, thermal, or chemical). Not woven or knitted. Used for disposable garments, medical textiles, filtration, wipes, and protective apparel.', icon: '📋' },
+          { title: 'Coated & Laminated Fabrics', desc: 'Base fabrics with applied polymer coatings (PU, PVC, silicone, acrylic) or bonded membranes (PTFE, TPU). Provide waterproof, windproof, breathable, and FR properties. Used for outerwear, protective gear, and technical applications.', icon: '🛡️' },
+          { title: 'Technical Textiles', desc: 'High-performance fabrics engineered for specific functional requirements. Includes UPF 50+ sun protection, flame-retardant, antibacterial, antistatic, and conductive textiles for specialized industries.', icon: '⚙️' },
+          { title: 'Sustainable & Recycled Fabrics', desc: 'Eco-friendly textiles made from recycled fibers (rPET, recycled nylon), organic cotton, hemp, bamboo, Tencel, and bio-based synthetics. GRS and OEKO-TEX certified for responsible sourcing.', icon: '🌱' },
+        ].map((item) => (
+          <div class="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-200">
+            <span class="text-2xl flex-shrink-0">{item.icon}</span>
+            <div>
+              <h3 class="font-semibold text-gray-900">{item.title}</h3>
+              <p class="mt-1 text-sm text-gray-600">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="manufacturing" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Manufacturing Processes</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Weaving</h3>
+          <p class="mt-2 text-sm text-gray-600">Interlacing warp and weft yarns on looms. Air-jet, rapier, and shuttle looms produce plain, twill, satin, and dobby weaves. Modern electronic jacquard looms enable complex patterns and designs. Weaving speed: 400-1,200 picks per minute depending on loom type.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Knitting</h3>
+          <p class="mt-2 text-sm text-gray-600">Loop-forming process using circular or flat knitting machines. Circular knitting produces tubular fabric for apparel. Flat knitting creates shaped panels for garments. Knit structures: single jersey, interlock, rib, purl, and specialized performance knits.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Dyeing & Finishing</h3>
+          <p class="mt-2 text-sm text-gray-600">Piece dyeing, yarn dyeing, and solution dyeing methods for adding color. Finishing includes mechanical (calendering, sanforizing, brushing) and chemical (DWR, FR, antibacterial, UPF, antistatic) treatments. Each finish requires precise process control for consistent results.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Coating & Lamination</h3>
+          <p class="mt-2 text-sm text-gray-600">Direct coating, transfer coating, and hot-melt lamination apply functional layers to base fabrics. PU, acrylic, silicone, and PVC coatings provide waterproofness and durability. TPU and PTFE membrane lamination enables breathable waterproof fabrics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Materials Comparison</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">Property</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">Polyester</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">Nylon</th>
+              <th class="px-4 py-3 text-center font-semibold text-amber-700">Cotton</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Relative Cost', '$ (budget)', '$$ (mid-range)', '$$ (mid-range)'],
+              ['Strength', 'High', 'Very High', 'Moderate'],
+              ['Abrasion Resistance', 'Good', 'Excellent', 'Fair'],
+              ['Moisture Wicking', 'Excellent', 'Good', 'Poor (absorbs)'],
+              ['Quick-Dry', 'Fast', 'Moderate', 'Slow'],
+              ['UV Resistance', 'Good', 'Fair (degrades)', 'Moderate'],
+              ['Elastic Recovery', 'Good', 'Excellent', 'Poor'],
+              ['Chemical Resistance', 'Excellent', 'Good', 'Fair'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-gray-500">Polyester is the most widely used synthetic fiber — cost-effective, strong, quick-drying, and UV-resistant. Nylon offers superior abrasion resistance and elasticity for demanding applications. Cotton provides natural comfort and breathability for everyday wear.</p>
+    </section>
+
+    <section id="selection" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">How to Choose the Right Fabric</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">1. Define End Use</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>Apparel: Comfort + performance finish</li>
+            <li>Workwear: Durability + FR/protection</li>
+            <li>Outdoor: UPF + water repellency</li>
+            <li>Sportswear: Stretch + moisture wicking</li>
+            <li>Medical: Antibacterial + fluid barrier</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">2. Determine Budget & MOQ</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>Standard poly: $2-4/m (5,000m MOQ)</li>
+            <li>Performance woven: $4-8/m (3,000m MOQ)</li>
+            <li>Technical coated: $6-12/m (1,000m MOQ)</li>
+            <li>Custom development: varies by complexity</li>
+            <li>Seekingtex MOQ: 500 yards per SKU</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-sky-50 rounded-xl border border-sky-200">
+          <h3 class="font-semibold text-gray-900">3. Check Certifications</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-600">
+            <li>OEKO-TEX: Harmful substances</li>
+            <li>Bluesign: Sustainable production</li>
+            <li>GRS: Recycled content</li>
+            <li>REACH: EU chemical compliance</li>
+            <li>ISO 9001: Quality management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Quality & Standards</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">OEKO-TEX Standard 100</h3>
+          <p class="mt-2 text-sm text-gray-600">Global certification for textile products tested for harmful substances. Four product classes from baby articles (Class I) to furnishing materials (Class IV). Seekingtex fabrics are OEKO-TEX certified across all product lines, with annual audits by independent testing institutes.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">ISO 9001:2015</h3>
+          <p class="mt-2 text-sm text-gray-600">International standard for quality management systems. Covers design, development, production, and delivery of textile products. Seekingtex is SGS-certified with documented procedures for incoming inspection, in-process QC, and final quality assurance.</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Key Testing Standards</h3>
+          <p class="mt-2 text-sm text-gray-600">AATCC, ASTM, ISO, and GB/T standards govern textile testing worldwide. Key tests include tensile strength (ASTM D5034), tear strength (ASTM D1424), colorfastness (AATCC 61), hydrostatic head (AATCC 127), and flammability (16 CFR 1610).</p>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200">
+          <h3 class="font-semibold text-gray-900">Quality Assurance</h3>
+          <p class="mt-2 text-sm text-gray-600">Four-stage QC: incoming yarn inspection, in-process fabric inspection (every 50m), final roll inspection (AQL 2.5 per ISO 2859), and third-party lab testing. Defect grading per ASTM D5430 with four-point system.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="care" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Fabric Care & Maintenance</h2>
+      <div class="mt-8 space-y-4 text-sm text-gray-600">
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">1.</span><span>Machine wash performance fabrics in cold water (30°C) with mild detergent. Avoid bleach and fabric softeners which degrade DWR and antimicrobial finishes.</span></div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">2.</span><span>Tumble dry on low heat or line dry. High heat damages elastic fibers and PU coatings. Remove promptly to reduce wrinkles.</span></div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">3.</span><span>Re-activate DWR finishes with low-heat ironing or 10-minute tumble drying. Reapply DWR spray after 5-10 washes depending on usage intensity.</span></div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">4.</span><span>Store clean, dry fabric rolls in climate-controlled environments (18-25°C, 40-60% RH) away from direct sunlight to prevent UV degradation and color fading.</span></div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">5.</span><span>For industrial and protective fabric, follow manufacturer-specific care instructions. FR treatments may require specialized laundering to maintain flame-retardant properties.</span></div>
+        <div class="flex items-start gap-3 p-4 bg-gray-50 rounded-xl"><span class="text-sky-600 font-bold flex-shrink-0">6.</span><span>Replace fabrics showing signs of UV degradation (fading, chalking), coating delamination, or significant abrasion wear. Typical performance fabric lifespan: 3-8 years depending on use and care.</span></div>
+      </div>
+    </section>
+
+    <section id="standards" class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">Industry Applications</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-4">
+        {[
+          { title: 'Apparel & Fashion', desc: 'Everyday clothing, casual wear, fashion garments, and seasonal collections requiring quality fabrics with consistent color, hand feel, and drape.' },
+          { title: 'Workwear & Uniforms', desc: 'Corporate uniforms, industrial workwear, hospitality apparel, and institutional garments requiring durability, FR protection, and professional appearance.' },
+          { title: 'Outdoor & Sportswear', desc: 'Hiking, running, yoga, fitness, and outdoor performance apparel requiring moisture management, UPF protection, stretch, and quick-dry properties.' },
+          { title: 'Medical & Healthcare', desc: 'Surgical gowns, drapes, face masks, patient apparel, and healthcare uniforms requiring antibacterial, fluid-repellent, and biocompatible fabric properties.' },
+          { title: 'Protective & Industrial', desc: 'FR garments, chemical protective wear, welding aprons, and cut-resistant textiles for worker safety in hazardous environments.' },
+          { title: 'OEM & Private Label', desc: 'Custom fabric development for brands, retailers, and specialized applications. From specification to bulk production with full technical support and compliance documentation.' },
+        ].map((app) => (
+          <div class="p-4 bg-gray-50 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-sm text-gray-900">{app.title}</h3>
+            <p class="mt-1 text-xs text-gray-500">{app.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Explore Seekingtex Functional Fabrics</h2>
+      <p class="mt-4 text-sm text-gray-600">Seekingtex designs and manufactures OEKO-TEX certified functional fabrics for apparel, workwear, outdoor, medical, and industrial applications. All fabrics produced with certified raw materials, advanced weaving/knitting, and precision coating/lamination technology.</p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a href="/products" class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">View Products</a>
+        <a href="/academy" class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">Learning Center</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Comprehensive textile industry guide covering fabric types (woven, knit, non-woven, coated/laminated, technical, sustainable), manufacturing processes (weaving, knitting, dyeing/finishing, coating/lamination), material comparisons (polyester, nylon, cotton), selection criteria (end use, budget, certifications), quality standards (OEKO-TEX, ISO 9001, AATCC, ASTM), fabric care, and industry applications (apparel, workwear, outdoor, medical, protective, OEM).</p>
+  </section>
+</Layout>

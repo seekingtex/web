@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Byggt enligt standarder som betyder n氓got'
+  title: 'Lita p氓 Seekingtex'
+  subtitle: |
+    Varje produkt vi bygger 盲r CE-certifierad 鈥攖estad f枚r s盲kerhet,<br />
+    h氓llbarhet och prestanda. Inga genv盲gar. Inga undantag.
+  taglineSection: 'Certifierad. Testad. Bevisad.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex-produkt genomg氓r kvalitetstestning'
+
+stats:
+  title: 'Seekingtex i siffror'
+  stats:
+    - title: 'CE-certifierad'
+      description: 'Alla rekreationsprodukter uppfyller EU:s s盲kerhetsstandarder'
+    - title: 'ISO 9001'
+      description: 'Kvalitetsledningssystem sedan 2012'
+    - title: 'BSCI och REACH'
+      description: 'Etisk tillverkning och materialefterlevnad'
+    - title: '2 氓rs garanti'
+      description: 'P氓 varje Seekingtex-produkt 鈥攗tan fr氓gor'
+
+features3_certifications:
+  title: 'Certifieringar och efterlevnad'
+  subtitle: 'Varje produkt 盲r oberoende testad och certifierad enligt internationella standarder.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE-certifiering'
+      description: 'Alla Seekingtex Fabric, tekniska tyger, jollar och tekniskt tyg uppfyller den europeiska CE-s盲kerhetsstandarden f枚r rekreationsfarkoster. Varje produkt genomg氓r tryck-, flyt- och lasttestning innan den l盲mnar fabriken.'
+      icon: 'tabler:certificate'
+    - title: 'ISO 9001'
+      description: 'V氓r 12.000 m虏 Qingdao-anl盲ggning arbetar under ett  kvalitetsledningssystem. Varje produktionsbatch 盲r sp氓rbar, dokumenterad och inspekterad.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI social efterlevnad'
+      description: 'Vi 盲r BSCI-certifierade, vilket s盲kerst盲ller etiska arbetsmetoder, s盲kra arbetsf枚rh氓llanden och milj枚ansvar i hela v氓r leveranskedja.'
+      icon: 'tabler:users'
+    - title: 'REACH och RoHS'
+      description: 'Alla material 鈥擯VC, Hypalon, EVA-skum, lim 鈥攗ppfyller EU:s REACH- och RoHS-f枚reskrifter. Inga begr盲nsade 盲mnen, inga kompromisser.'
+      icon: 'tabler:flask'
+    - title: 'Materialtestningslaboratorium'
+      description: 'Internt materiallaboratorium testar dragstyrka, UV-best盲ndighet, s枚mintegritet och n枚tning f枚r varje tygbatch f枚re produktion.'
+      icon: 'tabler:microscope'
+    - title: '2 氓rs garanti'
+      description: 'Varje Seekingtex-produkt levereras med tv氓 氓rs garanti mot tillverkningsfel. Vi st氓r f枚r det vi bygger.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Kundf枚rtroende'
+  title: 'Vad v氓ra kunder s盲ger'
+  subtitle: 'Fr氓n f枚rstag氓ngspaddlare till professionella flottoperat枚rer 鈥攕e varf枚r de litar p氓 Seekingtex.'
+  items:
+    - content: 'Vi utrustade hela v氓r uthyrningsflotta med Seekingtex tekniskt tyg. Tv氓 s盲songer in, noll fel. CE-certifieringen gjorde f枚rs盲kringsgodk盲nnande s枚ml枚st.'
+      name: 'Marco V.'
+      title: 'Turarrang枚r, Kroatien'
+    - content: 'Som f枚rstag氓ngsk枚pare var jag nerv枚s f枚r kvaliteten. ISO-dokumentationen och testrapporterna de delade gav mig fullt f枚rtroende.'
+      name: 'James T.'
+      title: 'Fabric Explorer 11-盲gare, Kanada'
+    - content: 'Vi samarbetar med Seekingtex f枚r v氓ra kustpatruljenheter. Deras QC-process 盲r konsekvent 枚ver varje batch 鈥攄en p氓litligheten betyder n氓got i uppdragskritiska operationer.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Marinupphandling, Filippinerna'
+
+steps2_manufacturing:
+  title: 'Hur vi s盲kerst盲ller kvalitet'
+  subtitle: 'Fr氓n r氓varuinspektion till slutlig trycktestning 鈥攙arje produkt genomg氓r en rigor枚s kvalitetskedja.'
+  items:
+    - title: 'R氓varuinspektion'
+      description: 'Varje rulle PVC-tyg testas f枚r tjocklek, dragstyrka och UV-best盲ndighet innan den g氓r in i produktion.'
+      icon: 'tabler:search'
+    - title: 'P氓g氓ende QC'
+      description: 'Svetsfogar, ventilinstallationer och kammaranslutningar inspekteras vid varje station under montering.'
+      icon: 'tabler:eye'
+    - title: 'Trycktestning'
+      description: 'Varje uppbl氓sbar produkt pumpas upp till 1,5x nominellt PSI och h氓lls i 24 timmar f枚r att verifiera luftretention och s枚mintegritet.'
+      icon: 'tabler:wind'
+    - title: 'Slutinspektion'
+      description: 'Varje enhet inspekteras f枚r finish, h氓rdvara och f枚rpackning innan den godk盲nns f枚r leverans. Batchprover g氓r till v氓rt laboratorium f枚r destruktiv testning.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'tekniskt tyg-b氓tar FAQ'
+  subtitle: 'Vanliga fr氓gor om v氓ra uppbl氓sbara b氓tar med stelt skrov.'
+  columns: 2
+  items:
+    - title: 'Vilka storlekar p氓 tekniskt tyg-b氓tar erbjuder Seekingtex?'
+      description: 'Vi erbjuder 35 tekniskt tyg-modeller fr氓n 2,5 m till 7,6 m, allt fr氓n kompakta tendrar till tunga kommersiella och patrullfarkoster. Varje modell finns med flera konfigurationsalternativ.'
+    - title: 'Vad 盲r skillnaden mellan en tekniskt tyg och en traditionell uppbl氓sbar b氓t?'
+      description: 'En tekniskt tyg (uppbl氓sbar b氓t med stelt skrov) kombinerar ett fast glasfiber- eller aluminiumskrov i djup V-form med uppbl氓sbara Hypalon- eller PVC-slangar. Detta ger dig stabiliteten och lastkapaciteten fr氓n en h氓rd b氓t med st枚td盲mpningen och flytf枚rm氓gan fr氓n en uppbl氓sbar.'
+    - title: 'Vilka motorer 盲r kompatibla med Seekingtex tekniskt tyg?'
+      description: 'V氓ra tekniskt tyg st枚djer utombordsmotorer fr氓n 3 HK till 250 HK beroende p氓 modell. Varje produktsida listar maximal motoreffekt. Vi rekommenderar att r氓dg枚ra med din 氓terf枚rs盲ljare f枚r idealisk matchning.'
+    - title: '脛r Seekingtex tekniskt tyg CE-certifierade?'
+      description: 'Ja. Alla rekreationsmodeller 盲r CE-certifierade enligt till盲mpliga europeiska standarder f枚r rekreationsfarkoster. Kommersiella och patrullmodeller uppfyller ytterligare stabilitets- och lastkrav.'
+    - title: 'Vad 盲r garantin p氓 tekniskt tyg-b氓tar?'
+      description: 'Alla Seekingtex tekniskt tyg levereras med standard ett 氓rs garanti mot tillverkningsfel, som t盲cker skrovdelaminering, slangss枚msfel, ventilfel och maskinvaruproblem.'
+    - title: 'Hur m氓nga luftkammare har Seekingtex tekniskt tyg?'
+      description: 'V氓ra tekniskt tyg har 3 till 7 oberoende luftkammare beroende p氓 modellens l盲ngd. Denna flerkammardesign s盲kerst盲ller att b氓ten f枚rblir flytande 盲ven om en avdelning komprometteras.'
+
+faqs_inflatable:
+  title: 'Uppbl氓sbara b氓tar FAQ'
+  subtitle: 'Vanliga fr氓gor om v氓ra uppbl氓sbara jollar, tekniska tyger och b氓tar.'
+  columns: 2
+  items:
+    - title: 'Vilka material anv盲nds i Seekingtex uppbl氓sbara b氓tar?'
+      description: 'Vi anv盲nder milit盲r-grade PVC (1100 denier) och premium Hypalon/CSM-gummi, beroende p氓 modell. B氓da materialen 盲r UV-stabiliserade, n枚tningsbest盲ndiga och uppfyller EU:s REACH- och RoHS-f枚reskrifter.'
+    - title: 'Hur l盲nge h氓ller uppbl氓sbara b氓tar?'
+      description: 'Med r盲tt sk枚tsel h氓ller en kvalitets-PVC uppbl氓sbar b氓t 7鈥?0 氓r, medan Hypalon-modeller kan h氓lla 15鈥?0 氓r. Regelbunden reng枚ring, UV-skydd och korrekt f枚rvaring f枚rl盲nger livsl盲ngden avsev盲rt.'
+    - title: 'Vilket underh氓ll kr盲vs f枚r en uppbl氓sbar b氓t?'
+      description: 'Grundl盲ggande underh氓ll inkluderar sk枚ljning med s枚tvatten efter varje anv盲ndning (s盲rskilt i saltvatten), torkning f枚re f枚rvaring, 氓rlig kontroll av ventilt盲tningar och applicering av UV-skydd p氓 slangar. Undvik l氓ngvarig solexponering n盲r den inte anv盲nds.'
+    - title: 'Kan uppbl氓sbara b氓tar anv盲ndas i saltvatten?'
+      description: 'Ja. Alla Seekingtex uppbl氓sbara b氓tar 盲r designade f枚r b氓de s枚t- och saltvattenanv盲ndning. Vi rekommenderar sk枚ljning med s枚tvatten och grundlig torkning efter saltvattenexponering f枚r att f枚rhindra korrosion av beslag och saltkristallisation i tyget.'
+    - title: 'Hur f枚rvarar jag en uppbl氓sbar b氓t?'
+      description: 'T枚m luften, reng枚r och torka b氓ten helt f枚re f枚rvaring. Rulla l枚st (undvik skarva veck), f枚rvara p氓 en sval, torr plats borta fr氓n direkt solljus och h氓ll borta fr氓n betonggolv f枚r att f枚rhindra fuktuppsugning.'
+    - title: 'Vad 盲r viktkapaciteten f枚r Seekingtex uppbl氓sbara b氓tar?'
+      description: 'Viktkapaciteter str盲cker sig fr氓n 290 kg f枚r v氓ra minsta modeller till 枚ver 2000 kg f枚r st枚rre kommersiella farkoster. Varje produktsida listar maxlasten f枚r din specifika modell.'
+
+faqs_Fabric:
+  title: 'Fabric-br盲dor FAQ'
+  subtitle: 'Vanliga fr氓gor om v氓ra fabric.'
+  columns: 2
+  items:
+    - title: 'Vilka Fabric-br盲dstorlekar finns tillg盲ngliga?'
+      description: 'Vi erbjuder Fabric-br盲dor fr氓n 9 ft till 12 ft, inklusive all-round, touring, yoga och specialdesigner. V氓ra b盲sts盲ljande modeller inkluderar Tropical Breeze (10 ft) och Ocean Voyager (11 ft).'
+    - title: 'Vad 盲r drop-stitch-konstruktion?'
+      description: 'Drop-stitch-konstruktion anv盲nder tusentals polyestertr氓dar som ansluter br盲dets topp- och bottenlager, vilket g枚r att det kan h氓lla h枚gt lufttryck (15鈥?0 PSI) och uppn氓 en styv, stabil plattform. Detta 盲r industristandarden f枚r premium uppbl氓sbara Fabric.'
+    - title: 'Vad 盲r viktgr盲nsen f枚r Fabric-br盲dor?'
+      description: 'V氓ra Fabric-br盲dor st枚djer upp till 150 kg beroende p氓 modell och volym. Leviathan Wake 盲r v氓r modell med h枚gst kapacitet, designad f枚r st枚rre anv盲ndare och yogabruk.'
+    - title: 'Erbjuder du kompletta Fabric-paket?'
+      description: 'Ja. Varje Fabric-br盲de levereras med ett komplett paket inklusive 3-delad aluminiumpaddel, h枚gtrycks handpump, spiralkoppel, reseryggs盲ck och reparationssats. Vissa modeller inkluderar 盲ven ett avtagbart fen-set.'
+    - title: 'Vad 盲r garantin p氓 Fabric-br盲dor?'
+      description: 'Alla Seekingtex Fabric-br盲dor har ett 氓rs garanti mot tillverkningsfel, inklusive s枚mfel, ventilfel och materialdelaminering under normal anv盲ndning.'
+    - title: 'Hur l氓ng tid tar det att pumpa upp ett Fabric-br盲de?'
+      description: 'Med den medf枚ljande handpumpen tar full uppumpning till 15 PSI cirka 8鈥?2 minuter. F枚r snabbare uppumpning rekommenderar vi v氓r Seekingtex 12V elektriska pump, som pumpar upp ett br盲de p氓 under 4 minuter.'
+
+cta:
+  title: 'Vill du se certifieringarna sj盲lv?'
+  subtitle: 'Beg盲r v氓r certifieringsportf枚lj, fabriksrevisionsrapporter eller materialefterlevnadsdokumentation. Ingen NDA kr盲vs.'
+  actions:
+    - variant: primary
+      text: 'Beg盲r certifieringsdokument'
+      href: '/contact'
+    - text: 'Bes枚k v氓r fabrikssida'
+      href: '/factory'

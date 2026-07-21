@@ -1,0 +1,121 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Seekingtex | Tillverkare av funktionella tyger — Solskydd, vattentäta & snabbtorkande textilier
+    template: '%s — Seekingtex'
+  description: 'Seekingtex är en ledande tillverkare av funktionella tyger med specialisering inom solskydd (UPF 50+), vattentäta, snabbtorkande, antibakteriella och prestandatyger för sportkläder, utomhuskläder och taktisk utrustning. OEM/ODM-tjänster tillgängliga.'
+  keywords:
+    - Seekingtex
+    - tillverkare av funktionella tyger
+    - solskyddstyg
+    - UPF 50+ tyg
+    - vattentätt tyg
+    - snabbtorkande tyg
+    - prestandatyg
+    - sportklädestyg
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: sv_SE
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+# ----- Per-language site settings -----
+siteSettings:
+  siteName: 'Seekingtex'
+  siteTagline: 'Tillverkare av funktionella tyger — Solskydd, vattentäta & snabbtorkande textilier'
+  siteDescription: 'Seekingtex är en ledande tillverkare av högpresterande funktionella tyger med specialisering inom UPF 50+ solskydd, vattentäta/andningsbara, snabbtorkande, antibakteriella och elastiska textilier för sportkläder, utomhusutrustning och industriella applikationer. OEM/ODM med global frakt.'
+  organization:
+    name: 'Seekingtex'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Alla rättigheter förbehållna.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'Hej, jag vill fråga om era funktionella tyger.'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

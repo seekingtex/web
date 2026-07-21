@@ -1,0 +1,113 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `How OEKO-TEX Certification Works for Functional Textiles | ${SITE.name}`,
+  description: `Complete guide to OEKO-TEX Standard 100 certification for functional fabrics and performance textiles. Applicable standards, testing protocols, certified bodies, technical file requirements, and manufacturer obligations.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How OEKO-TEX Certification Works for Functional Textiles',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-03-05',
+  dateModified: '2025-04-20',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.ceCertification')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Certification</span>
+      <span class="ml-3 text-sm text-gray-400">7 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.ceCertification')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.ceCertification.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>What Is OEKO-TEX Standard 100?</h2>
+      <p>
+        OEKO-TEX Standard 100 is a globally consistent, independent testing and certification system for raw, semi-finished, and finished textile products at all processing stages. It ensures textiles are free from harmful substances and safe for consumer use.
+      </p>
+
+      <h2>Applicable Standards</h2>
+
+      <h3>OEKO-TEX Standard 100</h3>
+      <p>
+        The primary certification for textile products. It applies to raw fibers, yarns, fabrics, and finished textile articles. Products are classified into four product classes based on their intended use (I: baby, II: skin contact, III: no skin contact, IV: decoration).
+      </p>
+
+      <h3>OEKO-TEX STeP (Sustainable Textile Production)</h3>
+      <p>
+        A certification system for environmentally friendly and socially responsible manufacturing facilities. Covers chemical management, environmental performance, occupational health and safety, and social responsibility.
+      </p>
+
+      <h2>The Certification Process</h2>
+      <ol>
+        <li>Product classification: Determine OEKO-TEX product class (I – IV)</li>
+        <li>Applicable standards: OEKO-TEX Standard 100 criteria catalogue, Annex 4/6, limit values for harmful substances</li>
+        <li>Technical file preparation: Material composition, production chain, chemical inventory, risk assessment</li>
+        <li>Sample testing: pH value, formaldehyde, heavy metals, pesticides, chlorinated phenols, allergenic dyes</li>
+        <li>Factory production control: Certified body audit of manufacturing and chemical management processes</li>
+        <li>Certificate issuance: Valid for 12 months with annual renewal testing required</li>
+      </ol>
+
+      <h2>Certified Bodies for Textile Certification</h2>
+      <p>
+        Common certified bodies include Hohenstein Institute (Germany), TESTEX (Switzerland), and OEKO-TEX partner institutes worldwide.
+      </p>
+
+      <h2>Timeline and Costs</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Phase</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Duration</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Typical Cost (EUR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border">Technical file preparation</td><td class="p-3 border">1 – 2 weeks</td><td class="p-3 border">500 – 1,500</td></tr>
+          <tr><td class="p-3 border">Sample testing</td><td class="p-3 border">2 – 4 weeks</td><td class="p-3 border">800 – 2,500</td></tr>
+          <tr><td class="p-3 border">Factory audit</td><td class="p-3 border">1 day (on-site or remote)</td><td class="p-3 border">1,000 – 3,000</td></tr>
+          <tr><td class="p-3 border">Total (first product)</td><td class="p-3 border">4 – 8 weeks</td><td class="p-3 border">2,300 – 7,000</td></tr>
+        </tbody>
+      </table>
+
+      <h2>What This Means for Buyers</h2>
+      <p>
+        When purchasing OEKO-TEX certified textiles, always verify the certificate number on the OEKO-TEX database, check the product class matches your intended use, and confirm the certificate is current (annual renewal). All Seekingtex fabrics carry OEKO-TEX Standard 100 certification with full traceability to certified body test reports.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium">&larr; {t('home.research.tagline')}</a>
+    </div>
+  </article>
+</Layout>

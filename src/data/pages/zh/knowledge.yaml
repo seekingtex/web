@@ -1,0 +1,73 @@
+﻿hero:
+  tagline: '鐭ヨ瘑鍥捐氨'
+  title: '姘翠笂鎺㈢储鐭ヨ瘑'
+  subtitle: |
+    涓€涓粨鏋勫寲鐨勭煡璇嗗簱锛屾兜鐩栧厖姘擲UP鎶€鏈€?br />
+    姘翠笂瀹夊叏銆佽埞鍙伐绋嬪拰鍐掗櫓瑙勫垝銆?  taglineSection: '鎺㈢储銆傚涔犮€傝嚜淇″嚭鍙戙€?
+
+clusters:
+  tagline: '鐭ヨ瘑闆嗙兢'
+  title: '鎸変富棰樻帰绱?
+  subtitle: '娣卞叆浜嗚В姣忔Seekingtex浜у搧鑳屽悗鐨勬妧鏈€佸畨鍏ㄥ拰鎶€鑳姐€?
+  items:
+    - title: 'SUP鐭ヨ瘑'
+      description: '浠庨€夋嫨绗竴鍧楁澘鍒伴珮绾ф梾琛屾妧鏈€斺€斿叧浜庣珯绔嬪紡妗ㄦ澘鐨勪竴鍒囥€?
+      icon: 'tabler:lifebuoy'
+      topics:
+        - '濡備綍閫夋嫨浣犵殑绗竴涓厖姘擲UP'
+        - '鍒濆鑰呮渶浣砈UP灏哄'
+        - '妗ㄦ澘杩愬姩鏈夊闅撅紵'
+        - '鍏呮皵鏉夸笌纭澘瀵规瘮'
+        - 'SUP瀹夊叏娓呭崟'
+    - title: '鑸瑰彧鐭ヨ瘑'
+      description: '鍏充簬鍏呮皵鑸广€丷IB銆佸皬鑹囧拰鐨墖鐨勬妧鏈寚鍗椻€斺€斿伐绋嬨€佹潗鏂欏拰鎿嶄綔銆?
+      icon: 'tabler:sailboat'
+      topics:
+        - '鍏呮皵鑸圭被鍨嬭瑙?
+        - 'PVC涓嶩ypalon瀵规瘮'
+        - 'RIB涓庡皬鑹囧姣?
+        - '婊村鎶€鏈繁搴﹁В鏋?
+        - '娴锋磱鏉愭枡绉戝鎸囧崡'
+    - title: '瀹夊叏鐭ヨ瘑'
+      description: '姣忎綅鍒掓〃鑰呭繀澶囩殑瀹夊叏鐭ヨ瘑鈥斺€斾粠PFD閫夋嫨鍒板ぉ姘旈鎶ュ啀鍒拌嚜鏁戞妧鏈€?
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP瀹夊叏娓呭崟'
+        - '浣犻渶瑕佹晳鐢熻。鍚楋紵'
+        - '娴锋磱鍒掓〃瀹夊叏鎸囧崡'
+        - '鍏呮皵鐨墖娌虫祦瀹夊叏'
+        - '澶╂皵鍜屾按鎯呮剰璇?
+    - title: '鎶€鏈?
+      description: 'Seekingtex浜у搧鑳屽悗鐨勫伐绋嬧€斺€旀潗鏂欍€佸埗閫犳柟娉曞拰璐ㄩ噺娴嬭瘯銆?
+      icon: 'tabler:microscope'
+      topics:
+        - '娴锋磱绾VC鎶€鏈?
+        - '婊村鏍稿績瑙ｆ瀽'
+        - '涓轰粈涔圥SI瀵瑰厖姘擲UP寰堥噸瑕?
+        - 'RF鐒婃帴涓庣矘鍚堝姣?
+        - '璐ㄩ噺娴嬭瘯鍜岃璇?
+
+featured_guides:
+  tagline: '绮鹃€夋寚鍗?
+  title: '鏈€鍙楁杩庣殑鐭ヨ瘑璧勬簮'
+  items:
+    - title: 'SUP鍩虹'
+      href: '/learn/fabrics'
+    - title: '鍏呮皵鏉縱s纭澘'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: '姘翠笂瀹夊叏鎸囧崡'
+      href: '/learn/quality-standards'
+    - title: '鏉愭枡鍙傝€?
+      href: '/learn/materials'
+    - title: 'SUP灏哄鎸囧崡'
+      href: '/size-guide'
+
+cta:
+  title: '寮€濮嬫帰绱?
+  subtitle: '娣卞叆鎴戜滑鐨勭煡璇嗗簱锛岃幏鍙栦笅涓€娆℃按涓婂啋闄╂墍闇€鐨勪俊鎭€?
+  actions:
+    - variant: primary
+      text: '娴忚鎵€鏈夋寚鍗?
+      href: '/academy'
+    - text: '鎺㈢储鐭ヨ瘑鍥捐氨'
+      href: '/knowledge'

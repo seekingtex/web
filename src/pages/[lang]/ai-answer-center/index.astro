@@ -1,0 +1,84 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import AnswerCenter from '~/components/ai/AnswerCenter.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const heroTitle = t('answerCenter.title');
+const heroSubtitle = t('answerCenter.subtitle');
+const placeholder = t('answerCenter.placeholder');
+const askButton = t('answerCenter.button');
+const badge = t('answerCenter.badge');
+const suggestedLabel = t('answerCenter.suggested');
+const exploreLabel = t('answerCenter.explore');
+
+const categories = [
+  {
+    label: t('answerCenter.catProducts'),
+    icon: '\u{1F6F6}',
+    questions: [
+      'What functional fabric do you recommend for medical scrubs?',
+      'Compare polyester vs nylon for performance workwear use.',
+      'What antimicrobial fabric is best for healthcare uniforms?',
+      'What certifications should I look for in functional fabrics?',
+    ],
+  },
+  {
+    label: t('answerCenter.catTechnology'),
+    icon: '\u{2699}\u{FE0F}',
+    questions: [
+      'What is moisture-wicking technology and how does it work?',
+      'Compare polyester vs cotton for uniform durability.',
+      'What GSM should I choose for my performance apparel?',
+      'How is functional fabric manufactured?',
+    ],
+  },
+  {
+    label: t('answerCenter.catUseCases'),
+    icon: '\u{1F30A}',
+    questions: [
+      'What type of fabric is best for healthcare uniform programs?',
+      'I need durable fabric for hotel staff uniforms. What do you recommend?',
+      'Can I get custom fabric developed for my brand?',
+      'What are the OEM/ODM manufacturing options for private label fabrics?',
+    ],
+  },
+];
+
+const metadata = {
+  title: `${heroTitle} | ${SITE.name}`,
+  description: t('answerCenter.subtitle'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={{
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    headline: heroTitle,
+    description: metadata.description,
+    author: { '@type': 'Organization', name: SITE.name },
+  }} />
+
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <AnswerCenter
+      lang={lang}
+      heroTitle={heroTitle}
+      heroSubtitle={heroSubtitle}
+      placeholder={placeholder}
+      askButton={askButton}
+      categories={categories}
+    />
+  </div>
+</Layout>

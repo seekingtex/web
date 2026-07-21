@@ -1,0 +1,50 @@
+hero:
+  tagline: Quality Assurance
+  title: Performance & Quality Testing
+  subtitle: Every Seekingtex fabric roll undergoes rigorous performance and quality testing at our laboratory before it ships. Our comprehensive testing provides tangible proof of product excellence.
+
+stats:
+  - value: 100%
+    label: Batches tested before shipping
+  - value: '12'
+    label: Testing protocols
+  - value: 
+    label: Certifications held
+  - value: OEKO-TEX
+    label: Standard 100 certified
+
+tests:
+  - title: UPF Rating Testing
+    description: Fabric samples are tested using spectrophotometry per UV Standard 801 and AS/NZS 4399 to determine the UPF rating. Each batch is verified to meet UPF 50+ standards for effective sun protection.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Water Repellency & Hydrostatic Head Testing
+    description: Fabrics undergo spray rating tests (ISO 4920) and hydrostatic pressure tests (ISO 811) to measure water resistance. Results are classified from water-resistant to waterproof at specified pressure ratings.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Moisture Management / Drying Rate Testing
+    description: AATCC 195 and similar protocols measure vertical wicking, absorption rate, and drying time to validate quick-dry performance. Fabrics must demonstrate rapid moisture transport and evaporation.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Abrasion Resistance Testing
+    description: Fabric samples are subjected to controlled abrasion cycles using the Martindale method (ISO 12947) to measure resistance to wear. Results ensure durability for the intended end-use application.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Tensile & Tear Strength Testing
+    description: ASTM D5034 and ISO 13937 methods measure warp and weft tensile strength and tear propagation resistance. Every batch must meet minimum strength specifications before release.
+    image: /images/seekingtex/factory/producing department2.jpeg
+  - title: Antibacterial Activity Testing
+    description: AATCC 100 and ISO 20743 test methods quantify bacterial reduction rates against Staphylococcus aureus and Klebsiella pneumoniae. Our antibacterial fabrics achieve 99%+ reduction rates.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Colorfastness Testing
+    description: ISO 105 series tests evaluate colorfastness to light, washing, perspiration, rubbing and water. Each batch is verified for color consistency and retention under specified conditions.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Dimensional Stability Testing
+    description: Fabrics are laundered and dried per AATCC 135 to measure shrinkage and distortion. Dimensional stability is verified to ensure garments maintain shape after repeated washing.
+    image: /images/seekingtex/factory/functional fabric making.jpeg
+
+testing_section:
+  tagline: Testing Procedures
+  title: Rigorous Testing at Every Stage
+
+commitment:
+  title: Our Commitment
+  body: Through these rigorous testing procedures, {SITE} provides customers with the assurance that our functional fabrics are not only high-performing but also built to last — ensuring consistent quality across every roll. Our quality lab operates independently from production and reports directly to management.
+  cta: Request testing documentation
+  cta_link: /contact

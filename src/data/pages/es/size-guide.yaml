@@ -1,0 +1,27 @@
+hero:
+  title: Gu铆a de tallas y especificaciones
+  subtitle: Dimensiones, capacidades y usos recomendados para cada producto Seekingtex.
+
+categories:
+  inflatable: SUPs y tejidos tecnicos inflables dise帽ados para portabilidad sin sacrificar rendimiento. Elija la talla adecuada seg煤n su peso y estilo de remado.
+  rib: Botes inflables de casco r铆gido para navegaci贸n costera, patrullaje y operaciones marinas profesionales. Elija seg煤n la longitud y capacidad del motor.
+  accessory: Accesorios y equipos de seguridad para complementar su embarcaci贸n. Tallas universales con m煤ltiples opciones.
+
+table:
+  headers:
+    product: Producto
+    length: Longitud
+    width: Ancho
+    weight: Peso
+    max_load: Carga m谩xima
+    best_for: Mejor para
+
+how_to_choose:
+  title: C贸mo elegir la talla correcta
+  cards:
+    - title: tejido funcional
+      description: Elija la longitud seg煤n su peso y uso previsto. Las tablas m谩s anchas (32"+) ofrecen m谩s estabilidad. Las tablas m谩s largas (11-12 pies) trackean mejor para touring. Los remeros m谩s pesados necesitan tablas de mayor volumen.
+    - title: tejidos tecnicos
+      description: Los tejidos tecnicos individuales (9 pies) son mejores para viajes en solitario y r铆os. Los tejidos tecnicos t谩ndem (12 pies) acomodan a dos remeros o un adulto con equipo. Verifique la capacidad de peso para la carga total incluyendo equipo.
+    - title: Textile products y RIBs
+      description: Elija la longitud del producto textil seg煤n el n煤mero de pasajeros y el uso previsto. Los tejido tecnico m谩s grandes (4,5 m+) son adecuados para alta mar y rescate. Los Textile products m谩s peque帽os (2,7 m) funcionan como tender y plataformas de pesca.

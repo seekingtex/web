@@ -1,0 +1,232 @@
+hero:
+  tagline: 'Ingeniería para aventuras fiables en el agua'
+  title: 'Seekingtex'
+  subtitle: |
+    Una marca global de exploración acuática que crea<br />
+    tejido funcional inflables, botes y equipos marinos<br />
+    para familias, exploradores y profesionales.
+  taglineSection: 'Diseñado para la exploración. Diseñado con ingeniería para la fiabilidad. Construido para socios globales.'
+  actions:
+    - variant: primary
+      text: Ver productos
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Saber más
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: tejido funcional funcional Seekingtex remando en un lago tranquilo al amanecer — exploración acuática apta para principiantes
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: Vista general de la instalación de producción de botes inflables y tejido funcional Seekingtex — taller de fabricación de grado textil
+      tagline: Bienvenido
+      title: |
+        Diseñado con ingeniería para el agua. <br />
+        Construido para <span class="text-sky-300">la vida a bordo</span>.
+      subtitle: Botes inflables premium, tejido tecnico y productos de ingeniería para profesionales marinos y entusiastas.
+      actions:
+        - text: Ver productos
+          href: /products
+          variant: primary
+        - text: Obtener presupuesto
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: Bote tejido tecnico Seekingtex navegando en aguas abiertas — bote funcional de grado comercial en acción
+      tagline: Artesanía
+      title: |
+        Cascos que duran más que la garantía. <br />
+        Servicio que dura más que el casco.
+      subtitle: Materiales de grado textil. Soldadura de aluminio. Barcos de veinte años que aún nos llaman por repuestos.
+      actions:
+        - text: Nuestra historia
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: Bote funcional Seekingtex remado por un explorador en aguas pintorescas — embarcación de aventura para familias y profesionales
+      tagline: Soporte
+      title: |
+        Diseñado con ingeniería antes de venderse. <br />
+        Con soporte mucho después.
+      subtitle: Socios de servicio autorizados en más de 40 países. Cascos de veinte años que aún nos llaman por repuestos, y aún respondemos.
+      actions:
+        - text: Contáctanos
+          href: /contact
+          variant: primary
+        - text: Más información
+          href: /about
+          variant: secondary
+
+features:
+  id: features
+  tagline: Por qué Seekingtex
+  title: Qué obtienes con Seekingtex
+  subtitle: Décadas de experiencia en ingeniería textil, condensadas en una línea de productos enfocada. Construidos resistentes, probados en el mar, con soporte de por vida.
+  columns: 2
+  items:
+    - title: Materiales de grado textil
+      description: PVC de alta resistencia, Hypalon y cascos de aluminio seleccionados por su resistencia a los rayos UV, la abrasión y el agua salada.
+      icon: tabler:shield-check
+    - title: Calidad lista para producción
+      description: Cada casco se somete a pruebas de presión, cada soldadura se inspecciona. Solo enviamos lo que pondríamos nosotros mismos en el agua.
+      icon: tabler:certificate
+    - title: Modular por diseño
+      description: Personaliza la disposición de los tubos, la posición de la consola, la capacidad de combustible y los accesorios para adaptarlos a tu misión.
+      icon: tabler:layout-grid
+    - title: Especificaciones honestas
+      description: Capacidades de carga reales, dimensiones reales, peso real. Nunca inflado por el marketing.
+      icon: tabler:ruler-measure
+    - title: Entrega rápida y repuestos
+      description: Los modelos comunes se envían en días. Repuestos y consumibles originales en stock todo el año.
+      icon: tabler:truck-delivery
+    - title: Soporte de por vida
+      description: Línea directa con nuestro equipo de ingeniería para preguntas técnicas, reparaciones y asesoría de reacondicionamiento.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: Productos destacados
+  subtitle: Seleccionados a mano de nuestro catálogo actual, los modelos más populares de esta temporada.
+  linkText: Ver todos los productos
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Construido diferente
+  title: Cada producto cuenta una historia de artesanía
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Calidad que puedes ver, sentir y medir</h3>
+  items:
+    - title: Diseñado para agua real
+      description: Cada casco está diseñado con ingeniería para entornos específicos — lagos, ríos o costa — para que obtengas la plataforma adecuada para tu aventura.
+    - title: Construido con materiales de grado textil
+      description: Desde el PVC hasta el Hypalon y el aluminio, cada material se selecciona por su durabilidad, peso y rendimiento en el agua.
+    - title: Probado antes de llegar a ti
+      description: Cada modelo se somete a pruebas de presión, inspección de costuras y pruebas de navegación en el mar antes de salir de nuestras instalaciones.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Producción de botes inflables de PVC y Hypalon de grado textil Seekingtex — artesanía de calidad en el taller de Qingdao
+
+steps:
+  title: Tu viaje al agua, simplificado
+  items:
+    - title: 'Paso 1: <span class="font-medium">Elige</span>'
+      description: Encuentra el producto adecuado para tus necesidades — por nivel de habilidad, tipo de agua y caso de uso. ¿No estás seguro? Nuestras guías y el asesor de IA están aquí para ayudarte.
+      icon: tabler:search
+    - title: 'Paso 2: <span class="font-medium">Pide</span>'
+      description: Precios claros, plazos de entrega transparentes y envío mundial. Nos encargamos de los trámites aduaneros para que tú no tengas que hacerlo.
+      icon: tabler:shopping-cart
+    - title: 'Paso 3: <span class="font-medium">Recibe</span>'
+      description: Tu pedido se envía desde nuestro almacén y llega listo para inflar. Cada producto incluye guías de configuración y documentación de seguridad.
+      icon: tabler:package
+    - title: 'Paso 4: <span class="font-medium">Explora</span>'
+      description: Sal al agua con confianza. Cada producto Seekingtex está respaldado por una garantía de 2 años y soporte técnico de por vida.
+      icon: tabler:waves
+    - title: 'Paso 5: <span class="font-medium">Comparte</span>'
+      description: Etiqueta a @Seekingtex en tus aventuras. Tus comentarios nos ayudan a crear mejores productos para la próxima generación de exploradores.
+      icon: tabler:heart
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Proceso de fabricación y pruebas de calidad de botes inflables Seekingtex — producción de embarcaciones con certificación CE
+
+blog_latest:
+  title: Del diario
+  information: |
+    Artículos, notas técnicas y estudios de caso del equipo de ingeniería.
+    Se añaden nuevas entradas cada vez que se entrega un proyecto, se actualiza una norma o alguien tiene una historia que vale la pena contar.
+
+faqs:
+  title: Preguntas frecuentes
+  subtitle: Consultas comunes sobre los botes inflables Seekingtex, garantías, envíos y alianzas OEM/ODM. Si la tuya no está aquí, escríbenos.
+  columns: 2
+  items:
+    - title: ¿Dónde está el almacén de Seekingtex en EE. UU. y cuánto tarda el envío?
+      description: "Nuestro almacén en EE. UU. está ubicado en Montclair, CA. Costa Oeste: 2–3 días. Centro de EE. UU.: 3–4 días. Costa Este: 4–5 días. También está disponible el envío internacional — contáctanos para un presupuesto personalizado."
+      icon: tabler:truck-delivery
+      category: all
+    - title: ¿Cuál es la política de garantía de Seekingtex para los botes inflables?
+      description: "Los productos marinos inflables Seekingtex están cubiertos por una garantía limitada de 5 años sobre la integridad de la tela de los tubos, la capacidad de retención de aire de las costuras, la estructura del casco de fibra de vidrio y las válvulas de inflado. Los accesorios instalados en fábrica están cubiertos durante 1 año. Uso comercial: garantía limitada de 1 año. Los términos y condiciones completos están disponibles en nuestra página de garantía."
+      icon: tabler:shield-check
+      category: all
+    - title: ¿Los botes Seekingtex incluyen documentos de matriculación?
+      description: "Sí, cada bote funcional Seekingtex incluye los documentos necesarios para la matriculación. El Certificado de Origen del Fabricante se encuentra en la última página del manual del propietario, y se puede solicitar una copia descargable. Aprobado por la Guardia Costera de EE. UU. para su fabricación."
+      icon: tabler:file-text
+      category: all
+    - title: ¿Los botes Seekingtex están aprobados por la Guardia Costera de EE. UU.?
+      description: "Sí, los botes inflables Seekingtex están aprobados por la Guardia Costera de los Estados Unidos (USCG) para su fabricación. Nuestra fábrica también posee la certificación CE para el acceso al mercado de la UE y la certificación correspondiente."
+      icon: tabler:flag
+      category: all
+    - title: ¿Qué pasa si el embalaje de mi producto llega dañado?
+      description: Si el embalaje de tu producto Seekingtex llega dañado, rechaza la entrega y haz que el paquete se devuelva al remitente. Contacta a nuestro equipo de soporte y te enviaremos rápidamente un reemplazo.
+      icon: tabler:package
+      category: all
+    - title: ¿Qué pasa si mi producto no llega en la fecha de entrega estimada?
+      description: "Los plazos de entrega proporcionados por Seekingtex son estimaciones y no pueden garantizarse. Una vez enviado, la recepción del paquete es responsabilidad del cliente. Si el paquete se deja en tu ubicación de entrega designada, la propiedad se transfiere en el momento de la entrega."
+      icon: tabler:calendar-clock
+      category: all
+    - title: ¿Qué tamaños de botes tejido tecnico ofrece Seekingtex?
+      description: Ofrecemos 35 modelos de tejido tecnico que van de 2,5 m a 7,6 m, cubriendo desde auxiliares compactos hasta embarcaciones comerciales y de patrulla de alta resistencia. Cada modelo está disponible con múltiples opciones de configuración.
+      icon: tabler:dimensions
+      category: tejido tecnico
+    - title: ¿Cuál es la diferencia entre un tejido tecnico y un bote funcional tradicional?
+      description: Un tejido tecnico (bote funcional de casco rígido) combina un casco sólido en V profunda de fibra de vidrio o aluminio con tubos inflables de Hypalon o PVC. Esto te da la estabilidad y capacidad de carga de un bote rígido con la absorción de impactos y la flotabilidad de uno funcional.
+      icon: tabler:arrows-diff
+      category: tejido tecnico
+    - title: ¿Cuántas cámaras de aire tienen los tejido tecnico de Seekingtex?
+      description: Nuestros tejido tecnico cuentan con 3 a 7 cámaras de aire independientes según la longitud del modelo. Este diseño multicámara garantiza que el bote permanezca a flote incluso si un compartimento se ve comprometido.
+      icon: tabler:wind
+      category: tejido tecnico
+    - title: ¿Qué materiales se usan en los botes inflables Seekingtex?
+      description: Usamos PVC de grado militar (1100 denier) y caucho Hypalon/CSM premium, según el modelo. Ambos materiales están estabilizados contra los rayos UV, son resistentes a la abrasión y cumplen con las regulaciones REACH y RoHS de la UE.
+      icon: tabler:droplet
+      category: inflatable
+    - title: ¿Cuánto duran los botes inflables?
+      description: Con el cuidado adecuado, un bote funcional de PVC de calidad dura entre 7 y 10 años, mientras que los modelos de Hypalon pueden durar entre 15 y 20 años. La limpieza regular, la protección UV y el almacenamiento adecuado prolongan significativamente la vida útil.
+      icon: tabler:clock
+      category: inflatable
+    - title: ¿Cuál es la capacidad de peso de los botes inflables Seekingtex?
+      description: Las capacidades de peso van desde 290 kg para nuestros modelos más pequeños hasta más de 2000 kg para embarcaciones comerciales más grandes. Cada página de producto indica la capacidad de carga máxima para tu modelo específico.
+      icon: tabler:weight
+      category: inflatable
+    - title: ¿Qué tamaños de tejido funcional están disponibles?
+      description: Ofrecemos tejido funcional de 9 a 12 pies, incluidos diseños all-round, de touring, de yoga y especializados. Nuestros modelos más vendidos incluyen la Tropical Breeze (10 pies) y la Ocean Voyager (11 pies).
+      icon: tabler:layout-list
+      category: tejido funcional
+    - title: ¿Qué es la construcción drop-stitch?
+      description: La construcción drop-stitch utiliza miles de hilos de poliéster que conectan las capas superior e inferior de la tejido funcional inflables premium.
+      icon: tabler:building-arch
+      category: tejido funcional
+    - title: ¿Ofrecen paquetes completos de tejido funcional?
+      description: Sí. Cada tejido funcional se envía con un paquete completo que incluye una pala de aluminio de 3 piezas, una bomba manual de alta presión, un leash en espiral, una mochila de viaje y un kit de reparación. Algunos modelos también incluyen un juego de quillas desmontables.
+      icon: tabler:package
+      category: tejido funcional
+    - title: ¿Qué accesorios de seguridad ofrece Seekingtex?
+      description: Ofrecemos una gama completa de accesorios de seguridad que incluyen chalecos salvavidas con certificación CE, cabos de lanzamiento, silbatos, botiquines de primeros auxilios y luces de navegación. Todo el equipo de seguridad está probado y certificado para uso recreativo y comercial.
+      icon: tabler:lifebuoy
+      category: accessory
+    - title: ¿Qué accesorios de mantenimiento debo comprar con mi bote?
+      description: Recomendamos un espray protector UV, una llave para válvulas, un kit de reparación con parches de PVC/Hypalon, una funda de almacenamiento y un manómetro. Estos elementos esenciales mantienen tu bote funcional en óptimas condiciones durante años.
+      icon: tabler:tools
+      category: accessory
+    - title: ¿Qué tipo de bomba debo conseguir?
+      description: Para las tejido funcional en menos de 4 minutos o un bote en menos de 6. Todas las bombas incluyen manómetros y múltiples adaptadores de válvula.
+      icon: tabler:windmill
+      category: accessory
+
+cta:
+  title: |
+    ¿Listo para el agua? <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Estamos aquí para ayudarte.</span>
+  subtitle: Todos los productos con certificación CE, cada compra respaldada por garantía. Contáctanos para asesoría, presupuestos o repuestos.
+  actions:
+    - variant: primary
+      text: Ver todos los productos
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Habla con nuestro equipo
+      href: /contact

@@ -1,0 +1,83 @@
+hero:
+  tagline: 'ชุมชน'
+  title: 'ชุมชน Seekingtex'
+  subtitle: |
+    คนจริง น้ำจริง การผจญภัยจริง จากนักสิ่งทอวันหยุดสุดสัปดาห์<br />
+    ถึงผู้ปฏิบัติการมืออาชีพ —ค้นพบว่าชุมชนของเราสำรวจโลกบนผืนน้ำอย่างไร
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Seekingtex community paddling on calm waters'
+
+stats:
+  title: 'ชุมชนด้วยตัวเลข'
+  stats:
+    - title: '40+'
+      description: 'ประเทศที่มีลูกค้า Seekingtex'
+    - title: '12+'
+      description: 'ปีแห่งการผจญภัยของชุมชน'
+    - title: '10,000+'
+      description: 'นักสิ่งทอที่มีความสุขทั่วโลก'
+    - title: '98%'
+      description: 'จะแนะนำ Seekingtex'
+
+stories:
+  tagline: 'เรื่องราวของนักสำรวจ'
+  title: 'การผจญภัยจริงจากคนจริง'
+  subtitle: 'ฟังจากนักสิ่งทอ ครอบครัว และมืออาชีพที่ใช้อุปกรณ์ Seekingtex บนผืนน้ำ'
+  items:
+    - name: 'Sarah & Mike'
+      title: 'เจ้าของ SUP Explorer 11, แคนาดา'
+      content: 'เราเอา Explorer 11 ของเราไปเที่ยวหนึ่งสัปดาห์ที่ Algonquin Park มันจัดการกับการขนขึ้นบกและการข้ามทะเลสาบได้อย่างสวยงาม โครงสร้าง drop-stitch ทำให้เราเป่าลมได้ถึง 15 PSI และได้ประสิทธิภาพเหมือนกระดานแข็งจากกระดานที่พับเก็บได้'
+      image: '/images/seekingtex/products/Seekingtex-sup-allround-board.webp'
+      location: 'Algonquin Park, แคนาดา'
+    - name: 'Carlos R.'
+      title: 'ผู้ขับขี่ Cheetah Surge, สเปน'
+      content: 'Cheetah Surge คือตัวเลือกของฉันสำหรับการล่องเรือชายฝั่ง การออกแบบที่มีชีวิตชีวาดึงดูดสายตาบนชายหาด และความมั่นคงทำให้ฉันมั่นใจในคลื่นเบา มันจัดการได้อย่างสวยงาม ไม่ว่าจะทัวร์ริ่งหรือแค่เพลิดเพลินกับพระอาทิตย์ตก'
+      image: '/images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp'
+      location: 'Costa Brava, สเปน'
+    - name: 'Lina และครอบครัว'
+      title: 'นักสิ่งทอ Flowing Lotus, สวีเดน'
+      content: 'การผจญภัยครอบครัวสุดสัปดาห์บนหมู่เกาะ Flowing Lotus มั่นคงพอที่ลูกสาวของฉันจะยืนได้ขณะที่ฉันสิ่งทอ เป่าลมเสร็จในไม่ถึง 10 นาที —ไม่ต้องใช้รถพ่วง แค่ความสนุกของครอบครัวบนผืนน้ำ'
+      image: '/images/seekingtex/products/sup-series/sup-flowing-lotus-1.webp'
+      location: 'Stockholm Archipelago, สวีเดน'
+    - name: 'Lt. Cmdr. Andres'
+      title: 'นักสำรวจ Ocean Voyager, ฟิลิปปินส์'
+      content: 'ฉันใช้ Ocean Voyager ของฉันสำหรับทัวร์ชายฝั่งระยะไกลรอบ Palawan หลังจากใช้งานทุกวันในสภาพเขตร้อนเป็นเวลาหลายเดือน กระดานยังคงทำงานเหมือนใหม่ รูปทรงทัวร์ริ่งตัดผ่านคลื่นที่จะหยุดกระดานที่ด้อยกว่า'
+      image: '/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp'
+      location: 'Palawan, ฟิลิปปินส์'
+    - name: 'Emma T.'
+      title: 'ผู้เริ่มต้น Tropical Breeze, ออสเตรเลีย'
+      content: 'ฉันไม่เคยอยู่บน SUP มาก่อน Tropical Breeze มั่นคงมากจนฉันรู้สึกมั่นใจในครั้งแรก ตอนนี้ฉันสิ่งทอทุกสุดสัปดาห์ เส้นโค้งการเรียนรู้แทบเป็นศูนย์ —และกระดานดูสวยงามบนผืนน้ำ'
+      image: '/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp'
+      location: 'Gold Coast, ออสเตรเลีย'
+
+adventures_cta:
+  tagline: 'แบ่งปันการผจญภัยของคุณ'
+  title: 'เรื่องราวของคุณอาจอยู่ที่นี่'
+  subtitle: 'แท็ก @seekingtex_watersports บน Instagram หรือใช้ #SeekingtexAdventure เพื่อโอกาสในการถูกนำเสนอ'
+  instagram: 'ติดตามบน Instagram'
+  youtube: 'สมัครสมาชิกบน YouTube'
+  facebook: 'เข้าร่วมบน Facebook'
+
+locations:
+  tagline: 'ชุมชนระดับโลก'
+  title: 'ที่ที่ Seekingtex เดินทาง'
+  subtitle: 'จากทะเลสาบยุโรปถึงชายฝั่งเอเชียตะวันออกเฉียงใต้ —ชุมชนของเราสิ่งทอทุกที่'
+  regions:
+    - title: 'ยุโรป'
+      description: 'ทะเลสาบโคโม · หมู่เกาะสตอกโฮล์ม · Costa Brava · ชายฝั่งโครเอเชีย · ทะเลสาบสกอตแลนด์'
+    - title: 'เอเชียแปซิฟิก'
+      description: 'Palawan · Gold Coast · อ่าวฮาลอง · ทะเลสาบยะมะนะกะ · ชายฝั่งบาหลี'
+    - title: 'อเมริกา'
+      description: 'Algonquin Park · Great Lakes · Florida Keys · ทะเลสาบทาโฮ · ปาตาโกเนีย'
+    - title: 'ตะวันออกกลางและแอฟริกา'
+      description: 'ชายฝั่งทะเลแดง · ทะเลสาบวิกตอเรีย · แหลมกู๊ดโฮป · ทะเลกาลิลี'
+
+cta:
+  title: 'พร้อมที่จะเข้าร่วมชุมชนหรือยัง?'
+  subtitle: 'ทุกผลิตภัณฑ์ Seekingtex ได้รับการรับรอง CE มีการรับประกัน และออกแบบมาเพื่อการผจญภัยจริง ค้นหาของคุณวันนี้'
+  actions:
+    - variant: primary
+      text: 'สำรวจผลิตภัณฑ์'
+      href: '/products'
+    - text: 'แบ่งปันเรื่องราวของคุณ'
+      href: '/contact'

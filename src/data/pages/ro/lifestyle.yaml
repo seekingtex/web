@@ -1,0 +1,41 @@
+hero:
+  tagline: Stil de viață
+  title: Stilul de viață<br />Seekingtex
+  subtitle: Construit pentru cei care trăiesc pe apă — de la exploratorii de weekend la operatorii comerciali.
+values:
+  - icon: 🌊
+    title: Născut pe apă
+    desc: Fiecare design începe prin a înțelege cum se comportă apa.
+  - icon: 🔧
+    title: Construit să reziste
+    desc: Cel mai sustenabil produs este cel care nu trebuie înlocuit.
+  - icon: '🏆'
+    title: Design accesibil
+    desc: Activitățile pe apă nu ar trebui să fie un lux.
+  - icon: 🌍
+    title: Comunitate globală
+    desc: "Clienții noștri împărtășesc un lucru: dragostea de a fi pe apă."
+  - icon: ♻️
+    title: Producție responsabilă
+    desc: Tăierea optimizată CNC reduce deșeurile sub 5 %.
+  - icon: 🤝
+    title: Suport care durează
+    desc: Carene vechi de 20 de ani încă mai sună pentru piese de schimb. Timpul nostru mediu de răspuns la garanție este de 24 de ore.
+ethos_section:
+  tagline: Ethosul nostru
+  title: Mai mult decât un produs. O filosofie.
+  subtitle: Șase principii care modelează fiecare decizie.
+community_section:
+  tagline: Comunitate
+  title: Fă parte din comunitatea Seekingtex
+  subtitle: Urmărește călătoria noastră și împărtășește-ți propriile aventuri pe apă.
+  instagram: Urmărește pe Instagram
+  youtube: Abonează-te pe YouTube
+  x: Urmărește pe X
+cta_section:
+  title: Începe călătoria ta
+  subtitle: Toate produsele certificate CE. Acoperite de garanție. Concepute pentru viața reală pe apă.
+  products_cta: Explorează produsele →
+  about_cta: Despre noi
+  products_link: /products
+  about_link: /about

@@ -1,0 +1,96 @@
+hero:
+  tagline: Om selskapet
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex-verksted
+  title: |
+    Marine engineering <br />
+    i <span class="text-accent dark:text-white">Seekingtex</span>-stil
+  subtitle: 'Vi startet i et kystverksted med én båt og en urokkelig overbevisning: marine produkter bør designes som om liv avhenger av dem – for det gjør de. I dag leverer vi til 40+ land, men hvert skrog går fortsatt gjennom de samme hendene som startet selskapet.'
+
+stats:
+  title: I tall
+  columns: 4
+  stats:
+    - title: Leverte skrog
+      amount: '2,400+'
+    - title: Leveringsland
+      amount: '40'
+    - title: Samlet erfaring (år)
+      amount: '60'
+    - title: Gjennomsnittlig responstid (t)
+      amount: '24'
+
+features3_what_we_build:
+  title: Hva vi bygger
+  subtitle: En fokusert produktlinje vi kan ut og inn – ingen halvhjertede løsninger eller badge engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: teknisk stoff-båter
+      description: teknisk stoff med aluminiumsskrog fra 3,3 m til 7,5 m. Designet for patruljering, dykking, fiske og familiebruk.
+      icon: tabler:ship
+    - title: Oppblåsbare båter
+      description: PVC- og Hypalon-oppblåsbare båter fra 2,4 m til 4,2 m. Lette, slitesterke og enkle å oppbevare.
+      icon: tabler:speedboat
+    - title: Superyacht tender
+      description: Kompakte teknisk stoff med høye spesifikasjoner, tilpasset moderfartøyets design.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Tilbehør
+      description: Belter, pumper, trekk, vanntette vesker, drivstofftanker og elektronikk. Alt kompatibelt med våre båter.
+      icon: tabler:package
+    - title: Modifikasjoner og reparasjoner
+      description: Reparasjon av oppblåsbare kamre, elektronikkoppgraderinger og motorbytte.
+      icon: tabler:tool
+    - title: Produkter på bestilling
+      description: Design for kommersielle, vitenskapelige og militære kunder.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Båt på bestilling
+
+steps2_values:
+  title: Våre verdier
+  subtitle: Tre prinsipper som former hvert produkt fra dag én.
+  items:
+    - title: Bygg som om familien din var i båten
+      description: Hvert skrog, hver sveis og hver komponent behandles som om de skulle brukes av våre egne familier.
+      icon: tabler:heart
+    - title: Ingeniørkunst før salg
+      description: Hvis spesifikasjonen er feil, endrer vi spesifikasjonen – aldri kunden.
+      icon: tabler:settings
+    - title: Støtte utover garantien
+      description: Tjue år gamle skrog ringer fortsatt etter deler – og vi svarer fortsatt.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Milepæler
+  subtitle: Kortversjonen av Seekingtexs historie.
+  isReversed: true
+  items:
+    - title: Grunnlagt i et kystverksted
+      description: To marineingeniører med én CNC-fres og en urokkelig idé.
+      icon: tabler:building-factory
+    - title: Første 1 000 leverte skrog
+      description: Oppnådd i det syvende året, hovedsakelig gjennom jungeltelegrafen og faste kunder.
+      icon: tabler:circle-check
+    - title: Internasjonalt eksportprogram
+      description: Leveranser til 40+ land med lokale servicepartnere på fem kontinenter.
+      icon: tabler:world
+
+features2_locations:
+  title: Våre lokasjoner
+  tagline: Hvor du finner oss
+  columns: 3
+  items:
+    - title: Hovedkontor og verksted
+      description: Kystnært industripark, bygning 4 – åpent man-fre for besøk etter avtale.
+    - title: EU-servicesenter
+      description: Middelhavshavn – modifikasjoner, reparasjoner og garantistøtte for europeiske kunder.
+    - title: APAC-partnernettverk
+      description: Autoriserte servicepartnere i Australia, Japan, Singapore og Hongkong.

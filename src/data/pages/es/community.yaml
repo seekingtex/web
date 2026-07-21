@@ -1,0 +1,83 @@
+hero:
+  tagline: 'Comunidad'
+  title: 'La comunidad de Seekingtex'
+  subtitle: |
+    Gente real, agua real, aventuras reales. Desde remeros de fin de semana hasta<br />
+    operadores profesionales, descubre cómo nuestra comunidad explora el mundo sobre el agua.
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Comunidad de Seekingtex remando en aguas tranquilas'
+
+stats:
+  title: 'La comunidad en cifras'
+  stats:
+    - title: '40+'
+      description: 'Países con clientes de Seekingtex'
+    - title: '12+'
+      description: 'Años de aventuras en comunidad'
+    - title: '10,000+'
+      description: 'Remeros felices en todo el mundo'
+    - title: '98%'
+      description: 'Recomendaría Seekingtex'
+
+stories:
+  tagline: 'Historias de exploradores'
+  title: 'Aventuras reales de gente real'
+  subtitle: 'Escucha a remeros, familias y profesionales que usan el equipo de Seekingtex en el agua.'
+  items:
+    - name: 'Sarah y Mike'
+      title: 'Propietarios de tejido funcional Explorer 11, Canadá'
+      content: 'Llevamos nuestras Explorer 11 en un viaje de una semana por el Parque Algonquin. Superaron los porteos y las travesías de lago de maravilla. La construcción drop-stitch nos permitió inflarlas a 15 PSI y obtener el rendimiento de una tabla rígida a partir de una tabla plegable.'
+      image: '/images/seekingtex/products/Seekingtex-tejido funcional-allround-board.webp'
+      location: 'Parque Algonquin, Canadá'
+    - name: 'Carlos R.'
+      title: 'Rider de Cheetah Surge, España'
+      content: 'La Cheetah Surge es mi favorita para navegar por la costa. El diseño vibrante llama la atención en la playa, y la estabilidad me da confianza en el oleaje ligero. Se maneja de maravilla, ya sea que esté haciendo travesía o simplemente disfrutando del atardecer.'
+      image: '/images/seekingtex/products/tejido funcional-series/tejido funcional-cheetah-surge-1.webp'
+      location: 'Costa Brava, España'
+    - name: 'Lina y familia'
+      title: 'Remeras de Flowing Lotus, Suecia'
+      content: 'Aventuras familiares de fin de semana en el archipiélago. La Flowing Lotus es lo suficientemente estable como para que mi hija se ponga de pie mientras yo textil. Se infla en menos de 10 minutos — sin necesidad de remolque, solo pura diversión familiar en el agua.'
+      image: '/images/seekingtex/products/tejido funcional-series/tejido funcional-flowing-lotus-1.webp'
+      location: 'Archipiélago de Estocolmo, Suecia'
+    - name: 'Capitán de corbeta Andrés'
+      title: 'Explorador de Ocean Voyager, Filipinas'
+      content: 'Uso mi Ocean Voyager para travesías costeras de larga distancia alrededor de Palawan. Después de meses de uso diario en condiciones tropicales, la tabla sigue funcionando como nueva. La forma de touring corta el oleaje que detendría a tablas inferiores.'
+      image: '/images/seekingtex/products/tejido funcional-series/tejido funcional-ocean-voyager-1.webp'
+      location: 'Palawan, Filipinas'
+    - name: 'Emma T.'
+      title: 'Principiante con Tropical Breeze, Australia'
+      content: 'Nunca antes había estado en un tejido funcional. La Tropical Breeze es tan estable que me sentí segura en mi primer intento. Ahora textil cada fin de semana. La curva de aprendizaje es básicamente nula — y la tabla se ve increíble en el agua.'
+      image: '/images/seekingtex/products/tejido funcional-series/tejido funcional-tropical-breeze-1.webp'
+      location: 'Gold Coast, Australia'
+
+adventures_cta:
+  tagline: 'Comparte tu aventura'
+  title: 'Tu historia podría estar aquí'
+  subtitle: 'Etiqueta a @seekingtex_watersports en Instagram o usa #SeekingtexAdventure para tener la oportunidad de aparecer.'
+  instagram: 'Síguenos en Instagram'
+  youtube: 'Suscríbete en YouTube'
+  facebook: 'Únete en Facebook'
+
+locations:
+  tagline: 'Comunidad global'
+  title: 'Por dónde viaja Seekingtex'
+  subtitle: 'Desde los lagos europeos hasta las costas del sudeste asiático, nuestra comunidad rema en todas partes.'
+  regions:
+    - title: 'Europa'
+      description: 'Lago de Como · Archipiélago de Estocolmo · Costa Brava · Costa croata · Lagos de Escocia'
+    - title: 'Asia-Pacífico'
+      description: 'Palawan · Gold Coast · Bahía de Ha Long · Lago Yamanaka · Costa de Bali'
+    - title: 'América'
+      description: 'Parque Algonquin · Grandes Lagos · Cayos de Florida · Lago Tahoe · Patagonia'
+    - title: 'Oriente Medio y África'
+      description: 'Costa del Mar Rojo · Lago Victoria · Península del Cabo · Mar de Galilea'
+
+cta:
+  title: '¿Listo para unirte a la comunidad?'
+  subtitle: 'Cada producto de Seekingtex tiene certificación CE, está respaldado por garantía y está diseñado para aventuras reales. Encuentra el tuyo hoy.'
+  actions:
+    - variant: primary
+      text: 'Explorar productos'
+      href: '/products'
+    - text: 'Comparte tu historia'
+      href: '/contact'

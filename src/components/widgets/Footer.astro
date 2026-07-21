@@ -1,0 +1,295 @@
+---
+import { Icon } from 'astro-icon/components';
+import cfg from '~/config.yaml';
+const branding = (cfg as any)?.branding || {};
+import { getHomePermalink } from '~/utils/permalinks';
+import { getSeoSettings } from '~/utils/seo-settings';
+import { getLangFromUrl } from '~/i18n/utils';
+import { defaultLang, ui } from '~/i18n/config';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+  icon?: string;
+}
+
+interface Links {
+  title?: string;
+  links: Array<Link>;
+}
+
+export interface Props {
+  links: Array<Links>;
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+  theme?: string;
+}
+
+const { socialLinks = [], secondaryLinks = [], links = [], footNote, theme = 'light' } = Astro.props;
+
+const seo = await getSeoSettings();
+
+const ksSocialLinks: Array<Link> = (seo.socialLinks || [])
+  .filter((s) => s?.url && s.url !== '#')
+  .map((s) => ({
+    ariaLabel: s.ariaLabel || s.platform,
+    href: s.url || '#',
+    icon: s.icon || '',
+  }));
+
+const mergedSocialLinks = (
+  ksSocialLinks.length > 0
+    ? [
+        ...ksSocialLinks,
+        ...socialLinks.filter(
+          (s) => !ksSocialLinks.find((k) => k.ariaLabel?.toLowerCase() === s.ariaLabel?.toLowerCase())
+        ),
+      ]
+    : socialLinks
+).filter((s) => s?.href && s.href !== '#');
+
+const entityForHref = (href?: string): string => {
+  if (!href) return 'page';
+  const path = href.replace(/^\/+/g, '');
+  if (path === '' || path === 'home') return 'brand';
+  if (path.startsWith('products') || path.startsWith('size-guide')) return 'product';
+  if (path.startsWith('technology') || path.startsWith('randdcenter')) return 'technology';
+  if (path.startsWith('safety')) return 'safety';
+  if (path.startsWith('guides')) return 'guide';
+  if (path.startsWith('news')) return 'article';
+  if (path.startsWith('about')) return 'brand';
+  if (path.startsWith('services') || path.startsWith('pricing') || path.startsWith('contact')) return 'service';
+  return 'page';
+};
+
+const currentLocale = getLangFromUrl(Astro.url);
+
+const LOCALIZED_ROUTES = new Set([
+  '/products',
+  '/sun-protection-fabric',
+  '/waterproof-fabric',
+  '/supboard',
+  '/accessories',
+  '/guides',
+  '/faq',
+  '/v2',
+  '/use-cases',
+  '/compare',
+  '/compare/cotton-vs-polyester',
+  '/compare/woven-vs-knit',
+  '/llms/brand/seekingtex',
+  '/llms/compare/sup-types',
+  '/llms/industry/functional-fabrics',
+  '/geo-report',
+  '/learn',
+  '/technology',
+  '/safety',
+  '/size-guide',
+  '/journal',
+  '/news',
+  '/about',
+  '/brand',
+  '/randdcenter',
+  '/contact',
+  '/factory',
+  '/academy',
+  '/custom',
+  '/media',
+  '/quality',
+  '/warranty',
+  '/search-rescue-operations',
+  '/engineering-perfection',
+  '/disaster-relief-humanitarian-aid',
+  '/commercial-workboats',
+  '/solutions/by-industry',
+  '/solutions/by-use-case',
+  '/community',
+  '/trust',
+  '/design-powerhouse',
+  '/engineering-team',
+  '/knowledge',
+  '/oem-process',
+  '/oem-odm-manufacturer',
+  '/knowledge',
+  '/lifestyle',
+  '/gallery',
+  '/learn/fabrics',
+  '/learn/textile-manufacturing',
+  '/learn/quality-standards',
+  '/learn/materials',
+  '/trust',
+  '/community',
+]);
+
+const navTextMap: Record<string, string> = {
+  Products: 'nav.products',
+  'Technology & Innovation': 'nav.technologyInnovation',
+  'Technology Overview': 'nav.technologyOverview',
+  'Engineering Excellence': 'nav.engineeringExcellence',
+  'Materials Science': 'nav.materialsScience',
+  Solutions: 'nav.solutions',
+  'By Industry': 'nav.byIndustry',
+  'By Use Case': 'nav.byUseCase',
+  'OEM/ODM Manufacturing': 'nav.oemOdm',
+  'Custom Lab': 'nav.custom',
+  Lifestyle: 'nav.lifestyle',
+  Gallery: 'nav.gallery',
+  'Solutions by Industry': 'nav.solutionsIndustry',
+  'Solutions by Use Case': 'nav.solutionsUseCase',
+  Learn: 'nav.learn',
+  Company: 'nav.company',
+  Support: 'nav.support',
+  'All Products': 'nav.allProducts',
+  'Sun Protection': 'nav.sunProtection',
+  'Waterproof Fabrics': 'nav.waterproofFabrics',
+  Accessories: 'nav.accessories',
+  Compare: 'nav.compare',
+  'Cotton vs Polyester': 'nav.cottonVsPolyester',
+  'Woven vs Knit': 'nav.wovenVsKnit',
+  Guides: 'nav.guides',
+  'Fabric Basics': 'nav.fabricBasics',
+  'Textile Technology': 'nav.textileTech',
+  'Fabric Safety': 'nav.fabricSafety',
+  Journal: 'nav.journal',
+  Technology: 'nav.technology',
+  Safety: 'nav.safety',
+  'Size Guide': 'nav.sizeGuide',
+  News: 'nav.news',
+  About: 'nav.about',
+  Brand: 'nav.brand',
+  Community: 'nav.community',
+  'SUP Knowledge': 'nav.supKnowledge',
+  'Boat Knowledge': 'nav.boatKnowledge',
+  'R&D Center': 'nav.randd',
+  Contact: 'nav.contact',
+  Login: 'nav.login',
+  'Sign In': 'nav.signIn',
+  'Get a quote': 'cta.quote',
+  Terms: 'nav.terms',
+  'Privacy Policy': 'nav.privacy',
+  'Medical Disclaimer': 'nav.disclaimer',
+  FAQ: 'nav.faq',
+  Bundles: 'nav.bundles',
+  'Product Catalog': 'nav.catalog',
+  'Quality & Testing': 'nav.quality',
+  'Factory Tour': 'nav.factoryTour',
+  'Buyers Guide': 'nav.buyersGuide',
+  'Search & Rescue': 'nav.searchRescue',
+  'Engineering Perfection': 'nav.engineeringPerfection',
+  'Disaster Relief': 'nav.disasterRelief',
+  'Commercial Workboats': 'nav.commercialWorkboats',
+  'SUP Boards': 'nav.supBoards',
+  'Knowledge Graph': 'nav.knowledgeGraph',
+  'Learn Hub': 'nav.learnHub',
+  'Water Safety': 'nav.waterSafety',
+  Academy: 'nav.academy',
+  'Knowledge Base': 'nav.knowledge',
+  Trust: 'nav.trust',
+  Factory: 'nav.factory',
+  'Custom Lab': 'nav.custom',
+  Quality: 'nav.qualityFooter',
+  Warranty: 'nav.warranty',
+  'Media Center': 'nav.media',
+  'Design & Innovation': 'nav.designPowerhouse',
+};
+
+function t(text: string | undefined, locale: string): string {
+  const key = text ? navTextMap[text] : undefined;
+  if (key) {
+    const translated = (ui as any)[locale]?.[key];
+    if (translated) return translated;
+  }
+  return text ?? '';
+}
+const NON_LOCALIZED_ROUTES = new Set(['/products/compare']);
+
+function localizeHref(href: string | undefined | null, locale: string): string {
+  const str = href || '';
+  if (!str || !str.startsWith('/') || str.startsWith('//')) return str;
+  const base = str.split('?')[0].split('#')[0];
+  if (base === '/' || NON_LOCALIZED_ROUTES.has(base)) return str;
+  if ([...LOCALIZED_ROUTES].some((r) => base === r || base.startsWith(r + '/'))) {
+    return '/' + locale + str;
+  }
+  return str;
+}
+
+const siteName = branding?.site_name?.trim() || 'Seekingtex';
+const year = new Date().getFullYear();
+const rawCopyright = footNote ?? branding?.copyright ?? `© ${year} ${siteName} · All rights reserved.`;
+const copyrightHtml = String(rawCopyright)
+  .replace(/\{year\}/gi, String(year))
+  .replace(/\{site_name\}/gi, siteName);
+---
+
+<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose bg-sky-600 text-white']}>
+  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div
+    class="relative max-w-7xl mx-auto px-4 sm:px-6 text-white/90 intersect-once intersect-quarter intersect-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+  >
+    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
+
+      {
+        links.map(({ title, links }) => (
+          <div class="col-span-6 md:col-span-2">
+            <div class="text-white/90 font-medium mb-2">{t(title, currentLocale)}</div>
+            {links && Array.isArray(links) && links.length > 0 && (
+              <ul class="text-sm">
+                {links.map(({ text, href, ariaLabel }) => (
+                  <li class="mb-2">
+                    <a
+                      class="text-white/70 hover:text-white hover:underline transition duration-150 ease-in-out"
+                      href={localizeHref(href, currentLocale)}
+                      aria-label={ariaLabel}
+                      data-entity={entityForHref(href)}
+                    >
+                      <Fragment set:html={t(text, currentLocale)} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))
+      }
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 py-4 border-t border-white/20 text-sm text-white/70">
+      {
+        secondaryLinks.map(({ text, href }) => (
+          <a
+            class="text-white/70 hover:text-white hover:underline transition duration-150 ease-in-out"
+            href={localizeHref(href, currentLocale)}
+            set:html={t(text, currentLocale)}
+          />
+        ))
+      }
+    </div>
+    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
+      {
+        mergedSocialLinks?.length ? (
+          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+            {mergedSocialLinks.map(({ ariaLabel, href, text, icon }) => (
+              <li>
+                <a
+                  class="text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  aria-label={ariaLabel}
+                  href={href}
+                >
+                  {icon && <Icon name={icon} class="w-5 h-5" />}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          ''
+        )
+      }
+
+      <div class="text-sm mr-4 text-white/70">
+        <Fragment set:html={copyrightHtml} />
+      </div>
+    </div>
+  </div>
+</footer>

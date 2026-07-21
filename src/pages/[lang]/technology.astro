@@ -1,0 +1,94 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent } from '~/i18n/page-content';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPageContent(lang, 'technology') || {};
+const hero = page.hero || {};
+const sections = page.sections || [];
+const related = page.related || {};
+
+const metadata = {
+  title: `Technology —${SITE.name}`,
+  description:
+    'Seekingtex technology: advanced weaving, functional coating, antimicrobial finishes, UPF-rated fabrics, and quick-dry textile systems.',
+};
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="textile-technology,functional-fabric-construction,performance-textile-materials" />
+
+  <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || 'Technology'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || 'Built for Performance'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        hero.subtitle ||
+          'Every Seekingtex fabric is engineered with precision materials and construction methods tested for performance environments.'
+      }
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="space-y-12">
+      {
+        sections.map((sec: any, i: number) => (
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            {i % 2 === 0 ? (
+              <>
+                <div>
+                  <h2 class="text-2xl font-semibold text-gray-900">{sec.title}</h2>
+                  <p class="mt-3 text-gray-600">{sec.description}</p>
+                </div>
+                <div class="bg-gray-100 rounded-2xl h-48 flex items-center justify-center text-gray-400 font-bold text-lg">
+                  {sec.imageAlt || ''}
+                </div>
+              </>
+            ) : (
+              <>
+                <div class="order-2 md:order-1 bg-gray-100 rounded-2xl h-48 flex items-center justify-center text-gray-400 font-bold text-lg">
+                  {sec.imageAlt || ''}
+                </div>
+                <div class="order-1 md:order-2">
+                  <h2 class="text-2xl font-semibold text-gray-900">{sec.title}</h2>
+                  <p class="mt-3 text-gray-600">{sec.description}</p>
+                </div>
+              </>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    <section class="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+      <h2 class="font-semibold text-gray-900">{related.title || 'Related'}</h2>
+      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+        {
+          (related.links || []).map((link: any) => (
+            <a
+              href={`/${lang}${link.url}`}
+              class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
+    <p>
+      Seekingtex technology focuses on fabric weave engineering, functional coating chemistry, UV protection
+      systems, moisture-wicking performance, and durability for apparel and technical textile applications.
+    </p>
+  </section>
+</Layout>

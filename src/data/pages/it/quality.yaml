@@ -1,0 +1,50 @@
+hero:
+  tagline: Garanzia di qualità
+  title: Test di prestazione & qualità
+  subtitle: Ogni tessuto funzionale e SUP Seekingtex viene sottoposto a rigorosi test di prestazione e qualità presso il nostro centro R&S prima della spedizione. I nostri test completi forniscono una prova tangibile dell'eccellenza del prodotto.
+
+stats:
+  - value: 100%
+    label: Unità testate a pressione
+  - value: '8'
+    label: Protocolli di test
+  - value: 
+    label: Certificato qualità
+  - value: 3-Year
+    label: Garanzia limitata
+
+tests:
+  - title: Test di pressione
+    description: Le camere gonfiabili vengono sottoposte a pressioni superiori ai loro limiti operativi raccomandati per periodi prolungati. Ciò verifica la tenuta all'aria e l'integrità strutturale del materiale e delle giunture, assicurando che il prodotto resista all'uso previsto e alla possibile sovrappressione senza cedimenti o perdite.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Test d'impatto
+    description: I prodotti vengono sottoposti a impatti controllati con vari pesi e angolazioni. Ciò valuta la resistenza del materiale a forature, strappi e danni da collisione con ostacoli in acqua, dimostrando durabilità e longevità.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Test di resistenza ai UV
+    description: I prodotti finiti vengono esposti a luce solare simulata per periodi prolungati per valutare la resistenza del materiale al degrado, allo scolorimento e all'indebolimento causati dall'esposizione prolungata ai raggi UV —fondamentale per le imbarcazioni utilizzate in ambienti tropicali e ad alta esposizione solare.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Test di resistenza all'abrasione
+    description: I campioni di materiale vengono strofinati contro superfici abrasive per un numero specificato di cicli sotto pressione controllata. Ciò misura la capacità del materiale di resistere all'usura dovuta all'uso ripetuto, al contatto con sabbia, rocce o altre superfici, garantendo durabilità a lungo termine.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Test di prestazione a bassa temperatura
+    description: I prodotti vengono testati in ambienti freddi per valutare funzionalità e durabilità in varie condizioni di temperatura, prevenendo irrigidimento o screpolature in acque fredde. Essenziale per imbarcazioni destinate all'uso invernale o ad alta latitudine.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Test di galleggiabilità & capacità di carico
+    description: I prodotti vengono testati con vari pesi per determinare la loro capacità di carico massima e garantire che supportino in sicurezza utenti e attrezzatura. La capacità nominale di ogni modello viene verificata prima del rilascio.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Test di manovrabilità
+    description: I prodotti vengono testati per la loro reattività agli input di tessile o motore, valutando il raggio di sterzata e la facilità di manovra. Le prove in acqua confermano che la manovrabilità reale corrisponde alle specifiche di progettazione.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Test di tenuta stagna
+    description: I prodotti completamente assemblati vengono immersi o sottoposti a getti d'acqua per verificare l'assenza di perdite attraverso giunture, valvole o materiali. Ogni imbarcazione supera un controllo obbligatorio di tenuta stagna prima della spedizione.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Procedure di test
+  title: Test rigorosi in ogni fase
+
+commitment:
+  title: Il nostro impegno
+  body: Attraverso queste rigorose procedure di test, {SITE} fornisce ai clienti la certezza che i nostri SUP e imbarcazioni gonfiabili non solo sono ad alte prestazioni ma anche costruiti per durare —garantendo innumerevoli avventure piacevoli e sicure in acqua. Il nostro laboratorio qualità opera indipendentemente dalla produzione e riferisce direttamente alla direzione.
+  cta: Richiedi la documentazione dei test
+  cta_link: /contact

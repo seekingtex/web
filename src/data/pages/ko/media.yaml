@@ -1,0 +1,56 @@
+hero:
+  tagline: 리소스
+  title: 미디어 센터
+  subtitle: 브랜드 자산, 제품 이미지, 카탈로그, 비디오 다운로드
+
+sections:
+  - id: product-images
+    title: 제품 이미지
+    desc: 웹, 인쇄, 소매용 고해상도 제품 사진.
+    items:
+      - SUP 보드 갤러리
+      - 기술 원단 원단 갤러리
+      - 기능성 기술 원단 갤러리
+      - 액세서리 및 안전 장비
+  - id: logo-brand-kit
+    title: 로고 및 브랜드 키트
+    desc: 공식 Seekingtex 로고 파일, 컬러 팔레트, 타이포그래피, 브랜드 가이드라인.
+    items:
+      - 기본 로고 (PNG/SVG/EPS)
+      - 아이콘 마크
+      - 컬러 팔레트
+      - 타이포그래피 사양
+      - 브랜드 가이드라인 PDF
+  - id: catalogs
+    title: PDF 카탈로그
+    desc: 제품 카탈로그, 사양서, 기술 문서 다운로드.
+    items:
+      - 2026년 제품 카탈로그
+      - OEM/ODM 역량 자료
+      - 기술 원단 시리즈 브로셔
+      - 기술 사양서
+  - id: videos
+    title: 비디오
+    desc: 제품 데모, 공장 투어, 브랜드 필름, 고객 후기.
+    items:
+      - 제품 데모
+      - 공장 투어
+      - 브랜드 필름
+      - 고객 스토리
+      - 사용 방법 가이드
+
+request_access: 액세스 요청 →
+
+cta:
+  title: 자산 검색이 필요하신가요?
+  desc: 맞춤 자산 요청, 미디어 파트너십 또는 언론 문의는 브랜드 팀에 문의하세요.
+  links:
+    - label: 공장 방문
+      href: /factory
+      desc: 12,000m² 규모의 제조 시설 보기
+    - label: 브랜드 가이드라인
+      href: /brand
+      desc: Seekingtex 브랜드 알아보기
+    - label: 파트너십
+      href: /contact
+      desc: OEM, ODM 및 유통 문의

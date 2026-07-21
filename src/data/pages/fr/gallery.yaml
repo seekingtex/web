@@ -1,0 +1,30 @@
+hero:
+  tagline: Galerie
+  title: Galerie
+  subtitle: Photos de produits, atelier d'usine et aventures sur l'eau
+
+albums:
+  - title: tissu tissu technique
+    desc: tissu technique à coque aluminium de 3,3 m à 7,5 m pour la patrouille, la plongée, la pêche et la famille.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: tissu fonctionnel
+    desc: tissu fonctionnel gonflables drop-stitch pour le tourisme, le surf, le yoga et la pêche.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Usine & atelier
+    desc: Notre installation de fabrication de 12 000 m² à Qingdao, Chine.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: Vous voulez en voir plus ?
+  desc: Suivez-nous sur les réseaux sociaux pour les dernières nouveautés produits, mises à jour de l'usine et aventures clients.
+  instagram: Instagram
+  youtube: YouTube

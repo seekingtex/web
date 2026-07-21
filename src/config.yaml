@@ -1,0 +1,144 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Seekingtex | Functional Fabric Manufacturer — Sun Protection, Waterproof, Quick-Dry & Performance Fabrics
+    template: '%s — Seekingtex'
+  description: 'Seekingtex is a leading functional fabric manufacturer specializing in sun protection (UPF 50+), waterproof, quick-dry, antibacterial, and performance fabrics for sportswear, outdoor apparel, and tactical gear. OEM/ODM services available.'
+  keywords:
+    - Seekingtex
+    - functional fabric manufacturer
+    - sun protection fabric
+    - UPF 50+ fabric
+    - waterproof fabric
+    - quick-dry fabric
+    - antibacterial fabric
+    - performance fabric
+    - sportswear fabric
+    - outdoor fabric
+    - OEM fabric manufacturer
+    - China fabric supplier
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: en_US
+  twitter:
+    handle: '@seekingtex'
+    site: '@seekingtex'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+siteSettings:
+  siteName: Seekingtex
+  siteTagline: 'Functional Fabric Manufacturer — Sun Protection, Waterproof, Quick-Dry & Performance Textiles'
+  siteDescription: 'Seekingtex is a leading manufacturer of high-performance functional fabrics. We specialize in UPF 50+ sun protection, waterproof/breathable, quick-dry moisture wicking, antibacterial, and stretch fabrics for sportswear, outdoor gear, tactical apparel, and industrial applications. OEM/ODM services with global shipping.'
+  organization:
+    name: Kunshan Seeking Tex&Tech Co.,Ltd
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  socialLinks:
+    - platform: linkedin
+      url: 'https://www.linkedin.com/company/seekingtex'
+      icon: tabler:brand-linkedin
+    - platform: x
+      url: 'https://x.com/seekingtex'
+      icon: tabler:brand-x
+    - platform: rss
+      url: /rss.xml
+
+ui:
+  theme: 'system'
+
+branding:
+  site_name: 'Seekingtex'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. All Rights Reserved.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'Hello, I would like to inquire about your functional fabrics.'
+  contact_email_to: gzb@seekingtex.com
+  # API keys moved to /keystatic (API Keys panel) or Cloudflare Worker secrets
+  # Run: wrangler secret put CONTACT_RESEND_API_KEY
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  map_latitude: '31.3790'
+  map_longitude: '120.9605'

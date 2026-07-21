@@ -1,0 +1,30 @@
+hero:
+  tagline: Galleri
+  title: Galleri
+  subtitle: Produktbilder, produktionshall och vattenäventyr
+
+albums:
+  - title: tekniskt tyg-båtar
+    desc: tekniskt tyg med aluminiumskrov från 3,3 m till 7,5 m för patrullering, dykning, fiske och familjebruk.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUP-brädor
+    desc: Uppblåsbara SUP-brädor med drop-stitch-teknik för tur, surfing, yoga och fiske.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Fabrik och verkstad
+    desc: Vår 12 000 m² stora produktionsanläggning i Qingdao, Kina.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: Vill du se mer?
+  desc: Följ oss i sociala medier för att hålla dig uppdaterad om produktnyheter, fabriksuppdateringar och kundäventyr.
+  instagram: Instagram
+  youtube: YouTube

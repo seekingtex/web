@@ -1,0 +1,231 @@
+hero:
+  tagline: Factory
+  title: Factory & Manufacturing
+  subtitle: Advanced textile manufacturing — from yarn to finished functional fabric
+
+intro:
+  - Kunshan Seeking Tex&Tech Co., Ltd controls every stage of textile production — from the arrival of raw fibers and yarns to the final inspection of finished fabric rolls. Our manufacturing facility in Kunshan, Suzhou houses dedicated workshops for knitting/weaving, dyeing, finishing, coating, lamination, and quality testing.
+  - By integrating R&D, prototyping, manufacturing, and testing under one roof, we eliminate the inefficiencies of fragmented supply chains and maintain direct control over fabric quality, material selection, and delivery timelines. Every roll that leaves our workshop is made by our people, on our equipment, to our standards.
+
+stats:
+  - value: 10,000 m2
+    label: Manufacturing floor
+  - value: 200+
+    label: Skilled workers & technicians
+  - value: 50M+
+    label: Meters delivered globally
+  - value: 
+    label: OEKO-TEX certified
+
+workshops_section:
+  tagline: Workshops
+  title: Manufacturing Workshops
+  workshops:
+    - title: Knitting & Weaving
+      description: Advanced circular knitting machines and rapier weaving looms produce high-quality fabric substrates. Computer-controlled tension systems ensure consistent fabric density and uniform structure across every roll.
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: Dyeing & Finishing
+      description: Precision dyeing workshop with programmable jet dyeing machines and padding lines. Color matching via spectrophotometry ensures batch-to-batch consistency. Finishing processes include heat setting, sanforizing, and anti-pilling treatments.
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: Functional Coating & Lamination
+      description: Coating lines apply PU, PVC, silicone, and acrylic finishes for waterproof, UV-blocking, and antibacterial properties. Lamination lines bond membranes and functional layers with precise temperature and pressure control.
+      image: /images/seekingtex/factory/design-discuss.webp
+    - title: Printing & Embossing
+      description: Digital printing and rotary screen printing for custom patterns and branding. Embossing and calendering lines add texture, gloss control, and surface effects for specialized applications.
+      image: /images/seekingtex/hero/hero-fabrics.webp
+    - title: Inspection & Rewinding
+      description: Automated inspection lines scan every meter of fabric for defects using vision systems. Fabric is rewound, measured, and packaged according to customer specifications.
+      image: /images/seekingtex/hero/hero-quality.webp
+    - title: Quality Testing Laboratory
+      description: Dedicated quality lab equipped with standardized testing equipment for UPF rating, waterproofness, tensile strength, abrasion, colorfastness, and dimensional stability. Operates independently from production.
+      image: /images/seekingtex/hero/hero-support.webp
+
+equipment_section:
+  tagline: Equipment
+  title: Key Manufacturing Equipment
+  view_full: View full equipment list →
+  view_full_link: /factory/equipment
+  items:
+    - name: Circular Knitting Machines
+      spec: Single/double jersey, 34" diameter, up to 28 gauge
+    - name: Rapier Weaving Looms
+      spec: 190-360 cm width, electronic dobbies
+    - name: Jet Dyeing Machines
+      spec: Programmable, 100 kg–1000 kg capacity, multi-tank
+    - name: Coating & Lamination Line
+      spec: PU/PVC/silicone, 180 cm working width, precise temp. control
+    - name: Digital Fabric Printer
+      spec: Full-color, 8-color CMYK, up to 180 cm width
+    - name: Automated Fabric Inspection Machine
+      spec: Vision-based defect detection, 50 m/min
+
+qc_section:
+  tagline: Quality Control
+  title: Testing & Quality Assurance Process
+  subtitle: Every fabric batch undergoes mandatory testing before shipping. Our quality lab operates independently from production and reports directly to management.
+  steps:
+    - step: '1'
+      title: Raw Material Inspection
+      desc: Incoming fibers, yarns, and chemicals undergo quality verification — fiber composition, yarn count, chemical purity — before any batch enters production.
+    - step: '2'
+      title: In-Process Quality Monitoring
+      desc: Continuous monitoring of fabric weight, width, density, and color during production. Deviations trigger immediate process adjustment.
+    - step: '3'
+      title: Finished Fabric Testing
+      desc: Every batch is tested for physical properties (tensile, tear, abrasion), performance properties (UPF, waterproofness, antibacterial), colorfastness, and dimensional stability. Test reports accompany every shipment.
+
+oem_section:
+  tagline: OEM Projects
+  title: Brand & OEM Partnership Case Studies
+  subtitle: From specification to shipment — how we help global brands develop and scale their fabric lines.
+  cases:
+    - challenge: European outdoor apparel brand needed a UPF 50+ fabric with moisture wicking, custom color matching to their brand palette, and OEKO-TEX certification — all with a 30-day lead time.
+      solution: Developed custom fabric composition using recycled polyester with UPF-enhancing additives, matched 12 brand colors via spectrophotometry, and coordinated OEKO-TEX certification testing.
+      result: 28 days from spec confirmation to FOB. 15,000 meters across 12 colors. Repeat orders placed for 3 consecutive seasons.
+    - challenge: US sportswear manufacturer required waterproof-breathable fabric with PFAS-free DWR treatment for their premium outerwear line, with SGS third-party verification.
+      solution: Formulated eco-friendly DWR chemistry, developed laminate construction meeting 8,000 mm hydrostatic head, and coordinated SGS testing for breathability and water resistance.
+      result: Full product line launched with "PFAS-Free" marketing claim. 50,000+ meters ordered in first year with 0 quality returns.
+    - challenge: Japanese medical uniform company needed antibacterial fabric with 99% bacterial reduction rate, 50+ wash durability, and compliance with Japanese Industrial Standards.
+      solution: Developed silver-ion antimicrobial finish, optimized binder chemistry for wash durability, and conducted full JIS testing protocol with accredited third-party laboratory.
+      result: JIS-compliant certification obtained. 20,000 meters shipped for initial order. Secured hospital supply contract in 3 major Japanese cities.
+
+faq_section:
+  tagline: FAQ
+  title: B2B & OEM Frequently Asked Questions
+  questions:
+    - q: What is the minimum order quantity (MOQ) for OEM fabrics?
+      a: Standard MOQ is 1,000 meters per color per specification. Sample yardage (10–50 meters) and trial orders are available for new partnerships and product development.
+    - q: Does Seekingtex hold OEKO-TEX certification?
+      a: Yes. Our fabrics are OEKO-TEX Standard 100 certified. We also maintain REACH and RoHS compliance, and many products carry BLUESIGN, GRS, and UV Standard 801 certifications. Certification documentation provided with every shipment.
+    - q: What is the typical lead time for a fabric order?
+      a: Standard lead time is 25–35 days from confirmed PO and deposit. Sample development takes 3–5 days. Custom development (new composition, finish, or color) adds 7–10 days for sampling.
+    - q: Can you ship FOB Shanghai or CIF to our port?
+      a: Yes. We ship FOB Shanghai/Ningbo, CIF major global ports, and DDP for qualified partners. Our logistics team manages container booking, export documentation, and customs clearance. We ship to 20+ countries across EU, Americas, and Asia markets.
+
+b2b_moq: 'Standard MOQ: 1,000 meters per color per specification. Sample yardage available for new partnerships and product development.'
+
+production_flow:
+  tagline: Production Flow
+  title: From Yarn to Finished Fabric
+  subtitle: Every fabric batch passes through 6 production stages with QC checkpoints at every step. No shortcuts, no skipped inspections.
+  stages:
+    - stage: '01'
+      title: Material Receiving & Incoming QC
+      description: 'All incoming raw materials are logged by batch/lot number in our ERP system. Fibers, yarns, chemicals, and auxiliaries are quarantined until QC sign-off.'
+      qc_check: 'Fiber composition verification, yarn count (Ne), twist per meter, chemical purity analysis, MSDS review'
+      qc_threshold: '100% of batches tested. Reject if composition deviates >2%, chemical purity < spec, or any impurity detected'
+      responsibility: Incoming QC team (3 inspectors)
+    - stage: '02'
+      title: Knitting / Weaving
+      description: 'Yarns are knitted or woven into fabric substrates on circular knitting machines or rapier looms. Machine parameters are set per spec for weight, density, and width.'
+      qc_check: 'Fabric weight (g/m²) every 500 m, width measurement hourly, visual defect scan, stitch density check'
+      qc_threshold: 'Weight tolerance ±5%, width tolerance ±1 cm. Any structural defect (holes, slubs, press-off) = stop and inspect 100% of batch'
+      responsibility: Production shift lead
+    - stage: '03'
+      title: Dyeing & Finishing
+      description: 'Greige fabric enters processing — scouring, bleaching, dyeing, and finishing. Programmable jet dyeing machines ensure precise color application. Heat setting stabilizes dimensions.'
+      qc_check: 'Color matching via spectrophotometer (ΔE < 1.0), shade band assessment, pH verification, dimensional measurement, hand feel evaluation'
+      qc_threshold: 'ΔE ≤ 1.0 vs approved standard. Shade band: A-grade only. Dimensional shrinkage ≤ 3% (AATCC 135). Reject if any parameter fails'
+      responsibility: Dyeing & finishing QC (2 inspectors per shift)
+    - stage: '04'
+      title: Functional Coating / Lamination
+      description: 'Fabric receives functional finishes — PU coating for waterproofness, UV-blocking additives for UPF, antimicrobial treatments, or membrane lamination. Coating thickness and cure temperature are precisely controlled.'
+      qc_check: 'Coating weight (g/m²), adhesion strength (peel test), hydrostatic head test (waterproof), UPF measurement, spray rating test, air permeability'
+      qc_threshold: 'Coating weight ±5 g/m². Hydrostatic head ≥ spec min. UPF ≥ 50+ for sun protection. Spray rating ≥ 4 for water repellency'
+      responsibility: Coating line QC manager
+    - stage: '05'
+      title: Testing & Quality Hold
+      description: 'Finished fabric samples are sent to the quality laboratory for comprehensive testing. Rolls are held in quarantine until all test results are approved and recorded.'
+      qc_check: 'UPF rating (UV Standard 801), tensile strength (ASTM D5034), tear strength (ISO 13937), abrasion (Martindale), colorfastness (ISO 105 series), antibacterial (AATCC 100), dimensional stability (AATCC 135)'
+      qc_threshold: '100% of batches tested per protocol. Any parameter below spec = batch re-evaluated. Failed batches are downgraded or rejected — never shipped as first-quality'
+      responsibility: Quality lab (independent of production, reports to management)
+    - stage: '06'
+      title: Final Inspection & Packing
+      description: 'Final visual inspection under standardized lighting. Fabric is inspected for surface defects, color consistency, width uniformity, and weight verification. Rolls are labeled, wrapped, and packed for shipment.'
+      qc_check: 'Full visual inspection per ASTM D5430, grade point system, roll length/weight verification, label accuracy, packaging integrity'
+      qc_threshold: 'AQL 2.5 for major defects (per ISO 2859). Zero tolerance on performance defects. 100% of rolls visually inspected'
+      responsibility: Final QC team (4 inspectors) + Packing team lead
+
+workforce:
+  tagline: Our People
+  title: Workforce & Expertise
+  engineers: 25+
+  engineers_detail: 'Engineers across R&D, textile chemistry, materials lab, and production engineering. Average 7+ years in textile manufacturing.'
+  shift_pattern: '2 shifts/day (07:00–15:30, 15:30–00:00). Optional night shift for urgent orders.'
+  training: 'Monthly QC training, quarterly safety drills, annual skills assessment. New hires complete 40-hour induction before working on production line.'
+  departments:
+    - name: R&D & Textile Engineering
+      count: 25+
+      role: Product development, textile chemistry, materials lab
+    - name: Knitting & Weaving
+      count: 30
+      role: Circular knitting, rapier weaving, greige production
+    - name: Dyeing & Finishing
+      count: 40
+      role: Dyeing, finishing, heat setting, chemical treatment
+    - name: Coating & Lamination
+      count: 25
+      role: PU/PVC coating, membrane lamination, functional finishes
+    - name: Printing & Embellishment
+      count: 15
+      role: Digital printing, screen printing, embossing
+    - name: Quality Control
+      count: 12
+      role: Incoming QC, in-process QC, final inspection, lab testing
+    - name: Logistics & Packing
+      count: 20
+      role: Inspection, rewinding, packaging, export documentation
+    - name: Management & Admin
+      count: 15
+      role: Sales, procurement, HR, finance, compliance
+
+material_traceability:
+  tagline: Traceability
+  title: Material Tracking & Batch Control
+  description: Every batch of raw material is assigned a unique lot number in our ERP system. From arrival through production to the finished fabric roll, each batch's bill of materials links back to the original supplier lot. This enables full upstream traceability for any quality or compliance inquiry.
+  system: ERP system + physical batch tags on each production order
+  coverage: 100% of production materials — fibers, yarns, chemicals, dyes, auxiliaries, packaging
+  records_retained: 10 years (per industry best practice)
+  suppliers:
+    - material: Polyester & Nylon Yarns
+      source: Chinese and Taiwanese suppliers
+      certified: OEKO-TEX, ISO 9001
+    - material: Recycled Polyester Yarns
+      source: GRS-certified suppliers
+      certified: GRS, OEKO-TEX, ISO 9001
+    - material: Chemical Dyes & Auxiliaries
+      source: European and Chinese suppliers
+      certified: REACH, BLUESIGN, ZDHC compliant
+    - material: Functional Coating Chemicals
+      source: Specialty chemical suppliers
+      certified: REACH, BLUESIGN, OEKO-TEX
+
+qc_dashboard:
+  tagline: QC by the Numbers
+  title: Quality Control Metrics
+  subtitle: Real pass/fail data from our production line. Our quality lab operates independently from production and reports directly to management.
+  stats:
+    - value: 100%
+      label: Batches tested before shipping
+      detail: Every batch, every roll, every parameter
+    - value: AQL 2.5
+      label: Major defect threshold
+      detail: Per ISO 2859 sampling standard
+    - value: ΔE ≤ 1.0
+      label: Color tolerance
+      detail: Spectrophotometer-verified against standard
+    - value: UPF 50+
+      label: Minimum UV protection rating
+      detail: Per UV Standard 801 protocol
+    - value: 99%+
+      label: Antibacterial reduction rate
+      detail: Per AATCC 100 test method
+    - value: 0%
+      label: Tolerance on performance defects
+      detail: UPF, waterproofness, tensile, antibacterial
+
+process_cta:
+  title: See our manufacturing process
+  desc: Follow a fabric through every stage of production — from yarn to finished roll.
+  label: View production process →
+  link: /factory/process

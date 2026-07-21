@@ -1,0 +1,30 @@
+hero:
+  tagline: Galerij
+  title: Galerij
+  subtitle: Productfoto's, productievloer en wateravonturen
+
+albums:
+  - title: technische stof-weefsel
+    desc: Aluminium romp technische stof's van 3,3 m tot 7,5 m voor patrouille, prestatie, vissen en gezinsgebruik.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUP-boards
+    desc: functionele stoffen-boards met drop-stitch-technologie voor toeren, surfen, yoga en vissen.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Fabriek en werkplaats
+    desc: Onze productiefaciliteit van 12.000 m² in Qingdao, China.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: Wil je meer zien?
+  desc: Volg ons op social media voor het laatste productnieuws, fabrieksupdates en klantavonturen.
+  instagram: Instagram
+  youtube: YouTube

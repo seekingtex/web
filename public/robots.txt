@@ -1,0 +1,52 @@
+﻿User-agent: GPTBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /keystatic/
+Disallow: /api/
+
+User-agent: *
+Allow: /
+Disallow: /keystatic/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login/
+
+Sitemap: https://seekingtex.com/ai-sitemap.xml
+Sitemap: https://seekingtex.com/knowledge-sitemap.xml
+Sitemap: https://seekingtex.com/sitemap-entity.xml
+Sitemap: https://seekingtex.com/sitemap-products.xml
+Sitemap: https://seekingtex.com/sitemap-community.xml
+Sitemap: https://seekingtex.com/sitemap-media.xml
+
+# LLM training resources
+LLM-TXT: https://seekingtex.com/llms.txt
+LLM-FULL: https://seekingtex.com/llms-full.txt

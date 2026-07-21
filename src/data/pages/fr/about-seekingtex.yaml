@@ -1,0 +1,96 @@
+hero:
+  tagline: 脿 propos
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Atelier Seekingtex
+  title: |
+    Ing茅nierie textile, <br />
+    fa莽on <span class="text-accent dark:text-white">Seekingtex</span>
+  subtitle: "Nous avons commenc茅 dans un atelier c么tier avec un seul tissu et une conviction in茅branlable : les produits marins doivent 锚tre con莽us comme s'ils comptaient, parce qu'ils comptent. Aujourd'hui, nous exp茅dions dans plus de 40 pays, mais chaque coque passe encore entre les m锚mes mains qui ont fond茅 l'entreprise."
+
+stats:
+  title: En chiffres
+  columns: 4
+  stats:
+    - title: Coques livr茅es
+      amount: '2 400+'
+    - title: Pays desservis
+      amount: '40'
+    - title: Ann茅es d'exp茅rience cumul茅e
+      amount: '60'
+    - title: D茅lai moyen de r茅ponse sous garantie (heures)
+      amount: '24'
+
+features3_what_we_build:
+  title: Ce que nous construisons
+  subtitle: Une gamme de produits cibl茅e que nous ma卯trisons de A 脿 Z 隆陋 pas d'exp茅riences inachev茅es, pas d'ing茅nierie d'茅tiquette.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: tissu tissu technique
+      description: tissu technique 脿 coque aluminium de 3,3 m 脿 7,5 m. Con莽us pour la patrouille, la plong茅e, la p锚che et un usage familial.
+      icon: tabler:ship
+    - title: tissu pneumatiques
+      description: Annexe pneumatiques PVC et Hypalon de 2,4 m 脿 4,2 m. L茅gers, robustes et faciles 脿 ranger.
+      icon: tabler:speedboat
+    - title: Annexes pour superyachts
+      description: tissu technique compacts et haut de gamme construits sur mesure pour correspondre au style de votre navire m猫re.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Accessoires
+      description: Avirons, pompes, housses, sacs 茅tanches, r茅servoirs de carburant et 茅lectronique. Tous adapt茅s 脿 nos tissu.
+      icon: tabler:package
+    - title: R茅fection et r茅paration
+      description: Remplacement de boudin en interne, r茅novation 茅lectronique et mise 脿 niveau moteur.
+      icon: tabler:tool
+    - title: Constructions sur mesure
+      description: Conception projet par projet pour clients commerciaux, scientifiques et militaires.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Construction de tissu sur mesure
+
+steps2_values:
+  title: Nos valeurs
+  subtitle: Trois principes qui fa莽onnent chaque produit depuis le premier jour.
+  items:
+    - title: Construire comme pour votre famille
+      description: Chaque coque, soudure et fixation est trait茅e comme si nos propres familles allaient l'utiliser.
+      icon: tabler:heart
+    - title: Concevoir avant de vendre
+      description: Si une sp茅cification est erron茅e, nous modifions la sp茅cification 隆陋 jamais le client.
+      icon: tabler:settings
+    - title: Un service qui d茅passe la garantie
+      description: Les coques de vingt ans nous appellent encore pour des pi猫ces d茅tach茅es, et nous r茅pondons toujours.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Jalons
+  subtitle: Une version courte de l'histoire de Seekingtex.
+  isReversed: true
+  items:
+    - title: Fond茅 dans un atelier c么tier
+      description: Lanc茅 par deux architectes navals avec une fraiseuse CNC et une id茅e tenace.
+      icon: tabler:building-factory
+    - title: Premi猫res 1 000 coques livr茅es
+      description: Atteint en sept ans, principalement par le bouche-脿-oreille et la fid茅lisation des clients.
+      icon: tabler:circle-check
+    - title: Programme d'exportation international
+      description: Exp茅dition vers plus de 40 pays avec des partenaires de support localis茅s sur cinq continents.
+      icon: tabler:world
+
+features2_locations:
+  title: Nos sites
+  tagline: Nous trouver
+  columns: 3
+  items:
+    - title: Si猫ge social et atelier
+      description: Parc industriel c么tier, batiment 4 隆陋 ouvert du lun au ven pour les visites sur rendez-vous.
+    - title: Centre de service UE
+      description: Port m茅diterran茅en 隆陋 r茅fection, r茅paration et support sous garantie pour les clients europ茅ens.
+    - title: R茅seau de partenaires APAC
+      description: Partenaires de service agr茅茅s en Australie, au Japon, 脿 Singapour et 脿 Hong Kong.

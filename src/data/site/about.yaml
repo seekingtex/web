@@ -1,0 +1,42 @@
+origin:
+  tagline: 'Our Origin'
+  heading: "Built on expertise,<br />\n<span class=\"text-sky-600\">driven by innovation</span>"
+  paragraphs:
+    - 'Kunshan Seeking Tex&Tech Co., Ltd started in a textile hub with one mission: performance fabrics should be engineered for real-world demands — because they matter.'
+    - 'Our founders, two textile engineers, saw an industry where quality was inconsistent and innovation was slow. They built the first Seekingtex production line not just for profit, but to prove that functional fabrics could be both high-performance and responsibly made.'
+    - 'That first production line is still running today. That principle never changed.'
+    - 'We are not the biggest textile manufacturer. We do not make the cheapest fabrics. But every yard that leaves our facility passes through the same rigorous standards that first line set.'
+  image: /images/seekingtex/about/textile-lab.webp
+  image_alt: 'Seekingtex textile laboratory'
+
+philosophy:
+  tagline: 'Our Philosophy'
+  heading: 'Rooted in textile science'
+  description: 'Fabric technology is not just our craft — it is our passion. Every textile we develop starts with understanding how it must perform, how it will be worn, and how it can be made sustainably.'
+  cards:
+    - emoji: "🧵"
+      title: 'Performance First'
+      description: 'Fabrics must perform. Whether it is UPF 50+ sun protection, waterproof barriers, or moisture-wicking quick-dry technology, every textile is engineered to meet specific performance benchmarks. If it cannot survive real-world conditions, it does not leave our facility.'
+    - emoji: "♻️"
+      title: 'Built to Last, Made Responsibly'
+      description: 'The most sustainable fabric is the one that lasts. We prioritize recycled polyester, eco-friendly dyes, and low-impact production processes. Our bluesign®-aligned practices ensure that performance and responsibility go hand in hand.'
+    - emoji: "🏭"
+      title: 'Partnership Through Innovation'
+      description: 'Great fabrics come from great collaboration. We work side by side with brands to develop custom textiles — from initial concept and lab dips through to bulk production. Your success is our success.'
+
+design:
+  tagline: 'Fabric Technology'
+  heading: "Engineered for performance<br />\n<span class=\"text-sky-600\">at every fiber</span>"
+  paragraphs:
+    - 'Every Seekingtex fabric starts with one question: <em>what is the toughest condition this will face?</em> We engineer from the extreme inward, not from the average outward.'
+    - 'Our UPF 50+ fabrics are tested under intense UV exposure — not because every garment sees tropical sun, but because UV protection is not a feature to compromise on. Our waterproof breathable laminates are validated to withstand prolonged hydrostatic pressure — because a jacket that leaks is not a technical garment.'
+    - 'We do not engineer to a price point. We engineer to a performance standard — then manufacture consistently above it.'
+  image: /images/seekingtex/about/fabric-testing.webp
+  image_alt: 'Seekingtex fabric testing and quality control'
+  stats:
+    - value: '50+'
+      label: 'UPF rating<br />guaranteed'
+    - value: '10,000+'
+      label: 'hours of fabric<br />testing annually'
+    - value: '5yr'
+      label: 'performance<br />warranty'

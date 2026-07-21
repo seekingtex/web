@@ -1,0 +1,212 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/categories.yaml';
+
+const defaultData: Record<string, { name: string; image: string; gradient: string }> = {
+  OUTDOOR: {
+    name: 'Outdoor & Apparel',
+    image: '/images/seekingtex/categories/Seekingtex-outdoor-category.webp',
+    gradient: 'from-sky-400 to-blue-500',
+  },
+  WORKWEAR: {
+    name: 'Uniform & Workwear',
+    image: '/images/seekingtex/categories/Seekingtex-workwear-category.webp',
+    gradient: 'from-red-400 to-rose-500',
+  },
+  MEDICAL: {
+    name: 'Medical & Healthcare',
+    image: '/images/seekingtex/categories/Seekingtex-medical-category.webp',
+    gradient: 'from-teal-400 to-cyan-500',
+  },
+  INDUSTRIAL: {
+    name: 'Industrial Textiles',
+    image: '/images/seekingtex/categories/Seekingtex-industrial-category.webp',
+    gradient: 'from-violet-400 to-purple-500',
+  },
+};
+
+let data: Record<string, { name: string; image: string; gradient: string }> = { ...defaultData };
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed && typeof parsed === 'object') {
+    for (const key of Object.keys(defaultData)) {
+      if (parsed[key] && typeof parsed[key] === 'object') {
+        data[key] = { ...defaultData[key], ...parsed[key] };
+      }
+    }
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+
+const keys = Object.keys(defaultData);
+---
+
+<AdminLayout title="Category Cards" active="categories" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Product Category Cards</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      Images and gradients for the 6 product category cards on the homepage. File: <code class="font-mono">{file}</code>
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="categories-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    {
+      keys.map((key) => {
+        const entry = data[key] || defaultData[key];
+        return (
+          <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+            <h2 class="text-base font-semibold flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-gradient-to-br {entry.gradient}" />
+              {key}
+            </h2>
+            <input type="hidden" name="{key}.key" value={key} />
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Display Name</label>
+                <input
+                  type="text"
+                  name="{key}.name"
+                  value={entry.name}
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Gradient Class</label>
+                <input
+                  type="text"
+                  name="{key}.gradient"
+                  value={entry.gradient}
+                  placeholder="from-sky-400 to-blue-500"
+                  class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+                />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+              <input
+                type="text"
+                name="{key}.image"
+                value={entry.image}
+                placeholder="/images/seekingtex/categories/..."
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+            {entry.image && (
+              <div class="flex gap-2 items-center">
+                <img
+                  src={entry.image}
+                  alt=""
+                  class="h-16 w-24 rounded object-cover border border-gray-200"
+                  loading="lazy"
+                />
+                <span class="text-xs text-gray-400">Preview</span>
+              </div>
+            )}
+          </div>
+        );
+      })
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('categories-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const keys = ['RIB', 'INFLATABLE', 'SUP', 'ACCESSORY'];
+        const data = {};
+        for (const key of keys) {
+          data[key] = {
+            name: String(fd.get(key + '.name') || '').trim(),
+            image: String(fd.get(key + '.image') || '').trim(),
+            gradient: String(fd.get(key + '.gradient') || '').trim(),
+          };
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ format: 'yaml', path: file, sha, data, commitMessage: 'Update category cards' }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

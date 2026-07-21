@@ -1,0 +1,50 @@
+hero:
+  tagline: Assurance qualité
+  title: Tests de performance & qualité
+  subtitle: Chaque tissu pneumatique et SUP Seekingtex subit des tests rigoureux de performance et de qualité dans notre centre de R&D avant expédition. Nos tests complets fournissent une preuve tangible de l'excellence des produits.
+
+stats:
+  - value: 100%
+    label: Unités testées sous pression
+  - value: '8'
+    label: Protocoles de test
+  - value: 
+    label: Certifié qualité
+  - value: 3-Year
+    label: Garantie limitée
+
+tests:
+  - title: Test de pression
+    description: Les chambres gonflables sont soumises à des pressions dépassant leurs limites de fonctionnement recommandées pendant des périodes prolongées. Cela vérifie l'étanchéité à l'air et l'intégrité structurelle du matériau et des soudures, garantissant que le produit résiste à l'utilisation prévue et à une éventuelle surpression sans défaillance ni fuite.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Test d'impact
+    description: Les produits sont soumis à des impacts contrôlés de différents poids et angles. Cela évalue la résistance du matériau aux perforations, déchirures et dommages causés par les collisions avec des obstacles dans l'eau, démontrant durabilité et longévité.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Test de résistance aux UV
+    description: Les produits finis sont exposés à une lumière solaire simulée pendant des durées prolongées pour évaluer la résistance du matériau à la dégradation, la décoloration et l'affaiblissement causés par une exposition prolongée aux UV —essentiel pour les tissu utilisés dans les environnements tropicaux et très ensoleillés.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Test de résistance à l'abrasion
+    description: Des échantillons de matériau sont frottés contre des surfaces abrasives pendant un nombre défini de cycles sous pression contrôlée. Cela mesure la capacité du matériau à résister à l'usure due à une utilisation répétée, au contact avec le sable, les roches ou autres surfaces, garantissant une durabilité à long terme.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Test de performance à basse température
+    description: Les produits sont testés dans des environnements froids pour évaluer leur fonctionnalité et durabilité dans diverses conditions de température, évitant le durcissement ou la fissuration dans les eaux froides. Essentiel pour les tissu destinés à une utilisation hivernale ou en haute latitude.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Test de flottabilité & capacité de charge
+    description: Les produits sont testés avec différents poids pour déterminer leur capacité de charge maximale et garantir qu'ils supportent en toute sécurité les utilisateurs et l'équipement. La capacité nominale de chaque modèle est vérifiée avant sa commercialisation.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Test de maniabilité
+    description: Les produits sont testés pour leur réactivité aux entrées de textile ou de moteur, évaluant le rayon de braquage et la facilité de manœuvre. Des essais sur l'eau valident que la maniabilité réelle correspond aux spécifications de conception.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Test d'étanchéité
+    description: Les produits entièrement assemblés sont immergés ou soumis à des jets d'eau pour vérifier l'absence de fuites à travers les soudures, valves ou matériaux. Chaque tissu passe un contrôle d'étanchéité obligatoire avant expédition.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Procédures de test
+  title: Tests rigoureux à chaque étape
+
+commitment:
+  title: Notre engagement
+  body: Grâce à ces procédures de test rigoureuses, {SITE} offre à ses clients l'assurance que nos SUPs et tissus fonctionnels sont non seulement performants mais aussi conçus pour durer —garantissant d'innombrables aventures agréables et sécuritaires sur l'eau. Notre laboratoire qualité fonctionne indépendamment de la production et rapporte directement à la direction.
+  cta: Demander la documentation de test
+  cta_link: /contact

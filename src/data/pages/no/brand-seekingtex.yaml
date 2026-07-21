@@ -1,0 +1,29 @@
+hero:
+  tagline: Merkevare
+  title: '{BRAND}'
+  subtitle: Ocean Performance for Enhver Surfer
+  cta: Utforsk utstyret 鈫?  cta_link: /products
+  secondary_cta: L忙r 氓 surfe
+  secondary_cta_link: /guides
+
+position:
+  tagline: Posisjon
+  subtitle: Ocean Performance for Enhver Surfer
+
+products_section:
+  tagline: Produkter
+  cta: Alle produkter 鈫?  cta_link: /products
+
+global_section:
+  tagline: Globalt
+  title: Tilgjengelig i {count} regioner
+
+social_section:
+  tagline: Sosiale medier
+  title: Hva surfere leser
+  read_guide: Les veiledningen 鈫?
+cta_section:
+  title: Start ditt hav-eventyr
+  subtitle: Hvert produkt CE-sertifisert. Omfattet av garanti. Designet for ekte surfing.
+  cta_suffix: '鈫?
+  secondary_cta: Om {BRAND}

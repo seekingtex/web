@@ -1,0 +1,46 @@
+hero:
+  tagline: Kvalitetssikring
+  title: Ydeevne- og kvalitetstestning
+  subtitle: Hver Seekingtex funktionelt\ tekstil og fabric gennemg氓r streng ydeevne- og kvalitetstestning ved vores F&U-center f酶r afsendelse.
+stats:
+  - value: 100%
+    label: Enheder tryktestet
+  - value: '8'
+    label: Testprotokoller
+  - value: 'ISO 9001'
+    label: Kvalitetscertificeret
+  - value: 3 氓r
+    label: Begr忙nset garanti
+tests:
+  - title: Tryktestning
+    description: Oppustelige kamre uds忙ttes for tryk, der overstiger anbefalede driftsgr忙nser i l忙ngere perioder.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: St酶dtestning
+    description: Produkter uds忙ttes for kontrollerede st酶d fra forskellige v忙gte og vinkler.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: UV-modstandstestning
+    description: F忙rdige produkter uds忙ttes for simuleret sollys i l忙ngere perioder.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Slidstyrketestning
+    description: Materialepr酶ver gnides mod slibende overflader i et bestemt antal cyklusser.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Lavtemperaturtestning
+    description: Produkter testes i kolde milj酶er for funktionalitet og holdbarhed.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Opdrifts- og belastningstestning
+    description: Produkter testes med forskellige v忙gte for at bestemme maksimal b忙reevne.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Man酶vredygtighedstestning
+    description: Produkter testes for reaktion p氓 pagaj- eller motorinput.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Vandt忙thedstestning
+    description: Fuldst忙ndigt samlede produkter neds忙nkes eller uds忙ttes for vandspr酶jt for at kontrollere l忙kager.
+    image: /images/seekingtex/factory/producing department2.jpeg
+testing_section:
+  tagline: Testprocedurer
+  title: Grundig testning i alle faser
+commitment:
+  title: Vores forpligtelse
+  body: Gennem disse strenge testprocedurer giver {SITE} kunderne sikkerhed for, at vores funktionelt\ tekstile og fabrics ikke kun er h酶jtydende, men ogs氓 bygget til at holde.
+  cta: Anmod om testdokumentation
+  cta_link: /contact

@@ -1,0 +1,45 @@
+hero:
+  tagline: Lifestyle
+  title: The Seekingtex<br />Approach
+  subtitle: Built for those who demand performance — from sportswear brands to outdoor equipment manufacturers who depend on our fabrics every day.
+
+values:
+  - icon: 🔬
+    title: Engineered for Performance
+    desc: Every fabric starts with understanding how it will be used — sport, outdoor, medical, or tactical. We engineer from application requirements inward, because performance is not optional.
+  - icon: 🔧
+    title: Built to Last
+    desc: The most sustainable fabric is the one that does not need replacing. Superior fiber selection, precision weaving, and durable finishes that outlast industry standards.
+  - icon: '🏆'
+    title: Quality Without Compromise
+    desc: Premium fabrics should not be a luxury reserved for high-end brands. OEKO-TEX certified quality at competitive pricing that makes sense for growing brands and established manufacturers alike.
+  - icon: 🌍
+    title: Global Reach
+    desc: From our facility in Kunshan to garment factories in Southeast Asia, cutting rooms in Europe, and brand headquarters in the Americas — our fabrics travel the globe.
+  - icon: ♻️
+    title: Responsible Manufacturing
+    desc: Recycled polyester options, PFAS-free waterproofing, and energy-efficient production processes. We build sustainably because that is the only responsible choice.
+  - icon: 🤝
+    title: Support That Lasts
+    desc: Five-year-old orders still get technical support. Our team responds within 24 hours. We do not disappear after the shipment — we are here for the life of the product.
+
+ethos_section:
+  tagline: Our Ethos
+  title: More than a fabric. A philosophy.
+  subtitle: Six principles that shape every decision we make — from fiber selection to customer support.
+
+community_section:
+  tagline: Community
+  title: Join the Seekingtex Network
+  subtitle: Follow our journey and connect with textile professionals worldwide.
+  instagram: Follow on Instagram
+  youtube: Subscribe on YouTube
+  x: Follow on X
+
+cta_section:
+  title: Start your fabric sourcing journey
+  subtitle: Every fabric OEKO-TEX certified. SGS tested. Backed by quality guarantee.
+  products_cta: Explore Fabrics →
+  about_cta: About Us
+  products_link: /products
+  about_link: /about

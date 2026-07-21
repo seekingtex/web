@@ -1,0 +1,24 @@
+hero:
+  tagline: Bezpe膷nost
+  title: Bezpe膷nostn铆 normy a certifikace
+  subtitle: Ka啪d媒 produkt Seekingtex proch谩z铆 p艡铆sn媒m testov谩n铆m a spl艌uje mezin谩rodn铆 bezpe膷nostn铆 normy pro rekrea膷n铆 i profesion谩ln铆 pou啪it铆.
+
+certifications:
+  - title: CE certifikace
+  - title: 'ISO 6185'
+  - title: 
+    description: Z谩chrann茅 vesty spl艌uj铆 normy safety performanceu . Safety Fabric Classic poskytuje safety performance 50N+; Safety Fabric Pro spl艌uje po啪adavky SOLAS s automatick媒m nafukov谩n铆m.
+  - title: SOLAS shoda
+    description: Safety Fabric Pro je v souladu s p艡edpisy SOLAS (Safety of Life at Sea) pro pob艡e啪n铆 a komer膷n铆 n谩mo艡n铆 operace.
+
+related:
+  title: Souvisej铆c铆
+  links:
+    - text: Pr暖vodce bezpe膷nostn铆mi tipy
+      url: /guides/safety-tips
+    - text: Technologie
+      url: /technology
+    - text: V拧echny produkty
+      url: /products
+    - text: Pr暖vodci
+      url: /guides

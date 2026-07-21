@@ -1,0 +1,50 @@
+hero:
+  tagline: Garantía de calidad
+  title: Pruebas de rendimiento y calidad
+  subtitle: Cada bote funcional y tejido funcional de Seekingtex se somete a rigurosas pruebas de rendimiento y calidad en nuestro Centro de I+D antes de enviarse. Nuestras pruebas exhaustivas proporcionan una prueba tangible de la excelencia del producto.
+
+stats:
+  - value: 100%
+    label: Unidades sometidas a prueba de presión
+  - value: '8'
+    label: Protocolos de prueba
+  - value: 
+    label: Calidad certificada
+  - value: 3 años
+    label: Garantía limitada
+
+tests:
+  - title: Prueba de presión
+    description: Las cámaras inflables se someten a presiones que superan sus límites de funcionamiento recomendados durante períodos prolongados. Esto verifica la hermeticidad y la integridad estructural del material y las costuras, garantizando que el producto pueda soportar el uso previsto y una posible sobrepresión sin fallos ni fugas.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Prueba de impacto
+    description: Los productos se someten a impactos controlados desde diversos pesos y ángulos. Esto evalúa la resistencia del material a pinchazos, desgarros y daños por colisiones con obstáculos en el agua, demostrando durabilidad y longevidad.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: Prueba de resistencia a los rayos UV
+    description: Los productos finales se exponen a luz solar simulada durante períodos prolongados para evaluar la resistencia del material a la degradación, la decoloración y el debilitamiento causados por la exposición prolongada a los rayos UV, algo crítico para los botes usados en entornos tropicales y de alta radiación solar.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Prueba de resistencia a la abrasión
+    description: Las muestras de material se frotan contra superficies abrasivas durante un número específico de ciclos bajo presión controlada. Esto mide la capacidad del material para soportar el desgaste por el uso repetido, el contacto con arena, rocas u otras superficies, garantizando una durabilidad a largo plazo.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Prueba de rendimiento a bajas temperaturas
+    description: Los productos se prueban en entornos fríos para evaluar la funcionalidad y durabilidad en diversas condiciones de temperatura, evitando la rigidez o el agrietamiento en aguas más frías. Esencial para los botes destinados al uso invernal o en altas latitudes.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Prueba de flotabilidad y capacidad de carga
+    description: Los productos se prueban con diversos pesos para determinar su capacidad máxima de carga y garantizar que soporten de forma segura a los usuarios y el equipo. La capacidad nominal de cada modelo se verifica antes de su lanzamiento.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Prueba de maniobrabilidad
+    description: Los productos se prueban por su capacidad de respuesta a la remada o a las entradas del motor, evaluando el radio de giro y la facilidad de manejo. Las pruebas en el agua validan que el manejo en el mundo real coincida con las especificaciones de diseño.
+    image: /images/seekingtex/factory/tejido funcional making.jpeg
+  - title: Prueba de estanqueidad
+    description: Los productos totalmente ensamblados se sumergen o se someten a rociado de agua para comprobar si hay fugas a través de costuras, válvulas o materiales. Cada bote pasa una comprobación de estanqueidad obligatoria antes del envío.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Procedimientos de prueba
+  title: Pruebas rigurosas en cada etapa
+
+commitment:
+  title: Nuestro compromiso
+  body: A través de estos rigurosos procedimientos de prueba, {SITE} ofrece a los clientes la garantía de que nuestros tejido funcional y botes inflables no solo son de alto rendimiento, sino que también están construidos para durar, asegurando incontables aventuras placenteras y seguras en el agua. Nuestro laboratorio de calidad opera de forma independiente de la producción y reporta directamente a la dirección.
+  cta: Solicitar documentación de pruebas
+  cta_link: /contact

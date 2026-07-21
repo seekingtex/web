@@ -1,0 +1,134 @@
+hero:
+  tagline: Contact
+  title: Contacteaz膬 Seekingtex
+  subtitle: Suntem aici s膬 te ajut膬m. Contacteaz膬-ne pentru 卯ntreb膬ri despre produse, parteneriate OEM/ODM sau orice altceva.
+  image: /images/seekingtex/hero/contact-banner.webp
+  imageAlt: Contacteaz膬 Seekingtex
+
+contact_form:
+  id: form
+  title: Trimite葲i-ne un mesaj
+  subtitle: Pentru oferte, 卯ntreb膬ri tehnice sau solicit膬ri de parteneriat, scrie葲i-ne. R膬spundem 卯ntr-o zi lucr膬toare.
+  email_to: gzb@seekingtex.com
+  submit_button: Trimite solicitarea 鈫?Ob葲ine o ofert膬
+  success_message: Mul葲umim! Mesajul dvs. a ajuns 卯n c膬su葲a noastr膬 po葯tal膬. Vom r膬spunde 卯ntr-o zi lucr膬toare.
+  error_message: Ceva a mers gre葯it la trimiterea mesajului. 脦ncerca葲i din nou sau trimite葲i-ne un e-mail direct.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: rezolva葲i urm膬toarea cerin葲膬'
+  fields:
+    - name: firstName
+      label: Prenume
+      row: 1
+    - name: lastName
+      label: Nume
+      row: 1
+    - name: companyName
+      label: Numele companiei
+      row: 2
+    - name: address
+      label: Adres膬
+      row: 3
+    - name: zip
+      label: Cod po葯tal
+      row: 4
+    - name: country
+      label: 葰ar膬
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Volum estimat al comenzii
+      row: 6
+      type: select
+      options:
+        - value: 'Suport clien葲i'
+          label: Selecta葲i volumul estimat...
+        - value: sample
+          label: Doar mostre / prototipuri
+        - value: '5-10'
+          label: 50鈥?00 unit膬葲i (MOQ standard)
+        - value: '100-500'
+          label: 100鈥?00 unit膬葲i
+        - value: '500-plus'
+          label: 500+ unit膬葲i (pre葲uri volumetrice)
+    - name: customization
+      label: Ave葲i nevoie de personalizare?
+      row: 7
+      type: select
+      options:
+        - value: 'Asisten葲膬 tehnic膬'
+          label: Selecta葲i tipul de personalizare...
+        - value: none
+          label: Produs standard (f膬r膬 personalizare)
+        - value: logo
+          label: Doar logo / branding personalizat
+        - value: full
+          label: OEM complet (dimensiune, culoare, grafic膬, ambalaj)
+        - value: consultation
+          label: Nu sunt sigur 鈥?am nevoie de consultan葲膬
+    - name: productInterest
+      label: Categorii de produse de interes
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: Subiect
+      row: 9
+    - name: message
+      label: Mesaj
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Alte modalit膬葲i de a ne contacta
+  columns: 3
+  items:
+    - title: 脦ntreb膬ri despre v芒nz膬ri
+      description: Oferte, configura葲ii, cereri de distribuitor 葯i comenzi 卯n vrac.
+      icon: tabler:shopping-bag
+    - title: Suport tehnic
+      description: Garan葲ie, repara葲ii, piese de schimb 葯i 卯ntreb膬ri de operare.
+      icon: tabler:tool
+    - title: Pres膬 葯i parteneriate
+      description: Kituri media, sponsoriz膬ri 葯i colaborare industrial膬.
+      icon: tabler:news
+    - title: Telefon
+      description: +86 13305324192
+      icon: tabler:headset
+    - title: E-mail
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: Sediu central
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: Loca葲ia noastr膬
+  subtitle: Vizita葲i-ne la sediul central
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

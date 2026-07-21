@@ -1,0 +1,83 @@
+hero:
+  tagline: 'Comunitate'
+  title: 'Comunitatea Seekingtex'
+  subtitle: |
+    Oameni reali, apă reală, aventuri reale. De la vâslașii de weekend la<br />
+    operatorii profesioniști —descoperiți cum comunitatea noastră explorează lumea pe apă.
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Seekingtex community paddling on calm waters'
+
+stats:
+  title: 'Comunitatea în cifre'
+  stats:
+    - title: '40+'
+      description: 'Țări cu clienți Seekingtex'
+    - title: '12+'
+      description: 'Ani de aventuri comunitare'
+    - title: '10.000+'
+      description: 'Vâslași fericiți la nivel global'
+    - title: '98%'
+      description: 'Ar recomanda Seekingtex'
+
+stories:
+  tagline: 'Povești ale Exploratorilor'
+  title: 'Aventuri reale de la oameni reali'
+  subtitle: 'Ascultați poveștile vâslașilor, familiilor și profesioniștilor care folosesc echipamente Seekingtex pe apă.'
+  items:
+    - name: 'Sarah & Mike'
+      title: 'Proprietari SUP Explorer 11, Canada'
+      content: 'Ne-am luat Explorer 11-urile într-o excursie de o săptămână prin Parcul Algonquin. Au gestionat portajele și traversările lacurilor superb. Construcția drop-stitch a însemnat că am putut umfla la 15 PSI și obține performanță de placă rigidă dintr-o placă portabilă.'
+      image: '/images/seekingtex/products/Seekingtex-sup-allround-board.webp'
+      location: 'Parcul Algonquin, Canada'
+    - name: 'Carlos R.'
+      title: 'Călăreț Cheetah Surge, Spania'
+      content: 'Cheetah Surge este alegerea mea pentru croaziere de coastă. Designul vibrant atrage atenția pe plajă, iar stabilitatea îmi dă încredere în valuri ușoare. Se manevrează superb, fie că sunt în tur sau doar mă bucur de apus.'
+      image: '/images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp'
+      location: 'Costa Brava, Spania'
+    - name: 'Lina și familia'
+      title: 'Vâslași Flowing Lotus, Suedia'
+      content: 'Aventuri de familie în weekend în arhipelag. Flowing Lotus este suficient de stabil încât fiica mea să stea în picioare pe el în timp ce eu vâslesc. Se umflă în mai puțin de 10 minute — fără remorcă, doar distracție pură de familie pe apă.'
+      image: '/images/seekingtex/products/sup-series/sup-flowing-lotus-1.webp'
+      location: 'Arhipelagul Stockholm, Suedia'
+    - name: 'Lt. Cmdr. Andres'
+      title: 'Explorator Ocean Voyager, Filipine'
+      content: 'Folosesc Ocean Voyager-ul meu pentru tururi de coastă pe distanțe lungi în jurul Palawanului. După luni de utilizare zilnică în condiții tropicale, placa încă funcționează ca nouă. Forma de touring taie valurile care ar opri plăci mai puțin performante.'
+      image: '/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp'
+      location: 'Palawan, Filipine'
+    - name: 'Emma T.'
+      title: 'Începătoare Tropical Breeze, Australia'
+      content: 'Nu fusesem niciodată pe un SUP înainte. Tropical Breeze este atât de stabil încât m-am simțit încrezătoare din prima încercare. Acum vâslesc în fiecare weekend. Curba de învățare este practic zero — și placa arată uimitor pe apă.'
+      image: '/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp'
+      location: 'Gold Coast, Australia'
+
+adventures_cta:
+  tagline: 'Împărtășește-ți aventura'
+  title: 'Povestea ta ar putea fi aici'
+  subtitle: 'Etichetați @seekingtex_watersports pe Instagram sau folosiți #SeekingtexAdventure pentru șansa de a fi prezentat.'
+  instagram: 'Urmărește pe Instagram'
+  youtube: 'Abonează-te pe YouTube'
+  facebook: 'Alătură-te pe Facebook'
+
+locations:
+  tagline: 'Comunitate Globală'
+  title: 'Unde călătorește Seekingtex'
+  subtitle: 'De la lacurile europene la coastele Asiei de Sud-Est —comunitatea noastră vâslește peste tot.'
+  regions:
+    - title: 'Europa'
+      description: 'Lacul Como · Arhipelagul Stockholm · Costa Brava · Coasta Croației · Loch-urile Scoțiene'
+    - title: 'Asia Pacific'
+      description: 'Palawan · Gold Coast · Golful Ha Long · Lacul Yamanaka · Coasta Bali'
+    - title: 'Americi'
+      description: 'Parcul Algonquin · Marile Lacuri · Florida Keys · Lacul Tahoe · Patagonia'
+    - title: 'Orientul Mijlociu și Africa'
+      description: 'Coasta Mării Roșii · Lacul Victoria · Peninsula Capului · Marea Galileii'
+
+cta:
+  title: 'Gata să te alături comunității?'
+  subtitle: 'Fiecare produs Seekingtex este certificat CE, acoperit de garanție și proiectat pentru aventuri reale. Găsește-l pe al tău astăzi.'
+  actions:
+    - variant: primary
+      text: 'Explorează produse'
+      href: '/products'
+    - text: 'Împărtășește povestea ta'
+      href: '/contact'

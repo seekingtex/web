@@ -1,0 +1,22 @@
+hero:
+  tagline: กระบวนการผลิต
+  title: กระบวนการผลิตของเรา
+  subtitle: จากวัตถุดิบถึงสินค้าสำเร็จ — ทุกขั้นตอนควบคุมคุณภาพ
+  image: /images/seekingtex/factory/process-banner.webp
+  imageAlt: กระบวนการผลิต Seekingtex
+steps:
+  - title: ตัด
+    description: เครื่อง CNC ตัดผ้าอัตโนมัติตามข้อกำหนด
+    icon: tabler:scissors
+  - title: เชื่อม
+    description: การเชื่อม RF และลมร้อนสร้างรอยต่อที่แข็งแรงและกันอากาศ
+    icon: tabler:flame
+  - title: ประกอบ
+    description: ช่างเทคนิคมีฝีมือติดตั้งวาล์ว อุปกรณ์เสริม และฟิตติ้ง
+    icon: tabler:tool
+  - title: ทดสอบ
+    description: สินค้าทุกชิ้นผ่านการทดสอบแรงดัน การลอยตัว และการตรวจสอบ
+    icon: tabler:clipboard-check
+  - title: บรรจุ
+    description: สินค้าถูกบรรจุอย่างระมัดระวังและเตรียมพร้อมจัดส่ง
+    icon: tabler:package

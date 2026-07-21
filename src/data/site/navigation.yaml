@@ -1,0 +1,135 @@
+header:
+  topBar: []
+  links:
+    - text: Products
+      links:
+        - text: Sun Protection Fabrics
+          href: /sun-protection-fabric
+        - text: Waterproof Fabrics
+          href: /waterproof-fabric
+        - text: Quick-Dry Fabrics
+          href: /quick-dry-fabric
+        - text: Antibacterial Fabrics
+          href: /antibacterial-fabric
+        - text: Stretch Fabrics
+          href: /stretch-fabric
+        - text: Breathable Fabrics
+          href: /breathable-fabric
+        - text: Eco-Friendly Fabrics
+          href: /eco-friendly-fabric
+        - text: All Products
+          href: /products
+    - text: Applications
+      links:
+        - text: Sportswear
+          href: /applications/sportswear
+        - text: Outdoor Apparel
+          href: /applications/outdoor-apparel
+        - text: Tactical & Workwear
+          href: /applications/tactical-workwear
+        - text: Fashion & Casual
+          href: /applications/fashion-casual
+    - text: Technology
+      links:
+        - text: Technology Overview
+          href: /technology
+        - text: R&D Center
+          href: /randdcenter
+        - text: Quality & Testing
+          href: /quality
+        - text: Materials Science
+          href: /learn/materials
+    - text: Company
+      links:
+        - text: About Us
+          href: /about
+        - text: Factory
+          href: /factory
+        - text: Quality & Testing
+          href: /quality
+        - text: News
+          href: /news
+        - text: Contact
+          href: /contact
+    - text: Support
+      links:
+        - text: Contact
+          href: /contact
+        - text: FAQ
+          href: /faq
+        - text: OEM/ODM
+          href: /oem-odm-manufacturer
+  actions:
+    - text: Request a Quote
+      href: /contact
+      variant: primary
+footer:
+  links:
+    - title: Products
+      links:
+        - text: Sun Protection Fabrics
+          href: /sun-protection-fabric
+        - text: Waterproof Fabrics
+          href: /waterproof-fabric
+        - text: Quick-Dry Fabrics
+          href: /quick-dry-fabric
+        - text: Antibacterial Fabrics
+          href: /antibacterial-fabric
+        - text: Stretch Fabrics
+          href: /stretch-fabric
+        - text: Breathable Fabrics
+          href: /breathable-fabric
+        - text: Eco-Friendly Fabrics
+          href: /eco-friendly-fabric
+        - text: All Products
+          href: /products
+    - title: Applications
+      links:
+        - text: Sportswear
+          href: /applications/sportswear
+        - text: Outdoor Apparel
+          href: /applications/outdoor-apparel
+        - text: Tactical & Workwear
+          href: /applications/tactical-workwear
+        - text: Fashion & Casual
+          href: /applications/fashion-casual
+    - title: Technology
+      links:
+        - text: Technology Overview
+          href: /technology
+        - text: R&D Center
+          href: /randdcenter
+        - text: Quality & Testing
+          href: /quality
+        - text: Materials Science
+          href: /learn/materials
+    - title: Company
+      links:
+        - text: About Us
+          href: /about
+        - text: Factory
+          href: /factory
+        - text: News
+          href: /news
+        - text: Contact
+          href: /contact
+    - title: Support
+      links:
+        - text: Contact
+          href: /contact
+        - text: FAQ
+          href: /faq
+        - text: OEM/ODM
+          href: /oem-odm-manufacturer
+  secondaryLinks:
+    - text: Terms
+      href: /terms
+    - text: Privacy Policy
+      href: /privacy
+  socialLinks:
+    - text: LinkedIn
+      href: https://www.linkedin.com/company/seekingtex
+    - text: X
+      href: https://x.com/seekingtex
+    - text: RSS
+      href: /rss.xml

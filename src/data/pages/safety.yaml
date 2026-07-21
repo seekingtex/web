@@ -1,0 +1,24 @@
+hero:
+  tagline: Safety
+  title: Safety Standards & Certification
+  subtitle: Every Seekingtex fabric undergoes rigorous testing and meets international safety and compliance standards for apparel, healthcare, and industrial use.
+
+certifications:
+  - title: OEKO-TEX Standard 100
+    description: All Seekingtex fabrics are OEKO-TEX Standard 100 certified, ensuring they are free from harmful substances and safe for direct skin contact.
+  - title: REACH Compliance
+    description: Our manufacturing processes comply with EU REACH regulations, restricting the use of hazardous chemicals in textile production.
+  - title: ISO 9001:2015
+    description: Seekingtex operates under ISO 9001:2015 certified quality management systems, ensuring consistent product quality and safety across all production lines.
+
+related:
+  title: Related
+  links:
+    - text: Certifications Guide
+      url: /guides/certifications
+    - text: Technology
+      url: /technology
+    - text: All Products
+      url: /products
+    - text: Guides
+      url: /guides

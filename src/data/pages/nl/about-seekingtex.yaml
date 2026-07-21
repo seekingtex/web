@@ -1,0 +1,96 @@
+hero:
+  tagline: Over het bedrijf
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex werkplaats
+  title: |
+    Scheepsbouwkunde <br />
+    in <span class="text-accent dark:text-white">Seekingtex</span>-stijl
+  subtitle: 'We begonnen in een kustwerkplaats met 茅茅n boot en een onwrikbaar geloof: maritieme producten moeten ontworpen zijn alsof er levens van afhangen 鈥?want dat is zo. Vandaag leveren we aan 40+ landen, maar elke romp gaat nog steeds door dezelfde handen die het bedrijf hebben opgericht.'
+
+stats:
+  title: In cijfers
+  columns: 4
+  stats:
+    - title: Geleverde rompen
+      amount: '2,400+'
+    - title: Leveringslanden
+      amount: '40'
+    - title: Totale ervaring (jaren)
+      amount: '60'
+    - title: Gemiddelde reactietijd (uur)
+      amount: '24'
+
+features3_what_we_build:
+  title: Wat we bouwen
+  subtitle: Een gefocuste productlijn die we door en door kennen 鈥?geen half werk of badge-engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: technische stof-weefsel
+      description: Aluminium romp technische stof's van 3,3 m tot 7,5 m. Ontworpen voor patrouille, prestatie, vissen en gezinsgebruik.
+      icon: tabler:ship
+    - title: functionele stoffen
+      description: PVC- en Hypalon functionele stoffen van 2,4 m tot 4,2 m. Licht, duurzaam en gemakkelijk op te bergen.
+      icon: tabler:speedboat
+    - title: Superjacht tender
+      description: Compacte technische stof's met hoge specificaties, op maat gemaakt voor het moederschip.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Accessoires
+      description: Vesten, pompen, hoezen, waterdichte tassen, brandstoftanks en elektronica. Allemaal compatibel met onze weefsel.
+      icon: tabler:package
+    - title: Aanpassingen en reparaties
+      description: Reparatie van luchtkamers, elektronica-upgrades en motorvervangingen.
+      icon: tabler:tool
+    - title: Producten op maat
+      description: Ontwerpen voor commerci毛le, wetenschappelijke en militaire klanten.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Boot op maat
+
+steps2_values:
+  title: Onze waarden
+  subtitle: Drie principes die elk product vanaf dag 茅茅n vormgeven.
+  items:
+    - title: Bouw alsof je eigen gezin in de boot zit
+      description: Elke romp, elke las en elk onderdeel wordt behandeld alsof het door onze eigen families gebruikt gaat worden.
+      icon: tabler:heart
+    - title: Techniek v贸贸r verkoop
+      description: Als de specificatie fout is, passen we de specificatie aan 鈥?nooit de klant.
+      icon: tabler:settings
+    - title: Ondersteuning na de garantie
+      description: Twintig jaar oude rompen bellen nog steeds voor onderdelen 鈥?en we nemen nog steeds op.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Mijlpalen
+  subtitle: Een korte versie van de geschiedenis van Seekingtex.
+  isReversed: true
+  items:
+    - title: Opgericht in een kustwerkplaats
+      description: Twee scheepsbouwkundigen met 茅茅n CNC-frees en een onwrikbaar idee.
+      icon: tabler:building-factory
+    - title: Eerste 1.000 geleverde rompen
+      description: Bereikt in het zevende jaar, vooral dankzij mond-tot-mondreclame en vaste klanten.
+      icon: tabler:circle-check
+    - title: Internationaal exportprogramma
+      description: Leveringen aan 40+ landen met lokale servicepartners op vijf continenten.
+      icon: tabler:world
+
+features2_locations:
+  title: Onze locaties
+  tagline: Waar ons te vinden
+  columns: 3
+  items:
+    - title: Hoofdkantoor en werkplaats
+      description: Kustindustriepark, gebouw 4 鈥?open ma-vr voor bezoek op afspraak.
+    - title: EU-servicecentrum
+      description: Middellandse Zeehaven 鈥?aanpassingen, reparaties en garantieservice voor Europese klanten.
+    - title: APAC-partnernetwerk
+      description: Geautoriseerde servicepartners in Australi毛, Japan, Singapore en Hongkong.

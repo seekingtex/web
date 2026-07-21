@@ -1,0 +1,136 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import { guides } from '~/data/guides';
+
+export function getStaticPaths() {
+  const slugs = [
+    'fabrics',
+    'textile-manufacturing',
+    'quality-standards',
+    'materials',
+  ];
+  const paths: Array<{ params: { lang: string; slug: string } }> = [];
+  for (const lang of Object.keys(languages)) {
+    for (const slug of slugs) {
+      paths.push({ params: { lang, slug } });
+    }
+  }
+  return paths;
+}
+
+const { lang, slug } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const LEARN_PAGES: Record<string, { title: string; description: string; articles: Array<{ title: string; desc: string; href: string }> }> = {
+  fabrics: {
+    title: 'Performance Fabric Knowledge — Functional Textile Guides | Seekingtex',
+    description:
+      'Everything about performance fabrics — UPF protection, waterproofness, breathability, antimicrobial properties, stretch, and sustainability.',
+    articles: [
+      { title: "Fabric Performance Basics", desc: 'Fiber types, fabric constructions, finishes, and how they affect performance characteristics.', href: '/learn/fabrics' },
+      { title: 'UPF & Sun Protection Guide', desc: 'How UPF ratings work, what UPF 50+ means, and how fabric construction affects sun protection.', href: '/size-guide' },
+      { title: 'Waterproof & Breathable Fabrics', desc: 'How coatings and membranes achieve waterproofness while allowing moisture vapor to escape.', href: '/learn/fabrics' },
+      { title: 'Synthetic vs Natural Fibers', desc: 'Performance, comfort, sustainability, and cost compared side by side.', href: '/learn/materials' },
+      { title: 'Fabric Safety & Chemical Guide', desc: 'Chemical safety in textiles — PFC-free DWR, OEKO-TEX, and safe manufacturing practices.', href: '/learn/quality-standards' },
+      { title: 'Sustainable Textile Essentials', desc: 'Recycled fibers, organic materials, closed-loop production, and environmental certifications.', href: '/learn/materials' },
+    ],
+  },
+  'textile-manufacturing': {
+    title: 'Textile Manufacturing Knowledge — Fabric Construction & Technology | Seekingtex',
+    description:
+      'Deep dive into textile manufacturing technology. Learn about woven, knitted, and non-woven fabric construction, coating and lamination processes, and quality standards.',
+    articles: [
+      { title: 'Materials Reference', desc: 'Polyester, nylon, cotton, and specialized fibers — understand what your fabrics are made of.', href: '/learn/materials' },
+      { title: 'Woven vs Knit vs Non-Woven', desc: 'The definitive comparison of the three primary fabric construction types — properties, applications, and selection criteria.', href: '/learn/materials' },
+      { title: 'Fabric Construction Explained', desc: 'How woven, knitted, and non-woven fabrics are constructed — from yarn preparation to finishing.', href: '/learn/textile-manufacturing' },
+      { title: 'Coating & Lamination Technology', desc: 'How PU coatings, TPU laminates, and ePTFE membranes create waterproof and breathable fabric finishes.', href: '/learn/materials' },
+      { title: 'Dyeing & Finishing Guide', desc: 'Everything about fabric dyeing methods, printing techniques, and finishing processes for performance textiles.', href: '/learn/textile-manufacturing' },
+      { title: 'Quality Testing Standards', desc: 'UPF testing, waterproofness, tensile strength, color fastness, and abrasion — the quality process for functional fabrics.', href: '/learn/quality-standards' },
+    ],
+  },
+  'quality-standards': {
+    title: 'Quality Standards & Textile Safety — Certifications & Compliance | Seekingtex',
+    description:
+      'Comprehensive quality standards resources for textile manufacturing. Learn about OEKO-TEX, UPF testing, waterproofness ratings, flame retardancy, and REACH compliance.',
+    articles: [
+      { title: 'Textile Quality Standards Guide', desc: 'Essential quality knowledge for every textile buyer — OEKO-TEX, UPF testing, hydrostatic head, and more.', href: '/learn/quality-standards' },
+      { title: 'OEKO-TEX Certification Guide', desc: 'What OEKO-TEX Standard 100 means for fabric safety, the testing process, and why it matters for consumer products.', href: '/learn/quality-standards' },
+      { title: 'UPF Testing & Standards', desc: 'How UPF is tested, UV STANDARD 801 vs AS/NZS 4399, and what ratings mean for sun-protective fabrics.', href: '/learn/fabrics' },
+      { title: 'Waterproofness Testing', desc: 'Hydrostatic head testing (AATCC 127, ISO 811), spray test (AATCC 22), and rain test (AATCC 35) explained.', href: '/learn/fabrics' },
+      { title: 'Flame Retardancy Standards', desc: 'NFPA 70E, EN 11612, ASTM D6413 — understanding FR testing and certification for protective textiles.', href: '/learn/quality-standards' },
+      { title: 'REACH & Environmental Compliance', desc: 'What REACH, Bluesign, and GRS certifications mean for textile manufacturing and supply chain responsibility.', href: '/learn/quality-standards' },
+    ],
+  },
+  materials: {
+    title: 'Textile Materials Science — Polyester, Nylon, Cotton & Specialized Fibers',
+    description:
+      'Comprehensive guide to materials used in textile manufacturing: polyester, nylon 6.6, cotton, performance fibers, coatings, and quality testing.',
+    articles: [],
+  },
+};
+
+const page = LEARN_PAGES[slug];
+const pageTitle = t('learn.' + slug + '.title') || page.title;
+const pageDesc = t('learn.' + slug + '.description') || page.description;
+const lArticles = (page.articles || []).map((a) => ({
+  ...a,
+  href: a.href.startsWith('/guides/') ? `/${lang}${a.href}` : a.href.startsWith('/learn/') ? `/${lang}${a.href}` : a.href.startsWith('/') && !a.href.startsWith('//') ? `/${lang}${a.href}` : a.href,
+}));
+
+const metadata = {
+  title: pageTitle,
+  description: pageDesc,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: 'Home', href: `/${lang}` },
+      { name: t('nav.learn') || 'Learn', href: `/${lang}/knowledge` },
+      { name: pageTitle },
+    ]}
+  />
+
+  <section class="max-w-5xl mx-auto px-6 pt-24 pb-4" data-ai-block="definition">
+    <h1 class="text-4xl font-semibold text-gray-900 dark:text-slate-100">{pageTitle}</h1>
+    <p class="mt-4 text-lg text-gray-500 dark:text-slate-400 max-w-3xl">{pageDesc}</p>
+
+    {
+      lArticles.length > 0 && (
+        <div class="mt-16 grid md:grid-cols-2 gap-6">
+          {lArticles.map((a) => (
+            <a href={a.href} class="group block p-6 rounded-2xl border border-gray-200 dark:border-slate-700 hover:shadow-lg hover:border-sky-300 dark:hover:border-sky-600 transition-all">
+              <h2 class="font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">{a.title}</h2>
+              <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{a.desc}</p>
+              <span class="mt-3 inline-block text-sm font-medium text-sky-600">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="max-w-5xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <a href={`/${lang}/technology`} class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition">
+        <span class="font-medium text-sky-600">{t('nav.technology') || 'Technology'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">Textile engineering and material testing</p>
+      </a>
+      <a href={`/${lang}/products`} class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition">
+        <span class="font-medium text-sky-600">{t('product.pageTitle') || 'Products'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">Explore the full Seekingtex product catalog</p>
+      </a>
+      <a href={`/${lang}/trust`} class="block p-4 rounded-xl border border-gray-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-600 transition">
+        <span class="font-medium text-sky-600">{t('nav.trust') || 'Trust'}</span>
+        <p class="mt-1 text-gray-500 dark:text-slate-400">OEKO-TEX, ISO and BSCI compliance</p>
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,50 @@
+hero:
+  tagline: '품질 보증'
+  title: '성능 및 품질 테스트'
+  subtitle: '모든 Seekingtex 기능성 원단와 SUP는 출하 전 R&D 센터에서 엄격한 성능 및 품질 테스트를 거칩니다.'
+
+stats:
+  - value: 100%
+    label: 압력 테스트 완료
+  - value: '8'
+    label: 테스트 프로토콜
+  - value: ISO 9001
+    label: 품질 인증
+  - value: 3년
+    label: 제한 보증
+
+tests:
+  - title: 압력 테스트
+    description: 기능성 챔버는 권장 작동 한계를 초과하는 압력에 장시간 노출되어 재료와 솔기의 기밀성과 구조적 무결성을 검증합니다.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: 충격 테스트
+    description: 제품은 다양한 중량과 각도에서 통제된 충격을 받아 재료의 천공, 파열 및 손상 저항성을 평가합니다.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: UV 저항성 테스트
+    description: 완제품을 장시간 시뮬레이션된 햇빛에 노출시켜 자외선 노출로 인한 재료 저하 및 변색에 대한 저항성을 평가합니다.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: 마모 저항성 테스트
+    description: 재료 샘플을 지정된 횟수만큼 통제된 압력으로 연마 표면에 문질러 내마모성을 측정합니다.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: 저온 성능 테스트
+    description: 제품을 저온 환경에서 테스트하여 다양한 온도 조건에서의 기능성과 내구성을 평가합니다.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: 부력 및 부하 용량 테스트
+    description: 다양한 중량으로 제품을 테스트하여 최대 하중 지지 용량을 결정하고 모든 모델의 정격 용량을 출시 전에 검증합니다.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: 기동성 테스트
+    description: 섬유 기술 또는 모터 입력에 대한 제품의 반응성을 테스트하고 선회 반경과 조작 용이성을 평가합니다.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: 수밀성 테스트
+    description: 완전 조립된 제품을 물에 잠기거나 물 분사하여 솔기, 밸브 또는 재료를 통한 누수를 확인합니다.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: 테스트 절차
+  title: 모든 단계에서의 엄격한 테스트
+
+commitment:
+  title: 당사의 약속
+  body: 이러한 엄격한 테스트 절차를 통해 {SITE}는 고객에게 당사의 기능성 SUP와 원단가 뛰어난 성능을 발휘할 뿐만 아니라 오래도록 제작되었음을 보장합니다. 당사의 품질 연구소는 생산과 독립적으로 운영되며 경영진에 직접 보고합니다.
+  cta: 테스트 문서 요청
+  cta_link: /contact

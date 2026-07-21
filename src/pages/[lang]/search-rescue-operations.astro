@@ -1,0 +1,114 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || '';
+
+const metadata = {
+  title: `${t('searchRescue.title') || 'Medical & Healthcare Textiles — Functional Fabrics for Healthcare'} | ${SITE.name}`,
+  description: t('searchRescue.desc') || `${SITE.name} functional fabrics engineered for medical and healthcare applications. Advanced materials, antimicrobial properties, superior comfort, and certified design for healthcare professionals worldwide.`,
+};
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: t('searchRescue.nav') || 'Medical & Healthcare Textiles' },
+];
+
+const sections = [
+  { title: t('searchRescue.s1') || 'Advanced Fabrics for Healthcare Applications', content: t('searchRescue.s1desc') || 'The foundation of any reliable medical textile lies in the quality of its construction materials. Seekingtex utilizes advanced polyester, cotton blends, and cutting-edge functional fabrics — each chosen for optimal performance in healthcare environments. Our fabrics offer superior antimicrobial protection, fluid resistance, and durability, ensuring your medical textiles perform flawlessly.' },
+  { title: t('searchRescue.s2') || 'Design Principles for Optimal Healthcare Performance', content: t('searchRescue.s2desc') || 'Every Seekingtex medical fabric features advanced weave designs for breathability and superior multi-layer protection systems. Our fabric designs prioritize comfort, durability, and washability critical for healthcare environments.' },
+  { title: t('searchRescue.s3') || 'Specialized Finishes & Treatments', content: t('searchRescue.s3desc') || 'Seekingtex fabrics are engineered as adaptable platforms for diverse medical applications. Features include antimicrobial finish compatibility, fluid-repellent coatings, anti-static treatments, ergonomic stretch properties, and high-visibility options for maximum safety.' },
+  { title: t('searchRescue.s4') || 'Uncompromising Production Process', content: t('searchRescue.s4desc') || 'Our manufacturing employs advanced weaving, precision coating, and quality-controlled finishing in climate-controlled environments. Every fabric roll undergoes comprehensive inspection, GSM verification, color fastness testing, and dimensional checks before shipping.' },
+];
+
+const features = [
+  { label: t('searchRescue.f1') || 'Antimicrobial Protection', desc: t('searchRescue.f1desc') || 'Inhibits bacterial growth for hygiene' },
+  { label: t('searchRescue.f2') || 'Fluid Repellent', desc: t('searchRescue.f2desc') || 'Liquid barrier protection' },
+  { label: t('searchRescue.f3') || 'Breathable Construction', desc: t('searchRescue.f3desc') || 'Moisture vapor transmission' },
+  { label: t('searchRescue.f4') || 'Reinforced Seams', desc: t('searchRescue.f4desc') || 'Heavy-duty thread construction' },
+  { label: t('searchRescue.f5') || 'Washable Durability', desc: t('searchRescue.f5desc') || 'Engineered for industrial laundering' },
+  { label: t('searchRescue.f6') || 'ISO Certified Testing', desc: t('searchRescue.f6desc') || 'Every batch tested before shipping' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">{t('searchRescue.badge') || 'Healthcare Textiles'}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{t('searchRescue.heading') || 'Medical & Healthcare Textiles'}</h1>
+    <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
+      {t('searchRescue.subtitle') || 'Seekingtex functional fabrics are engineered for the uncompromising demands of healthcare. With no margin for error, our textiles deliver unwavering reliability, superior performance, and absolute safety in the most demanding medical environments.'}
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {features.map((f) => (
+        <div class="text-center p-4 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+          <span class="block text-sm font-bold text-primary">{f.label}</span>
+          <span class="block text-xs text-muted mt-1">{f.desc}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {sections.map((s, i) => (
+    <section class={`px-6 sm:px-6 py-16 mx-auto max-w-4xl ${i % 2 === 0 ? 'bg-gray-50 dark:bg-gray-900' : ''}`}>
+      <div class={i % 2 === 0 ? 'max-w-4xl mx-auto' : ''}>
+        <h2 class="text-2xl font-bold">{s.title}</h2>
+        <p class="mt-4 text-muted leading-relaxed">{s.content}</p>
+      </div>
+    </section>
+  ))}
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+    <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
+      <h2 class="text-2xl font-bold text-center">{t('searchRescue.ctaTitle') || 'Built for Healthcare Professionals'}</h2>
+      <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
+        {t('searchRescue.ctaSub') || 'Choosing Seekingtex is an investment in confidence — confidence in your fabric integrity, its operational excellence, and its capacity to perform flawlessly when patient care is on the line. Our textiles are trusted partners in the healthcare industry.'}
+      </p>
+      <div class="text-center mt-8">
+        <a href={`/${lang}/contact`} class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+          {t('searchRescue.cta') || 'Request medical textile specifications'} →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ExperienceLayer
+    title={t('searchRescue.expTitle') || 'How Our Fabrics Perform in Healthcare'}
+    subtitle={t('searchRescue.expSub') || 'First-hand accounts from healthcare professionals who rely on Seekingtex fabrics in medical environments.'}
+    stories={[
+      {
+        quote: "We switched to Seekingtex for our hospital scrubs — the fabric durability after 100+ washes is remarkable. No pilling, no fading, and the antimicrobial properties held up perfectly.",
+        narrative: "During a hospital uniform upgrade, a major healthcare network tested Seekingtex fabrics for their 5000+ staff. The fabrics maintained color fastness, structural integrity, and antimicrobial efficacy after industrial laundering.",
+        context: "Hospital uniform program, North America, 2024",
+        source: "Healthcare Procurement Director"
+      },
+      {
+        quote: "What sets Seekingtex apart is the fabric quality. After 12 months of daily use in our surgical unit, the scrubs still look and feel like new.",
+        narrative: "A hospital system running daily laundry cycles put Seekingtex medical fabrics through 18 months of continuous service. Inspection showed no seam separation, no color degradation, and less than 2% shrinkage.",
+        context: "Hospital linen program, Europe, 2023-2025",
+        source: "Facilities Operations Manager"
+      },
+    ]}
+  />
+  <RelatedPages
+    title={t('searchRescue.relatedTitle') || 'Related Resources'}
+    subtitle={t('searchRescue.relatedSub') || 'Explore more about Seekingtex medical textile capabilities and manufacturing'}
+    links={[
+      { title: t('searchRescue.rel1') || 'Disaster Relief & Humanitarian Aid', description: t('searchRescue.rel1desc') || 'Functional fabrics designed for emergency response and humanitarian medical missions.', href: `/${lang}/disaster-relief-humanitarian-aid`, label: 'Use Case' },
+      { title: t('searchRescue.rel2') || 'Industrial Textiles', description: t('searchRescue.rel2desc') || 'Durable technical fabrics for daily commercial textile operations.', href: `/${lang}/commercial-workboats`, label: 'Product' },
+      { title: t('searchRescue.rel3') || 'Engineering Perfection', description: t('searchRescue.rel3desc') || 'Our engineering philosophy — precision manufacturing and rigorous quality control.', href: `/${lang}/engineering-perfection`, label: 'Philosophy' },
+      { title: t('searchRescue.rel4') || 'Solutions by Industry', description: t('searchRescue.rel4desc') || 'Find the right functional fabric for your industry sector.', href: `/${lang}/solutions/by-industry`, label: 'Overview' },
+    ]}
+  />
+</Layout>

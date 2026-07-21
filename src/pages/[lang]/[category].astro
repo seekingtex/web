@@ -1,0 +1,145 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
+import { SITE } from 'astrowind:config';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+import { defaultLang, ui } from '~/i18n/config';
+import { getLocalizedProducts } from '~/utils/product-i18n';
+import productVisualsData from '~/data/site/product-visuals.yaml';
+import { urlSlugToCategory, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import type { MetaData } from '~/types';
+
+const { lang = defaultLang, category: urlSlug } = Astro.params;
+const activeCategory = urlSlugToCategory(urlSlug || '');
+
+if (!activeCategory) {
+  return Astro.redirect('/' + lang + '/404');
+}
+
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const categoryKey = (cat: string) =>
+  ({ SUN_PROTECTION: 'sun-protection', WATERPROOF: 'waterproof', QUICK_DRY: 'quick-dry', ANTIBACTERIAL: 'antibacterial', STRETCH: 'stretch', BREATHABLE: 'breathable', ECO_FRIENDLY: 'eco-friendly' })[
+    cat
+  ] || cat.toLowerCase();
+
+const localizedProducts = getLocalizedProducts(lang!);
+const filteredProducts = localizedProducts.filter((p) => p.category.toLowerCase() === activeCategory);
+
+const defaultVisuals: Record<string, string> = {
+  'sun-polyester-upf50': '/images/seekingtex/products/sun-protection-polyester.webp',
+  'sun-nylon-upf50': '/images/seekingtex/products/sun-protection-nylon.webp',
+  'sun-cotton-synth-blend': '/images/seekingtex/products/sun-protection-cotton-blend.webp',
+  'wp-pu-coated': '/images/seekingtex/products/waterproof-pu-coated.webp',
+  'wp-tpu-laminate': '/images/seekingtex/products/waterproof-tpu-laminate.webp',
+  'wp-pvc-coated': '/images/seekingtex/products/waterproof-pvc-coated.webp',
+  'qd-moisture-wicking-poly': '/images/seekingtex/products/quick-dry-moisture-wicking.webp',
+  'ab-silver-ion': '/images/seekingtex/products/antibacterial-silver-ion.webp',
+};
+const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
+const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
+const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
+
+const categories = [...new Set(localizedProducts.map((p) => p.category))];
+
+const metadata: MetaData = {
+  title: `${urlSlug} — ${SITE.name}`,
+  description: `Browse ${SITE.name} ${urlSlug} products.`,
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('product.catalog')}</span>
+      <h1 class="mt-4 text-4xl font-semibold text-gray-900 capitalize">{SITE.name} {urlSlug}</h1>
+      <p class="mt-4 text-lg text-gray-500">Premium {urlSlug} — {t('product.pageDesc')}</p>
+    </div>
+
+    {
+      categories.length > 0 && (
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+          <a
+            href={`/${lang}/products`}
+            class:list={[
+              'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors',
+              'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
+            ]}
+          >
+            All ({localizedProducts.length})
+          </a>
+          {categories.map((cat) => {
+            const catUrl = CATEGORY_SLUG_TO_URL[cat.toLowerCase()];
+            return (
+              <a
+                href={`/${lang}/${catUrl}`}
+                class:list={[
+                  'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold border transition-colors',
+                  activeCategory === cat.toLowerCase()
+                    ? 'bg-gray-900 text-white border-gray-900'
+                    : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
+                ]}
+              >
+                {t('home.category.' + categoryKey(cat)) || cat}
+                ({localizedProducts.filter((p) => p.category === cat).length})
+              </a>
+            );
+          })}
+        </div>
+      )
+    }
+
+    {
+      filteredProducts.length === 0 ? (
+        <div class="text-center py-16 text-gray-400">
+          <p class="text-lg">{t('product.noResults') || 'No products in this category.'}</p>
+          <a href={`/${lang}/products`} class="text-sky-600 hover:underline mt-2 inline-block">{t('product.viewAll') || 'View all products'}</a>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProducts.map((p) => (
+            <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+              <a
+                href={`/${lang}/products/${p.id}`}
+                class="block aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group"
+              >
+                {productVisuals[p.id] ? (
+                  <img
+                    src={productVisuals[p.id]}
+                    alt={p.name}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="flex items-center justify-center h-full text-gray-400 text-sm">
+                    {t('home.category.' + categoryKey(p.category)) || p.category}
+                  </div>
+                )}
+              </a>
+              <div class="p-6">
+                <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
+                <p class="text-gray-500 mt-2 text-sm">{p.desc}</p>
+                <div class="mt-4 space-y-2">
+                  <a
+                    href={`/${lang}/contact?product=${encodeURIComponent(p.name)}`}
+                    class="block text-center px-4 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    Request Factory Quote
+                  </a>
+                  <a
+                    href={`/${lang}/contact?product=${encodeURIComponent(p.name)}&custom=1`}
+                    class="block text-center px-4 py-2 border border-primary text-primary text-sm font-medium rounded-lg hover:bg-primary/5 transition-colors"
+                  >
+                    Get OEM/ODM Details
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+          </div>
+        )
+    }
+  </section>
+</Layout>

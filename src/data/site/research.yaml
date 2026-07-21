@@ -1,0 +1,19 @@
+badge: Latest Research
+heading: Knowledge Center
+description: In-depth technical research on functional fabrics, textile technologies, certifications, and manufacturing
+topics:
+  - slug: upf-uv-protection-technology
+    category: UPF/UV Protection Technology
+    readTime: 8 min read
+  - slug: waterproof-breathable-technology
+    category: Waterproof & Breathable Technology
+    readTime: 10 min read
+  - slug: textile-certifications-guide
+    category: Compliance & Certifications
+    readTime: 7 min read
+  - slug: fabric-weight-thickness-guide
+    category: Fabric Engineering
+    readTime: 6 min read
+  - slug: fabric-oem-odm-buyer-guide
+    category: Sourcing Guide
+    readTime: 12 min read

@@ -1,0 +1,151 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Fabric Weight & Thickness Guide — Comprehensive Reference | ${SITE.name}`,
+  description: `Technical guide to fabric weight (GSM) and thickness: how fabric weight relates to durability, drape, opacity, and performance. GSM recommendations for shirts, pants, jackets, sportswear, workwear, and outdoor apparel.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Fabric Weight & Thickness Guide — Comprehensive Reference',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-04-12',
+  dateModified: '2025-06-01',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Fabric Weight & Thickness Guide</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Technical Reference</span>
+      <span class="ml-3 text-sm text-gray-400">6 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Fabric Weight & Thickness Guide</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      Fabric weight and thickness directly affect drape, durability, opacity, breathability, and end-use suitability. This guide explains the trade-offs so you can choose the right GSM for your garment or application.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Understanding Fabric Weight (GSM)</h2>
+      <p>
+        Fabric weight is measured in grams per square meter (GSM). It is the single most important specification for determining a fabric's end use. Higher GSM fabrics are heavier, thicker, more durable, and less drapeable. Lower GSM fabrics are lighter, thinner, more breathable, and more fluid.
+      </p>
+
+      <h3>Lightweight (Under 150 GSM) <span class="text-gray-800 font-semibold">–</span> Shirts & Base Layers</h3>
+      <ul>
+        <li><strong>Durability:</strong> Lowest <span class="text-gray-800 font-semibold">–</span> thinner fibers, more prone to wear</li>
+        <li><strong>Drape:</strong> Most fluid <span class="text-gray-800 font-semibold">–</span> excellent for soft, flowing garments</li>
+        <li><strong>Opacity:</strong> May require lining <span class="text-gray-800 font-semibold">–</span> check coverage in stretch</li>
+        <li><strong>Breathability:</strong> Highest <span class="text-gray-800 font-semibold">–</span> ideal for hot-weather wear</li>
+        <li><strong>Best for:</strong> Base layers, summer shirts, blouses, activewear linings, scarves</li>
+      </ul>
+
+      <h3>Medium Weight (150 <span class="text-gray-800 font-semibold">–</span> 250 GSM) <span class="text-gray-800 font-semibold">–</span> All-Purpose Apparel</h3>
+      <ul>
+        <li><strong>Durability:</strong> Good <span class="text-gray-800 font-semibold">–</span> balanced strength-to-weight ratio</li>
+        <li><strong>Drape:</strong> Moderate <span class="text-gray-800 font-semibold">–</span> holds shape while allowing movement</li>
+        <li><strong>Opacity:</strong> Good <span class="text-gray-800 font-semibold">–</span> generally opaque without lining</li>
+        <li><strong>Breathability:</strong> Moderate <span class="text-gray-800 font-semibold">–</span> suitable for three-season wear</li>
+        <li><strong>Best for:</strong> T-shirts, polo shirts, dress shirts, light jackets, casual pants, leggings</li>
+      </ul>
+
+      <h3>Heavyweight (250 <span class="text-gray-800 font-semibold">–</span> 350 GSM) <span class="text-gray-800 font-semibold">–</span> Outerwear & Workwear</h3>
+      <ul>
+        <li><strong>Durability:</strong> High <span class="text-gray-800 font-semibold">–</span> substantial fabric with good tear resistance</li>
+        <li><strong>Drape:</strong> Stiff <span class="text-gray-800 font-semibold">–</span> holds structure well, limited fluidity</li>
+        <li><strong>Opacity:</strong> Excellent <span class="text-gray-800 font-semibold">–</span> fully opaque, suitable for unlined garments</li>
+        <li><strong>Breathability:</strong> Lower <span class="text-gray-800 font-semibold">–</span> appropriate for cool-weather wear</li>
+        <li><strong>Best for:</strong> Hoodies, sweatpants, work shirts, cargo pants, light jackets, soft shells</li>
+      </ul>
+
+      <h3>Ultra-Heavyweight (350+ GSM) <span class="text-gray-800 font-semibold">–</span> Industrial & Heavy-Duty</h3>
+      <ul>
+        <li><strong>Durability:</strong> Highest <span class="text-gray-800 font-semibold">–</span> maximum tear and abrasion resistance</li>
+        <li><strong>Drape:</strong> Minimal <span class="text-gray-800 font-semibold">–</span> very stiff, used where structure matters more than drape</li>
+        <li><strong>Opacity:</strong> Complete <span class="text-gray-800 font-semibold">–</span> no light penetration</li>
+        <li><strong>Breathability:</strong> Lowest <span class="text-gray-800 font-semibold">–</span> designed for protection, not ventilation</li>
+        <li><strong>Best for:</strong> Tactical vests, winter coats, upholstery, heavy workwear, protective gear</li>
+      </ul>
+
+      <h2>Fabric Thickness: A Separate but Related Property</h2>
+      <p>
+        While weight (GSM) and thickness are correlated, they are not the same. A fabric can be lightweight but thick (e.g., fleece) or heavyweight but thin (e.g., dense woven nylon). Thickness is measured in millimeters and affects:
+      </p>
+      <ul>
+        <li><strong>Insulation value</strong> <span class="text-gray-800 font-semibold">–</span> thicker fabrics trap more air for warmth</li>
+        <li><strong>Compressibility</strong> <span class="text-gray-800 font-semibold">–</span> thinner fabrics pack smaller for travel</li>
+        <li><strong>Hand feel</strong> <span class="text-gray-800 font-semibold">–</span> thickness contributes to perceived quality</li>
+        <li><strong>Opacity</strong> <span class="text-gray-800 font-semibold">–</span> thicker fabrics are generally more opaque</li>
+      </ul>
+
+      <h2>GSM by Garment Type</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Garment Type</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Recommended GSM</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Reasoning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border">Performance Base Layer</td><td class="p-3 border">80 <span class="text-gray-800 font-semibold">–</span> 120</td><td class="p-3 border">Maximum breathability, moisture wicking, light weight</td></tr>
+          <tr><td class="p-3 border">Summer T-Shirt</td><td class="p-3 border">120 <span class="text-gray-800 font-semibold">–</span> 160</td><td class="p-3 border">Breathable with sufficient opacity for casual wear</td></tr>
+          <tr><td class="p-3 border">Polo / Sport Shirt</td><td class="p-3 border">180 <span class="text-gray-800 font-semibold">–</span> 220</td><td class="p-3 border">Collar structure, durability through repeated washing</td></tr>
+          <tr><td class="p-3 border">Leggings / Yoga Pants</td><td class="p-3 border">180 <span class="text-gray-800 font-semibold">–</span> 240</td><td class="p-3 border">Opaque in stretch, good recovery, moderate weight</td></tr>
+          <tr><td class="p-3 border">Casual Trousers</td><td class="p-3 border">220 <span class="text-gray-800 font-semibold">–</span> 280</td><td class="p-3 border">Drape, durability, and opacity for everyday wear</td></tr>
+          <tr><td class="p-3 border">Light Jacket / Shell</td><td class="p-3 border">250 <span class="text-gray-800 font-semibold">–</span> 350</td><td class="p-3 border">Weather protection, durability, structure</td></tr>
+          <tr><td class="p-3 border">Work / Duty Shirt</td><td class="p-3 border">200 <span class="text-gray-800 font-semibold">–</span> 280</td><td class="p-3 border">Durability with comfort for extended wear</td></tr>
+          <tr><td class="p-3 border">Tactical / Field Uniform</td><td class="p-3 border">250 <span class="text-gray-800 font-semibold">–</span> 350</td><td class="p-3 border">Maximum tear resistance, abrasion protection</td></tr>
+          <tr><td class="p-3 border">Winter Coat / Parka</td><td class="p-3 border">300 <span class="text-gray-800 font-semibold">–</span> 400+</td><td class="p-3 border">Insulation, wind resistance, structural integrity</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Weight vs. Performance Trade-offs</h2>
+      <p>
+        A common misconception is that heavier always means better. However, fabric performance depends on the specific requirements of the end use:
+      </p>
+      <ul>
+        <li><strong>Moisture Wicking:</strong> Lighter fabrics (80-150 GSM) wick moisture faster due to lower fiber mass. Heavier fabrics hold more moisture and dry slower.</li>
+        <li><strong>UPF Rating:</strong> Heavier, denser fabrics naturally provide higher UV protection. A 200 GSM polyester knit may achieve UPF 50+ while a 120 GSM version of the same construction may only reach UPF 30.</li>
+        <li><strong>Durability:</strong> Within the same construction, heavier fabrics are more abrasion resistant and tear resistant. However, construction quality (ripstop, yarn type) matters more than weight alone.</li>
+        <li><strong>Stretch Recovery:</strong> Heavier stretch fabrics have more mass to return to shape, often providing better recovery than lightweight stretch fabrics with the same spandex content.</li>
+      </ul>
+
+      <h2>Seekingtex Fabric Range</h2>
+      <p>
+        Seekingtex offers fabrics across all weight categories:
+      </p>
+      <ul>
+        <li><strong>Ultra-Light (60-120 GSM):</strong> Performance base layers, summer activewear, cooling fabrics</li>
+        <li><strong>Lightweight (120-180 GSM):</strong> Quick-dry shirts, UPF 50+ summer wear, running singlets</li>
+        <li><strong>Mid-Weight (180-250 GSM):</strong> All-purpose sportswear, polo shirts, casual wear, leggings</li>
+        <li><strong>Heavyweight (250-350 GSM):</strong> Tactical uniforms, workwear, hoodies, soft shells</li>
+        <li><strong>Ultra-Heavy (350+ GSM):</strong> Winter outerwear, industrial workwear, protective gear</li>
+      </ul>
+      <p>
+        All Seekingtex fabrics are available with custom GSM specifications. Contact our technical team for guidance on selecting the optimal weight for your application.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

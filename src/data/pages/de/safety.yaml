@@ -1,0 +1,24 @@
+hero:
+  tagline: Sicherheit
+  title: Sicherheitsstandards und Zertifizierung
+  subtitle: Jedes Seekingtex-Produkt wird strengen Tests unterzogen und erf眉llt internationale Sicherheitsstandards f眉r Freizeit- und Berufsgebrauch.
+
+certifications:
+  - title: CE-Zertifizierung
+    description: Alle Seekingtex-Sicherheitsausr眉stungen entsprechen den CE-Kennzeichnungsanforderungen der Europ盲ischen Verordnung 眉ber pers枚nliche Schutzausr眉stung (EU) 2016/425.
+  - title: ISO 12402
+    description: safety fabricn erf眉llen die -safety standardsstandards. Die Safety Fabric Classic bietet 50N+ safety standard; die Safety Fabric Pro erf眉llt SOLAS-Anforderungen mit automatischer Aufblasung.
+  - title: SOLAS-Konformit盲t
+    description: Die Safety Fabric Pro entspricht den SOLAS-Vorschriften (Sicherheit des Lebens auf See) f眉r Offshore- und gewerbliche Schifffahrtseins盲tze.
+
+related:
+  title: Verwandte Themen
+  links:
+    - text: Sicherheitstipps
+      url: /guides/safety-tips
+    - text: Technologie
+      url: /technology
+    - text: Alle Produkte
+      url: /products
+    - text: Ratgeber
+      url: /guides

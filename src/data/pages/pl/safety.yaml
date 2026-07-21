@@ -1,0 +1,24 @@
+hero:
+  tagline: Bezpiecze艅stwo
+  title: Standardy bezpiecze艅stwa i certyfikacja
+  subtitle: Ka偶dy produkt Seekingtex przechodzi rygorystyczne testy i spe艂nia mi臋dzynarodowe standardy bezpiecze艅stwa dla u偶ytku rekreacyjnego i profesjonalnego.
+
+certifications:
+  - title: Certyfikacja CE
+    description: Ca艂y sprz臋t bezpiecze艅stwa Seekingtex spe艂nia wymogi oznakowania CE zgodnie z Europejskim Rozporz膮dzeniem w sprawie 艢rodk贸w Ochrony Indywidualnej (UE) 2016/425.
+  - title: Certyfikacja ISO 12402
+    description: Kamizelki ratunkowe spe艂niaj膮 normy wyporno艣ci . Safety Fabric Classic zapewnia wyporno艣膰 50N+; Safety Fabric Pro spe艂nia wymogi SOLAS z automatycznym nadmuchiwaniem.
+  - title: Zgodno艣膰 z SOLAS
+    description: Safety Fabric Pro jest zgodny z przepisami SOLAS (Bezpiecze艅stwo 偶ycia na morzu) dla operacji morskich offshore i komercyjnych.
+
+related:
+  title: Powi膮zane
+  links:
+    - text: Poradnik bezpiecze艅stwa
+      url: /guides/safety-tips
+    - text: Technologia
+      url: /technology
+    - text: Wszystkie produkty
+      url: /products
+    - text: Przewodniki
+      url: /guides

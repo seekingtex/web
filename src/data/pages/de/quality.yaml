@@ -1,0 +1,50 @@
+hero:
+  tagline: Qualitätssicherung
+  title: Leistungs- & Qualitätstests
+  subtitle: Jedes Seekingtex Funktionsgewebe und SUP durchläuft vor dem Versand strenge Leistungs- und Qualitätstests in unserem Forschungs- und Entwicklungszentrum. Unsere umfassenden Tests liefern den greifbaren Nachweis für Produktexzellenz.
+
+stats:
+  - value: 100%
+    label: Einheiten druckgeprüft
+  - value: '8'
+    label: Testprotokolle
+  - value: ISO 9001
+    label: Qualitätszertifiziert
+  - value: 3-Year
+    label: Eingeschränkte Garantie
+
+tests:
+  - title: Druckprüfung
+    description: funktionale Kammern werden über längere Zeiträume Drücken ausgesetzt, die über den empfohlenen Betriebsgrenzen liegen. Dies überprüft die Luftdichtheit und strukturelle Integrität des Materials und der Nähte und stellt sicher, dass das Produkt dem vorgesehenen Gebrauch und möglicher Überdruck standhält, ohne zu versagen oder undicht zu werden.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Aufprallprüfung
+    description: Produkte werden kontrollierten Stößen mit verschiedenen Gewichten und Winkeln ausgesetzt. Dies bewertet die Widerstandsfähigkeit des Materials gegen Durchstiche, Risse und Schäden durch Kollisionen mit Hindernissen im Wasser und demonstriert Haltbarkeit und Langlebigkeit.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: UV-Beständigkeitsprüfung
+    description: Endprodukte werden über längere Zeiträume simuliertem Sonnenlicht ausgesetzt, um die Beständigkeit des Materials gegen Abbau, Ausbleichen und Schwächung durch längere UV-Einstrahlung zu bewerten —kritisch für Gewebe, die in tropischen und sonnenreichen Umgebungen eingesetzt werden.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Abriebfestigkeitsprüfung
+    description: Materialproben werden unter kontrolliertem Druck für eine bestimmte Anzahl von Zyklen gegen abrasive Oberflächen gerieben. Dies misst die Fähigkeit des Materials, Verschleiß durch wiederholten Gebrauch, Kontakt mit Sand, Steinen oder anderen Oberflächen zu widerstehen und gewährleistet langfristige Haltbarkeit.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Tieftemperaturprüfung
+    description: Produkte werden in kalten Umgebungen getestet, um Funktionalität und Haltbarkeit unter verschiedenen Temperaturbedingungen zu bewerten und Sprödigkeit oder Rissbildung in kälteren Gewässern zu verhindern. Unverzichtbar für Gewebe, die für den Winter- oder Hochbreiteneinsatz bestimmt sind.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Auftriebs- & Lastkapazitätsprüfung
+    description: Produkte werden mit verschiedenen Gewichten getestet, um ihre maximale Tragfähigkeit zu bestimmen und sicherzustellen, dass sie Benutzer und Ausrüstung sicher tragen. Die Nennkapazität jedes Modells wird vor der Freigabe überprüft.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Manövrierfähigkeitsprüfung
+    description: Produkte werden auf ihr Ansprechverhalten auf Textil- oder Motoreingaben getestet, wobei der Wenderadius und die Handhabungsfreundlichkeit bewertet werden. Erprobungen auf dem Wasser bestätigen, dass das tatsächliche Fahrverhalten den Konstruktionsspezifikationen entspricht.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Wasserdichtigkeitsprüfung
+    description: Vollständig montierte Produkte werden eingetaucht oder Wasserstrahlen ausgesetzt, um Undichtigkeiten an Nähten, Ventilen oder Materialien zu prüfen. Jedes Gewebe durchläuft vor dem Versand eine obligatorische Wasserdichtigkeitskontrolle.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Testverfahren
+  title: Strenge Tests in jeder Phase
+
+commitment:
+  title: Unser Versprechen
+  body: Durch diese strengen Testverfahren bietet {SITE} unseren Kunden die Gewissheit, dass unsere aufblasbaren SUPs und Gewebe nicht nur leistungsstark, sondern auch für Langlebigkeit gebaut sind —für unzählige angenehme und sichere Abenteuer auf dem Wasser. Unser Qualitätslabor arbeitet unabhängig von der Produktion und berichtet direkt an die Geschäftsleitung.
+  cta: Testunterlagen anfordern
+  cta_link: /contact

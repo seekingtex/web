@@ -1,0 +1,80 @@
+hero:
+  tagline: Custom Fabric Development
+  title: Develop Your<br />Custom Fabric
+  subtitle: OEM, ODM, and custom fabric development services for apparel and textile brands worldwide. From sample yardage to full production runs.
+  cta: Start your project
+  footer_link: /contact
+
+steps_section:
+  tagline: How it works
+  title: From specification to shipment
+  subtitle: Five steps from your fabric requirements to a finished, certified product.
+  steps:
+    - num: '01'
+      title: Define Your Spec
+      desc: Tell us your fabric requirements — composition, weight, width, finish, performance properties, and target certifications.
+    - num: '02'
+      title: Develop Sample
+      desc: Our R&D team develops sample yardage matching your specifications. Fast turnaround with revisions included.
+    - num: '03'
+      title: Approve & Test
+      desc: Approve the sample and review test reports for UPF rating, waterproofness, tensile strength, and other properties.
+    - num: '04'
+      title: Production & Delivery
+      desc: Once approved, your order enters our production line. Bulk lead times from 25-35 days.
+
+services_section:
+  tagline: Services
+  title: Fabric development services for global brands
+  subtitle: Flexible engagement models — from contract manufacturing to full-service textile development.
+  items:
+    - title: OEM Manufacturing
+      desc: We produce your fabric designs to spec — your composition, your finishes, your quality standards. Full NDA protection.
+      icon: ⚙️
+    - title: ODM Solutions
+      desc: Choose from our proven base fabrics and customise composition, weight, width, finish, colour, and performance properties.
+      icon: '🎨'
+    - title: Private Label
+      desc: Your brand on our fabrics — custom labeling, hang tags, technical data sheets. Retail-ready documentation.
+      icon: 🏷️
+    - title: Custom R&D
+      desc: Full custom fabric development from concept — unique blends, specialty finishes, proprietary performance properties.
+      icon: ✨
+
+capabilities_section:
+  tagline: Capabilities
+  title: Production & customisation capabilities
+  subtitle: Everything you need to know before placing your order.
+  capabilities:
+    - label: Order volume
+      value: MOQ 1,000 meters per color per specification; lower for trial/sample orders
+    - label: Lead time
+      value: 25–35 days standard; 3–5 days for samples; 7–10 days for custom development
+    - label: Customisation
+      value: Composition, weight, width, color, finish, performance properties, packaging
+    - label: Materials
+      value: Polyester, nylon, recycled polyester, cotton blends, specialty fibers
+    - label: Finishes
+      value: UV protection, waterproof coating, moisture wicking, antibacterial, anti-pilling
+    - label: Certification
+      value: OEKO-TEX, REACH, BLUESIGN, GRS, UV Standard 801
+
+why_section:
+  tagline: Why Seekingtex
+  title: One mill. One standard. Zero compromises.
+  points:
+    - text: Advanced textile manufacturing facility in Kunshan
+      highlight: Kunshan facility
+    - text: Experienced textile engineers and technicians
+      highlight: Experienced team
+    - text: 50+ million meters of fabric delivered globally
+      highlight: 50M+ meters
+    - text: OEKO-TEX Standard 100 certified quality
+      highlight: OEKO-TEX
+    - text: REACH & BLUESIGN compliant production
+      highlight: REACH & BLUESIGN
+  cta: View factory details
+  cta_link: /factory
+  contact:
+    title: Ready to discuss your project?
+    desc: Our team responds within 24 hours with a preliminary quote.

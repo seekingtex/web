@@ -1,0 +1,134 @@
+hero:
+  tagline: 喔曕复喔斷笗喙堗腑
+  title: 喔曕复喔斷笗喙堗腑 Seekingtex
+  subtitle: 喙€喔｀覆喔涪喔灌箞喔椸傅喙堗笝喔掂箞喙€喔炧阜喙堗腑喔娻箞喔о涪喔勦父喔?喔曕复喔斷笗喙堗腑喙€喔｀覆喙€喔佮傅喙堗涪喔о竵喔编笟喔勦赋喔栢覆喔∴釜喔脆笝喔勦箟喔?喔炧副喔權笜喔∴复喔曕福 OEM/ODM 喔福喔粪腑喙€喔｀阜喙堗腑喔囙腑喔粪箞喔?喙?
+  image: /images/seekingtex/hero/contact-banner.webp
+  imageAlt: 喔曕复喔斷笗喙堗腑 Seekingtex
+
+contact_form:
+  id: form
+  title: 喔箞喔囙競喙夃腑喔勦抚喔侧浮喔栢付喔囙箑喔｀覆
+  subtitle: 喔赋喔福喔编笟喙冟笟喙€喔笝喔福喔侧竸喔?喔勦赋喔栢覆喔∴笚喔侧竾喙€喔椸竸喔權复喔?喔福喔粪腑喔腑喔氞笘喔侧浮喔勦抚喔侧浮喔｀箞喔о浮喔∴阜喔?喔佮福喔膏笓喔侧釜喙堗竾喔傕箟喔竸喔о覆喔∴笘喔多竾喙€喔｀覆 喙€喔｀覆喔堗赴喔曕腑喔氞竵喔ム副喔氞笭喔侧涪喙冟笝喔笝喔多箞喔囙抚喔编笝喔椸赋喔佮覆喔?
+  email_to: gzb@seekingtex.com
+  submit_button: 喔箞喔囙竸喔赤笘喔侧浮 鈫?喔傕腑喙冟笟喙€喔笝喔福喔侧竸喔?
+  success_message: 喔傕腑喔氞竸喔膏笓! 喔傕箟喔竸喔о覆喔∴競喔竾喔勦父喔撪笘喔多竾喔佮弗喙堗腑喔囙笀喔斷斧喔∴覆喔⑧競喔竾喙€喔｀覆喙佮弗喙夃抚 喙€喔｀覆喔堗赴喔曕腑喔氞竵喔ム副喔氞笭喔侧涪喙冟笝喔笝喔多箞喔囙抚喔编笝喔椸赋喔佮覆喔?
+  error_message: 喙€喔佮复喔斷競喙夃腑喔溹复喔斷笧喔ム覆喔斷箖喔權竵喔侧福喔箞喔囙競喙夃腑喔勦抚喔侧浮喔傕腑喔囙竸喔膏笓 喔佮福喔膏笓喔侧弗喔竾喔傅喔佮竸喔｀副喙夃竾喔福喔粪腑喔箞喔囙腑喔掂箑喔∴弗喔栢付喔囙箑喔｀覆喙傕笖喔⑧笗喔｀竾
+  default_country_code: '+1'
+  captcha:
+    label: '喔涏箟喔竾喔佮副喔權釜喙佮笡喔? 喔佮福喔膏笓喔侧箒喔佮箟喔涏副喔嵿斧喔侧笗喙堗腑喙勦笡喔權傅喙?
+  fields:
+    - name: firstName
+      label: 喔娻阜喙堗腑
+      row: 1
+    - name: lastName
+      label: 喔權覆喔∴釜喔佮父喔?
+      row: 1
+    - name: companyName
+      label: 喔娻阜喙堗腑喔氞福喔脆俯喔编笚
+      row: 2
+    - name: address
+      label: 喔椸傅喙堗腑喔⑧腹喙?
+      row: 3
+    - name: zip
+      label: 喔｀斧喔编釜喙勦笡喔｀俯喔撪傅喔⑧箤
+      row: 4
+    - name: country
+      label: 喔涏福喔班箑喔椸辅
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: 喔傅喙€喔∴弗
+      row: 5
+      type: email
+    - name: tel
+      label: 喙傕笚喔｀辅喔编笧喔椸箤
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: 喔涏福喔脆浮喔侧笓喔佮覆喔｀釜喔编箞喔囙笅喔粪箟喔箓喔斷涪喔涏福喔班浮喔侧笓
+      row: 6
+      type: select
+      options:
+        - value: '喔澿箞喔侧涪喔氞福喔脆竵喔侧福喔ム腹喔佮竸喙夃覆'
+          label: 喙€喔ム阜喔竵喔涏福喔脆浮喔侧笓喙傕笖喔⑧笡喔｀赴喔∴覆喔?..
+        - value: sample
+          label: 喙€喔夃笧喔侧赴喔曕副喔о腑喔⑧箞喔侧竾 / 喔曕箟喔權箒喔氞笟
+        - value: '5-10'
+          label: 50鈥?00 喔笝喙堗抚喔?(MOQ 喔∴覆喔曕福喔愢覆喔?
+        - value: '100-500'
+          label: 100鈥?00 喔笝喙堗抚喔?
+        - value: '500-plus'
+          label: 500+ 喔笝喙堗抚喔?(喔｀覆喔勦覆喔曕覆喔∴笡喔｀复喔∴覆喔?
+    - name: customization
+      label: 喔曕箟喔竾喔佮覆喔｀笡喔｀副喔氞箒喔曕箞喔囙斧喔｀阜喔箘喔∴箞?
+      row: 7
+      type: select
+      options:
+        - value: '喔澿箞喔侧涪喔笝喔编笟喔笝喔膏笝喔椸覆喔囙箑喔椸竸喔權复喔?
+          label: 喙€喔ム阜喔竵喔涏福喔班箑喔犩笚喔佮覆喔｀笡喔｀副喔氞箒喔曕箞喔?..
+        - value: none
+          label: 喔复喔權竸喙夃覆喔∴覆喔曕福喔愢覆喔?(喙勦浮喙堗笡喔｀副喔氞箒喔曕箞喔?
+        - value: logo
+          label: 喙€喔夃笧喔侧赴喙傕弗喙傕竵喙?/ 喙佮笟喔｀笝喔斷箤喔椸傅喙堗竵喔赤斧喔權笖喙€喔竾
+        - value: full
+          label: OEM 喙€喔曕箛喔∴福喔灌笡喙佮笟喔?(喔傕笝喔侧笖 喔傅 喔佮福喔侧笩喔脆竵 喔氞福喔｀笀喔膏笭喔编笓喔戉箤)
+        - value: consultation
+          label: 喙勦浮喙堗箒喔權箞喙冟笀 鈥?喔曕箟喔竾喔佮覆喔｀竸喔赤笡喔｀付喔佮俯喔?
+    - name: productInterest
+      label: 喔浮喔о笖喔浮喔灌箞喔复喔權竸喙夃覆喔椸傅喙堗釜喔權箖喔?
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: 喔副喔о競喙夃腑
+      row: 9
+    - name: message
+      label: 喔傕箟喔竸喔о覆喔?
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: 喔娻箞喔竾喔椸覆喔囙腑喔粪箞喔權箖喔權竵喔侧福喔曕复喔斷笗喙堗腑喙€喔｀覆
+  columns: 3
+  items:
+    - title: 喔腑喔氞笘喔侧浮喔佮覆喔｀競喔侧涪
+      description: 喙冟笟喙€喔笝喔福喔侧竸喔?喔佮覆喔｀竵喔赤斧喔權笖喔勦箞喔?喔佮覆喔｀釜喔∴副喔勦福喙€喔涏箛喔權笗喔编抚喙佮笚喔權笀喔赤斧喔權箞喔侧涪 喙佮弗喔班竸喔赤釜喔编箞喔囙笅喔粪箟喔笀喔赤笝喔о笝喔∴覆喔?
+      icon: tabler:shopping-bag
+    - title: 喔澿箞喔侧涪喔笝喔编笟喔笝喔膏笝喔椸覆喔囙箑喔椸竸喔權复喔?
+      description: 喔佮覆喔｀福喔编笟喔涏福喔班竵喔编笝 喔佮覆喔｀笅喙堗腑喔∴箒喔嬥浮 喔赴喙勦斧喔ム箞 喙佮弗喔班竸喔赤笘喔侧浮喙€喔佮傅喙堗涪喔о竵喔编笟喔佮覆喔｀箖喔娻箟喔囙覆喔?
+      icon: tabler:tool
+    - title: 喔阜喙堗腑喙佮弗喔班笧喔编笝喔樴浮喔脆笗喔?
+      description: 喔阜喙堗腑 kits 喔佮覆喔｀釜喔權副喔氞釜喔權父喔?喙佮弗喔班竸喔о覆喔∴福喙堗抚喔∴浮喔粪腑喔椸覆喔囙腑喔膏笗喔覆喔竵喔｀福喔?
+      icon: tabler:news
+    - title: 喙傕笚喔｀辅喔编笧喔椸箤
+      description: +86 13305324192
+      icon: tabler:headset
+    - title: 喔傅喙€喔∴弗
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: 喔赋喔權副喔佮竾喔侧笝喙冟斧喔嵿箞
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: 喔椸傅喙堗笗喔编箟喔囙競喔竾喙€喔｀覆
+  subtitle: 喙€喔⑧傅喙堗涪喔∴笂喔∴箑喔｀覆喔椸傅喙堗釜喔赤笝喔编竵喔囙覆喔權箖喔笉喙?
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

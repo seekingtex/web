@@ -1,0 +1,83 @@
+hero:
+  tagline: 'Komunita'
+  title: 'Komunita Seekingtex'
+  subtitle: |
+    Skuteční lidé, skutečná voda, skutečná dobrodružství. Od víkendových pádlujících po<br />
+    profesionální operátory —objevte, jak naše komunita objevuje svět na vodě.
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Seekingtex community paddling on calm waters'
+
+stats:
+  title: 'Komunita v číslech'
+  stats:
+    - title: '40+'
+      description: 'Zemí se zákazníky Seekingtex'
+    - title: '12+'
+      description: 'Let komunitních dobrodružství'
+    - title: '10 000+'
+      description: 'Spokojených pádlujících po celém světě'
+    - title: '98%'
+      description: 'Doporučilo by Seekingtex'
+
+stories:
+  tagline: 'Příběhy objevitelů'
+  title: 'Skutečná dobrodružství od skutečných lidí'
+  subtitle: 'Poslechněte si od pádlujících, rodin a profesionálů, kteří používají vybavení Seekingtex na vodě.'
+  items:
+    - name: 'Sarah & Mike'
+      title: 'Majitelé SUP Explorer 11, Kanada'
+      content: 'Vzali jsme naše Explorer 11 na týdenní výlet Algonquin Parkem. Zvládly přenášení i přejezdy jezer krásně. Drop-stitch konstrukce nám umožnila nafouknout na 15 PSI a získat výkon pevné desky z balitelného prkna.'
+      image: '/images/seekingtex/products/Seekingtex-sup-allround-board.webp'
+      location: 'Algonquin Park, Kanada'
+    - name: 'Carlos R.'
+      title: 'Jezdec Cheetah Surge, Španělsko'
+      content: 'Cheetah Surge je moje volba pro pobřežní vyjížďky. Živý design přitahuje pozornost na pláži a stabilita mi dodává jistotu v lehkém vlnobití. Skvěle se ovládá, ať už touringuji nebo si jen užívám západ slunce.'
+      image: '/images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp'
+      location: 'Costa Brava, Španělsko'
+    - name: 'Lina a rodina'
+      title: 'Pádlující Flowing Lotus, Švédsko'
+      content: 'Víkendová rodinná dobrodružství na souostroví. Flowing Lotus je stabilní natolik, že na něm moje dcera může stát, zatímco já pádluji. Nafoukne se za méně než 10 minut — žádný přívěs, jen čistá rodinná zábava na vodě.'
+      image: '/images/seekingtex/products/sup-series/sup-flowing-lotus-1.webp'
+      location: 'Stockholmské souostroví, Švédsko'
+    - name: 'Lt. Cmdr. Andres'
+      title: 'Průzkumník Ocean Voyager, Filipíny'
+      content: 'Používám svůj Ocean Voyager pro dálkové pobřežní túry kolem Palawanu. Po měsících každodenního používání v tropických podmínkách deska stále funguje jako nová. Touringový tvar prořezává vlny, které by zastavily méně kvalitní desky.'
+      image: '/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp'
+      location: 'Palawan, Filipíny'
+    - name: 'Emma T.'
+      title: 'Začátečnice Tropical Breeze, Austrálie'
+      content: 'Nikdy předtím jsem nebyla na SUPu. Tropical Breeze je tak stabilní, že jsem se cítila sebejistě hned napoprvé. Teď pádluji každý víkend. Křivka učení je prakticky nulová — a deska vypadá na vodě úžasně.'
+      image: '/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp'
+      location: 'Gold Coast, Austrálie'
+
+adventures_cta:
+  tagline: 'Sdílejte své dobrodružství'
+  title: 'Váš příběh by mohl být zde'
+  subtitle: 'Označte @seekingtex_watersports na Instagramu nebo použijte #SeekingtexAdventure pro šanci být zveřejněni.'
+  instagram: 'Sledovat na Instagramu'
+  youtube: 'Odebírat na YouTube'
+  facebook: 'Připojit se na Facebook'
+
+locations:
+  tagline: 'Globální komunita'
+  title: 'Kam Seekingtex cestuje'
+  subtitle: 'Od evropských jezer po pobřeží jihovýchodní Asie —naše komunita pádluje všude.'
+  regions:
+    - title: 'Evropa'
+      description: 'Jezero Como · Stockholmské souostroví · Costa Brava · Chorvatské pobřeží · Skotské jezera'
+    - title: 'Asie a Tichomoří'
+      description: 'Palawan · Gold Coast · Zátoka Ha Long · Jezero Yamanaka · Bali pobřeží'
+    - title: 'Amerika'
+      description: 'Algonquin Park · Velká jezera · Florida Keys · Jezero Tahoe · Patagonie'
+    - title: 'Střední východ a Afrika'
+      description: 'Pobřeží Rudého moře · Viktoriino jezero · Kapský poloostrov · Galilejské jezero'
+
+cta:
+  title: 'Jste připraveni připojit se ke komunitě?'
+  subtitle: 'Každý produkt Seekingtex je CE certifikován, podpořen zárukou a navržen pro skutečná dobrodružství. Najděte svůj ještě dnes.'
+  actions:
+    - variant: primary
+      text: 'Prozkoumat produkty'
+      href: '/products'
+    - text: 'Sdílet svůj příběh'
+      href: '/contact'

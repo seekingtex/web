@@ -1,0 +1,15 @@
+hero:
+  tagline: Galerie
+  title: Galerie
+  subtitle: Vezi produsele, fabrica și comunitatea noastră în acțiune.
+albums:
+  - title: Plăci SUP
+    cover: /images/seekingtex/products/Seekingtex-sup-boards-collection.webp
+    images:
+      - /images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+  - title: Bărci tesatura tehnica
+    cover: /images/seekingtex/products/tesatura tehnica-330.webp
+    images:
+      - /images/seekingtex/products/tesatura tehnica/Seekingtex-tesatura tehnica-330-boat.webp
+      - /images/seekingtex/products/tesatura tehnica/Seekingtex-tesatura tehnica-450-patrol-boat.webp

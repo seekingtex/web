@@ -1,0 +1,14 @@
+hero:
+  tagline: Tecnologia
+  title: La nostra tecnologia
+  subtitle: I prodotti Seekingtex sono progettati con materiali avanzati e ingegneria innovativa per offrire prestazioni, durata e portabilità eccezionali.
+
+features:
+  - title: PVC di qualità militare
+    description: Le nostre imbarcazioni gonfiabili e SUP utilizzano tessuto in PVC resistente ai raggi UV e all'abrasione, con elevata resistenza alla trazione e alla perforazione.
+  - title: Costruzione Drop-Stitch
+    description: Migliaia di fili in fibra ad alta densità collegano le superfici superiore e inferiore, creando un ponte rigido ad alta pressione – offrendo ai SUP gonfiabili prestazioni vicine a quelle delle tavole rigide.
+  - title: Giunzioni termosaldate
+    description: Le giunzioni sono saldate a caldo anziché incollate, offrendo una resistenza di legame duratura nei punti di sollecitazione critici.
+  - title: Tecnologia di gonfiaggio automatico
+    description: I giubbotti di salvataggio Pro utilizzano un meccanismo di gonfiaggio automatico che si attiva immediatamente in caso di prestazionale, fornendo galleggiabilità affidabile.

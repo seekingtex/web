@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.{ts,astro,tsx,js,jsx,mjs,cjs} text eol=lf
+*.{yaml,yml,json,xml,html,css,scss,md,txt} text eol=lf
+*.{webp,png,jpg,jpeg,gif,ico,pdf,woff,woff2,ttf,eot,otf} binary
+*.ps1 text eol=lf
+*.py text eol=lf
+*.cjs text eol=lf
+*.mjs text eol=lf

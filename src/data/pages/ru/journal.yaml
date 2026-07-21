@@ -1,0 +1,23 @@
+hero:
+  tagline: Журнал
+  title: Журнал Seekingtex
+  subtitle: Последние новости, текстильние приключения и истории о продуктах от команды Seekingtex.
+
+meta:
+  read_more: Читать далее
+  published: Опубликовано
+  by: Автор
+  browse_all: Просмотреть все статьи
+  categories: Категории
+  subscribe: Подписаться на журнал
+
+categories:
+  all: Все
+  adventures: Приключения
+  product: Продукт
+  tips: Советы
+  culture: Культура
+
+featured: Избранное
+latest: Последние статьи
+no_articles: На данный момент статей нет.

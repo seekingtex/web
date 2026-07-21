@@ -1,0 +1,110 @@
+{
+  "en": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Functional Fabric Manufacturer — Sun Protection, Waterproof, Quick-Dry & Performance Textiles",
+    "site_description": "Leading manufacturer of UPF 50+ sun protection, waterproof/breathable, quick-dry moisture wicking, antibacterial, and performance fabrics for sportswear, outdoor apparel, and tactical gear. OEM/ODM services with global shipping.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. All rights reserved."
+  },
+  "fr": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Fabricant de tissus fonctionnels — Protection solaire, imperméable, séchage rapide et textiles performants",
+    "site_description": "Fabricant leader de tissus UPF 50+ protection solaire, imperméables/respirants, séchage rapide, antibactériens et performants pour les vêtements de sport, les vêtements d'extérieur et les équipements tactiques. Services OEM/ODM avec expédition mondiale.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Tous droits réservés."
+  },
+  "de": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Hersteller funktioneller Stoffe — Sonnenschutz, wasserdicht, schnell trocknend und leistungsstarke Textilien",
+    "site_description": "Führender Hersteller von UPF 50+ Sonnenschutz-, wasserdichten/atmungsaktiven, schnell trocknenden, antibakteriellen und leistungsstarken Stoffen für Sportbekleidung, Outdoor-Bekleidung und taktische Ausrüstung. OEM/ODM-Dienstleistungen mit weltweitem Versand.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Alle Rechte vorbehalten."
+  },
+  "es": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Fabricante de tejidos funcionales — Protección solar, impermeable, secado rápido y textiles de rendimiento",
+    "site_description": "Fabricante líder de tejidos UPF 50+ de protección solar, impermeables/transpirables, de secado rápido, antibacterianos y de rendimiento para ropa deportiva, ropa outdoor y equipamiento táctil. Servicios OEM/ODM con envío global.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Todos los derechos reservados."
+  },
+  "pt": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Fabricante de tecidos funcionais — Proteção solar, impermeável, secagem rápida e têxteis de alto desempenho",
+    "site_description": "Fabricante líder de tecidos UPF 50+ de proteção solar, impermeáveis/respiráveis, de secagem rápida, antibacterianos e de alto desempenho para roupas esportivas, roupas outdoor e equipamentos táticos. Serviços OEM/ODM com envio global.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Todos os direitos reservados."
+  },
+  "ar": {
+    "site_name": "Seekingtex",
+    "site_tagline": "مصنع أقمشة وظيفية — حماية من الشمس، مقاومة للماء، سريعة الجفاف ومنسوجات أداء",
+    "site_description": "الشركة الرائدة في تصنيع أقمشة الحماية من الشمس UPF 50+، والأقمشة المقاومة للماء/القابلة للتنفس، وسريعة الجفاف، والمضادة للبكتيريا، وعالية الأداء للملابس الرياضية والملابس الخارجية والمعدات التكتيكية. خدمات OEM/ODM مع شحن عالمي.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. جميع الحقوق محفوظة."
+  },
+  "it": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Produttore di tessuti funzionali — Protezione solare, impermeabile, asciugatura rapida e tessuti performanti",
+    "site_description": "Produttore leader di tessuti UPF 50+ per protezione solare, impermeabili/traspiranti, ad asciugatura rapida, antibatterici e performanti per abbigliamento sportivo, outdoor e attrezzatura tattica. Servizi OEM/ODM con spedizione globale.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Tutti i diritti riservati."
+  },
+  "ja": {
+    "site_name": "Seekingtex",
+    "site_tagline": "機能性生地メーカー — 紫外線防止、防水、速乾、高性能テキスタイル",
+    "site_description": "スポーツウェア、アウトドアウェア、タクティカルギア向けのUPF 50+紫外線防止、防水/透湿、速乾、抗菌、高性能生地の大手メーカー。OEM/ODMサービス、グローバル配送対応。",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. All rights reserved."
+  },
+  "ko": {
+    "site_name": "Seekingtex",
+    "site_tagline": "기능성 원단 제조업체 — 자외선 차단, 방수, 속건, 고성능 직물",
+    "site_description": "스포츠웨어, 아웃도어 의류, 택티컬 기어용 UPF 50+ 자외선 차단, 방수/투습, 속건, 항균, 고성능 원단의 선도적 제조업체. 글로벌 배송 가능한 OEM/ODM 서비스.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. All rights reserved."
+  },
+  "ru": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Производитель функциональных тканей — Солнцезащита, водонепроницаемость, быстросохнущие и высокопроизводительные текстиль",
+    "site_description": "Ведущий производитель тканей UPF 50+ для защиты от солнца, водонепроницаемых/дышащих, быстросохнущих, антибактериальных и высокопроизводительных тканей для спортивной одежды, одежды для активного отдыха и тактического снаряжения. Услуги OEM/ODM с глобальной доставкой.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Все права защищены."
+  },
+  "pl": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Producent tkanin funkcjonalnych — Ochrona przeciwsłoneczna, wodoodporność, szybkoschnące i wydajne tekstylia",
+    "site_description": "Wiodący producent tkanin UPF 50+ do ochrony przeciwsłonecznej, wodoodpornych/oddychających, szybkoschnących, antybakteryjnych i wydajnych tkanin do odzieży sportowej, odzieży outdoorowej i sprzętu taktycznego. Usługi OEM/ODM z globalną wysyłką.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Wszelkie prawa zastrzeżone."
+  },
+  "nl": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Producent van functionele stoffen — Zonbescherming, waterdicht, snel drogend en hoogwaardige textiel",
+    "site_description": "Toonaangevende fabrikant van UPF 50+ zonwerende, waterdichte/ademende, snel drogende, antibacteriële en hoogwaardige stoffen voor sportkleding, outdoor kleding en tactische uitrusting. OEM/ODM-diensten met wereldwijde verzending.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Alle rechten voorbehouden."
+  },
+  "sv": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Tillverkare av funktionella tyger — Solskydd, vattentätt, snabbtorkande och högpresterande textilier",
+    "site_description": "Ledande tillverkare av UPF 50+ solskyddande, vattentäta/andningsbara, snabbtorkande, antibakteriella och högpresterande tyger för sportkläder, utomhuskläder och taktisk utrustning. OEM/ODM-tjänster med global frakt.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Alla rättigheter förbehållna."
+  },
+  "no": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Produsent av funksjonelle stoffer — Solbeskyttelse, vanntett, hurtigtørkende og høytytende tekstiler",
+    "site_description": "Ledende produsent av UPF 50+ solbeskyttende, vanntette/pustende, hurtigtørkende, antibakterielle og høytytende stoffer for sportsbekledning, utendørsklær og taktisk utstyr. OEM/ODM-tjenester med global frakt.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Alle rettigheter forbeholdt."
+  },
+  "tr": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Fonksiyonel Kumaş Üreticisi — Güneş koruma, su geçirmez, çabuk kuruyan ve yüksek performanslı tekstiller",
+    "site_description": "Spor giyim, outdoor giyim ve taktik ekipmanlar için UPF 50+ güneş koruma, su geçirmez/nefes alabilir, çabuk kuruyan, antibakteriyel ve yüksek performanslı kumaşların lider üreticisi. Küresel nakliye ile OEM/ODM hizmetleri.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Tüm hakları saklıdır."
+  },
+  "el": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Κατασκευαστής λειτουργικών υφασμάτων — Αντηλιακή προστασία, αδιάβροχο, γρήγορο στέγνωμα και υφάσματα υψηλών επιδόσεων",
+    "site_description": "Κορυφαίος κατασκευαστής υφασμάτων UPF 50+ αντηλιακής προστασίας, αδιάβροχων/αναπνεύσιμων, γρήγορου στεγνώματος, αντιβακτηριακών και υψηλών επιδόσεων για αθλητικά είδη, εξωτερικά ενδύματα και τακτικό εξοπλισμό. Υπηρεσίες OEM/ODM με παγκόσμια αποστολή.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Με επιφύλαξη παντός δικαιώματος."
+  },
+  "zh": {
+    "site_name": "Seekingtex",
+    "site_tagline": "功能性面料制造商 — 防晒、防水、速干和高性能纺织品",
+    "site_description": "运动服、户外服装和战术装备用UPF 50+防晒、防水/透气、速干、抗菌和高性能面料的领先制造商。提供OEM/ODM服务，全球发货。",
+    "copyright": "\u00a9 2026 昆山赛金纺织科技有限公司。保留所有权利。"
+  },
+  "fi": {
+    "site_name": "Seekingtex",
+    "site_tagline": "Toiminnallisten kankaiden valmistaja — Auringonsuojaus, vedenpitävä, nopeasti kuivuva ja korkean suorituskyvyn tekstiilit",
+    "site_description": "Johtava UPF 50+ auringonsuojakankaiden, vedenpitävien/hengittävien, nopeasti kuivuvien, antibakteeristen ja korkean suorituskyvyn kankaiden valmistaja urheiluvaatteisiin, ulkoiluvaatteisiin ja taktisiin varusteisiin. OEM/ODM-palvelut maailmanlaajuisella toimituksella.",
+    "copyright": "\u00a9 2026 Kunshan Seeking Tex&Tech Co.,Ltd. Kaikki oikeudet pidätetään."
+  }
+}

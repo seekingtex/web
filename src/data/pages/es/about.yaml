@@ -1,0 +1,96 @@
+hero:
+  tagline: Sobre nosotros
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Taller Seekingtex
+  title: |
+    Ingeniería textil, <br />
+    hecha a la manera <span class="text-accent dark:text-white">Seekingtex</span>
+  subtitle: 'Empezamos en un taller costero con un solo tejido y una convicción firme: los productos marinos deben diseñarse como si importaran, porque importan. Hoy exportamos a más de 40 países, pero cada casco sigue pasando por las mismas manos que fundaron la empresa.'
+
+stats:
+  title: En cifras
+  columns: 4
+  stats:
+    - title: Cascos entregados
+      amount: '2400+'
+    - title: Países con envíos
+      amount: '40'
+    - title: Años de experiencia combinada
+      amount: '60'
+    - title: Respuesta media de garantía (horas)
+      amount: '24'
+
+features3_what_we_build:
+  title: Lo que construimos
+  subtitle: Una línea de productos enfocada que conocemos al dedillo —sin experimentos a medias, sin ingeniería de marca.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: Barcos tejido tecnico
+      description: tejido tecnico de casco de aluminio de 3,3 m a 7,5 m. Diseñados para patrulla, rendimiento, pesca y uso familiar.
+      icon: tabler:ship
+    - title: tejidos funcionales
+      description: Anexos inflables de PVC y Hypalon de 2,4 m a 4,2 m. Ligeros, resistentes y fáciles de guardar.
+      icon: tabler:speedboat
+    - title: Anexos para superyates
+      description: tejido tecnico compactos y de alta especificación construidos a medida para combinar con el estilo de su buque nodriza.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Accesorios
+      description: textil, bombas, cubiertas, bolsas impermeables, tanques de combustible y electrónica. Todos adaptados a nuestros barcos.
+      icon: tabler:package
+    - title: Reforma y reparación
+      description: Sustitución de flotadores, modernización electrónica y mejoras de motor.
+      icon: tabler:tool
+    - title: Construcciones a medida
+      description: Diseño proyecto por proyecto para clientes comerciales, científicos y militares.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Construcción de tejido a medida
+
+steps2_values:
+  title: Nuestros valores
+  subtitle: Tres principios que han moldeado cada producto desde el primer día.
+  items:
+    - title: Construir como si llevara a tu familia
+      description: Cada casco, soldadura y fijación se trata como si nuestras propias familias fueran a usarlo.
+      icon: tabler:heart
+    - title: Ingeniería antes de vender
+      description: Si una especificación es incorrecta, cambiamos la especificación —nunca al cliente.
+      icon: tabler:settings
+    - title: Soporte que supera la garantía
+      description: Los cascos de veinte años todavía nos llaman para pedir repuestos, y seguimos respondiendo.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Hitos
+  subtitle: Una versión breve de la historia de Seekingtex.
+  isReversed: true
+  items:
+    - title: Fundado en un taller costero
+      description: Iniciado por dos arquitectos navales con una fresadora CNC y una idea tenaz.
+      icon: tabler:building-factory
+    - title: Primeros 1000 cascos entregados
+      description: Alcanzado en nuestro séptimo año, principalmente gracias al boca a boca y clientes recurrentes.
+      icon: tabler:circle-check
+    - title: Programa de exportación internacional
+      description: Ahora enviamos a más de 40 países con socios de soporte localizados en cinco continentes.
+      icon: tabler:world
+
+features2_locations:
+  title: Nuestras ubicaciones
+  tagline: Encuéntranos
+  columns: 3
+  items:
+    - title: Sede central y taller
+      description: Parque industrial costero, edificio 4 — abierto lun–vie para visitas con cita previa.
+    - title: Centro de servicio UE
+      description: Puerto mediterráneo — reforma, reparación y soporte de garantía para clientes europeos.
+    - title: Red de socios APAC
+      description: Socios de servicio autorizados en Australia, Japón, Singapur y Hong Kong.

@@ -1,0 +1,245 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/learning-center.yaml';
+
+interface CardEntry {
+  href: string;
+  image: string;
+  title: string;
+}
+
+const defaultCards: CardEntry[] = [
+  {
+    href: '/guides/performance-fabric-guide',
+    image: '/images/seekingtex/use-cases/Seekingtex-beginner-use-case.webp',
+    title: 'How to Choose Performance Fabrics',
+  },
+  {
+    href: '/guides/beginner-guide',
+    image: '/images/seekingtex/use-cases/Seekingtex-outdoor-events.webp',
+    title: "Beginner's Guide to Functional Textiles",
+  },
+  {
+    href: '/guides/fabric-comparison',
+    image: '/images/seekingtex/use-cases/Seekingtex-professional-use-case.webp',
+    title: 'Fabric Types Comparison',
+  },
+  { href: '/guides/safety-tips', image: '/images/seekingtex/use-cases/Seekingtex-family-use-case.webp', title: 'Textile Safety & Care Tips' },
+];
+
+let tagline = 'Learn';
+let title = 'New to SUP?';
+let subtitle = 'Everything you need to know before you hit the water.';
+let cards: CardEntry[] = defaultCards.map((c) => ({ ...c }));
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed) {
+    tagline = typeof parsed.tagline === 'string' ? parsed.tagline : tagline;
+    title = typeof parsed.title === 'string' ? parsed.title : title;
+    subtitle = typeof parsed.subtitle === 'string' ? parsed.subtitle : subtitle;
+    if (parsed.cards && Array.isArray(parsed.cards)) {
+      cards = parsed.cards.map((item: any, i: number) => ({
+        href: item.href || defaultCards[i]?.href || '',
+        image: item.image || defaultCards[i]?.image || '',
+        title: item.title || defaultCards[i]?.title || '',
+      }));
+    }
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="Learning Center" active="learning" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Learning Center</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      4 guide cards displayed on the homepage. File: <code class="font-mono">{file}</code>
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="learn-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+      <h2 class="text-base font-semibold">Section Headings</h2>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Tagline</label>
+        <input
+          type="text"
+          name="tagline"
+          value={tagline}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
+        <input
+          type="text"
+          name="title"
+          value={title}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subtitle</label>
+        <input
+          type="text"
+          name="subtitle"
+          value={subtitle}
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        />
+      </div>
+    </div>
+
+    {
+      cards.map((card, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">Card #{i + 1}</h2>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Link URL</label>
+            <input
+              type="text"
+              name={'c' + i + '.href'}
+              value={card.href}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Background Image URL</label>
+            <input
+              type="text"
+              name={'c' + i + '.image'}
+              value={card.image}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+            {card.image && card.image.trim() && (
+              <div
+                class="mt-2 h-16 w-32 rounded bg-cover bg-center border border-gray-200"
+                style={"background-image: url('" + card.image + "')"}
+              />
+            )}
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
+            <input
+              type="text"
+              name={'c' + i + '.title'}
+              value={card.title}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('learn-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const cards = [];
+        for (let i = 0; i < 4; i++) {
+          cards.push({
+            href: String(fd.get('c' + i + '.href') || '').trim(),
+            image: String(fd.get('c' + i + '.image') || '').trim(),
+            title: String(fd.get('c' + i + '.title') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: {
+                tagline: String(fd.get('tagline') || '').trim(),
+                title: String(fd.get('title') || '').trim(),
+                subtitle: String(fd.get('subtitle') || '').trim(),
+                cards,
+              },
+              commitMessage: 'Update learning center',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

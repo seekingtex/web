@@ -1,0 +1,166 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/hero-images.yaml';
+
+let images: string[] = [
+  '/images/seekingtex/hero/hero-3.webp',
+  '/images/seekingtex/hero/hero-4.webp',
+  '/images/seekingtex/hero/hero-5.webp',
+  '/images/seekingtex/hero/tech-meeting-small.webp',
+  '/images/seekingtex/hero/hero-7.webp',
+];
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed?.images && Array.isArray(parsed.images)) {
+    images = parsed.images;
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="Hero Images" active="hero" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Hero Carousel Images</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      Edit the homepage hero carousel images. File: <code class="font-mono">{file}</code>. One path per line.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="hero-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
+      <div>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Paths</label>
+        <textarea
+          name="images"
+          rows="8"
+          class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+          >{images.join('\n')}</textarea
+        >
+        <p class="mt-2 text-xs text-gray-500">
+          One image path per line. Relative to site root (e.g. <code class="font-mono"
+            >/images/seekingtex/hero/hero-3.webp</code
+          >).
+        </p>
+      </div>
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 p-4">
+        <p class="text-xs text-gray-500 mb-2">Preview ({images.length} images)</p>
+        <div class="flex gap-2 overflow-x-auto pb-2" data-preview>
+          {
+            images.map((src) => (
+              <img
+                src={src}
+                alt=""
+                class="h-20 w-32 rounded object-cover shrink-0 border border-gray-200"
+                loading="lazy"
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500" data-fileInfo>File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('hero-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const raw = String(fd.get('images') || '');
+        const images = raw
+          .split('\n')
+          .map((s) => s.trim())
+          .filter((s) => s.length > 0);
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { images },
+              commitMessage: 'Update hero carousel images',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

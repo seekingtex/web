@@ -1,0 +1,56 @@
+hero:
+  tagline: Ressourcen
+  title: Mediencenter
+  subtitle: Markenmaterialien, Produktbilder, Kataloge und Videos herunterladen
+
+sections:
+  - id: product-images
+    title: Produktbilder
+    desc: Hochauflösende Produktfotos für Web, Print und Handel.
+    items:
+      - SUP-Bretter Galerie
+      - Funktionstextil-Gewebe Galerie
+      - funktionale Gewebe Galerie
+      - Zubehör & Sicherheitsausrüstung
+  - id: logo-brand-kit
+    title: Logo & Markenkit
+    desc: Offizielle Seekingtex-Logodateien, Farbpalette, Typografie und Markenrichtlinien.
+    items:
+      - Primärlogo (PNG/SVG/EPS)
+      - Icon Mark
+      - Farbpalette
+      - Typografie-Spezifikationen
+      - Markenrichtlinien PDF
+  - id: catalogs
+    title: PDF-Kataloge
+    desc: Produktkataloge, Datenblätter und technische Dokumentation zum Herunterladen.
+    items:
+      - 2026 Produktkatalog
+      - OEM/ODM-Fähigkeitspräsentation
+      - Funktionstextil-Serienbroschüre
+      - Technische Spezifikationen
+  - id: videos
+    title: Videos
+    desc: Produktdemonstrationen, Fabrikrundgänge, Markenfilme und Kundenstimmen.
+    items:
+      - Produktdemonstrationen
+      - Fabrikrundgang
+      - Markenfilm
+      - Kundengeschichten
+      - Anleitungen
+
+request_access: Zugang anfordern →
+
+cta:
+  title: Hilfe bei der Suche nach Materialien?
+  desc: Kontaktieren Sie unser Markenteam für individuelle Materialanfragen, Medienpartnerschaften oder Presseanfragen.
+  links:
+    - label: Besuchen Sie unsere Fabrik
+      href: /factory
+      desc: Sehen Sie unsere 12.000 m² große Fertigungsanlage
+    - label: Markenrichtlinien
+      href: /brand
+      desc: Erfahren Sie mehr über die Marke Seekingtex
+    - label: Partner werden
+      href: /contact
+      desc: OEM-, ODM- und Vertriebsanfragen

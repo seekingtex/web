@@ -1,0 +1,111 @@
+hero:
+  tagline: Fabrikk
+  title: Fabrikk og produksjon
+  subtitle: 12 000 m虏 integrert produksjon 鈥?fra r氓vare til ferdig b氓t
+
+intro:
+  - Som et fabrikkmerke under **Qingdao Vatrad Group Co., Ltd.** har Seekingtex kontroll over hvert steg i produksjonen 鈥?fra mottak av r氓 PVC- og glassfibermaterialer til endelig forh氓ndskontroll av den ferdige b氓ten. Produksjonsanlegget v氓rt i Qingdao Economic Development Zone dekker 12 000 kvadratmeter og rommer dedikerte verksteder for PVC-kutting, r酶rsveising, glassfiber-teknisk stoff-skrogproduksjon, digitalt SUP-trykk, sluttmontering og kvalitetstesting.
+  - Ved 氓 integrere design, ingeni酶rkunst, prototyping, produksjon og testing under ett tak eliminerer vi ineffektiviteten ved kontraktsproduksjon og opprettholder direkte kontroll over byggekvalitet, materialvalg og leveringstider. Hver b氓t som forlater verkstedet v氓rt er bygget av v氓re folk, p氓 v氓rt utstyr, etter v氓re standarder.
+
+stats:
+  - value: 12,000 m2
+    label: Produksjonsgulv
+  - value: 200+
+    label: Kvalifiserte arbeidere
+  - value: 15,000+
+    label: B氓ter produsert 氓rlig
+  - value:
+    label: Kvalitetssertifisert
+
+workshops_section:
+  tagline: Verksteder
+  title: Produksjonsverksteder
+  workshops:
+    - title: PVC-kutting og materialforberedelse
+      description: Automatiske CNC-kuttmaskiner bearbeider PVC-, Hypalon- og technical-stoffer med submillimeter-presisjon. Datamaskinoptimalisert plassering minimerer materialsvinn og sikrer at hver panel oppfyller sine dimensjonsspesifikasjoner f酶r sveising.
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: R酶rsveising og varmeforsegling
+      description: Dedikert sveiseverksted med varmluftssveisemaskiner og dielektriske RF-presser. Varmluftssveisere f酶yer sammen og smelter PVC-r酶rkamre, mens RF-sveising produserer h酶yfaste, lufttette s酶mmer som overg氓r kravene.
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: teknisk stoff-skrogproduksjon 鈥?glassfiber
+      description: teknisk stoff-b氓tskrog produseres ved h氓ndopplegning av glassfiber med polyester- og vinylesterharpikssystemer. Hvert lag h氓ndrulles og vakuumpakkes for jevn kvalitet. Gelcoat-spr酶ytebod gir en h酶yglanset, UV-bestandig tekstil overflate.
+      image: /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+    - title: SUP-trykk og dekorasjon
+      description: SUP-brett dekoreres med digitaltrykk for helfarget grafikk og silketrykk for logoer og gjentakende m酶nstre. Digitale skrivere produserer fotokvalitets dekkdesign, mens silketrykk leverer holdbare, livlige merkevaremerker.
+      image: /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+    - title: Sluttmontering og rigging
+      description: Monteringslinje der glassfberskrog og PVC-r酶r sammenf酶yes, motorer monteres, styring og kontroller kobles, og elektriske systemer kobles til. Hver b氓t f酶lger en 100-punkts monteringssjekkliste som teamleder signerer.
+      image: /images/seekingtex/hero/factory-gate.webp
+    - title: Kvalitetstesting og inspeksjon
+      description: Hver ferdig b氓t gjennomg氓r obligatorisk lufttetthetstesting, s酶mrivningskontroll og full systemkontroll f酶r frakt. Kvalitetslaben v氓r opererer uavhengig av produksjonen og rapporterer direkte til ledelsen.
+      image: /images/seekingtex/factory/Pressure Testing.jpeg
+
+equipment_section:
+  tagline: Utstyr
+  title: N酶kkelproduksjonsutstyr
+  view_full: Se fullstendig utstyrsliste 鈫?
+  view_full_link: /factory/equipment
+  items:
+    - name: Automatisk PVC-kuttmaskin
+      spec: CNC-styrt, 0,1 mm n酶yaktighet
+    - name: Varmluftssveisemaskin
+      spec: Varmluft, 200 掳C鈥?00 掳C, for r酶rfesting
+    - name: Dielektrisk RF-presse
+      spec: 15 kW, lufttett s酶msveising
+    - name: Glassfiber h氓ndopplegningsformer
+      spec: teknisk stoff-skrog opptil 6 m
+    - name: Digital skriver
+      spec: Helfarget SUP-dekkgrafikk
+    - name: Silketrykkmaskin
+      spec: Flerfarget logotrykk
+
+qc_section:
+  tagline: Kvalitetskontroll
+  title: Test- og kvalitetssikringsprosess
+  subtitle: Hver b氓t gjennomg氓r obligatorisk testing f酶r frakt. Kvalitetslaben v氓r opererer uavhengig av produksjonen og rapporterer direkte til ledelsen.
+  steps:
+    - step: '1'
+      title: R氓vareinspeksjon
+      desc: PVC-, Hypalon- og technical-stoffer gjennomg氓r strekktesting, rivingsspredning og UV-bestandighetsverifisering f酶r en batch slippes inn i produksjonen.
+    - step: '2'
+      title: 48-timers lufttetthetstest
+      desc: Hvert r酶rkammer pumpes til 125 % av nominelt trykk og holdes i 48 timer. Trykkfall under 5 % utl酶ser automatisk avvisning og ny s酶minspeksjon.
+    - step: '3'
+      title: Last- og balansetest
+      desc: Ferdige b氓ter lastes til maksimal vurdert kapasitet og testes for stabilitet, fribord og man酶vrering. Hver b氓t vannpr酶ves f酶r endelig inspeksjon.
+
+oem_section:
+  tagline: OEM-prosjekter
+  title: Merkevare- og OEM-partnerskaps casestudier
+  subtitle: Fra konsept til container 鈥?hvordan vi hjelper globale merker med 氓 lansere og skalere oppbl氓sbare b氓tlinjer.
+  cases:
+    - challenge: En europeisk utend酶rsforhandler trengte en private-label SUP-linje med unik dekkgrafikk, milj酶vennlig PVC og detaljhandelsklar emballasje 鈥?alt levert p氓 60 dager.
+      solution: Vi utviklet tilpassede digitale trykkfiler, hentet REACH-kompatibel PVC og komprimerte pr酶vetaking fra 3 runder til 1 ved 氓 plassere designteamet p氓 fabrikken v氓r i Qingdao.
+      result: 55 dager fra signert PO til FOB. 2 400 enheter fordelt p氓 4 SKU-er. Gjentatt bestilling lagt f酶r f酶rste container ankom.
+    - challenge: En amerikansk tekstilindustrisstartup trengte en h酶yytelses technical-textile productk med tilpasset skrogform, sammerkevareemballasje og BSCI-sertifisering for detaljhandelsplassering.
+      solution: Vi tilpasset en eksisterende technical-textile productkform med modifisert rockerprofil, utviklet sammerkevareemballasjegrafikk og leverte full BSCI-revisjonsdokumentasjon.
+      result: Vellykket lansert i 3 store amerikanske utend酶rskjeder. Over 5 000 enheter f酶rste 氓r med 98 % salgsgjennomstr酶mming.
+    - challenge: En australsk distribut酶r trengte et CE-sertifisert teknisk stoff-utvalg med tilpassede r酶rfarger, Hypalon-oppgraderingsalternativ og samsvar med australsk standard AS 1799.
+      solution: Vi produserte f酶rproduksjonspr酶ver med 4 r酶rfargevarianter, hentet CSM Hypalon fra japansk leverand酶r og koordinerte tredjeparts AS 1799-samsvarstesting.
+      result: 3-modells teknisk stoff-utvalg lansert i AU/NZ-markedet. Deretter vunnet et offentlig anbud for 12 patrulje-teknisk stoff-er.
+
+faq_section:
+  tagline: FAQ
+  title: B2B- og OEM vanlige sp酶rsm氓l
+  questions:
+    - q: Hva er minimumsbestillingsmengde (MOQ) for OEM av oppbl氓sbare SUP-brett?
+      a: MOQ starter p氓 5鈥?0 enheter for standard OEM-modeller. Tilpassede former og private-label-prosjekter krever minimum 200 enheter avhengig av kompleksitet. Pr酶vebestillinger og testserier er tilgjengelige for nye merkelanseringer.
+    - q: Er Seekingtex BSCI-sertifisert?
+      a: Ja. Fabrikken v氓r opprettholder gyldig BSCI-sosialt samsvarssertifikat (revisjonsrapport tilgjengelig p氓 foresp酶rsel). Vi har ogs氓 sertifisert kvalitetsstyring, og alle produkter er CE-sertifiserte. REACH- og RoHS-samsvarsdokumentasjon f酶lger med hver OEM-forsendelse.
+    - q: Hva er typisk leveringstid for en OEM-bestilling?
+      a: Standard leveringstid er 30鈥?5 dager fra bekreftet PO og depositum. Tilpasset formutvikling legger til 15鈥?0 dager for verkt酶y. Vi tilbyr ekspressproduksjon for hasteordrer og sesongtopper i f酶r-sommer-vinduet (jan鈥搈ars).
+    - q: Kan dere sende FOB Qingdao eller CIF til havnen v氓r?
+      a: Ja. Vi sender FOB Qingdao, CIF til st酶rre globale havner og DDP for kvalifiserte partnere. Logistikkteamet v氓rt h氓ndterer containerbooking, eksportdokumentasjon og tollearbeid. Vi sender til 50+ land p氓 tvers av EU-, USA-, AU- og Asia-markedene.
+
+b2b_moq: 'Standard MOQ: 5鈥?0 enheter per modell (SUP/textile productk/technical). teknisk stoff MOQ: 2鈥? enheter. Pr酶vebestillinger velkommen for nye partnerskap.'
+
+process_cta:
+  title: Se produksjonsprosessen v氓r
+  desc: F酶lg en b氓t gjennom hvert steg i produksjonen 鈥?fra r氓vare til sj酶klar farkost.
+  label: Se produksjonsprosessen 鈫?
+  link: /factory/process

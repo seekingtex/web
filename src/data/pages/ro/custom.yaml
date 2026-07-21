@@ -1,0 +1,13 @@
+hero:
+  tagline: Personalizare
+  title: Laborator de personalizare
+  subtitle: Proiectează propria placă. Brandul tău, culorile tale, specificațiile tale.
+  image: /images/seekingtex/hero/custom-banner.webp
+  imageAlt: Personalizare Seekingtex
+services:
+  - title: Producție OEM
+    description: Fabricăm după specificațiile tale cu brandul tău.
+  - title: Producție ODM
+    description: Proiectăm și fabricăm produse noi după nevoile tale.
+  - title: Dezvoltare prototipuri
+    description: Prototipare rapidă și testare a noilor designuri.

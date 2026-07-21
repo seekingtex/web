@@ -1,0 +1,30 @@
+hero:
+  tagline: معرض الصور
+  title: معرض الصور
+  subtitle: صور المنتجات، أرضية المصنع، ومغامرات على الماء
+
+albums:
+  - title: قوارب قماش تقني
+    desc: قماش تقني بهيكل ألومنيوم من 3.3 م إلى 7.5 م للدوريات والغوص والصيد والاستخدام العائلي.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: ألواح SUP
+    desc: ألواح SUP قابلة للنفخ بتقنية drop-stitch للجولات وركوب الأمواج واليوجا والصيد.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: المصنع وورشة العمل
+    desc: منشأتنا التصنيعية بمساحة 12,000 متر مربع في تشينغداو، الصين.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: هل تريد رؤية المزيد؟
+  desc: تابعنا على وسائل التواصل الاجتماعي لمعرفة أحدث إصدارات المنتجات وتحديثات المصنع ومغامرات العملاء.
+  instagram: Instagram
+  youtube: YouTube

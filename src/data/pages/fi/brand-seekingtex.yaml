@@ -1,0 +1,29 @@
+hero:
+  tagline: Br盲ndi
+  title: '{BRAND}'
+  subtitle: Merisuorituskyky盲 jokaiselle surffaajalle
+  cta: Tutustu varusteisiin 鈫?  cta_link: /products
+  secondary_cta: Opi surffaamaan
+  secondary_cta_link: /guides
+
+position:
+  tagline: Asemointi
+  subtitle: Merisuorituskyky盲 jokaiselle surffaajalle
+
+products_section:
+  tagline: Tuotteet
+  cta: Kaikki tuotteet 鈫?  cta_link: /products
+
+global_section:
+  tagline: Maailmanlaajuinen
+  title: Saatavilla {count} alueella
+
+social_section:
+  tagline: Some
+  title: Mit盲 surffaajat lukevat
+  read_guide: Lue opas 鈫?
+cta_section:
+  title: Aloita merimatkasi
+  subtitle: Jokainen tuote CE-sertifioitu. Takuu. Suunniteltu oikeaan surffaukseen.
+  cta_suffix: '鈫?
+  secondary_cta: Tietoa {BRAND}

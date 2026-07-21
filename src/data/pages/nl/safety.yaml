@@ -1,0 +1,24 @@
+hero:
+  tagline: Veiligheid
+  title: Veiligheidsnormen en certificering
+  subtitle: Elk Seekingtex-product ondergaat strenge tests en voldoet aan internationale veiligheidsnormen voor recreatief en professioneel gebruik.
+
+certifications:
+  - title: CE-certificering
+    description: Alle Seekingtex-veiligheidsuitrusting voldoet aan de CE-markeringseisen volgens de Europese Persoonlijke Beschermingsmiddelenverordening (EU) 2016/425.
+  - title: 
+    description: Reddingsvesten voldoen aan de -drijfvermogenormen. De Safety Fabric Classic biedt 50N+ drijfvermogen; de Safety Fabric Pro voldoet aan SOLAS-eisen met automatisch opblaassysteem.
+  - title: SOLAS-conformiteit
+    description: De Safety Fabric Pro is conform de SOLAS-voorschriften (Safety of Life at Sea) voor offshore maritieme en commerci毛le operaties.
+
+related:
+  title: Gerelateerd
+  links:
+    - text: Veiligheidstips
+      url: /guides/safety-tips
+    - text: Technologie
+      url: /technology
+    - text: Alle producten
+      url: /products
+    - text: Gidsen
+      url: /guides

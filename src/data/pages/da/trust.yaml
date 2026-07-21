@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Bygget til standarder, der betyder noget'
+  title: 'Stol p姘?Seekingtex'
+  subtitle: |
+    Hvert produkt vi bygger er CE-certificeret 閳?testet for sikkerhed,<br />
+    holdbarhed og ydeevne. Ingen genveje. Ingen undtagelser.
+  taglineSection: 'Certificeret. Testet. Bevist.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex-produkt gennemg姘搑 kvalitetstestning'
+
+stats:
+  title: 'Seekingtex i tal'
+  stats:
+    - title: 'CE-certificeret'
+      description: 'Alle rekreative produkter opfylder EU-sikkerhedsstandarder'
+    - title: 'ISO 9001-certificeret'
+      description: 'Kvalitetsstyringssystem siden 2012'
+    - title: 'BSCI & REACH'
+      description: 'Etisk fremstilling og materialeoverholdelse'
+    - title: '2-姘搑s garanti'
+      description: 'P姘?hvert Seekingtex-produkt 閳?uden sp閰秗gsm姘搇'
+
+features3_certifications:
+  title: 'Certificeringer & overholdelse'
+  subtitle: 'Hvert produkt er uafh蹇檔gigt testet og certificeret efter internationale standarder.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE-certificering'
+      description: 'Alle Seekingtex Fabric''er, tekniske stoffer, joller og teknisk stof''er opfylder den europ蹇檌ske CE-sikkerhedsstandard for rekreative fart閰秊er. Hvert produkt gennemg姘搑 tryk-, opdrifts- og belastningstest, f閰秗 det forlader fabrikken.'
+      icon: 'tabler:certificate'
+    - title: 'ISO 9001-certificeret'
+      description: 'Vores 12,000 m铏?Qingdao-facilitet opererer under et kvalitetsstyringssystem. Hver produktionsbatch er sporbar, dokumenteret og inspiceret.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI social overholdelse'
+      description: 'Vi er BSCI-certificerede, hvilket sikrer etisk arbejdspraksis, sikre arbejdsforhold og milj閰秏蹇檚sigt ansvar p姘?tv蹇檙s af vores forsyningsk蹇檇e.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'Alle materialer 閳?PVC, Hypalon, EVA-skum, kl蹇檅emidler 閳?overholder EU''s REACH- og RoHS-regler. Ingen forbudte stoffer, ingen kompromiser.'
+      icon: 'tabler:flask'
+    - title: 'Materialetestlaboratorium'
+      description: 'Internt materialelaboratorium tester tr蹇檏styrke, UV-bestandighed, s閰秏integritet og slidstyrke for hver stofbatch f閰秗 produktion.'
+      icon: 'tabler:microscope'
+    - title: '2-姘搑s garanti'
+      description: 'Hvert Seekingtex-produkt leveres med en to-姘搑s garanti mod produktionsfejl. Vi st姘搑 ved det, vi bygger.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Kundetillid'
+  title: 'Hvad vores kunder siger'
+  subtitle: 'Fra f閰秗stegangspadlere til professionelle fl姘揹eoperat閰秗er 閳?se hvorfor de stoler p姘?Seekingtex.'
+  items:
+    - content: 'Vi udstyrede hele vores udlejningsfl姘揹e med Seekingtex teknisk stof''er. To s蹇檚oner inde, nul fejl. CE-certificeringen gjorde forsikringsgodkendelse problemfri.'
+      name: 'Marco V.'
+      title: 'Turarrang閰秗, Kroatien'
+    - content: 'Som f閰秗stegangsk閰禸er var jeg nerv閰秙 for kvaliteten. ISO-dokumentationen og testrapporterne, de delte, gav mig fuldst蹇檔dig tillid.'
+      name: 'James T.'
+      title: 'Fabric Explorer 11-ejer, Canada'
+    - content: 'Vi arbejder med Seekingtex til vores kystpatruljeenheder. Deres QC-proces er konsekvent p姘?tv蹇檙s af hver batch 閳?den p姘搇idelighed betyder noget i missionskritiske operationer.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Fl姘揹eindk閰禸, Filippinerne'
+
+steps2_manufacturing:
+  title: 'S姘揹an sikrer vi kvalitet'
+  subtitle: 'Fra r姘搗areinspektion til endelig trykpr閰秜ning 閳?hvert produkt gennemg姘搑 en stringent kvalitetsk蹇檇e.'
+  items:
+    - title: 'R姘搗areinspektion'
+      description: 'Hver rulle PVC-stof testes for tykkelse, tr蹇檏styrke og UV-bestandighed, f閰秗 den g姘搑 ind i produktionen.'
+      icon: 'tabler:search'
+    - title: 'L閰禸ende QC'
+      description: 'Svejses閰秏me, ventilinstallationer og kammerbindinger inspiceres ved hver station under samling.'
+      icon: 'tabler:eye'
+    - title: 'Trykpr閰秜ning'
+      description: 'Hvert oppusteligt produkt pumpes op til 1,5x nominel PSI og holdes i 24 timer for at verificere luftretention og s閰秏integritet.'
+      icon: 'tabler:wind'
+    - title: 'Slutinspektion'
+      description: 'Hver enhed inspiceres for finish, hardware og emballage, f閰秗 den godkendes til forsendelse. Batchpr閰秜er sendes til vores laboratorium til destruktiv testning.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'teknisk stof-b姘揹e FAQ'
+  subtitle: 'Almindelige sp閰秗gsm姘搇 om vores teknisk stof''er med stift skrog.'
+  columns: 2
+  items:
+    - title: 'Hvilke st閰秗relser teknisk stof-b姘揹e tilbyder Seekingtex?'
+      description: 'Vi tilbyder 35 teknisk stof-modeller fra 2,5 m til 7,6 m, der d蹇檏ker alt fra kompakte tendere til kraftige kommercielle og patruljefart閰秊er. Hver model er tilg蹇檔gelig med flere konfigurationsmuligheder.'
+    - title: 'Hvad er forskellen mellem en teknisk stof og en traditionel funktionelle\ tekstiler?'
+      description: 'En teknisk stof (Technical Fabric) kombinerer et solidt glasfiber- eller aluminiums dyb-V-skrog med oppustelige Hypalon- eller PVC-r閰秗. Dette giver dig stabiliteten og lastkapaciteten fra en h姘搑d b姘揹 med st閰禿absorbering og opdrift fra en funktionel.'
+    - title: 'Hvilke motorer er kompatible med Seekingtex teknisk stof''er?'
+      description: 'Vores teknisk stof''er underst閰秚ter p姘揾蹇檔gsmotorer fra 3 HK til 250 HK afh蹇檔gigt af modellen. Hver produktside viser den maksimale motoreffekt. Vi anbefaler at konsultere din forhandler for det ideelle match.'
+    - title: 'Er Seekingtex teknisk stof''er CE-certificerede?'
+      description: 'Ja. Alle rekreative teknisk stof-modeller er CE-certificerede efter g蹇檒dende europ蹇檌ske standarder for rekreative fart閰秊er. Kommercielle og patruljemodeller opfylder yderligere stabilitets- og belastningskrav.'
+    - title: 'Hvad er garantien p姘?teknisk stof-b姘揹e?'
+      description: 'Alle Seekingtex teknisk stof''er leveres med en standard et-姘搑s garanti mod produktionsfejl, der d蹇檏ker skrogdelaminering, r閰秗s閰秏ssvigt, ventilfejl og hardwareproblemer.'
+    - title: 'Hvor mange luftkamre har Seekingtex teknisk stof''er?'
+      description: 'Vores teknisk stof''er har 3 til 7 uafh蹇檔gige luftkamre afh蹇檔gigt af modellens l蹇檔gde. Dette flerkammerdesign sikrer, at b姘揹en forbliver flydende, selv hvis et rum kompromitteres.'
+
+faqs_inflatable:
+  title: 'Oppustelige b姘揹e FAQ'
+  subtitle: 'Almindelige sp閰秗gsm姘搇 om vores oppustelige joller, tekniske stoffer og b姘揹e.'
+  columns: 2
+  items:
+    - title: 'Hvilke materialer bruges i Seekingtex oppustelige b姘揹e?'
+      description: 'Vi bruger milit蹇檙-grade PVC (1100 denier) og premium Hypalon/CSM-gummi, afh蹇檔gigt af modellen. Begge materialer er UV-stabiliserede, slidst蹇檙ke og overholder EU''s REACH- og RoHS-regler.'
+    - title: 'Hvor l蹇檔ge holder oppustelige b姘揹e?'
+      description: 'Med ordentlig pleje holder en kvalitets-PVC funktionelle\ tekstiler 7-10 姘搑, mens Hypalon-modeller kan holde 15-20 姘搑. Regelm蹇檚sig reng閰秗ing, UV-beskyttelse og korrekt opbevaring forl蹇檔ger levetiden betydeligt.'
+    - title: 'Hvilken vedligeholdelse kr蹇檝es for en funktionelle\ tekstiler?'
+      description: 'Grundl蹇檊gende vedligeholdelse omfatter skylning med ferskvand efter hver brug (is蹇檙 i saltvand), t閰秗ring f閰秗 opbevaring, 姘搑lig kontrol af ventilt蹇檛ninger og p姘揻閰秗ing af UV-beskyttelse p姘?r閰秗. Undg姘?l蹇檔gerevarende soleksponering, n姘搑 den ikke er i brug.'
+    - title: 'Kan oppustelige b姘揹e bruges i saltvand?'
+      description: 'Ja. Alle Seekingtex oppustelige b姘揹e er designet til b姘揹e ferskvands- og saltvandsbrug. Vi anbefaler skylning med ferskvand og grundig t閰秗ring efter saltvandseksponering for at forhindre korrosion af beslag og saltkrystallisering i stoffet.'
+    - title: 'Hvordan opbevarer jeg en funktionelle\ tekstiler?'
+      description: 'Pust luften ud, reng閰秗 og t閰秗 b姘揹en helt f閰秗 opbevaring. Rul l閰秙t (undg姘?skarpe folder), opbevar p姘?et k閰秎igt, t閰秗t sted v蹇檏 fra direkte sollys, og hold v蹇檏 fra betongulve for at forhindre fugtsugning.'
+    - title: 'Hvad er v蹇檊tkapaciteten for Seekingtex oppustelige b姘揹e?'
+      description: 'V蹇檊tkapaciteter sp蹇檔der fra 290 kg for vores mindste modeller til over 2000 kg for st閰秗re kommercielle fart閰秊er. Hver produktside viser den maksimale belastning for din specifikke model.'
+
+faqs_Fabric:
+  title: 'Fabric-br蹇檇der FAQ'
+  subtitle: 'Almindelige sp閰秗gsm姘搇 om vores fabrics.'
+  columns: 2
+  items:
+    - title: 'Hvilke Fabric-br蹇檛st閰秗relser er tilg蹇檔gelige?'
+      description: 'Vi tilbyder Fabric-br蹇檇der fra 9 ft til 12 ft, inklusive all-round, touring, yoga og specialdesigns. Vores bedst s蹇檒gende modeller inkluderer Tropical Breeze (10 ft) og Ocean Voyager (11 ft).'
+    - title: 'Hvad er drop-stitch-konstruktion?'
+      description: 'Drop-stitch-konstruktion bruger tusindvis af polyestertr姘揹e, der forbinder br蹇檛tets top- og bundlag, hvilket g閰秗 det muligt at holde h閰秊t lufttryk (15-20 PSI) og opn姘?en stiv, stabil platform. Dette er industristandarden for premium oppustelige Fabric''er.'
+    - title: 'Hvad er v蹇檊tgr蹇檔sen for Fabric-br蹇檇der?'
+      description: 'Vores Fabric-br蹇檇der underst閰秚ter op til 150 kg afh蹇檔gigt af model og volumen. Leviathan Wake er vores model med h閰秊est kapacitet, designet til st閰秗re ryttere og yogabrug.'
+    - title: 'Tilbyder du komplette Fabric-pakker?'
+      description: 'Ja. Hvert Fabric-br蹇檛 leveres med en komplet pakke inklusive 3-delt aluminiumspagaj, h閰秊tryks h姘搉dpumpe, spiralsnor, rejserygs蹇檏 og reparationss蹇檛. Nogle modeller inkluderer ogs姘?et aftageligt finnes蹇檛.'
+    - title: 'Hvad er garantien p姘?Fabric-br蹇檇der?'
+      description: 'Alle Seekingtex Fabric-br蹇檇der har et-姘搑s garanti mod produktionsfejl, inklusive s閰秏fejl, ventilfejl og materialedelaminering under normal brug.'
+    - title: 'Hvor lang tid tager det at pumpe et Fabric-br蹇檛 op?'
+      description: 'Ved brug af den medf閰秎gende h姘搉dpumpe tager fuld oppumpning til 15 PSI cirka 8-12 minutter. For hurtigere oppumpning anbefaler vi vores Seekingtex 12V elektriske pumpe, der pumper et br蹇檛 op p姘?under 4 minutter.'
+
+cta:
+  title: 'Vil du se certificeringerne selv?'
+  subtitle: 'Anmod om vores certificeringsportfolio, fabriksauditrapporter eller materialeoverholdelsesdokumentation. Intet NDA p姘搆r蹇檝et.'
+  actions:
+    - variant: primary
+      text: 'Anmod om certificeringsdokumenter'
+      href: '/contact'
+    - text: 'Bes閰秅 vores fabriksside'
+      href: '/factory'

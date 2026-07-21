@@ -1,0 +1,126 @@
+hero:
+  tagline: Ar-Ge Merkezi
+  title: Ar - Ge Merkezi
+  subtitle: 闄宭erlemeye Odakl璋?
+
+intro:
+  - Seekingtex Ara鑹璋媟ma ve Geli鑹irme (Ar-Ge) Merkezi, su sporlar璋?ekipmanlar璋媙da devrim yaratma misyonumuzun itici g鐪塩鐪塪鐪塺. 鑹鑹e textile products tahtalar璋?ve botlarda s鐪塺ekli inovasyon yaparak d鐪塶ya 鑾絘p璋媙daki su sporlar璋?merakl璋媗ar璋媙a daha g鐪塿enli, daha konforlu ve daha keyifli 鐪塺鐪塶ler sunuyoruz. Kendini i鑹ne adam璋嬭墽 m鐪塰endis, tasar璋媘c璋?ve su sporlar璋?tutkunlar璋媙dan olu鑹n ekibimiz, kalite, performans ve s鐪塺d鐪塺鐪塴ebilirlik 鑾借皨tas璋媙璋?s鐪塺ekli y鐪塳selterek sekt鏋歳鐪塶 gelece鑷抜ni 鑹killendiriyor.
+  - Ar-Ge tesisimiz, malzeme bilimcilerini, gemi mimarlar璋媙璋?ve 鐪塺etim m鐪塰endislerini tek 鑾絘t璋?alt璋媙da birle鑹iriyor. Kuma鑹?form鐪塴asyonu ve g鏋歷de sim鐪塴asyonundan kaynak s鐪塺eci geli鑹irme ve tam 鏋歭鑾絜kli tekstil denemelerine kadar, 鐪塺鐪塶 geli鑹irmenin her a鑹mas璋?veri odakl璋?ve testlerle do鑷抮ulanm璋嬭墽t璋媟.
+
+mission:
+  tagline: Misyonumuz
+  title: Su Sporlar璋媙璋媙 Gelece鑷抜ne Yenilik Getirmek
+  pillars:
+    - icon: lightning
+      title: Teknolojik 闄宭erleme
+      desc: Daha iyi performans ve dayan璋媖l璋媗璋媖 i鑾絠n yeni malzemeler, tasar璋媘lar ve 鐪塺etim s鐪塺e鑾絣eri sunmak.
+    - icon: design
+      title: Kullan璋媍璋?Odakl璋?Tasar璋媘
+      desc: Ergonomik ve sezgisel 鐪塺鐪塶 tasar璋媘璋媦la kullan璋媍璋?ihtiya鑾絣ar璋媙璋?derinlemesine anlamak ve a鑹ak.
+    - icon: globe
+      title: S鐪塺d鐪塺鐪塴ebilir Uygulamalar
+      desc: 鑴焑vre dostu malzeme ve s鐪塺e鑾絣er kullanarak 鑾絜vresel ayak izimizi en aza indirmek.
+    - icon: shield
+      title: Sars璋媗maz G鐪塿enlik
+      desc: S璋媖璋?test ve sertifikasyon ile en y鐪塳sek g鐪塿enlik standartlar璋媙璋?sa鑷抣amak.
+
+pillars:
+  - title: Teknolojik 闄宭erleme
+    desc: Daha iyi performans ve dayan璋媖l璋媗璋媖 i鑾絠n yeni malzemeler, tasar璋媘lar ve 鐪塺etim s鐪塺e鑾絣eri sunmak.
+    icon: tech
+  - title: 闄宭eri Malzemeler
+    desc: Geli鑹i鑹?鐪塺鐪塶 鏋歾ellikleri i鑾絠n son teknoloji PVC, Hypalon, kompozitler ve s鐪塺d鐪塺鐪塴ebilir alternatifleri ara鑹璋媟mak.
+    icon: materials
+  - title: S鐪塺d鐪塺鐪塴ebilirlik
+    desc: 'Temel taahh鐪塼: S鐪塺d鐪塺鐪塴ebilir 鐪塺etim ve geri d鏋歯鐪夎墽t鐪塺鐪塴ebilir malzemeler yoluyla 鑾絜vresel sorumlulu鑷抋 adad璋媖 kendimizi.'
+    icon: sustainability
+
+capabilities:
+  tagline: Yetenekler
+  title: Ar-Ge Yetenekleri
+  subtitle: Hammadde ara鑹璋媟mas璋媙dan nihai sertifikasyona kadar 鐪塺鐪塶 geli鑹irme 鐪墇erinde tam kontrol sa鑷抣ayan d鏋歳t temel disiplin.
+  groups:
+    - title: Malzeme Bilimi ve Kuma鑹?Teknolojisi
+      items:
+        - PVC ve Hypalon form鐪塴asyon analizi ve optimizasyonu
+        - UV stabilizasyonu, alev geciktiriciler ve antibakteriyel katk璋媗ar geli鑹irme
+        - 鑴無k katmanl璋?kuma鑹?laminasyonu ve yap璋嬭墽t璋媟ma m鐪塰endisli鑷抜
+        - H璋媧land璋媟璋媗m璋嬭墽 ya鑹and璋媟ma testleri (UV, termal, nem, tuz sisi)
+    - title: G鏋歷de M鐪塰endisli鑷抜 ve Hidrodinamik
+      items:
+        - Parametrik 3D g鏋歷de tasar璋媘璋?ve CFD optimizasyonu
+        - Yap璋媠al ve darbe y鐪塳leri i鑾絠n sonlu eleman analizi
+        - 鑴發鑾絜kli modellerde 鑾絜kme havuzu testleri ve performans do鑷抮ulama
+        - 鑴皕el g鏋歳ev profilleri i鑾絠n ki鑹ye 鏋歾el g鏋歷de geli鑹irme
+    - title: Kaynak ve Birle鑹irme Teknolojisi
+      items:
+        - RF dielektrik kaynak s鐪塺eci geli鑹irme ve optimizasyonu
+        - S璋媍ak hava, s璋媍ak takoz ve ultrasonik kaynak y鏋歯temleri
+        - Yap璋嬭墽t璋媟ma ve diki鑹?bant kalifikasyonu
+        - Kaynak mukavemeti modelleme ve 鏋歮鐪塺 tahmini
+    - title: Test, Sertifikasyon ve Uygunluk
+      items:
+        - CE uygunluk testleri
+        - Ba鑷掕皨ms璋媧 鐪夎幗鐪塶c鐪?taraf test ve sertifikasyon deste鑷抜
+        - Sat璋媙 alma kalifikasyonu i鑾絠n 鏋歾el test protokolleri geli鑹irme
+        - Sahada ar璋媧a analizi ve k鏋歬 neden ara鑹璋媟mas璋?
+
+rd_numbers:
+  tagline: 闄宯ovasyon
+  title: Say璋媗arla Ar-Ge
+  stats:
+    - value: '14'
+      label: Ar-Ge m鐪塰endisi ve bilim insan璋?
+    - value: '8'
+      label: Aktif patent ve ba鑹uru
+    - value: '6'
+      label: Uzmanla鑹璋嬭墽 laboratuvar
+    - value: 12 y璋媗
+      label: Ortalama ekip deneyimi
+
+rd_services:
+  tagline: 鑴皕el Ar-Ge
+  title: Ortaklar 闄岃幗in Ar-Ge Hizmetleri
+  services:
+    - title: 鑴皕el Malzeme Geli鑹irme
+      desc: 鑴焌l璋嬭墽ma ortam璋媙璋媧a ve performans hedeflerinize g鏋歳e uyarlanm璋嬭墽 鏋歾el kuma鑹?form鐪塴asyonlar璋? laminat yap璋媗ar璋?ve yap璋嬭墽t璋媟璋媍璋?sistemleri geli鑹iriyoruz.
+    - title: OEM / ODM 鑴簉鐪塶 M鐪塰endisli鑷抜
+      desc: Konsept 鑾絠zimlerinden 鐪塺etime haz璋媟 m鐪塰endislik paketlerine kadar ekibimiz, sizin markan璋媧 alt璋媙da botlar tasarlayabilir, prototipleyebilir ve test edebilir.
+    - title: 鑴鸿幗鐪塶c鐪?Taraf Test ve Sertifikasyon
+      desc: Ba鑷掕皨ms璋媧 malzeme testi, 鐪塺鐪塶 do鑷抮ulama ve sertifikasyon deste鑷抜 i鑾絠n ISO uyumlu test tesislerimizden yararlan璋媙.
+  cta: Ar-Ge Gereksinimlerinizi G鏋歳鐪夎墽鐪塶 閳?
+  cta_link: /contact
+
+vision:
+  tagline: Vizyonumuz
+  title: Su Sporlar璋媙璋媙 Gelece鑷抜ni 鑹killendirmek
+  body: Seekingtex, s鐪塺ekli inovasyon, sars璋媗maz kalite ve g鐪塿enlik ile s鐪塺d鐪塺鐪塴ebilirli鑷抏 kesin ba鑷抣璋媗璋媖 yoluyla 鑹鑹e kuma艧 ve textile products sekt鏋歳鐪塶e liderlik etmeyi hedefler 閳ユ敃onu鑾絫a d鐪塶ya 鑾絘p璋媙daki su sporlar璋?merakl璋媗ar璋媙璋媙 deneyimlerini zenginle鑹irir. Seekingtex Ar-Ge Merkezi, tutkunun inovasyonla bulu鑹u鑷抲, su sporlar璋?sekt鏋歳鐪?i鑾絠n yeni standartlar belirleyen yerdir.
+
+labs_section:
+  tagline: Laboratuvarlar
+  title: Laboratuvarlar璋媘璋媧
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: PVC Kuma鑹?Laboratuvar璋?
+      description: PVC ve Hypalon kuma鑹ar璋媙璋媙 鑾絜kme mukavemeti, UV direnci, a鑹ц皨nma ve d鐪夎墽鐪塳 s璋媍akl璋媖 esnekli鑷抜 a鑾借皨s璋媙dan tekstil ortamlar璋媙da uzun vadeli g鐪塿enilirlik sa鑷抣amak i鑾絠n s鐪塺ekli ara鑹璋媟ma ve testi.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: G鏋歷de M鐪塰endisli鑷抜 St鐪塪yosu
+      description: HDPE, al鐪塵inyum ve fiberglas g鏋歷deler i鑾絠n CAD destekli tasar璋媘 ve sonlu eleman analizi. 闄宭k prototip yap璋媗madan 鏋歯ce her g鏋歷de, gerilim da鑷掕皨l璋媘璋?ve darbe direnci a鑾借皨s璋媙dan dijital olarak sim鐪塴e edilir.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: RF Kaynak Merkezi
+      description: Hassas s璋媍akl璋媖 ve bas璋媙鑾?kontrol鐪塶e sahip 鏋歾el radyo frekansl璋?kaynak tesisi, 鑹鑹e tekneler i鑾絠n ISO 6185 standartlar璋媙璋?a鑹n y鐪塳sek mukavemetli, hava ge鑾絠rmez diki鑹er 鐪塺etir.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Hidrodinamik Test Havuzu
+      description: G鏋歷de 鑹kli, s鐪墇鐪塴me verimlili鑷抜, denge ve yak璋媡 verimlili鑷抜ni 鑾絜鑹tli y鐪塳ler ve tekstil ko鑹llar璋媙da optimize etmek i鑾絠n dahili test havuzumuzda 鏋歭鑾絜kli model testleri.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Prototip At鏋歭yesi
+      description: Yeni modellerin in鑹 edildi鑷抜, monte edildi鑷抜 ve test edildi鑷抜 tam 鏋歭鑾絜kli prototip olu鑹urma ve donatma tesisi. Her prototip, 鐪塺etim onay璋媙dan 鏋歯ce en az 20 saatlik suda test program璋媙dan ge鑾絜r.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Kalite ve Denetim Laboratuvar璋?
+      description: 鑴焑kme testleri, hava tutma d鏋歯g鐪塴eri, diki鑹?soyulma testleri ve malzeme sertifikasyonu yaparak at鏋歭yeden 鑾借皨kan her botun yay璋媙lanm璋嬭墽 鑹rtnamelerimize uygun olmas璋媙璋?sa鑷抣ayan 鏋歾el kalite g鐪塿ence laboratuvar璋?
+      href: /randdcenter/quality-inspection-lab

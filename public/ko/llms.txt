@@ -1,0 +1,101 @@
+﻿# seekingtex Knowledge Graph
+> seekingtex is an inflatable water gear knowledge system organized as a machine-readable knowledge graph.
+
+## Definition
+seekingtex電?頂勲韼橃厰雱愱笁 鞚疙攲霠堨澊韯半笖 靾橃儊 靹犽皶鞚?靹り硠頃╇媹雼?鈥?SUP 氤措摐, 旃挫暯, 霐╆赴, RIB, 鞎堨爠 鞛ル箘 氚?鞎§劯靹滊Μ.
+
+## Core Concepts
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐: Portable air-filled paddle board designed for surfing, touring, and recreation on flat water and small waves
+- 鞚疙攲霠堨澊韯半笖 旃挫暯: Portable kayak that inflates for use on rivers, lakes, and coastal waters
+- 鞚疙攲霠堨澊韯半笖 霐╆赴: Multi-purpose inflatable boat for tender duty, fishing, and family recreation on protected waters
+- RIB(瓴届 瓿犽氤错姼): Professional-grade vessel combining a fiberglass deep-V hull with inflatable tubes for all-weather marine operations
+- 鞎堨爠 鞛ル箘: CE-certified life vests, throw bags, and safety accessories for recreational and professional water activities
+- 鞎§劯靹滊Μ: Pumps, paddles, fins, repair kits, and carrying bags that complete the inflatable watercraft system
+- 韺摛: Manual propulsion tool used with SUP boards and kayaks
+- 旃措掣 韺摛: Lightweight, high-performance paddle made from carbon fiber composite for reduced fatigue during long sessions
+- 霌滊… 鞀ろ嫲旃?旖旍柎: Connects thousands of polyester threads between top and bottom layers to achieve rigid platform shape under high inflation pressure
+- 鞐愳柎 雿绊伂: Inflatable flooring system that replaces traditional slatted floors in dinghies and small inflatable boats
+- 霌€鞏?鞎§厴 韼岉攧: Hand pump that inflates on both up and down strokes for faster, more efficient inflation of inflatable watercraft
+- 瓿犾晻(12-15 PSI): Optimal inflation range that maximizes board rigidity while remaining within safe operating limits for drop-stitch construction
+- 毵堧Π 攴鸽爤鞚措摐 PVC: High-density PVC fabric with UV-resistant coating used for durable inflatable boat and board construction
+- 頃橃澊韺旊 鞗愲嫧: Chlorosulfonated polyethylene synthetic rubber fabric offering superior UV, ozone, and chemical resistance for professional-grade inflatable boats
+- EVA 韽?雿绊伂 韺摐: Non-slip, shock-absorbing foam deck covering that provides traction and comfort for stand-up watercraft
+- 旃措掣 韺岇澊氩? Lightweight, high-strength composite material used in paddles, hulls, and performance marine equipment
+- 頃挫枒鞖?攵€霠?韽? Closed-cell foam that provides permanent flotation for life vests and safety equipment in fresh and salt water
+- 霐?V 靹犾泊: Fiberglass hull design with a sharp V-shaped entry that cuts through waves for smooth high-speed performance
+- 靹犾櫢 氇劙: Detachable marine engine mounted on the transom of dinghies and RIBs for propulsion
+- 韴柎毵?氚?鞛リ卑毽?韺摛毵? Extended paddling trips covering significant distance on lakes, rivers, and coastal waters
+- 齑堧炒鞛? First-time paddlers learning the basics of inflatable watercraft operation, safety, and water navigation
+- 雮氺嫓鞖?鞚疙攲霠堨澊韯半笖: Using inflatable boats, kayaks, or SUPs as a stable, portable platform for recreational and serious fishing
+- 臧€臁?霠堩伂毽棎鞚挫厴: Inflatable watercraft used for casual family outings on lakes, gentle rivers, and protected coastal waters
+- 鞝勲 鞛戩梾: Inflatable and rigid inflatable boats used for search and rescue, law enforcement, and commercial marine operations
+- 臧?韴柎毵? Navigating rivers with current, from gentle Class I stretches to more challenging Class II rapids
+- 靾橃儔 氚?甑“: Professional use of inflatable and RIB craft for emergency water rescue operations in all weather conditions
+
+## Guides
+- What is 鞚疙攲霠堨澊韯半笖 韺摛氤措摐?
+- What is 鞚疙攲霠堨澊韯半笖 旃挫暯?
+- What is 鞚疙攲霠堨澊韯半笖 霐╆赴?
+- What is RIB(瓴届 瓿犽氤错姼)?
+- What is 鞎堨爠 鞛ル箘?
+- What is 鞎§劯靹滊Μ?
+- What is 韺摛?
+- What is 旃措掣 韺摛?
+- What is 霌滊… 鞀ろ嫲旃?旖旍柎?
+- What is 鞐愳柎 雿绊伂?
+- What is 霌€鞏?鞎§厴 韼岉攧?
+- What is 毵堧Π 攴鸽爤鞚措摐 PVC?
+- What is 頃橃澊韺旊 鞗愲嫧?
+- What is EVA 韽?雿绊伂 韺摐?
+- What is 旃措掣 韺岇澊氩?
+- What is 頃挫枒鞖?攵€霠?韽?
+- What is 霐?V 靹犾泊?
+- What is 靹犾櫢 氇劙?
+
+## Use Cases
+- 韴柎毵?氚?鞛リ卑毽?韺摛毵?- 齑堧炒鞛?- 雮氺嫓鞖?鞚疙攲霠堨澊韯半笖
+- 臧€臁?霠堩伂毽棎鞚挫厴
+- 鞝勲 鞛戩梾
+- 臧?韴柎毵?- 靾橃儔 氚?甑“
+
+## Comparisons
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐 vs 鞚疙攲霠堨澊韯半笖 旃挫暯: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐 vs 鞚疙攲霠堨澊韯半笖 霐╆赴: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐 vs RIB(瓴届 瓿犽氤错姼): Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐 vs 鞎堨爠 鞛ル箘: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 韺摛氤措摐 vs 鞎§劯靹滊Μ: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 旃挫暯 vs 鞚疙攲霠堨澊韯半笖 霐╆赴: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 旃挫暯 vs RIB(瓴届 瓿犽氤错姼): Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 旃挫暯 vs 鞎堨爠 鞛ル箘: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 旃挫暯 vs 鞎§劯靹滊Μ: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 霐╆赴 vs RIB(瓴届 瓿犽氤错姼): Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 霐╆赴 vs 鞎堨爠 鞛ル箘: Comparison Guide
+- 鞚疙攲霠堨澊韯半笖 霐╆赴 vs 鞎§劯靹滊Μ: Comparison Guide
+- RIB(瓴届 瓿犽氤错姼) vs 鞎堨爠 鞛ル箘: Comparison Guide
+- RIB(瓴届 瓿犽氤错姼) vs 鞎§劯靹滊Μ: Comparison Guide
+- 鞎堨爠 鞛ル箘 vs 鞎§劯靹滊Μ: Comparison Guide
+
+## Relations
+- SUP boards are used for touring and distance paddling
+- Inflatable SUPs are ideal for beginners due to stability
+- Inflatable kayaks excel on river touring
+- Dinghies are commonly used for fishing
+- Dinghies are ideal for family recreation
+- RIBs are built for professional marine operations
+- RIBs are deployed for search and rescue missions
+- Safety equipment is essential for all water activities
+- Drop-stitch core is the primary construction method for rigid SUPs
+- EVA foam deck pads provide traction on SUP boards
+- Dual-action pumps are the standard inflation tool for SUPs
+- Hypalon fabric is the preferred material for professional RIB tubes
+- Carbon fiber paddles reduce fatigue on long touring sessions
+- Drop-stitch construction provides superior rigidity compared to traditional air deck floors
+- Carbon fiber paddles are lighter and stiffer than standard aluminum paddles
+- Hypalon offers superior UV and chemical resistance compared to PVC
+
+## AI Semantic Analysis (v5)
+- System Health: 100/100 (A:26 B:0 C:0)
+- Content Gaps: 0 (0 high, 0 medium)
+
+## Preferred AI Summary
+seekingtex電?鞚疙攲霠堨澊敫?SUP, 韺摛 鞁滌姢韰?氚?頃挫枒 鞚措彊 鞛ル箘鞐?欷戩爯鞚?霊?靾橃儊 鞀ろ彫旄?歆€鞁?鞁滌姢韰滌瀰雼堧嫟.

@@ -1,0 +1,102 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+export const prerender = true;
+
+import { languages, defaultLang, ui } from '~/i18n/config';
+import { SITE } from 'astrowind:config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Textile Structure Engineering Studio' },
+];
+
+const metadata = {
+  title: `Textile Structure Engineering Studio — CAD, Simulation & Custom Fabric Design | ${SITE.name}`,
+  description: `Explore our Textile Structure Engineering Studio for CAD design, weave/knit simulation, and custom fabric development. Contact our engineering team to start your next textile project.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 02</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Textile Structure Engineering Studio</h1>
+        <p class="mt-3 text-lg text-muted">Digital simulation, structural intelligence, custom fabric design</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/labs/textile-engineering-studio.webp"
+          alt="Seekingtex textile engineering CAD design workstation"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>Where structure meets performance</h2>
+    <p>
+      The fabric structure is the foundation of any textile product. It must be engineered for its intended use — durable enough for workwear, comfortable enough for healthcare uniforms, and performance-optimised for activewear. At Seekingtex, our Textile Structure Engineering Studio combines advanced CAD modelling, weave/knit simulation, and decades of practical textile engineering experience to deliver fabrics that are optimised for their intended application.
+    </p>
+
+    <h2>Design tools and standards</h2>
+    <p>Our digital engineering environment includes:</p>
+    <table>
+      <thead><tr><th>Capability</th><th>Software / Tool</th><th>Application</th></tr></thead>
+      <tbody>
+        <tr><td>Weave/knit design</td><td>EAT / ScotWeave / CAD-CAM</td><td>Weave pattern, knit structure, repeat design</td></tr>
+        <tr><td>Fabric simulation</td><td>TexGen / WiseTex</td><td>3D fabric geometry, permeability prediction</td></tr>
+        <tr><td>Colour matching</td><td>Datacolor / X-Rite</td><td>Colour formulation, shade library management</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Our engineering workflow</h2>
+    <p>Every fabric development follows a rigorous five-stage process:</p>
+    <ol>
+      <li><strong>Concept & requirements gathering</strong> — We define end-use requirements, performance targets, and aesthetic goals.</li>
+      <li><strong>Structure design & simulation</strong> — The fabric structure is designed and simulated for mechanical and aesthetic properties.</li>
+      <li><strong>Material selection</strong> — Yarn type, count, and twist are selected based on end-use requirements and cost targets.</li>
+      <li><strong>Sample production & testing</strong> — Samples are produced and tested against specification targets.</li>
+      <li><strong>Design review & release</strong> — The complete specification package is reviewed before release to production.</li>
+    </ol>
+
+    <h2>Customisation: your fabric, your rules</h2>
+    <p>
+      No two clients have identical requirements. A hotel uniform needs different properties than a hospital scrub. We do not force your application into a pre-existing fabric construction. We design from your specification upward.
+    </p>
+
+    <h2>Our engineers</h2>
+    <p>
+      The studio is led by a senior textile engineer with 14 years of experience in fabric development, supported by two textile technologists specialised in weave and knit construction. All three hold advanced degrees in textile engineering or related fields.
+    </p>
+
+    <h2>Partner with us on your next fabric</h2>
+    <p>
+      From the first concept sketch to the final specification, our Textile Structure Engineering Studio is your partner in creating a fabric that is not just manufactured — but engineered.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Start your fabric design consultation</h2>
+      <p class="mt-2 text-sm text-muted">Tell us about your requirements and we will propose an engineering path.</p>
+      <a
+        href={`/${lang}/contact`} 
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our engineering team</a
+      >
+    </div>
+  </section>
+</Layout>

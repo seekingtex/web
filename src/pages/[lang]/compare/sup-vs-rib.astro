@@ -1,0 +1,111 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('compare.supVsRib.title') || 'Polyester vs Nylon — Which Performance Fabric Is Right for You?'}`,
+  description: t('compare.supVsRib.desc') || 'Compare polyester and nylon performance fabrics across durability, moisture management, cost, and use cases.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.supVsRib.headline') || 'Polyester vs Nylon — Which Performance Fabric Is Right for You?',
+      description: t('compare.supVsRib.desc') || 'Compare polyester and nylon performance fabrics across durability, moisture management, cost, and use cases.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: `https://seekingtex.com/${lang}/compare/sup-vs-rib` }}
+  />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: t('home') || 'Home', href: `/${lang}/` }, { name: t('compare.label') || 'Compare', href: `/${lang}/compare` }, { name: t('compare.supVsRib.short') || 'Polyester vs Nylon' }]} />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700">&larr; {t('compare.backToProducts') || 'Products'}</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('compare.supVsRib.heading') || 'Polyester vs Nylon Fabric'}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('compare.supVsRib.subtitle') || 'A practical comparison between two of the most widely used synthetic fibers in performance textiles.'}</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsRib.col1Title') || 'Polyester'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.propulsion') || 'Durability:'}</strong> {t('compare.supVsRib.supPropDesc') || 'Excellent UV resistance. Good abrasion resistance. Low moisture absorption (0.4%). Dries quickly.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.portability') || 'Moisture Management:'}</strong> {t('compare.supVsRib.supPortDesc') || 'Hydrophobic fibers wick moisture effectively. Quick-drying performance ideal for activewear and outdoor gear.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.cost') || 'Cost:'}</strong> {t('compare.supVsRib.supCostDesc') || '$0.80-$2.50 per yard. Most cost-effective synthetic fiber. High availability in global markets.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.fitness') || 'Applications:'}</strong> {t('compare.supVsRib.supFitDesc') || 'Sportswear, outdoor gear, home textiles, medical textiles, industrial fabrics, luggage fabrics.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.bestFor') || 'Best for:'}</strong> {t('compare.supVsRib.supBestDesc') || 'UV-exposed applications, cost-sensitive projects, moisture-wicking apparel, durable everyday textiles.'}</span></li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsRib.col2Title') || 'Nylon'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.propulsion') || 'Durability:'}</strong> {t('compare.supVsRib.ribPropDesc') || 'Superior abrasion resistance (3x polyester). Higher tensile strength. Higher moisture absorption (4%).'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.portability') || 'Moisture Management:'}</strong> {t('compare.supVsRib.ribPortDesc') || 'More hydrophilic than polyester. Greater moisture regain can be uncomfortable against skin unless specially treated.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.cost') || 'Cost:'}</strong> {t('compare.supVsRib.ribCostDesc') || '$1.50-$4.00 per yard. Premium fiber with higher raw material costs and more complex processing.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.performance') || 'Applications:'}</strong> {t('compare.supVsRib.ribPerfDesc') || 'Performance outerwear, hosiery, parachutes, airbags, carpets, swimwear, high-wear industrial textiles.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.supVsRib.bestFor') || 'Best for:'}</strong> {t('compare.supVsRib.ribBestDesc') || 'High-wear applications, strength-critical uses, premium apparel, abrasion-prone environments.'}</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">{t('compare.supVsRib.tableTitle') || 'Side-by-Side Comparison'}</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">{t('compare.supVsRib.supShort') || 'Polyester'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">{t('compare.supVsRib.ribShort') || 'Nylon'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              [t('compare.supVsRib.r1') || 'Tensile Strength', t('compare.supVsRib.r1a') || 'Moderate (5-8 g/den)', t('compare.supVsRib.r1b') || 'High (6-9 g/den)'],
+              [t('compare.supVsRib.r2') || 'Abrasion Resistance', t('compare.supVsRib.r2a') || 'Good', t('compare.supVsRib.r2b') || 'Excellent (3x polyester)'],
+              [t('compare.supVsRib.r3') || 'UV Resistance', t('compare.supVsRib.r3a') || 'Excellent', t('compare.supVsRib.r3b') || 'Poor (requires stabilization)'],
+              [t('compare.supVsRib.r4') || 'Moisture Absorption', t('compare.supVsRib.r4a') || '0.4% (low)', t('compare.supVsRib.r4b') || '4% (moderate)'],
+              [t('compare.supVsRib.r5') || 'Drying Speed', t('compare.supVsRib.r5a') || 'Fast', t('compare.supVsRib.r5b') || 'Moderate'],
+              [t('compare.supVsRib.r6') || 'Elastic Recovery', t('compare.supVsRib.r6a') || 'Good', t('compare.supVsRib.r6b') || 'Excellent'],
+              [t('compare.supVsRib.r7') || 'Cost per Yard', t('compare.supVsRib.r7a') || '$0.80-$2.50', t('compare.supVsRib.r7b') || '$1.50-$4.00'],
+              [t('compare.supVsRib.r8') || 'Dyeability', t('compare.supVsRib.r8a') || 'Disperse dye (limited color range)', t('compare.supVsRib.r8b') || 'Acid dye (vibrant colors)'],
+              [t('compare.supVsRib.r9') || 'Melting Point', t('compare.supVsRib.r9a') || '250-265°C', t('compare.supVsRib.r9b') || '215-255°C'],
+              [t('compare.supVsRib.r10') || 'Chemical Resistance', t('compare.supVsRib.r10a') || 'Excellent (acid resistant)', t('compare.supVsRib.r10b') || 'Moderate (alkali sensitive)'],
+              [t('compare.supVsRib.r11') || 'Pilling Resistance', t('compare.supVsRib.r11a') || 'Good', t('compare.supVsRib.r11b') || 'Moderate'],
+              [t('compare.supVsRib.r12') || 'Recyclability', t('compare.supVsRib.r12a') || 'Widely recycled (rPET)', t('compare.supVsRib.r12b') || 'Limited recycling infrastructure'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">{t('compare.supVsRib.recTitle') || 'Which Should You Choose?'}</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">{t('compare.supVsRib.recDesc') || 'Choose polyester if you need UV-stable, cost-effective fabric for outdoor applications, sportswear, or technical uses where quick drying and moisture wicking are critical. Choose nylon if you require maximum abrasion resistance, tensile strength, and elastic recovery for high-performance or high-wear applications. Many textile products combine both through blending or layering to leverage the strengths of each fiber.'}</p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a href={`/${lang}/products`} class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">{t('compare.browseProducts') || 'Browse Products'}</a>
+        <a href={`/${lang}/guides`} class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">{t('compare.buyingGuides') || 'Buying Guides'}</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>{t('compare.supVsRib.aiBlock') || 'Comprehensive comparison between polyester and nylon synthetic fibers for textile applications. Covers tensile strength, abrasion resistance, UV stability, moisture absorption, drying speed, elastic recovery, cost, dyeability, melting point, chemical resistance, pilling resistance, and recyclability. Polyester offers excellent UV stability, low moisture absorption (0.4%), $0.80-$2.50 per yard, and is widely recycled. Nylon offers 3x the abrasion resistance, higher tensile strength (6-9 g/den), excellent elastic recovery, $1.50-$4.00 per yard, and takes vibrant acid dyes.'}</p>
+  </section>
+</Layout>

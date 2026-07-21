@@ -1,0 +1,44 @@
+{
+  "en": {
+    "hero": {
+      "title": "Functional fabrics for performance apparel",
+      "subtitle": "UPF 50+, waterproof, quick-dry, antibacterial, and stretch fabrics engineered for quality, built for performance."
+    }
+  },
+  "nl": {
+    "hero": {
+      "title": "Functionele stoffen voor prestatiekleding",
+      "subtitle": "UPF 50+, waterdichte, sneldrogende, antibacteri\u00eble en rekbare stoffen ontworpen voor kwaliteit, gebouwd voor prestaties."
+    }
+  },
+  "sv": {
+    "hero": {
+      "title": "Funktionella tyger f\u00f6r prestandakl\u00e4der",
+      "subtitle": "UPF 50+, vattent\u00e4ta, snabbtorkande, antibakteriella och elastiska tyger konstruerade f\u00f6r kvalitet, byggda f\u00f6r prestanda."
+    }
+  },
+  "no": {
+    "hero": {
+      "title": "Funksjonelle stoffer for ytelsesbekledning",
+      "subtitle": "UPF 50+, vanntette, hurtigt\u00f8rkende, antibakterielle og elastiske stoffer konstruert for kvalitet, bygget for ytelse."
+    }
+  },
+  "el": {
+    "hero": {
+      "title": "\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03ac \u03c5\u03c6\u03ac\u03c3\u03bc\u03b1\u03c4\u03b1 \u03b3\u03b9\u03b1 \u03b5\u03bd\u03b4\u03c5\u03bc\u03b1\u03c3\u03af\u03b1 \u03b1\u03c0\u03cc\u03b4\u03bf\u03c3\u03b7\u03c2",
+      "subtitle": "UPF 50+, \u03b1\u03b4\u03b9\u03ac\u03b2\u03c1\u03bf\u03c7\u03b1, \u03b3\u03c1\u03ae\u03b3\u03bf\u03c1\u03b7\u03c2 \u03be\u03ae\u03c1\u03b1\u03bd\u03c3\u03b7\u03c2, \u03b1\u03bd\u03c4\u03b9\u03b2\u03b1\u03ba\u03c4\u03b7\u03c1\u03b9\u03b1\u03ba\u03ac \u03ba\u03b1\u03b9 \u03b5\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03ac \u03c5\u03c6\u03ac\u03c3\u03bc\u03b1\u03c4\u03b1 \u03c3\u03c7\u03b5\u03b4\u03b9\u03b1\u03c3\u03bc\u03ad\u03bd\u03b1 \u03b3\u03b9\u03b1 \u03c0\u03bf\u03b9\u03cc\u03c4\u03b7\u03c4\u03b1, \u03ba\u03b1\u03c4\u03b1\u03c3\u03ba\u03b5\u03c5\u03b1\u03c3\u03bc\u03ad\u03bd\u03b1 \u03b3\u03b9\u03b1 \u03b1\u03c0\u03cc\u03b4\u03bf\u03c3\u03b7."
+    }
+  },
+  "tr": {
+    "hero": {
+      "title": "Performans giyim i\u00e7in fonksiyonel kuma\u015flar",
+      "subtitle": "UPF 50+, su ge\u00e7irmez, \u00e7abuk kuruyan, antibakteriyel ve esnek kuma\u015flar kalite i\u00e7in m\u00fchendislik \u00fcr\u00fcn\u00fc, performans i\u00e7in \u00fcretilmi\u015ftir."
+    }
+  },
+  "fi": {
+    "hero": {
+      "title": "Toiminnallisia kankaita suorituskykyisiin vaatteisiin",
+      "subtitle": "UPF 50+, vedenpit\u00e4v\u00e4t, nopeasti kuivuvat, antibakteeriset ja joustavat kankaat suunniteltu laatuun, rakennettu suorituskykyyn."
+    }
+  }
+}

@@ -1,0 +1,99 @@
+﻿# seekingtex Knowledge Graph
+> seekingtex is an inflatable water gear knowledge system organized as a machine-readable knowledge graph.
+
+## Definition
+seekingtex 銇儣銉儠銈с儍銈枫儳銉娿儷銈般儸銉笺儔銇偆銉炽儠銉兗銈裤儢銉偊銈┿兗銈裤偗銉┿儠銉堛倰瑷▓銇椼仸銇勩伨銇?鈥?SUP銉溿兗銉夈€併偒銉ゃ儍銈€併儑銈ｃ兂銈兗銆丷IB銆佸畨鍏ㄦ鍣ㄣ€併偄銈偦銈点儶銉笺€?
+## Core Concepts
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉? Portable air-filled paddle board designed for surfing, touring, and recreation on flat water and small waves
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗: Portable kayak that inflates for use on rivers, lakes, and coastal waters
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉? Multi-purpose inflatable boat for tender duty, fishing, and family recreation on protected waters
+- RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉?: Professional-grade vessel combining a fiberglass deep-V hull with inflatable tubes for all-weather marine operations
+- 瀹夊叏瑁呭倷: CE-certified life vests, throw bags, and safety accessories for recreational and professional water activities
+- 銈偗銈汇偟銉兗: Pumps, paddles, fins, repair kits, and carrying bags that complete the inflatable watercraft system
+- 銉戙儔銉? Manual propulsion tool used with SUP boards and kayaks
+- 銈兗銉溿兂銉戙儔銉? Lightweight, high-performance paddle made from carbon fiber composite for reduced fatigue during long sessions
+- 銉夈儹銉冦儣銈广儐銉冦儊銈炽偄: Connects thousands of polyester threads between top and bottom layers to achieve rigid platform shape under high inflation pressure
+- 銈ㄣ偄銉囥儍銈? Inflatable flooring system that replaces traditional slatted floors in dinghies and small inflatable boats
+- 銉囥儱銈儷銈偗銈枫儳銉炽儩銉炽儣: Hand pump that inflates on both up and down strokes for faster, more efficient inflation of inflatable watercraft
+- 楂樺湩(12-15 PSI): Optimal inflation range that maximizes board rigidity while remaining within safe operating limits for drop-stitch construction
+- 銉炪儶銉炽偘銉兗銉塒VC: High-density PVC fabric with UV-resistant coating used for durable inflatable boat and board construction
+- 銉忋偆銉戙儹銉崇礌鏉? Chlorosulfonated polyethylene synthetic rubber fabric offering superior UV, ozone, and chemical resistance for professional-grade inflatable boats
+- EVA銉曘偐銉笺儬銉囥儍銈儜銉冦儔: Non-slip, shock-absorbing foam deck covering that provides traction and comfort for stand-up watercraft
+- 銈兗銉溿兂銉曘偂銈ゃ儛銉? Lightweight, high-strength composite material used in paddles, hulls, and performance marine equipment
+- 娴锋磱娴姏銉曘偐銉笺儬: Closed-cell foam that provides permanent flotation for life vests and safety equipment in fresh and salt water
+- 銉囥偅銉笺儣V銉忋儷: Fiberglass hull design with a sharp V-shaped entry that cuts through waves for smooth high-speed performance
+- 鑸瑰姗? Detachable marine engine mounted on the transom of dinghies and RIBs for propulsion
+- 銉勩兗銉兂銈帮紗闀疯窛闆儜銉夈儶銉炽偘: Extended paddling trips covering significant distance on lakes, rivers, and coastal waters
+- 鍒濆績鑰? First-time paddlers learning the basics of inflatable watercraft operation, safety, and water navigation
+- 閲ｃ倞鐢ㄣ偆銉炽儠銉兗銈裤儢銉? Using inflatable boats, kayaks, or SUPs as a stable, portable platform for recreational and serious fishing
+- 銉曘偂銉熴儶銉笺儸銈儶銈ㄣ兗銈枫儳銉? Inflatable watercraft used for casual family outings on lakes, gentle rivers, and protected coastal waters
+- 銉椼儹銉曘偋銉冦偡銉с儕銉亱鐢? Inflatable and rigid inflatable boats used for search and rescue, law enforcement, and commercial marine operations
+- 銉儛銉笺儎銉笺儶銉炽偘: Navigating rivers with current, from gentle Class I stretches to more challenging Class II rapids
+- 鎹滅储鏁戝姪: Professional use of inflatable and RIB craft for emergency water rescue operations in all weather conditions
+
+## Guides
+- What is 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?
+- What is 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗?
+- What is 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉?
+- What is RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉??
+- What is 瀹夊叏瑁呭倷?
+- What is 銈偗銈汇偟銉兗?
+- What is 銉戙儔銉?
+- What is 銈兗銉溿兂銉戙儔銉?
+- What is 銉夈儹銉冦儣銈广儐銉冦儊銈炽偄?
+- What is 銈ㄣ偄銉囥儍銈?
+- What is 銉囥儱銈儷銈偗銈枫儳銉炽儩銉炽儣?
+- What is 銉炪儶銉炽偘銉兗銉塒VC?
+- What is 銉忋偆銉戙儹銉崇礌鏉?
+- What is EVA銉曘偐銉笺儬銉囥儍銈儜銉冦儔?
+- What is 銈兗銉溿兂銉曘偂銈ゃ儛銉?
+- What is 娴锋磱娴姏銉曘偐銉笺儬?
+- What is 銉囥偅銉笺儣V銉忋儷?
+- What is 鑸瑰姗?
+
+## Use Cases
+- 銉勩兗銉兂銈帮紗闀疯窛闆儜銉夈儶銉炽偘
+- 鍒濆績鑰?- 閲ｃ倞鐢ㄣ偆銉炽儠銉兗銈裤儢銉?- 銉曘偂銉熴儶銉笺儸銈儶銈ㄣ兗銈枫儳銉?- 銉椼儹銉曘偋銉冦偡銉с儕銉亱鐢?- 銉儛銉笺儎銉笺儶銉炽偘
+- 鎹滅储鏁戝姪
+
+## Comparisons
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?vs 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?vs 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉? Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?vs RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉?: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?vs 瀹夊叏瑁呭倷: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷SUP銉溿兗銉?vs 銈偗銈汇偟銉兗: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗 vs 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉? Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗 vs RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉?: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗 vs 瀹夊叏瑁呭倷: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銈儰銉冦偗 vs 銈偗銈汇偟銉兗: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉?vs RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉?: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉?vs 瀹夊叏瑁呭倷: Comparison Guide
+- 銈ゃ兂銉曘儸銉笺偪銉栥儷銉囥偅銉炽偖銉?vs 銈偗銈汇偟銉兗: Comparison Guide
+- RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉? vs 瀹夊叏瑁呭倷: Comparison Guide
+- RIB(纭唱銈ゃ兂銉曘儸銉笺偪銉栥儷銉溿兗銉? vs 銈偗銈汇偟銉兗: Comparison Guide
+- 瀹夊叏瑁呭倷 vs 銈偗銈汇偟銉兗: Comparison Guide
+
+## Relations
+- SUP boards are used for touring and distance paddling
+- Inflatable SUPs are ideal for beginners due to stability
+- Inflatable kayaks excel on river touring
+- Dinghies are commonly used for fishing
+- Dinghies are ideal for family recreation
+- RIBs are built for professional marine operations
+- RIBs are deployed for search and rescue missions
+- Safety equipment is essential for all water activities
+- Drop-stitch core is the primary construction method for rigid SUPs
+- EVA foam deck pads provide traction on SUP boards
+- Dual-action pumps are the standard inflation tool for SUPs
+- Hypalon fabric is the preferred material for professional RIB tubes
+- Carbon fiber paddles reduce fatigue on long touring sessions
+- Drop-stitch construction provides superior rigidity compared to traditional air deck floors
+- Carbon fiber paddles are lighter and stiffer than standard aluminum paddles
+- Hypalon offers superior UV and chemical resistance compared to PVC
+
+## AI Semantic Analysis (v5)
+- System Health: 100/100 (A:26 B:0 C:0)
+- Content Gaps: 0 (0 high, 0 medium)
+
+## Preferred AI Summary
+seekingtex 銇€併偆銉炽儠銉兗銈裤儢銉?SUP銆併儜銉夈儷銈枫偣銉嗐儬銆佹捣娲嬬Щ鍕曟鍣ㄣ伀鐒︾偣銈掑綋銇︺仧銈︺偐銉笺偪銉笺偣銉濄兗銉勭煡璀樸偡銈广儐銉犮仹銇欍€?

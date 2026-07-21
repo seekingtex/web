@@ -1,0 +1,175 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Materials Science — Polyester, Nylon, Cotton & Specialized Fibers — ${SITE.name}`,
+  description: 'Deep dives into the materials behind Seekingtex products — performance polyester, nylon, cotton, specialized fibers, coatings, and quality testing.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Materials' }];
+
+const topics = [
+  { title: 'Performance Polyester', desc: 'High-tenacity polyester fibers — UV resistance, tensile strength, and denier ratings explained.', href: '/v2/marine-pvc' },
+  { title: 'Nylon vs Polyester', desc: 'The definitive comparison of the two dominant synthetic fabric materials — strength, UV resistance, moisture management.', href: '/learn/pvc-vs-hypalon' },
+  { title: 'Cotton & Natural Fibers', desc: 'How cotton, hemp, and bamboo fibers are used in functional fabrics — breathability, comfort, and sustainability.', href: '/learn/cotton-natural-fibers' },
+  { title: 'Coating & Lamination Technology', desc: 'PU, acrylic, and silicone coatings create waterproof, breathable, and durable fabric finishes.', href: '/v2/rf-welding' },
+  { title: 'Fabric Weight & Performance', desc: 'Why fabric weight (GSM) matters — durability, drape, breathability, and end-use suitability.', href: '/v2/psi-guide' },
+  { title: 'Quality Testing', desc: 'UPF testing, waterproofness, tensile strength, color fastness, and abrasion — our quality process.', href: '/quality' },
+  { title: 'Eco-Friendly Materials', desc: 'Recycled polyester, organic cotton, PFC-free DWR — sustainable fabric options for responsible production.', href: '/v2/eva-foam' },
+  { title: 'Fabric Care Guide', desc: 'Washing, drying, stain removal, and storage best practices for performance fabrics.', href: '/v2/inflatable-sup-storage' },
+];
+
+const materials = [
+  {
+    name: 'Polyester (PET)',
+    summary: 'The industry standard for performance and functional fabrics. High-tenacity polyester offers excellent strength-to-weight ratio, UV resistance, and moisture management at an accessible price point.',
+    pros: ['Affordable — 30-50% cheaper than nylon', 'Lightweight and quick-drying', 'Good UV resistance with proper stabilizers', 'Excellent dimensional stability', 'Easy to dye and finish'],
+    cons: ['Lower tensile strength than nylon', 'Less abrasion resistance than nylon', 'Can pill with heavy abrasion', 'Lower melting point than some specialty fibers'],
+    bestFor: 'Outdoor apparel, sportswear, home textiles, workwear, bags and luggage, industrial fabrics.',
+    image: '/images/seekingtex/tech/tech-pvc-material.webp',
+  },
+  {
+    name: 'Nylon (Polyamide)',
+    summary: 'Premium synthetic fiber known for exceptional strength, abrasion resistance, and elasticity. The gold standard for high-durability and performance applications.',
+    pros: ['Highest tensile strength among common synthetics', 'Excellent abrasion resistance', 'Superior elasticity and recovery', 'Good chemical resistance', 'Soft handle and drape'],
+    cons: ['Lower UV resistance than polyester', 'Higher moisture absorption', 'More expensive than polyester', 'Can yellow with prolonged UV exposure', 'Higher density — heavier at same thickness'],
+    bestFor: 'Performance outerwear, military uniforms, upholstery, industrial textiles, hosiery, swimwear.',
+    image: '/images/seekingtex/tech/tech-hypalon-tubes.webp',
+  },
+  {
+    name: 'Cotton & Natural Fibers',
+    summary: 'Natural cellulose fibers valued for comfort, breathability, and sustainability. Modern finishing technologies enhance natural fibers with performance characteristics.',
+    pros: ['Excellent breathability and moisture absorption', 'Natural softness and comfort against skin', 'Biodegradable and renewable', 'Hypoallergenic for sensitive skin', 'Easy to care for and durable when properly finished'],
+    cons: ['Lower strength than synthetics', 'Absorbs water — slow to dry', 'Prone to shrinkage without pre-treatment', 'Wrinkles more than synthetics', 'Requires chemical finishing for wrinkle/water resistance'],
+    bestFor: 'Everyday apparel, shirts and blouses, denim, towels and linens, eco-friendly products.',
+    image: '/images/seekingtex/tech/tech-drop-stitch.webp',
+  },
+  {
+    name: 'Specialized Performance Fibers',
+    summary: 'Engineered fibers designed for specific performance requirements — aramid for heat resistance, spandex for stretch, recycled PET for sustainability, and conductive fibers for smart textiles.',
+    pros: ['Tailored properties for specific applications', 'Can combine multiple performance characteristics', 'Enable innovation in smart and technical textiles', 'Often recyclable or from renewable sources', 'Precise engineering for consistent quality'],
+    cons: ['Higher cost than commodity fibers', 'Specialized processing equipment may be needed', 'Limited color range for some specialty fibers', 'Smaller supplier base for niche fibers', 'May require blended construction for balanced properties'],
+    bestFor: 'Protective clothing, stretch fabrics, sustainable products, smart textiles, high-performance technical applications.',
+    image: '/images/seekingtex/tech/tech-air-deck.webp',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd type="Article" article={{
+    headline: metadata.title,
+    description: metadata.description,
+    datePublished: '2025-01-10',
+    dateModified: '2025-06-01',
+  }} />
+  <JsonLd type="BreadcrumbList" breadcrumbs={crumbs} />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Materials Science</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Fiber & Fabric Materials Guide</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">Deep dives into polyester, nylon, cotton, and specialized performance fibers — the building blocks of Seekingtex fabrics.</p>
+  </section>
+
+  <section class="px-6 pb-8 max-w-5xl mx-auto">
+    <div class="prose prose-gray max-w-none">
+      <p class="text-lg leading-relaxed">
+        The performance, durability, and functionality of a fabric depend almost entirely on the materials used in its construction. From the fiber that forms the yarn to the coating that gives it waterproofness, every material choice affects how the fabric performs and how long it lasts.
+      </p>
+      <p class="text-lg leading-relaxed">
+        This guide covers the four core fiber types used in modern functional fabrics: <strong>polyester</strong>, <strong>nylon</strong>, <strong>cotton and natural fibers</strong>, and <strong>specialized performance fibers</strong>. Understanding these materials will help you choose the right fabric for your needs and maintain it for maximum lifespan.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-6 pb-16 max-w-5xl mx-auto space-y-16">
+    {materials.map((m, i) => (
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+          <h2 class="text-2xl font-bold text-gray-900">{m.name}</h2>
+          <p class="mt-3 text-gray-600 leading-relaxed">{m.summary}</p>
+          <div class="mt-4 grid grid-cols-2 gap-4">
+            <div>
+              <h4 class="text-sm font-semibold text-green-700 uppercase tracking-wide">Advantages</h4>
+              <ul class="mt-2 space-y-1">
+                {m.pros.map((pro) => <li class="text-sm text-gray-600 flex items-start gap-1.5"><span class="text-green-500 mt-0.5 shrink-0">+</span>{pro}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-red-600 uppercase tracking-wide">Limitations</h4>
+              <ul class="mt-2 space-y-1">
+                {m.cons.map((con) => <li class="text-sm text-gray-600 flex items-start gap-1.5"><span class="text-red-400 mt-0.5 shrink-0">-</span>{con}</li>)}
+              </ul>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-gray-500"><strong class="text-gray-700">Best for:</strong> {m.bestFor}</p>
+        </div>
+        <div class={i % 2 === 1 ? 'md:order-1' : ''}>
+          <img src={m.image} alt={m.name} class="w-full rounded-xl" loading={i < 2 ? 'eager' : 'lazy'} />
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section class="px-6 pb-16 max-w-5xl mx-auto">
+    <div class="rounded-xl bg-gray-50 border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900 text-center">Fiber Selection Guide</h2>
+      <p class="mt-3 text-gray-600 text-center max-w-2xl mx-auto">Choose the right fiber based on your primary use case:</p>
+      <div class="mt-8 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-300">
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Use Case</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Recommended Fiber</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-900">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Outdoor performance apparel</td>
+              <td class="py-3 px-4"><span class="font-medium">Polyester + coatings</span></td>
+              <td class="py-3 px-4 text-gray-600">Lightweight, UV resistant, quick-drying — ideal balance for outdoor use</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Everyday comfort clothing</td>
+              <td class="py-3 px-4"><span class="font-medium">Cotton / Cotton-blend</span></td>
+              <td class="py-3 px-4 text-gray-600">Breathable, soft, comfortable for daily wear</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">High-durability workwear</td>
+              <td class="py-3 px-4"><span class="font-medium">Nylon / Nylon-cotton blend</span></td>
+              <td class="py-3 px-4 text-gray-600">Maximum abrasion resistance, tensile strength, and durability</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Eco-conscious products</td>
+              <td class="py-3 px-4"><span class="font-medium">Recycled polyester / Organic cotton</span></td>
+              <td class="py-3 px-4 text-gray-600">Sustainable, reduced environmental footprint, good performance</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Activewear / sportswear</td>
+              <td class="py-3 px-4"><span class="font-medium">Polyester + spandex blend</span></td>
+              <td class="py-3 px-4 text-gray-600">Moisture-wicking, stretch for movement, quick-drying</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-3 px-4 text-gray-700">Protective / industrial textiles</td>
+              <td class="py-3 px-4"><span class="font-medium">Specialty fibers (aramid, etc.)</span></td>
+              <td class="py-3 px-4 text-gray-600">Heat resistance, chemical resistance, high strength for demanding environments</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-bold text-gray-900 text-center mb-10">Deep Dive Guides</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {topics.map((t) => (
+        <a href={t.href} class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5">
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

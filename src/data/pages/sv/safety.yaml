@@ -1,0 +1,24 @@
+hero:
+  tagline: S盲kerhet
+  title: S盲kerhetsstandarder och certifiering
+  subtitle: Varje Seekingtex-produkt genomg氓r rigor枚sa tester och uppfyller internationella s盲kerhetsstandarder f枚r b氓de fritids- och professionellt bruk.
+
+certifications:
+  - title: CE-certifiering
+    description: All Seekingtex-s盲kerhetsutrustning uppfyller kraven f枚r CE-m盲rkning enligt EU:s f枚rordning om personlig skyddsutrustning (EU) 2016/425.
+  - title: ISO 12402
+    description: Flytv盲starna uppfyller -standarderna f枚r safety performance. Safety Fabric Classic ger safety performance 50N+; Safety Fabric Pro uppfyller SOLAS-kraven med automatisk uppbl氓sning.
+  - title: SOLAS-efterlevnad
+    description: Safety Fabric Pro 盲r kompatibel med SOLAS-f枚reskrifterna (Safety of Life at Sea) f枚r marina offshore- och kommersiella operationer.
+
+related:
+  title: Relaterat
+  links:
+    - text: S盲kerhetsguide
+      url: /guides/safety-tips
+    - text: Teknologi
+      url: /technology
+    - text: Alla produkter
+      url: /products
+    - text: Guider
+      url: /guides

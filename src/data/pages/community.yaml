@@ -1,0 +1,84 @@
+hero:
+  tagline: 'Community'
+  title: 'The Seekingtex Community'
+  subtitle: |
+    Real textile professionals, real fabric solutions, real partnerships. From<br />
+    sportswear brands to outdoor equipment manufacturers —discover how our<br />
+    community creates better products with Seekingtex fabrics.
+  image: '/images/seekingtex/hero/hero-fabrics.webp'
+  imageAlt: 'Seekingtex textile manufacturing facility'
+
+stats:
+  title: 'Community by the numbers'
+  stats:
+    - title: '20+'
+      description: 'Countries with Seekingtex partners'
+    - title: '12+'
+      description: 'Years of textile engineering excellence'
+    - title: '50M+'
+      description: 'Meters of fabric delivered globally'
+    - title: '99%'
+      description: 'On-time delivery rate'
+
+stories:
+  tagline: 'Partner Stories'
+  title: 'Real partnerships, real results'
+  subtitle: 'Hear from brands and product developers who partner with Seekingtex for their fabric needs.'
+  items:
+    - name: 'Patagon Sportswear'
+      title: 'Activewear brand, Germany'
+      content: 'Seekingtex developed our signature UPF 50+ sun protection fabric for our outdoor collection. The color matching was spot-on, the moisture-wicking performance exceeded our expectations, and the OEKO-TEX certification gave us the compliance documentation we needed for the EU market.'
+      image: '/images/seekingtex/hero/production-dept.webp'
+      location: 'Munich, Germany'
+    - name: 'AlpineOutdoor Co.'
+      title: 'Outdoor equipment brand, USA'
+      content: 'We needed waterproof-breathable fabric for our new shell jacket line. Seekingtex delivered samples in 5 days with multiple membrane options. The final fabric achieved 10,000 mm hydrostatic head while maintaining excellent breathability — and at a cost point that made our margins work.'
+      image: '/images/seekingtex/hero/production-workshop.webp'
+      location: 'Denver, Colorado'
+    - name: 'EcoWear Ltd'
+      title: 'Sustainable fashion label, UK'
+      content: 'Our brand is built on sustainability, so finding a recycled polyester fabric that performed technically was a challenge. Seekingtex developed a GRS-certified recycled fabric with UPF protection and moisture wicking that looks and performs like virgin polyester. Our customers love it.'
+      image: '/images/seekingtex/hero/hero-quality.webp'
+      location: 'London, United Kingdom'
+    - name: 'MedTech Uniforms'
+      title: 'Medical apparel manufacturer, Japan'
+      content: 'We required antibacterial fabric with 99% reduction rate and 50+ wash durability for our medical uniform line. Seekingtex worked with us on the finish chemistry and provided comprehensive AATCC 100 test reports. The certified results helped us win a hospital supply contract.'
+      image: '/images/seekingtex/hero/hero-support.webp'
+      location: 'Tokyo, Japan'
+    - name: 'FlexFit Athletics'
+      title: 'Sportswear brand, Australia'
+      content: 'The 4-way stretch fabric Seekingtex developed for our yoga and training line has been a game-changer. The recovery rate is excellent, the fabric feels premium, and the color consistency across production runs has been remarkable. Our reorder rate speaks for itself.'
+      image: '/images/seekingtex/factory/design-discuss.webp'
+      location: 'Sydney, Australia'
+
+adventures_cta:
+  tagline: 'Share Your Story'
+  title: 'Your partnership story could be here'
+  subtitle: 'Tag @seekingtex on LinkedIn or send us your case study for a chance to be featured.'
+  instagram: 'Follow on Instagram'
+  youtube: 'Subscribe on YouTube'
+  linkedin: 'Connect on LinkedIn'
+
+locations:
+  tagline: 'Global Reach'
+  title: 'Where Seekingtex ships'
+  subtitle: 'From Europe to Asia to the Americas — our fabrics are shipped to brands worldwide.'
+  regions:
+    - title: 'Europe'
+      description: 'Germany · United Kingdom · France · Italy · Spain · Sweden · Netherlands'
+    - title: 'Asia Pacific'
+      description: 'Japan · South Korea · Australia · Vietnam · Indonesia · India'
+    - title: 'Americas'
+      description: 'United States · Canada · Brazil · Mexico · Argentina'
+    - title: 'Middle East & Africa'
+      description: 'UAE · Saudi Arabia · South Africa · Turkey · Israel'
+
+cta:
+  title: 'Ready to partner with us?'
+  subtitle: 'Every Seekingtex fabric is OEKO-TEX certified, SGS tested, and backed by our quality guarantee. Start your project today.'
+  actions:
+    - variant: primary
+      text: 'Explore fabrics'
+      href: '/products'
+    - text: 'Request a quote'
+      href: '/contact'

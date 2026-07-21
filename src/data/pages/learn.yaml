@@ -1,0 +1,73 @@
+hero:
+  tagline: 'textile knowledge Knowledge'
+  title: 'Learn'
+  subtitle: |
+    Guides, tutorials, and deep dives 鈥?everything you need to explore<br />
+    water with confidence. From choosing your first functional fabric to mastering advanced techniques.
+  taglineSection: 'Knowledge for every professional. From beginner to professional.'
+
+featured:
+  tagline: 'Featured Topics'
+  title: 'Start your learning journey'
+  subtitle: 'Whether you are new to textile industry or looking to level up, our guides have you covered.'
+  items:
+    - title: 'functional fabric Basics'
+      description: 'Everything a beginner needs to know 鈥?board types, fabric sizing, stance, and first-day tips.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: 'high-performance vs Hard Board'
+      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/high-performance-vs-hardboard'
+    - title: 'Water Safety'
+      description: 'Essential safety knowledge every professional should have 鈥?weather, PFDs, self-rescue, and more.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Materials Guide'
+      description: 'PVC vs Hypalon, advanced construction technology, denier ratings 鈥?understand what your gear is made of.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'functional fabric Size Guide'
+      description: 'Find the right board length, width, and volume for your weight, skill, and fabric expertise style.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Intermediate Techniques'
+      description: 'Step up your fabric expertise with advanced strokes, turning techniques, and rough-water handling.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Categories'
+  title: 'Explore by topic'
+  subtitle: 'All learning content organized by skill level and interest.'
+  columns:
+    - title: 'Beginner'
+      items:
+        - 'functional fabric Basics 鈥?start here'
+        - 'high-performance vs Hard Board'
+        - 'Water Safety Essentials'
+        - 'How to Choose Your functional fabric'
+        - 'Pump & Pack Guide'
+    - title: 'Intermediate'
+      items:
+        - 'fabric expertise Techniques'
+        - 'high-performance Technology'
+        - 'Materials Reference'
+        - 'PVC vs Hypalon Comparison'
+        - 'advanced construction Core Explained'
+    - title: 'Advanced & Professional'
+      items:
+        - 'Fleet Operations'
+        - 'Commercial-Grade Equipment'
+        - 'Safety & Rescue Protocols'
+        - 'Custom Builds & OEM'
+
+cta:
+  title: 'Still have questions?'
+  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  actions:
+    - variant: primary
+      text: 'Ask the Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Browse all guides'
+      href: '/academy'

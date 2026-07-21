@@ -1,0 +1,109 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('compare.inflatableVsHard.title') || 'Natural vs Synthetic Fiber — Which Is Better for You?'}`,
+  description: t('compare.inflatableVsHard.desc') || 'Compare natural and synthetic fibers across performance, durability, sustainability, cost, and use cases. Make an informed fabric selection decision.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('compare.inflatableVsHard.headline') || 'Natural vs Synthetic Fiber — Which Is Better for You?',
+      description: t('compare.inflatableVsHard.desc') || 'Compare natural and synthetic fibers across performance, durability, sustainability, cost, and use cases.',
+      datePublished: '2026-07-06',
+    }}
+    data={{ url: `https://seekingtex.com/${lang}/compare/inflatable-vs-hardboard` }}
+  />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: t('home') || 'Home', href: `/${lang}/` }, { name: t('compare.label') || 'Compare', href: `/${lang}/compare` }, { name: t('compare.inflatableVsHard.short') || 'Natural vs Synthetic' }]} />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href={`/${lang}/products`} class="text-sm text-sky-600 hover:text-sky-700">&larr; {t('compare.backToProducts') || 'Products'}</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('compare.inflatableVsHard.heading') || 'Natural vs Synthetic Fiber'}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('compare.inflatableVsHard.subtitle') || 'A comprehensive comparison between natural and synthetic fibers — covering everything a textile buyer needs to know.'}</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.inflatableVsHard.col1Title') || 'Natural Fibers'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.portability') || 'Breathability:'}</strong> {t('compare.inflatableVsHard.portDesc') || 'Excellent natural breathability. Fibers absorb and release moisture, regulating body temperature effectively.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.durability') || 'Durability:'}</strong> {t('compare.inflatableVsHard.durDesc') || 'Variable by fiber. Cotton is moderate, wool is excellent, silk is delicate. Susceptible to UV degradation, mildew, and pests.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.performance') || 'Comfort:'}</strong> {t('compare.inflatableVsHard.perfDesc') || 'Superior comfort against skin. Natural softness, hypoallergenic properties. Wool offers natural temperature regulation.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.storage') || 'Sustainability:'}</strong> {t('compare.inflatableVsHard.storDesc') || 'Biodegradable and renewable. Lower carbon footprint in production. Organic options avoid pesticides. Higher water and land use.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.bestFor') || 'Best for:'}</strong> {t('compare.inflatableVsHard.bestDesc') || 'Everyday apparel, luxury garments, bedding, towels, environmentally conscious consumers, sensitive skin applications.'}</span></li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">{t('compare.inflatableVsHard.col2Title') || 'Synthetic Fibers'}</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.portability') || 'Breathability:'}</strong> {t('compare.inflatableVsHard.hardPortDesc') || 'Less breathable naturally. Engineered finishes (wicking, ventilation) improve moisture management. Performance fabrics rival natural breathability.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.durability') || 'Durability:'}</strong> {t('compare.inflatableVsHard.hardDurDesc') || 'Excellent durability. Resistant to abrasion, UV, mildew, chemicals. Polyester and nylon significantly outlast natural fibers in demanding conditions.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.performance') || 'Performance:'}</strong> {t('compare.inflatableVsHard.hardPerfDesc') || 'Engineered for specific functions: moisture wicking, water resistance, flame retardancy, stretch, antimicrobial. Consistent quality batch to batch.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.storage') || 'Sustainability:'}</strong> {t('compare.inflatableVsHard.hardStorDesc') || 'Derived from petroleum. Non-biodegradable. However, recycled polyester (rPET) and nylon recycling programs reduce environmental impact. Lower water usage than natural fibers.'}</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>{t('compare.inflatableVsHard.bestFor') || 'Best for:'}</strong> {t('compare.inflatableVsHard.hardBestDesc') || 'Sportswear, outdoor gear, technical textiles, uniforms, industrial applications, high-performance apparel, cost-sensitive projects.'}</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-2xl font-semibold text-gray-900">{t('compare.inflatableVsHard.tableTitle') || 'Side-by-Side Comparison'}</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-gray-50 border-b-2 border-gray-200">
+              <th class="px-4 py-3 text-left font-semibold text-gray-700">{t('compare.factor') || 'Factor'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-sky-700">{t('compare.inflatableVsHard.isupShort') || 'Natural'}</th>
+              <th class="px-4 py-3 text-center font-semibold text-emerald-700">{t('compare.inflatableVsHard.hardShort') || 'Synthetic'}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              [t('compare.inflatableVsHard.r1') || 'Breathability', t('compare.inflatableVsHard.r1a') || 'Excellent (natural)', t('compare.inflatableVsHard.r1b') || 'Moderate (engineered)'],
+              [t('compare.inflatableVsHard.r2') || 'Moisture Management', t('compare.inflatableVsHard.r2a') || 'Absorbent (stays wet)', t('compare.inflatableVsHard.r2b') || 'Wicking (stays dry)'],
+              [t('compare.inflatableVsHard.r3') || 'Tensile Strength', t('compare.inflatableVsHard.r3a') || 'Moderate', t('compare.inflatableVsHard.r3b') || 'High to very high'],
+              [t('compare.inflatableVsHard.r4') || 'UV Resistance', t('compare.inflatableVsHard.r4a') || 'Poor to moderate', t('compare.inflatableVsHard.r4b') || 'Good to excellent'],
+              [t('compare.inflatableVsHard.r5') || 'Abrasion Resistance', t('compare.inflatableVsHard.r5a') || 'Moderate', t('compare.inflatableVsHard.r5b') || 'Excellent'],
+              [t('compare.inflatableVsHard.r6') || 'Chemical Resistance', t('compare.inflatableVsHard.r6a') || 'Poor', t('compare.inflatableVsHard.r6b') || 'Good to excellent'],
+              [t('compare.inflatableVsHard.r7') || 'Biodegradability', t('compare.inflatableVsHard.r7a') || 'Yes (fully biodegradable)', t('compare.inflatableVsHard.r7b') || 'No (takes centuries)'],
+              [t('compare.inflatableVsHard.r8') || 'Water Usage', t('compare.inflatableVsHard.r8a') || 'High (cotton: 2,700L/kg)', t('compare.inflatableVsHard.r8b') || 'Low to moderate'],
+              [t('compare.inflatableVsHard.r9') || 'Cost per Yard', t('compare.inflatableVsHard.r9a') || '$0.60-$5.00', t('compare.inflatableVsHard.r9b') || '$0.80-$4.00'],
+              [t('compare.inflatableVsHard.r10') || 'Consistency', t('compare.inflatableVsHard.r10a') || 'Variable (crop dependent)', t('compare.inflatableVsHard.r10b') || 'Uniform (manufactured)'],
+            ].map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                {row.map((cell, j) => (
+                  <td class={`px-4 py-3 border-b border-gray-200 ${j === 0 ? 'font-medium text-gray-700' : 'text-center text-gray-600'}`}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">{t('compare.inflatableVsHard.verdict') || 'The Verdict'}</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">{t('compare.inflatableVsHard.verdictDesc') || 'For most applications, the best choice depends on the use case. Natural fibers excel where comfort, breathability, and sustainability are the priority — everyday apparel, bedding, and luxury textiles. Synthetic fibers are superior for performance, durability, and technical applications requiring specific engineered properties. Many modern textiles use blends (e.g., poly-cotton, wool-nylon) to combine the best of both worlds.'}</p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a href={`/${lang}/products`} class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">{t('compare.inflatableVsHard.cta') || 'Browse Products'}</a>
+        <a href={`/${lang}/guides`} class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">{t('compare.buyingGuides') || 'Buying Guides'}</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>{t('compare.inflatableVsHard.aiBlock') || 'Comprehensive comparison between natural fibers (cotton, wool, silk, linen) and synthetic fibers (polyester, nylon, acrylic, spandex). Natural fibers offer superior breathability, comfort, biodegradability, and are renewable. Synthetic fibers offer higher tensile strength, UV resistance, abrasion resistance, chemical resistance, uniform quality, lower water usage, and can be engineered for specific functions. Cost comparison: natural $0.60-$5.00/yard, synthetic $0.80-$4.00/yard. Recommendation: choose based on application requirements rather than assuming one category is universally better.'}</p>
+  </section>
+</Layout>

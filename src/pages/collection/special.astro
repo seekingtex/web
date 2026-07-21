@@ -1,0 +1,71 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import { SITE } from 'astrowind:config';
+import { getProducts, isProductsEnabled, isProductsListEnabled } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+const products = await getProducts();
+const hidden = !isProductsEnabled() || !isProductsListEnabled();
+const metadata = merge({
+  title: `Speciality Fabrics — FR, Anti-Static & Technical Textiles | ${SITE.name}`,
+  description: `${SITE.name} speciality technical fabrics — flame retardant (FR), anti-static, anti-bacterial, conductive, and high-visibility textiles for industrial, military, and protective applications. OEM/ODM available.`,
+  canonical: getCanonical(getPermalink('/collection/special')),
+  robots: { index: !hidden, follow: true },
+  openGraph: { type: 'website' },
+}, {}) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Collection</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Speciality Fabrics</h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Technical and specialty textiles — flame retardant, anti-static, anti-bacterial, conductive, and high-visibility fabrics for demanding applications.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          When standard performance fabrics are not enough, our speciality fabric collection delivers engineered solutions for the most demanding environments. Each fabric is designed with specific functional properties — from inherent flame retardancy for protective workwear to static-dissipative constructions for electronics manufacturing environments. All speciality fabrics are third-party tested to relevant international standards.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Flame Retardant</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Inherent FR polyester and FR-treated cotton/nylon blends. Certified to NFPA 70E, EN 11612, and ASTM D6413. For welding, electrical, and industrial protective wear.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Anti-Static</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Carbon-fiber blended yarns and conductive grid constructions. Surface resistance <10^9 ohms. For cleanroom, electronics, and explosive environment apparel.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Anti-Bacterial</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Silver-ion, zinc oxide, and chitosan antimicrobial treatments. >99% bacterial reduction. For healthcare, hospitality, and hygiene-critical applications.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">High Visibility</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">EN 20471 and ANSI 107 certified fluorescent fabrics with retroreflective tape integration. Safety colors in orange, yellow-green, and red.</p>
+      </div>
+    </section>
+
+    {
+      products.length > 0 ? (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => <ProductCard product={p} />)}
+        </div>
+      ) : (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <p class="text-lg">Browse our product catalog for speciality and technical fabrics.</p>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+        </div>
+      )
+    }
+  </section>
+</Layout>

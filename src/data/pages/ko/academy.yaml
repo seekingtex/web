@@ -1,0 +1,72 @@
+hero:
+  tagline: Seekingtex 아카데미
+  title: 학습 센터
+  subtitle: SUP 기초부터 고급 구조 기술까지 모든 스킬 레벨을 위한 가이드와 튜토리얼
+
+categories:
+  - level: 초급
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: SUP 기초
+        desc: 스탠드업 섬유보딩의 기본 — 자세, 스트로크 기술, 균형을 배웁니다.
+        slug: sup-basics
+      - title: 섬유 기술
+        desc: 포워드 스트로크, 스위프 스트로크, 드로우 스트로크, 로우 브레이스 — 필수 섬유 동작 마스터하기.
+        slug: paddle-techniques
+      - title: 안전 우선
+        desc: 날씨 확인, 구명조끼 사용, 리시 규칙, 셀프 구조를 포함한 필수 안전 수칙.
+        slug: safety-first
+  - level: 중급
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: 투어링 필수
+        desc: 수시간 섬유 기술 계획 — 내비게이션, 수분 공급, 페이스 조절, 바람 예보 읽기.
+        slug: touring-essentials
+      - title: 날씨 판독
+        desc: 섬유 예보 해석, 구름 패턴 식별, 수면에 미치는 바람의 영향 이해.
+        slug: weather-reading
+      - title: 내비게이션 기초
+        desc: 해도 읽기, 나침반 사용, GPS 웨이포인트, 연안 섬유 기술 경로 계획.
+        slug: navigation-basics
+      - title: 조석 이해
+        desc: 조석 주기, 조류 및 이것이 출발 타이밍과 경로에 미치는 영향 이해.
+        slug: tidal-awareness
+  - level: 고급
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: 다일 트립 계획
+        desc: 원정 물류 — 장비 선택, 식량 계획, 안전 프로토콜, 비상 연락처.
+        slug: multi-day-trip-planning
+      - title: 구조 기술
+        desc: 셀프 구조, T-구조, 기술 원단 에스키모 롤, 개방 수역 예인 프로토콜.
+        slug: rescue-techniques
+      - title: 야간 섬유 기술
+        desc: 야간 내비게이션 — 조명 요구사항, 경로 기억, 그룹 커뮤니케이션, 위험 인식.
+        slug: night-paddling
+  - level: 유지보수
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: 세척 및 관리
+        desc: 매 세션 후 담수 헹굼, 자외선 차단, 곰팡이 방지, 적절한 건조 기술.
+        slug: cleaning-and-care
+      - title: 보관 가이드
+        desc: 기능성 보드 및 원단 보관 모범 사례 — 공기 빼기, 접기, 온도 관리, 보관 수명.
+        slug: storage-guide
+      - title: 수리 기초
+        desc: PVC 수리 키트와 패치 기술을 사용한 작은 구멍, 이음새 누수, 밸브 문제 수리.
+        slug: repair-basics
+      - title: 밸브 유지보수
+        desc: 밸브 유형 식별 (Halkey-Roberts, Boston, Leafield), 이물질 제거, 고장난 스템 교체.
+        slug: valve-maintenance
+
+read_guide: 가이드 읽기 →
+
+cta:
+  title: 어디서부터 시작해야 할지 모르시나요?
+  desc: 스킬 평가 퀴즈를 통해 레벨에 맞는 가이드와 장비를 찾아보세요.
+  label: 문의하기 →
+  link: /contact

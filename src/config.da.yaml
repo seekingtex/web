@@ -1,0 +1,120 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Seekingtex | Producent af funktionelle stoffer — Solbeskyttelse, vandtætte & hurtigttørrende tekstiler
+    template: '%s — Seekingtex'
+  description: 'Seekingtex er en førende producent af funktionelle stoffer med speciale i solbeskyttelse (UPF 50+), vandtætte, hurtigttørrende, antibakterielle og præstationsstoffer til sportstøj, outdoor-beklædning og taktisk udstyr. OEM/ODM-service tilgængelig.'
+  keywords:
+    - Seekingtex
+    - producent af funktionelle stoffer
+    - solbeskyttelsesstof
+    - UPF 50+ stof
+    - vandtæt stof
+    - hurtigttørrende stof
+    - præstationsstof
+    - sportstøjsstof
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: da_DK
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+siteSettings:
+  siteName: 'Seekingtex'
+  siteTagline: 'Producent af funktionelle stoffer — Solbeskyttelse, vandtætte & hurtigttørrende tekstiler'
+  siteDescription: 'Seekingtex er en førende producent af højtydende funktionelle stoffer med speciale i UPF 50+ solbeskyttelse, vandtætte/åndbare, hurtigttørrende, antibakterielle og strækbare tekstiler til sportstøj, outdoor-udstyr og industrielle anvendelser. OEM/ODM med global forsendelse.'
+  organization:
+    name: 'Seekingtex'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Alle rettigheder forbeholdes.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'Hej, jeg vil gerne spørge om jeres funktionelle stoffer.'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

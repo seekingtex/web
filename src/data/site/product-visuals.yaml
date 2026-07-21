@@ -1,0 +1,31 @@
+visuals:
+  - id: sun-protection-upf50
+    image: /images/seekingtex/products/sun-protection-fabric.webp
+  - id: waterproof-breathable
+    image: /images/seekingtex/products/waterproof-fabric.webp
+  - id: quick-dry-moisture-wicking
+    image: /images/seekingtex/products/quick-dry-fabric.webp
+  - id: antibacterial-7a
+    image: /images/seekingtex/products/antibacterial-fabric.webp
+  - id: 4-way-stretch-fabric
+    image: /images/seekingtex/products/stretch-fabric.webp
+  - id: breathable-mesh-fabric
+    image: /images/seekingtex/products/breathable-fabric.webp
+  - id: eco-friendly-recycled-fabric
+    image: /images/seekingtex/products/eco-friendly-fabric.webp
+  - id: ice-silk-cooling-fabric
+    image: /images/seekingtex/products/cooling-fabric.webp
+  - id: tactical-ripstop-fabric
+    image: /images/seekingtex/products/ripstop-fabric.webp
+  - id: taslan-waterproof-jacket-fabric
+    image: /images/seekingtex/products/taslan-fabric.webp
+  - id: 3-layer-hardshell-fabric
+    image: /images/seekingtex/products/hardshell-fabric.webp
+  - id: beach-swim-shorts-fabric
+    image: /images/seekingtex/products/swim-fabric.webp
+  - id: down-jacket-shell-fabric
+    image: /images/seekingtex/products/down-proof-fabric.webp
+  - id: graphene-thermal-fabric
+    image: /images/seekingtex/products/graphene-fabric.webp
+  - id: fleece-thermal-lining
+    image: /images/seekingtex/products/fleece-fabric.webp

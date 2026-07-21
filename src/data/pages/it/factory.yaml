@@ -1,0 +1,111 @@
+hero:
+  tagline: Fabbrica
+  title: Fabbrica & Produzione
+  subtitle: 12.000 m虏 di produzione integrata 鈥?dalla materia prima all''imbarcazione finita
+
+intro:
+  - Come marchio di fabbrica della **Qingdao Vatrad Group Co., Ltd.**, Seekingtex controlla ogni fase della produzione 鈥?dall''arrivo delle materie prime PVC e fibra di vetro all''ispezione finale pre-spedizione dell''imbarcazione finita. Il nostro impianto produttivo nella Zona di Sviluppo Economico di Qingdao si estende per 12.000 metri quadrati e ospita officine dedicate per taglio PVC, termosaldatura tubolari, produzione scafi tessuto tecnico in fibra di vetro, stampa digitale SUP, assemblaggio finale e test qualit脿.
+  - Integrando design, ingegneria, prototipazione, produzione e test sotto lo stesso tetto, eliminiamo le inefficienze della produzione conto terzi e manteniamo il controllo diretto sulla qualit脿 costruttiva, la selezione dei materiali e i tempi di consegna. Ogni imbarcazione che lascia la nostra officina 猫 costruita dalla nostra gente, sulle nostre attrezzature, secondo i nostri standard.
+
+stats:
+  - value: 12.000 m虏
+    label: Superficie produttiva
+  - value: 200+
+    label: Lavoratori qualificati
+  - value: 15.000+
+    label: Imbarcazioni prodotte annualmente
+  - value: 
+    label: Certificato qualit脿
+
+workshops_section:
+  tagline: Officine
+  title: Officine di Produzione
+  workshops:
+    - title: Taglio PVC & Preparazione Materiali
+      description: Macchine di taglio CNC automatiche lavorano tessuti PVC, Hypalon e technical con precisione submillimetrica. L''annidamento ottimizzato al computer minimizza lo scarto di materiale e garantisce che ogni pannello rispetti le specifiche dimensionali prima della saldatura.
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: Saldatura Tubolari & Termosaldatura
+      description: Officina saldatura dedicata con macchine termosaldatrici  e presse dielettriche RF. Le termosaldatrici ad aria calda legano e fondono le camere dei tubolari PVC, mentre le saldature RF producono giunture ermetiche ad alta resistenza che superano i requisiti .
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: Produzione Scafi tessuto tecnico 鈥?Fibra di Vetro
+      description: Gli scafi dei tessuto tecnico sono prodotti mediante stampaggio in fibra di vetro a stratificazione manuale con sistemi resina poliestere e vinylestere. Ogni strato 猫 rullato a mano e insaccato sottovuoto per qualit脿 costante. La cabina di spruzzatura gelcoat fornisce una finitura tessile lucida e resistente ai UV.
+      image: /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+    - title: Stampa & Decorazione SUP
+      description: Le tavole SUP sono decorate mediante stampa digitale  per grafica a colori e serigrafia  per loghi e motivi ripetuti. Le stampanti digitali producono design ponte fotorealistici, mentre la serigrafia offre marchi di marca durevoli e vivaci.
+      image: /images/seekingtex/products/sup-series/sup-medusa-glow-1.webp
+    - title: Assemblaggio Finale & Allestimento
+      description: Linea di assemblaggio dove gli scafi in fibra di vetro e i tubolari PVC sono accoppiati, i motori sono montati, la sterzata e i comandi sono collegati e i sistemi elettrici sono cablati. Ogni imbarcazione segue una checklist di assemblaggio in 100 punti firmata dal caposquadra.
+      image: /images/seekingtex/hero/factory-gate.webp
+    - title: Test Qualit脿 & Ispezione
+      description: Ogni imbarcazione finita subisce test obbligatorio di ritenzione aria, verifica pelatura giunture e controllo completo sistemi prima della spedizione. Il nostro laboratorio qualit脿 opera indipendentemente dalla produzione e riporta direttamente alla direzione.
+      image: /images/seekingtex/factory/Pressure Testing.jpeg
+
+equipment_section:
+  tagline: Attrezzatura
+  title: Attrezzatura Produttiva Chiave
+  view_full: Vedi elenco completo attrezzatura 鈫?
+  view_full_link: /factory/equipment
+  items:
+    - name: Macchina Taglio PVC Automatica
+      spec: Controllo CNC, precisione 0,1 mm
+    - name: Macchina Termosaldatrice 
+      spec: Aria calda, 200 掳C鈥?00 掳C, per legame tubolari
+    - name: Pressa Saldatura Dielettrica RF
+      spec: 15 kW, saldatura giunture ermetiche
+    - name: Stampi Stratificazione Manuale Fibra di Vetro
+      spec: Scafi tessuto tecnico fino a 6 m
+    - name: Stampante Digitale 
+      spec: Grafica colore per ponti SUP
+    - name: Macchina Serigrafia 
+      spec: Stampa logo multicolore
+
+qc_section:
+  tagline: Controllo Qualit脿
+  title: Processo di Test e Garanzia Qualit脿
+  subtitle: Ogni imbarcazione subisce test obbligatori prima della spedizione. Il nostro laboratorio qualit脿 opera indipendentemente dalla produzione e riporta direttamente alla direzione.
+  steps:
+    - step: '1'
+      title: Ispezione Materie Prime
+      desc: I tessuti PVC, Hypalon e technical subiscono test di trazione (), propagazione strappo e verifica resistenza UV prima che qualsiasi lotto entri in produzione.
+    - step: '2'
+      title: Test Ritenzione Aria 48 Ore
+      desc: Ogni camera tubolare 猫 gonfiata al 125% della pressione nominale e mantenuta per 48 ore. Un calo di pressione sotto il 5% attiva il rigetto automatico e la reispezione delle giunture.
+    - step: '3'
+      title: Test Carico e Bilanciamento
+      desc: Le imbarcazioni finite sono caricate alla massima capacit脿 nominale e testate per stabilit脿, bordo libero e manovrabilit脿. Ogni imbarcazione 猫 testata in acqua prima dell''ispezione finale.
+
+oem_section:
+  tagline: Progetti OEM
+  title: Casi Studio Partnership Marchio e OEM
+  subtitle: Dal concept al container 鈥?come aiutiamo i marchi globali a lanciare e scalare le loro linee di imbarcazioni gonfiabili.
+  cases:
+    - challenge: Un rivenditore europeo di outdoor necessitava di una linea SUP a marchio private label con grafica ponte unica, PVC ecologico e imballaggio pronto per la vendita al dettaglio 鈥?tutto consegnato in 60 giorni.
+      solution: Sviluppo di file stampa digitale personalizzati, approvvigionamento PVC conforme REACH e compressione della campionatura da 3 turni a 1 co-localizzando il team di design nella nostra fabbrica di Qingdao.
+      result: 55 giorni dall''ordine firmato al FOB. 2.400 unit脿 su 4 SKU. Ordine ripetuto prima dell''arrivo del primo container.
+    - challenge: Una startup americana di industria tessile necessitava di un tessuti tecnici technical ad alte prestazioni con forma scafo personalizzata, imballaggio co-branded e certificazione BSCI per il posizionamento al dettaglio.
+      solution: Adattamento dello stampo tessuti tecnici technical esistente con profilo rocker modificato, sviluppo grafica imballaggio co-branded e fornitura documentazione completa audit BSCI.
+      result: Elencato con successo in 3 grandi catene outdoor USA. 5.000+ unit脿 nel primo anno con 98% tasso di sell-through.
+    - challenge: Un distributore australiano richiedeva una gamma tessuto tecnico certificata CE con colori tubolari personalizzati, opzione upgrade Hypalon e conformit脿 allo standard australiano AS 1799.
+      solution: Produzione campioni pre-produzione con 4 varianti colore tubolari, approvvigionamento Hypalon CSM da fornitore giapponese e coordinamento test conformit脿 AS 1799 di terze parti.
+      result: Gamma tessuto tecnico di 3 modelli lanciata sul mercato AU/NZ. Seguita da vincita gara d''appalto governativa per 12 tessuto tecnico da pattuglia.
+
+faq_section:
+  tagline: FAQ
+  title: Domande Frequenti B2B e OEM
+  questions:
+    - q: Qual 猫 la quantit脿 minima d''ordine (MOQ) per tavole SUP gonfiabili OEM?
+      a: La MOQ inizia a 5鈥?0 unit脿 per modelli OEM standard. Stampi personalizzati e progetti private label richiedono un minimo di 200 unit脿 a seconda della complessit脿. Ordini di prova e campionature sono disponibili per lanci di nuovi marchi.
+    - q: Seekingtex possiede la certificazione BSCI?
+      a: S矛. La nostra fabbrica mantiene una certificazione conformit脿 sociale BSCI valida (rapporto audit disponibile su richiesta). Deteniamo anche  per la gestione qualit脿 e tutti i prodotti portano la certificazione CE . La documentazione conformit脿 REACH e RoHS 猫 fornita con ogni spedizione OEM.
+    - q: Qual 猫 il tempo di consegna tipico per un ordine OEM?
+      a: Il tempo di consegna standard 猫 di 30鈥?5 giorni dall''ordine confermato e dal deposito. Lo sviluppo stampo personalizzato aggiunge 15鈥?0 giorni per l''attrezzatura. Offriamo produzione accelerata per ordini urgenti e rush stagionali durante la finestra pre-estiva (gen鈥搈ar).
+    - q: Potete spedire FOB Qingdao o CIF al nostro porto?
+      a: S矛. Spediamo FOB Qingdao, CIF verso i principali porti globali e DDP per partner qualificati. Il nostro team logistico gestisce prenotazione container, documentazione export e sdoganamento. Spediamo in 50+ paesi nei mercati UE, USA, AU e Asia.
+
+b2b_moq: 'MOQ standard: 5鈥?0 unit脿 per modello (SUP/tessuti tecnici/technical). MOQ tessuto tecnico: 2鈥? unit脿. Ordini di prova benvenuti per nuove partnership.'
+
+process_cta:
+  title: Vedi il nostro processo produttivo
+  desc: Segui un''imbarcazione attraverso ogni fase della produzione 鈥?dalla materia prima all''imbarcazione pronta per il mare.
+  label: Vedi processo produttivo 鈫?
+  link: /factory/process

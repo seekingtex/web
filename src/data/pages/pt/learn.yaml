@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Conhecimento em Explora莽茫o Aqu谩tica'
+  title: 'Aprender'
+  subtitle: |
+    Guias, tutoriais e aprofundamentos 鈥?tudo que voc锚 precisa para explorar<br />
+    a 谩gua com confian莽a. Desde escolher seu primeiro SUP at茅 dominar t茅cnicas avan莽adas.
+  taglineSection: 'Conhecimento para cada profissional textil. Do iniciante ao profissional.'
+
+featured:
+  tagline: 'T贸picos em Destaque'
+  title: 'Inicie sua jornada de aprendizado'
+  subtitle: 'Seja voc锚 novo nos esportes aqu谩ticos ou procurando evoluir, nossos guias t锚m o que voc锚 precisa.'
+  items:
+    - title: 'Fundamentos de SUP'
+      description: 'Tudo que um iniciante precisa saber 鈥?tipos de prancha, dimensionamento de textil, postura e dicas para o primeiro dia.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: 'Infl谩vel vs Prancha R铆gida'
+      description: 'Qual 茅 a ideal para voc锚? Comparamos portabilidade, desempenho, durabilidade e custo lado a lado.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Seguran莽a Aqu谩tica'
+      description: 'Conhecimento essencial de seguran莽a que todo profissional textil deve ter 鈥?clima, coletes salva-vidas, auto-resgate e muito mais.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Guia de Materiais'
+      description: 'PVC vs Hypalon, tecnologia drop-stitch, classifica莽玫es de denier 鈥?entenda do que seu equipamento 茅 feito.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'Guia de Tamanho SUP'
+      description: 'Encontre o comprimento, largura e volume certos para seu peso, habilidade e estilo de remada.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'T茅cnicas Intermedi谩rias'
+      description: 'Evolua sua remada com bra莽adas avan莽adas, t茅cnicas de virada e manuseio em 谩guas agitadas.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Categorias'
+  title: 'Explore por t贸pico'
+  subtitle: 'Todo o conte煤do de aprendizado organizado por n铆vel de habilidade e interesse.'
+  columns:
+    - title: 'Iniciante'
+      items:
+        - 'Fundamentos de SUP 鈥?comece aqui'
+        - 'Infl谩vel vs Prancha R铆gida'
+        - 'Fundamentos de Seguran莽a Aqu谩tica'
+        - 'Como Escolher Seu SUP'
+        - 'Guia de Bomba e Embalagem'
+    - title: 'Intermedi谩rio'
+      items:
+        - 'T茅cnicas de Remada'
+        - 'Tecnologia de Infl谩veis'
+        - 'Refer锚ncia de Materiais'
+        - 'Compara莽茫o PVC vs Hypalon'
+        - 'N煤cleo Drop-Stitch Explicado'
+    - title: 'Avan莽ado e Profissional'
+      items:
+        - 'Opera莽玫es de Frota'
+        - 'Equipamentos de N铆vel Comercial'
+        - 'Protocolos de Seguran莽a e Resgate'
+        - 'Constru莽玫es Personalizadas e OEM'
+
+cta:
+  title: 'Ainda tem d煤vidas?'
+  subtitle: 'Pergunte ao nosso guia de IA para respostas personalizadas sobre equipamentos, seguran莽a e t茅cnicas.'
+  actions:
+    - variant: primary
+      text: 'Pergunte ao Consultor de 脕gua IA'
+      href: '#ai-guide'
+    - text: 'Ver todos os guias'
+      href: '/academy'

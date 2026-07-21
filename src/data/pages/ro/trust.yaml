@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Construit dup膬 standarde care conteaz膬'
+  title: 'Ai 脦ncredere 卯n Seekingtex'
+  subtitle: |
+    Fiecare produs pe care 卯l construim este certificat CE 鈥?testat pentru siguran葲膬,<br />
+    durabilitate 葯i performan葲膬. F膬r膬 scurt膬turi. F膬r膬 excep葲ii.
+  taglineSection: 'Certificat. Testat. Dovedit.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Produs Seekingtex Fabricus test膬rii de calitate'
+
+stats:
+  title: 'Seekingtex 卯n cifre'
+  stats:
+    - title: 'Certificat CE'
+      description: 'Toate produsele recrea葲ionale 卯ndeplinesc standardele de siguran葲膬 UE'
+    - title: 'ISO 9001'
+      description: 'Sistem de management al calit膬葲ii din 2012'
+    - title: 'BSCI & REACH'
+      description: 'Fabrica葲ie etic膬 葯i conformitate material膬'
+    - title: 'Garan葲ie de 2 ani'
+      description: 'Pentru fiecare produs Seekingtex 鈥?f膬r膬 卯ntreb膬ri'
+
+features3_certifications:
+  title: 'Certific膬ri 葯i Conformitate'
+  subtitle: 'Fiecare produs este testat independent 葯i certificat conform standardelor interna葲ionale.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'Certificare CE'
+      description: 'Toate Fabric-urile, caiacurile, 葯alupele 葯i tesatura tehnica-urile Seekingtex 卯ndeplinesc standardul european de siguran葲膬 CE pentru ambarca葲iuni de agrement. Fiecare produs trece prin testare de presiune, flotabilitate 葯i 卯nc膬rcare 卯nainte de a p膬r膬si fabrica.'
+      icon: 'tabler:certificate'
+    - title: 'BSCI'
+      description: 'Unitatea noastr膬 de 12.000 m虏 din Qingdao func葲ioneaz膬 sub un sistem de management al calit膬葲ii . Fiecare lot de produc葲ie este trasabil, documentat 葯i inspectat.'
+      icon: 'tabler:clipboard-check'
+    - title: 'Conformitate Social膬 BSCI'
+      description: 'Suntem certifica葲i BSCI, asigur芒nd practici de munc膬 etice, condi葲ii de munc膬 sigure 葯i responsabilitate de mediu 卯n 卯ntregul nostru lan葲 de aprovizionare.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'Toate materialele 鈥?PVC, Hypalon, spum膬 EVA, adezivi 鈥?respect膬 reglement膬rile UE REACH 葯i RoHS. F膬r膬 substan葲e restric葲ionate, f膬r膬 compromisuri.'
+      icon: 'tabler:flask'
+    - title: 'Laborator de Testare Materiale'
+      description: 'Laboratorul intern de materiale testeaz膬 rezisten葲a la trac葲iune, rezisten葲a UV, integritatea cus膬turilor 葯i abraziunea pentru fiecare lot de 葲es膬tur膬 卯nainte de produc葲ie.'
+      icon: 'tabler:microscope'
+    - title: 'Garan葲ie de 2 ani'
+      description: 'Fiecare produs Seekingtex vine cu o garan葲ie de doi ani 卯mpotriva defectelor de fabrica葲ie. Garant膬m ceea ce construim.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: '脦ncrederea Clien葲ilor'
+  title: 'Ce spun clien葲ii no葯tri'
+  subtitle: 'De la v芒sla葯i 卯ncep膬tori la operatori profesioni葯ti de flot膬 鈥?vede葲i de ce au 卯ncredere 卯n Seekingtex.'
+  items:
+    - content: 'Am echipat 卯ntreaga noastr膬 flot膬 de 卯nchiriat cu tesatura tehnica-uri Seekingtex. Dou膬 sezoane mai t芒rziu, zero defec葲iuni. Certificarea CE a f膬cut aprobarea asigur膬rii f膬r膬 probleme.'
+      name: 'Marco V.'
+      title: 'Operator turistic, Croa葲ia'
+    - content: 'Ca un cump膬r膬tor pentru prima dat膬, eram nervos 卯n privin葲a calit膬葲ii. Documenta葲ia ISO 葯i rapoartele de testare pe care le-au 卯mp膬rt膬葯it mi-au dat 卯ncredere deplin膬.'
+      name: 'James T.'
+      title: 'Proprietar Fabric Explorer 11, Canada'
+    - content: 'Colabor膬m cu Seekingtex pentru unit膬葲ile noastre de patrulare de coast膬. Procesul lor de QC este consecvent 卯n fiecare lot 鈥?aceast膬 fiabilitate conteaz膬 卯n opera葲iunile critice pentru misiune.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Achizi葲ii navale, Filipine'
+
+steps2_manufacturing:
+  title: 'Cum asigur膬m calitatea'
+  subtitle: 'De la inspec葲ia materiilor prime p芒n膬 la testarea final膬 de presiune 鈥?fiecare produs trece printr-un lan葲 riguros de calitate.'
+  items:
+    - title: 'Inspec葲ia Materiilor Prime'
+      description: 'Fiecare rol膬 de 葲es膬tur膬 PVC este testat膬 pentru grosime, rezisten葲膬 la trac葲iune 葯i rezisten葲膬 UV 卯nainte de a intra 卯n produc葲ie.'
+      icon: 'tabler:search'
+    - title: 'QC 卯n Proces'
+      description: 'Cus膬turile sudate, instala葲iile Fabricapelor 葯i 卯mbin膬rile camerelor sunt inspectate la fiecare sta葲ie 卯n timpul asambl膬rii.'
+      icon: 'tabler:eye'
+    - title: 'Testare de Presiune'
+      description: 'Fiecare produs functional este umflat la 1,5x PSI-ul nominal 葯i men葲inut timp de 24 de ore pentru a verifica re葲inerea aerului 葯i integritatea cus膬turilor.'
+      icon: 'tabler:wind'
+    - title: 'Inspec葲ie Final膬'
+      description: 'Fiecare unitate este inspectat膬 pentru finisaj, hardware 葯i ambalare 卯nainte de a fi aprobat膬 pentru expediere. Probele din loturi merg la laboratorul nostru pentru testare distructiv膬.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: '脦ntreb膬ri frecvente tesatura tehnica'
+  subtitle: '脦ntreb膬ri comune despre ambarca葲iunile noastre gonflabile cu coc膬 rigid膬.'
+  columns: 2
+  items:
+    - title: 'Ce dimensiuni de ambarca葲iuni tesatura tehnica ofer膬 Seekingtex?'
+      description: 'Oferim 35 de modele tesatura tehnica de la 2,5 m la 7,6 m, acoperind totul, de la tendere compacte la ambarca葲iuni grele comerciale 葯i de patrulare. Fiecare model este disponibil cu multiple op葲iuni de configurare.'
+    - title: 'Care este diferen葲a dintre un tesatura tehnica 葯i o barc膬 gonflabil膬 tradi葲ional膬?'
+      description: 'Un tesatura tehnica (ambarca葲iune gonflabil膬 cu coc膬 rigid膬) combin膬 o coc膬 solid膬 din fibr膬 de sticl膬 sau aluminiu 卯n form膬 de V ad芒nc cu tuburi gonflabile din Hypalon sau PVC. Acest lucru ofer膬 stabilitatea 葯i capacitatea de 卯nc膬rcare a unei b膬rci rigide cu absorb葲ia 葯ocurilor 葯i flotabilitatea uneia gonflabile.'
+    - title: 'Ce motoare sunt compatibile cu tesatura tehnica-urile Seekingtex?'
+      description: 'tesatura tehnica-urile noastre Fabricort膬 motoare exterioare de la 3 CP la 250 CP, 卯n func葲ie de model. Fiecare pagin膬 de produs listeaz膬 puterea maxim膬 a motorului. Recomand膬m consultarea dealer-ului pentru combina葲ia ideal膬.'
+    - title: 'tesatura tehnica-urile Seekingtex sunt certificate CE?'
+      description: 'Da. Toate modelele tesatura tehnica de agrement sunt certificate CE conform standardelor europene aplicabile pentru ambarca葲iuni de agrement. Modelele comerciale 葯i de patrulare 卯ndeplinesc cerin葲e Fabriclimentare de stabilitate 葯i 卯nc膬rcare.'
+    - title: 'Care este garan葲ia pentru ambarca葲iunile tesatura tehnica?'
+      description: 'Toate tesatura tehnica-urile Seekingtex vin cu o garan葲ie standard de un an 卯mpotriva defectelor de fabrica葲ie, acoperind delaminarea cocii, defectarea cus膬turii tubului, defecte ale Fabricapelor 葯i probleme hardware.'
+    - title: 'C芒te camere de aer au tesatura tehnica-urile Seekingtex?'
+      description: 'tesatura tehnica-urile noastre au 卯ntre 3 葯i 7 camere de aer independente, 卯n func葲ie de lungimea modelului. Acest design multicamer膬 asigur膬 c膬 ambarca葲iunea r膬m芒ne pe linia de plutire chiar dac膬 un compartiment este compromis.'
+
+faqs_inflatable:
+  title: '脦ntreb膬ri frecvente B膬rci Gonflabile'
+  subtitle: '脦ntreb膬ri comune despre 葯alupele, caiacurile 葯i b膬rcile noastre gonflabile.'
+  columns: 2
+  items:
+    - title: 'Ce materiale sunt folosite 卯n b膬rcile gonflabile Seekingtex?'
+      description: 'Folosim PVC de calitate militar膬 (1100 denier) 葯i cauciuc premium Hypalon/CSM, 卯n func葲ie de model. Ambele materiale sunt stabilizate UV, rezistente la abraziune 葯i conforme cu reglement膬rile UE REACH 葯i RoHS.'
+    - title: 'C芒t timp rezist膬 b膬rcile gonflabile?'
+      description: 'Cu 卯ngrijire corespunz膬toare, o barc膬 gonflabil膬 din PVC de calitate rezist膬 7鈥?0 ani, 卯n timp ce modelele din Hypalon pot rezista 15鈥?0 de ani. Cur膬葲area regulat膬, protec葲ia UV 葯i depozitarea corect膬 prelungesc semnificativ durata de via葲膬.'
+    - title: 'Ce 卯ntre葲inere este necesar膬 pentru o barc膬 gonflabil膬?'
+      description: '脦ntre葲inerea de baz膬 include cl膬tirea cu ap膬 dulce dup膬 fiecare utilizare (mai ales 卯n ap膬 s膬rat膬), uscarea 卯nainte de depozitare, verificarea anual膬 a garniturilor Fabricapelor 葯i aplicarea de protector UV pe tuburi. Evita葲i expunerea prelungit膬 la soare c芒nd nu este 卯n uz.'
+    - title: 'Pot fi folosite b膬rcile gonflabile 卯n ap膬 s膬rat膬?'
+      description: 'Da. Toate b膬rcile gonflabile Seekingtex sunt proiectate at芒t pentru ap膬 dulce, c芒t 葯i pentru ap膬 s膬rat膬. Recomand膬m cl膬tirea cu ap膬 dulce 葯i uscarea temeinic膬 dup膬 expunerea la ap膬 s膬rat膬 pentru a preveni coroziunea fitingurilor 葯i cristalizarea s膬rii 卯n 葲es膬tur膬.'
+    - title: 'Cum depozitez o barc膬 gonflabil膬?'
+      description: 'Dezaerisi葲i, cur膬葲a葲i 葯i usca葲i complet barca 卯nainte de depozitare. Rula葲i lejer (evita葲i pliurile ascu葲ite), depozita葲i 卯ntr-un loc r膬coros 葯i uscat, ferit de lumina direct膬 a soarelui 葯i p膬stra葲i departe de podelele de beton pentru a preveni absorb葲ia umidit膬葲ii.'
+    - title: 'Care este capacitatea de greutate a b膬rcilor gonflabile Seekingtex?'
+      description: 'Capacit膬葲ile de greutate variaz膬 de la 290 kg pentru cele mai mici modele p芒n膬 la peste 2000 kg pentru ambarca葲iunile comerciale mai mari. Fiecare pagin膬 de produs listeaz膬 sarcina maxim膬 pentru modelul dumneavoastr膬 specific.'
+
+faqs_Fabric:
+  title: '脦ntreb膬ri frecvente Fabric'
+  subtitle: '脦ntreb膬ri comune despre pl膬cile noastre de fabricing.'
+  columns: 2
+  items:
+    - title: 'Ce dimensiuni de pl膬ci Fabric sunt disponibile?'
+      description: 'Oferim pl膬ci Fabric de la 9 ft la 12 ft, inclusiv modele all-round, touring, yoga 葯i modele speciale. Cele mai v芒ndute modele includ Tropical Breeze (10 ft) 葯i Ocean Voyager (11 ft).'
+    - title: 'Ce este construc葲ia drop-stitch?'
+      description: 'Construc葲ia drop-stitch folose葯te mii de fire de poliester care conecteaz膬 stratul Fabricerior 葯i inferior al pl膬cii, permi葲芒nd men葲inerea unei presiuni ridicate a aerului (15-20 PSI) 葯i ob葲inerea unei platforme rigide 葯i stabile. Acesta este standardul industrial pentru Fabric-urile gonflabile premium.'
+    - title: 'Care este limita de greutate pentru pl膬cile Fabric?'
+      description: 'Pl膬cile noastre Fabric Fabricort膬 p芒n膬 la 150 kg 卯n func葲ie de model 葯i volum. Leviathan Wake este modelul nostru cu cea mai mare capacitate, proiectat pentru utilizatori mai grei 葯i utilizare la yoga.'
+    - title: 'Oferi葲i pachete complete Fabric?'
+      description: 'Da. Fiecare plac膬 Fabric este livrat膬 cu un pachet complet, incluz芒nd o padd膬 din aluminiu din 3 piese, pomp膬 de m芒n膬 de 卯nalt膬 presiune, les膬 spiralat膬, rucsac de c膬l膬torie 葯i kit de repara葲ii. Unele modele includ 葯i un set de aripioare deta葯abile.'
+    - title: 'Care este garan葲ia pentru pl膬cile Fabric?'
+      description: 'Toate pl膬cile Fabric Seekingtex beneficiaz膬 de o garan葲ie de un an 卯mpotriva defectelor de fabrica葲ie, inclusiv defectarea cus膬turilor, defecte ale Fabricapelor 葯i delaminarea materialului 卯n condi葲ii normale de utilizare.'
+    - title: 'C芒t timp dureaz膬 umflarea unei pl膬ci Fabric?'
+      description: 'Folosind pompa de m芒n膬 inclus膬, umflarea complet膬 la 15 PSI dureaz膬 aproximativ 8鈥?2 minute. Pentru umflare mai rapid膬, recomand膬m pompa noastr膬 electric膬 Seekingtex 12V, care umfl膬 o plac膬 卯n mai pu葲in de 4 minute.'
+
+cta:
+  title: 'Vrei s膬 vezi certific膬rile personal?'
+  subtitle: 'Solicita葲i portofoliul nostru de certific膬ri, rapoartele de audit ale fabricii sau documenta葲ia de conformitate a materialelor. Nu este necesar NDA.'
+  actions:
+    - variant: primary
+      text: 'Solicit膬 documente de certificare'
+      href: '/contact'
+    - text: 'Viziteaz膬 pagina fabricii'
+      href: '/factory'

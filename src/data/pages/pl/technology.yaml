@@ -1,0 +1,14 @@
+hero:
+  tagline: Technologia
+  title: Nasza technologia
+  subtitle: Produkty Seekingtex są zaprojektowane z zaawansowanych materiałów i innowacyjnej inżynierii, aby zapewnić wyjątkową wydajność, trwałość i przenośność.
+
+features:
+  - title: PVC klasy wojskowej
+    description: Nasze łodzie pneumatyczne i SUP-y wykorzystują tkaninę PVC odporną na promieniowanie UV i ścieranie, o wysokiej wytrzymałości na rozciąganie i przebicie.
+  - title: Konstrukcja Drop-Stitch
+    description: Tysiące wysokogęstościowych włókien łączy górną i dolną powierzchnię, tworząc sztywny, wysokociśnieniowy pokład – zapewniając nadmuchiwanym SUP-om wydajność zbliżoną do desek sztywnych.
+  - title: Zgrzewanie termiczne
+    description: Połączenia są zgrzewane termicznie, a nie klejone, zapewniając trwałą wytrzymałość wiązania w krytycznych punktach naprężeń.
+  - title: Technologia automatycznego nadmuchiwania
+    description: Kamizelki ratunkowe Pro wykorzystują mechanizm automatycznego nadmuchiwania, który uruchamia się natychmiast po zanurzeniu, zapewniając niezawodną wyporność.

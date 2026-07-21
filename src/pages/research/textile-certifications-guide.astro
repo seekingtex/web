@@ -1,0 +1,117 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Textile Certifications Guide — OEKO-TEX, bluesign, GOTS | ${SITE.name}`,
+  description: `Complete guide to textile certifications: OEKO-TEX Standard 100, bluesign, GOTS, GRS, and STeP. Certification processes, testing protocols, and requirements for fabric manufacturers.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Textile Certifications Guide',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-03-05',
+  dateModified: '2025-04-20',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Textile Certifications Guide</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Compliance & Certifications</span>
+      <span class="ml-3 text-sm text-gray-400">7 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Textile Certifications Guide</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      Textile certifications are essential for market access, consumer trust, and regulatory compliance. This guide covers the major certification schemes relevant to functional fabric manufacturing and sourcing.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>OEKO-TEX Standard 100</h2>
+      <p>
+        OEKO-TEX Standard 100 is the most widely recognized textile safety certification. It tests for harmful substances and is applicable to all textile products at any production stage. The certification covers over 350 regulated substances including:
+      </p>
+      <ul>
+        <li>Banned azo dyes (carcinogenic amine-releasing)</li>
+        <li>Formaldehyde, pesticides, and heavy metals</li>
+        <li>Phthalates and organotin compounds</li>
+        <li>PFAS/PFC chemicals</li>
+        <li>Allergenic and carcinogenic dye compounds</li>
+      </ul>
+      <p>
+        Four product classes determine testing stringency: Class 1 (babies and children — strictest), Class 2 (direct skin contact), Class 3 (no skin contact), Class 4 (home textiles). Seekingtex fabrics are OEKO-TEX Standard 100 certified.
+      </p>
+
+      <h2>bluesign</h2>
+      <p>
+        bluesign certifies environmentally responsible manufacturing across the entire textile production chain. It goes beyond product testing to evaluate and approve the manufacturing process itself. Key requirements include:
+      </p>
+      <ul>
+        <li><strong>Resource Productivity:</strong> Minimizing water and energy consumption</li>
+        <li><strong>Chemical Management:</strong> Bluesign-approved chemical list restricts hazardous substances</li>
+        <li><strong>Air Emissions:</strong> Limits on volatile organic compounds and particulates</li>
+        <li><strong>Water Treatment:</strong> Wastewater must meet strict quality standards</li>
+        <li><strong>Worker Health & Safety:</strong> Workplace safety and environmental management systems</li>
+      </ul>
+
+      <h2>GOTS (Global Organic Textile Standard)</h2>
+      <p>
+        GOTS is the leading standard for organic textile certification. It covers the entire supply chain from harvesting to finished product. Key requirements:
+      </p>
+      <ul>
+        <li>Organic fiber must be certified to organic agricultural standards</li>
+        <li>Chemical inputs must meet environmental and toxicological criteria</li>
+        <li>Wastewater treatment is mandatory for wet processing facilities</li>
+        <li>Social criteria follow ILO standards for safe working conditions</li>
+      </ul>
+      <p>
+        Two label grades: "organic" (95%+ organic content) and "made with organic" (70-95% organic content). GOTS does not apply to synthetic fibers — only natural organic fibers.
+      </p>
+
+      <h2>GRS (Global Recycled Standard)</h2>
+      <p>
+        GRS certifies recycled content in textile products and ensures responsible production. It applies to both pre-consumer (production waste) and post-consumer (recycled garments/bottles) materials. Requirements include:
+      </p>
+      <ul>
+        <li>Minimum 20% recycled content for certification (50% for "made from recycled" claims)</li>
+        <li>Chain of custody from source to finished product</li>
+        <li>Social and environmental management practices</li>
+        <li>Chemical restrictions on production inputs</li>
+      </ul>
+
+      <h2>What This Means for Buyers</h2>
+      <p>
+        When sourcing certified fabrics, always verify:
+      </p>
+      <ul>
+        <li>The certification is current (check expiration date)</li>
+        <li>The scope covers the specific product you are purchasing</li>
+        <li>The certificate number is valid on the certifying body's website</li>
+        <li>Audit reports are available for facility-level certifications</li>
+      </ul>
+      <p>
+        All Seekingtex products carry applicable certifications with full traceability. We provide certification documentation and test summaries upon request.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

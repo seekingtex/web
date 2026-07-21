@@ -1,0 +1,179 @@
+hero:
+  tagline: 'Seekingtex — Güvenilir Su Maceraları İçin Mühendislik'
+  title: |
+    Su için tasarlandı. <br class="hidden sm:inline" />
+    <span class="text-accent dark:text-white">Denizde yaşamak</span> için üretildi.
+  subtitle: |
+    <span class="hidden sm:inline"><span class="font-semibold">Seekingtex</span> yüksek kaliteli fonksiyonel kumaşlarlar, teknik kumaş'ler ve teknik ürünler tasarlar ve üretir.</span>
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">Seekingtex: performans için üretildi.</span>
+    Güvenilirlik ve işçilik talep eden tekstil profesyonelleri, ticari operatörler ve meraklılar için.
+  actions:
+    - variant: primary
+      text: Ürünleri Gör
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Daha Fazla Bilgi
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Seekingtex kapak
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: Seekingtex tekstil kenarı atölyesi
+      tagline: Hoş Geldiniz
+      title: |
+        Su için tasarlandı. <br />
+        <span class="text-sky-300">Denizde yaşamak</span> için üretildi.
+      subtitle: tekstil profesyonelleri ve meraklıları için yüksek kaliteli fonksiyonel kumaşlarlar, teknik kumaş'ler ve teknik ürünler.
+      actions:
+        - text: Ürünleri Gör
+          href: /products
+          variant: primary
+        - text: Fiyat Sor
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: Özel yapım tekne inşası
+      tagline: İşçilik
+      title: |
+        Garantiden daha dayanıklı gövdeler. <br />
+        Gövdeden daha kalıcı hizmet.
+      subtitle: tekstil sınıfı malzemeler. Alüminyum kaynak. Yirmi yıllık botlar hâlâ bizden parça istiyor.
+      actions:
+        - text: Hikayemiz
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: Suda fonksiyonel kumaşlar
+      tagline: Destek
+      title: |
+        Satıştan önce tasarlandı. <br />
+        Uzun süre sonra da desteklendi.
+      subtitle: 40+ ülkede yetkili servis ortakları. Yirmi yıllık gövdeler hâlâ arıyor —?biz de hâlâ yanıtlıyoruz.
+      actions:
+        - text: İletişime Geç
+          href: /contact
+          variant: primary
+        - text: Fiyatları Gör
+          href: /pricing
+          variant: secondary
+
+features:
+  id: features
+  tagline: Neden Seekingtex
+  title: Seekingtex ile Kazandıklarınız
+  subtitle: Onlarca yıllık tersane deneyimi, tek bir odaklanmış ürün gamında yoğunlaştı. Sağlam yapı, denizde test edilmiş, ömür boyu destek.
+  columns: 2
+  items:
+    - title: tekstil Sınıfı Malzemeler
+      description: UV, aşınma ve tuzlu suya dayanıklılık için seçilmiş yüksek mukavemetli PVC, Hypalon ve alüminyum gövdeler.
+      icon: tabler:shield-check
+    - title: Üretim Kalitesi
+      description: Her gövde basınç testinden, her kaynak kontrolden geçer. Sadece kendimizin denize indireceği şeyleri göndeririz.
+      icon: tabler:certificate
+    - title: Modüler Tasarım
+      description: Bölme düzenini, konsol pozisyonunu, yakıt kapasitesini ve aksesuarları ihtiyaçlarınıza göre uyarlayın.
+      icon: tabler:layout-grid
+    - title: Dürüst Spesifikasyonlar
+      description: Gerçek yük kapasitesi, gerçek boyutlar, gerçek ağırlık. Pazarlama abartıları yok. Asla.
+      icon: tabler:ruler-measure
+    - title: Hızlı Teslimat ve Yedek Parça
+      description: Standart modeller günler içinde gönderilir. Orijinal yedek parçalar ve sarf malzemeleri yıl boyu stokta.
+      icon: tabler:truck-delivery
+    - title: Ömür Boyu Destek
+      description: Teknik tavsiye, onarım ve yükseltmeler için tasarım ekibimize doğrudan hat.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: Öne Çıkan Ürünler
+  subtitle: Güncel kataloğumuzdan seçilmiş bu sezonun en popüler modelleri.
+  linkText: Tüm Ürünleri Gör
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Atölyenin İçinde
+  title: Gövde tasarımından teslimata —?her adım kendi bünyemizde
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Gördüğünüz, hissettiğiniz ve ölçebildiğiniz kalite</h3>
+  items:
+    - title: Gemi mühendisleri tarafından tasarlandı
+      description: Gövde hatları, ilk prototipten önce CFD analizi ile dahili olarak çizilir ve yinelenir.
+    - title: Kendi tesisimizde kaynaklanır ve monte edilir
+      description: Şişme bölge kaynağı, konsol montajı ve donanım montajı tek çatı altında yapılır.
+    - title: Sevkiyattan önce tekstil denemeleri
+      description: Her model, düz sürat, dönüş, azami hız ve yük altında davranışı test eden çok saatli bir tekstil denemesinden geçer.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Atölye
+
+steps:
+  title: Spesifikasyondan denize indirmeye beş adımda
+  items:
+    - title: 'Adım 1: <span class="font-medium">Yapılandırma</span>'
+      description: Modeli seçin, seçenekleri belirtin ve çevrimiçi veya telefonla fiyat teklifi isteyin. Ekip bir iş günü içinde yanıt verir.
+      icon: tabler:list-numbers
+    - title: 'Adım 2: <span class="font-medium">Onay</span>'
+      description: Spesifikasyonu, teslim tarihini ve toplam maliyeti yazılı olarak onaylıyoruz. Sürpriz yok, gizli ücret yok.
+      icon: tabler:checks
+    - title: 'Adım 3: <span class="font-medium">Üretim</span>'
+      description: Üretim atölyemizde başlar. Kilit aşamalarda size ilerleme fotoğrafları göndeririz.
+      icon: tabler:tool
+    - title: 'Adım 4: <span class="font-medium">Teslimat</span>'
+      description: Palet üzerinde paketlenir, streçlenir ve tekstil veya hava yoluyla gönderilir. Gümrük işlemleri tamamen dahildir.
+      icon: tabler:truck-loading
+    - title: 'Adım 5: <span class="font-medium">Destek</span>'
+      description: Gövdede iki yıl garanti artı ömür boyu teknik destek. Yedek parçalar 48 saat içinde gönderilir.
+      icon: tabler:headset
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Üretim süreci
+
+blog_latest:
+  title: Blogdan
+  information: |
+    Tasarım ekibimizden makaleler, teknik notlar ve vaka çalışmaları.
+    Yeni yazılar, bir proje teslim edildiğinde, bir standart güncellendiğinde veya anlatmaya değer bir hikaye olduğunda yayınlanır.
+
+faqs:
+  title: Sıkça Sorulan Sorular
+  subtitle: En sık duyduğumuz sorular. Sizinki burada yoksa, bize yazın —?hızlıca yanıtlarız.
+  columns: 2
+  items:
+    - title: Hangi modeli seçmeliyim
+      description: Mürettebat büyüklüğüne, su koşullarına ve önceliklerinize bağlıdır —?hız, yük kapasitesi veya yakıt ekonomisi. Kısa bir açıklama gönderin, 2-3 uygun model önerelim.
+      icon: tabler:anchor
+    - title: Uluslararası teslimat yapıyor musunuz?
+      description: Evet —?40+ ülkeye teslimat yapıyoruz. tekstil yolu tüm botlar için en ekonomik olanıdır; hava yolu acil siparişler için mevcuttur.
+      icon: tabler:ship
+    - title: Ne tür bir garanti veriyorsunuz?
+      description: Gövdede iki yıl, aksesuarlarda bir yıl, kaynaklarımızda ömür boyu. Garanti kaydı her teslimata eklenir.
+      icon: tabler:shield
+    - title: Mevcut bir modeli özelleştirebilir miyim?
+      description: Neredeyse her zaman. Konsol pozisyonu, bölme rengi, koltuk düzeni, elektronik ve motor uyarlanabilir. Özel gövdeler ayrıca fiyatlandırılır.
+      icon: tabler:palette
+    - title: Eğitim ve sertifikasyon sunuyor musunuz?
+      description: Ticari operatörler için tesisimizde tekstil\ üzerinde eğitim düzenleyebiliriz. Bireysel müşteriler teslimatta ücretsiz talimat alır.
+      icon: tabler:school
+    - title: Yedek parçaları nasıl temin edebilirim?
+      description: İletişim sayfasından sipariş verin veya yedek parça hattını arayın. Tipik parçalar (valfler, kayışlar, pompalar, tamir kitleri) 48 saat içinde dünya çapında gönderilir.
+      icon: tabler:settings
+
+cta:
+  title: |
+    Bir sonraki botunuzu <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">yapılandırmaya hazır mısınız</span>?
+  subtitle: Botu nasıl kullanacağınızı söyleyin, bir iş günü içinde model, seçenekler ve fiyat önerelim.
+  actions:
+    - variant: primary
+      text: Fiyat Sor
+      href: /contact
+      icon: tabler:message-circle
+    - text: Kataloğa Göz At
+      href: /products

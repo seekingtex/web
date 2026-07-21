@@ -1,0 +1,25 @@
+badges:
+  - icon: "\u2B50"
+    title: OEKO-TEX Certified
+    desc: All fabrics meet OEKO-TEX Standard 100 for harmful substances.
+    variant: cert
+  - icon: "\u2B50"
+    title: Material Excellence
+    desc: Premium fibers and chemicals sourced from leading global suppliers.
+    variant: material
+  - icon: "\u2B50"
+    title: Rigorous Testing
+    desc: Every batch tested for performance, colorfastness, and dimensional stability.
+    variant: standard
+  - icon: "\u2B50"
+    title: Quality Guarantee
+    desc: All Seekingtex fabrics backed by comprehensive quality guarantee.
+    variant: warranty
+  - icon: "\u2714"
+    title: BSCI Certified
+    desc: Social compliance audit verified — ethical manufacturing for European buyers.
+    variant: cert
+  - icon: "\u2714"
+    title: REACH Compliant
+    desc: All materials comply with EU chemical safety regulations.
+    variant: cert

@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Textile Quality Assurance Lab' },
+];
+
+const metadata = {
+  title: `Textile Quality Assurance Lab — AATCC/ASTM-Compliant Fabric Testing & Certification | ${SITE.name}`,
+  description: `Independent quality verification for functional fabrics. Tensile testing, color fastness, dimensional stability, and material certification. Contact our quality lab for third-party testing.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href="/randdcenter" class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 06</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Textile Quality Assurance Lab</h1>
+        <p class="mt-3 text-lg text-muted">Independent verification — every test passed before delivery</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/factory/fabric-quality-lab.webp"
+          alt="Seekingtex textile quality assurance laboratory"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>Trust, but verify</h2>
+    <p>
+      Every fabric roll that leaves our facility carries the certification that it has passed a defined set of quality
+      inspections and material tests. Our Textile Quality Assurance Lab is an independent function within the organisation —
+      it reports directly to the managing director, not to production — ensuring that no commercial pressure can
+      compromise the inspection gate. If a material batch or a finished fabric does not meet the published specification,
+      the lab has the authority to halt shipment until the non-conformance is resolved.
+    </p>
+    <p>
+      The lab operates under a quality management system aligned with ISO 9001 principles, and our test methods are
+      based on AATCC, ASTM, and ISO standards wherever applicable. We maintain detailed records of every test performed,
+      creating a complete traceability chain from raw material receipt to final fabric delivery.
+    </p>
+
+    <h2>Test equipment and capabilities</h2>
+    <table>
+      <thead><tr><th>Equipment</th><th>Tests Performed</th><th>Standard / Method</th></tr></thead>
+      <tbody>
+        <tr
+          ><td>Universal testing machine (50 kN)</td><td
+            >Tensile strength (fabric), seam strength, tear propagation</td
+          ><td>ASTM D5034, ASTM D1683, ASTM D2261</td></tr
+        >
+        <tr
+          ><td>Color spectrophotometer</td><td
+            >Delta-E color measurement, shade sorting, color fastness to light/wash/rub</td
+          ><td>AATCC TM110, AATCC TM61, AATCC TM8</td></tr
+        >
+        <tr
+          ><td>Dimensional stability tester</td><td>Fabric shrinkage after laundering, relaxation, and steaming</td><td
+            >AATCC 135 / AATCC 150</td
+          ></tr
+        >
+        <tr
+          ><td>Hydrostatic head tester</td><td>Water penetration resistance of fabric (0-5000 mbar)</td><td>ISO 811 / AATCC TM127</td
+          ></tr
+        >
+        <tr
+          ><td>Digital thickness gauge & micrometer</td><td
+            >Fabric thickness, coating thickness, film thickness</td
+          ><td>ASTM D1777</td></tr
+        >
+        <tr
+          ><td>Environmental chamber</td><td
+            >Temperature/humidity conditioning (-40 °C to +80 °C) for accelerated aging tests</td
+          ><td>ASTM D573, AATCC TM186</td></tr
+        >
+        <tr
+          ><td>Martindale abrasion tester</td><td>Abrasion resistance, pilling resistance</td><td
+            >ASTM D4966 / ISO 12947</td
+          ></tr
+        >
+      </tbody>
+    </table>
+
+    <h2>The inspection gates — from material to delivery</h2>
+    <p>
+      Every fabric lot follows a defined quality plan with mandatory inspection points. No lot can skip a gate; each gate
+      must be signed off by a quality inspector before the next stage begins.
+    </p>
+
+    <div class="not-prose my-8">
+      <div class="relative">
+        <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800"></div>
+        <div class="space-y-6 relative">
+          {
+            [
+              {
+                gate: 'Gate 1',
+                label: 'Incoming material inspection',
+                desc: 'Fiber batch, coating chemicals, finish additives — all checked against incoming specification before release to production.',
+              },
+              {
+                gate: 'Gate 2',
+                label: 'In-process fabric inspection',
+                desc: 'First-off greige fabric inspected (visual + weight) at start of each production run.',
+              },
+              {
+                gate: 'Gate 3',
+                label: 'Color & finish verification',
+                desc: 'Finished fabric measured for color accuracy (Delta-E), coating weight, and finish uniformity.',
+              },
+              {
+                gate: 'Gate 4',
+                label: 'Pre-delivery inspection',
+                desc: 'Complete fabric roll inspected: width, weight, defects, shade banding. 50-point checklist per roll.',
+              },
+              {
+                gate: 'Gate 5',
+                label: 'Final certification',
+                desc: 'Test reports compiled, inspection records reviewed, Certificate of Conformance issued.',
+              },
+            ].map((g) => (
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold z-10">
+                  {g.gate}
+                </div>
+                <div class="flex-1 p-3 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
+                  <p class="text-sm font-semibold">{g.label}</p>
+                  <p class="text-xs text-gray-500 mt-1">{g.desc}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <h2>Key quality metrics (2025 rolling average)</h2>
+    <div class="not-prose my-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+        <span class="block text-2xl font-bold text-blue-600">99.7 %</span>
+        <span class="text-xs text-gray-500">First-pass yield (fabric lot)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+        <span class="block text-2xl font-bold text-blue-600">&lt; 0.2 %</span>
+        <span class="text-xs text-gray-500">Defect rate (linear metre)</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+        <span class="block text-2xl font-bold text-blue-600">100 %</span>
+        <span class="text-xs text-gray-500">Fabric rolls inspected before shipment</span>
+      </div>
+      <div class="p-4 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 text-center">
+        <span class="block text-2xl font-bold text-blue-600">ISO 9001</span>
+        <span class="text-xs text-gray-500">Quality management system compliance</span>
+      </div>
+    </div>
+
+    <h2>Our quality team</h2>
+    <p>
+      The lab is staffed by a quality manager (10 years in textile QA, ASQ Certified Quality Engineer), two quality
+      inspectors (each with Level 2 certification in textile inspection), and a materials technician responsible for all
+      physical testing. The team undergoes annual proficiency testing through an independent third-party provider to
+      ensure that our test results remain accurate and reproducible.
+    </p>
+
+    <h2>Independent testing for clients</h2>
+    <p>
+      Our Textile Quality Assurance Lab is available for independent testing services. If you need to verify a fabric
+      specification, validate a new finish, or obtain a third-party test report for a procurement
+      qualification, we can perform the tests to the applicable standard and issue a certified test report.
+    </p>
+    <p>Examples of recent third-party testing work:</p>
+    <ul>
+      <li>
+        Color fastness comparison of five competitive dye systems for a European apparel brand's quality assurance
+        programme.
+      </li>
+      <li>
+        Accelerated aging study (UV + thermal cycling) for a new UPF-enhanced polyester formulation, with regular interim
+        measurements at 500 h intervals.
+      </li>
+      <li>Dimensional stability validation of 50 prototype fabric constructions for a new performance wear line.</li>
+    </ul>
+
+    <h2>Our commitment to you</h2>
+    <p>
+      When you receive a {SITE.name} fabric, you also receive its quality dossier — a compiled record of the test results that
+      apply to your specific fabric lot. Fiber certificate, color fastness report, dimensional stability test results, and pre-delivery inspection
+      checklist. Every number is traceable. Every inspector is identified. This is not just paperwork — it is our promise
+      that what we delivered is what we specified.
+    </p>
+    <p>
+      If you ever have a quality concern, you can contact the lab directly — the contact details are printed on your
+      certificate of conformance. We take every query seriously and commit to a formal investigation within 48 hours.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Need independent testing or quality verification?</h2>
+      <p class="mt-2 text-sm text-muted">
+        Our lab accepts third-party testing work — contact us with your requirements.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact the quality lab</a
+      >
+    </div>
+  </section>
+</Layout>

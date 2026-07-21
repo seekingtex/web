@@ -1,0 +1,96 @@
+hero:
+  tagline: Hakk谋m谋zda
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex At枚lyesi
+  title: |
+    tekstil m眉hendisli臒ini <br />
+    <span class="text-accent dark:text-white">Seekingtex</span> tarz谋yla bulu艧turuyoruz
+  subtitle: 'Bir sahil at枚lyesinde, tek bir tekne ve sars谋lmaz bir inan莽la ba艧lad谋k: tekstil 眉r眉nleri, hayat buna ba臒l谋ym谋艧 gibi tasarlanmal谋d谋r 鈥?莽眉nk眉 枚yledir. Bug眉n 40+ 眉lkeye teslimat yap谋yoruz, ancak her g枚vde h芒l芒 艧irketi kuran ayn谋 ellerden ge莽iyor.'
+
+stats:
+  title: Rakamlarla
+  columns: 4
+  stats:
+    - title: Teslim Edilen G枚vde
+      amount: '2,400+'
+    - title: Teslimat Yap谋lan 脺lke
+      amount: '40'
+    - title: Toplam Deneyim (y谋l)
+      amount: '60'
+    - title: Ortalama Yan谋t S眉resi (s)
+      amount: '24'
+
+features3_what_we_build:
+  title: Ne 脺retiyoruz
+  subtitle: En ince ayr谋nt谋s谋na kadar bildi臒imiz odaklanm谋艧 bir 眉r眉n gam谋 鈥?kestirme yol veya rozet m眉hendisli臒i yok.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: teknik kuma艧 Botlar
+      description: 3,3 m'den 7,5 m'ye kadar al眉minyum g枚vdeli teknik kuma艧'ler. Devriye, dal谋艧, bal谋k莽谋l谋k ve aile kullan谋m谋 i莽in tasarlanm谋艧t谋r.
+      icon: tabler:ship
+    - title: fonksiyonel\ kuma艧lar
+      description: 2,4 m'den 4,2 m'ye kadar PVC ve Hypalon fonksiyonel kuma艧larlar. Hafif, dayan谋kl谋 ve kolay saklanabilir.
+      icon: tabler:speedboat
+    - title: S眉peryat Tenderi
+      description: Ana premium kuma艧 tasar谋m谋na g枚re 眉retilmi艧, y眉ksek spesifikasyonlu kompakt teknik kuma艧'ler.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Aksesuarlar
+      description: Kemerler, pompalar, 枚rt眉ler, su ge莽irmez 莽antalar, yak谋t tanklar谋 ve elektronik. Tamam谋 botlar谋m谋zla uyumlu.
+      icon: tabler:package
+    - title: Modifikasyon ve Onar谋m
+      description: fonksiyonel\ kuma艧 onar谋m谋, elektronik y眉kseltme ve motor de臒i艧imi.
+      icon: tabler:tool
+    - title: 脰zel 脺r眉nler
+      description: Ticari, bilimsel ve askeri m眉艧teriler i莽in tasar谋m.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 脰zel yap谋m tekne
+
+steps2_values:
+  title: De臒erlerimiz
+  subtitle: 陌lk g眉nden itibaren her 眉r眉n眉 艧ekillendiren 眉莽 ilke.
+  items:
+    - title: Teknede ailen varm谋艧 gibi in艧a et
+      description: Her g枚vde, her kaynak ve her bile艧en, kendi ailemiz kullanacakm谋艧 gibi i艧lenir.
+      icon: tabler:heart
+    - title: Sat谋艧tan 脰nce M眉hendislik
+      description: Spesifikasyon yanl谋艧sa, spesifikasyonu de臒i艧tiririz 鈥?asla m眉艧teriyi de臒il.
+      icon: tabler:settings
+    - title: Garanti 脰tesi Destek
+      description: Yirmi y谋ll谋k g枚vdeler h芒l芒 yedek par莽a i莽in arar 鈥?biz de h芒l芒 yan谋tlar谋z.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Kilometre Ta艧lar谋
+  subtitle: Seekingtex hikayesinin k谋sa versiyonu.
+  isReversed: true
+  items:
+    - title: Sahil at枚lyesinde kuruldu
+      description: Bir CNC freze makinesi ve sars谋lmaz bir vizyona sahip iki tekstil m眉hendisi.
+      icon: tabler:building-factory
+    - title: 陌lk 1.000 g枚vde teslimat谋
+      description: Yedinci y谋lda, a臒谋rl谋kl谋 olarak a臒谋zdan a臒谋za ve tekrar eden m眉艧teriler sayesinde ula艧谋ld谋.
+      icon: tabler:circle-check
+    - title: Uluslararas谋 ihracat program谋
+      description: Be艧 k谋tada yerel servis ortaklar谋yla 40+ 眉lkeye teslimat.
+      icon: tabler:world
+
+features2_locations:
+  title: Lokasyonlar谋m谋z
+  tagline: Bizi Nerede Bulabilirsiniz
+  columns: 3
+  items:
+    - title: Genel Merkez ve At枚lye
+      description: Sahil sanayi park谋, bina 4 鈥?randevu ile ziyaret i莽in hafta i莽i a莽谋k.
+    - title: AB Servis Merkezi
+      description: Akdeniz liman谋 鈥?Avrupal谋 m眉艧teriler i莽in modifikasyon, onar谋m ve garanti deste臒i.
+    - title: APAC Ortak A臒谋
+      description: Avustralya, Japonya, Singapur ve Hong Kong'da yetkili servis ortaklar谋.

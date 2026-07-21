@@ -1,0 +1,30 @@
+hero:
+  tagline: Galleri
+  title: Galleri
+  subtitle: Produktbilder, produksjonshall og vann-eventyr
+
+albums:
+  - title: teknisk stoff-båter
+    desc: teknisk stoff med aluminiumsskrog fra 3,3 m til 7,5 m for patruljering, dykking, fiske og familiebruk.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUP-brett
+    desc: Oppblåsbare SUP-brett med drop-stitch-teknologi for tur, surfing, yoga og fiske.
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Fabrikk og verksted
+    desc: Vårt produksjonsanlegg på 12 000 m² i Qingdao, Kina.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: Vil du se mer?
+  desc: Følg oss i sosiale medier for å holde deg oppdatert på produktnyheter, fabrikkoppdateringer og kundeeventyr.
+  instagram: Instagram
+  youtube: YouTube

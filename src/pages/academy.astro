@@ -1,0 +1,101 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Fabric Knowledge Academy — Seekingtex Academy',
+  description: 'Guides and tutorials for every skill level — from textile basics to advanced fabric technology. Learn at your own pace with Seekingtex Academy.',
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Academy' }];
+
+const categories = [
+  {
+    level: 'Beginner',
+    color: 'from-green-500 to-emerald-600',
+    badge: 'bg-green-100 text-green-700',
+    guides: [
+      { title: 'Fabric Basics', desc: 'Learn the fundamentals of textile construction — weaves, knits, yarn types, and fabric weights.', slug: 'beginner-fabric-guide' },
+      { title: 'Fiber Types Explained', desc: 'Polyester vs nylon vs cotton vs blends — understand fiber properties and how they affect performance.', slug: 'fiber-types-guide' },
+      { title: 'Fabric Finishes 101', desc: 'Introduction to functional finishes — DWR, antibacterial, UPF, FR, and how they are applied.', slug: 'fabric-finishes-guide' },
+    ],
+  },
+  {
+    level: 'Intermediate',
+    color: 'from-blue-500 to-indigo-600',
+    badge: 'bg-blue-100 text-blue-700',
+    guides: [
+      { title: 'Performance Fabric Selection', desc: 'How to choose the right fabric for your application — weight, weave, finish, and performance trade-offs.', slug: 'fabric-selection-guide' },
+      { title: 'Understanding Fabric Testing', desc: 'Interpret tensile, tear, hydrostatic head, UPF, and colorfastness test results for informed sourcing decisions.', slug: 'fabric-testing-guide' },
+      { title: 'Coating & Lamination Guide', desc: 'PU coating vs acrylic vs silicone vs lamination — understand the differences and applications.', slug: 'coating-lamination-guide' },
+      { title: 'Sustainable Textile Basics', desc: 'Recycled fibers, bio-based materials, low-impact dyes, and certifications (GRS, GOTS, bluesign).', slug: 'sustainable-textile-guide' },
+    ],
+  },
+  {
+    level: 'Advanced',
+    color: 'from-purple-500 to-violet-600',
+    badge: 'bg-purple-100 text-purple-700',
+    guides: [
+      { title: 'Technical Textile Engineering', desc: 'Weave engineering, multi-layer constructions, and performance optimization for demanding applications.', slug: 'textile-engineering-guide' },
+      { title: 'Chemical Safety & Compliance', desc: 'OEKO-TEX, REACH, Proposition 65 — understanding textile chemical regulations and how to ensure compliance.', slug: 'chemical-safety-guide' },
+      { title: 'Quality Control Systems', desc: 'Designing QC systems for textile production — AQL, sampling plans, defect grading, and supplier auditing.', slug: 'qc-textile-guide' },
+    ],
+  },
+  {
+    level: 'Maintenance',
+    color: 'from-amber-500 to-orange-600',
+    badge: 'bg-amber-100 text-amber-700',
+    guides: [
+      { title: 'Fabric Care & Maintenance', desc: 'Proper washing, drying, and storage to extend the life of performance fabrics and maintain functional finishes.', slug: 'fabric-care-guide' },
+      { title: 'Coating & Finish Longevity', desc: 'How to maximize the lifespan of DWR, antibacterial, and UPF treatments through proper care routines.', slug: 'finish-longevity-guide' },
+      { title: 'Repair & Restoration', desc: 'Fix small tears, re-apply DWR, and restore fabric performance with field-repair techniques.', slug: 'fabric-repair-guide' },
+      { title: 'Storage Best Practices', desc: 'Best practices for storing fabric rolls — temperature control, humidity, UV protection, and shelf life management.', slug: 'fabric-storage-guide' },
+    ],
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Seekingtex Academy</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Fabric Knowledge Academy</h1>
+    <p class="mt-3 text-lg text-muted">Guides and tutorials for every skill level — from textile basics to advanced fabric technology</p>
+  </section>
+
+  {categories.map((cat) => (
+    <section class="px-6 sm:px-6 pb-16 mx-auto max-w-6xl" data-ai-block="learning-category">
+      <div class="flex items-center gap-4 mb-8">
+        <div class={`h-10 w-10 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center text-white font-bold text-sm`}>
+          {cat.level.charAt(0)}
+        </div>
+        <div>
+          <span class={`text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded ${cat.badge}`}>{cat.level}</span>
+          <h2 class="mt-1 text-2xl font-bold text-gray-900">{cat.level} Guides</h2>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {cat.guides.map((g) => (
+          <a
+            href={`/v2/${g.slug}`}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{g.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{g.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">
+              Read guide →
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <section class="px-6 sm:px-6 py-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Not sure where to start?</h2>
+      <p class="mt-2 text-sm text-muted">Contact our team to find the right fabric resources for your needs.</p>
+      <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+        Contact us →
+      </a>
+    </div>
+  </section>
+</Layout>

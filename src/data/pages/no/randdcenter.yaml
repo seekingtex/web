@@ -1,0 +1,126 @@
+hero:
+  tagline: FoU-senter
+  title: FoU-senter
+  subtitle: Fokusert p氓 fremgang
+
+intro:
+  - Seekingtexs forsknings- og utviklingssenter (FoU) er drivkraften bak v氓rt oppdrag om 氓 revolusjonere tekstilindustriutstyr. Vi styrker tekstilentusiaster over hele verden med tryggere, mer komfortable og mer nytelsesrike produkter gjennom ustoppelig innovasjon innen oppbl氓sbare textile products-brett og b氓ter. V氓rt dedikerte team av ingeni酶rer, designere og lidenskapelige tekstilindustriseksperter former fremtiden for bransjen, og hever kontinuerlig standarden for kvalitet, ytelse og b忙rekraft.
+  - FoU-anlegget v氓rt samler materialforskere, marinearkitekter og produksjonsingeni酶rer under samme tak. Fra tekstilformulering og skrogsimulering til sveiseprosessutvikling og fullskala sj酶pr酶ver 鈥?hvert steg i produktutviklingen er datadrevet og validert gjennom testing.
+
+mission:
+  tagline: V氓rt oppdrag
+  title: Innovasjon for fremtiden av tekstilindustri
+  pillars:
+    - icon: lightning
+      title: Teknologisk fremgang
+      desc: Banebrytende nye materialer, design og produksjon for overlegen produktytelse og holdbarhet.
+    - icon: design
+      title: Brukerorientert design
+      desc: Dyptg氓ende forst氓else og overg氓else av brukerbehov gjennom ergonomisk og intuitiv produktdesign.
+    - icon: globe
+      title: B忙rekraftig praksis
+      desc: Minimering av v氓rt milj酶avtrykk ved 氓 bruke milj酶vennlige materialer og prosesser.
+    - icon: shield
+      title: Urokkelig sikkerhet
+      desc: Sikring av de h酶yeste sikkerhetsstandardene gjennom rigor酶se tester og sertifisering.
+
+pillars:
+  - title: Teknologisk fremgang
+    desc: Banebrytende nye materialer, design og produksjonsprosesser for 氓 levere overlegen produktytelse og holdbarhet.
+    icon: tech
+  - title: Avanserte materialer
+    desc: Utforskning av toppmoderne PVC, Hypalon, kompositter og b忙rekraftige alternativer for forbedrede produktegenskaper.
+    icon: materials
+  - title: B忙rekraft
+    desc: 'Kjerneforpliktelse: Vi er dedikert til milj酶ansvar gjennom b忙rekraftig produksjon og resirkulerbare materialer.'
+    icon: sustainability
+
+capabilities:
+  tagline: Kapabiliteter
+  title: FoU-kapabiliteter
+  subtitle: Fire kjernefagomr氓der som gir oss ende-til-ende-kontroll over produktutvikling 鈥?fra r氓vareforskning til endelig sertifisering.
+  groups:
+    - title: Materialvitenskap og tekstilteknologi
+      items:
+        - Analyse og optimalisering av PVC- og Hypalon-formuleringer
+        - UV-stabilisering, flammehemming og antibakteriell tilsetningsutvikling
+        - Laminering og adhesjonsteknikk for flerlags tekstiler
+        - Akselerert aldringstesting (UV, termisk, fuktighet, saltspray)
+    - title: Skrogteknikk og hydrodynamikk
+      items:
+        - Parametrisk 3D-skrogdesign og CFD-optimalisering
+        - Elementmetodeanalyse for strukturelle og st酶tbelastninger
+        - Slepetanktesting av skalerte modeller og ytelsesvalidering
+        - Tilpasset skrogutvikling for spesielle oppdragsprofiler
+    - title: Sveiseteknologi og sammenf酶yning
+      items:
+        - Utvikling og optimalisering av RF-dielektrisk sveiseprosess
+        - Varmlufts-, varmkile- og ultralydsveisemetoder
+        - Kvalifisering av liming og s酶mtape
+        - Sveisestyrkemodellering og levetidsprediksjon
+    - title: Testing, sertifisering og samsvar
+      items:
+        - Kvalitetsstyring og CE-samsvarstesting
+        - Uavhengig tredjepartstesting og sertifiseringsst酶tte
+        - Utvikling av tilpassede testprotokoller for innkj酶pskvalifisering
+        - Feilanalyse i drift og grunn氓rsaksunders酶kelse
+
+rd_numbers:
+  tagline: Innovasjon
+  title: FoU i tall
+  stats:
+    - value: '14'
+      label: FoU-ingeni酶rer og forskere
+    - value: '8'
+      label: Aktive patenter og s酶knader
+    - value: '6'
+      label: Spesialiserte laboratorier
+    - value: 12 yr
+      label: Gjennomsnittlig teamerfaring
+
+rd_services:
+  tagline: Tilpasset FoU
+  title: FoU-tjenester for partnere
+  services:
+    - title: Utvikling av tilpassede materialer
+      desc: Vi utvikler tilpassede tekstilformuleringer, laminatstabler og klebesystemer skreddersydd for ditt driftsmilj酶 og ytelsesm氓l.
+    - title: OEM/ODM-produktteknikk
+      desc: Fra konseptskisser til produksjonsklare ingeni酶rpakker 鈥?teamet v氓rt kan designe, prototype og validere b氓ter under ditt merke.
+    - title: Tredjepartstesting og sertifisering
+      desc: Bruk v氓re ISO-kompatible testanlegg for uavhengig materialtesting, produktvalidering og sertifiseringsst酶tte.
+  cta: Diskuter dine FoU-behov 鈫?
+  cta_link: /contact
+
+vision:
+  tagline: V氓r visjon
+  title: Forme fremtiden for tekstilindustri
+  body: Seekingtex strever etter 氓 lede funksjonelt\ stoff- og textile products-industrien gjennom kontinuerlig innovasjon, urokkelig kvalitet og et fast forpliktelse til sikkerhet og b忙rekraft 鈥?og til slutt berike opplevelsene til tekstilentusiaster verden over. Seekingtex FoU-senter er der lidenskap m酶ter innovasjon, og setter nye standarder for tekstilbransjen.
+
+labs_section:
+  tagline: Laboratorier
+  title: V氓re laboratorier
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: PVC-tekstillaboratorium
+      description: Kontinuerlig forskning og testing av PVC- og Hypalon-r酶rtekstiler for strekkfasthet, UV-motstand, slitasje og lavtemperaturfleksibilitet for 氓 sikre langsiktig p氓litelighet i marine milj酶er.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Skrogteknikkstudio
+      description: CAD-drevet design og elementmetodeanalyse av HDPE-, aluminium- og glassfiberskrog. Hvert skrog simuleres digitalt for spenningsfordeling og st酶tmotstand f酶r den f酶rste prototypen bygges.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: RF-sveisesenter
+      description: Dedikert radiofrekvenssveisanlegg med presis temperatur- og trykkontroll, som produserer h酶yfaste, lufttette s酶mmer som overg氓r industristandarder for oppbl氓sbare farkoster.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Hydrodynamisk testbasseng
+      description: Testing av skalerte modeller i v氓rt interne testbasseng for 氓 optimalisere skrogform, planingsytelse, stabilitet og drivstoffeffektivitet p氓 tvers av ulike last- og sj酶forhold.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Prototypeverksted
+      description: Fullskala prototypings- og riggeanlegg der nye modeller bygges, monteres og sj酶pr酶ves. Hver prototype gjennomg氓r et minimum 20 timers vanntestprogram f酶r produksjonsgodkjennelse.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Kvalitets- og inspeksjonslaboratorium
+      description: Dedikert kvalitetssikringslaboratorium som utf酶rer strekktester, luftopprettholdelsessykluser, s酶mflisingstester og materialsertifisering for 氓 sikre at hver b氓t som forlater verkstedet oppfyller v氓re publiserte spesifikasjoner.
+      href: /randdcenter/quality-inspection-lab

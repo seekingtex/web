@@ -1,0 +1,288 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/use-cases.yaml';
+
+interface UseCaseEntry {
+  id: string;
+  title: string;
+  desc: string;
+  scenario: string;
+  solution: string;
+  products: string[];
+  image: string;
+}
+
+const defaultCases: UseCaseEntry[] = [
+  {
+    id: 'beginner',
+    title: 'Outdoor Apparel & Gear',
+    desc: 'UPF 50+ sun protection and quick-dry fabrics for outdoor clothing and gear.',
+    scenario:
+      'An outdoor apparel brand needs lightweight, durable fabrics with UPF 50+ protection for their new hiking and adventure clothing line.',
+    solution:
+      'The UPF 50+ polyester series provides excellent UV blocking with moisture-wicking comfort. Custom colors, OEKO-TEX certified, MOQ 500 yards per SKU.',
+    products: ['UPF 50+ Polyester', 'Quick-Dry Mesh', 'Moisture-Wicking Lining'],
+    image: '/images/seekingtex/use-cases/Seekingtex-beginner-use-case.webp',
+  },
+  {
+    id: 'outdoor',
+    title: 'Performance Outdoor Fabrics',
+    desc: 'Waterproof breathable and windproof fabrics for outdoor performance wear.',
+    scenario:
+      'An outdoor gear manufacturer requires waterproof breathable fabric with DWR finish for their premium rain jacket and pant collection.',
+    solution:
+      'PU-coated waterproof breathable fabrics with hydrostatic head up to 10,000 mm and MVTR above 5,000 g/m²/24h. PFC-free DWR, OEKO-TEX certified.',
+    products: ['Waterproof Breathable PU', 'DWR Finish Fabric', 'Windproof Lining'],
+    image: '/images/seekingtex/use-cases/Seekingtex-outdoor-events.webp',
+  },
+  {
+    id: 'pro',
+    title: 'Industrial & Workwear',
+    desc: 'High-tenacity, FR-treated, and antibacterial fabrics for uniform and workwear.',
+    scenario:
+      'A workwear manufacturer needs high-durability fabrics with flame retardant treatment, antibacterial finish, and professional appearance for industrial uniforms.',
+    solution:
+      'High-tenacity polyester/cotton blends with FR treatment, antibacterial finish, and stain resistance. BSCI certified, MOQ 1,000 yards per SKU with custom color matching.',
+    products: ['FR High-Tenacity Poly/Cotton', 'Antibacterial Finish', 'Stain-Resistant Coating'],
+    image: '/images/seekingtex/use-cases/Seekingtex-professional-use-case.webp',
+  },
+  {
+    id: 'family',
+    title: 'Health & Comfort Textiles',
+    desc: 'Antibacterial, stretch, and eco-friendly fabrics for everyday comfort and health.',
+    scenario:
+      'A healthcare textile company needs antibacterial, breathable fabrics with 4-way stretch for medical uniforms that combine comfort with barrier performance.',
+    solution:
+      '7A antibacterial polyester/spandex with 4-way stretch, moisture-wicking, and fluid-repellent finish. OEKO-TEX certified, available in medical-grade and consumer variants.',
+    products: ['7A Antibacterial Stretch', 'Moisture-Wicking Knit', 'Fluid-Repellent Finish'],
+    image: '/images/seekingtex/use-cases/Seekingtex-family-use-case.webp',
+  },
+];
+
+let cases: UseCaseEntry[] = defaultCases.map((c) => ({ ...c, products: [...c.products] }));
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed?.cases && Array.isArray(parsed.cases)) {
+    cases = parsed.cases.map((c: any, i: number) => ({
+      id: c.id || defaultCases[i]?.id || '',
+      title: c.title || defaultCases[i]?.title || '',
+      desc: c.desc || defaultCases[i]?.desc || '',
+      scenario: c.scenario || defaultCases[i]?.scenario || '',
+      solution: c.solution || defaultCases[i]?.solution || '',
+      products: Array.isArray(c.products) && c.products.length ? c.products : defaultCases[i]?.products || [],
+      image: c.image || defaultCases[i]?.image || '',
+    }));
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="Use Cases" active="usecases" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Use Cases</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      4 use-case scenarios shown on the homepage. File: <code class="font-mono">{file}</code>
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="usecases-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    {
+      cases.map((c, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">
+            <span class="text-xs text-gray-400 font-mono mr-2">#{i + 1}</span>
+            {c.id}
+          </h2>
+          <input type="hidden" name={'c' + i + '.id'} value={c.id} />
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Title</label>
+              <input
+                type="text"
+                name={'c' + i + '.title'}
+                value={c.title}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Short Description</label>
+              <input
+                type="text"
+                name={'c' + i + '.desc'}
+                value={c.desc}
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Scenario</label>
+            <textarea
+              name={'c' + i + '.scenario'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {c.scenario}
+            </textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Solution</label>
+            <textarea
+              name={'c' + i + '.solution'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {c.solution}
+            </textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              Products (comma-separated)
+            </label>
+            <input
+              type="text"
+              name={'c' + i + '.products'}
+              value={c.products.join(', ')}
+              placeholder="UPF 50+ Polyester, Waterproof Fabric, Quick-Dry Mesh"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+            <input
+              type="text"
+              name={'c' + i + '.image'}
+              value={c.image}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
+            {c.image && (
+              <div class="mt-2 flex items-center gap-3">
+                <img src={c.image} alt="" class="w-20 h-14 object-cover rounded-lg border border-gray-200" />
+                <span class="text-xs text-gray-400 truncate">{c.image}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('usecases-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const cases = [];
+        for (let i = 0; i < 4; i++) {
+          const raw = String(fd.get('c' + i + '.products') || '').trim();
+          cases.push({
+            id: String(fd.get('c' + i + '.id') || '').trim(),
+            title: String(fd.get('c' + i + '.title') || '').trim(),
+            desc: String(fd.get('c' + i + '.desc') || '').trim(),
+            scenario: String(fd.get('c' + i + '.scenario') || '').trim(),
+            solution: String(fd.get('c' + i + '.solution') || '').trim(),
+            products: raw
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+            image: String(fd.get('c' + i + '.image') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { cases },
+              commitMessage: 'Update use cases',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

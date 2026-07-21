@@ -1,0 +1,202 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/contact-form-text.yaml';
+
+const locales = ['en', 'zh', 'fr', 'de', 'es', 'pt'] as const;
+const localeLabels: Record<string, string> = { en: 'English', zh: '中文', fr: 'Français', de: 'Deutsch', es: 'Español', pt: 'Português' };
+
+const defaultData = {
+  submit_button: { en: 'Send message', zh: '发送消息', fr: 'Envoyer', de: 'Nachricht senden', es: 'Enviar mensaje', pt: 'Enviar mensagem' },
+  success_message: { en: 'Thanks! Your message has landed in our inbox. We will reply within one business day.', zh: '谢谢！您的消息已发送。我们会在一个工作日内回复。', fr: 'Merci ! Votre message a bien été envoyé. Nous vous répondrons sous un jour ouvré.', de: 'Vielen Dank! Ihre Nachricht ist eingegangen. Wir antworten innerhalb eines Werktags.', es: '¡Gracias! Su mensaje ha sido enviado. Le responderemos en un día hábil.', pt: 'Obrigado! Sua mensagem foi enviada. Responderemos em um dia útil.' },
+  error_message: { en: 'Something went wrong sending your message. Please try again or email us directly.', zh: '发送消息时出错。请重试或直接给我们发送邮件。', fr: 'Une erreur est survenue. Veuillez réessayer ou nous envoyer un e-mail directement.', de: 'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.', es: 'Ocurrió un error al enviar su mensaje. Intente de nuevo o escríbanos directamente.', pt: 'Ocorreu um erro ao enviar sua mensagem. Tente novamente ou envie-nos um e-mail.' },
+  captcha_label: { en: 'Anti-spam: please solve the following', zh: '防垃圾：请解答以下问题', fr: 'Anti-spam : veuillez résoudre', de: 'Anti-Spam: bitte lösen Sie', es: 'Anti-spam: por favor resuelva', pt: 'Anti-spam: por favor resolva' },
+  consent_text: { en: 'I agree to the processing of my personal data in accordance with the', zh: '我同意按照', fr: 'J\'accepte le traitement de mes données personnelles conformément à la', de: 'Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der', es: 'Acepto el tratamiento de mis datos personales de acuerdo con la', pt: 'Concordo com o tratamento dos meus dados pessoais de acordo com a' },
+  consent_link_text: { en: 'Privacy Policy', zh: '隐私政策', fr: 'Politique de confidentialité', de: 'Datenschutzerklärung', es: 'Política de privacidad', pt: 'Política de privacidade' },
+  fields: [
+    { name: 'firstName', label: { en: 'First Name', zh: '名', fr: 'Prénom', de: 'Vorname', es: 'Nombre', pt: 'Nome' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'lastName', label: { en: 'Last Name', zh: '姓', fr: 'Nom de famille', de: 'Nachname', es: 'Apellido', pt: 'Sobrenome' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'companyName', label: { en: 'Company Name', zh: '公司名称', fr: 'Entreprise', de: 'Unternehmen', es: 'Empresa', pt: 'Empresa' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'address', label: { en: 'Address', zh: '地址', fr: 'Adresse', de: 'Adresse', es: 'Dirección', pt: 'Endereço' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'zip', label: { en: 'Zip / Postal Code', zh: '邮政编码', fr: 'Code postal', de: 'Postleitzahl', es: 'Código postal', pt: 'CEP' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'country', label: { en: 'Country', zh: '国家', fr: 'Pays', de: 'Land', es: 'País', pt: 'País' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'email', label: { en: 'E-mail', zh: '邮箱', fr: 'E-mail', de: 'E-Mail', es: 'Correo electrónico', pt: 'E-mail' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'tel', label: { en: 'TEL', zh: '电话', fr: 'Téléphone', de: 'Telefon', es: 'Teléfono', pt: 'Telefone' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'subject', label: { en: 'Subject', zh: '主题', fr: 'Sujet', de: 'Betreff', es: 'Asunto', pt: 'Assunto' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+    { name: 'message', label: { en: 'Message', zh: '留言', fr: 'Message', de: 'Nachricht', es: 'Mensaje', pt: 'Mensagem' }, placeholder: { en: '', zh: '', fr: '', de: '', es: '', pt: '' } },
+  ],
+};
+
+let data = JSON.parse(JSON.stringify(defaultData));
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed && typeof parsed === 'object') {
+    data = { ...defaultData, ...parsed };
+    if (parsed.fields && Array.isArray(parsed.fields)) {
+      data.fields = parsed.fields.map((f: any, i: number) => ({ ...(defaultData.fields[i] || {}), ...f }));
+    }
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="Contact Form Text" active="contact-form-text" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Contact Form Text</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      Labels, messages, and placeholders for the contact form across all locales. File: <code class="font-mono">{file}</code>
+    </p>
+  </div>
+
+  {loadError && (
+    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+      Failed to read: {loadError}
+    </div>
+  )}
+
+  <form id="form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    <!-- Messages & Labels -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-6">
+      <h2 class="text-base font-semibold">Messages & Labels</h2>
+      {['submit_button', 'success_message', 'error_message', 'captcha_label', 'consent_text', 'consent_link_text'].map((key) => (
+        <div>
+          <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">{key}</label>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {locales.map((locale) => (
+              <div>
+                <span class="text-xs text-gray-400">{localeLabels[locale]}</span>
+                <textarea name={key + '.' + locale} rows="2"
+                  class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+                >{((data as any)[key] || {})[locale] || ''}</textarea>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Form Fields -->
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-6">
+      <h2 class="text-base font-semibold">Form Fields</h2>
+      {(data.fields || []).map((field: any, i: number) => (
+        <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-4 space-y-3">
+          <h3 class="text-sm font-semibold text-gray-500">{field.name}</h3>
+          <input type="hidden" name={'field' + i + '.name'} value={field.name} />
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Label</label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              {locales.map((locale) => (
+                <div>
+                  <span class="text-xs text-gray-400">{localeLabels[locale]}</span>
+                  <input type="text" name={'field' + i + '.label.' + locale}
+                    value={((field.label || {}) as any)[locale] || ''}
+                    class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-500 mb-1">Placeholder</label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+              {locales.map((locale) => (
+                <div>
+                  <span class="text-xs text-gray-400">{localeLabels[locale]}</span>
+                  <input type="text" name={'field' + i + '.placeholder.' + locale}
+                    value={((field.placeholder || {}) as any)[locale] || ''}
+                    class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a>
+          <button id="submit-btn" type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save & Push</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+      const locales = ['en', 'zh', 'fr', 'de', 'es', 'pt'];
+      const keys = ['submit_button', 'success_message', 'error_message', 'captcha_label', 'consent_text', 'consent_link_text'];
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Pushing...'; }
+        const fd = new FormData(form);
+
+        const data = {};
+        keys.forEach((key) => {
+          data[key] = {};
+          locales.forEach((locale) => {
+            data[key][locale] = String(fd.get(key + '.' + locale) || '').trim();
+          });
+        });
+
+        data.fields = [];
+        for (let i = 0; i < 20; i++) {
+          const fieldName = String(fd.get('field' + i + '.name') || '');
+          if (!fieldName) break;
+          const label = {};
+          const placeholder = {};
+          locales.forEach((locale) => {
+            label[locale] = String(fd.get('field' + i + '.label.' + locale) || '').trim();
+            placeholder[locale] = String(fd.get('field' + i + '.placeholder.' + locale) || '').trim();
+          });
+          data.fields.push({ name: fieldName, label, placeholder });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ format: 'yaml', path: file, sha, data, commitMessage: 'Update contact form text' }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Save & Push'; }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => { window.location.reload(); }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Save & Push'; }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

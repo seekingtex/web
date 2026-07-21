@@ -1,0 +1,29 @@
+hero:
+  tagline: ギャラリー
+  title: ギャラリー
+  subtitle: 製品写真、工場フロア、繊維での冒険
+albums:
+  - title: RIBボート
+    desc: パトロール、ダイビング、フィッシング、ファミリー向けの.3m。.5mのアルミハルRIB。
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUPボート
+    desc: ツーリング、サーフィン、ヨガ、フィッシング用のドローステッチ機能性SUPボード。
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: 工場とワークショップ
+    desc: 中国・青島にある12,000m²の製造施設。
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: もっと見たいですか？
+  desc: ソーシャルメディアでフォローして、最新の製品リリース、工場情報、お客様の冒険をご覧ください。
+  instagram: Instagram
+  youtube: YouTube

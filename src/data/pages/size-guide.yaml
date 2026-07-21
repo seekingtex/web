@@ -1,0 +1,27 @@
+hero:
+  title: Size & Specs Guide
+  subtitle: Dimensions, capacities, and recommended uses for every Seekingtex product.
+
+categories:
+  inflatable: high-performance SUPs and performance textiles designed for portability without sacrificing performance. Match the right size to your weight and fabric expertise style.
+  rib: Rigid-hull functional fabrics for coastal navigation, patrol, and professional marine operations. Choose by length and engine capacity.
+  accessory: Accessories and safety equipment to complement your performance textiles. Universal sizing with multiple options.
+
+table:
+  headers:
+    product: Product
+    length: Length
+    width: Width
+    weight: Weight
+    max_load: Max Load
+    best_for: Best For
+
+how_to_choose:
+  title: How to Choose the Right Size
+  cards:
+    - title: functional fabric Boards
+      description: Choose length based on your weight and intended use. Wider boards (32"+) offer more stability. Longer boards (11-12 ft) track better for touring. Heavier paddlers need higher volume boards.
+    - title: performance textiles
+      description: Single performance textiles (9 ft) are best for solo travel and rivers. Tandem performance textiles (12 ft) accommodate two paddlers or one adult with gear. Check weight capacity for total load including gear.
+    - title: fabric products & RIBs
+      description: Choose fabric products length by passenger count and intended use. Larger RIBs (4.5 m+) are suited for offshore and rescue. Smaller fabric products (2.7 m) work as tenders and fishing platforms.

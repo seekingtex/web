@@ -1,0 +1,126 @@
+hero:
+  tagline: Centre R&D
+  title: Centre de R & D
+  subtitle: Ax茅 sur le progr猫s
+
+intro:
+  - Le centre de recherche et d茅veloppement (R&D) d'Seekingtex est la force motrice de notre mission de r茅volutionner les 茅quipements de industrie textile. Nous donnons aux passionn茅s de industrie textile du monde entier des produits plus s没rs, plus confortables et plus agr茅ables gr芒ce 脿 une innovation incessante dans les tissu fonctionnel) et les tissus fonctionnels. Notre 茅quipe d茅di茅e d'ing茅nieurs, de designers et d'experts passionn茅s des industrie textile fa莽onne l'avenir de l'industrie, relevant constamment le niveau en mati猫re de qualit茅, de performance et de durabilit茅.
+  - Notre installation R&D r茅unit des scientifiques des mat茅riaux, des architectes navals et des ing茅nieurs de production sous un m锚me toit. De la formulation des tissus et de la simulation de coque au d茅veloppement des processus de soudage et aux essais en mer 脿 grande 茅chelle, chaque 茅tape du d茅veloppement produit est guid茅e par les donn茅es et valid茅e par des tests.
+
+mission:
+  tagline: Notre mission
+  title: Innover l'avenir des industrie textile
+  pillars:
+    - icon: lightning
+      title: Progr猫s technologique
+      desc: Pionnier des nouveaux mat茅riaux, designs et fabrications pour des performances et une long茅vit茅 textile products茅rieures.
+    - icon: design
+      title: Conception centr茅e sur l'utilisateur
+      desc: Comprendre profond茅ment et d茅passer les besoins des utilisateurs gr芒ce 脿 un design ergonomique et intuitif.
+    - icon: globe
+      title: Pratiques durables
+      desc: Minimiser notre empreinte environnementale en utilisant des mat茅riaux et processus 茅cologiques.
+    - icon: shield
+      title: S茅curit茅 sans compromis
+      desc: Assurer les plus hauts standards de s茅curit茅 gr芒ce 脿 des tests rigoureux et une certification.
+
+pillars:
+  - title: Progr猫s technologique
+    desc: Pionnier des nouveaux mat茅riaux, designs et processus de fabrication pour des performances et une long茅vit茅 textile products茅rieures.
+    icon: tech
+  - title: Mat茅riaux avanc茅s
+    desc: Recherche de PVC, Hypalon, composites et alternatives durables de pointe pour des caract茅ristiques produit am茅lior茅es.
+    icon: materials
+  - title: Durabilit茅
+    desc: 'Un engagement fondamental : Nous sommes d茅di茅s 脿 la gestion environnementale par une fabrication durable et des mat茅riaux recyclables.'
+    icon: sustainability
+
+capabilities:
+  tagline: Capacit茅s
+  title: Capacit茅s R&D
+  subtitle: Quatre disciplines cl茅s qui nous donnent un contr么le de bout en bout sur le d茅veloppement produit 鈥攄e la recherche sur les mati猫res premi猫res 脿 la certification finale.
+  groups:
+    - title: Science des mat茅riaux & technologie des tissus
+      items:
+        - Analyse et optimisation des formulations PVC et Hypalon
+        - D茅veloppement de stabilisation UV, ignifugation et additifs antimicrobiens
+        - Laminage multicouche et ing茅nierie d'adh茅sion
+        - Tests de vieillissement acc茅l茅r茅 (UV, thermique, humidit茅, brouillard salin)
+    - title: Ing茅nierie de coque & hydrodynamique
+      items:
+        - Conception param茅trique de coque 3D et optimisation CFD
+        - Analyse par 茅l茅ments finis pour les charges structurelles et d'impact
+        - Essais en bassin de remorquage sur maquette et validation des performances
+        - D茅veloppement de coques personnalis茅es pour profils de mission sp茅ciaux
+    - title: Technologie de soudage & d'assemblage
+      items:
+        - D茅veloppement et optimisation des proc茅d茅s de soudage di茅lectrique RF
+        - M茅thodes de soudage 脿 air chaud, 脿 coin chaud et par ultrasons
+        - Qualification des joints coll茅s et des bandes de joint
+        - Mod茅lisation de la r茅sistance des soudures et pr茅diction de dur茅e de vie
+    - title: Tests, certification & conformit茅
+      items:
+        - Tests de conformit茅 ,  et CE
+        - Tests et certification par tierce partie ind茅pendante
+        - D茅veloppement de protocoles de test personnalis茅s pour qualification d'approvisionnement
+        - Analyse des d茅faillances en service et recherche des causes profondes
+
+rd_numbers:
+  tagline: Innovation
+  title: R&D en chiffres
+  stats:
+    - value: '14'
+      label: Ing茅nieurs & scientifiques R&D
+    - value: '8'
+      label: Brevets & d茅p么ts actifs
+    - value: '6'
+      label: Laboratoires sp茅cialis茅s
+    - value: 12 yr
+      label: Exp茅rience moyenne de l'茅quipe
+
+rd_services:
+  tagline: R&D personnalis茅e
+  title: Services R&D pour partenaires
+  services:
+    - title: D茅veloppement de mat茅riaux sur mesure
+      desc: Nous d茅veloppons des formulations de tissus, des empilements de stratifi茅s et des syst猫mes adh茅sifs adapt茅s 脿 votre environnement d'exploitation et 脿 vos objectifs de performance.
+    - title: Ing茅nierie produit OEM / ODM
+      desc: Des croquis de concept aux dossiers techniques pr锚ts pour la production 鈥攏otre 茅quipe peut concevoir, prototyper et valider des tissu sous votre marque.
+    - title: Tests & certification par tiers
+      desc: Utilisez nos installations de test conformes ISO pour des tests de mat茅riaux ind茅pendants, une validation produit et un soutien 脿 la certification.
+  cta: Discuter de vos besoins R&D 鈫?
+  cta_link: /contact
+
+vision:
+  tagline: Notre vision
+  title: Fa莽onner l'avenir des industrie textile
+  body: Seekingtex s'efforce de mener l'industrie du tissu pneumatique et du textile products gr芒ce 脿 une innovation continue, une qualit茅 in茅branlable et un engagement ferme envers la s茅curit茅 et la durabilit茅 鈥攅nrichissant ainsi les exp茅riences des passionn茅s de industrie textile dans le monde entier. Le centre R&D Seekingtex est l'endroit o霉 la passion rencontre l'innovation, 茅tablissant de nouvelles normes pour l'industrie des industrie textile.
+
+labs_section:
+  tagline: Laboratoires
+  title: Nos laboratoires
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: Laboratoire des tissus PVC
+      description: Recherche et tests continus des tissus pour tubes PVC et Hypalon pour la r茅sistance 脿 la traction, la r茅sistance aux UV, l'abrasion et la flexibilit茅 脿 basse temp茅rature pour garantir une fiabilit茅 脿 long terme dans les environnements marins.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Studio d'ing茅nierie de coque
+      description: Conception assist茅e par ordinateur et analyse par 茅l茅ments finis des coques en PEHD, aluminium et fibre de verre. Chaque coque est simul茅e num茅riquement pour la r茅partition des contraintes et la r茅sistance aux chocs avant la construction du premier prototype.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: Centre de soudage RF
+      description: Installation de soudage par radiofr茅quence d茅di茅e avec contr么le pr茅cis de la temp茅rature et de la pression, produisant des joints 茅tanches 脿 haute r茅sistance qui d茅passent les normes  pour les embarcations gonflables.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Bassin d'essais hydrodynamiques
+      description: Tests sur maquette dans notre bassin d'essais interne pour optimiser la forme de coque, les performances de planage, la stabilit茅 et l'efficacit茅 茅nerg茅tique dans une gamme de conditions de charge et de mer.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Atelier de prototypage
+      description: Installation de prototypage et gr茅ement 脿 grande 茅chelle o霉 les nouveaux mod猫les sont construits, 茅quip茅s et test茅s en mer. Chaque prototype subit un programme minimum de 20 heures de tests dans l'eau avant approbation de production.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Laboratoire qualit茅 & inspection
+      description: Laboratoire d'assurance qualit茅 d茅di茅 effectuant des tests de traction, des cycles de r茅tention d'air, des tests de pelage des soudures et une certification des mat茅riaux pour garantir que chaque tissu quittant l'atelier r茅pond 脿 nos sp茅cifications publi茅es.
+      href: /randdcenter/quality-inspection-lab

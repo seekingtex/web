@@ -1,0 +1,24 @@
+hero:
+  tagline: S茅curit茅
+  title: Normes et certification de s茅curit茅
+  subtitle: Chaque produit Seekingtex subit des tests rigoureux et r茅pond aux normes de s茅curit茅 internationales pour un usage r茅cr茅atif et professionnel.
+
+certifications:
+  - title: Certification CE
+    description: Tous les 茅quipements de s茅curit茅 Seekingtex sont conformes aux exigences de marquage CE du r猫glement europ茅en sur les 茅quipements de protection individuelle (UE) 2016/425.
+  - title: 
+    description: Les gilets de sauvetage r茅pondent aux normes de flottaison . Le Safety Fabric Classic offre une flottabilit茅 de 50N+ ; le Safety Fabric Pro r茅pond aux exigences SOLAS avec gonflage automatique.
+  - title: Conformit茅 SOLAS
+    description: Le Safety Fabric Pro est conforme aux r茅glementations SOLAS (S茅curit茅 de la vie en mer) pour les op茅rations maritimes offshore et commerciales.
+
+related:
+  title: Liens connexes
+  links:
+    - text: Guide de s茅curit茅
+      url: /guides/safety-tips
+    - text: Technologie
+      url: /technology
+    - text: Tous les produits
+      url: /products
+    - text: Guides
+      url: /guides

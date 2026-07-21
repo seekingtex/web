@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Zbudowane wed艂ug standard贸w, kt贸re maj膮 znaczenie'
+  title: 'Zaufaj Seekingtex'
+  subtitle: |
+    Ka偶dy produkt, kt贸ry budujemy, jest certyfikowany CE 鈥?testowany pod k膮tem bezpiecze艅stwa,<br />
+    trwa艂o艣ci i wydajno艣ci. 呕adnych skr贸t贸w. 呕adnych wyj膮tk贸w.
+  taglineSection: 'Certyfikowane. Przetestowane. Sprawdzone.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Produkt Seekingtex przechodz膮cy testy jako艣ci'
+
+stats:
+  title: 'Seekingtex w liczbach'
+  stats:
+    - title: 'Certyfikat CE'
+      description: 'Wszystkie produkty rekreacyjne spe艂niaj膮 normy bezpiecze艅stwa UE'
+    - title: 'ISO 9001:2015'
+      description: 'System zarz膮dzania jako艣ci膮 od 2012'
+    - title: 'BSCI i REACH'
+      description: 'Etyczna produkcja i zgodno艣膰 materia艂owa'
+    - title: '2-letnia gwarancja'
+      description: 'Na ka偶dy produkt Seekingtex 鈥?bez zadawania pyta艅'
+
+features3_certifications:
+  title: 'Certyfikaty i zgodno艣膰'
+  subtitle: 'Ka偶dy produkt jest niezale偶nie testowany i certyfikowany zgodnie z mi臋dzynarodowymi normami.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'Certyfikat CE'
+      description: 'Wszystkie Fabric-y, techniczne tkaniny, pontony i techniczna tkanina-y Seekingtex spe艂niaj膮 europejsk膮 norm臋 bezpiecze艅stwa CE dla rekreacyjnych jednostek p艂ywaj膮cych. Ka偶dy produkt przechodzi testy ci艣nienia, wyporno艣ci i obci膮偶enia przed opuszczeniem fabryki.'
+      icon: 'tabler:certificate'
+    - title: 'ISO 9001:2015'
+      description: 'Nasz zak艂ad w Qingdao o powierzchni 12 000 m虏 dzia艂a w ramach systemu zarz膮dzania jako艣ci膮 ISO 9001:2015. Ka偶da partia produkcyjna jest identyfikowalna, udokumentowana i kontrolowana.'
+      icon: 'tabler:clipboard-check'
+    - title: 'Zgodno艣膰 spo艂eczna BSCI'
+      description: 'Jeste艣my certyfikowani BSCI, co zapewnia etyczne praktyki pracy, bezpieczne warunki pracy i odpowiedzialno艣膰 艣rodowiskow膮 w ca艂ym naszym 艂a艅cuchu dostaw.'
+      icon: 'tabler:users'
+    - title: 'REACH i RoHS'
+      description: 'Wszystkie materia艂y 鈥?PVC, Hypalon, pianka EVA, kleje 鈥?s膮 zgodne z przepisami UE REACH i RoHS. 呕adnych substancji zabronionych, 偶adnych kompromis贸w.'
+      icon: 'tabler:flask'
+    - title: 'Laboratorium testowania materia艂贸w'
+      description: 'Wewn臋trzne laboratorium materia艂owe testuje wytrzyma艂o艣膰 na rozci膮ganie, odporno艣膰 na UV, integralno艣膰 szw贸w i 艣cieralno艣膰 ka偶dej partii tkaniny przed produkcj膮.'
+      icon: 'tabler:microscope'
+    - title: '2-letnia gwarancja'
+      description: 'Ka偶dy produkt Seekingtex jest obj臋ty dwuletni膮 gwarancj膮 na wady produkcyjne. R臋czymy za to, co budujemy.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Zaufanie klient贸w'
+  title: 'Co m贸wi膮 nasi klienci'
+  subtitle: 'Od pocz膮tkuj膮cych wio艣larzy po profesjonalnych operator贸w floty 鈥?zobacz, dlaczego ufaj膮 Seekingtex.'
+  items:
+    - content: 'Wyposa偶yli艣my ca艂膮 nasz膮 flot臋 wynajmu w techniczna tkanina-y Seekingtex. Dwa sezony, zero awarii. Certyfikat CE sprawi艂, 偶e zatwierdzenie ubezpieczenia przebieg艂o bezproblemowo.'
+      name: 'Marco V.'
+      title: 'Organizator wycieczek, Chorwacja'
+    - content: 'Jako kupuj膮cy po raz pierwszy, obawia艂em si臋 jako艣ci. Dokumentacja ISO i raporty z test贸w, kt贸re udost臋pnili, da艂y mi pe艂n膮 pewno艣膰.'
+      name: 'James T.'
+      title: 'W艂a艣ciciel Fabric Explorer 11, Kanada'
+    - content: 'Wsp贸艂pracujemy z Seekingtex w zakresie naszych przybrze偶nych jednostek patrolowych. Ich proces kontroli jako艣ci jest sp贸jny w ka偶dej partii 鈥?ta niezawodno艣膰 ma znaczenie w operacjach krytycznych.'
+      name: 'Kmdr ppor. Andres'
+      title: 'Zam贸wienia morskie, Filipiny'
+
+steps2_manufacturing:
+  title: 'Jak zapewniamy jako艣膰'
+  subtitle: 'Od kontroli surowc贸w po ko艅cowe testy ci艣nieniowe 鈥?ka偶dy produkt przechodzi rygorystyczny 艂a艅cuch jako艣ci.'
+  items:
+    - title: 'Kontrola surowc贸w'
+      description: 'Ka偶da rolka tkaniny PVC jest testowana pod k膮tem grubo艣ci, wytrzyma艂o艣ci na rozci膮ganie i odporno艣ci na UV przed dopuszczeniem do produkcji.'
+      icon: 'tabler:search'
+    - title: 'Kontrola jako艣ci w procesie'
+      description: 'Szwy spawalnicze, monta偶e zawor贸w i wi膮zania kom贸r s膮 kontrolowane na ka偶dym stanowisku podczas monta偶u.'
+      icon: 'tabler:eye'
+    - title: 'Test ci艣nieniowy'
+      description: 'Ka偶dy produkt funkcjonalny jest pompowany do 1,5x nominalnego PSI i utrzymywany przez 24 godziny w celu weryfikacji zatrzymywania powietrza i integralno艣ci szw贸w.'
+      icon: 'tabler:wind'
+    - title: 'Kontrola ko艅cowa'
+      description: 'Ka偶da jednostka jest kontrolowana pod k膮tem wyko艅czenia, osprz臋tu i opakowania przed zatwierdzeniem do wysy艂ki. Pr贸bki partii trafiaj膮 do naszego laboratorium w celu test贸w niszcz膮cych.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'FAQ dotycz膮ce 艂odzi techniczna tkanina'
+  subtitle: 'Cz臋sto zadawane pytania dotycz膮ce naszych sztywnych 艂odzi nadmuchiwanych.'
+  columns: 2
+  items:
+    - title: 'Jakie rozmiary 艂odzi techniczna tkanina oferuje Seekingtex?'
+      description: 'Oferujemy 35 modeli techniczna tkanina w zakresie od 2,5 m do 7,6 m, obejmuj膮cych wszystko od kompaktowych tender贸w po ci臋偶kie 艂odzie komercyjne i patrolowe. Ka偶dy model jest dost臋pny w wielu opcjach konfiguracyjnych.'
+    - title: 'Jaka jest r贸偶nica mi臋dzy techniczna tkanina a tradycyjn膮 艂odzi膮 nadmuchiwan膮?'
+      description: 'techniczna tkanina (sztywna 艂贸d藕 nadmuchiwana) 艂膮czy solidny, g艂臋boki V-hull z w艂贸kna szklanego lub aluminium z nadmuchiwanymi rurami Hypalon lub PVC. Zapewnia to stabilno艣膰 i 艂adowno艣膰 twardej 艂odzi z amortyzacj膮 wstrz膮s贸w i wyporno艣ci膮 nadmuchiwanej.'
+    - title: 'Jakie silniki s膮 kompatybilne z techniczna tkanina-ami Seekingtex?'
+      description: 'Nasze techniczna tkanina-y obs艂uguj膮 silniki zaburtowe od 3 KM do 250 KM w zale偶no艣ci od modelu. Ka偶da strona produktu zawiera maksymaln膮 moc silnika. Zalecamy konsultacj臋 z dealerem w celu znalezienia idealnego dopasowania.'
+    - title: 'Czy techniczna tkanina-y Seekingtex s膮 certyfikowane CE?'
+      description: 'Tak. Wszystkie rekreacyjne modele techniczna tkanina s膮 certyfikowane CE zgodnie z obowi膮zuj膮cymi europejskimi normami dla rekreacyjnych jednostek p艂ywaj膮cych. Modele komercyjne i patrolowe spe艂niaj膮 dodatkowe wymagania dotycz膮ce stabilno艣ci i obci膮偶enia.'
+    - title: 'Jaka jest gwarancja na 艂odzie techniczna tkanina?'
+      description: 'Wszystkie techniczna tkanina-y Seekingtex s膮 obj臋te standardow膮 roczn膮 gwarancj膮 na wady produkcyjne, obejmuj膮c膮 delaminacj臋 kad艂uba, p臋kni臋cie szwu rury, wady zawor贸w i problemy z osprz臋tem.'
+    - title: 'Ile kom贸r powietrznych maj膮 techniczna tkanina-y Seekingtex?'
+      description: 'Nasze techniczna tkanina-y posiadaj膮 od 3 do 7 niezale偶nych kom贸r powietrznych w zale偶no艣ci od d艂ugo艣ci modelu. Ta wielokomorowa konstrukcja zapewnia, 偶e 艂贸d藕 pozostaje na powierzchni nawet je艣li jeden przedzia艂 zostanie naruszony.'
+
+faqs_inflatable:
+  title: 'FAQ dotycz膮ce 艂odzi nadmuchiwanych'
+  subtitle: 'Cz臋sto zadawane pytania dotycz膮ce naszych nadmuchiwanych ponton贸w, kajak贸w i 艂odzi.'
+  columns: 2
+  items:
+    - title: 'Jakie materia艂y s膮 u偶ywane w nadmuchiwanych 艂odziach Seekingtex?'
+      description: 'U偶ywamy PVC klasy wojskowej (1100 denier) i najwy偶szej jako艣ci gumy Hypalon/CSM, w zale偶no艣ci od modelu. Oba materia艂y s膮 stabilizowane UV, odporne na 艣cieranie i zgodne z przepisami UE REACH i RoHS.'
+    - title: 'Jak d艂ugo wytrzymuj膮 nadmuchiwane 艂odzie?'
+      description: 'Przy odpowiedniej piel臋gnacji, wysokiej jako艣ci nadmuchiwana 艂贸d藕 PVC wytrzymuje 7鈥?0 lat, a modele Hypalon mog膮 wytrzyma膰 15鈥?0 lat. Regularne czyszczenie, ochrona przed UV i odpowiednie przechowywanie znacznie wyd艂u偶aj膮 偶ywotno艣膰.'
+    - title: 'Jakiej konserwacji wymaga nadmuchiwana 艂贸d藕?'
+      description: 'Podstawowa konserwacja obejmuje p艂ukanie 艣wie偶膮 wod膮 po ka偶dym u偶yciu (zw艂aszcza w s艂onej wodzie), suszenie przed przechowywaniem, coroczn膮 kontrol臋 uszczelek zawor贸w i nak艂adanie ochrony UV na rury. Unikaj d艂ugotrwa艂ej ekspozycji na s艂o艅ce, gdy nie jest u偶ywana.'
+    - title: 'Czy nadmuchiwane 艂odzie mog膮 by膰 u偶ywane w s艂onej wodzie?'
+      description: 'Tak. Wszystkie nadmuchiwane 艂odzie Seekingtex s膮 zaprojektowane do u偶ytku zar贸wno w s艂odkiej, jak i s艂onej wodzie. Zalecamy p艂ukanie 艣wie偶膮 wod膮 i dok艂adne suszenie po kontakcie ze s艂on膮 wod膮, aby zapobiec korozji oku膰 i krystalizacji soli w tkaninie.'
+    - title: 'Jak przechowywa膰 nadmuchiwan膮 艂贸d藕?'
+      description: 'Przed przechowywaniem ca艂kowicie spu艣膰 powietrze, wyczy艣膰 i osusz 艂贸d藕. Zwi艅 lu藕no (unikaj ciasnych zgi臋膰), przechowuj w ch艂odnym, suchym miejscu z dala od bezpo艣redniego 艣wiat艂a s艂onecznego i z dala od betonowych pod艂贸g, aby zapobiec wch艂anianiu wilgoci.'
+    - title: 'Jaka jest 艂adowno艣膰 nadmuchiwanych 艂odzi Seekingtex?'
+      description: '艁adowno艣膰 waha si臋 od 290 kg dla naszych najmniejszych modeli do ponad 2000 kg dla wi臋kszych jednostek komercyjnych. Ka偶da strona produktu zawiera maksymalne obci膮偶enie dla konkretnego modelu.'
+
+faqs_Fabric:
+  title: 'FAQ dotycz膮ce desek Fabric'
+  subtitle: 'Cz臋sto zadawane pytania dotycz膮ce naszych desek do wios艂owania na stoj膮co.'
+  columns: 2
+  items:
+    - title: 'Jakie rozmiary desek Fabric s膮 dost臋pne?'
+      description: 'Oferujemy deski Fabric od 9 st贸p do 12 st贸p, w tym modele uniwersalne, turystyczne, do jogi i specjalistyczne. Nasze najlepiej sprzedaj膮ce si臋 modele to Tropical Breeze (10 st贸p) i Ocean Voyager (11 st贸p).'
+    - title: 'Czym jest konstrukcja drop-stitch?'
+      description: 'Konstrukcja drop-stitch wykorzystuje tysi膮ce poliestrowych nici 艂膮cz膮cych g贸rn膮 i doln膮 warstw臋 deski, umo偶liwiaj膮c utrzymanie wysokiego ci艣nienia powietrza (15鈥?0 PSI) i uzyskanie sztywnej, stabilnej platformy. Jest to standard bran偶owy dla najwy偶szej jako艣ci nadmuchiwanych Fabric.'
+    - title: 'Jaki jest limit wagi dla desek Fabric?'
+      description: 'Nasze deski Fabric obs艂uguj膮 do 150 kg w zale偶no艣ci od modelu i obj臋to艣ci. Leviathan Wake to nasz model o najwi臋kszej pojemno艣ci, zaprojektowany dla wi臋kszych wio艣larzy i do jogi.'
+    - title: 'Czy oferujecie kompletne pakiety Fabric?'
+      description: 'Tak. Ka偶da deska Fabric jest wysy艂ana z kompletnym pakietem zawieraj膮cym 3-cz臋艣ciowe wios艂o aluminiowe, r臋czn膮 pompk臋 wysokoci艣nieniow膮, link臋 spiraln膮, plecak podr贸偶ny i zestaw naprawczy. Niekt贸re modele zawieraj膮 r贸wnie偶 wymienny zestaw statecznik贸w.'
+    - title: 'Jaka jest gwarancja na deski Fabric?'
+      description: 'Wszystkie deski Fabric Seekingtex s膮 obj臋te roczn膮 gwarancj膮 na wady produkcyjne, w tym p臋kni臋cia szw贸w, wady zawor贸w i delaminacj臋 materia艂u przy normalnym u偶ytkowaniu.'
+    - title: 'Ile czasu zajmuje pompowanie deski Fabric?'
+      description: 'Przy u偶yciu do艂膮czonej pompki r臋cznej, pe艂ne napompowanie do 15 PSI zajmuje oko艂o 8鈥?2 minut. Aby przyspieszy膰 pompowanie, zalecamy nasz膮 elektryczn膮 pompk臋 Seekingtex 12V, kt贸ra pompuje desk臋 w mniej ni偶 4 minuty.'
+
+cta:
+  title: 'Chcesz zobaczy膰 certyfikaty osobi艣cie?'
+  subtitle: 'Popro艣 o nasze portfolio certyfikat贸w, raporty z audytu fabryki lub dokumentacj臋 zgodno艣ci materia艂owej. NDA nie jest wymagane.'
+  actions:
+    - variant: primary
+      text: 'Popro艣 o dokumentacj臋 certyfikat贸w'
+      href: '/contact'
+    - text: 'Odwied藕 nasz膮 stron臋 fabryki'
+      href: '/factory'

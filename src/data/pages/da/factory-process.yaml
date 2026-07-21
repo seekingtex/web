@@ -1,0 +1,22 @@
+hero:
+  tagline: Produktionsproces
+  title: Vores produktionsproces
+  subtitle: Fra råmateriale til færdigt produkt — hvert trin er kvalitetsstyret.
+  image: /images/seekingtex/factory/process-banner.webp
+  imageAlt: Produktionsproces Seekingtex
+steps:
+  - title: Skæring
+    description: Automatiske CNC maskiner skærer præcist stoffer efter specifikationer.
+    icon: tabler:scissors
+  - title: Svejsning
+    description: RF og varmluftssvejsning skaber stærke, lufttætte samlinger.
+    icon: tabler:flame
+  - title: Montering
+    description: Kvalificerede teknikere monterer ventiler, tilbehør og fittings.
+    icon: tabler:tool
+  - title: Test
+    description: Hvert produkt gennemgår tryk-, opdrifts- og inspektionstest.
+    icon: tabler:clipboard-check
+  - title: Pakning
+    description: Produkter pakkes omhyggeligt og gøres klar til forsendelse.
+    icon: tabler:package

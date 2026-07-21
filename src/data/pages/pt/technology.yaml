@@ -1,0 +1,14 @@
+hero:
+  tagline: Tecnologia
+  title: Nossa tecnologia
+  subtitle: Os produtos Seekingtex são projetados com materiais avançados e engenharia inovadora para oferecer desempenho, durabilidade e portabilidade excepcionais.
+
+features:
+  - title: PVC de grau militar
+    description: Nossos barcos infláveis e SUPs usam tecido PVC resistente a UV e abrasão, com alta resistência à tração e perfuração.
+  - title: Construção Drop-Stitch
+    description: Milhares de fios de fibra de alta densidade conectam as superfícies superior e inferior, criando um deck rígido de alta pressão – dando aos SUPs infláveis desempenho próximo ao de pranchas rígidas.
+  - title: Juntas soldadas a quente
+    description: As juntas são soldadas a quente em vez de coladas, proporcionando resistência de ligação duradoura nos pontos de tensão críticos.
+  - title: Tecnologia de inflação automática
+    description: Os coletes salva-vidas Pro usam um mecanismo de inflação automática que é acionado imediatamente ao submergir, fornecendo flutuabilidade confiável.

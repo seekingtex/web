@@ -1,0 +1,23 @@
+hero:
+  tagline: 期刊
+  title: Seekingtex 期刊
+  subtitle: 来自Seekingtex团队的最新动态、航海冒险和产品故事。
+
+meta:
+  read_more: 阅读更多
+  published: 发表于
+  by: 作者
+  browse_all: 浏览所有文章
+  categories: 分类
+  subscribe: 订阅期刊
+
+categories:
+  all: 全部
+  adventures: 探险
+  product: 产品
+  tips: 技巧
+  culture: 文化
+
+featured: 精选文章
+latest: 最新文章
+no_articles: 暂无文章。

@@ -1,0 +1,56 @@
+hero:
+  tagline: Zdroje
+  title: Mediální centrum
+  subtitle: Stáhněte si materiály značky, produktové obrázky, katalogy a videa
+
+sections:
+  - id: product-images
+    title: Produktové obrázky
+    desc: Vysoce rozlišené produktové fotografie pro web, tisk a maloobchodní použití.
+    items:
+      - Galerie SUP prken
+      - Galerie technicka textilie člunů
+      - Galerie nafukovacích kajaků
+      - Příslušenství a bezpečnostní vybavení
+  - id: logo-brand-kit
+    title: Logo a sada pro značku
+    desc: Oficiální soubory loga Seekingtex, barevná paleta, typografie a pokyny pro značku.
+    items:
+      - Primární logo (PNG/SVG/EPS)
+      - Ikona
+      - Barevná paleta
+      - Specifikace typografie
+      - Pokyny pro značku PDF
+  - id: catalogs
+    title: PDF katalogy
+    desc: Produktové katalogy, technické listy a technická dokumentace ke stažení.
+    items:
+      - 2026 produktový katalog
+      - OEM/ODM přehled schopností
+      - Brožura řady technicka textilie
+      - Technické specifikace
+  - id: videos
+    title: Videa
+    desc: Produktové ukázky, prohlídky továrny, značkové filmy a zákaznická svědectví.
+    items:
+      - Produktové ukázky
+      - Prohlídka továrny
+      - Značkový film
+      - Zákaznické příběhy
+      - Návody
+
+request_access: Požádat o přístup →
+
+cta:
+  title: Potřebujete pomoc s hledáním materiálů?
+  desc: Kontaktujte náš tým pro vlastní požadavky na materiály, mediální partnerství nebo tiskové dotazy.
+  links:
+    - label: Navštivte naši továrnu
+      href: /factory
+      desc: Prohlédněte si naše 12 000 m² výrobní zařízení
+    - label: Pokyny pro značku
+      href: /brand
+      desc: Seznamte se se značkou Seekingtex
+    - label: Staňte se partnerem
+      href: /contact
+      desc: OEM, ODM a distribuční dotazy

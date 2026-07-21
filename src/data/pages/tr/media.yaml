@@ -1,0 +1,56 @@
+hero:
+  tagline: Kaynaklar
+  title: Medya Merkezi
+  subtitle: Marka materyallerini, ürün fotoğraflarını, katalogları ve videoları indirin
+
+sections:
+  - id: product-images
+    title: Ürün Fotoğrafları
+    desc: Web, baskı ve perakende kullanım için yüksek çözünürlüklü ürün fotoğrafları.
+    items:
+      - SUP Tahtaları Galerisi
+      - teknik kumaş Botlar Galerisi
+      - fonksiyonel\ kumaşlar Galerisi
+      - Aksesuarlar ve Güvenlik Ekipmanları
+  - id: logo-brand-kit
+    title: Logo ve Marka Kiti
+    desc: Resmi Seekingtex logo dosyaları, renk paleti, tipografi ve marka yönergeleri.
+    items:
+      - Ana Logo (PNG/SVG/EPS)
+      - İkon İşareti
+      - Renk Paleti
+      - Tipografi Spesifikasyonu
+      - Marka Kılavuzu PDF
+  - id: catalogs
+    title: PDF Kataloglar
+    desc: İndirilebilir ürün katalogları, teknik özellik sayfaları ve dokümantasyon.
+    items:
+      - 2026 Ürün Kataloğu
+      - OEM/ODM Yetenek Sunumu
+      - teknik kumaş Serisi Broşürü
+      - Teknik Şartnameler
+  - id: videos
+    title: Videolar
+    desc: Ürün tanıtımları, fabrika turları, marka filmleri ve müşteri referansları.
+    items:
+      - Ürün Tanıtımları
+      - Fabrika Turu
+      - Marka Filmi
+      - Müşteri Hikayeleri
+      - Eğitim Videoları
+
+request_access: Erişim Talep Et →
+
+cta:
+  title: Materyalleri bulmakta yardıma mı ihtiyacınız var?
+  desc: Özel materyal siparişleri, medya ortaklıkları veya basın talepleri için marka ekibimizle iletişime geçin.
+  links:
+    - label: Fabrikamızı Ziyaret Edin
+      href: /factory
+      desc: 12.000 m² üretim tesisimizi görün
+    - label: Marka Yönergeleri
+      href: /brand
+      desc: Seekingtex markasını tanıyın
+    - label: Bizimle Çalışın
+      href: /contact
+      desc: OEM, ODM ve distribütörlük talepleri

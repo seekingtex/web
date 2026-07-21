@@ -1,0 +1,28 @@
+SUN_PROTECTION:
+  name: Sun Protection Fabrics
+  image: /images/seekingtex/categories/sun-protection.webp
+  gradient: from-amber-400 to-orange-500
+WATERPROOF:
+  name: Waterproof Fabrics
+  image: /images/seekingtex/categories/waterproof.webp
+  gradient: from-blue-400 to-indigo-500
+QUICK_DRY:
+  name: Quick-Dry Fabrics
+  image: /images/seekingtex/categories/quick-dry.webp
+  gradient: from-teal-400 to-emerald-500
+ANTIBACTERIAL:
+  name: Antibacterial Fabrics
+  image: /images/seekingtex/categories/antibacterial.webp
+  gradient: from-green-400 to-teal-500
+STRETCH:
+  name: Stretch Fabrics
+  image: /images/seekingtex/categories/stretch.webp
+  gradient: from-purple-400 to-violet-500
+BREATHABLE:
+  name: Breathable Fabrics
+  image: /images/seekingtex/categories/breathable.webp
+  gradient: from-sky-400 to-cyan-500
+ECO_FRIENDLY:
+  name: Eco-Friendly Fabrics
+  image: /images/seekingtex/categories/eco-friendly.webp
+  gradient: from-lime-400 to-green-500

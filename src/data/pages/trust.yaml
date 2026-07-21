@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Built to standards that matter'
+  title: 'Trust Seekingtex'
+  subtitle: |
+    Every product we build is CE certified — tested for safety,<br />
+    durability, and performance. No shortcuts. No exceptions.
+  taglineSection: 'Certified. Tested. Proven.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex product undergoing quality testing'
+
+stats:
+  title: 'Seekingtex by the numbers'
+  stats:
+    - title: 'CE Certified'
+      description: 'All recreational products meet EU safety standards'
+    - title: ''
+      description: 'Quality management system since 2012'
+    - title: 'BSCI & REACH'
+      description: 'Ethical manufacturing and material compliance'
+    - title: '2-Year Warranty'
+      description: 'On every Seekingtex product — no questions asked'
+
+features3_certifications:
+  title: 'Certifications & Compliance'
+  subtitle: 'Every product is independently tested and certified to international standards.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE Certification'
+      description: 'All Seekingtex SUPs, performance textiles, fabric products, and RIBs meet the European CE safety standard for recreational performance textiles. Each product undergoes pressure, buoyancy, and load testing before leaving the factory.'
+      icon: 'tabler:certificate'
+    - title: ''
+      description: 'Our 12,000 m² Qingdao facility operates under an  quality management system. Every production batch is traceable, documented, and inspected.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI Social Compliance'
+      description: 'We are BSCI-certified, ensuring ethical labor practices, safe working conditions, and environmental responsibility across our supply chain.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'All materials — PVC, Hypalon, EVA foam, adhesives — comply with EU REACH and RoHS regulations. No restricted substances, no compromises.'
+      icon: 'tabler:flask'
+    - title: 'Material Testing Lab'
+      description: 'In-house materials lab tests tensile strength, UV resistance, seam integrity, and abrasion for every fabric batch before production.'
+      icon: 'tabler:microscope'
+    - title: '2-Year Warranty'
+      description: 'Every Seekingtex product comes with a two-year warranty against manufacturing defects. We stand behind what we build.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Customer Trust'
+  title: 'What our customers say'
+  subtitle: 'From first-time paddlers to professional fleet operators — see why they trust Seekingtex.'
+  items:
+    - content: 'We outfitted our entire rental fleet with Seekingtex RIBs. Two seasons in, zero failures. The CE certification made insurance approval seamless.'
+      name: 'Marco V.'
+      title: 'Tour operator, Croatia'
+    - content: 'As a first-time buyer, I was nervous about quality. The ISO documentation and test reports they shared gave me complete confidence.'
+      name: 'James T.'
+      title: 'functional fabric Explorer 11 owner, Canada'
+    - content: 'We work with Seekingtex for our coastal patrol units. Their QC process is consistent across every batch — that reliability matters in mission-critical operations.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Naval procurement, Philippines'
+
+steps2_manufacturing:
+  title: 'How we ensure quality'
+  subtitle: 'From raw material inspection to final pressure testing — every product goes through a rigorous quality chain.'
+  items:
+    - title: 'Raw Material Inspection'
+      description: 'Every roll of PVC fabric is tested for thickness, tensile strength, and UV resistance before entering production.'
+      icon: 'tabler:search'
+    - title: 'In-Process QC'
+      description: 'Weld seams, valve installations, and chamber bonds are inspected at each station during assembly.'
+      icon: 'tabler:eye'
+    - title: 'Pressure Testing'
+      description: 'Every high-performance product is inflated to 1.5x rated PSI and held for 24 hours to verify air retention and seam integrity.'
+      icon: 'tabler:wind'
+    - title: 'Final Inspection'
+      description: 'Each unit is inspected for finish, hardware, and packaging before being approved for shipment. Batch samples go to our lab for destructive testing.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'performance textile Boat FAQs'
+  subtitle: 'Common questions about our rigid-hull functional fabrics.'
+  columns: 2
+  items:
+    - title: 'What sizes of performance textile boats does Seekingtex offer?'
+      description: 'We offer 35 performance textile models ranging from 2.5 m to 7.6 m, covering everything from compact tenders to heavy-duty commercial and patrol craft. Each model is available with multiple configuration options.'
+    - title: 'What is the difference between a performance textile and a traditional functional fabrics?'
+      description: 'A performance textile (Rigid-Hull functional fabrics) combines a solid fiberglass or aluminum deep-V hull with high-performance Hypalon or PVC tubes. This gives you the stability and load capacity of a hard boat with the shock absorption and buoyancy of an high-performance.'
+    - title: 'What engines are compatible with Seekingtex RIBs?'
+      description: 'Our RIBs support outboard engines from 3 HP to 250 HP depending on the model. Each product page lists the maximum rated engine power. We recommend consulting your dealer for the ideal match.'
+    - title: 'Are Seekingtex RIBs CE certified?'
+      description: 'Yes. All recreational performance textile models are CE certified under applicable European standards for recreational performance textiles. Commercial and patrol models meet additional stability and load requirements.'
+    - title: 'What is the warranty on performance textile boats?'
+      description: 'All Seekingtex RIBs come with a standard one-year warranty against manufacturing defects, covering hull delamination, tube seam failure, valve defects, and hardware issues.'
+    - title: 'How many air chambers do Seekingtex RIBs have?'
+      description: 'Our RIBs feature 3 to 7 independent air chambers depending on the model length. This multi-chamber design ensures the boat remains afloat even if one compartment is compromised.'
+
+faqs_inflatable:
+  title: 'functional fabrics FAQs'
+  subtitle: 'Common questions about our high-performance fabric products, performance textiles, and boats.'
+  columns: 2
+  items:
+    - title: 'What materials are used in Seekingtex functional fabrics?'
+      description: 'We use military-grade PVC (1100 denier) and premium Hypalon/CSM rubber, depending on the model. Both materials are UV-stabilized, abrasion-resistant, and compliant with EU REACH and RoHS regulations.'
+    - title: 'How long do functional fabrics last?'
+      description: 'With proper care, a quality PVC functional fabrics lasts 7–10 years, while Hypalon models can last 15–20 years. Regular cleaning, UV protection, and proper storage significantly extend service life.'
+    - title: 'What maintenance is required for an functional fabrics?'
+      description: 'Basic maintenance includes rinsing with fresh water after each use (especially in saltwater), drying before storage, checking valve seals annually, and applying UV protectant to tubes. Avoid prolonged sun exposure when not in use.'
+    - title: 'Can functional fabrics be used in saltwater?'
+      description: 'Yes. All Seekingtex functional fabrics are designed for both freshwater and saltwater use. We recommend rinsing with fresh water and drying thoroughly after saltwater exposure to prevent fitting corrosion and fabric salt crystallization.'
+    - title: 'How do I store an functional fabrics?'
+      description: 'Deflate, clean, and dry the boat completely before storage. Roll loosely (avoid tight folds), store in a cool dry place away from direct sunlight, and keep off concrete floors to prevent moisture wicking.'
+    - title: 'What is the weight capacity of Seekingtex functional fabrics?'
+      description: 'Weight capacities range from 290 kg for our smallest models to over 2000 kg for larger commercial craft. Each product page lists the maximum load rating for your specific model.'
+
+faqs_sup:
+  title: 'functional fabric Board FAQs'
+  subtitle: 'Common questions about our stand-up fabric boards.'
+  columns: 2
+  items:
+    - title: 'What functional fabric board sizes are available?'
+      description: 'We offer functional fabric boards from 9 ft to 12 ft, including all-round, touring, yoga, and specialty designs. Our best-selling models include the Tropical Breeze (10 ft) and Ocean Voyager (11 ft).'
+    - title: 'What is advanced construction construction?'
+      description: 'advanced construction construction uses thousands of polyester threads connecting the top and bottom layers of the board, allowing it to hold high air pressure (15–20 PSI) and achieve a rigid, stable platform. This is the industry standard for premium high-performance SUPs.'
+    - title: 'What is the weight limit for functional fabric boards?'
+      description: 'Our functional fabric boards support up to 150 kg depending on the model and volume. The Leviathan Wake board is our highest-capacity model, designed for larger riders and yoga use.'
+    - title: 'Do you offer complete functional fabric packages?'
+      description: 'Yes. Every functional fabric board ships with a complete package including a 3-piece aluminum fabric, high-pressure hand pump, coil leash, travel backpack, and repair kit. Some models also include a removable fin set.'
+    - title: 'What is the warranty on functional fabric boards?'
+      description: 'All Seekingtex functional fabric boards carry a one-year warranty against manufacturing defects, including seam failure, valve defects, and material delamination under normal use.'
+    - title: 'How long does it take to inflate a functional fabric board?'
+      description: 'Using the included hand pump, a full inflation to 15 PSI takes approximately 8–12 minutes. For faster inflation, we recommend our Seekingtex 12V electric pump, which inflates a board in under 4 minutes.'
+
+cta:
+  title: 'Want to see the certifications yourself?'
+  subtitle: 'Request our certification portfolio, factory audit reports, or material compliance documentation. No NDA required.'
+  actions:
+    - variant: primary
+      text: 'Request certification docs'
+      href: '/contact'
+    - text: 'Visit our factory page'
+      href: '/factory'

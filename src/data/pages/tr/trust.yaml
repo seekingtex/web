@@ -1,0 +1,142 @@
+hero:
+  tagline: '鑴皀emli standartlara g鏋歳e 鐪塺etilmi鑹ir'
+  title: 'Seekingtex''a G鐪塿enin'
+  subtitle: |
+    鑴簉etti鑷抜miz her 鐪塺鐪塶 CE sertifikal璋媎璋媟 閳?g鐪塿enlik, dayan璋媖l璋媗璋媖<br />
+    ve performans a鑾借皨s璋媙dan test edilmi鑹ir. K璋媠ayol yok. 闄宻tisna yok.
+  taglineSection: 'Sertifikal璋? Test edilmi鑹? Kan璋媡lanm璋嬭墽.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex 鐪塺鐪塶鐪?kalite testinden ge鑾絠yor'
+
+stats:
+  title: 'Seekingtex rakamlarla'
+  stats:
+    - title: 'CE Sertifikal璋?
+      description: 'T鐪塵 rekreasyonel 鐪塺鐪塶ler AB g鐪塿enlik standartlar璋媙璋?kar鑹ц皨lar'
+    - title: 'ISO 9001:2015'
+      description: '2012''den beri kalite y鏋歯etim sistemi'
+    - title: 'BSCI ve REACH'
+      description: 'Etik 鐪塺etim ve malzeme uyumlulu鑷抲'
+    - title: '2 Y璋媗 Garanti'
+      description: 'Her Seekingtex 鐪塺鐪塶鐪塶de 閳?soru sorulmaz'
+
+features3_certifications:
+  title: 'Sertifikalar ve Uyumluluk'
+  subtitle: 'Her 鐪塺鐪塶 ba鑷掕皨ms璋媧 olarak test edilir ve uluslararas璋?standartlara g鏋歳e sertifikaland璋媟璋媗璋媟.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE Sertifikas璋?
+      description: 'T鐪塵 Seekingtex Fabriclar, performance fabrics, fonksiyonel kuma鑹arlar ve teknik kuma鑹?'ler, rekreasyonel tekstil ara鑾絣ar璋?i鑾絠n Avrupa CE g鐪塿enlik standard璋媙璋?kar鑹ц皨lar. Her 鐪塺鐪塶, fabrikadan 鑾借皨kmadan 鏋歯ce bas璋媙鑾? y鐪墇d鐪塺me ve y鐪塳 testinden ge鑾絜r.'
+      icon: 'tabler:certificate'
+    - title: 'ISO 9001:2015'
+      description: '12.000 m铏?'lik Qingdao tesisimiz bir ISO 9001 kalite y鏋歯etim sistemi alt璋媙da 鑾絘l璋嬭墽璋媟. Her 鐪塺etim partisi izlenebilir, belgelenmi鑹?ve denetlenmi鑹ir.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI Sosyal Uyum'
+      description: 'BSCI sertifikal璋媦璋媧, etik i鑹?uygulamalar璋? g鐪塿enli 鑾絘l璋嬭墽ma ko鑹llar璋?ve tedarik zincirimiz genelinde 鑾絜vresel sorumluluk sa鑷抣ar璋媧.'
+      icon: 'tabler:users'
+    - title: 'REACH ve RoHS'
+      description: 'T鐪塵 malzemeler 閳?PVC, Hypalon, EVA k鏋歱鐪塳, yap璋嬭墽t璋媟璋媍璋媗ar 閳?AB REACH ve RoHS d鐪墇enlemelerine uygundur. K璋媠璋媡l璋?madde yok, taviz yok.'
+      icon: 'tabler:flask'
+    - title: 'Malzeme Test Laboratuvar璋?
+      description: 'Dahili malzeme laboratuvar璋? 鐪塺etimden 鏋歯ce her kuma鑹?partisi i鑾絠n 鑾絜kme mukavemeti, UV direnci, diki鑹?b鐪塼鐪塶l鐪夎噿鐪?ve a鑹ц皨nma testi yapar.'
+      icon: 'tabler:microscope'
+    - title: '2 Y璋媗 Garanti'
+      description: 'Her Seekingtex 鐪塺鐪塶鐪? 鐪塺etim kusurlar璋媙a kar鑹ц皨 iki y璋媗 garantilidir. 鑴簉etti鑷抜mizin arkas璋媙da duruyoruz.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'M鐪夎墽teri G鐪塿eni'
+  title: 'M鐪夎墽terilerimiz ne diyor'
+  subtitle: '闄宭k kez k鐪塺ek 鑾絜kenlerden profesyonel filo operat鏋歳lerine 閳?neden Seekingtex''a g鐪塿endiklerini g鏋歳鐪塶.'
+  items:
+    - content: 'T鐪塵 kiralama filomuzu Seekingtex teknik kuma鑹?'leri ile donatt璋媖. 闄宬i sezon, s璋媐璋媟 ar璋媧a. CE sertifikas璋?sigorta onay璋媙璋?sorunsuz hale getirdi.'
+      name: 'Marco V.'
+      title: 'Tur operat鏋歳鐪? H璋媟vatistan'
+    - content: '闄宭k kez al璋媍璋?olarak kalite konusunda endi鑹liydim. Payla鑹璋媖lar璋?ISO belgeleri ve test raporlar璋?bana tam g鐪塿en verdi.'
+      name: 'James T.'
+      title: 'Fabric Explorer 11 sahibi, Kanada'
+    - content: 'K璋媦璋?devriye birimlerimiz i鑾絠n Seekingtex ile 鑾絘l璋嬭墽璋媦oruz. Kalite kontrol s鐪塺e鑾絣eri her partide tutarl璋?閳?bu g鐪塿enilirlik kritik g鏋歳ev operasyonlar璋媙da 鏋歯emlidir.'
+      name: 'Binba鑹ц皨 Andres'
+      title: 'Donanma tedarik, Filipinler'
+
+steps2_manufacturing:
+  title: 'Kaliteyi nas璋媗 sa鑷抣璋媦oruz'
+  subtitle: 'Hammadde denetiminden son bas璋媙鑾?testine kadar 閳?her 鐪塺鐪塶 titiz bir kalite zincirinden ge鑾絜r.'
+  items:
+    - title: 'Hammadde Denetimi'
+      description: 'Her PVC kuma鑹?rulosu, 鐪塺etime girmeden 鏋歯ce kal璋媙l璋媖, 鑾絜kme mukavemeti ve UV direnci a鑾借皨s璋媙dan test edilir.'
+      icon: 'tabler:search'
+    - title: 'S鐪塺e鑾?闄岃幗i KK'
+      description: 'Kaynak diki鑹eri, valf montajlar璋?ve oda ba鑷抣ant璋媗ar璋? montaj s璋媟as璋媙da her istasyonda denetlenir.'
+      icon: 'tabler:eye'
+    - title: 'Bas璋媙鑾?Testi'
+      description: 'Her fonksiyonel 鐪塺鐪塶, nominal PSI''nin 1,5 kat璋媙a 鑹鑹rilir ve hava tutma ve diki鑹?b鐪塼鐪塶l鐪夎噿鐪塶鐪?do鑷抮ulamak i鑾絠n 24 saat bekletilir.'
+      icon: 'tabler:wind'
+    - title: 'Son Denetim'
+      description: 'Her birim, sevkiyata onaylanmadan 鏋歯ce kaplama, donan璋媘 ve paketleme a鑾借皨s璋媙dan denetlenir. Parti numuneleri, tahribatl璋?test i鑾絠n laboratuvar璋媘璋媧a gider.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'teknik kuma鑹?kuma[ss] SSS'
+  subtitle: 'Sert g鏋歷deli fonksiyonel kuma鑹arlar璋媘璋媧 hakk璋媙da s璋媖 sorulan sorular.'
+  columns: 2
+  items:
+    - title: 'Seekingtex hangi boyutlarda teknik kuma鑹?botlar sunuyor?'
+      description: '2,5 m''den 7,6 m''ye kadar uzanan, kompakt tenderlerden a鑷掕皨r hizmet ticari ve devriye botlar璋媙a kadar her 鑹yi kapsayan 35 teknik kuma鑹?modeli sunuyoruz. Her model, birden fazla konfig鐪塺asyon se鑾絜ne鑷抜yle mevcuttur.'
+    - title: 'teknik kuma鑹?ile geleneksel fonksiyonel kuma鑹ar aras璋媙daki fark nedir?'
+      description: 'Bir teknik kuma鑹?(Sert G鏋歷deli 鑹鑹e kuma[ss]), kat璋?bir fiberglas veya al鐪塵inyum derin-V g鏋歷deyi fonksiyonel Hypalon veya PVC t鐪塸lerle birle鑹irir. Bu size sert bir teknenin stabilitesini ve y鐪塳 kapasitesini, fonksiyonel bir teknenin 鑹k emilimi ve y鐪墇d鐪塺me 鏋歾elli鑷抜yle birle鑹irir.'
+    - title: 'Seekingtex teknik kuma鑹?'ler ile hangi motorlar uyumludur?'
+      description: 'teknik kuma鑹?'lerimiz, modele ba鑷抣璋?olarak 3 HP''den 250 HP''ye kadar d璋嬭墽tan takma motorlar璋?destekler. Her 鐪塺鐪塶 sayfas璋? maksimum motor g鐪塩鐪塶鐪?listeler. 闄宒eal uyum i鑾絠n bayinize dan璋嬭墽man璋媧璋?鏋歯eririz.'
+    - title: 'Seekingtex teknik kuma鑹?'ler CE sertifikal璋?m璋?'
+      description: 'Evet. T鐪塵 rekreasyonel teknik kuma鑹?modelleri, rekreasyonel tekstil ara鑾絣ar璋?i鑾絠n ge鑾絜rli Avrupa standartlar璋?kapsam璋媙da CE sertifikal璋媎璋媟. Ticari ve devriye modelleri, ek stabilite ve y鐪塳 gereksinimlerini kar鑹ц皨lar.'
+    - title: 'teknik kuma鑹?botlarda garanti nedir?'
+      description: 'T鐪塵 Seekingtex teknik kuma鑹?'ler, g鏋歷de delaminasyonu, t鐪塸 diki鑹?hatas璋? valf kusurlar璋?ve donan璋媘 sorunlar璋媙璋?kapsayan, 鐪塺etim kusurlar璋媙a kar鑹ц皨 standart bir y璋媗l璋媖 garantiyle gelir.'
+    - title: 'Seekingtex teknik kuma鑹?'lerin ka鑾?hava odas璋?vard璋媟?'
+      description: 'teknik kuma鑹?'lerimiz, model uzunlu鑷抲na ba鑷抣璋?olarak 3 ila 7 ba鑷掕皨ms璋媧 hava odas璋媙a sahiptir. Bu 鑾給k odal璋?tasar璋媘, bir b鏋歭me tehlikeye girse bile teknenin su 鐪塻t鐪塶de kalmas璋媙璋?sa鑷抣ar.'
+
+faqs_inflatable:
+  title: '鑹鑹e kuma[ss] SSS'
+  subtitle: 'fonksiyonel\ kuma鑹ar璋媘璋媧, performance fabrics璋媘璋媧 ve teknelerimiz hakk璋媙da s璋媖 sorulan sorular.'
+  columns: 2
+  items:
+    - title: 'Seekingtex fonksiyonel kuma鑹arlarda hangi malzemeler kullan璋媗璋媟?'
+      description: 'Modele ba鑷抣璋?olarak askeri s璋媙璋媐 PVC (1100 denye) ve premium Hypalon/CSM kau鑾絬k kullan璋媦oruz. Her iki malzeme de UV stabilize edilmi鑹? a鑹ц皨nmaya dayan璋媖l璋?ve AB REACH ve RoHS d鐪墇enlemelerine uygundur.'
+    - title: 'fonksiyonel\ kuma鑹ar ne kadar dayan璋媟?'
+      description: 'Uygun bak璋媘la, kaliteli bir PVC fonksiyonel kuma鑹ar 7閳?0 y璋媗 dayan璋媟ken, Hypalon modeller 15閳?0 y璋媗 dayanabilir. D鐪墇enli temizlik, UV korumas璋?ve uygun depolama, kullan璋媘 鏋歮r鐪塶鐪?鏋歯emli 鏋歭鑾界湁de uzat璋媟.'
+    - title: 'Bir fonksiyonel kuma鑹ar i鑾絠n hangi bak璋媘 gereklidir?'
+      description: 'Temel bak璋媘, her kullan璋媘dan sonra (鏋歾ellikle tuzlu suda) tatl璋?suyla durulama, depolamadan 鏋歯ce kurutma, valf contalar璋媙璋?y璋媗l璋媖 kontrol etme ve t鐪塸lere UV koruyucu uygulamay璋?i鑾絜rir. Kullan璋媗mad璋嬭噿璋?zamanlarda uzun s鐪塺e g鐪塶e鑹 maruz b璋媟akmaktan ka鑾借皨n璋媙.'
+    - title: 'fonksiyonel\ kuma鑹ar tuzlu suda kullan璋媗abilir mi?'
+      description: 'Evet. T鐪塵 Seekingtex fonksiyonel kuma鑹arlar hem tatl璋?su hem de tuzlu su kullan璋媘璋?i鑾絠n tasarlanm璋嬭墽t璋媟. Tuzlu suya maruz kald璋媖tan sonra, ba鑷抣ant璋?elemanlar璋媙璋媙 korozyonunu ve kuma鑹?tuz kristalle鑹esini 鏋歯lemek i鑾絠n tatl璋?suyla durulaman璋媧璋?ve iyice kurutman璋媧璋?鏋歯eririz.'
+    - title: 'Bir fonksiyonel kuma鑹aru nas璋媗 saklamal璋媦璋媘?'
+      description: 'Saklamadan 鏋歯ce botu tamamen s鏋歯d鐪塺鐪塶, temizleyin ve kurutun. Gev鑹k bir 鑹kilde yuvarlay璋媙 (s璋媖璋?k璋媣r璋媘lardan ka鑾借皨n璋媙), do鑷抮udan g鐪塶e鑹?璋嬭墽璋嬭噿璋媙dan uzak, serin ve kuru bir yerde saklay璋媙 ve nem 鑾絜kmeyi 鏋歯lemek i鑾絠n beton zeminlerden uzak tutun.'
+    - title: 'Seekingtex fonksiyonel kuma鑹arlar璋媙 a鑷掕皨rl璋媖 kapasitesi nedir?'
+      description: 'A鑷掕皨rl璋媖 kapasiteleri, en k鐪夎幗鐪塳 modellerimiz i鑾絠n 290 kg''dan daha b鐪墆鐪塳 ticari botlar i鑾絠n 2000 kg''璋媙 鐪墇erine kadar de鑷抜鑹r. Her 鐪塺鐪塶 sayfas璋? belirli modeliniz i鑾絠n maksimum y鐪塳 de鑷抏rini listeler.'
+
+faqs_Fabric:
+  title: 'Fabric SSS'
+  subtitle: 'fabric boardlar璋媘璋媧 hakk璋媙da s璋媖 sorulan sorular.'
+  columns: 2
+  items:
+    - title: 'Hangi Fabric boyutlar璋?mevcuttur?'
+      description: '9 ft''ten 12 ft''ye kadar Fabriclar璋?sunuyoruz; 鑾給k y鏋歯l鐪? tur, yoga ve 鏋歾el tasar璋媘lar dahil. En 鑾給k satan modellerimiz Tropical Breeze (10 ft) ve Ocean Voyager''d璋媟 (11 ft).'
+    - title: 'Drop-stitch yap璋媠璋?nedir?'
+      description: 'Drop-stitch yap璋媠璋? board''un 鐪塻t ve alt katmanlar璋媙璋?birbirine ba鑷抣ayan binlerce polyester iplik kullan璋媟 ve y鐪塳sek hava bas璋媙c璋媙璋?(15閳?0 PSI) tutmas璋媙璋?ve sert, stabil bir platform elde etmesini sa鑷抣ar. Bu, premium fonksiyonel kuma鑹arlar i鑾絠n end鐪塻tri standard璋媎璋媟.'
+    - title: 'Fabriclar i鑾絠n a鑷掕皨rl璋媖 s璋媙璋媟璋?nedir?'
+      description: 'Fabriclar璋媘璋媧, modele ve hacme ba鑷抣璋?olarak 150 kg''a kadar destekler. Leviathan Wake board''umuz, daha b鐪墆鐪塳 s鐪塺鐪塩鐪塴er ve yoga kullan璋媘璋?i鑾絠n tasarlanm璋嬭墽 en y鐪塳sek kapasiteli modelimizdir.'
+    - title: 'Komple Fabric paketleri sunuyor musunuz?'
+      description: 'Evet. Her Fabric, 3 par鑾絘l璋?al鐪塵inyum pala, y鐪塳sek bas璋媙鑾絣璋?el pompas璋? bobin tasma, seyahat s璋媟t 鑾絘ntas璋?ve onar璋媘 kiti dahil komple bir paketle g鏋歯derilir. Baz璋?modeller ayr璋媍a 鑾借皨kar璋媗abilir bir kanat seti i鑾絜rir.'
+    - title: 'Fabriclarda garanti nedir?'
+      description: 'T鐪塵 Seekingtex Fabriclar璋? normal kullan璋媘 alt璋媙da diki鑹?hatas璋? valf kusurlar璋?ve malzeme delaminasyonu dahil olmak 鐪墇ere 鐪塺etim kusurlar璋媙a kar鑹ц皨 bir y璋媗l璋媖 garantiye sahiptir.'
+    - title: 'Bir Fabric''u 鑹鑹rmek ne kadar s鐪塺er?'
+      description: 'Verilen el pompas璋媙璋?kullanarak, 15 PSI''a tam 鑹鑹rme yakla鑹ц皨k 8閳?2 dakika s鐪塺er. Daha h璋媧l璋?鑹鑹rme i鑾絠n, bir board''u 4 dakikadan k璋媠a s鐪塺ede 鑹鑹ren Seekingtex 12V elektrikli pompam璋媧璋?鏋歯eririz.'
+
+cta:
+  title: 'Sertifikalar璋?kendiniz g鏋歳mek ister misiniz?'
+  subtitle: 'Sertifika portf鏋歽鐪塵鐪墇鐪? fabrika denetim raporlar璋媘璋媧璋?veya malzeme uyumluluk belgelerimizi talep edin. Gizlilik s鏋歾le鑹esi gerekmez.'
+  actions:
+    - variant: primary
+      text: 'Sertifika belgelerini talep edin'
+      href: '/contact'
+    - text: 'Fabrika sayfam璋媧璋?ziyaret edin'
+      href: '/factory'

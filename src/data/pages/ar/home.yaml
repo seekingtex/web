@@ -1,0 +1,179 @@
+hero:
+  tagline: ''
+  title: |
+    مصنع القوارب القابلة للنفخ — <br class="hidden sm:inline" />
+    OEM/ODM <span class="text-accent dark:text-white">مصنّع</span>
+  subtitle: |
+    <span class="hidden sm:inline"><span class="font-semibold">Seekingtex</span> هي شركة مصنّعة OEM/ODM في الصين للقوارب القابلة للنفخ وألواح التجديف (SUP) وقوارب الكاياك وقوارب قماش تقني ومعدات السلامة النسيجية الحاصلة على شهادات CE.</span>
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">Seekingtex: مصنع موثوق منذ 2012.</span>
+    نخدم عملاء B2B في أكثر من 50 دولة بالجملة والعلامات التجارية الخاصة والتصميم المخصص وحلول سلسلة التوريد الكاملة.
+  actions:
+    - variant: primary
+      text: تصفح المنتجات
+      href: /products
+      icon: tabler:shopping-bag
+    - text: اعرف أكثر
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: الصورة الرئيسية لـ Seekingtex
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: مصنع Seekingtex ومنشآته
+      tagline: مرحباً
+      title: |
+        مصممة للمياه. <br />
+        صُمّمت <span class="text-sky-300">للحياة على متنها</span>.
+      subtitle: أقمشة وظيفية فاخرة وقوارب قماش تقني ومنتجات هندسية للمحترفين وعشاق البحر.
+      actions:
+        - text: تصفح المنتجات
+          href: /products
+          variant: primary
+        - text: اطلب عرض سعر
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: قماش Seekingtex على الماء
+      tagline: حرفية
+      title: |
+        هياكل تدوم أطول من الضمان. <br />
+        خدمة تدوم أطول من الهيكل.
+      subtitle: مواد نسيجية عالية الجودة. لحام الألومنيوم. قوارب عمرها عشرون عاماً لا تزال تتصل بنا لطلب قطع الغيار.
+      actions:
+        - text: قصتنا
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: قماش Seekingtex القابل للنفخ على الماء
+      tagline: دعم
+      title: |
+        نهندسها قبل البيع. <br />
+        وندعمها طويلاً بعد.
+      subtitle: شركاء خدمة معتمدون في أكثر من 40 دولة. هياكل عمرها عشرون عاماً لا تزال تتصل بنا لطلب قطع الغيار — وما زلنا نرد.
+      actions:
+        - text: اتصل بنا
+          href: /contact
+          variant: primary
+        - text: شاهد الأسعار
+          href: /pricing
+          variant: secondary
+
+features:
+  id: features
+  tagline: لماذا Seekingtex
+  title: ما تحصل عليه مع Seekingtex
+  subtitle: عقود من الخبرة في الهندسة النسيجية، مركزة في خط إنتاجي متكامل. صُنعت بقوة، اختُبرت في البحر، مدعومة مدى الحياة.
+  columns: 2
+  items:
+    - title: مواد نسيجية عالية الجودة
+      description: هياكل PVC شديدة التحمل وهيبالون والألومنيوم مصممة لمقاومة الأشعة فوق البنفسجية والتآكل والمياه المالحة.
+      icon: tabler:shield-check
+    - title: جودة جاهزة للإنتاج
+      description: كل هيكل يُختبر بالضغط، وكل لحام يُفحص. نشحن فقط ما نستخدمه بأنفسنا على الماء.
+      icon: tabler:certificate
+    - title: تصميم معياري
+      description: خصّص تخطيط الأنابيب وموقع المقصورة وسعة الوقود والملحقات لتناسب مهمتك.
+      icon: tabler:layout-grid
+    - title: مواصفات صادقة
+      description: تقييمات حمولة حقيقية، أبعاد حقيقية، وزن حقيقي. لا تضخيم تسويقي أبداً.
+      icon: tabler:ruler-measure
+    - title: توصيل سريع وقطع غيار
+      description: الموديلات الشائعة تُشحن في غضون أيام. قطع الغيار الأصلية والمواد الاستهلاكية متوفرة طوال العام.
+      icon: tabler:truck-delivery
+    - title: دعم مدى الحياة
+      description: خط مباشر لفريقنا الهندسي للاستفسارات الفنية والإصلاحات ونصائح التجديد.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: منتجات مميزة
+  subtitle: منتقاة بعناية من كتالوجنا الحالي — الموديلات الأكثر طلباً هذا الموسم.
+  linkText: عرض جميع المنتجات
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: داخل الورشة
+  title: من تصميم الهيكل إلى التسليم، كل خطوة تبقى داخل منشأتنا
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">جودة يمكنك رؤيتها والشعور بها وقياسها</h3>
+  items:
+    - title: تصميم مهندسين نسيجيين
+      description: رسوم الهيكل ترسم داخل الشركة وتطوّر من خلال تحليل CFD قبل أن يلمس أول نموذج أولي الماء.
+    - title: لحام وتجميع في منشأتنا الخاصة
+      description: لحام الأنابيب وتجهيز المقصورة والتجهيزات تتم تحت سقف واحد لنضمن الجودة في كل خطوة.
+    - title: اختبار في البحر قبل الشحن
+      description: كل موديل يخضع لاختبار نسيجي لعدة ساعات يشمل التخطيط والانعطاف والسرعة القصوى ومعالجة الحمولة.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: ورشة إنتاج Seekingtex
+
+steps:
+  title: من المواصفات إلى الإطلاق في الماء في خمس خطوات
+  items:
+    - title: 'الخطوة 1: <span class="font-medium">تهيئة</span>'
+      description: اختر موديلاً، حدد خياراتك، اطلب عرض سعر عبر الإنترنت أو الهاتف. فريقنا يرد خلال يوم عمل واحد.
+      icon: tabler:list-numbers
+    - title: 'الخطوة 2: <span class="font-medium">تأكيد</span>'
+      description: نؤكّد المواصفات والمهلة الزمنية والتكلفة الإجمالية كتابياً. لا مفاجآت، لا رسوم خفية.
+      icon: tabler:checks
+    - title: 'الخطوة 3: <span class="font-medium">تصنيع</span>'
+      description: يبدأ الإنتاج في ورشتنا. نرسل صور التقدم في المراحل الرئيسية.
+      icon: tabler:tool
+    - title: 'الخطوة 4: <span class="font-medium">تسليم</span>'
+      description: تُثبّت على حامل، تُغلّف بالانكماش الحراري وتُشحن بحراً أو جواً. الأوراق الجمركية مُدارة بالكامل.
+      icon: tabler:truck-loading
+    - title: 'الخطوة 5: <span class="font-medium">دعم</span>'
+      description: ضمان هيكل لمدة عامين بالإضافة إلى دعم فني مدى الحياة. قطع الغيار تُشحن خلال 48 ساعة.
+      icon: tabler:headset
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: عملية تصنيع Seekingtex
+
+blog_latest:
+  title: من المدونة
+  information: |
+    مقالات وملاحظات فنية ودراسات حالة من الفريق الهندسي.
+    تتم إضافة منشورات جديدة عندما يُشحن مشروع، أو يُحدّث معيار، أو يكون لدى أحدهم قصة تستحق الرواية.
+
+faqs:
+  title: الأسئلة الشائعة
+  subtitle: استفسارات شائعة حول قوارب Seekingtex القابلة للنفخ والضمانات والشحن وشراكات OEM/ODM. إذا لم تجد سؤالك هنا، تواصل معنا.
+  columns: 2
+  items:
+    - title: أين يقع مستودع Seekingtex في الولايات المتحدة وما هي مدة الشحن؟
+      description: "يقع مستودعنا في الولايات المتحدة في مونتكلير، كاليفورنيا. الساحل الغربي: 2–3 أيام. وسط الولايات المتحدة: 3–4 أيام. الساحل الشرقي: 4–5 أيام. الشحن الدولي متاح أيضاً — اتصل بنا للحصول على عرض سعر مخصص."
+      icon: tabler:truck-delivery
+    - title: ما هي سياسة الضمان لقوارب Seekingtex القابلة للنفخ؟
+      description: "منتجات Seekingtex النسيجية القابلة للنفخ مشمولة بضمان محدود لمدة 5 سنوات على سلامة نسيج الأنابيب وقدرة اللحامات على الاحتفاظ بالهواء وهيكل الألياف الزجاجية وصمامات النفخ. الإكسسوارات المثبتة في المصنع مشمولة لمدة سنة واحدة. للاستخدام التجاري: ضمان محدود لمدة سنة. الشروط والأحكام الكاملة متوفرة في صفحة الضمان."
+      icon: tabler:shield-check
+    - title: هل تشمل قوارب Seekingtex أوراق التسجيل؟
+      description: نعم، كل قماش وظيفي من Seekingtex يتضمن الأوراق اللازمة للتسجيل. شهادة المنشأ من الشركة المصنّعة موجودة في الصفحة الخلفية من دليل المالك، ونسخة قابلة للتحميل متوفرة عند الطلب. معتمد من خفر السواحل الأمريكي للتصنيع.
+      icon: tabler:file-text
+    - title: هل قوارب Seekingtex معتمدة من خفر السواحل الأمريكي؟
+      description: "نعم، قوارب Seekingtex القابلة للنفخ معتمدة من خفر السواحل الأمريكي (USCG) للتصنيع. مصنعنا حاصل أيضاً على شهادة CE لدخول السوق الأوروبي وشهادة ."
+      icon: tabler:flag
+    - title: ماذا لو وصلت عبوة المنتج تالفة؟
+      description: إذا وصلت عبوة منتج Seekingtex تالفة، يرجى رفض التوصيل وإعادة الطرد إلى المرسل. اتصل بفريق الدعم لدينا وسنقوم بشحن بديل لك على الفور.
+      icon: tabler:package
+    - title: ماذا لو لم يصل منتجي بحلول تاريخ التوصيل المتوقع؟
+      description: أوقات التوصيل المقدمة من Seekingtex هي تقديرات ولا يمكن ضمانها. بمجرد الشحن، استلام الطرد هو مسؤولية العميل. إذا تُركت الطرد في موقع التوصيل المحدد، تنتقل الملكية عند التوصيل.
+      icon: tabler:calendar-clock
+
+cta:
+  title: |
+    هل أنت مستعد لبدء <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">مشروع OEM/ODM</span>؟
+  subtitle: أخبرنا بمتطلباتك وسنقدم لك عرض سعر مخصص وتفاصيل الحد الأدنى للكمية والمهلة الزمنية خلال يوم عمل واحد.
+  actions:
+    - variant: primary
+      text: اطلب عرض سعر
+      href: /contact
+      icon: tabler:message-circle
+    - text: زور مصنعنا
+      href: /factory

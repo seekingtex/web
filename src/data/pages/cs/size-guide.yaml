@@ -1,0 +1,27 @@
+hero:
+  title: Průvodce velikostmi a specifikacemi
+  subtitle: Rozměry, kapacity a doporučené použití pro každý produkt Seekingtex.
+
+categories:
+  inflatable: Nafukovací SUP a technicke textilie navržené pro přenosnost bez obětování výkonu. Vyberte správnou velikost podle své hmotnosti a stylu pádlování.
+  rib: Pevnotrupé nafukovací čluny pro pobřežní navigaci, hlídkování a profesionální námořní operace. Vyberte podle délky a výkonu motoru.
+  accessory: Příslušenství a bezpečnostní vybavení doplňující vaše plavidlo. Univerzální velikosti s více možnostmi.
+
+table:
+  headers:
+    product: Produkt
+    length: Délka
+    width: Šířka
+    weight: Hmotnost
+    max_load: Max. zatížení
+    best_for: Nejlepší pro
+
+how_to_choose:
+  title: Jak vybrat správnou velikost
+  cards:
+    - title: SUP prkna
+      description: Zvolte délku podle své hmotnosti a zamýšleného použití. Širší prkna (32"+) nabízejí větší stabilitu. Delší prkna (11-12 stop) lépe kloužou pro výlety. Těžší pádlaři potřebují prkna s vyšším objemem.
+    - title: technicke textilie
+      description: Jednomístné technicke textilie (9 stop) jsou nejlepší pro sólo cestování a řeky. Dvojmístné technicke textilie (12 stop) pojmou dva pádlaře nebo jednoho dospělého s vybavením. Zkontrolujte nosnost včetně vybavení.
+    - title: textilni produkt a technicka textilie
+      description: Zvolte délku textilni produkt podle počtu cestujících a zamýšleného použití. Větší technicka textilie (4,5 m+) jsou vhodné pro moře a záchranu. Menší textilni produkt (2,7 m) slouží jako tendry a rybářské platformy.

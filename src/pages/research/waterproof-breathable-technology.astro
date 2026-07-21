@@ -1,0 +1,126 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Waterproof Breathable Technology — Technical Comparison | ${SITE.name}`,
+  description: `Head-to-head comparison of waterproof breathable technologies: PU, PTFE, and ePTFE membranes. Performance, durability, breathability, cost, and application-specific recommendations.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Waterproof Breathable Technology',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-02-10',
+  dateModified: '2025-05-15',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/research" class="hover:text-sky-600">Research</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Waterproof Breathable Technology</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Waterproof & Breathable Technology</span>
+      <span class="ml-3 text-sm text-gray-400">10 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">Waterproof Breathable Technology</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">
+      A technical comparison of durability, breathability, and performance between the dominant waterproof breathable membrane technologies used in functional fabric manufacturing.
+    </p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Technology Overview</h2>
+
+      <h3>PU (Polyurethane) Membranes</h3>
+      <p>
+        PU membranes are hydrophilic films that absorb moisture vapor from the warm interior and transfer it through the membrane to the cooler exterior. They offer a cost-effective solution for moderate-performance waterproof breathable fabrics. Available in solid film and microporous variants.
+      </p>
+      <p>
+        Advantages: Lower cost, easier to manufacture, good flexibility, available in 2-layer and 3-layer configurations.
+      </p>
+
+      <h3>PTFE (Polytetrafluoroethylene) Membranes</h3>
+      <p>
+        PTFE membranes use microporous technology — millions of microscopic pores per square inch that are 20,000x smaller than a water droplet but 700x larger than a water vapor molecule. This allows moisture vapor to escape while preventing liquid water penetration.
+      </p>
+      <p>
+        Advantages: Highest breathability, excellent waterproofness, no chemical additives required.
+      </p>
+
+      <h3>ePTFE (Expanded PTFE) Membranes</h3>
+      <p>
+        ePTFE is an advanced form of PTFE that has been mechanically expanded to create an even more porous structure with higher MVTR. It is the premium choice for high-performance outdoor and tactical applications.
+      </p>
+      <p>
+        Advantages: Maximum breathability, superior waterproofness, excellent durability.
+      </p>
+
+      <h2>Side-by-Side Comparison</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Property</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">PU</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">PTFE</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">ePTFE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border font-medium">Hydrostatic Head</td><td class="p-3 border">5000-15000mm</td><td class="p-3 border">10000-20000mm</td><td class="p-3 border">15000-30000+mm</td></tr>
+          <tr><td class="p-3 border font-medium">MVTR (g/m²/24hr)</td><td class="p-3 border">5000-10000</td><td class="p-3 border">10000-20000</td><td class="p-3 border">15000-30000+</td></tr>
+          <tr><td class="p-3 border font-medium">Cold Flexibility</td><td class="p-3 border">-20°C</td><td class="p-3 border">-40°C</td><td class="p-3 border">-40°C</td></tr>
+          <tr><td class="p-3 border font-medium">Durability</td><td class="p-3 border">Good</td><td class="p-3 border">Very good</td><td class="p-3 border">Excellent</td></tr>
+          <tr><td class="p-3 border font-medium">Cost (per m²)</td><td class="p-3 border">$5-10</td><td class="p-3 border">$10-20</td><td class="p-3 border">$15-30</td></tr>
+          <tr><td class="p-3 border font-medium">Eco-Friendliness</td><td class="p-3 border">Moderate</td><td class="p-3 border">PFC concerns</td><td class="p-3 border">PFC concerns</td></tr>
+          <tr><td class="p-3 border font-medium">Best For</td><td class="p-3 border">Value outerwear</td><td class="p-3 border">Performance gear</td><td class="p-3 border">Premium/professional</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Which Should You Choose?</h2>
+
+      <h3>Choose PU When:</h3>
+      <ul>
+        <li>Budget is the primary concern</li>
+        <li>Moderate breathability is acceptable</li>
+        <li>Applications include everyday outerwear, light rain protection</li>
+      </ul>
+
+      <h3>Choose PTFE When:</h3>
+      <ul>
+        <li>High breathability is required for active use</li>
+        <li>Reliable waterproofness for outdoor adventures</li>
+        <li>You need a proven technology with established performance</li>
+      </ul>
+
+      <h3>Choose ePTFE When:</h3>
+      <ul>
+        <li>Maximum breathability for high-output activities</li>
+        <li>Professional or tactical applications requiring extreme reliability</li>
+        <li>Cold-weather performance below -20°C</li>
+      </ul>
+
+      <h2>Seekingtex Recommendation</h2>
+      <p>
+        For most outdoor and activewear applications, PTFE membranes offer the best balance of performance and value. Seekingtex uses PU membranes for entry-level products, PTFE membranes for mid-range performance gear, and advanced laminated constructions for premium and professional product lines.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href="/research" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Research</a>
+    </div>
+  </article>
+</Layout>

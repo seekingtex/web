@@ -1,0 +1,13 @@
+cards:
+  - badge: UPF
+    title: UPF 50+ Protection
+    description: Advanced UV-blocking technology that blocks 98% of harmful UV radiation. Tested to UV Standard 801.
+    image: /images/seekingtex/tech/upf-testing.webp
+  - badge: WP
+    title: Waterproof Membrane
+    description: High-performance waterproof breathable membrane technology with 8000-20000mm water column rating.
+    image: /images/seekingtex/tech/waterproof-membrane.webp
+  - badge: QD
+    title: Quick-Dry Technology
+    description: Engineered capillary fiber system that wicks moisture away from skin for rapid evaporation and cooling.
+    image: /images/seekingtex/tech/quick-dry-tech.webp

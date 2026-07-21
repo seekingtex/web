@@ -1,0 +1,23 @@
+hero:
+  tagline: Dagboek
+  title: Seekingtex Dagboek
+  subtitle: Laatste nieuws, zeilavonturen en productverhalen van het Seekingtex-team.
+
+meta:
+  read_more: Lees verder
+  published: Gepubliceerd
+  by: Auteur
+  browse_all: Alle artikelen bekijken
+  categories: Categorieën
+  subscribe: Abonneer op het dagboek
+
+categories:
+  all: Alle
+  adventures: Avonturen
+  product: Product
+  tips: Tips
+  culture: Cultuur
+
+featured: Uitgelicht
+latest: Laatste artikelen
+no_articles: Nog geen artikelen.

@@ -1,0 +1,26 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import InteractiveGraph from '~/components/knowledge-graph/InteractiveGraph.astro';
+
+const metadata = {
+  title: `Knowledge Graph | ${SITE.name}`,
+  description: `Interactive visual knowledge graph exploring relationships between functional fabric products, technologies, materials, applications, and performance properties in the performance textile domain.`,
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={{
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    headline: 'Knowledge Graph',
+    description: metadata.description,
+    author: { '@type': 'Organization', name: SITE.name },
+  }} />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <InteractiveGraph lang="en" />
+  </div>
+</Layout>

@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Kennisgraaf'
+  title: 'Waterverkenning Kennis'
+  subtitle: |
+    Een gestructureerde kennisbank over functionele stoffen-technologie,<br />
+    waterveiligheid, boottechniek en avonturenplanning.
+  taglineSection: 'Verken. Leer. Ga met vertrouwen.'
+
+clusters:
+  tagline: 'Kennisclusters'
+  title: 'Verken op onderwerp'
+  subtitle: 'Diepgaande prestatie in de technologie, veiligheid en vaardigheden achter elk Seekingtex product.'
+  items:
+    - title: 'SUP Kennis'
+      description: 'Van het kiezen van je eerste board tot geavanceerde touringtechnieken 閳?alles over stand-up textile knowledgeing.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Hoe kies je je eerste functionele stoffen'
+        - 'Beste SUP maat voor beginners'
+        - 'Hoe moeilijk is textile knowledgeing?'
+        - 'functioneel vs hardboard vergelijking'
+        - 'SUP veiligheidschecklist'
+    - title: 'Boot Kennis'
+      description: 'Technische gidsen over functionele stoffen, RIBs, bijboten en technische stoffen 閳?techniek, materialen en bediening.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Types functionele stoffen uitgelegd'
+        - 'PVC vs Hypalon vergelijking'
+        - 'technische stof vs Bijboot vergelijking'
+        - 'Drop-stitch technologie verdieping'
+        - 'Mariene materiaalkunde gids'
+    - title: 'Veiligheid Kennis'
+      description: 'Essenti姣沴e veiligheidskennis voor elke textielprofessional 閳?van PFD-keuze tot weerslezen tot zelfreddingstechnieken.'
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP veiligheidschecklist'
+        - 'Heb je een zwemvest nodig?'
+        - 'Oceaan textielgebruik veiligheidsgids'
+        - 'Rivierveiligheid voor functionele stoffen'
+        - 'Weer- en waterconditiebewustzijn'
+    - title: 'Technologie'
+      description: 'De techniek achter Seekingtex producten 閳?materialen, constructiemethoden en kwaliteitstesten.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Marine-grade PVC technologie'
+        - 'Drop-stitch kern uitgelegd'
+        - 'Waarom PSI belangrijk is voor functionele stoffen'
+        - 'RF-lassen vs adhesieve verbinding'
+        - 'Kwaliteitstesten en certificering'
+
+featured_guides:
+  tagline: 'Aanbevolen Gidsen'
+  title: 'Meest populaire kennisbronnen'
+  items:
+    - title: 'SUP Basis'
+      href: '/learn/fabrics'
+    - title: 'functioneel vs Hardboard'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Waterveiligheidsgids'
+      href: '/learn/quality-standards'
+    - title: 'Materialen Referentie'
+      href: '/learn/materials'
+    - title: 'SUP Maatgids'
+      href: '/size-guide'
+
+cta:
+  title: 'Begin met verkennen'
+  subtitle: 'Duik in onze kennisbank en krijg de informatie die je nodig hebt voor je volgende wateravontuur.'
+  actions:
+    - variant: primary
+      text: 'Bekijk alle gidsen'
+      href: '/academy'
+    - text: 'Verken Kennisgraaf'
+      href: '/knowledge'

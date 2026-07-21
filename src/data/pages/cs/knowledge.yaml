@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Znalostn閾?graf'
+  title: 'Znalosti o objevov璋﹏閾?vod'
+  subtitle: |
+    Strukturovan璋?znalostn閾?b璋﹝e pokr濯抳aj閾哻閾?technologii nafukovac閾哻h SUP,<br />
+    bezpe鑶穘ost na vod鑷? in鍟猠n濯抮stv閾?鑶穕un鏆?a pl璋﹏ov璋﹏閾?dobrodru鍟猻tv閾?
+  taglineSection: 'Objevujte. U鑶穞e se. Jd鑷巘e s jistotou.'
+
+clusters:
+  tagline: 'Znalostn閾?klastry'
+  title: 'Objevujte podle t鑼卪atu'
+  subtitle: 'Hlubok鑼?ponory do technologie, bezpe鑶穘osti a dovednost閾?za ka鍟猟濯抦 produktem Seekingtex.'
+  items:
+    - title: 'Znalosti o SUP'
+      description: 'Od v濯抌鑷巖u prvn閾唄o prkna po pokro鑶穒l鑼?techniky touringu 閳?v鎷 o textile knowledgeu.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Jak vybrat sv鑼?prvn閾?nafukovac閾?SUP'
+        - 'Nejlep鎷ч搯 velikost SUP pro za鑶疯癌te鑶穘閾唊y'
+        - 'Jak n璋﹔o鑶穘鑼?je textile knowledge?'
+        - 'Srovn璋﹏閾?nafukovac閾唄o a pevn鑼卙o prkna'
+        - 'Bezpe鑶穘ostn閾?checklist pro SUP'
+    - title: 'Znalosti o 鑶穕unech'
+      description: 'Technick鑼?pr鏆杤odce o nafukovac閾哻h 鑶穕unech, RIBech, textilni produkt a kajac閾哻h 閳?in鍟猠n濯抮stv閾? materi璋﹍y a provoz.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Typy nafukovac閾哻h 鑶穕un鏆?vysv鑷巘leny'
+        - 'Srovn璋﹏閾?PVC vs Hypalon'
+        - 'technicka textilie vs textilni produkt srovn璋﹏閾?
+        - 'Hlubok濯?ponor do drop-stitch technologie'
+        - 'Pr鏆杤odce n璋﹎o鑹閾?materi璋﹍ovou v鑷巇ou'
+    - title: 'Bezpe鑶穘ostn閾?znalosti'
+      description: 'Z璋﹌ladn閾?bezpe鑶穘ostn閾?znalosti pro ka鍟猟鑼卙o p璋ヾluj閾哻閾唄o 閳?od v濯抌鑷巖u PFD po 鑶穞en閾?po鑶穉s閾?a techniky sebez璋ヽhrany.'
+      icon: 'tabler:shield'
+      topics:
+        - 'Bezpe鑶穘ostn閾?checklist pro SUP'
+        - 'Pot鑹bujete z璋ヽhrannou vestu?'
+        - 'Bezpe鑶穘ostn閾?pr鏆杤odce p璋ヾlov璋﹏閾唌 v oce璋﹏u'
+        - 'Bezpe鑶穘ost na 鑹k璋ヽh pro nafukovac閾?technicke textilie'
+        - 'Pov鑷巇om閾?o po鑶穉s閾?a vodn閾哻h podm閾唍k璋ヽh'
+    - title: 'Technologie'
+      description: 'In鍟猠n濯抮stv閾?za produkty Seekingtex 閳?materi璋﹍y, konstruk鑶穘閾?metody a testov璋﹏閾?kvality.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'N璋﹎o鑹閾?PVC technologie'
+        - 'Drop-stitch j璋ヾro vysv鑷巘leno'
+        - 'Pro鑶?z璋﹍e鍟搯 na PSI u nafukovac閾哻h SUP'
+        - 'RF sva鑹v璋﹏閾?vs lepen閾?
+        - 'Testov璋﹏閾?kvality a certifikace'
+
+featured_guides:
+  tagline: 'Doporu鑶積n鑼?pr鏆杤odce'
+  title: 'Nejobl閾哹en鑷巎鎷ч搯 znalostn閾?zdroje'
+  items:
+    - title: 'Z璋﹌lady SUP'
+      href: '/learn/fabrics'
+    - title: 'Nafukovac閾?vs pevn鑼?prkno'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Bezpe鑶穘ostn閾?pr鏆杤odce na vod鑷?
+      href: '/learn/quality-standards'
+    - title: 'Materi璋﹍ov璋?reference'
+      href: '/learn/materials'
+    - title: 'Pr鏆杤odce velikost閾?SUP'
+      href: '/size-guide'
+
+cta:
+  title: 'Za鑶穘鑷巘e objevovat'
+  subtitle: 'Pono鑹e se do na鎷ч搯 znalostn閾?b璋﹝e a z閾唖kejte informace, kter鑼?pot鑹bujete pro sv鑼?dal鎷ч搯 vodn閾?dobrodru鍟猻tv閾?'
+  actions:
+    - variant: primary
+      text: 'Prohl閾嗗暘et v鎷chny pr鏆杤odce'
+      href: '/academy'
+    - text: 'Prozkoumat znalostn閾?graf'
+      href: '/knowledge'

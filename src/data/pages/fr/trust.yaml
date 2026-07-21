@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Construit selon des normes qui comptent'
+  title: 'Faites confiance 鑴?Seekingtex'
+  subtitle: |
+    Chaque produit que nous fabriquons est certifi鑼?CE 閳?test鑼?pour la s鑼卌urit鑼?<br />
+    la durabilit鑼?et la performance. Aucun raccourci. Aucune exception.
+  taglineSection: 'Certifi鑼? Test鑼? Prouv鑼?'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Produit Seekingtex subissant un contr涔坙e qualit鑼?
+
+stats:
+  title: 'Seekingtex en chiffres'
+  stats:
+    - title: 'Certifi鑼?CE'
+      description: 'Tous les produits loisirs r鑼卲ondent aux normes de s鑼卌urit鑼?UE'
+    - title: ''
+      description: 'Syst鐚玬e de management qualit鑼?depuis 2012'
+    - title: 'BSCI & REACH'
+      description: 'Fabrication 鑼卼hique et conformit鑼?des mat鑼卹iaux'
+    - title: 'Garantie 2 Ans'
+      description: 'Sur chaque produit Seekingtex 閳?sans poser de questions'
+
+features3_certifications:
+  title: 'Certifications & Conformit鑼?
+  subtitle: 'Chaque produit est ind鑼卲endamment test鑼?et certifi鑼?selon les normes internationales.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'Certification CE'
+      description: 'Tous les Fabric, tissus techniques, annexes et tissu technique Seekingtex respectent la norme de s鑼卌urit鑼?CE europ鑼卐nne pour les embarcations de loisir. Chaque produit subit des tests de pression, flottabilit鑼?et charge avant de quitter l''usine.'
+      icon: 'tabler:certificate'
+    - title: ''
+      description: 'Notre installation de 12 000 m铏?鑴?Qingdao fonctionne sous un syst鐚玬e de management qualit鑼?. Chaque lot de production est tra鑾絘ble, document鑼?et inspect鑼?'
+      icon: 'tabler:clipboard-check'
+    - title: 'Conformit鑼?Sociale BSCI'
+      description: 'Nous sommes certifi鑼卻 BSCI, garantissant des pratiques de travail 鑼卼hiques, des conditions de travail s娌es et une responsabilit鑼?environnementale dans toute notre cha鍗痭e d''approvisionnement.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'Tous les mat鑼卹iaux 閳?PVC, Hypalon, mousse EVA, adh鑼卻ifs 閳?sont conformes aux r鐚玤lements UE REACH et RoHS. Aucune substance interdite, aucun compromis.'
+      icon: 'tabler:flask'
+    - title: 'Laboratoire d''Essais Mat鑼卹iaux'
+      description: 'Notre laboratoire interne teste la r鑼卻istance 鑴?la traction, la r鑼卻istance UV, l''int鑼単rit鑼?des joints et l''abrasion pour chaque lot de tissu avant production.'
+      icon: 'tabler:microscope'
+    - title: 'Garantie 2 Ans'
+      description: 'Chaque produit Seekingtex est livr鑼?avec une garantie de deux ans contre les d鑼協auts de fabrication. Nous assumons ce que nous construisons.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Confiance Client'
+  title: 'Ce que disent nos clients'
+  subtitle: 'Des pagayeurs d鑼卋utants aux exploitants de flottes professionnelles 閳?voyez pourquoi ils font confiance 鑴?Seekingtex.'
+  items:
+    - content: 'Nous avons 鑼卶uip鑼?toute notre flotte de location avec des tissu technique Seekingtex. Deux saisons, z鑼卹o panne. La certification CE a rendu l''approbation d''assurance transparente.'
+      name: 'Marco V.'
+      title: 'Exploitant touristique, Croatie'
+    - content: 'En tant qu''acheteur novice, j''鑼卼ais inquiet de la qualit鑼? La documentation ISO et les rapports de test qu''ils ont partag鑼卻 m''ont donn鑼?une confiance totale.'
+      name: 'James T.'
+      title: 'Propri鑼卼aire Fabric Explorer 11, Canada'
+    - content: 'Nous travaillons avec Seekingtex pour nos unit鑼卻 de patrouille c涔坱i鐚玶e. Leur processus CQ est coh鑼卹ent sur chaque lot 閳?cette fiabilit鑼?compte dans les op鑼卹ations critiques.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Achats navals, Philippines'
+
+steps2_manufacturing:
+  title: 'Comment nous garantissons la qualit鑼?
+  subtitle: 'De l''inspection des mati鐚玶es premi鐚玶es au test de pression final 閳?chaque produit passe par une cha鍗痭e qualit鑼?rigoureuse.'
+  items:
+    - title: 'Inspection Mati鐚玶es Premi鐚玶es'
+      description: 'Chaque rouleau de tissu PVC est test鑼?pour l''鑼卲aisseur, la r鑼卻istance 鑴?la traction et la r鑼卻istance UV avant d''entrer en production.'
+      icon: 'tabler:search'
+    - title: 'CQ en Cours de Process'
+      description: 'Les soudures, installations de valves et liaisons de chambres sont inspect鑼卐s 鑴?chaque poste durant l''assemblage.'
+      icon: 'tabler:eye'
+    - title: 'Test de Pression'
+      description: 'Chaque produit fonctionnel est gonfl鑼?鑴?1,5x la pression nominale et maintenu 24 heures pour v鑼卹ifier la r鑼卼ention d''air et l''int鑼単rit鑼?des joints.'
+      icon: 'tabler:wind'
+    - title: 'Inspection Finale'
+      description: 'Chaque unit鑼?est inspect鑼卐 pour la finition, la quincaillerie et l''emballage avant d''閿歵re approuv鑼卐 pour exp鑼卍ition. Des 鑼卌hantillons de lots vont au laboratoire pour tests destructifs.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'FAQ tissu tissu technique'
+  subtitle: 'Questions courantes sur nos tissus fonctionnels 鑴?coque rigide.'
+  columns: 2
+  items:
+    - title: 'Quelles tailles de tissu technique Seekingtex propose-t-il ?'
+      description: 'Nous proposons 35 mod鐚玪es tissu technique de 2,5 m 鑴?7,6 m, couvrant des annexes compactes aux tissu de travail et de patrouille lourds. Chaque mod鐚玪e est disponible avec plusieurs options de configuration.'
+    - title: 'Quelle est la diff鑼卹ence entre un tissu technique et un tissus fonctionnels traditionnel ?'
+      description: 'Un tissu technique (Technical Fabric) combine une coque solide en fibre de verre ou aluminium en forme de V profond avec des tubes gonflables en Hypalon ou PVC. Cela offre la stabilit鑼?et la capacit鑼?de charge d''un tissu rigide avec l''absorption des chocs et la flottabilit鑼?d''un fonctionnel.'
+    - title: 'Quels moteurs sont compatibles avec les tissu technique Seekingtex ?'
+      description: 'Nos tissu technique Fabricportent des moteurs hors-bord de 3 CV 鑴?250 CV selon le mod鐚玪e. Chaque page produit liste la puissance moteur maximale. Nous recommandons de consulter votre revendeur pour l''association id鑼卆le.'
+    - title: 'Les tissu technique Seekingtex sont-ils certifi鑼卻 CE ?'
+      description: 'Oui. Tous les mod鐚玪es tissu technique loisirs sont certifi鑼卻 CE selon les normes europ鑼卐nnes applicables pour les embarcations de loisir. Les mod鐚玪es commerciaux et de patrouille r鑼卲ondent 鑴?des exigences Fabricpl鑼卪entaires de stabilit鑼?et de charge.'
+    - title: 'Quelle est la garantie sur les tissu tissu technique ?'
+      description: 'Tous les tissu technique Seekingtex sont livr鑼卻 avec une garantie standard d''un an contre les d鑼協auts de fabrication, couvrant le d鑼卨aminage de coque, la d鑼協aillance des joints de tubes, les d鑼協auts de valves et les probl鐚玬es de quincaillerie.'
+    - title: 'Combien de chambres 鑴?air les tissu technique Seekingtex ont-ils ?'
+      description: 'Nos tissu technique disposent de 3 鑴?7 chambres 鑴?air ind鑼卲endantes selon la longueur du mod鐚玪e. Cette conception multi-chambres garantit que le tissu reste 鑴?flot m閿歮e si un compartiment est compromis.'
+
+faqs_inflatable:
+  title: 'FAQ tissus fonctionnels'
+  subtitle: 'Questions courantes sur nos annexes, tissus techniques et tissus fonctionnels.'
+  columns: 2
+  items:
+    - title: 'Quels mat鑼卹iaux sont utilis鑼卻 dans les tissus fonctionnels Seekingtex ?'
+      description: 'Nous utilisons du PVC de qualit鑼?militaire (1100 deniers) et du caoutchouc Hypalon/CSM premium selon le mod鐚玪e. Les deux mat鑼卹iaux sont stabilis鑼卻 aux UV, r鑼卻istants 鑴?l''abrasion et conformes aux r鐚玤lements UE REACH et RoHS.'
+    - title: 'Combien de temps durent les tissus fonctionnels ?'
+      description: 'Avec un entretien appropri鑼? un tissus fonctionnels en PVC de qualit鑼?dure 7 鑴?10 ans, tandis que les mod鐚玪es Hypalon peuvent durer 15 鑴?20 ans. Un nettoyage r鑼単ulier, une protection UV et un stockage appropri鑼?prolongent consid鑼卹ablement la dur鑼卐 de vie.'
+    - title: 'Quel entretien est requis pour un tissus fonctionnels ?'
+      description: 'L''entretien de base inclut le rin鑾絘ge 鑴?l''eau douce apr鐚玸 chaque utilisation (surtout en eau sal鑼卐), le s鑼卌hage avant stockage, la v鑼卹ification annuelle des joints de valve et l''application de protection UV sur les tubes. 鑴itez l''exposition prolong鑼卐 au soleil lorsqu''il n''est pas utilis鑼?'
+    - title: 'Les tissus fonctionnels peuvent-ils 閿歵re utilis鑼卻 en eau sal鑼卐 ?'
+      description: 'Oui. Tous les tissus fonctionnels Seekingtex sont con鑾絬s pour une utilisation en eau douce et sal鑼卐. Nous recommandons de rincer 鑴?l''eau douce et de s鑼卌her compl鐚玹ement apr鐚玸 une exposition 鑴?l''eau sal鑼卐 pour 鑼卾iter la corrosion des ferrures et la cristallisation du sel dans le tissu.'
+    - title: 'Comment stocker un tissus fonctionnels ?'
+      description: 'D鑼単onflez, nettoyez et s鑼卌hez compl鐚玹ement le tissu avant stockage. Roulez-le sans serrer (鑼卾itez les plis serr鑼卻), stockez dans un endroit frais et sec 鑴?l''abri du soleil, et 鑼卾itez les sols en b鑼卼on pour emp閿歝her la remont鑼卐 d''humidit鑼?'
+    - title: 'Quelle est la capacit鑼?de poids des tissus fonctionnels Seekingtex ?'
+      description: 'Les capacit鑼卻 de poids vont de 290 kg pour nos plus petits mod鐚玪es 鑴?plus de 2000 kg pour les grandes embarcations commerciales. Chaque page produit liste la charge maximale pour votre mod鐚玪e sp鑼卌ifique.'
+
+faqs_Fabric:
+  title: 'FAQ tissu fonctionnel'
+  subtitle: 'Questions courantes sur nos planches de fabric.'
+  columns: 2
+  items:
+    - title: 'Quelles tailles de tissu fonctionnel sont disponibles ?'
+      description: 'Nous proposons des tissu fonctionnel de 9 pi 鑴?12 pi, incluant des designs polyvalents, de randonn鑼卐, yoga et sp鑼卌ialis鑼卻. Nos mod鐚玪es les plus vendus incluent la Tropical Breeze (10 pi) et l''Ocean Voyager (11 pi).'
+    - title: 'Qu''est-ce que la construction drop-stitch ?'
+      description: 'La construction drop-stitch utilise des milliers de fils polyester reliant les couches Fabric鑼卹ieure et inf鑼卹ieure de la tissu fonctionnel gonflables premium.'
+    - title: 'Quelle est la limite de poids pour les tissu fonctionnel ?'
+      description: 'Nos tissu fonctionnel Fabricportent jusqu''鑴?150 kg selon le mod鐚玪e et le volume. La Leviathan Wake est notre mod鐚玪e 鑴?plus haute capacit鑼? con鑾絬 pour les gabarits plus lourds et l''utilisation en yoga.'
+    - title: 'Proposez-vous des kits Fabric complets ?'
+      description: 'Oui. Chaque tissu fonctionnel est livr鑼卐 avec un kit complet incluant une textile aluminium 3 pi鐚玞es, une pompe manuelle haute pression, une laisse spirale, un sac 鑴?dos de voyage et un kit de r鑼卲aration. Certains mod鐚玪es incluent 鑼単alement un jeu d''ailerons amovibles.'
+    - title: 'Quelle est la garantie sur les tissu fonctionnel ?'
+      description: 'Toutes les tissu fonctionnel Seekingtex b鑼卬鑼協icient d''une garantie d''un an contre les d鑼協auts de fabrication, incluant la d鑼協aillance des joints, les d鑼協auts de valves et le d鑼卨aminage des mat鑼卹iaux en usage normal.'
+    - title: 'Combien de temps faut-il pour gonfler une tissu fonctionnel ?'
+      description: 'Avec la pompe manuelle fournie, un gonflage complet 鑴?15 PSI prend environ 8 鑴?12 minutes. Pour un gonflage plus rapide, nous recommandons notre pompe 鑼卨ectrique Seekingtex 12V, qui gonfle une planche en moins de 4 minutes.'
+
+cta:
+  title: 'Vous voulez voir les certifications vous-m閿歮e ?'
+  subtitle: 'Demandez notre portefeuille de certifications, rapports d''audit d''usine ou documentation de conformit鑼?mat鑼卹iaux. Aucune NDA requise.'
+  actions:
+    - variant: primary
+      text: 'Demander les docs de certification'
+      href: '/contact'
+    - text: 'Visiter notre page usine'
+      href: '/factory'

@@ -1,0 +1,29 @@
+hero:
+  tagline: Merk
+  title: '{BRAND}'
+  subtitle: Oceaanprestaties voor Elke Surfer
+  cta: Ontdek de uitrusting 鈫?  cta_link: /products
+  secondary_cta: Leer surfen
+  secondary_cta_link: /guides
+
+position:
+  tagline: Positionering
+  subtitle: Oceaanprestaties voor Elke Surfer
+
+products_section:
+  tagline: Producten
+  cta: Alle producten 鈫?  cta_link: /products
+
+global_section:
+  tagline: Wereldwijd
+  title: Beschikbaar in {count} regio's
+
+social_section:
+  tagline: Social media
+  title: Wat surfers lezen
+  read_guide: Lees de handleiding 鈫?
+cta_section:
+  title: Begin je oceaanavontuur
+  subtitle: Elk product CE-gecertificeerd. Gedekt door garantie. Ontworpen voor echt surfen.
+  cta_suffix: '鈫?
+  secondary_cta: Over {BRAND}

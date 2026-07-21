@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Bilgi Grafi闁奸攱濮?
+  title: 'Su Ke闁艰婀砯 Bilgisi'
+  subtitle: |
+    闁艰娲€闁艰婀積 SUP teknolojisi, su g闁活亜銆慹nli闁奸攱濮? kuma閼?m闁活亜鈥渆ndisli闁奸攱濮?br />
+    ve macera planlamas閻犲鐛ч悹?kapsayan yap閻犲鐛nd閻犲鐛伴悹瀣崶m閻犲顑堟晶?bir bilgi taban閻?
+  taglineSection: 'Ke闁艰婀癳din. 闁煎瓨濯介崳绺璭nin. G闁活亜銆慹nle gidin.'
+
+clusters:
+  tagline: 'Bilgi K闁活亜銆塭leri'
+  title: 'Konuya g闁哄顒琫 ke闁艰婀癳din'
+  subtitle: 'Her Seekingtex 闁活亜銆庨柣顏勩€婇柣顏勩€婇柣顏勩€?arkas閻犲鐛aki teknoloji, g闁活亜銆慹nlik ve becerilere derinlemesine dal閻犲顑堟晶绲r.'
+  items:
+    - title: 'SUP Bilgisi'
+      description: '闂傚嫬顔刱 board閻犲鐛ч悹瀣€嗛悹?se闁煎墽涓筫kten ileri tur tekniklerine kadar 闂?textile technology hakk閻犲鐛a her 闁艰婀痽.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - '闂傚嫬顔刱 闁艰婀抽柤璇℃狗e SUP''inizi nas閻犲鐛?se闁煎墽绂峳siniz'
+        - 'Yeni ba闁艰婀禷yanlar i闁煎墽绂抧 en iyi SUP boyutu'
+        - 'textile knowledge ne kadar zor?'
+        - '闁艰娲€闁艰婀積 vs sert board kar闁煎鍡欐瘍la闁艰婧€閻犲鐛癿as閻?
+        - 'SUP g闁活亜銆慹nlik kontrol listesi'
+    - title: 'kuma[ss] Bilgisi'
+      description: '闁艰娲€闁艰婀積 botlar, teknik kuma閼?'ler, 闁艰婀抽柤璇℃狗e botlar ve technical fabrics hakk閻犲鐛a teknik rehberler 闂?m闁活亜鈥渆ndislik, malzemeler ve kullan閻犲鐛?'
+      icon: 'tabler:sailboat'
+      topics:
+        - '闁艰娲€闁艰婀積 kuma閼?t闁活亜銆巐eri a闁兼儳鈧喓姣僰land閻?
+        - 'PVC vs Hypalon kar闁煎鍡欐瘍la闁艰婧€閻犲鐛癿as閻?
+        - 'teknik kuma閼?vs 闁艰娲€闁艰婀積 kuma[ss] kar闁煎鍡欐瘍la闁艰婧€閻犲鐛癿as閻?
+        - 'Drop-stitch teknolojisi derinlemesine'
+        - 'tekstil malzemesi bilimi rehberi'
+    - title: 'G闁活亜銆慹nlik Bilgisi'
+      description: 'Her k闁活亜銆巈k闁煎墽绂?i闁煎墽绂抧 temel g闁活亜銆慹nlik bilgisi 闂?can yele闁奸攱濮?se闁煎墽绂抦inden hava durumu okumaya ve kendi kendine kurtarma tekniklerine kadar.'
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP g闁活亜銆慹nlik kontrol listesi'
+        - 'Can yele闁奸攱濮昻e ihtiyac閻犲鐛ч悹瀣€?var m閻?'
+        - 'Okyanus k闁活亜銆巈k g闁活亜銆慹nlik rehberi'
+        - '闁艰娲€闁艰婀積 technical fabrics i闁煎墽绂抧 nehir g闁活亜銆慹nli闁奸攱濮?
+        - 'Hava durumu ve su ko闁艰婧乴u fark閻犲鐛al閻犲顑堥崳璺ㄦ嫬?
+    - title: 'Teknoloji'
+      description: 'Seekingtex 闁活亜銆庨柣顏勩€妉erinin arkas閻犲鐛aki m闁活亜鈥渆ndislik 闂?malzemeler, yap閻犲鐛?y闁哄顒╰emleri ve kalite testi.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'tekstil s閻犲鐛ч悹瀣崫閻?PVC teknolojisi'
+        - 'Drop-stitch 闁煎墽绂峩irdek a闁兼儳鈧喓姣僰lamas閻?
+        - 'PSI 闁艰婀抽柤璇℃狗e SUPlar i闁煎墽绂抧 neden 闁哄顒╡mlidir'
+        - 'RF kayna闁奸攱甯熼惃?vs yap閻犲顑堟晶绲悹瀣嵃閻犲鐛氶悹?birle闁艰婧€irme'
+        - 'Kalite testi ve sertifikasyon'
+
+featured_guides:
+  tagline: '闁煎娈宔 闁煎鍠曢惃鈺n Rehberler'
+  title: 'En pop闁活亜銆坋r bilgi kaynaklar閻?
+  items:
+    - title: 'SUP Temelleri'
+      href: '/learn/fabrics'
+    - title: '闁艰娲€闁艰婀積 vs Sert Board'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Su G闁活亜銆慹nlik Rehberi'
+      href: '/learn/quality-standards'
+    - title: 'Malzeme Referans閻?
+      href: '/learn/materials'
+    - title: 'SUP Boyut Rehberi'
+      href: '/size-guide'
+
+cta:
+  title: 'Ke闁艰婀癳tmeye ba闁艰婀禷y閻犲鐛?
+  subtitle: 'Bilgi taban閻犲鐛﹂悹瀣€哸 dal閻犲鐛?ve bir sonraki su maceran閻犲顎?i闁煎墽绂抧 ihtiyac閻犲鐛ч悹瀣€?olan bilgileri al閻犲鐛?'
+  actions:
+    - variant: primary
+      text: 'T闁活亜銆?rehberlere g闁哄顒?at閻犲鐛?
+      href: '/academy'
+    - text: 'Bilgi Grafi闁奸攱濮昻i Ke闁艰婀癳din'
+      href: '/knowledge'

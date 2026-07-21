@@ -1,0 +1,96 @@
+hero:
+  tagline: Om f枚retaget
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex-verkstad
+  title: |
+    textil ingenj枚rskonst <br />
+    i <span class="text-accent dark:text-white">Seekingtex</span>-stil
+  subtitle: 'Vi b枚rjade i en kustverkstad med en b氓t och en orubblig 枚vertygelse: marina produkter b枚r vara designade som om livet h盲ngde p氓 dem 鈥?f枚r det g枚r det. Idag levererar vi till 40+ l盲nder, men varje skrov g氓r fortfarande genom samma h盲nder som grundade f枚retaget.'
+
+stats:
+  title: I siffror
+  columns: 4
+  stats:
+    - title: Levererade skrov
+      amount: '2,400+'
+    - title: Leveransl盲nder
+      amount: '40'
+    - title: Total erfarenhet (氓r)
+      amount: '60'
+    - title: Genomsnittlig svarstid (h)
+      amount: '24'
+
+features3_what_we_build:
+  title: Vad vi bygger
+  subtitle: En fokuserad produktlinje vi kan utan och innan 鈥?inga genv盲gar eller badge engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: tekniskt tyg-b氓tar
+      description: tekniskt tyg med aluminiumskrov fr氓n 3,3 m till 7,5 m. Designade f枚r patrullering, dykning, fiske och familjebruk.
+      icon: tabler:ship
+    - title: funktionellt\ tygar
+      description: PVC- och Hypalon-funktionellt\ tygar fr氓n 2,4 m till 4,2 m. L盲tta, h氓llbara och l盲tta att f枚rvara.
+      icon: tabler:speedboat
+    - title: Superyacht-tender
+      description: Kompakta tekniskt tyg med h枚ga specifikationer, anpassade till v盲rdytans design.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Tillbeh枚r
+      description: Selar, pumpar, skydd, vattent盲ta v盲skor, br盲nsletankar och elektronik. Allt kompatibelt med v氓ra b氓tar.
+      icon: tabler:package
+    - title: Modifieringar och reparationer
+      description: Reparation av luftkammare, elektronikuppgraderingar och motorbyten.
+      icon: tabler:tool
+    - title: Skr盲ddarsydda produkter
+      description: Design f枚r kommersiella, vetenskapliga och milit盲ra kunder.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Skr盲ddarsydd b氓t
+
+steps2_values:
+  title: V氓ra v盲rderingar
+  subtitle: Tre principer som format varje produkt fr氓n dag ett.
+  items:
+    - title: Bygg som om din familj var i b氓ten
+      description: Varje skrov, varje svets och varje komponent behandlas som om de skulle anv盲ndas av v氓ra egna familjer.
+      icon: tabler:heart
+    - title: Ingenj枚rskonst f枚re f枚rs盲ljning
+      description: Om specifikationen 盲r fel 盲ndrar vi specifikationen 鈥?aldrig kunden.
+      icon: tabler:settings
+    - title: Support efter garantin
+      description: Tjugo 氓r gamla skrov ringer fortfarande efter delar 鈥?och vi svarar fortfarande.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Milstolpar
+  subtitle: Den korta versionen av Seekingtexs historia.
+  isReversed: true
+  items:
+    - title: Grundad i en kustverkstad
+      description: Tv氓 mariningenj枚rer med en CNC-fr盲s och en orubblig id茅.
+      icon: tabler:building-factory
+    - title: F枚rsta 1 000 levererade skroven
+      description: Uppn氓tt under det sjunde 氓ret, fr盲mst genom mun-mot-mun-metoden och 氓terkommande kunder.
+      icon: tabler:circle-check
+    - title: Internationellt exportprogram
+      description: Leveranser till 40+ l盲nder med lokala servicepartners p氓 fem kontinenter.
+      icon: tabler:world
+
+features2_locations:
+  title: V氓ra platser
+  tagline: Var du hittar oss
+  columns: 3
+  items:
+    - title: Huvudkontor och verkstad
+      description: Kustn盲ra industripark, byggnad 4 鈥?枚ppet m氓n鈥揻re f枚r bes枚k efter 枚verenskommelse.
+    - title: EU-servicecenter
+      description: Medelhavshamn 鈥?modifieringar, reparationer och garantisupport f枚r europeiska kunder.
+    - title: APAC-partnern盲tverk
+      description: Auktoriserade servicepartners i Australien, Japan, Singapore och Hongkong.

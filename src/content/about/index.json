@@ -1,0 +1,23 @@
+{
+  "en": {
+    "hero": { "title": "About Seekingtex", "subtitle": "Engineering functional fabrics for real-world performance" }
+  },
+  "nl": {
+    "hero": { "title": "Over Seekingtex", "subtitle": "Technische functionele stoffen voor echte prestaties" }
+  },
+  "sv": {
+    "hero": { "title": "Om Seekingtex", "subtitle": "Tekniska funktionella tyger f\u00f6r verkliga prestanda" }
+  },
+  "no": {
+    "hero": { "title": "Om Seekingtex", "subtitle": "Tekniske funksjonelle stoffer for virkelig ytelse" }
+  },
+  "el": {
+    "hero": { "title": "\u03a3\u03c7\u03b5\u03c4\u03b9\u03ba\u03ac \u03bc\u03b5 \u03c4\u03b7\u03bd Seekingtex", "subtitle": "\u039c\u03b7\u03c7\u03b1\u03bd\u03b9\u03ba\u03ae \u03bb\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03b9\u03ba\u03ce\u03bd \u03c5\u03c6\u03b1\u03c3\u03bc\u03ac\u03c4\u03c9\u03bd \u03b3\u03b9\u03b1 \u03c0\u03c1\u03b1\u03b3\u03bc\u03b1\u03c4\u03b9\u03ba\u03ae \u03b1\u03c0\u03cc\u03b4\u03bf\u03c3\u03b7" }
+  },
+  "tr": {
+    "hero": { "title": "Seekingtex Hakk\u0131nda", "subtitle": "Ger\u00e7ek d\u00fcnya performans\u0131 i\u00e7in m\u00fchendislik \u00fcr\u00fcn\u00fc fonksiyonel kuma\u015flar" }
+  },
+  "fi": {
+    "hero": { "title": "Tietoa Seekingtexist\u00e4", "subtitle": "Tekniset toiminnalliset kankaat todelliseen suorituskykyyn" }
+  }
+}

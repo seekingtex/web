@@ -1,0 +1,141 @@
+---
+export const prerender = false;
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent } from '~/i18n/page-content';
+
+const lang = Astro.locals.lang;
+
+const page = getPageContent(lang, 'technology') || {};
+const hero = page.hero || {};
+const sections = page.sections || [];
+const related = page.related || {};
+
+const metadata = {
+  title: `Technology —${SITE.name}`,
+  description:
+    'Seekingtex fabric technology: UPF 50+ sun protection, waterproof/breathable membranes, moisture-wicking quick-dry, antibacterial treatments, stretch engineering, and eco-friendly manufacturing.',
+};
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="functional-fabric-technology,upf-protection,waterproof-breathable,textile-engineering" />
+
+  <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || 'Technology'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || 'Built for Performance'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        hero.subtitle ||
+          'Every Seekingtex fabric is engineered with precision materials and advanced textile technologies tested for real-world performance.'
+      }
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="space-y-12">
+      {
+        (sections.length > 0
+          ? sections
+          : [
+              {
+                title: 'UPF 50+ Sun Protection Technology',
+                description:
+                  'Our proprietary UPF 50+ technology uses titanium dioxide and zinc oxide particles embedded at the fiber level, combined with ultra-dense weave constructions that block 98%+ of UVA and UVB radiation. Tested to AS/NZS 4399 and AATCC 183 standards.',
+                image: '/images/seekingtex/tech/tech-upf-protection.webp',
+              },
+              {
+                title: 'Waterproof & Breathable Membranes',
+                description:
+                  'Advanced PU coating and TPU lamination technologies create fabrics that achieve 10,000-30,000mm hydrostatic head while maintaining 8,000-20,000 g/m²/24hr MVTR breathability. Microporous membrane structures allow vapor escape while blocking liquid water.',
+                image: '/images/seekingtex/tech/tech-waterproof-membrane.webp',
+              },
+              {
+                title: 'Moisture Wicking & Quick-Dry',
+                description:
+                  'Engineered cross-section fibers (4-channel, 6-channel, trilobal) and hydrophilic finishes create capillary action that pulls moisture away from skin and spreads it across the fabric surface for rapid evaporation. Achieves 30-60 minute drying times in standard conditions.',
+                image: '/images/seekingtex/tech/tech-moisture-wicking.webp',
+              },
+              {
+                title: 'Antibacterial & Antimicrobial Treatments',
+                description:
+                  'Silver ion (Ag+), zinc oxide (ZnO), and chitosan-based antimicrobial treatments provide durable protection against bacteria, mold, and odor-causing microbes. Treatments maintain efficacy through 50+ industrial launderings. OEKO-TEX and bluesign certified chemistries.',
+                image: '/images/seekingtex/tech/tech-antibacterial.webp',
+              },
+              {
+                title: 'Stretch & Recovery Engineering',
+                description:
+                  'Mechanical stretch (textured yarns) and elastane/spandex core-spun technology delivers 15-80% stretch with 90%+ recovery rates. 4-way stretch fabrics enable freedom of movement in all directions while maintaining shape retention after repeated wear and washing.',
+                image: '/images/seekingtex/tech/tech-stretch-recovery.webp',
+              },
+              {
+                title: 'Eco-Friendly Manufacturing',
+                description:
+                  'rPET recycled polyester from post-consumer bottles, GOTS-certified organic cotton, and closed-loop Tencel lyocell production. Waterless dyeing technology reduces water usage by 95%. All processes comply with REACH, OEKO-TEX, and bluesign standards.',
+                image: '/images/seekingtex/tech/tech-eco-friendly.webp',
+              },
+            ]
+        ).map((sec: any, i: number) => {
+          const isReversed = i % 2 === 1;
+          return (
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+              {isReversed ? (
+                <>
+                  <div class="order-2 md:order-1 rounded-2xl h-48 overflow-hidden">
+                    <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div class="order-1 md:order-2">
+                    <h2 class="text-2xl font-semibold text-gray-900">{sec.title}</h2>
+                    <p class="mt-3 text-gray-600">{sec.description}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h2 class="text-2xl font-semibold text-gray-900">{sec.title}</h2>
+                    <p class="mt-3 text-gray-600">{sec.description}</p>
+                  </div>
+                  <div class="rounded-2xl h-48 overflow-hidden">
+                    <img src={sec.image} alt={sec.title} class="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                </>
+              )}
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <section class="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+      <h2 class="font-semibold text-gray-900">{related.title || 'Related'}</h2>
+      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+        {
+          (related.links && related.links.length > 0
+            ? related.links
+            : [
+                { text: 'R&D Center', url: '/randdcenter' },
+                { text: 'Quality & Testing', url: '/quality' },
+                { text: 'Guides', url: '/guides' },
+                { text: 'Products', url: '/products' },
+              ]
+          ).map((link: any) => (
+            <a
+              href={link.url}
+              class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="embedding-anchor" aria-hidden="true">
+    <p>
+      Seekingtex technology focuses on functional fabric engineering, UPF UV protection, waterproof breathable
+      membrane technology, moisture management, antimicrobial treatment, and sustainable textile manufacturing
+      for sportswear, outdoor apparel, and tactical applications.
+    </p>
+  </section>
+</Layout>

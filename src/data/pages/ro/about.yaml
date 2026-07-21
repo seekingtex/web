@@ -1,0 +1,41 @@
+hero:
+  tagline: Despre noi
+  title: Despre Seekingtex
+  subtitle: 'Producător de bărci gonflabile, SUP și echipamente sportive acvatice din 2012. Certificat CE și ISO.'
+  cta: Citește povestea noastră
+  image: /images/seekingtex/hero/about-banner.webp
+  imageAlt: Fabrica Seekingtex
+stats:
+  - value: '2012'
+    label: Fondată
+  - value: '12.000'
+    label: m² suprafață de producție
+  - value: '50+'
+    label: Țări de export
+  - value: 'ISO 9001'
+    label: Certificare
+brand:
+  tagline: Brandul nostru
+  title: Mai mult decât un producător
+  body: |
+    Seekingtex este mai mult decât o simplă fabrică —suntem parteneri pentru branduri, operatori și profesioniști care cer ce este mai bun în echipamentele sportive acvatice.
+story:
+  tagline: Povestea noastră
+  title: De la începuturi modeste la acoperire globală
+  milestones:
+    - year: '2012'
+      title: Fondare
+      description: Seekingtex a fost fondată în Qingdao cu viziunea de a produce produse gonflabile de înaltă calitate pentru sporturi acvatice.
+      image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+    - year: '2015'
+      title: Extindere
+      description: Ne-am extins facilitățile la 12.000 m² și am adăugat linii de producție avansate.
+      image: /images/seekingtex/factory/producing department.jpeg
+    - year: '2018'
+      title: Certificare
+      description: Am obținut certificarea  și marcajul CE pentru toate liniile de produs.
+      image: /images/seekingtex/factory/PVC material.jpeg
+    - year: '2024'
+      title: Centru de inovare
+      description: Am înființat un centru dedicat de cercetare și dezvoltare cu facilități avansate de testare.
+      image: /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp

@@ -1,0 +1,30 @@
+hero:
+  tagline: 图库
+  title: 图库
+  subtitle: 产品照片、工厂车间和纺织冒险
+
+albums:
+  - title: RIB艇
+    desc: 铝合金面料壳RIB艇，从.3米到7.5米，适用于巡逻、高性能、钓鱼和家庭使用。
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: SUP板
+    desc: 拉丝布功能性SUP板，适用于旅行、冲浪、瑜伽和钓鱼。
+    images:
+      - /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: 工厂与车间
+    desc: 我们位于中国青岛的2,000平方米制造工厂。
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: 想看更多？
+  desc: 在社交媒体上关注我们，获取最新产品发布、工厂动态和客户冒险故事。
+  instagram: Instagram
+  youtube: YouTube

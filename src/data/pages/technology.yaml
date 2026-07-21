@@ -1,0 +1,36 @@
+hero:
+  tagline: Technology
+  title: Built for Performance
+  subtitle: Every Seekingtex fabric is engineered with precision fibers and advanced finishing technologies tested for demanding applications.
+
+sections:
+  - title: UPF 50+ Sun Protection
+    description: Advanced UV-blocking technology integrated into the fiber or applied as a finish, providing UPF 50+ protection that blocks 98% of harmful UV radiation. Independently tested to UV Standard 801 for reliable sun protection performance.
+    imageAlt: UPF Technology
+  - title: Waterproof & Breathable
+    description: Multi-layer membrane and coating systems that prevent water penetration while allowing moisture vapor to escape. Our waterproof fabrics maintain breathability for comfort in active use, with hydrostatic head ratings from 3,000 mm to 10,000 mm+.
+    imageAlt: Waterproof Technology
+  - title: Quick-Dry / Moisture Wicking
+    description: Engineered fiber structures and hydrophilic finishes that rapidly transport moisture away from the skin to the fabric surface, where it evaporates quickly. Keeps the wearer dry and comfortable during high-intensity activities.
+    imageAlt: Quick Dry Technology
+  - title: Antibacterial & Antimicrobial
+    description: Silver-ion and zinc-based antimicrobial treatments integrated into the fabric that inhibit bacterial growth, prevent odor, and maintain hygiene. Effective against a broad spectrum of bacteria with durable wash resistance.
+    imageAlt: Antibacterial Technology
+
+related:
+  title: Related
+  links:
+    - text: R&D Center
+      url: /randdcenter
+    - text: Quality Testing
+      url: /quality
+    - text: Certifications
+      url: /certifications
+    - text: Custom Fabric Development
+      url: /custom
+    - text: Factory & Manufacturing
+      url: /factory
+    - text: Product Guide
+      url: /guides
+    - text: All Products
+      url: /products

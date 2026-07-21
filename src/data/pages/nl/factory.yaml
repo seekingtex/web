@@ -1,0 +1,111 @@
+hero:
+  tagline: Fabriek
+  title: Fabriek & Productie
+  subtitle: 12.000 m2 ge茂ntegreerde productie 鈥?van grondstof tot afgewerkte boot
+
+intro:
+  - Als fabrieksmerk van **Qingdao Vatrad Group Co., Ltd.** controleert Seekingtex elke fase van de productie 鈥?van de aankomst van ruw PVC en glasvezel tot de laatste keuring voor vertrek van de afgewerkte boot. Onze productiefaciliteit in de Qingdao Economic Development Zone beslaat 12.000 vierkante meter en huisvest speciale werkplaatsen voor PVC-snijden, buis heatsealing, glasvezel technische stof-rompproductie, SUP-digitaal printen, eindmontage en kwaliteitstesten.
+  - Door ontwerp, engineering, prototyping, productie en testen onder 茅茅n dak te integreren, elimineren we de ineffici毛nties van contractproductie en behouden we directe controle over bouwkwaliteit, materiaalkeuze en levertijden. Elke boot die onze werkplaats verlaat, wordt gebouwd door onze mensen, op onze apparatuur, volgens onze normen.
+
+stats:
+  - value: 12.000 m2
+    label: Productievloer
+  - value: 200+
+    label: Geschoolde werknemers
+  - value: 15.000+
+    label: Jaarlijks geproduceerde weefsel
+  - value: 
+    label: Kwaliteit gecertificeerd
+
+workshops_section:
+  tagline: Werkplaatsen
+  title: Productiewerkplaatsen
+  workshops:
+    - title: PVC Snijden & Materiaalvoorbereiding
+      description: Automatische CNC-snijmachines verwerken PVC, Hypalon en technical stoffen met submillimeterprecisie. Computergeoptimaliseerd nesten minimaliseert materiaalverspilling en zorgt dat elk paneel voldoet aan zijn maatspecificatie v贸贸r het lassen.
+      image: /images/seekingtex/hero/production-dept.webp
+    - title: Buislassen & Heatsealen
+      description: Speciale laswerkplaats met heatseal-machines  en RF-dielektrische persen. Hetelucht heatsealers verbinden en versmelten PVC-buiskamers, terwijl RF-lassen hogesterkte-luchtdichte naden produceren die de  vereisten overtreffen.
+      image: /images/seekingtex/hero/production-workshop.webp
+    - title: technische stof-rompproductie 鈥?Glasvezel
+      description: technische stof-bootrompen worden geproduceerd met handlamineren van glasvezel met polyester en vinylester harssystemen. Elke laag wordt met de hand gerold en vacu眉mgezakt voor consistente kwaliteit. Een gelcoat-spuitcabine zorgt voor een hoogglanzende, UV-bestendige maritieme afwerking.
+      image: /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+    - title: SUP-printen & Decoratie
+      description: SUP-planken worden gedecoreerd met digitaal printen  voor fullcolour graphics en zeefdruk  voor logo's en herhalende patronen. Digitale printers produceren fotokwaliteit dekontwerpen, terwijl zeefdruk duurzame, levendige merktekens levert.
+      image: /images/seekingtex/products/sup-series/sup-medusa-glow-1.webp
+    - title: Eindmontage & Tuigage
+      description: Montagelijn waar glasvezelrompen en PVC-buizen worden samengevoegd, motoren worden gemonteerd, stuurinrichting en bediening worden aangesloten en elektrische systemen worden bedraad. Elke boot volgt een 100-punts montagechecklist die wordt afgetekend door de teamleider.
+      image: /images/seekingtex/hero/factory-gate.webp
+    - title: Kwaliteitstesten & Keuring
+      description: Elke voltooide boot ondergaat verplichte luchtretentietesten, naadpeelverificatie en een volledige systeemcontrole v贸贸r verzending. Ons kwaliteitslaboratorium werkt onafhankelijk van de productie en rapporteert rechtstreeks aan het management.
+      image: /images/seekingtex/factory/Pressure Testing.jpeg
+
+equipment_section:
+  tagline: Apparatuur
+  title: Belangrijkste Productieapparatuur
+  view_full: Bekijk volledige apparatuurlijst 鈫?
+  view_full_link: /factory/equipment
+  items:
+    - name: Automatische PVC-snijmachine
+      spec: CNC-gestuurd, 0,1 mm nauwkeurigheid
+    - name: Heatseal-machine 
+      spec: Hetelucht, 200掳C鈥?00 掳C, voor buisverbinding
+    - name: RF-dielektrische laspers
+      spec: 15 kW, luchtdicht naadlassen
+    - name: Glasvezel handlamineer mallen
+      spec: technische stof-rompen tot 6 m
+    - name: Digitale printer 
+      spec: Fullcolour SUP-dekgraphics
+    - name: Zeefdrukmachine 
+      spec: Meerkleurig logoprinten
+
+qc_section:
+  tagline: Kwaliteitscontrole
+  title: Test- & Kwaliteitsborgingsproces
+  subtitle: Elke boot ondergaat verplichte testen v贸贸r verzending. Ons kwaliteitslaboratorium werkt onafhankelijk van de productie en rapporteert rechtstreeks aan het management.
+  steps:
+    - step: '1'
+      title: Grondstoffenkeuring
+      desc: PVC, Hypalon en technical stoffen ondergaan trekproeven (), scheurpropagatie en UV-bestendigheidsverificatie voordat een partij in productie gaat.
+    - step: '2'
+      title: 48-uurs Luchtretentietest
+      desc: Elke buiskamer wordt opgeblazen tot 125% van de nominale druk en 48 uur vastgehouden. Drukdaling onder 5% leidt automatisch tot afkeuring en naadherkeuring.
+    - step: '3'
+      title: Laad- & Balanstest
+      desc: Voltooide weefsel worden beladen tot maximale nominale capaciteit en getest op stabiliteit, vrijboord en handling. Elk vaartuig wordt watergetest v贸贸r de eindkeuring.
+
+oem_section:
+  tagline: OEM-projecten
+  title: Merk- & OEM-partnerschap Casestudies
+  subtitle: Van concept tot container 鈥?hoe we wereldwijde merken helpen hun lijnen van functionele vaartuigen te lanceren en schalen.
+  cases:
+    - challenge: Een Europese outdoor retailer had een private-label SUP-lijn nodig met unieke dek graphics, milieuvriendelijk PVC en retail-ready verpakking 鈥?alles geleverd in 60 dagen.
+      solution: Ontwikkelde aangepaste digitale printbestanden, betrok REACH-conform PVC en verkortte sampling van 3 rondes naar 1 door het designteam op onze Qingdao-fabriek te plaatsen.
+      result: 55 dagen van getekende PO tot FOB. 2.400 eenheden verspreid over 4 SKU's. Herhalingsorder geplaatst v贸贸r aankomst van de eerste container.
+    - challenge: Een Amerikaanse watersportstartup had een hoogwaardige technical technische stoffen nodig met een aangepaste rompvorm, co-branded verpakking en BSCI-certificering voor retailplaatsing.
+      solution: Paste de bestaande technical textile productmal aan met een gewijzigd rockerprofiel, ontwikkelde co-branded verpakkings artwork en leverde volledige BSCI-auditdocumentatie.
+      result: Succesvol vermeld in 3 grote Amerikaanse outdoor-ketens. 5.000+ eenheden in het eerste jaar met 98% sell-through.
+    - challenge: Een Australische distributeur had een CE-gecertificeerd technische stof-assortiment nodig met aangepaste buiskleuren, Hypalon-upgradeoptie en naleving van de Australische norm AS 1799.
+      solution: Produceerde preproductiemonsters met 4 buiskleurvarianten, betrok CSM Hypalon van een Japanse leverancier en co枚rdineerde externe AS 1799-nalevingstesten.
+      result: 3-model technische stof-assortiment gelanceerd in de AU/NZ-markt. Gevolgd door een overheidsaanbesteding voor 12 patrouille-technische stof's.
+
+faq_section:
+  tagline: FAQ
+  title: B2B & OEM Veelgestelde Vragen
+  questions:
+    - q: Wat is de minimale bestelhoeveelheid (MOQ) voor OEM functionele stoffen-planken?
+      a: MOQ begint bij 5鈥?0 eenheden voor standaard OEM-modellen. Aangepaste mallen en private-label projecten vereisen minimaal 200 eenheden, afhankelijk van de complexiteit. Proefbestellingen en voorbeeldruns zijn beschikbaar voor nieuwe merkintroducties.
+    - q: Heeft Seekingtex een BSCI-certificering?
+      a: Ja. Onze fabriek beschikt over een geldige BSCI sociale nalevingscertificering (auditrapport op verzoek beschikbaar). We hebben ook  voor kwaliteitsmanagement en alle producten hebben CE -certificering. REACH- en RoHS-nalevingsdocumentatie wordt bij elke OEM-zending geleverd.
+    - q: Wat is de typische levertijd voor een OEM-bestelling?
+      a: De standaard levertijd is 30鈥?5 dagen vanaf bevestigde PO en aanbetaling. Aangepaste malontwikkeling voegt 15鈥?0 dagen toe voor gereedschap. We bieden versnelde productie voor dringende bestellingen en seizoenspieken tijdens het voorjaarsvenster (jan鈥搈rt).
+    - q: Kunt u FOB Qingdao of CIF naar onze haven verzenden?
+      a: Ja. We verzenden FOB Qingdao, CIF naar grote wereldhavens en DDP voor gekwalificeerde partners. Ons logistieke team beheert containerboekingen, exportdocumentatie en douaneafhandeling. We verzenden naar 50+ landen in de EU, VS, AU en Azi毛.
+
+b2b_moq: 'Standaard MOQ: 5鈥?0 eenheden per model (SUP/technische stoffen/technical). technische stof MOQ: 2鈥? eenheden. Proefbestellingen welkom voor nieuwe samenwerkingen.'
+
+process_cta:
+  title: Bekijk ons productieproces
+  desc: Volg een boot door elke productiefase 鈥?van grondstof tot zeeklaar vaartuig.
+  label: Bekijk productieproces 鈫?
+  link: /factory/process

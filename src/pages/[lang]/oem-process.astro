@@ -1,0 +1,136 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('oemProcess.title') || 'OEM/ODM Manufacturing Process — From Inquiry to Production'} | ${SITE.name}`,
+  description: t('oemProcess.desc') || `Complete OEM/ODM manufacturing process with ${SITE.name}. Step-by-step: inquiry, specification, design, sample production, ISO compliance, bulk production, and FOB shipping. 12,000 m² ISO 9001 factory.`,
+  ignoreTitleTemplate: true,
+};
+
+const steps = [
+  {
+    number: '01',
+    title: 'Inquiry & Requirement Analysis',
+    desc: 'Submit your product requirements, target specs, or reference product. Our OEM team reviews MOQ feasibility, material options, compliance needs (ISO, BSCI), and provides a preliminary quotation within 24 hours.',
+    icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',
+  },
+  {
+    number: '02',
+    title: 'Engineering Review & NDA',
+    desc: 'Our engineering team reviews your specifications — materials, composition, weight, GSM, weave type, coating requirements. We sign NDA and begin detailed technical proposal.',
+    icon: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+  },
+  {
+    number: '03',
+    title: 'Sample Development & Prototyping',
+    desc: 'In-house textile engineers develop custom fabric samples based on your specifications. We produce small batch prototypes for color, texture, feel, and performance approval before mass production.',
+    icon: 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2-1v2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5',
+  },
+  {
+    number: '04',
+    title: 'Production Sample & Approval',
+    desc: 'Pre-production samples produced within 15-20 working days. Weaving, coating, finishing per your specifications. Samples shipped for your dimensional, material, and functional approval.',
+    icon: 'M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z',
+  },
+  {
+    number: '05',
+    title: 'Compliance Documentation',
+    desc: 'Complete compliance package: ISO 9001 traceability records, BSCI social compliance report, REACH/OEKO-TEX material declarations, and applicable documentation for your target market.',
+    icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  {
+    number: '06',
+    title: 'Bulk Production & QC',
+    desc: 'Production runs follow 100-point quality checklist: GSM uniformity testing, tensile strength verification (ASTM D5034), color fastness testing, UV resistance verification, visual and dimensional inspection. Inline QC at every station.',
+    icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4',
+  },
+  {
+    number: '07',
+    title: 'Packaging & Branding',
+    desc: 'Custom packaging service: retail rolls with your branding, labels with logo, care instructions in your language, barcode/UPC registration, hang tags, and warranty cards. Branded labels and custom packaging available.',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+  },
+  {
+    number: '08',
+    title: 'FOB Qingdao Logistics',
+    desc: 'Finished goods palletized, shrink-wrapped, and container-loaded at Qingdao port. Complete export documentation: commercial invoice, packing list, bill of lading, certificate of origin, and compliance certificates. Real-time tracking provided.',
+    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: t('oemProcess.heading') || 'OEM/ODM Manufacturing Process — From Inquiry to Production',
+      description: t('oemProcess.desc') || 'Complete step-by-step OEM/ODM manufacturing process for functional fabrics, performance textiles, and technical materials. From inquiry to FOB shipping.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: `https://seekingtex.com/${lang}/oem-process` }}
+  />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', href: `/${lang}/` }, { name: 'OEM/ODM', href: `/${lang}/oem-odm-manufacturer` }, { name: t('oemProcess.heading') || 'Manufacturing Process' }]} />
+
+  <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{t('oemProcess.badge') || 'OEM/ODM Process'}</span>
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{t('oemProcess.heading') || 'From Inquiry to Production'}</h1>
+      <p class="mt-4 text-lg text-white/70">{t('oemProcess.subtitle') || 'End-to-end manufacturing process for functional fabrics. ISO 9001 certified, FOB Qingdao.'}</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href={`/${lang}/oem-odm-manufacturer`} class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition">&larr; OEM/ODM Overview</a>
+        <a href={`/${lang}/contact`} class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition">{t('oemProcess.cta') || 'Start Your Project'}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-semibold text-gray-900">The 8-Step OEM Process</h2>
+      <p class="mt-4 text-lg text-gray-500">From initial inquiry to finished products at your warehouse — here is exactly how we work.</p>
+    </div>
+    <div class="space-y-8">
+      {steps.map((s) => (
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center">
+            <span class="text-2xl font-bold text-sky-600">{s.number}</span>
+          </div>
+          <div class="flex-1 bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-2">
+              <svg class="w-5 h-5 text-sky-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d={s.icon} /></svg>
+              <h3 class="text-lg font-semibold text-gray-900">{s.title}</h3>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold text-gray-900">{t('oemProcess.ctaTitle') || 'Ready to Start Your OEM Project?'}</h2>
+      <p class="mt-4 text-lg text-gray-500">{t('oemProcess.ctaSub') || 'Submit your requirements. We will reply with a detailed quotation and lead time within 24 hours.'}</p>
+      <div class="mt-10 flex justify-center gap-4">
+        <a href={`/${lang}/contact`} class="px-10 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">{t('oemProcess.cta') || 'Contact OEM Team'}</a>
+        <a href={`/${lang}/oem-odm-manufacturer`} class="px-10 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View Capabilities</a>
+      </div>
+      <p class="mt-8 text-sm text-gray-400">{t('oemProcess.moq') || 'MOQ 500 meters for standard fabrics. Custom development: 2000+ meters. FOB Qingdao.'}</p>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Seekingtex OEM/ODM manufacturing process in 8 steps: 1) Inquiry and requirement analysis with 24-hour quotation, 2) Engineering review under NDA, 3) Sample development and prototyping, 4) Production sample within 15-20 working days, 5) ISO/BSCI/REACH/OEKO-TEX compliance documentation, 6) Bulk production with 100-point QC checklist including GSM uniformity and tensile strength verification, 7) Custom packaging and branding, 8) FOB Qingdao logistics with full export documentation. 12,000 m² ISO 9001 factory. MOQ 500 meters (standard), 2000+ meters (custom development).</p>
+  </section>
+</Layout>

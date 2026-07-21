@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+export const prerender = true;
+
+import { languages, defaultLang, ui } from '~/i18n/config';
+import { SITE } from 'astrowind:config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Fabric Performance Test Lab' },
+];
+
+const metadata = {
+  title: `Fabric Performance Test Lab — Material Characterisation & Optimisation | ${SITE.name}`,
+  description: `Validate your fabric performance with our test lab. Tensile testing, abrasion analysis, permeability measurement, and comfort evaluation. Book a test session today.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Fabric Performance Test Lab</h1>
+        <p class="mt-3 text-lg text-muted">Validating performance before the first production batch</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/labs/performance-test-lab.webp"
+          alt="Seekingtex fabric performance testing"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>Why test your fabric?</h2>
+    <p>
+      It is a common misconception that performance testing is reserved for technical or industrial textiles. In reality, every fabric benefits from rigorous performance characterisation. Tensile strength, abrasion resistance, breathability, moisture management, and dimensional stability all affect how a fabric will perform in its intended application. At Seekingtex, we operate a dedicated Fabric Performance Test Lab that allows us to quantify these properties — before committing yarn and resources to a full production batch.
+    </p>
+
+    <h2>Facility specifications</h2>
+    <table>
+      <thead><tr><th>Test Station</th><th>Capability</th></tr></thead>
+      <tbody>
+        <tr><td>Tensile testing</td><td>Breaking force, elongation, seam strength per ISO / ASTM standards</td></tr>
+        <tr><td>Abrasion & pilling</td><td>Martindale abrasion cycles to failure, pilling assessment</td></tr>
+        <tr><td>Air permeability</td><td>Airflow resistance measurement per ISO 9237</td></tr>
+        <tr><td>Moisture management</td><td>Wicking rate, drying time, absorbency testing</td></tr>
+        <tr><td>Color measurement</td><td>Spectrophotometric analysis, Delta-E, shade matching</td></tr>
+        <tr><td>Dimensional stability</td><td>Shrinkage after laundering and steaming</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Our test programme</h2>
+    <p>A standard fabric characterisation programme follows this sequence:</p>
+    <ol>
+      <li><strong>Sample preparation</strong> — Fabric samples are conditioned at standard temperature and humidity for 24 hours before testing.</li>
+      <li><strong>Tensile testing</strong> — Five specimens in warp and weft directions. Results compared to specification target values.</li>
+      <li><strong>Abrasion testing</strong> — Martindale abrasion cycles to first yarn break, assessed at 5,000 cycle intervals.</li>
+      <li><strong>Permeability measurement</strong> — Air permeability tested at multiple pressure differentials.</li>
+      <li><strong>Color analysis</strong> — Spectral measurement, Delta-E calculation against standard, shade assessment.</li>
+      <li><strong>Data analysis & recommendations</strong> — Full report with comparative charts and design recommendations.</li>
+    </ol>
+
+    <h2>Expert team</h2>
+    <p>
+      Our lab is operated by textile engineers with extensive experience in fabric testing and characterisation. The team follows ISO and ASTM standard procedures to ensure every test is repeatable, traceable, and internationally defensible.
+    </p>
+
+    <h2>Testing for custom fabric development</h2>
+    <p>
+      Our lab is not only used for house-developed fabrics — we regularly run test programmes for clients who want to validate a custom fabric specification or investigate a performance issue:
+    </p>
+    <ul>
+      <li><strong>Fabric comparison</strong> — Two or more candidate fabrics tested under identical conditions for objective performance comparison.</li>
+      <li><strong>Finish optimisation</strong> — Different finish formulations tested to quantify their individual contribution to fabric performance.</li>
+      <li><strong>Specification verification</strong> — Independent verification that fabric meets published or contracted performance specifications.</li>
+    </ul>
+
+    <h2>Why test with us?</h2>
+    <p>
+      We do not just give you raw numbers. Our reports translate test data into actionable recommendations. You leave with a clear understanding of your fabric's capabilities and how to optimise it for your application.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Book a fabric test session</h2>
+      <p class="mt-2 text-sm text-muted">Whether you need a full characterisation programme or a single comparative test, we can accommodate your schedule.</p>
+      <a
+        href={`/${lang}/contact`} 
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our testing team</a
+      >
+    </div>
+  </section>
+</Layout>

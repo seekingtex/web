@@ -1,0 +1,50 @@
+hero:
+  tagline: Kwaliteitsborging
+  title: Prestatie- en kwaliteitstesten
+  subtitle: Elke functionele boot en SUP van Seekingtex ondergaat strenge prestatie- en kwaliteitstesten in ons R&D-centrum vóór verzending. Onze uitgebreide tests leveren tastbaar bewijs van productexcellentie.
+
+stats:
+  - value: 100%
+    label: Drukgeteste eenheden
+  - value: '8'
+    label: Testprotocollen
+  - value: 
+    label: Kwaliteitscertificaat
+  - value: 3-Year
+    label: Beperkte garantie
+
+tests:
+  - title: Druk test
+    description: Luchtkamers worden gedurende langere tijd blootgesteld aan druk boven de aanbevolen werklimieten. Dit verifieert de luchtdichtheid en structurele integriteit van materiaal en naden, en zorgt dat het product bestand is tegen normaal gebruik en mogelijk overmatig oppompen zonder falen of lekken.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Schoktest
+    description: Producten worden blootgesteld aan gecontroleerde schokken met verschillende gewichten en hoeken. Beoordeling van de weerstand van het materiaal tegen lekke banden, scheuren en schade door botsingen met obstakels in het water, wat duurzaamheid en levensduur aantoont.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: UV-bestendigheidstest
+    description: Afgewerkte producten worden gedurende langere tijd blootgesteld aan gesimuleerd zonlicht om de weerstand van het materiaal tegen degradatie, verkleuring en verzwakking door langdurige UV-blootstelling te beoordelen —cruciaal voor weefsel die worden gebruikt in tropische en zonnige omgevingen.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Slijtvastheidstest
+    description: Materiaalmonsters worden gedurende een bepaald aantal cycli onder gecontroleerde druk over schurende oppervlakken gewreven. Dit meet het vermogen van het materiaal om slijtage door herhaald gebruik, contact met zand, rotsen of andere oppervlakken te weerstaan, wat langdurige duurzaamheid garandeert.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Prestatietest bij lage temperaturen
+    description: Producten worden getest in koude omgevingen om functionaliteit en duurzaamheid bij verschillende temperatuuromstandigheden te beoordelen, waardoor stijfheid of barsten in kouder water wordt voorkomen. Essentieel voor weefsel die bedoeld zijn voor wintergebruik of op hoge breedtegraden.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Drijfvermogen- en draagkrachttest
+    description: Producten worden getest met verschillende belastingen om het maximale draagvermogen te bepalen en veilige ondersteuning voor gebruikers en uitrusting te garanderen. Elk model heeft een geverifieerd draagvermogen voordat het in de verkoop gaat.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Manoeuvreerbaarheidstest
+    description: Producten worden getest op respons op textielgebruik of motorsturing, waarbij de draaicirkel en het gebruiksgemak worden beoordeeld. Vaarproeven bevestigen dat de werkelijke handling overeenkomt met de ontwerpspecificaties.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Waterdichtheidstest
+    description: Volledig gemonteerde producten worden ondergedompeld of blootgesteld aan water om te controleren op lekken via naden, kleppen of materialen. Elke boot ondergaat een verplichte waterdichtheidscontrole vóór verzending.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Testprocedures
+  title: Strenge tests in elke fase
+
+commitment:
+  title: Onze toewijding
+  body: Met deze strenge testprocedures geeft {SITE} klanten de zekerheid dat onze functionele stoffen's en weefsel niet alleen presteren, maar ook gebouwd zijn om jaren mee te gaan —met talloze plezierige en veilige avonturen op het water. Ons kwaliteitslaboratorium werkt onafhankelijk van productie en rapporteert rechtstreeks aan het management.
+  cta: Vraag testdocumentatie aan
+  cta_link: /contact

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: 銇婂晱銇勫悎銈忋仜
+  title: 銇婂晱銇勫悎銈忋仜
+contact_form:
+  id: form
+  title: 銉°儍銈汇兗銈搞倰閫佷俊
+  subtitle: 瑕嬬銈傘倞銆佹妧琛撶殑銇唱鍟忋€併儜銉笺儓銉娿兗銈枫儍銉椼伄銇婂晱銇勫悎銈忋仜銇亾銇°倝銇嬨倝銆?鍠舵キ鏃ヤ互鍐呫伀杩斾俊銇椼伨銇欍€?
+  email_to: gzb@seekingtex.com
+  submit_button: 閫佷俊
+  success_message: 銇傘倞銇屻仺銇嗐仈銇栥亜銇俱仚锛併儭銉冦偦銉笺偢銈掑彈淇°仐銇俱仐銇熴€?鍠舵キ鏃ヤ互鍐呫伀杩斾俊銇椼伨銇欍€?
+  error_message: 閫佷俊涓伀銈ㄣ儵銉笺亴鐧虹敓銇椼伨銇椼仧銆傘倐銇嗕竴搴︺亰瑭︺仐銇勩仧銇犮亸銇嬨€佺洿鎺ャ儭銉笺儷銈掋亰閫併倞銇忋仩銇曘亜銆?
+  default_country_code: '+1'
+  captcha:
+    label: '銈兂銉併偣銉戙儬锛氭銇晱椤屻倰瑙ｃ亜銇︺亸銇犮仌銇?
+  fields:
+    - name: firstName
+      label: 鍚?
+      row: 1
+    - name: lastName
+      label: 濮?
+      row: 1
+    - name: companyName
+      label: 浼氱ぞ鍚?
+      row: 2
+    - name: address
+      label: 浣忔墍
+      row: 3
+    - name: zip
+      label: 閮典究鐣彿
+      row: 4
+    - name: country
+      label: 鍥?
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: 銉°兗銉偄銉夈儸銈?
+      row: 5
+      type: email
+    - name: tel
+      label: 闆昏┍鐣彿
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: 瑕嬬銈傘倞娉ㄦ枃閲?
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: 瑕嬬銈傘倞鏁伴噺銈掗伕鎶?..
+        - value: sample
+          label: 銈点兂銉椼儷/銉椼儹銉堛偪銈ゃ儣銇伩
+        - value: '5-10'
+          label: 50鈥?00銉︺儖銉冦儓 (妯欐簴MOQ)
+        - value: '100-500'
+          label: 100鈥?00銉︺儖銉冦儓
+        - value: '500-plus'
+          label: 500+銉︺儖銉冦儓 (鏁伴噺鍓插紩)
+    - name: customization
+      label: 銈偣銈裤優銈ゃ偤銇繀瑕併仹銇欍亱锛?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: 銈偣銈裤優銈ゃ偤銈裤偆銉椼倰閬告姙...
+        - value: none
+          label: 妯欐簴瑁藉搧锛堛偒銈广偪銉炪偆銈恒仾銇楋級
+        - value: logo
+          label: 銈偣銈裤儬銉偞/銉栥儵銉炽儔銇伩
+        - value: full
+          label: 銉曘儷OEM锛堛偟銈ゃ偤銆佽壊銆併偘銉┿儠銈ｃ儍銈€併儜銉冦偙銉笺偢锛?
+        - value: consultation
+          label: 涓嶆槑 鈥?鐩歌珖銇屽繀瑕?
+    - name: productInterest
+      label: 闁㈠績銇亗銈嬭＝鍝併偒銉嗐偞銉?
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: 浠跺悕
+      row: 9
+    - name: message
+      label: 銉°儍銈汇兗銈?
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: 銇濄伄浠栥伄閫ｇ怠鏂规硶
+  columns: 3
+  items:
+    - title: 鍠舵キ銇枹銇欍倠銇婂晱銇勫悎銈忋仜
+      description: 瑕嬬銈傘倞銆佽ō瀹氥€併儑銈ｃ兗銉┿兗鐢宠炯銆佸ぇ鍙ｆ敞鏂囥€?
+      icon: tabler:shopping-bag
+    - title: 銉嗐偗銉嬨偒銉偟銉濄兗銉?
+      description: 淇濊銆佷慨鐞嗐€侀儴鍝併€侀亱鐢ㄣ伀闁仚銈嬭唱鍟忋€?
+      icon: tabler:tool
+    - title: 銉椼儸銈癸紗銉戙兗銉堛儕銉笺偡銉冦儣
+      description: 銉°儑銈ｃ偄銈儍銉堛€併偣銉濄兂銈点兗銈枫儍銉椼€佹キ鐣屻偝銉┿儨銉兗銈枫儳銉炽€?
+      icon: tabler:news
+    - title: 闆昏┍
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: 銉°兗銉?
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: 鏈ぞ
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: 鎵€鍦ㄥ湴
+  subtitle: 鏈ぞ銇搞亰瓒娿仐銇忋仩銇曘亜
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

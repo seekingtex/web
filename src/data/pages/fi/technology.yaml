@@ -1,0 +1,44 @@
+hero:
+  tagline: Teknologia
+  title: Rakennettu suorituskyvylle
+  subtitle: Jokainen Seekingtex-lauta on suunniteltu tarkoilla materiaaleilla ja valmistusmenetelmill盲, jotka on testattu meriymp盲rist枚iss盲.
+
+sections:
+  - title: Tikattu ydin
+    description: Tuhannet sis盲iset polyesterilangat yhdist盲v盲t yl盲- ja alakerrokset luoden j盲yk盲n rakenteen 12-15 PSI:n paineessa. T盲m盲 on sama tekniikka, jota k盲ytet盲盲n ammattimaisissa melontalaudoissa ja kumikilpaveneiss盲.
+    imageAlt: DS-ydin kaavio
+  - title: Sotilasluokan PVC
+    description: Monikerroksinen laminoitu PVC-kangas, joka on luokiteltu meriymp盲rist枚ihin. Jokainen kerros on fuusiohitsattu eik盲 liimattu, eliminoiden delaminaatioriskit. Testattu UV-kest盲vyydelle, suolavesikorroosiolle ja hankaukselle.
+    imageAlt: PVC-kerros
+  - title: Hypalon-putket
+    description: tekninen kangas-malleissa k盲ytetty Hypalon (CSM) -kumi tarjoaa ylivoimaisen UV- ja kemikaalikest盲vyyden verrattuna tavalliseen PVC:hen. Hypalon-putket s盲ilytt盲v盲t joustavuutensa 盲盲rimm盲isiss盲 l盲mp枚tiloissa ja kest盲v盲t polttoaineen ja 枚ljyn aiheuttamaa heikkenemist盲.
+    imageAlt: Hypalon
+  - title: Ilmakanvilattia
+    description: Korkeapaineinen t盲ytett盲v盲 lattiasysteemi, joka korvaa perinteiset vaneri- tai alumiinis盲lelattiat. V盲hent盲盲 kokoamisaikaa, kokonaispainoa ja s盲ilytystilaa tarjoten samalla riitt盲v盲n j盲ykkyyden seisomiseen, kalastukseen ja k盲velyyn.
+    imageAlt: Ilmakansi
+
+related:
+  title: Aiheeseen liittyv盲盲
+  links:
+    - text: T&K-keskus
+      url: /randdcenter
+    - text: Laatutestaus
+      url: /quality
+    - text: Turvallisuusstandardit
+      url: /safety
+    - text: Takuu
+      url: /warranty
+    - text: Kaupalliset ty枚veneet
+      url: /use-cases/commercial-workboats
+    - text: Etsint盲 ja pelastus
+      url: /use-cases/search-and-rescue
+    - text: Matkailu ja virkistys
+      url: /use-cases/sportswear-uniform
+    - text: Katastrofiapu
+      url: /use-cases/disaster-relief
+    - text: Meriturvallisuus ja puolustus
+      url: /use-cases/maritime-safety-defense
+    - text: Oppaat
+      url: /guides
+    - text: Tuotteet
+      url: /products

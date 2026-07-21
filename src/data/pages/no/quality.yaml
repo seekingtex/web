@@ -1,0 +1,50 @@
+hero:
+  tagline: Kvalitetssikring
+  title: Ytelses- og kvalitetstesting
+  subtitle: Hver Seekingtex-funksjonelt\ stoff og SUP gjennomgår strenge ytelses- og kvalitetstester i vårt FoU-senter før forsendelse. Våre omfattende tester gir håndgripelig bevis på produkteksellens.
+
+stats:
+  - value: 100%
+    label: Trykktestede enheter
+  - value: '8'
+    label: Testprotokoller
+  - value: 
+    label: Kvalitetssertifikat
+  - value: 3-Year
+    label: Begrenset garanti
+
+tests:
+  - title: Trykktest
+    description: Luftkamre utsettes for trykk over anbefalte arbeidsgrenser over lengre tid. Dette verifiserer tetthet og strukturell integritet av materiale og sømmer, og sikrer at produktet tåler tiltenkt bruk og potensiell overoppblåsing uten feil eller lekkasjer.
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: Støttest
+    description: Produkter utsettes for kontrollerte støt med varierende vekt og vinkler. Vurdering av materialets motstand mot punkteringer, rifter og skader forårsaket av kollisjoner med hindringer i vannet, noe som viser holdbarhet og lang levetid.
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: UV-motstandstest
+    description: Ferdige produkter utsettes for simulert sollys over lengre tid for å vurdere materialets motstand mot degradering, falming og svekkelse forårsaket av langvarig UV-eksponering —avgjørende for båter som brukes i tropiske og solrike miljøer.
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: Slitasjetest
+    description: Materialprøver gnis mot sliteflater over et bestemt antall sykluser under kontrollert trykk. Dette måler materialets evne til å motstå slitasje fra gjentatt bruk, kontakt med sand, steiner eller andre flater, og sikrer langsiktig holdbarhet.
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: Lavtemperaturytelsestest
+    description: Produkter testes i kalde omgivelser for å vurdere funksjonalitet og holdbarhet under forskjellige temperaturforhold, og forhindrer stivhet eller sprekker i kaldere vann. Nødvendig for båter beregnet på vinterbruk eller høye breddegrader.
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: Oppdrifts- og lastekapasitetstest
+    description: Produkter testes med forskjellige laster for å bestemme maksimal lastekapasitet og sikre trygg støtte for brukere og utstyr. Hver modell får verifisert lastekapasitet før lansering.
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: Manøvrerbarhetstest
+    description: Produkter testes for respons på padling eller motorstyring, med vurdering av svingradius og enkel håndtering. Vanntester bekrefter at faktisk håndtering samsvarer med designsifikasjonene.
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: Vanntetthetstest
+    description: Fullt monterte produkter senkes eller utsettes for vann for å sjekke for lekkasjer gjennom sømmer, ventiler eller materialer. Hver båt gjennomgår obligatorisk vanntetthetskontroll før forsendelse.
+    image: /images/seekingtex/factory/producing department2.jpeg
+
+testing_section:
+  tagline: Testprosedyrer
+  title: Strenge tester på hvert trinn
+
+commitment:
+  title: Vårt løfte
+  body: Gjennom disse strenge testprosedyrene gir {SITE} kundene trygghet på at våre oppblåsbare SUP-er og båter ikke bare er ytelsesdyktige, men også bygget for å vare i årevis —og garanterer utallige hyggelige og trygge eventyr på vannet. Kvalitetslaboratoriet vårt opererer uavhengig av produksjonen og rapporterer direkte til ledelsen.
+  cta: Be om testdokumentasjon
+  cta_link: /contact

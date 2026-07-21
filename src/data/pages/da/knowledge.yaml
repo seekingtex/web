@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Vidensgraf'
+  title: 'Vandudforskningsviden'
+  subtitle: |
+    En struktureret vidensbase, der d蹇檏ker funktionel SUP-teknologi,<br />
+    vandsikkerhed, b姘揹teknik og eventyrplanl蹇檊ning.
+  taglineSection: 'Udforsk. L蹇檙. G姘?med tillid.'
+
+clusters:
+  tagline: 'Vidensklynger'
+  title: 'Udforsk efter emne'
+  subtitle: 'Dybdeg姘揺nde dyk ned i teknologien, sikkerheden og f蹇檙dighederne bag hvert Seekingtex-produkt.'
+  items:
+    - title: 'SUP-viden'
+      description: 'Fra valg af dit f閰秗ste br蹇檛 til avancerede turteknikker 閳?alt om textile knowledge.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'S姘揹an v蹇檒ger du dit f閰秗ste oppustelige SUP'
+        - 'Bedste SUP-st閰秗relse til begyndere'
+        - 'Hvor sv蹇檙t er textile knowledge?'
+        - 'funktionel vs h姘搑d plade sammenligning'
+        - 'SUP-sikkerhedstjekliste'
+    - title: 'B姘揹viden'
+      description: 'Tekniske guider om oppustelige b姘揹e, teknisk stof''er, joller og tekniske stoffer 閳?teknik, materialer og drift.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Oppustelige b姘揹typer forklaret'
+        - 'PVC vs Hypalon sammenligning'
+        - 'teknisk stof vs Jolle sammenligning'
+        - 'Drop-stitch teknologi dybdeg姘揺nde'
+        - 'Marine materialevidenskabsguide'
+    - title: 'Sikkerhedsviden'
+      description: 'V蹇檚entlig sikkerhedsviden for enhver padler 閳?fra PFD-valg til vejrl蹇檚ning til selvbjergningsteknikker.'
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP-sikkerhedstjekliste'
+        - 'Har du brug for en redningsvest?'
+        - 'Sikkerhedsguide til havpadling'
+        - 'Flodsikkerhed for funktionelle stoffer'
+        - 'Vejr- og vandforholdsbevidsthed'
+    - title: 'Teknologi'
+      description: 'Ingeni閰秗arbejdet bag Seekingtex-produkter 閳?materialer, konstruktionsmetoder og kvalitetstestning.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Marine-grade PVC-teknologi'
+        - 'Drop-stitch kerne forklaret'
+        - 'Hvorfor PSI betyder noget for oppustelige SUP''er'
+        - 'RF-svejsning vs kl蹇檅ebinding'
+        - 'Kvalitetstestning og certificering'
+
+featured_guides:
+  tagline: 'Udvalgte guider'
+  title: 'Mest popul蹇檙e vidensressourcer'
+  items:
+    - title: 'SUP-grundl蹇檊gende'
+      href: '/learn/fabrics'
+    - title: 'funktionel vs h姘搑d plade'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Vandsikkerhedsguide'
+      href: '/learn/quality-standards'
+    - title: 'Materialereference'
+      href: '/learn/materials'
+    - title: 'SUP-st閰秗relsesguide'
+      href: '/size-guide'
+
+cta:
+  title: 'Begynd at udforske'
+  subtitle: 'Dyk ned i vores vidensbase og f姘?de oplysninger, du har brug for til dit n蹇檚te vandeventyr.'
+  actions:
+    - variant: primary
+      text: 'Gennemse alle guider'
+      href: '/academy'
+    - text: 'Udforsk vidensgraf'
+      href: '/knowledge'

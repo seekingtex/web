@@ -1,0 +1,134 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Seekingtex | Fabricante de tejidos funcionales — Protección solar, impermeable y textiles de rendimiento
+    template: '%s — Seekingtex'
+  description: 'Seekingtex es un fabricante líder de tejidos funcionales especializado en protección solar (UPF 50+), tejidos impermeables, de secado rápido, antibacterianos y de rendimiento para ropa deportiva, exterior y equipo táctico. Servicios OEM/ODM disponibles.'
+  keywords:
+    - Seekingtex
+    - fabricante de tejidos funcionales
+    - tejido de protección solar
+    - tejido UPF 50+
+    - tejido impermeable
+    - tejido de secado rápido
+    - tejido de rendimiento
+    - tejido deportivo
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: es_ES
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news' # News main path
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'category' # /category/<slug>
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag' # /tag/<slug>
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+# --- Per-language site settings ---
+siteSettings:
+  siteName: 'Seekingtex'
+  siteTagline: 'Fabricante de tejidos funcionales — Protección solar, impermeable y textiles de rendimiento'
+  siteDescription: 'Seekingtex es un fabricante líder de tejidos funcionales de alto rendimiento, especializado en protección solar UPF 50+, tejidos impermeables/transpirables, de secado rápido, antibacterianos y elásticos para ropa deportiva, equipo de exterior y aplicaciones industriales. OEM/ODM con envío global.'
+  organization:
+    name: 'Seekingtex'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Todos los derechos reservados.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'Hola, me gustaría informarme sobre sus tejidos funcionales.'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

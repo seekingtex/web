@@ -1,0 +1,99 @@
+hero:
+  tagline: 鍏充簬鎴戜滑
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex 宸ュ巶鍙婅溅闂?
+  title: |
+    闈㈡枡鑸跺伐绋嬶紝<br />
+    浠?<span class="text-accent dark:text-white">Seekingtex</span> 鐨勬柟寮忔墦閫?
+  subtitle: '鎴戜滑鍦ㄤ竴闂存部娴疯溅闂撮噷璧锋锛屽彧鏈変竴鏉￠潰鏂欏拰涓€涓墽鐫€鐨勪俊蹇碉細闈㈡枡鐢ㄤ骇鍝佸簲褰撲互璁ょ湡鐨勬€佸害鏉ュ埗閫犫€斺€斿洜涓哄畠浠‘瀹炲叧涔庣敓鍛姐€傚浠婏紝鎴戜滑鍙戣揣鍒?40 澶氫釜鍥藉锛屼絾姣忎竴鏉￠潰鏂欎綋浠嶇劧缁忚繃鍒涘鍥㈤槦浜叉墜鎶婂叧銆?
+
+stats:
+  title: 鏁版嵁涓€瑙?
+  columns: 4
+  stats:
+    - title: 宸蹭氦浠橀潰鏂欎綋
+      amount: '2,400+'
+    - title: 宸插彂璐у浗瀹?
+      amount: '40'
+    - title: 绱缁忛獙骞撮檺
+      amount: '60'
+    - title: 骞冲潎淇濅慨鍝嶅簲鏃堕棿锛堝皬鏃讹級
+      amount: '24'
+
+features3_what_we_build:
+  title: 鎴戜滑鐨勪骇鍝?
+  subtitle: 涓€鏉℃垜浠簡濡傛寚鎺岀殑涓撴敞浜у搧绾库€斺€旀病鏈夊崐鎴愬搧瀹為獙锛屾病鏈夎创鐗屽伐绋嬨€?
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 鎶€鏈潰鏂?纭３鍔熻兘鎬ч潰鏂?
+      description: 閾濆悎閲戦潰鏂欎綋 鎶€鏈潰鏂欙紝3.3m 鑷?7.5m锛屼笓涓哄贰閫汇€侀珮鎬ц兘銆侀挀楸煎拰瀹跺涵浣跨敤璁捐銆?
+      icon: tabler:ship
+    - title: 鍔熻兘鎬ч潰鏂?
+      description: PVC 鍜?Hypalon 鍔熻兘鎬у皬鑹囷紝2.4m 鑷?4.2m锛岃交渚裤€佸潥鍥恒€佹槗浜庡瓨鏀俱€?
+      icon: tabler:speedboat
+    - title: 瓒呯骇楂樼闈㈡枡灏忚墖
+      description: 绱у噾鍨嬮珮瑙勬牸 鎶€鏈潰鏂欙紝鍙畾鍒朵互鍖归厤姣嶈墖鐨勫瑙傞鏍笺€?
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: 閰嶄欢
+      description: 妗ㄣ€佹车銆佺僵銆佸共琚嬨€佹补绠卞拰鐢靛瓙璁惧锛屽叏閮ㄤ笌鎴戜滑鐨勯潰鏂欏尮閰嶃€?
+      icon: tabler:package
+    - title: 鏀硅涓庣淮淇?
+      description: 鍘傚唴绠￠亾鏇存崲銆佺數瀛愯澶囨敼閫犲拰鍙戝姩鏈哄崌绾с€?
+      icon: tabler:tool
+    - title: 瀹氬埗寤洪€?
+      description: 涓哄晢涓氥€佺鐮斿拰鍐涚敤瀹㈡埛鎻愪緵閫愰」鐩畾鍒惰璁°€?
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 闈㈡枡鑸惰璁′笌宸ョ▼璁ㄨ
+
+steps2_values:
+  title: 鎴戜滑鐨勪环鍊艰
+  subtitle: 浠庣涓€澶╄捣灏卞閫犳瘡涓骇鍝佺殑涓夐」鍘熷垯銆?
+  items:
+    - title: 鍍忔壙杞借嚜宸卞浜轰竴鏍锋墦閫?
+      description: 姣忔潯闈㈡枡浣撱€佹瘡閬撶剨缂濄€佹瘡涓揣鍥轰欢閮戒互鑷敤鐨勬爣鍑嗗寰呫€?
+      icon: tabler:heart
+    - title: 鍏堝伐绋嬪悗閿€鍞?
+      description: 濡傛灉瑙勬牸鏈夎锛屾垜浠敼瑙勬牸鈥斺€旇€屼笉鏄敼瀹㈡埛銆?
+      icon: tabler:settings
+    - title: 姣斾繚淇洿鎸佷箙鐨勬敮鎸?
+      description: 浜屽崄骞撮潰鏂欓緞鐨勮€侀潰鏂欎粛鍚戞垜浠璐厤浠讹紝鎴戜滑渚濈劧鎺ュ惉鐢佃瘽銆?
+      icon: tabler:headset
+
+steps2_milestones:
+  title: 閲岀▼纰?
+  subtitle: Seekingtex 鏁呬簨鐨勭畝鐗堛€?
+  isReversed: true
+  items:
+    - title: 鍦ㄦ部娴疯溅闂村垱绔?
+      description: 鐢变袱浣嶉潰鏂欒埗璁捐甯堝嚟涓€鍙?CNC 閾ｅ簥鍜屼竴涓墽鐫€鐨勬兂娉曡捣姝ャ€?
+      icon: tabler:building-factory
+    - title: 浜や粯绗?1,000 鏉￠潰鏂欎綋
+      description: 鍦ㄧ涓冨勾杈炬垚锛屼富瑕佷緷闈犲彛纰戝拰鍥炲ご瀹€?
+      icon: tabler:circle-check
+    - title: 鍥介檯鍑哄彛璁″垝
+      description: 鐜板凡鍙戣揣鑷?40 澶氫釜鍥藉锛屽湪浜斿ぇ娲叉嫢鏈夋湰鍦板寲鏀寔鍚堜綔浼欎即銆?
+      icon: tabler:world
+
+features2_locations:
+  title: 鎴戜滑鐨勪綅缃?
+  tagline: 鎵惧埌鎴戜滑
+  columns: 3
+  items:
+    - title: 鎬婚儴涓庤溅闂?
+      description: 娌挎捣宸ヤ笟鍥尯锛? 鍙锋ゼ鈥斺€斿懆涓€鑷冲懆浜斿紑鏀撅紝鍙傝璇烽绾︺€?
+      icon: tabler:building
+    - title: 娆х洘鏈嶅姟涓績
+      description: 鍦颁腑娴锋腐鍙ｂ€斺€斾负娆ф床瀹㈡埛鎻愪緵鏀硅銆佺淮淇拰淇濅慨鏀寔銆?
+      icon: tabler:ship
+    - title: 浜氬お鍚堜綔浼欎即缃戠粶
+      description: 鍦ㄦ境澶у埄浜氥€佹棩鏈€佹柊鍔犲潯鍜岄娓鏈夋巿鏉冩湇鍔″悎浣滀紮浼淬€?
+      icon: tabler:globe

@@ -1,0 +1,24 @@
+hero:
+  tagline: G眉venlik
+  title: G眉venlik Standartlar谋 ve Sertifikasyon
+  subtitle: Her Seekingtex 眉r眉n眉, rekreasyonel ve profesyonel kullan谋m i莽in s谋k谋 testlerden ge莽er ve uluslararas谋 g眉venlik standartlar谋n谋 kar艧谋lar.
+
+certifications:
+  - title: CE Sertifikasyonu
+    description: T眉m Seekingtex g眉venlik ekipmanlar谋, Avrupa Ki艧isel Koruyucu Ekipman Y枚netmeli臒i (AB) 2016/425'e g枚re CE i艧aretleme gereksinimlerini kar艧谋lar.
+  - title: 'ISO 12402 Sertifikasyonu'
+    description: Can yelekleri,  y眉zd眉rme standartlar谋n谋 kar艧谋lar. Safety Fabric Classic, 50N+ y眉zd眉rme sa臒lar; Safety Fabric Pro, otomatik 艧i艧irme ile SOLAS gereksinimlerini kar艧谋lar.
+  - title: SOLAS Uyumlulu臒u
+    description: Safety Fabric Pro, a莽谋k tekstil ve ticari tekstil operasyonlar谋 i莽in SOLAS (Denizde Can G眉venli臒i) d眉zenlemelerine uygundur.
+
+related:
+  title: 陌lgili
+  links:
+    - text: G眉venlik Rehberi
+      url: /guides/safety-tips
+    - text: Teknoloji
+      url: /technology
+    - text: T眉m 脺r眉nler
+      url: /products
+    - text: Rehberler
+      url: /guides

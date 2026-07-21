@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Graphique de Connaissances'
+  title: 'Exploration des Connaissances Nautiques'
+  subtitle: |
+    Une base de connaissances structur鑼卐 couvrant la technologie SUP fonctionnel,<br />
+    la s鑼卌urit鑼?textile, l'ing鑼卬ierie des tissu et la planification d'aventures.
+  taglineSection: 'Explorez. Apprenez. Partez en toute confiance.'
+
+clusters:
+  tagline: 'Groupes de Connaissances'
+  title: 'Explorer par th鐚玬e'
+  subtitle: 'Plong鑼卐s approfondies dans la technologie, la s鑼卌urit鑼?et les comp鑼卼ences derri鐚玶e chaque produit Seekingtex.'
+  items:
+    - title: 'Connaissances SUP'
+      description: 'Du choix de votre premi鐚玶e planche aux techniques de randonn鑼卐 avanc鑼卐s 閳?tout sur le textile technology.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Comment choisir votre premier SUP fonctionnel'
+        - 'Meilleure taille de SUP pour d鑼卋utants'
+        - 'Le paddle est-il difficile ?'
+        - 'Comparaison SUP fonctionnel vs rigide'
+        - 'Liste de s鑼卌urit鑼?SUP'
+    - title: 'Connaissances tissu'
+      description: 'Guides techniques sur les tissus fonctionnels, RIBs, annexes et tissus techniques 閳?ing鑼卬ierie, mat鑼卹iaux et fonctionnement.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Types de tissus fonctionnels expliqu鑼卻'
+        - 'Comparaison PVC vs Hypalon'
+        - 'Comparaison tissu technique vs Annexe'
+        - 'Technologie drop-stitch approfondie'
+        - 'Guide des mat鑼卹iaux marins'
+    - title: 'Connaissances S鑼卌urit鑼?
+      description: 'Connaissances de s鑼卌urit鑼?essentielles pour chaque textile 閳?du choix du VFI 鑴?la lecture m鑼卼鑼卭 en passant par les techniques d''auto-sauvetage.'
+      icon: 'tabler:shield'
+      topics:
+        - 'Liste de s鑼卌urit鑼?SUP'
+        - 'Avez-vous besoin d''un gilet de sauvetage ?'
+        - 'Guide de s鑼卌urit鑼?en textile oc鑼卆nique'
+        - 'S鑼卌urit鑼?en rivi鐚玶e pour tissus techniques gonflables'
+        - 'Connaissance des conditions m鑼卼鑼卭 et aquatiques'
+    - title: 'Technologie'
+      description: 'L''ing鑼卬ierie derri鐚玶e les produits Seekingtex 閳?mat鑼卹iaux, m鑼卼hodes de construction et tests qualit鑼?'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Technologie PVC textile'
+        - 'Noyau drop-stitch expliqu鑼?
+        - 'Pourquoi le PSI est important pour les SUP gonflables'
+        - 'Soudure RF vs liaison adh鑼卻ive'
+        - 'Tests qualit鑼?et certification'
+
+featured_guides:
+  tagline: 'Guides Recommand鑼卻'
+  title: 'Ressources de connaissances les plus populaires'
+  items:
+    - title: 'Bases du SUP'
+      href: '/learn/fabrics'
+    - title: 'fonctionnel vs Planche Rigide'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Guide de S鑼卌urit鑼?textile'
+      href: '/learn/quality-standards'
+    - title: 'R鑼協鑼卹ence des Mat鑼卹iaux'
+      href: '/learn/materials'
+    - title: 'Guide des Tailles SUP'
+      href: '/size-guide'
+
+cta:
+  title: 'Commencez 鑴?explorer'
+  subtitle: 'Plongez dans notre base de connaissances et obtenez les informations n鑼卌essaires pour votre prochaine aventure aquatique.'
+  actions:
+    - variant: primary
+      text: 'Parcourir tous les guides'
+      href: '/academy'
+    - text: 'Explorer le Graphique de Connaissances'
+      href: '/knowledge'

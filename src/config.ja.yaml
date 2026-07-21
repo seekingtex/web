@@ -1,0 +1,121 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Seekingtex | 機能性生地メーカー — 日焼け防止、防水、速乾＆高機能テキスタイル
+    template: '%s — Seekingtex'
+  description: 'Seekingtexは、日焼け防止（UPF 50+）、防水、速乾、抗菌、高機能生地を専門とする大手機能性生地メーカーです。スポーツウェア、アウトドアウェア、タクティカルギア向けのOEM/ODMサービスを提供しています。'
+  keywords:
+    - Seekingtex
+    - 機能性生地メーカー
+    - 日焼け防止生地
+    - UPF 50+ 生地
+    - 防水生地
+    - 速乾生地
+    - 高機能生地
+    - スポーツウェア生地
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: ja_JP
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+# Per-language site settings
+siteSettings:
+  siteName: 'Seekingtex（シーキングテックス）'
+  siteTagline: 'Seekingtex（シーキングテックス）— 機能性生地メーカー — 日焼け防止、防水、速乾＆高機能テキスタイル'
+  siteDescription: 'Seekingtex（シーキングテックス）は、UPF 50+ 日焼け防止、防水/透湿、速乾、抗菌、ストレッチテキスタイルを専門とする大手高機能性生地メーカーです。スポーツウェア、アウトドア用品、産業用途向けのOEM/ODM、グローバル出荷に対応しています。'
+  organization:
+    name: 'Seekingtex（シーキングテックス）'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex（シーキングテックス）'
+  logo_image: ''
+  logo_alt: 'Seekingtex logo'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. 全著作権所有。'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'こんにちは、機能性生地についてお問い合わせしたいと思います。'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

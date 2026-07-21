@@ -1,0 +1,29 @@
+hero:
+  tagline: Marka
+  title: '{BRAND}'
+  subtitle: Her S枚rf莽眉 陌莽in Okyanus Performans谋
+  cta: Ekipman谋 Ke艧fedin 鈫?  cta_link: /products
+  secondary_cta: S枚rf yapmay谋 枚臒renin
+  secondary_cta_link: /guides
+
+position:
+  tagline: Konum
+  subtitle: Her S枚rf莽眉 陌莽in Okyanus Performans谋
+
+products_section:
+  tagline: 脺r眉nler
+  cta: T眉m 脺r眉nler 鈫?  cta_link: /products
+
+global_section:
+  tagline: K眉resel
+  title: "{count} b枚lgede mevcut"
+
+social_section:
+  tagline: Sosyal medya
+  title: S枚rf莽眉ler ne okuyor
+  read_guide: Rehberi Oku 鈫?
+cta_section:
+  title: Okyanus maceran谋za ba艧lay谋n
+  subtitle: Her 眉r眉n CE sertifikal谋d谋r. Garantilidir. Ger莽ek s枚rf i莽in tasarlanm谋艧t谋r.
+  cta_suffix: '鈫?
+  secondary_cta: "{BRAND} Hakk谋nda"

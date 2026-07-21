@@ -1,0 +1,45 @@
+hero:
+  tagline: Životní styl
+  title: Životní styl<br />Seekingtex
+  subtitle: Postaveno pro ty, kteří žijí na vodě — od víkendových objevitelů po komerční operátory, kteří jsou na svém vybavení denně závislí.
+
+values:
+  - icon: 🌊
+    title: Zrozeno na vodě
+    desc: Každý design začíná pochopením chování vody. Navrhujeme od okraje podmínek dovnitř — protože oceán je náš učitel, ne naše pracoviště.
+  - icon: 🔧
+    title: Postaveno k vydržení
+    desc: Nejudržitelnější produkt je ten, který není třeba vyměňovat. Námořní materiály, drop-stitch jádra dimenzovaná na 15 PSI a švy, které přežijí sezónu.
+  - icon: '🏆'
+    title: Dostupný design
+    desc: Vodní sporty by neměly být luxusem. Profesionální výkon za cenu, která dává smysl pro rodiny, průvodce a malé provozovatele — nejen pro komerční flotily.
+  - icon: 🌍
+    title: Globální komunita
+    desc: "Od pobřeží Qingdao po jezera v Evropě, řeky v jihovýchodní Asii a zálivy v Americe — naše zákazníky spojuje jedna věc: láska k bytí na vodě."
+  - icon: ♻️
+    title: Odpovědná výroba
+    desc: CNC optimalizované rozložení snižuje odpad materiálu pod 5 %. Odolná konstrukce snižuje cykly výměny. Stavíme pro dlouhou životnost, protože to je nejudržitelnější volba.
+  - icon: 🤝
+    title: Podpora, která vydrží
+    desc: Dvacet let staré trupy nám stále volají pro náhradní díly. Naše záruční odezva je v průměru 24 hodin. Nezmizíme po prodeji — jsme tu po celou dobu životnosti produktu.
+
+ethos_section:
+  tagline: Naše filozofie
+  title: Více než produkt. Filozofie.
+  subtitle: Šest principů, které formují každé naše rozhodnutí — od výběru materiálů po zákaznickou podporu.
+
+community_section:
+  tagline: Komunita
+  title: Připojte se ke komunitě Seekingtex
+  subtitle: Sledujte naši cestu a sdílejte svá vlastní dobrodružství na vodě.
+  instagram: Sledovat na Instagramu
+  youtube: Odebírat na YouTube
+  x: Sledovat na X
+
+cta_section:
+  title: Začněte svou cestu
+  subtitle: Každý produkt CE certifikován. Kryto zárukou. Navrženo pro skutečný život na vodě.
+  products_cta: Prozkoumat produkty →
+  about_cta: O nás
+  products_link: /products
+  about_link: /about

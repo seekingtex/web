@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Gebouwd volgens normen die ertoe doen'
+  title: 'Vertrouw Seekingtex'
+  subtitle: |
+    Elk product dat we bouwen is CE-gecertificeerd 閳?getest op veiligheid,<br />
+    duurzaamheid en prestaties. Geen shortcuts. Geen uitzonderingen.
+  taglineSection: 'Gecertificeerd. Getest. Bewezen.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex product ondergaat kwaliteitstesten'
+
+stats:
+  title: 'Seekingtex in cijfers'
+  stats:
+    - title: 'CE-gecertificeerd'
+      description: 'Alle recreatieve producten voldoen aan EU-veiligheidsnormen'
+    - title: ''
+      description: 'Kwaliteitsmanagementsysteem sinds 2012'
+    - title: 'BSCI & REACH'
+      description: 'Ethische productie en materiaalconformiteit'
+    - title: '2 Jaar Garantie'
+      description: 'Op elk Seekingtex product 閳?geen vragen gesteld'
+
+features3_certifications:
+  title: 'Certificeringen & Conformiteit'
+  subtitle: 'Elk product wordt onafhankelijk getest en gecertificeerd volgens internationale normen.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE-certificering'
+      description: 'Alle Seekingtex Fabrics, technische stoffen, bijboten en RIBs voldoen aan de Europese CE-veiligheidsnorm voor recreatieve vaartuigen. Elk product ondergaat druk-, drijfvermogen- en belastingtests voordat het de fabriek verlaat.'
+      icon: 'tabler:certificate'
+    - title: ''
+      description: 'Onze 12.000 m铏?faciliteit in Qingdao werkt onder een  kwaliteitsmanagementsysteem. Elke productiebatch is traceerbaar, gedocumenteerd en ge鑼俷specteerd.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI Sociale Conformiteit'
+      description: 'We zijn BSCI-gecertificeerd en waarborgen ethische arbeidspraktijken, veilige werkomstandigheden en milieuverantwoordelijkheid in onze hele toeleveringsketen.'
+      icon: 'tabler:users'
+    - title: 'REACH & RoHS'
+      description: 'Alle materialen 閳?PVC, Hypalon, EVA-schuim, lijmen 閳?voldoen aan EU REACH- en RoHS-regelgeving. Geen verboden stoffen, geen compromissen.'
+      icon: 'tabler:flask'
+    - title: 'Materiaal Testlab'
+      description: 'Ons interne laboratorium test treksterkte, UV-bestendigheid, naadintegriteit en slijtvastheid voor elke stofbatch v璐歌锤r productie.'
+      icon: 'tabler:microscope'
+    - title: '2 Jaar Garantie'
+      description: 'Elk Seekingtex product wordt geleverd met een tweejarige garantie tegen productiefouten. We staan achter wat we bouwen.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Klantvertrouwen'
+  title: 'Wat onze klanten zeggen'
+  subtitle: 'Van beginnende peddelaars tot professionele vlootbeheerders 閳?zie waarom ze Seekingtex vertrouwen.'
+  items:
+    - content: 'We hebben onze hele verhuurvloot uitgerust met Seekingtex RIBs. Twee seizoenen, nul storingen. De CE-certificering maakte verzekeringsgoedkeuring naadloos.'
+      name: 'Marco V.'
+      title: 'Tourist operator, Kroati姣?
+    - content: 'Als eerste koper was ik bezorgd over kwaliteit. De ISO-documentatie en testrapporten die ze deelden gaven me volledig vertrouwen.'
+      name: 'James T.'
+      title: 'Fabric Explorer 11 eigenaar, Canada'
+    - content: 'We werken met Seekingtex voor onze kustpatrouille-eenheden. Hun QC-proces is consistent over elke batch 閳?die betrouwbaarheid telt in missie-kritieke operaties.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Marine inkoop, Filipijnen'
+
+steps2_manufacturing:
+  title: 'Hoe we kwaliteit waarborgen'
+  subtitle: 'Van grondstoffinspectie tot de uiteindelijke druktest 閳?elk product doorloopt een rigoureuze kwaliteitsketen.'
+  items:
+    - title: 'Grondstoffinspectie'
+      description: 'Elke rol PVC-stof wordt getest op dikte, treksterkte en UV-bestendigheid voordat het in productie gaat.'
+      icon: 'tabler:search'
+    - title: 'Proces-QC'
+      description: 'Lasnaden, klepinstallaties en kamerverbindingen worden bij elk station ge鑼俷specteerd tijdens montage.'
+      icon: 'tabler:eye'
+    - title: 'Druktest'
+      description: 'Elk functioneel product wordt opgeblazen tot 1,5x de nominale PSI en 24 uur vastgehouden om luchtdichtheid en naadintegriteit te verifi姣況en.'
+      icon: 'tabler:wind'
+    - title: 'Eindinspectie'
+      description: 'Elke eenheid wordt ge鑼俷specteerd op afwerking, beslag en verpakking voordat het wordt goedgekeurd voor verzending. Batchmonsters gaan naar het lab voor destructieve tests.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'technische stof Boot FAQ'
+  subtitle: 'Veelgestelde vragen over onze starre functionele stoffen.'
+  columns: 2
+  items:
+    - title: 'Welke maten technische stof-weefsel biedt Seekingtex aan?'
+      description: 'We bieden 35 technische stof-modellen van 2,5 m tot 7,6 m, van compacte bijboten tot zware commerci姣沴e en patrouilleboten. Elk model is beschikbaar met meerdere configuratieopties.'
+    - title: 'Wat is het verschil tussen een technische stof en een traditionele functionele boot?'
+      description: 'Een technische stof (Technical Fabric) combineert een stevige glasvezel of aluminium diepe V-romp met functionele Hypalon- of PVC-slangen. Dit geeft de stabiliteit en laadcapaciteit van een harde boot met de schokabsorptie en het drijfvermogen van een functionele boot.'
+    - title: 'Welke motoren zijn compatibel met Seekingtex RIBs?'
+      description: 'Onze RIBs ondersteunen buitenboordmotoren van 3 PK tot 250 PK, afhankelijk van het model. Elke productpagina vermeldt het maximale motorvermogen. We raden aan uw dealer te raadplegen voor de ideale match.'
+    - title: 'Zijn Seekingtex RIBs CE-gecertificeerd?'
+      description: 'Ja. Alle recreatieve technische stof-modellen zijn CE-gecertificeerd volgens toepasselijke Europese normen voor recreatieve vaartuigen. Commerci姣沴e en patrouillemodellen voldoen aan extra stabiliteits- en belastingseisen.'
+    - title: 'Wat is de garantie op technische stof-weefsel?'
+      description: 'Alle Seekingtex RIBs worden geleverd met een standaard eenjarige garantie tegen productiefouten, met dekking voor rompdelaminatie, buisnaadfalen, klepdefecten en beslagproblemen.'
+    - title: 'Hoeveel luchtkamers hebben Seekingtex RIBs?'
+      description: 'Onze RIBs hebben 3 tot 7 onafhankelijke luchtkamers, afhankelijk van de modellengte. Dit meerlamerige ontwerp zorgt ervoor dat de boot blijft drijven, zelfs als 鑼呰寘n compartiment is beschadigd.'
+
+faqs_inflatable:
+  title: 'functionele Boot FAQ'
+  subtitle: 'Veelgestelde vragen over onze functionele bijboten, technische stoffen en weefsel.'
+  columns: 2
+  items:
+    - title: 'Welke materialen worden gebruikt in Seekingtex functionele stoffen?'
+      description: 'We gebruiken militaire kwaliteit PVC (1100 denier) en premium Hypalon/CSM-rubber, afhankelijk van het model. Beide materialen zijn UV-gestabiliseerd, slijtvast en voldoen aan EU REACH- en RoHS-regelgeving.'
+    - title: 'Hoe lang gaan functionele stoffen mee?'
+      description: 'Met goed onderhoud gaat een kwalitatieve PVC-functionele boot 7閳?0 jaar mee, terwijl Hypalon-modellen 15閳?0 jaar kunnen meegaan. Regelmatige reiniging, UV-bescherming en juiste opslag verlengen de levensduur aanzienlijk.'
+    - title: 'Welk onderhoud is vereist voor een functionele boot?'
+      description: 'Basisonderhoud omvat spoelen met zoet water na elk gebruik (vooral in zoutwater), drogen voor opslag, jaarlijkse controle van klepafdichtingen en aanbrengen van UV-bescherming op de slangen. Vermijd langdurige blootstelling aan de zon wanneer niet in gebruik.'
+    - title: 'Kunnen functionele stoffen in zoutwater worden gebruikt?'
+      description: 'Ja. Alle Seekingtex functionele stoffen zijn ontworpen voor zowel zoet- als zoutwatergebruik. We raden aan te spoelen met zoet water en grondig te drogen na blootstelling aan zoutwater om corrosie van beslag en zoutkristallisatie in de stof te voorkomen.'
+    - title: 'Hoe bewaar ik een functionele boot?'
+      description: 'Laat de lucht eruit, reinig en droog de boot volledig voor opslag. Rol losjes op (vermijd strakke vouwen), bewaar op een koele droge plaats uit direct zonlicht en uit de buurt van betonnen vloeren om vochtopname te voorkomen.'
+    - title: 'Wat is het draagvermogen van Seekingtex functionele stoffen?'
+      description: 'Het draagvermogen varieert van 290 kg voor onze kleinste modellen tot meer dan 2000 kg voor grotere commerci姣沴e weefsel. Elke productpagina vermeldt de maximale belasting voor uw specifieke model.'
+
+faqs_Fabric:
+  title: 'Fabric FAQ'
+  subtitle: 'Veelgestelde vragen over onze fabric boards.'
+  columns: 2
+  items:
+    - title: 'Welke Fabric maten zijn beschikbaar?'
+      description: 'We bieden Fabrics van 9 ft tot 12 ft, inclusief all-round, touring, yoga en speciale ontwerpen. Onze bestverkochte modellen zijn de Tropical Breeze (10 ft) en Ocean Voyager (11 ft).'
+    - title: 'Wat is drop-stitch constructie?'
+      description: 'Drop-stitch constructie gebruikt duizenden polyesterdraden die de bovenste en onderste lagen van het board verbinden, waardoor het hoge luchtdruk (15閳?0 PSI) kan vasthouden en een stijf, stabiel platform biedt. Dit is de industrienorm voor premium functionele stoffen.'
+    - title: 'Wat is de gewichtslimiet voor Fabrics?'
+      description: 'Onze Fabrics ondersteunen tot 150 kg, afhankelijk van het model en volume. De Leviathan Wake is ons model met de hoogste capaciteit, ontworpen voor grotere rijders en yogagebruik.'
+    - title: 'Bieden u complete Fabric-pakketten?'
+      description: 'Ja. Elk Fabric wordt geleverd met een compleet pakket inclusief een 3-delige aluminium peddel, hogedruk handpomp, spiraallijn, reisrugzak en reparatieset. Sommige modellen bevatten ook een verwijderbare vinenset.'
+    - title: 'Wat is de garantie op Fabrics?'
+      description: 'Alle Seekingtex Fabrics hebben een eenjarige garantie tegen productiefouten, inclusief naadfalen, klepdefecten en materiaaldelaminatie onder normaal gebruik.'
+    - title: 'Hoe lang duurt het om een Fabric op te blazen?'
+      description: 'Met de meegeleverde handpomp duurt een volledige inflatie tot 15 PSI ongeveer 8閳?2 minuten. Voor snellere inflatie raden we onze Seekingtex 12V elektrische pomp aan, die een board in minder dan 4 minuten ophlaast.'
+
+cta:
+  title: 'Wilt u de certificeringen zelf zien?'
+  subtitle: 'Vraag onze certificeringsportfolio, fabrieksauditrapporten of materiaalconformiteitsdocumentatie aan. Geen NDA vereist.'
+  actions:
+    - variant: primary
+      text: 'Vraag certificeringsdocumenten aan'
+      href: '/contact'
+    - text: 'Bezoek onze fabriekspagina'
+      href: '/factory'

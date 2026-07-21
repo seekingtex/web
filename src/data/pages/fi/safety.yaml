@@ -1,0 +1,24 @@
+hero:
+  tagline: Turvallisuus
+  title: Turvallisuusstandardit ja -sertifiointi
+  subtitle: Jokainen Seekingtex-tuote k盲y l盲pi tiukan testauksen ja t盲ytt盲盲 kansainv盲liset turvallisuusstandardit virkistys- ja ammattik盲ytt枚枚n.
+
+certifications:
+  - title: CE-sertifiointi
+    description: Kaikki Seekingtexin turvavarusteet t盲ytt盲v盲t CE-merkinn盲n vaatimukset Euroopan henkil枚nsuojainasetuksen (EU) 2016/425 mukaisesti.
+  - title: 
+    description: Pelastusliivit t盲ytt盲v盲t  -kelluvuusstandardit. Safety Fabric Classic tarjoaa 50N+ kelluvuuden; Safety Fabric Pro t盲ytt盲盲 SOLAS-vaatimukset automaattisella t盲yt枚ll盲.
+  - title: SOLAS-vaatimustenmukaisuus
+    description: Safety Fabric Pro t盲ytt盲盲 SOLAS (Safety of Life at Sea) -m盲盲r盲ykset merell盲 ja kaupallisissa merenkulkuoperaatioissa.
+
+related:
+  title: Aiheeseen liittyv盲盲
+  links:
+    - text: Turvallisuusvinkkien opas
+      url: /guides/safety-tips
+    - text: Teknologia
+      url: /technology
+    - text: Kaikki tuotteet
+      url: /products
+    - text: Oppaat
+      url: /guides

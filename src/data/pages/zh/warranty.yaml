@@ -1,0 +1,98 @@
+label: '质保'
+headline: 'Seekingtex 制造商有限质保'
+subtitle: 'Seekingtex 为我们生产的每一件功能性面料艇产品的质量提供保障。此有限质保阐明了您的 Seekingtex 产品的条款和覆盖范围。'
+seo:
+  headline: 'Seekingtex 功能性面料质保 — 5年有限质保 | Seekingtex'
+  description: 'Seekingtex 对主要气囊布料的完整性、接缝和玻璃钢面料体结构完整性提供 5 年有限质保。同时涵盖功能性阀和工厂安装的配件。Seekingtex 功能性面料质保的完整条款和条件。'
+  datePublished: '2024-01-01'
+  dateModified: '2026-06-01'
+body: |
+  <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+    本有限质保适用于直接从 Seekingtex 或 Seekingtex 授权经销商处购买的 Seekingtex 品牌全新功能性面料艇产品。生效日期为可验证的原始零售购买日期。
+  </p>
+
+  <div class="bg-sky-50 dark:bg-gray-900 border border-sky-200 dark:border-gray-800 rounded-xl p-6 mb-10">
+    <h2 class="text-xl font-bold mb-3">质保范围与期限</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 年</h3>
+        <p class="text-sm text-gray-600 mt-1">主要气囊布料完整性（CSM/PVC）</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 年</h3>
+        <p class="text-sm text-gray-600 mt-1">玻璃钢面料体结构完整性</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 年</h3>
+        <p class="text-sm text-gray-600 mt-1">功能性气囊接缝气密性</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 年</h3>
+        <p class="text-sm text-gray-600 mt-1">功能性阀功能性</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">1 年</h3>
+        <p class="text-sm text-gray-600 mt-1">工厂安装的配件和辅助装置</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-amber-700 dark:text-amber-400">1 年*</h3>
+        <p class="text-sm text-gray-600 mt-1">商业、租赁或面料队使用 — 所有部件</p>
+      </div>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">*商业、政府、包租、租赁或教学使用将质保期缩短至 1 年。在比赛或竞赛中使用将完全使质保失效。</p>
+  </div>
+
+  <h2>涵盖范围</h2>
+  <h3>主要气囊布料（5 年）</h3>
+  <p>Seekingtex 保证主要气囊布料不会出现影响产品维持正常功能性能力的孔隙劣化。这适用于 CSM（Hypalon）涂层布料和制造中使用的所有其他气囊材料。</p>
+
+  <h3>玻璃钢面料体结构完整性（5 年）</h3>
+  <p>对于带有玻璃钢（GRP）面料体的产品，基本复合结构保证不会因材料或工艺缺陷而导致结构故障。</p>
+
+  <h3>功能性气囊接缝气密性（5 年）</h3>
+  <p>功能性气囊的接缝保证不会出现因制造缺陷导致的通过接缝的大量漏气。定期检查和保持适当的功能性压力是享受质保的条件。</p>
+
+  <h3>功能性阀功能性（5 年）</h3>
+  <p>Seekingtex 原装功能性阀保证不会因材料或制造缺陷而无法按设计保持气压。</p>
+
+  <h3>工厂安装的配件（1 年）</h3>
+  <p>Seekingtex 制造并在工厂原装安装的部件和装置在一年内保证没有材料和工艺缺陷。这不包括第三方产品，这些产品仅由其各自制造商的保修覆盖。</p>
+
+  <h2>不涵盖范围</h2>
+  <ul>
+    <li>外观缺陷，包括变色、污渍、褪色、起霜或任何外观改变</li>
+    <li>穿刺、割伤、撕裂或其他物理损坏</li>
+    <li>因摩擦或接触导致的龟裂、磨损、擦伤或劣化</li>
+    <li>因暴露于紫外线、天气或大气条件导致的降解</li>
+    <li>因接触燃料、溶剂、酸、碱或化学品造成的损坏</li>
+    <li>因疏忽、不当使用、滥用、事故或正常磨损造成的损坏</li>
+    <li>胶衣或漆面问题（起泡、龟裂、变色、褪色）</li>
+    <li>因撞击、压力、不当支撑或拖车运输造成的损坏</li>
+    <li>因不当功能性/放气或使用未经批准的功能性设备造成的损坏</li>
+    <li>第三方设备、部件或系统（由其各自制造商覆盖）</li>
+  </ul>
+
+  <h2>制造商的义务与补救措施</h2>
+  <p>Seekingtex 的唯一和排他性义务是维修或更换（由 Seekingtex 选择）被确定为在材料或工艺上存在缺陷且在本质保范围内的任何部件。维修或更换由 Seekingtex 或其指定的授权服务中心执行。维修或更换的部件仅对原始质保期的剩余部分提供质保。</p>
+
+  <h2>质保条件</h2>
+  <ul>
+    <li><strong>注册：</strong> 必须按照质保条款的要求正确注册产品。</li>
+    <li><strong>维护：</strong> 必须按照 Seekingtex 发布的指南维护产品，包括定期检查和保持适当的功能性压力。</li>
+    <li><strong>配合：</strong> 购买者必须在与质保索赔有关的所有事项上与 Seekingtex 充分、及时地配合。</li>
+    <li><strong>原始购买者：</strong> 本质保仅适用于原始最终用户购买者，且不可转让。</li>
+  </ul>
+
+  <h2>商业用途</h2>
+  <p>如果产品用于商业、政府、非营利、包租、租赁、教学或私人休闲以外的任何目的，所有部件的质保期将从原始购买日期起缩短至一 (1) 年。在比赛、速度或耐力竞赛中使用将立即且不可撤销地完全使质保失效。</p>
+
+  <h2>如何提出质保索赔</h2>
+  <p>凭购买凭证和问题的详细说明联系 Seekingtex 或您的授权经销商。Seekingtex 将审核索赔并提供检查和维修指导。</p>
+  <p>如需质保服务咨询，请通过我们的<a href="/contact" class="text-sky-600 underline">联系页面</a>联系我们，并提供您的订单号和产品详细信息。</p>
+
+  <h2>第三方产品</h2>
+  <p>由第三方制造的设备、部件或系统（即使由 Seekingtex 安装）仅由其各自制造商提供的保修覆盖。Seekingtex 明确拒绝对此类第三方产品承担任何质保责任。</p>
+
+  <p class="text-sm text-gray-500 mt-8 border-t border-gray-200 dark:border-gray-800 pt-6">
+    本质保声明是完整的 Seekingtex 制造商有限质保的摘要。完整的法律质保文件管辖所有质保条款和条件。规格如有变更，恕不另行通知。Seekingtex 是 Qingdao Vatrad Group 旗下的品牌。
+  </p>

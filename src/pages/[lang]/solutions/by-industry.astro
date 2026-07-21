@@ -1,0 +1,164 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { defaultLang, ui } from '~/i18n/config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('solutionsByIndustry.title') || 'Solutions by Industry — Functional Fabrics for Every Sector'} | ${SITE.name}`,
+  description: t('solutionsByIndustry.desc') || 'Find the right functional fabric solution for your industry. Healthcare, hospitality, industrial, uniform — Seekingtex manufactures certified textiles for every sector.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: t('solutionsByIndustry.title') || 'Solutions by Industry' },
+];
+
+const industries = [
+  {
+    name: t('solutionsByIndustry.healthcare.name') || 'Healthcare & Medical',
+    color: 'from-red-50 to-orange-50',
+    border: 'border-red-200',
+    icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z',
+    description: t('solutionsByIndustry.healthcare.desc') || 'Antimicrobial, fluid-repellent, and breathable fabrics for medical uniforms, scrubs, patient gowns, and healthcare protective garments.',
+    craft: [t('solutionsByIndustry.healthcare.craft1') || 'Antimicrobial performance fabrics', t('solutionsByIndustry.healthcare.craft2') || 'Fluid-repellent protective textiles', t('solutionsByIndustry.healthcare.craft3') || 'Comfort stretch uniform fabrics'],
+    certs: [t('solutionsByIndustry.healthcare.cert1') || 'OEKO-TEX Standard 100', t('solutionsByIndustry.healthcare.cert2') || 'ISO 9001:2015'],
+    link: `/${lang}/search-rescue-operations`,
+  },
+  {
+    name: t('solutionsByIndustry.hospitality.name') || 'Hospitality & Tourism',
+    color: 'from-amber-50 to-yellow-50',
+    border: 'border-amber-200',
+    icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
+    description: t('solutionsByIndustry.hospitality.desc') || 'Professional fabrics for hotel uniforms, restaurant staff apparel, and hospitality corporate wear requiring professional appearance and durability.',
+    craft: [t('solutionsByIndustry.hospitality.craft1') || 'Wrinkle-resistant uniform fabrics', t('solutionsByIndustry.hospitality.craft2') || 'Easy-care performance textiles', t('solutionsByIndustry.hospitality.craft3') || 'Stretch comfort fabrics', t('solutionsByIndustry.hospitality.craft4') || 'Stain-resistant apparel materials'],
+    certs: [t('solutionsByIndustry.hospitality.cert1') || 'OEKO-TEX certified', t('solutionsByIndustry.hospitality.cert2') || 'REACH compliant'],
+    link: `/${lang}/products`,
+  },
+  {
+    name: t('solutionsByIndustry.industrial.name') || 'Industrial & Manufacturing',
+    color: 'from-sky-50 to-blue-50',
+    border: 'border-sky-200',
+    icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    description: t('solutionsByIndustry.industrial.desc') || 'Heavy-duty fabrics for workwear, safety apparel, industrial uniforms, and protective garments for manufacturing environments.',
+    craft: [t('solutionsByIndustry.industrial.craft1') || 'High-tenacity workwear fabrics', t('solutionsByIndustry.industrial.craft2') || 'Flame-resistant textiles', t('solutionsByIndustry.industrial.craft3') || 'Hi-vis safety fabrics', t('solutionsByIndustry.industrial.craft4') || 'Chemical-resistant protective materials'],
+    certs: [t('solutionsByIndustry.industrial.cert1') || 'ISO 9001:2015', t('solutionsByIndustry.industrial.cert2') || 'OEKO-TEX Standard 100'],
+    link: `/${lang}/commercial-workboats`,
+  },
+  {
+    name: t('solutionsByIndustry.corporate.name') || 'Corporate & Uniform',
+    color: 'from-gray-50 to-slate-50',
+    border: 'border-gray-200',
+    icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+    description: t('solutionsByIndustry.corporate.desc') || 'Professional uniform fabrics for corporate branding, institutional apparel, and workforce identity programs requiring consistent quality and appearance.',
+    craft: [t('solutionsByIndustry.corporate.craft1') || 'Corporate uniform fabrics', t('solutionsByIndustry.corporate.craft2') || 'Institutional apparel textiles', t('solutionsByIndustry.corporate.craft3') || 'Custom branded uniform materials'],
+    certs: [t('solutionsByIndustry.corporate.cert1') || 'OEKO-TEX Standard 100', t('solutionsByIndustry.corporate.cert2') || 'REACH compliant', t('solutionsByIndustry.corporate.cert3') || 'Color fastness certified'],
+    link: `/${lang}/oem-odm-manufacturer`,
+  },
+  {
+    name: t('solutionsByIndustry.outdoor.name') || 'Outdoor & Sportswear',
+    color: 'from-teal-50 to-emerald-50',
+    border: 'border-teal-200',
+    icon: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
+    description: t('solutionsByIndustry.outdoor.desc') || 'Performance fabrics for sportswear, outdoor gear, and activewear requiring moisture management, breathability, and durability.',
+    craft: [t('solutionsByIndustry.outdoor.craft1') || 'Moisture-wicking performance knits', t('solutionsByIndustry.outdoor.craft2') || 'UV-protective outdoor fabrics', t('solutionsByIndustry.outdoor.craft3') || 'Breathable activewear textiles', t('solutionsByIndustry.outdoor.craft4') || 'Water-repellent shell fabrics'],
+    certs: [t('solutionsByIndustry.outdoor.cert1') || 'OEKO-TEX certified', t('solutionsByIndustry.outdoor.cert2') || 'UPF 50+ rated'],
+    link: `/${lang}/products`,
+  },
+  {
+    name: t('solutionsByIndustry.sustainable.name') || 'Sustainable & Eco-Friendly',
+    color: 'from-cyan-50 to-blue-50',
+    border: 'border-cyan-200',
+    icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197',
+    description: t('solutionsByIndustry.sustainable.desc') || 'Eco-friendly fabrics made from recycled fibers, organic cotton, and sustainable materials meeting global environmental standards.',
+    craft: [t('solutionsByIndustry.sustainable.craft1') || 'Recycled polyester fabrics', t('solutionsByIndustry.sustainable.craft2') || 'Organic cotton textiles', t('solutionsByIndustry.sustainable.craft3') || 'GOTS certified materials'],
+    certs: [t('solutionsByIndustry.sustainable.cert1') || 'GOTS certified', t('solutionsByIndustry.sustainable.cert2') || 'OCS 100', t('solutionsByIndustry.sustainable.cert3') || 'OEKO-TEX Standard 100'],
+    link: `/${lang}/products`,
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{t('solutionsByIndustry.title') || 'Solutions by Industry'}</h1>
+    <p class="mt-4 text-lg text-gray-500">{t('solutionsByIndustry.desc') || 'Find the right functional fabric for your industry.'}</p>
+
+    <div class="mt-16 space-y-8">
+      {industries.map((ind) => (
+        <div class={`bg-gradient-to-br ${ind.color} rounded-2xl border ${ind.border} p-8 hover:shadow-md transition-shadow`}>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-white/80 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d={ind.icon} /></svg>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-xl font-semibold text-gray-900">{ind.name}</h2>
+              <p class="mt-2 text-sm text-gray-600">{ind.description}</p>
+              <div class="mt-4">
+                <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">{t('solutionsByIndustry.recommendedCraft') || 'Recommended Fabrics'}</span>
+                <ul class="mt-2 space-y-1">
+                  {ind.craft.map((c) => (
+                    <li class="flex items-center gap-2 text-sm text-gray-600">
+                      <span class="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></span>
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="mt-3 flex items-center gap-4">
+                <span class="text-xs text-gray-400">{ind.certs.join(' · ')}</span>
+              </div>
+              <a href={ind.link} class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:text-sky-700 hover:underline">{t('solutionsByIndustry.learnMore') || 'Learn more'} →</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <section class="mt-16 bg-gray-50 rounded-2xl p-8 border border-gray-200 text-center">
+      <h2 class="text-2xl font-semibold text-gray-900">{t('solutionsByIndustry.ctaTitle') || 'Need a Custom Solution?'}</h2>
+      <p class="mt-4 text-gray-500">{t('solutionsByIndustry.ctaDesc') || 'Our OEM/ODM team can design and manufacture custom functional fabrics for your specific industry requirements.'}</p>
+      <div class="mt-6 flex justify-center gap-4">
+        <a href={`/${lang}/oem-odm-manufacturer`} class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">{t('solutionsByIndustry.ctaBtn') || 'OEM/ODM Services'}</a>
+        <a href={`/${lang}/contact`} class="px-8 py-4 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">{t('solutionsByIndustry.contactBtn') || 'Contact Us'}</a>
+      </div>
+    </section>
+  </section>
+
+  <ExperienceLayer
+    title={t('solutionsByIndustry.expTitle') || 'Industry Solutions in Action'}
+    subtitle={t('solutionsByIndustry.expSub') || 'Real examples of how Seekingtex fabrics perform across different industry sectors.'}
+    stories={[
+      {
+        quote: t('solutionsByIndustry.story1.quote') || 'We switched our hospital uniforms to Seekingtex antimicrobial fabrics — infection rates in our surgical unit dropped significantly.',
+        narrative: t('solutionsByIndustry.story1.narrative') || 'A major hospital network adopted Seekingtex antimicrobial performance fabrics for all surgical staff uniforms. After 12 months, the facility reported a measurable reduction in hospital-acquired infections. The fabric maintained its antimicrobial effectiveness through 100+ industrial washes.',
+        context: t('solutionsByIndustry.story1.context') || 'Hospital uniform program, Europe, 2024-2025',
+        source: t('solutionsByIndustry.story1.source') || 'Hospital Supply Chain Director'
+      },
+      {
+        quote: t('solutionsByIndustry.story2.quote') || 'Our hotel staff uniforms look professional even after double shifts. The wrinkle-resistant fabric is a game-changer.',
+        narrative: t('solutionsByIndustry.story2.narrative') || 'A 5-star hotel chain in Dubai switched to Seekingtex wrinkle-resistant uniform fabrics for all 2,000+ staff members. After one year, replacement costs dropped 40% and staff satisfaction scores improved due to the fabric\'s comfort and professional appearance.',
+        context: t('solutionsByIndustry.story2.context') || 'Hotel uniform program, UAE, 2023-2025',
+        source: t('solutionsByIndustry.story2.source') || 'Hotel Operations Manager'
+      },
+    ]}
+  />
+  <RelatedPages
+    title={t('solutionsByIndustry.relatedTitle') || 'Explore More'}
+    subtitle={t('solutionsByIndustry.relatedSub') || 'Related solutions and resources'}
+    links={[
+      { title: t('solutionsByIndustry.rel1') || 'Solutions by Use Case', description: t('solutionsByIndustry.rel1desc') || 'Match your specific use case to the right Seekingtex fabric solution.', href: `/${lang}/solutions/by-use-case`, label: t('solutionsByIndustry.rel1label') || 'Decision Tool' },
+      { title: t('solutionsByIndustry.rel2') || 'Industrial Textiles', description: t('solutionsByIndustry.rel2desc') || 'Heavy-duty fabrics for industrial, workwear, and protective applications.', href: `/${lang}/commercial-workboats`, label: t('solutionsByIndustry.rel2label') || 'Industrial Fabrics' },
+      { title: t('solutionsByIndustry.rel3') || 'OEM/ODM Manufacturing', description: t('solutionsByIndustry.rel3desc') || 'Custom fabric manufacturing services for global brands and organizations.', href: `/${lang}/oem-odm-manufacturer`, label: t('solutionsByIndustry.rel3label') || 'OEM' },
+      { title: t('solutionsByIndustry.rel4') || 'Engineering Perfection', description: t('solutionsByIndustry.rel4desc') || 'Our engineering philosophy — precision textile manufacturing and rigorous quality control.', href: `/${lang}/engineering-perfection`, label: t('solutionsByIndustry.rel4label') || 'Philosophy' },
+    ]}
+  />
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>{t('solutionsByIndustry.aiBlock') || 'Solutions by industry for Seekingtex functional fabrics. Six industry verticals: Healthcare & Medical, Hospitality & Tourism, Industrial & Manufacturing, Corporate & Uniform, Outdoor & Sportswear, Sustainable & Eco-Friendly. All fabrics OEKO-TEX certified and ISO manufactured.'}</p>
+  </section>
+</Layout>

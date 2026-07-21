@@ -1,0 +1,31 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { getPageContent } from '~/i18n/page-content';
+
+const lang = 'en';
+const page = getPageContent(lang, 'warranty') || {};
+
+const metadata = {
+  title: `Warranty — ${SITE.name}`,
+  description: 'Seekingtex 5-year limited warranty coverage for functional fabrics. Fabric defects, coating performance, dimensional stability, and finish warranty terms.',
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Warranty' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Warranty'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-gray-100">
+      {page.headline || 'Manufacturer Limited Warranty'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+      {page.subtitle || 'Seekingtex stands behind the quality of every fabric we manufacture.'}
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+</Layout>

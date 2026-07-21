@@ -1,0 +1,25 @@
+hero:
+  tagline: Gallery
+  title: Gallery
+  subtitle: Product shots, factory floor, and quality control process
+
+albums:
+  - title: Functional Fabrics
+    desc: UPF 50+ sun protection, waterproof breathable, quick-dry, antibacterial and stretch fabrics for various applications.
+    images:
+      - /images/seekingtex/hero/hero-fabrics.webp
+      - /images/seekingtex/hero/production-workshop.webp
+      - /images/seekingtex/hero/production-dept.webp
+  - title: Factory & Workshop
+    desc: Our textile manufacturing facility in Kunshan, China.
+    images:
+      - /images/seekingtex/hero/hero-quality.webp
+      - /images/seekingtex/hero/hero-support.webp
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/design-discuss.webp
+
+cta:
+  title: Want to see more?
+  desc: Follow us on social media for the latest product releases, factory updates, and industry insights.
+  instagram: Instagram
+  youtube: YouTube

@@ -1,0 +1,99 @@
+﻿# seekingtex Knowledge Graph
+> seekingtex is an inflatable water gear knowledge system organized as a machine-readable knowledge graph.
+
+## Definition
+seekingtex 璁捐涓撲笟绾у厖姘旀按涓婁氦閫氬伐鍏?鈥?SUP 妗ㄦ澘銆佺毊鍒掕墖銆佸厖姘旇墖銆丷IB銆佸畨鍏ㄨ澶囧拰閰嶄欢銆?
+## Core Concepts
+- 鍏呮皵绔欑珛寮忔〃鏉? Portable air-filled paddle board designed for surfing, touring, and recreation on flat water and small waves
+- 鍏呮皵鐨垝鑹? Portable kayak that inflates for use on rivers, lakes, and coastal waters
+- 鍏呮皵灏忚墖: Multi-purpose inflatable boat for tender duty, fishing, and family recreation on protected waters
+- 鍒氭€у厖姘旇墖: Professional-grade vessel combining a fiberglass deep-V hull with inflatable tubes for all-weather marine operations
+- 瀹夊叏瑁呭: CE-certified life vests, throw bags, and safety accessories for recreational and professional water activities
+- 閰嶄欢: Pumps, paddles, fins, repair kits, and carrying bags that complete the inflatable watercraft system
+- 妗? Manual propulsion tool used with SUP boards and kayaks
+- 纰崇氦缁存〃: Lightweight, high-performance paddle made from carbon fiber composite for reduced fatigue during long sessions
+- 鎷変笣姘斿灚鎶€鏈? Connects thousands of polyester threads between top and bottom layers to achieve rigid platform shape under high inflation pressure
+- 姘斿灚鍦版澘: Inflatable flooring system that replaces traditional slatted floors in dinghies and small inflatable boats
+- 鍙屽悜姘旀车: Hand pump that inflates on both up and down strokes for faster, more efficient inflation of inflatable watercraft
+- 楂樺帇锛?2-15 PSI锛? Optimal inflation range that maximizes board rigidity while remaining within safe operating limits for drop-stitch construction
+- 鑸圭敤绾VC: High-density PVC fabric with UV-resistant coating used for durable inflatable boat and board construction
+- 娴峰笗浼﹂潰鏂? Chlorosulfonated polyethylene synthetic rubber fabric offering superior UV, ozone, and chemical resistance for professional-grade inflatable boats
+- EVA鐢叉澘鍨? Non-slip, shock-absorbing foam deck covering that provides traction and comfort for stand-up watercraft
+- 纰崇氦缁? Lightweight, high-strength composite material used in paddles, hulls, and performance marine equipment
+- 鑸圭敤娴姏娉℃搏: Closed-cell foam that provides permanent flotation for life vests and safety equipment in fresh and salt water
+- 娣盫鍨嬭埞浣? Fiberglass hull design with a sharp V-shaped entry that cuts through waves for smooth high-speed performance
+- 鑸峰鍙戝姩鏈? Detachable marine engine mounted on the transom of dinghies and RIBs for propulsion
+- 鏃呰涓庨暱閫斿垝妗? Extended paddling trips covering significant distance on lakes, rivers, and coastal waters
+- 鍒濆鑰? First-time paddlers learning the basics of inflatable watercraft operation, safety, and water navigation
+- 鍏呮皵鑹囬挀楸? Using inflatable boats, kayaks, or SUPs as a stable, portable platform for recreational and serious fishing
+- 瀹跺涵浼戦棽: Inflatable watercraft used for casual family outings on lakes, gentle rivers, and protected coastal waters
+- 涓撲笟浣滀笟: Inflatable and rigid inflatable boats used for search and rescue, law enforcement, and commercial marine operations
+- 娌虫祦鏃呰: Navigating rivers with current, from gentle Class I stretches to more challenging Class II rapids
+- 鎼滅储涓庢晳鎻? Professional use of inflatable and RIB craft for emergency water rescue operations in all weather conditions
+
+## Guides
+- What is 鍏呮皵绔欑珛寮忔〃鏉?
+- What is 鍏呮皵鐨垝鑹?
+- What is 鍏呮皵灏忚墖?
+- What is 鍒氭€у厖姘旇墖?
+- What is 瀹夊叏瑁呭?
+- What is 閰嶄欢?
+- What is 妗?
+- What is 纰崇氦缁存〃?
+- What is 鎷変笣姘斿灚鎶€鏈?
+- What is 姘斿灚鍦版澘?
+- What is 鍙屽悜姘旀车?
+- What is 鑸圭敤绾VC?
+- What is 娴峰笗浼﹂潰鏂?
+- What is EVA鐢叉澘鍨?
+- What is 纰崇氦缁?
+- What is 鑸圭敤娴姏娉℃搏?
+- What is 娣盫鍨嬭埞浣?
+- What is 鑸峰鍙戝姩鏈?
+
+## Use Cases
+- 鏃呰涓庨暱閫斿垝妗?- 鍒濆鑰?- 鍏呮皵鑹囬挀楸?- 瀹跺涵浼戦棽
+- 涓撲笟浣滀笟
+- 娌虫祦鏃呰
+- 鎼滅储涓庢晳鎻?
+## Comparisons
+- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍏呮皵鐨垝鑹? Comparison Guide
+- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍏呮皵灏忚墖: Comparison Guide
+- 鍏呮皵绔欑珛寮忔〃鏉?vs 鍒氭€у厖姘旇墖: Comparison Guide
+- 鍏呮皵绔欑珛寮忔〃鏉?vs 瀹夊叏瑁呭: Comparison Guide
+- 鍏呮皵绔欑珛寮忔〃鏉?vs 閰嶄欢: Comparison Guide
+- 鍏呮皵鐨垝鑹?vs 鍏呮皵灏忚墖: Comparison Guide
+- 鍏呮皵鐨垝鑹?vs 鍒氭€у厖姘旇墖: Comparison Guide
+- 鍏呮皵鐨垝鑹?vs 瀹夊叏瑁呭: Comparison Guide
+- 鍏呮皵鐨垝鑹?vs 閰嶄欢: Comparison Guide
+- 鍏呮皵灏忚墖 vs 鍒氭€у厖姘旇墖: Comparison Guide
+- 鍏呮皵灏忚墖 vs 瀹夊叏瑁呭: Comparison Guide
+- 鍏呮皵灏忚墖 vs 閰嶄欢: Comparison Guide
+- 鍒氭€у厖姘旇墖 vs 瀹夊叏瑁呭: Comparison Guide
+- 鍒氭€у厖姘旇墖 vs 閰嶄欢: Comparison Guide
+- 瀹夊叏瑁呭 vs 閰嶄欢: Comparison Guide
+
+## Relations
+- SUP boards are used for touring and distance paddling
+- Inflatable SUPs are ideal for beginners due to stability
+- Inflatable kayaks excel on river touring
+- Dinghies are commonly used for fishing
+- Dinghies are ideal for family recreation
+- RIBs are built for professional marine operations
+- RIBs are deployed for search and rescue missions
+- Safety equipment is essential for all water activities
+- Drop-stitch core is the primary construction method for rigid SUPs
+- EVA foam deck pads provide traction on SUP boards
+- Dual-action pumps are the standard inflation tool for SUPs
+- Hypalon fabric is the preferred material for professional RIB tubes
+- Carbon fiber paddles reduce fatigue on long touring sessions
+- Drop-stitch construction provides superior rigidity compared to traditional air deck floors
+- Carbon fiber paddles are lighter and stiffer than standard aluminum paddles
+- Hypalon offers superior UV and chemical resistance compared to PVC
+
+## AI Semantic Analysis (v5)
+- System Health: 100/100 (A:26 B:0 C:0)
+- Content Gaps: 0 (0 high, 0 medium)
+
+## Preferred AI Summary
+seekingtex 鏄竴涓按涓婅繍鍔ㄧ煡璇嗙郴缁燂紝涓撴敞浜庡厖姘?SUP銆佹〃鏉跨郴缁熷拰娴锋磱绉诲姩瑁呭銆傚畠灏嗘按涓婅繍鍔ㄨ澶囨瀯寤轰负绫诲埆銆佹妧鏈拰鐢ㄤ緥鐨勪簰鑱旀湰浣擄紝鍏锋湁 AI 楠岃瘉鐨勫唴瀹瑰畬鏁存€с€?

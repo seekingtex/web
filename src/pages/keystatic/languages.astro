@@ -1,0 +1,196 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+
+const token = readTokenFromCookies(Astro.cookies);
+const file = 'src/data/site/languages.yaml';
+
+let initialLangs: Array<{ code: string; name: string; locale: string; textDirection?: string; enabled?: boolean }> = [];
+let sha = '';
+let loadError: string | null = null;
+if (token) {
+  try {
+    const client = new GitHubClient(token);
+    const f = await client.readFile(file);
+    const yamlMod = await import('js-yaml');
+    const parsed = yamlMod.load(f.content);
+    if (Array.isArray(parsed)) initialLangs = parsed as typeof initialLangs;
+    sha = f.sha;
+  } catch (err) {
+    loadError = err instanceof Error ? err.message : 'Load failed';
+  }
+}
+---
+
+<AdminLayout title="Language Manager" active="languages" username={verified?.username}>
+  <div class="mb-6">
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      Enable or disable language versions. Only enabled languages are built and deployed. English is always enabled.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 p-4 rounded-lg bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 text-sm">
+        {loadError}
+      </div>
+    )
+  }
+
+  <form id="lang-form" data-file={file} data-sha={sha}>
+    <div id="lang-list" class="space-y-2 mb-6">
+      {
+        initialLangs.map((l) => (
+          <div class="flex items-center justify-between rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-5 py-3">
+            <div class="flex items-center gap-4">
+              <span class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-sm font-bold">
+                {l.code.toUpperCase()}
+              </span>
+              <div>
+                <div class="text-sm font-medium">{l.code === 'en' ? `${l.name} (Default)` : l.name}</div>
+                <div class="text-xs text-gray-400 font-mono">
+                  {l.locale} · {l.textDirection}
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              {l.code === 'en' ? (
+                <span class="text-xs px-2.5 py-1 rounded-full bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300 font-medium">
+                  Always enabled
+                </span>
+              ) : (
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="enabled"
+                    value={l.locale}
+                    checked={l.enabled !== false}
+                    class="sr-only peer"
+                  />
+                  <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
+                  <span class="ml-3 text-sm font-medium text-gray-700 dark:text-gray-300">
+                    {l.enabled !== false ? 'Enabled' : 'Disabled'}
+                  </span>
+                </label>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button
+        type="submit"
+        id="submit-btn"
+        class="px-5 py-2.5 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+        >Save & Push</button
+      >
+      <span id="save-status" class="text-sm hidden"></span>
+    </div>
+  </form>
+</AdminLayout>
+
+<script is:inline>
+  (function () {
+    const form = document.getElementById('lang-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const status = document.getElementById('save-status');
+
+    if (!form || !submitBtn || !status) return;
+
+    function show(el) {
+      el.classList.remove('hidden');
+    }
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Pushing...';
+      show(status);
+      status.textContent = 'Saving...';
+      status.className = 'text-sm text-blue-600';
+
+      const checkboxes = form.querySelectorAll('input[name="enabled"]');
+      const enabledLocales = [];
+      checkboxes.forEach(function (cb) {
+        if (cb.checked) enabledLocales.push(cb.value);
+      });
+
+      const sha = form.dataset.sha || '';
+
+      // Reconstruct the full languages list from the rendered DOM
+      const langDivs = document.querySelectorAll('#lang-list > div');
+      const languages = [];
+      langDivs.forEach(function (div) {
+        const codeEl = div.querySelector('.font-mono');
+        if (!codeEl) return;
+        const parts = codeEl.textContent.trim().split('·');
+        const locale = parts[0].trim();
+        const dir = parts.length > 1 ? parts[1].trim() : 'ltr';
+        const nameEl = div.querySelector('.font-medium');
+        const name = nameEl ? nameEl.textContent.replace(/\s*\(.*?\)\s*$/, '').trim() : locale.toUpperCase();
+        const checkbox = div.querySelector('input[name="enabled"]');
+        const enabled = checkbox ? checkbox.checked : true;
+        languages.push({
+          code: locale.toUpperCase(),
+          name: name,
+          locale: locale,
+          textDirection: dir,
+          enabled: enabled,
+        });
+      });
+
+      try {
+        const res = await fetch('/api/admin/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            format: 'yaml',
+            path: 'src/data/site/languages.yaml',
+            sha: sha,
+            data: languages,
+            commitMessage: 'Update language enabled status',
+          }),
+        });
+        const result = await res.json();
+
+        if (!res.ok || !result.success) {
+          status.textContent = result.error || 'Save failed';
+          status.className = 'text-sm text-red-600';
+          return;
+        }
+
+        if (result.sha) {
+          form.dataset.sha = result.sha;
+        }
+
+        status.textContent = 'Saved! The CI/CD pipeline will rebuild only enabled languages.';
+        status.className = 'text-sm text-green-600';
+        setTimeout(function () {
+          window.location.reload();
+        }, 1500);
+      } catch {
+        status.textContent = 'Network error';
+        status.className = 'text-sm text-red-600';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Save & Push';
+      }
+    });
+
+    // Update label text on toggle
+    document.querySelectorAll('input[name="enabled"]').forEach(function (cb) {
+      cb.addEventListener('change', function () {
+        const label = this.closest('label').querySelector('span');
+        if (label) label.textContent = this.checked ? 'Enabled' : 'Disabled';
+      });
+    });
+  })();
+</script>

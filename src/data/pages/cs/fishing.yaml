@@ -1,0 +1,20 @@
+hero:
+  tagline: Ryba艡en铆
+  title: Ryb谩艡sk茅 膷luny
+  subtitle: Stabiln铆, tich茅 a prostorn茅 nafukovac铆 膷luny navr啪en茅 pro v谩拧niv茅 ryb谩艡e.
+  image: /images/seekingtex/products/fishing-banner.webp
+  imageAlt: Ryb谩艡sk媒 膷lun Seekingtex
+
+features:
+  - icon: tabler:waves
+    title: Stabiln铆 platforma
+    description: 艩irok媒 design trupu poskytuje v媒jime膷nou stabilitu pro ryba艡en铆 vsed臎 i vestoje.
+  - icon: tabler:speakerphone
+    title: Tich媒 provoz
+    description: Nafukovac铆 konstrukce tlum铆 hluk a minimalizuje ru拧en铆 ryb.
+  - icon: tabler:backpack
+    title: P艡enosn媒
+    description: Sbal铆 se do kompaktn铆ho pouzdra pro snadnou p艡epravu a skladov谩n铆.
+  - icon: tabler:adjustments
+    title: P艡izp暖sobiteln媒
+    description: Lze vybavit dr啪谩ky na pruty, dr啪谩ky na sonar a 煤lo啪n媒mi syst茅my.

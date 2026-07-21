@@ -1,0 +1,29 @@
+slides:
+  - image: /images/seekingtex/hero/design-concept.webp
+    label: Design & Innovation
+    categories:
+      - SUN_PROTECTION
+      - WATERPROOF
+      - QUICK_DRY
+      - ANTIBACTERIAL
+  - image: /images/seekingtex/hero/rd-team.webp
+    label: R&D Team
+    categories:
+      - SUN_PROTECTION
+      - WATERPROOF
+      - QUICK_DRY
+      - ANTIBACTERIAL
+  - image: /images/seekingtex/hero/production.webp
+    label: Production Workshop
+    categories:
+      - SUN_PROTECTION
+      - WATERPROOF
+      - QUICK_DRY
+      - ANTIBACTERIAL
+  - image: /images/seekingtex/hero/facility.webp
+    label: Seekingtex Factory
+    categories:
+      - SUN_PROTECTION
+      - WATERPROOF
+      - QUICK_DRY
+      - ANTIBACTERIAL

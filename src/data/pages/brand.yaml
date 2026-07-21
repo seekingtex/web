@@ -1,0 +1,32 @@
+hero:
+  tagline: Brand
+  title: '{BRAND}'
+  subtitle: Functional Fabrics for Performance & Protection
+  cta: Explore Fabrics →
+  cta_link: /products
+  secondary_cta: About {BRAND}
+  secondary_cta_link: /about
+
+position:
+  tagline: Position
+  subtitle: Functional Fabrics for Performance & Protection
+
+products_section:
+  tagline: Products
+  cta: All Fabrics →
+  cta_link: /products
+
+global_section:
+  tagline: Global
+  title: Available in {count} Countries
+
+social_section:
+  tagline: Social
+  title: What the industry is reading
+  read_guide: Read article →
+
+cta_section:
+  title: Start your fabric sourcing journey
+  subtitle: OEKO-TEX certified. SGS tested. Designed for real performance.
+  cta_suffix: '→'
+  secondary_cta: About {BRAND}

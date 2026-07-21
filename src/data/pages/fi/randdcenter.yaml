@@ -1,0 +1,126 @@
+hero:
+  tagline: T&K-keskus
+  title: T & K -keskus
+  subtitle: Keskittynyt edistykseen
+
+intro:
+  - Seekingtexin tutkimus- ja kehityskeskus (T&K) on voima, joka ohjaa missiotamme mullistaa vesiurheiluv盲lineet. Mahdollistamme vesiurheilun harrastajille maailmanlaajuisesti turvallisempia, mukavempia ja nautinnollisempia tuotteita hellitt盲m盲tt枚m盲n innovoinnin kautta kumisissa seisomalaudoissa (textile products) ja veneiss盲. Omistautunut insin枚枚ri-, suunnittelija- ja intohimoisien vesiurheilun asiantuntijoiden tiimimme muokkaa teollisuudenalan tulevaisuutta, nostaen jatkuvasti laadun, suorituskyvyn ja kest盲vyyden rimaa.
+  - T&K-tilamme kokoaa yhteen materiaalitieteilij盲t, laiva-arkkitehdit ja tuotantoinsin枚枚rit saman katon alle. Kankaanformuloinnista ja runkosimulaatiosta hitsausprosessien kehitt盲miseen ja t盲ysimittaisiin merikokeisiin 鈥?jokainen tuotekehityksen vaihe on datalla ohjattu ja testauksella validoitu.
+
+mission:
+  tagline: Missiomme
+  title: Innovaatioita vesiurheilun tulevaisuuteen
+  pillars:
+    - icon: lightning
+      title: Teknologinen edistys
+      desc: Uraauurtavia uusia materiaaleja, muotoiluja ja valmistusta paremman tuotteen suorituskyvyn ja pitk盲ik盲isyyden saavuttamiseksi.
+    - icon: design
+      title: K盲ytt盲j盲keskeinen muotoilu
+      desc: K盲ytt盲jien tarpeiden syv盲llinen ymm盲rt盲minen ja ylitt盲minen ergonomisen ja intuitiivisen tuotesuunnittelun avulla.
+    - icon: globe
+      title: Kest盲v盲t k盲yt盲nn枚t
+      desc: Ymp盲rist枚jalanj盲lkemme minimointi k盲ytt盲m盲ll盲 ymp盲rist枚yst盲v盲llisi盲 materiaaleja ja prosesseja.
+    - icon: shield
+      title: Tinkim盲t枚n turvallisuus
+      desc: Korkeimpien turvallisuusstandardien varmistaminen tiukan testauksen ja sertifioinnin avulla.
+
+pillars:
+  - title: Teknologinen edistys
+    desc: Uraauurtavia uusia materiaaleja, muotoiluja ja valmistusprosesseja paremman tuotteen suorituskyvyn ja pitk盲ik盲isyyden toimittamiseksi.
+    icon: tech
+  - title: Kehittyneet materiaalit
+    desc: Huippuluokan PVC:n, Hypalonin, komposiittien ja kest盲vien vaihtoehtojen tutkiminen parannettujen tuoteominaisuuksien saavuttamiseksi.
+    icon: materials
+  - title: Kest盲vyys
+    desc: 'Keskeinen sitoumus: Olemme omistautuneet ymp盲rist枚vastuullisuuteen kest盲v盲n valmistuksen ja kierr盲tett盲vien materiaalien kautta.'
+    icon: sustainability
+
+capabilities:
+  tagline: Kyvykkyydet
+  title: T&K-kyvykkyydet
+  subtitle: Nelj盲 keskeist盲 osaamisaluetta, jotka antavat meille t盲yden hallinnan tuotekehityksest盲 鈥?raaka-ainetutkimuksesta lopulliseen sertifiointiin.
+  groups:
+    - title: Materiaalitiede ja kangasteknologia
+      items:
+        - PVC- ja Hypalon-formulointianalyysi ja optimointi
+        - UV-stabilointi, palonestoaine- ja antimikrobisten lis盲aineiden kehitys
+        - Monikerroskankaan laminointi- ja adheesiotekniikka
+        - Nopeutettu ik盲盲ntymistestaus (UV, l盲mp枚, kosteus, suolasumu)
+    - title: Runkosuunnittelu ja hydrodynamiikka
+      items:
+        - Parametrinen 3D-runkosuunnittelu ja CFD-optimointi
+        - Elementtimenetelm盲analyysi rakenne- ja iskukuormille
+        - Pienoismallin allastestaus ja suorituskyvyn validointi
+        - Mukautettu runkokehitys erityisi盲 teht盲v盲profiileja varten
+    - title: Hitsaus- ja liitosteknologia
+      items:
+        - RF-dielektrisen hitsausprosessin kehitys ja optimointi
+        - Kuumailma-, kuumakiila- ja ultra盲盲nihitsausmenetelm盲t
+        - Liimojen ja saumanauhojen kelpuutus
+        - Hitsauslujuuden mallinnus ja k盲ytt枚i盲n ennustus
+    - title: Testaus, sertifiointi ja vaatimustenmukaisuus
+      items:
+        - Laadunhallinta ja CE-vaatimustenmukaisuustestaus
+        - Riippumaton kolmannen osapuolen testaus- ja sertifiointituki
+        - Mukautettu testausprotokollakehitys hankintakelpuutukseen
+        - K盲yt枚naikainen vika-analyysi ja perussyyn tutkimus
+
+rd_numbers:
+  tagline: Innovaatiot
+  title: T&K numeroina
+  stats:
+    - value: '14'
+      label: T&K-insin枚枚ri盲 ja tutkijaa
+    - value: '8'
+      label: Aktiivista patenttia ja hakemusta
+    - value: '6'
+      label: Erikoistunutta laboratoriota
+    - value: 12 v
+      label: Tiimin keskim盲盲r盲inen kokemus
+
+rd_services:
+  tagline: Mukautettu T&K
+  title: T&K-palvelut kumppaneille
+  services:
+    - title: Mukautettu materiaalikehitys
+      desc: Kehit盲mme mukautettuja kangasformulaatioita, laminaattipinoja ja liimaj盲rjestelmi盲, jotka on r盲盲t盲l枚ity k盲ytt枚ymp盲rist枚枚si ja suorituskykytavoitteisiisi.
+    - title: OEM / ODM -tuotesuunnittelu
+      desc: Konseptiluonnoksista tuotantovalmiisiin suunnittelupaketteihin 鈥?tiimimme voi suunnitella, prototypoida ja validoida veneit盲 br盲ndisi alla.
+    - title: Kolmannen osapuolen testaus ja sertifiointi
+      desc: K盲yt盲 ISO-yhteensopivia testilaitoksiamme riippumatomaan materiaalitestaukseen, tuotevalidointiin ja sertifiointitukeen.
+  cta: Keskustele T&K-tarpeistasi 鈫?
+  cta_link: /contact
+
+vision:
+  tagline: Visiomme
+  title: Muokkaamme vesiurheilun tulevaisuutta
+  body: Seekingtex pyrkii johtamaan kumivene- ja textile products-teollisuutta jatkuvan innovoinnin, horjumattoman laadun ja lujan sitoutumisen turvallisuuteen ja kest盲vyyteen avulla 鈥?rikastaen viime k盲dess盲 vesiurheilun harrastajien kokemuksia maailmanlaajuisesti. Seekingtexin T&K-keskus on paikka, jossa intohimo kohtaa innovaation, asettaen uusia standardeja vesiurheiluteollisuudelle.
+
+labs_section:
+  tagline: Laboratoriot
+  title: Laboratoriomme
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: PVC-kangaslaboratorio
+      description: Jatkuva PVC- ja Hypalon-putkikankaiden tutkimus ja testaus vetolujuuden, UV-kest盲vyyden, kulumisen ja matalan l盲mp枚tilan joustavuuden osalta pitk盲aikaisen luotettavuuden varmistamiseksi meriymp盲rist枚iss盲.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Runkosuunnittelustudio
+      description: CAD-pohjainen muotoilu ja HDPE-, alumiini- ja lasikuituisten runkojen elementtimenetelm盲analyysi. Jokainen runko simuloidaan digitaalisesti j盲nnityksen jakautumisen ja iskunkest盲vyyden osalta ennen ensimm盲isen prototyypin rakentamista.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: RF-hitsauskeskus
+      description: Erillinen radiotaajuushitsauslaitos tarkalla l盲mp枚tila- ja paineohjauksella, tuottaen lujia, ilmatiiviit盲 saumoja, jotka ylitt盲v盲t industristandardit t盲ytett盲ville aluksille.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Hydrodynaaminen testiallas
+      description: Pienoismallitestaus omassa testialtaassamme rungon muodon, liukunopeuden, vakauden ja polttoainetehokkuuden optimoimiseksi eri kuorma- ja meriolosuhteissa.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Prototyyppiverstas
+      description: T盲ysimittainen prototyyppi- ja varustelulaitos, jossa uusia malleja rakennetaan, varustellaan ja koeajetaan. Jokainen prototyyppi k盲y l盲pi v盲hint盲盲n 20 tunnin vesitestiohjelman ennen tuotantohyv盲ksynt盲盲.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Laatu- ja tarkastuslaboratorio
+      description: Erillinen laadunvarmistuslaboratorio, joka suorittaa vetotestausta, ilmanpysyvyyssykli盲, sauman irrotustestej盲 ja materiaalisertifiointia varmistaakseen, ett盲 jokainen verstalta l盲htev盲 kangas t盲ytt盲盲 julkaistut spesifikaatiomme.
+      href: /randdcenter/quality-inspection-lab

@@ -1,0 +1,136 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `OEM Buyer Guide — Sourcing Functional Fabrics from Asia | ${SITE.name}`,
+  description: `Comprehensive guide for sourcing performance fabrics, uniform textiles, and technical materials from Asian manufacturers: factory evaluation checklist, QC protocols, compliance verification, MOQ negotiation, shipping terms, and common pitfalls.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'OEM Buyer Guide — Sourcing Functional Fabrics from Asian Manufacturers',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-05-08',
+  dateModified: '2025-06-10',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.oemBuyer')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Sourcing</span>
+      <span class="ml-3 text-sm text-gray-400">12 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.oemBuyer')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.oemBuyer.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>1. Pre-Qualification: What to Look for in a Textile Factory</h2>
+
+      <h3>Compliance Certificates</h3>
+      <ul>
+        <li><strong>ISO 9001:2015</strong> – Quality management system</li>
+        <li><strong>OEKO-TEX Standard 100</strong> – Harmful substance testing</li>
+        <li><strong>BSCI / SMETA / SEDEX</strong> – Social compliance audits</li>
+        <li><strong>REACH / RoHS</strong> – Material compliance declarations</li>
+      </ul>
+
+      <h3>Manufacturing Capabilities</h3>
+      <ul>
+        <li>Yarn sourcing and quality verification in-house vs. outsourced</li>
+        <li>Weaving, knitting, and coating production lines</li>
+        <li>Dyeing and finishing equipment</li>
+        <li>In-house sample development</li>
+        <li>Testing lab (tensile, color fastness, dimensional stability, abrasion)</li>
+      </ul>
+
+      <h3>Experience Verification</h3>
+      <ul>
+        <li>Years in textile manufacturing (10+ years minimum recommended)</li>
+        <li>Number of textile engineers on staff</li>
+        <li>Existing OEM/ODM clients (request references)</li>
+        <li>Export destinations – are they already shipping to your target market?</li>
+      </ul>
+
+      <h2>2. Quality Control Protocols</h2>
+      <p>Material incoming QC: tensile strength (ASTM D5034 or ISO 13934), tear resistance (ASTM D2261 or ISO 13937), color fastness (ISO 105), GSM verification, shade band approval.</p>
+      <p>In-process QC: weave/knit integrity monitoring every 100 meters, dye lot consistency checks, dimensional stability testing, inspection against approved standards.</p>
+      <p>Final inspection: 100% visual inspection, AQL 2.5 or 4.0 per ISO 2859, random sample testing for performance properties, packaging and labeling verification.</p>
+
+      <h2>3. Compliance Documentation Checklist</h2>
+      <ul>
+        <li>OEKO-TEX Standard 100 certificate</li>
+        <li>ISO 9001 quality management certificate</li>
+        <li>Test report from accredited lab (batch-specific)</li>
+        <li>Material safety data sheets (MSDS)</li>
+        <li>REACH compliance declaration</li>
+        <li>Bill of Materials with supplier traceability</li>
+        <li>Factory inspection report</li>
+      </ul>
+
+      <h2>4. MOQ Negotiation</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Product Type</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Standard MOQ</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Negotiable Range</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border">Standard performance fabrics</td><td class="p-3 border">500 – 1000 meters per color</td><td class="p-3 border">100 – 300 meters (trial)</td></tr>
+          <tr><td class="p-3 border">Custom development fabrics</td><td class="p-3 border">1000 – 3000 meters</td><td class="p-3 border">500 meters (trial)</td></tr>
+          <tr><td class="p-3 border">Commission dyeing/finishing</td><td class="p-3 border">2000 – 5000 meters</td><td class="p-3 border">1000 meters (trial)</td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. Logistics and Shipping</h2>
+      <p>Common Incoterms: <strong>FOB</strong> (Factory delivers to departure port – most common), <strong>EXW</strong> (Buyer arranges all shipping from factory door), <strong>CIF</strong> (Factory pays freight and insurance to destination port).</p>
+      <p>Textile products are shipped as rolled goods on pallets or in containers. Sea freight from China to EU: 25–35 days; to US West Coast: 15–20 days. Air freight available for rush orders.</p>
+
+      <h2>6. Common Pitfalls</h2>
+      <ul>
+        <li><strong>No factory audit:</strong> Always perform or commission a third-party audit (QIMA, SGS, Bureau Veritas)</li>
+        <li><strong>Verbal specs only:</strong> Detailed technical specification sheet signed by both parties</li>
+        <li><strong>Skipping sample approval:</strong> Written sign-off on samples before bulk production</li>
+        <li><strong>No QC during production:</strong> Third-party inspection during production (DUPRO) and before shipment (PSI)</li>
+        <li><strong>Ignoring compliance:</strong> Verify OEKO-TEX/REACH certification before production</li>
+      </ul>
+
+      <h2>7. Why Seekingtex</h2>
+      <p>
+        Seekingtex has been manufacturing OEM/ODM functional fabrics since 2012. With a 12,000 m&sup2; ISO 9001 certified facility, 25+ textile engineers, and OEKO-TEX Standard 100 certification across all product lines, we meet every criterion in this guide. We offer trial MOQs for new partners and full compliance documentation packages.
+      </p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium">&larr; {t('home.research.tagline')}</a>
+    </div>
+  </article>
+</Layout>

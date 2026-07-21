@@ -1,0 +1,125 @@
+hero:
+  tagline: Centrum B+R
+  title: Centrum B + R
+  subtitle: Skoncentrowani na post臋pie
+
+intro:
+  - Centrum Badawczo-Rozwojowe (B+R) Seekingtex jest si艂膮 nap臋dow膮 naszej misji rewolucjonizowania sprz臋tu do sport贸w wodnych. Wzmacniamy pozycj臋 entuzjast贸w sport贸w wodnych na ca艂ym 艣wiecie dzi臋ki bezpieczniejszym, wygodniejszym i przyjemniejszym produktom poprzez nieustann膮 innowacj臋 w nadmuchiwanych deskach textile products i 艂odziach. Nasz dedykowany zesp贸艂 in偶ynier贸w, projektant贸w i pasjonat贸w sport贸w wodnych kszta艂tuje przysz艂o艣膰 bran偶y, stale podnosz膮c poprzeczk臋 jako艣ci, wydajno艣ci i zr贸wnowa偶onego rozwoju.
+  - Nasze zaplecze B+R 艂膮czy materia艂oznawc贸w, architekt贸w okr臋towych i in偶ynier贸w produkcji pod jednym dachem. Od formu艂owania tkanin i symulacji kad艂uba po rozw贸j proces贸w spawania i pe艂noskalowe pr贸by morskie 鈥攌a偶dy etap rozwoju produktu jest nap臋dzany danymi i walidowany testami.
+
+mission:
+  tagline: Nasza misja
+  title: Innowacje w przysz艂o艣膰 sport贸w wodnych
+  pillars:
+    - icon: lightning
+      title: Post臋p technologiczny
+      desc: Wprowadzanie nowych materia艂贸w, projekt贸w i proces贸w produkcyjnych dla lepszej wydajno艣ci i trwa艂o艣ci produkt贸w.
+    - icon: design
+      title: Projektowanie zorientowane na u偶ytkownika
+      desc: Dog艂臋bne zrozumienie i przekraczanie potrzeb u偶ytkownik贸w poprzez ergonomiczny i intuicyjny projekt produkt贸w.
+    - icon: globe
+      title: Zr贸wnowa偶one praktyki
+      desc: Minimalizowanie naszego 艣ladu 艣rodowiskowego poprzez wykorzystanie ekologicznych materia艂贸w i proces贸w.
+    - icon: shield
+      title: Niezachwiane bezpiecze艅stwo
+      desc: Zapewnienie najwy偶szych standard贸w bezpiecze艅stwa poprzez rygorystyczne testy i certyfikacj臋.
+
+pillars:
+  - title: Post臋p technologiczny
+    desc: Wprowadzanie nowych materia艂贸w, projekt贸w i proces贸w produkcyjnych w celu zapewnienia lepszej wydajno艣ci i trwa艂o艣ci produkt贸w.
+    icon: tech
+  - title: Zaawansowane materia艂y
+    desc: Badanie najnowocze艣niejszych PVC, Hypalon, kompozyt贸w i zr贸wnowa偶onych alternatyw dla ulepszonych w艂a艣ciwo艣ci produkt贸w.
+    icon: materials
+  - title: Zr贸wnowa偶ony rozw贸j
+    desc: 'Podstawowe zobowi膮zanie: Jeste艣my oddani odpowiedzialno艣ci za 艣rodowisko poprzez zr贸wnowa偶on膮 produkcj臋 i materia艂y nadaj膮ce si臋 do recyklingu.'
+    icon: sustainability
+
+capabilities:
+  tagline: Mo偶liwo艣ci
+  title: Mo偶liwo艣ci B+R
+  subtitle: Cztery podstawowe dyscypliny daj膮ce nam pe艂n膮 kontrol臋 nad rozwojem produktu 鈥攐d bada艅 surowc贸w po ko艅cow膮 certyfikacj臋.
+  groups:
+    - title: Materia艂oznawstwo i technologia tkanin
+      items:
+        - Analiza i optymalizacja formu艂 PVC i Hypalon
+        - Rozw贸j stabilizacji UV, op贸藕niaczy palenia i dodatk贸w antybakteryjnych
+        - In偶ynieria laminacji i adhezji tkanin wielowarstwowych
+        - Przyspieszone testy starzenia (UV, termiczne, wilgotno艣膰, mg艂a solna)
+    - title: In偶ynieria kad艂uba i hydrodynamika
+      items:
+        - Parametryczny projekt 3D kad艂uba i optymalizacja CFD
+        - Analiza element贸w sko艅czonych dla obci膮偶e艅 strukturalnych i udarowych
+        - Testy w basenie holowniczym na modelach skalowanych i walidacja wydajno艣ci
+        - Rozw贸j niestandardowych kad艂ub贸w dla specjalnych profili misji
+    - title: Technologia spawania i 艂膮czenia
+      items:
+        - Rozw贸j i optymalizacja proces贸w zgrzewania dielektrycznego RF
+        - Metody spawania gor膮cym powietrzem, gor膮cym klinem i ultrad藕wi臋kowe
+        - Kwalifikacja klejenia i ta艣m szwowych
+        - Modelowanie wytrzyma艂o艣ci spaw贸w i przewidywanie 偶ywotno艣ci
+    - title: Testowanie, certyfikacja i zgodno艣膰
+      items:
+        - Testy zgodno艣ci ,  i CE
+        - Niezale偶ne testowanie stron trzecich i wsparcie certyfikacji
+        - Opracowanie niestandardowych protoko艂贸w testowych dla kwalifikacji zakupowej
+        - Analiza awarii w eksploatacji i badanie przyczyn 藕r贸d艂owych
+
+rd_numbers:
+  tagline: Innowacja
+  title: B+R w liczbach
+  stats:
+    - value: '14'
+      label: In偶ynier贸w i naukowc贸w B+R
+    - value: '8'
+      label: Aktywnych patent贸w i zg艂osze艅
+    - value: '6'
+      label: Wyspecjalizowanych laboratori贸w
+    - value: 12 yr
+      label: 艢rednie do艣wiadczenie zespo艂u
+
+rd_services:
+  tagline: Niestandardowe B+R
+  title: Us艂ugi B+R dla partner贸w
+  services:
+    - title: Rozw贸j niestandardowych materia艂贸w
+      desc: Opracowujemy niestandardowe formu艂y tkanin, stosy laminat贸w i systemy klejowe dostosowane do Twojego 艣rodowiska pracy i cel贸w wydajno艣ciowych.
+    - title: In偶ynieria produktu OEM / ODM
+      desc: Od szkic贸w koncepcyjnych po gotowe do produkcji pakiety in偶ynieryjne 鈥攏asz zesp贸艂 mo偶e projektowa膰, prototypowa膰 i testowa膰 艂odzie pod Twoj膮 mark膮.
+    - title: Testowanie i certyfikacja stron trzecich
+      desc: Korzystaj z naszych zgodnych z ISO obiekt贸w testowych do niezale偶nych test贸w materia艂贸w, walidacji produkt贸w i wsparcia certyfikacji.
+  cta: Om贸w swoje wymagania B+R 鈫?  cta_link: /contact
+
+vision:
+  tagline: Nasza wizja
+  title: Kszta艂towanie przysz艂o艣ci sport贸w wodnych
+  body: Seekingtex d膮偶y do przewodzenia bran偶y 艂odzi pneumatycznych i textile products poprzez ci膮g艂膮 innowacj臋, niezachwian膮 jako艣膰 i stanowcze zaanga偶owanie w bezpiecze艅stwo i zr贸wnowa偶ony rozw贸j 鈥攐statecznie wzbogacaj膮c do艣wiadczenia entuzjast贸w sport贸w wodnych na ca艂ym 艣wiecie. Centrum B+R Seekingtex to miejsce, gdzie pasja spotyka si臋 z innowacj膮, wyznaczaj膮c nowe standardy dla bran偶y sport贸w wodnych.
+
+labs_section:
+  tagline: Laboratoria
+  title: Nasze laboratoria
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: Laboratorium tkanin PVC
+      description: Ci膮g艂e badania i testowanie tkanin do rur PVC i Hypalon pod k膮tem wytrzyma艂o艣ci na rozci膮ganie, odporno艣ci na UV, 艣cierania i elastyczno艣ci w niskich temperaturach w celu zapewnienia d艂ugoterminowej niezawodno艣ci w 艣rodowiskach morskich.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Studio in偶ynierii kad艂uba
+      description: Projektowanie wspomagane CAD i analiza element贸w sko艅czonych kad艂ub贸w HDPE, aluminiowych i z w艂贸kna szklanego. Ka偶dy kad艂ub jest cyfrowo symulowany pod k膮tem rozk艂adu napr臋偶e艅 i odporno艣ci na uderzenia przed zbudowaniem pierwszego prototypu.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: Centrum zgrzewania RF
+      description: Dedykowany obiekt zgrzewania o cz臋stotliwo艣ci radiowej z precyzyjn膮 kontrol膮 temperatury i ci艣nienia, produkuj膮cy wysokowytrzyma艂e, szczelne szwy przewy偶szaj膮ce normy  dla jednostek pneumatycznych.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Hydrodynamiczny basen testowy
+      description: Testowanie na modelach skalowanych w naszym wewn臋trznym basenie testowym w celu optymalizacji kszta艂tu kad艂uba, wydajno艣ci 艣lizgu, stabilno艣ci i efektywno艣ci paliwowej w zakresie obci膮偶e艅 i warunk贸w morskich.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Warsztat prototypowy
+      description: Obiekt do pe艂noskalowego prototypowania i wyposa偶ania, w kt贸rym budowane, montowane i testowane s膮 nowe modele. Ka偶dy prototyp przechodzi minimum 20-godzinny program test贸w na wodzie przed zatwierdzeniem produkcji.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Laboratorium jako艣ci i inspekcji
+      description: Dedykowane laboratorium zapewniania jako艣ci wykonuj膮ce testy rozci膮gania, cykle zatrzymywania powietrza, testy odrywania szw贸w i certyfikacj臋 materia艂贸w, aby zapewni膰, 偶e ka偶da 艂贸d藕 opuszczaj膮ca warsztat spe艂nia nasze opublikowane specyfikacje.
+      href: /randdcenter/quality-inspection-lab

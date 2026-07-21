@@ -1,0 +1,73 @@
+﻿hero:
+  tagline: 'Vesill盲liikkumisen tiet盲mys'
+  title: 'Opi'
+  subtitle: |
+    Oppaita, tutoriaaleja ja syv盲sukelluksia 鈥?kaikki mit盲 tarvitset vesill盲<br />
+    liikkumiseen luottavaisesti. Ensimm盲isen SUPin valinnasta edistyneiden tekniikoiden hallintaan.
+  taglineSection: 'Tietoa jokaiselle melojalle. Aloittelijasta ammattilaiseen.'
+
+featured:
+  tagline: 'Esitellyt aiheet'
+  title: 'Aloita oppimismatkasi'
+  subtitle: 'Olitpa uusi vesiliikunnan parissa tai haluat nostaa taitotasoasi, oppaamme auttavat.'
+  items:
+    - title: 'SUP-perusteet'
+      description: 'Kaikki mit盲 aloittelijan tarvitsee tiet盲盲 鈥?lautatyypit, melakoko, asento ja vinkit ensimm盲iselle p盲iv盲lle.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: 'Kumilauta vs kova lauta'
+      description: 'Kumpi sopii sinulle? Vertaamme kannettavuutta, suorituskyky盲, kest盲vyytt盲 ja hintaa rinnakkain.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Vesiturvallisuus'
+      description: 'Olennaista turvallisuustietoa, joka jokaisen melojan tulisi hallita 鈥?s盲盲, pelastusliivit, itsens盲 pelastaminen ja paljon muuta.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Materiaaliopas'
+      description: 'PVC vs Hypalon, drop-stitch -teknologia, denier-luokitukset 鈥?ymm盲rr盲 mist盲 varusteesi on tehty.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP-koko-opas'
+      description: 'L枚yd盲 oikea laudan pituus, leveys ja tilavuus painollesi, taidoillesi ja melontatyylillesi.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Keskitasoiset tekniikat'
+      description: 'Paranna melontaasi edistyneill盲 vedoilla, k盲盲ntymistekniikoilla ja k盲sittelyll盲 ep盲vakaassa vedess盲.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Kategoriat'
+  title: 'Tutki aiheen mukaan'
+  subtitle: 'Kaikki oppimissis盲lt枚 j盲rjestettyn盲 taitotason ja mielenkiinnon mukaan.'
+  columns:
+    - title: 'Aloittelija'
+      items:
+        - 'SUP-perusteet 鈥?aloita t盲st盲'
+        - 'Kumilauta vs kova lauta'
+        - 'Vesiturvallisuuden perusteet'
+        - 'Kuinka valita SUP-lautasi'
+        - 'Pumppu- ja pakkausopas'
+    - title: 'Keskitaso'
+      items:
+        - 'Melontatekniikat'
+        - 'Kumilautatekniikka'
+        - 'Materiaaliviite'
+        - 'PVC vs Hypalon vertailu'
+        - 'Drop-Stitch -ydin selitettyn盲'
+    - title: 'Edistynyt ja ammattilainen'
+      items:
+        - 'Laivaston toiminnot'
+        - 'Kaupalliset varusteet'
+        - 'Turvallisuus- ja pelastusprotokollat'
+        - 'R盲盲t盲l枚idyt rakennukset ja OEM'
+
+cta:
+  title: 'Onko sinulla viel盲 kysymyksi盲?'
+  subtitle: 'Kysy teko盲lyoppaaltamme henkil枚kohtaisia vastauksia varusteista, turvallisuudesta ja tekniikoista.'
+  actions:
+    - variant: primary
+      text: 'Kysy Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Selaa kaikkia oppaita'
+      href: '/academy'

@@ -1,0 +1,96 @@
+hero:
+  tagline: 绉併仧銇°伀銇ゃ亜銇?
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex 宸ュ牬
+  title: |
+    绻婄董銈ㄣ兂銈搞儖銈儶銉炽偘銆?br />
+    <span class="text-accent dark:text-white">Seekingtex</span>娴併伀閫犮倠
+  subtitle: '绉併仧銇°伅銆?闅汇伄銉溿兗銉堛仺闋戝浐銇俊蹇点倰鎸併仯銇︽捣宀搞伄宸ユ埧銇嬨倝濮嬨倎銇俱仐銇熴€傜箠缍＝鍝併伅閲嶈銇倐銇仺銇椼仸銈ㄣ兂銈搞儖銈儶銉炽偘銇曘倢銈嬨伖銇嶃仹銇欍€傘仾銇溿仾銈夊疅闅涖伀閲嶈銇倐銇仩銇嬨倝銇с仚銆傜従鍦ㄣ仹銇?0銇嬪浗浠ヤ笂銇嚭鑽枫仐銇︺亜銇俱仚銇屻€併仚銇广仸銇埞浣撱伅浠娿倐銇亰銆佷細绀俱倰鍓垫キ銇椼仧鍚屻仒鎵嬨倰閫氥仯銇︺亜銇俱仚銆?
+
+stats:
+  title: 鏁板瓧銇ц銈?
+  columns: 4
+  stats:
+    - title: 绱嶅叆鑸逛綋鏁?
+      amount: '2,400+'
+    - title: 鍑鸿嵎鍥芥暟
+      amount: '40'
+    - title: 绲岄〒骞存暟銇悎瑷?
+      amount: '60'
+    - title: 骞冲潎淇濊瀵惧繙鏅傞枔锛堟檪闁擄級
+      amount: '24'
+
+features3_what_we_build:
+  title: 绉併仧銇°伄瑁藉搧
+  subtitle: 瀹屽叏銇啛鐭ャ仐銇︺亜銈嬮泦涓瀷銇＝鍝併儵銈ゃ兂 鈥?涓€斿崐绔仾瀹熼〒銈傘€併儛銉冦偢銈ㄣ兂銈搞儖銈儶銉炽偘銈傘亗銈娿伨銇涖倱銆?
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: RIB銉溿兗銉?
+      description: 3.3m銆?.5m銇偄銉儫鑸逛綋RIB銆傘儜銉堛儹銉笺儷銆併儉銈ゃ儞銉炽偘銆併儠銈ｃ儍銈枫兂銈般€併儠銈°儫銉兗鐢ㄣ伀瑷▓銆?
+      icon: tabler:ship
+    - title: 姗熻兘鎬с儨銉笺儓
+      description: 2.4m銆?.2m銇甈VC銇娿倛銇矵ypalon瑁芥鑳芥€с儑銈ｃ兂銈兗銆傝唤閲忋仹闋戜笀銆佸弾绱嶃倐绨″崢銆?
+      icon: tabler:speedboat
+    - title: 銈广兗銉戙兗銉椼儸銉熴偄銉犮儠銈°儢銉儍銈儐銉炽儉銉?
+      description: 姣嶈埞銇瑕炽伀鍚堛倧銇涖仸銈偣銈裤儬銉撱儷銉夈仌銈屻仧銈炽兂銉戙偗銉堛仹銉忋偆銈广儦銉冦偗銇猂IB銆?
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: 銈偗銈汇偟銉兗
+      description: 銈兗銉€併儩銉炽儣銆併偒銉愩兗銆併儔銉┿偆銉愩儍銈般€佺噧鏂欍偪銉炽偗銆併偍銉偗銉堛儹銉嬨偗銈广€傘仚銇广仸褰撶ぞ銇儨銉笺儓銇蹇溿€?
+      icon: tabler:package
+    - title: 鏀硅銉讳慨鐞?
+      description: 鑷ぞ鍐呫仹銇儊銉ャ兗銉栦氦鎻涖€併偍銉偗銉堛儹銉嬨偗銈规敼閫犮€併偍銉炽偢銉炽偄銉冦儣銈般儸銉笺儔銆?
+      icon: tabler:tool
+    - title: 銈偣銈裤儬瑁介€?
+      description: 鍟嗘キ銆佺瀛︺€佽粛浜嬮¨瀹㈠悜銇戙伄銉椼儹銈搞偋銈儓鍗樹綅銇ō瑷堛€?
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 銉溿兗銉堣ō瑷堛仺銈ㄣ兂銈搞儖銈儶銉炽偘鎵撱仭鍚堛倧銇?
+
+steps2_values:
+  title: 绉併仧銇°伄渚″€よΤ
+  subtitle: 鍓垫キ鏅傘亱銈夈仚銇广仸銇＝鍝併倰褰綔銇ｃ仸銇嶃仧3銇ゃ伄鍘熷墖銆?
+  items:
+    - title: 瀹舵棌銈掍箺銇涖仸銇勩倠銇嬨伄銈堛亞銇€犮倠
+      description: 銇欍伖銇︺伄鑸逛綋銆佹憾鎺ャ€佺暀銈佸叿銇€佽嚜韬伄瀹舵棌銇屼娇鐢ㄣ仚銈嬨亱銇倛銇嗐伀鎵便倧銈屻伨銇欍€?
+      icon: tabler:heart
+    - title: 璨╁２鍓嶃伀銈ㄣ兂銈搞儖銈儶銉炽偘
+      description: 銈广儦銉冦偗銇岄枔閬曘仯銇︺亜銈嬪牬鍚堛伅銆併偣銉氥儍銈倰澶夋洿銇椼伨銇?鈥?姹恒仐銇︺亰瀹㈡銈掑銇堛伨銇涖倱銆?
+      icon: tabler:settings
+    - title: 淇濊銈掕秴銇堛仸缍氥亸銈点儩銉笺儓
+      description: 20骞村墠銇埞浣撱亱銈夈倐銈广儦銈儜銉笺儎銇晱銇勫悎銈忋仜銇屻亗銈娿€佺銇熴仭銇粖銈傚蹇溿仐銇俱仚銆?
+      icon: tabler:headset
+
+steps2_milestones:
+  title: 銉炪偆銉偣銉堛兗銉?
+  subtitle: Seekingtex銇偣銉堛兗銉兗銇瑕併€?
+  isReversed: true
+  items:
+    - title: 娴峰哺銇伐鎴裤仹鍓垫キ
+      description: 2浜恒伄閫犺埞瑷▓澹亴CNC銉曘儵銈ゃ偣鐩ゃ仺闋戝浐銇偄銈ゃ儑銈仹銈广偪銉笺儓銆?
+      icon: tabler:building-factory
+    - title: 1,000闅荤洰銇埞浣撶磵鍏?
+      description: 7骞寸洰銇仈鎴愩€備富銇彛銈炽儫銇ㄣ儶銉斻兗銉堥¨瀹伀銈堛倠銆?
+      icon: tabler:circle-check
+    - title: 鍥介殯杓稿嚭銉椼儹銈般儵銉?
+      description: 5澶ч櫢銇儹銉笺偒銉┿偆銈恒仌銈屻仧銈点儩銉笺儓銉戙兗銉堛儕銉笺倰鎸併仱40銇嬪浗浠ヤ笂銇稿嚭鑽蜂腑銆?
+      icon: tabler:world
+
+features2_locations:
+  title: 鎷犵偣
+  tagline: 銈偗銈汇偣
+  columns: 3
+  items:
+    - title: 鏈ぞ銉诲伐鍫?
+      description: 娌垮哺宸ユキ鍥ｅ湴銆?鍙烽え 鈥?鏈堛€滈噾銆佷簣绱勫埗銇ц瀛﹀彲鑳姐€?
+    - title: EU銈点兗銉撱偣銈汇兂銈裤兗
+      description: 鍦颁腑娴锋腐 鈥?娆у窞椤у鍚戙亼銇敼瑁呫€佷慨鐞嗐€佷繚瑷笺偟銉濄兗銉堛€?
+    - title: APAC銉戙兗銉堛儕銉笺儘銉冦儓銉兗銈?
+      description: 銈兗銈广儓銉┿儶銈€佹棩鏈€併偡銉炽偓銉濄兗銉€侀娓伄瑾嶅畾銈点兗銉撱偣銉戙兗銉堛儕銉笺€?

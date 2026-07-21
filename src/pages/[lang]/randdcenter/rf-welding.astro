@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+export const prerender = true;
+
+import { languages, defaultLang, ui } from '~/i18n/config';
+import { SITE } from 'astrowind:config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: 'R&D Center', href: `/${lang}/randdcenter` },
+  { name: 'Textile Welding & Lamination Lab' },
+];
+
+const metadata = {
+  title: `Textile Welding & Lamination Lab — Heat Bonding for Seamless Fabric | ${SITE.name}`,
+  description: `Heat welding and lamination technology for textile bonding. Peel testing, seam strength validation, and custom lamination specifications for coated and laminated fabrics. Discuss your textile bonding requirements with our team.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href={`/${lang}/randdcenter`} class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Textile Welding & Lamination Lab</h1>
+        <p class="mt-3 text-lg text-muted">Bonding technology for seams that hold under stress</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/labs/textile-welding-lab.webp"
+          alt="Seekingtex textile welding and lamination process"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>The science behind the bond</h2>
+    <p>
+      A textile is only as reliable as its seams and laminations. A weak bond can compromise the entire fabric structure. At Seekingtex, we have invested in a dedicated Textile Welding & Lamination Lab that combines industrial-grade heat bonding presses with rigorous process control and post-bond testing. Every seam and laminate we produce is documented, traceable, and certified to meet or exceed industry standards.
+    </p>
+    <p>
+      Heat welding and lamination use controlled temperature and pressure to create molecular bonds between textile layers. Unlike stitching, which perforates the fabric, thermal bonding creates a continuous bond that maintains fabric integrity and prevents delamination.
+    </p>
+
+    <h2>Equipment and process control</h2>
+    <p>Our lamination centre is equipped with:</p>
+    <table>
+      <thead><tr><th>Machine</th><th>Capacity</th><th>Application</th></tr></thead>
+      <tbody>
+        <tr><td>Heat bonding press 1</td><td>15 kW, platen 2000 × 600 mm</td><td>Main panel lamination, edge sealing</td></tr>
+        <tr><td>Heat bonding press 2</td><td>10 kW, platen 1500 × 500 mm</td><td>Patch lamination, seam reinforcement</td></tr>
+        <tr><td>CNC-controlled bonder</td><td>8 kW, XY-table 2500 × 1200 mm</td><td>Curved seams, precision patchwork</td></tr>
+        <tr><td>Hot-wedge continuous welder</td><td>Variable temperature, 1.2 m/min max</td><td>Continuous seam sealing for coated fabrics</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Bond quality tests — every seam, every batch</h2>
+    <p>Bond integrity is verified through a mandatory testing protocol:</p>
+    <ol>
+      <li><strong>Visual inspection</strong> — 100 % of seams inspected for burn-through, misalignment, or incomplete bonding. Reject rate threshold: 0.5 %.</li>
+      <li><strong>Peel test</strong> — A standard-width strip is cut from bonded samples. Minimum peel force verified for each material type.</li>
+      <li><strong>Dimensional stability</strong> — Bonded panels checked for shrinkage or distortion after bonding process.</li>
+      <li><strong>Thermal cycling test</strong> — Sample coupons cycled from -20 °C to +60 °C for 50 cycles, then peel-tested again. Acceptable strength loss: < 10 %.</li>
+    </ol>
+
+    <h2>Textile expertise</h2>
+    <p>
+      Our bonding team is led by a senior process engineer with 11 years of experience in heat bonding of coated and laminated textiles. Each operator completes a 6-month in-house certification programme before working on production textiles. Recertification is required annually.
+    </p>
+
+    <h2>Custom solutions for unique requirements</h2>
+    <p>
+      We understand that one bonding specification does not fit every application. Our lab routinely develops custom seam and lamination configurations for clients with special requirements:
+    </p>
+    <ul>
+      <li><strong>Multi-layer reinforcement patches</strong> — for high-wear areas requiring additional durability</li>
+      <li><strong>Conductive seam integration</strong> — for technical textiles requiring integrated conductive elements</li>
+      <li><strong>Color-change panel bonding</strong> — dual-color fabric panels bonded with concealed overlap for clean aesthetics</li>
+    </ul>
+
+    <h2>Our commitment</h2>
+    <p>
+      Every textile we deliver carries our bond-quality guarantee. When you choose Seekingtex, you are choosing seams that are engineered, tested, and documented for reliable performance.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Discuss your textile bonding requirements</h2>
+      <p class="mt-2 text-sm text-muted">Custom lamination specifications, material compatibility, or process validation.</p>
+      <a
+        href={`/${lang}/contact`} 
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our textile team</a
+      >
+    </div>
+  </section>
+</Layout>

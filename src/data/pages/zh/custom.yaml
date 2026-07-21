@@ -1,0 +1,80 @@
+hero:
+  tagline: Seekingtex定制实验室
+  title: 设计您自己的<br />纺织行业装备
+  subtitle: 为全球企业提供OEM、ODM、自有品牌和定制品牌服务。从单个原型到完整批量生产。
+  cta: 开始您的项目
+  footer_link: /contact
+
+steps_section:
+  tagline: 操作流程
+  title: 从概念到生产
+  subtitle: 四步从您的创意到成品下海。
+  steps:
+    - num: '01'
+      title: 选择您的板型
+      desc: 从我们的核心型号中选择——SUP板、功能性面料、小艇或RIB艇。挑选尺寸、材料和颜色。
+    - num: '02'
+      title: 上传您的设计
+      desc: 发送您的Logo、图案或品牌指南。我们的设计团队准备数码打样。
+    - num: '03'
+      title: AI样图审阅
+      desc: 在生产开始前，查看您定制产品的AI生成逼真样图。
+    - num: '04'
+      title: 生产与交货
+      desc: 确认后，您的订单进入ISO认证生产线。交期30天起。
+
+services_section:
+  tagline: 服务
+  title: 为全球品牌提供制造服务
+  subtitle: 灵活的合作模式——从合同制造到全方位品牌建设。
+  items:
+    - title: OEM制造
+      desc: 我们按规格生产您的设计——您的知识产权、您的图纸、您的质量标准。全面NDA保护。
+      icon: ⚙️
+    - title: ODM解决方案
+      desc: 从50多种成熟平台中选择，定制尺寸、颜色、图形和包装。
+      icon: '🎨'
+    - title: 自有品牌
+      desc: 您的品牌配上我们的产品——Logo、包装、吊牌、说明书。开箱即可零售。
+      icon: 🏷️
+    - title: 定制品牌
+      desc: 甲板印花、面料体图形、管材贴花和定制标签——全面的品牌整合。
+      icon: ✨
+
+capabilities_section:
+  tagline: 能力
+  title: 生产与定制能力
+  subtitle: 下单前您需要了解的一切。
+  capabilities:
+    - label: 订单数量
+      value: MOQ 5–10件（SUP/功能性面料），2–5件（技术面料）
+    - label: 交期
+      value: 标准30–45天；打样15–20天
+    - label: 定制范围
+      value: 尺寸、形状、颜色、图形、包装、五金件
+    - label: 材料
+      value: PVC、Hypalon、拉丝布、玻璃钢、铝合金
+    - label: 印刷工艺
+      value: 数码印刷（CMYK）、丝网印刷、热转印、热升华
+    - label: 认证
+      value: CE、、UKCA、FCC（支持全球合规）
+
+why_section:
+  tagline: 为什么选择Seekingtex
+  title: 一个工厂。一个标准。零妥协。
+  points:
+    - text: 12,000平方米综合制造工厂
+      highlight: 12,000 sqm
+    - text: 200多名熟练工人和工程师
+      highlight: 200+
+    - text: 年产15,000多艘面料
+      highlight: 15,000+
+    - text: 认证质量管理
+      highlight: 
+    - text: CE认证产品，符合欧盟市场标准
+      highlight: CE
+  cta: 查看工厂详情
+  cta_link: /factory
+  contact:
+    title: 准备好讨论您的项目了吗？
+    desc: 我们的团队将在24小时内回复并提供初步报价。

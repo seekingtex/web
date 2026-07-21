@@ -1,0 +1,30 @@
+hero:
+  tagline: Galería
+  title: Galería
+  subtitle: Fotos de productos, planta de fábrica y aventuras en el agua
+
+albums:
+  - title: Botes tejido tecnico
+    desc: tejido tecnico de casco de aluminio de 3,3 m a 7,5 m para patrulla, rendimiento, pesca y uso familiar.
+    images:
+      - /images/seekingtex/hero/hero-5.webp
+      - /images/seekingtex/hero/hero-scenic.webp
+      - /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+  - title: tejido funcional
+    desc: tejido funcional inflables drop-stitch para touring, surf, yoga y pesca.
+    images:
+      - /images/seekingtex/products/tejido funcional-series/tejido funcional-ocean-voyager-1.webp
+      - /images/seekingtex/hero/hero-image.webp
+  - title: Fábrica y taller
+    desc: Nuestra instalación de fabricación de 12.000 m² en Qingdao, China.
+    images:
+      - /images/seekingtex/factory/Seekingtex factory.webp
+      - /images/seekingtex/factory/production-workshop.webp
+      - /images/seekingtex/factory/Seekingtex-warehouse-storage.webp
+      - /images/seekingtex/factory/Pressure Testing.jpeg
+
+cta:
+  title: ¿Quieres ver más?
+  desc: Síguenos en las redes sociales para conocer los últimos lanzamientos de productos, novedades de la fábrica y aventuras de clientes.
+  instagram: Instagram
+  youtube: YouTube

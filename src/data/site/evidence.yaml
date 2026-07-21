@@ -1,0 +1,119 @@
+badge: Proof & Results
+heading: Evidence
+description: Real case studies, certifications, test data, and deployment photos that demonstrate our fabric manufacturing capability and product quality.
+
+case_studies:
+  - id: european-outdoor-brand
+    client: European Outdoor Brand
+    product: Custom UPF 50+ Woven Fabric
+    industry: Outdoor Apparel
+    challenge: Leading European outdoor brand needed a lightweight UPF 50+ woven fabric with DWR finish for their summer hiking collection — OEKO-TEX certified, delivered in 60 days.
+    solution: Developed a 110 g/m² plain-weave recycled polyester fabric, applied nano-DWR finish, and coordinated third-party UPF and hydrostatic head testing. Completed lab dip to bulk in 52 days.
+    result: 52 days from signed PO to FOB Shanghai. 12,000 meters across 3 colors. Repeat order received before first container arrived.
+    image: /images/seekingtex/products/fabric-rolls.webp
+    tags: [OEM, Outdoor, UPF, Recycled]
+    outcome_metrics:
+      - label: Lead Time
+        value: 52 days
+      - label: Quantity
+        value: 12,000m
+      - label: Colors
+        value: "3"
+
+  - id: workwear-uniform-program
+    client: ASEAN Uniform Manufacturer
+    product: Flame-Retardant Workwear Fabric
+    industry: Workwear / Corporate
+    challenge: ASEAN uniform manufacturer needed a FR-treated poly-cotton twill fabric for a government workwear tender — with EN ISO 11612 certification and antimicrobial finish.
+    solution: Engineered a 65/35 poly-cotton twill with Proban FR treatment, added antibacterial finish, and provided full EN ISO 11612 and OEKO-TEX certification documentation.
+    result: Tender awarded for 50,000 sets. 98% first-pass yield during garment cutting. Repeat order confirmed for 30,000 additional sets.
+    image: /images/seekingtex/products/fabric-rolls.webp
+    tags: [OEM, Workwear, FR, Antibacterial]
+    outcome_metrics:
+      - label: Garment Sets
+        value: 50,000
+      - label: First-Pass Yield
+        value: 98%
+      - label: Certification
+        value: EN ISO 11612
+
+  - id: us-activewear-startup
+    client: US Activewear Startup
+    product: Moisture-Wicking Recycled Knit
+    industry: Startup / Sportswear
+    challenge: US activewear startup needed a recycled polyester knit fabric with moisture-wicking finish, quick-dry performance, and GRS certification for their eco-friendly yoga line.
+    solution: Sourced GRS-certified recycled polyester yarn, developed a 160 g/m² single jersey knit, applied moisture-wicking finish, and provided full GRS certification chain-of-custody documentation.
+    result: Launched in 30+ US boutique retailers. 15,000+ units sold in first 6 months with 95% sell-through rate. Featured in two sustainability-focused publications.
+    image: /images/seekingtex/products/fabric-rolls.webp
+    tags: [OEM, Knit, Recycled, GRS]
+    outcome_metrics:
+      - label: Retailers
+        value: 30+
+      - label: First 6 Months
+        value: 15,000 units
+      - label: Sell-Through
+        value: 95%
+
+certifications:
+  - name: OEKO-TEX Standard 100
+    body: OEKO-TEX Association
+    desc: All products certified under OEKO-TEX Standard 100 for harmful substances — Class I (baby) through Class IV (furnishing). Annual audits and random sampling ensure ongoing compliance.
+  - name: ISO 9001:2015
+    body: SGS
+    desc: Quality management system certified for design, manufacturing, and distribution of functional textile products. Covers weaving, dyeing, coating, and finishing operations.
+  - name: ISO 14001:2015
+    body: SGS
+    desc: Environmental management system certification demonstrating commitment to sustainable production, waste reduction, and pollution prevention across all factory operations.
+  - name: BSCI
+    body: amfori
+    desc: Social compliance certification demonstrating ethical manufacturing, fair labour practices, and workplace safety across our entire supply chain.
+  - name: REACH
+    body: European Chemicals Agency
+    desc: All materials comply with REACH regulations (EC 1907/2006) for chemical safety. SVHC screening reports provided with every shipment.
+  - name: GRS (Global Recycled Standard)
+    body: Textile Exchange
+    desc: Chain-of-custody certification for recycled content claims. Available on our recycled polyester and recycled nylon fabric lines.
+
+test_results:
+  - metric: Tensile Strength (ASTM D5034)
+    value: 800+ N
+    detail: Warp and weft, woven fabrics
+  - metric: Hydrostatic Head (AATCC 127)
+    value: 5,000+ mm
+    detail: Coated and laminated fabrics
+  - metric: UPF Rating (AS/NZS 4399)
+    value: UPF 50+
+    detail: Blocks 98% of UV radiation
+  - metric: Abrasion Resistance (ASTM D4966)
+    value: 40,000+ cycles
+    detail: Martindale method
+  - metric: Colorfastness (AATCC 61)
+    value: Grade 4-5
+    detail: Washing, light, rubbing
+  - metric: DWR Water Repellency (AATCC 22)
+    value: 90+ rating
+    detail: Initial spray rating
+
+spec_sheets:
+  - name: Woven Fabric Series
+    href: /products#woven
+  - name: Knit Fabric Series
+    href: /products#knit
+  - name: Coated & Laminated
+    href: /products#coated
+  - name: Eco-Friendly Series
+    href: /products#eco
+
+deployment_photos:
+  - image: /images/seekingtex/hero/hero-5.webp
+    caption: Fabric rolls at our Suzhou factory ready for shipment
+    context: Factory
+  - image: /images/seekingtex/hero/hero-scenic.webp
+    caption: Quality inspection team reviewing fabric samples
+    context: Quality Control
+  - image: /images/seekingtex/products/Seekingtex-inflatable-boat-factory.webp
+    caption: Weaving production line at our Suzhou manufacturing facility
+    context: Manufacturing
+  - image: /images/seekingtex/factory/Seekingtex-stock-boat-inventory.webp
+    caption: Ready-to-ship fabric inventory awaiting container loading
+    context: Logistics

@@ -1,0 +1,130 @@
+hero_text:
+  tagline: 氍胳潣頃橁赴
+  title: 氍胳潣頃橁赴
+contact_form:
+  id: form
+  title: 氅旍嫓歆€ 氤措偞旮?
+  subtitle: 瓴爜, 旮办垹 氍胳潣 霕愲姅 鞝滍湸 氍胳潣電?鞚搓吵鞙茧 氤措偞欤检劯鞖? 1鞓侅梾鞚?鞚措偞鞐?雼惦硛霌滊雼堧嫟.
+  email_to: gzb@seekingtex.com
+  submit_button: 氅旍嫓歆€ 氤措偞旮?
+  success_message: 臧愳偓頃╇媹雼? 氅旍嫓歆€毳?氚涭晿鞀惦媹雼? 1鞓侅梾鞚?鞚措偞鞐?雼惦硛霌滊Μ瓴犾姷雼堧嫟.
+  error_message: 氅旍嫓歆€ 鞝勳啞 欷?鞓る臧€ 氚滌儩頄堨姷雼堧嫟. 雼れ嫓 鞁滊弰頃橁卑雮?歆侅爲 鞚措鞚检潉 氤措偞欤检劯鞖?
+  default_country_code: '+1'
+  captcha:
+    label: '鞎堩嫲鞀ろ尭: 雼れ潓 氍胳牅毳?頀€鞏挫＜靹胳殧'
+  fields:
+    - name: firstName
+      label: 鞚措
+      row: 1
+    - name: lastName
+      label: 靹?
+      row: 1
+    - name: companyName
+      label: 須岇偓氇?
+      row: 2
+    - name: address
+      label: 欤检唽
+      row: 3
+    - name: zip
+      label: 鞖绊幐氩堩樃
+      row: 4
+    - name: country
+      label: 甑皜
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: 鞚措鞚?
+      row: 5
+      type: email
+    - name: tel
+      label: 鞝勴檾氩堩樃
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: 鞓堨儊 欤茧 靾橂焿
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: 鞓堨儊 靾橂焿鞚?靹犿儩頃橃劯鞖?..
+        - value: sample
+          label: 靸橅攲 / 頂勲韱犿儉鞛呺
+        - value: '5-10'
+          label: 50鈥?00臧?(響滌 MOQ)
+        - value: '100-500'
+          label: 100鈥?00臧?
+        - value: '500-plus'
+          label: 500+臧?(氤茧エ 臧€瓴?
+    - name: customization
+      label: 毵烄钉 鞝滌瀾鞚?頃勳殧頃橃嫮雼堦箤?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: 毵烄钉 鞙犿槙鞚?靹犿儩頃橃劯鞖?..
+        - value: none
+          label: 響滌 鞝滍拡 (毵烄钉 鞐嗢潓)
+        - value: logo
+          label: 搿滉碃 / 敫岆灉霐╇ 毵烄钉
+        - value: full
+          label: 鞝勳泊 OEM (韥赴, 靸夓儊, 攴鸽灅頂? 韽灔)
+        - value: consultation
+          label: 鞛?氇ゴ瓴犾潓 鈥?靸侂嫶 頃勳殧
+    - name: productInterest
+      label: 甏€鞁?鞝滍拡 旃错厡瓿犽Μ
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: 鞝滊
+      row: 9
+    - name: message
+      label: 氅旍嫓歆€
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: 雼るジ 鞐半澖 氚╇矔
+  columns: 3
+  items:
+    - title: 鞓侅梾 氍胳潣
+      description: 瓴爜, 靹れ爼, 霐滊煬 鞁犾箔, 雽€霟?欤茧.
+      icon: tabler:shopping-bag
+    - title: 旮办垹 歆€鞗?
+      description: 氤挫, 靾橂Μ, 攵€頀? 鞖挫榿 甏€霠?歆堧.
+      icon: tabler:tool
+    - title: 鞏鸽 氚?鞝滍湸
+      description: 氙鸽敂鞏?韨ろ姼, 鞀ろ彴靹滌嫮, 鞐呹硠 順戩梾.
+      icon: tabler:news
+    - title: 鞝勴檾
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: 鞚措鞚?
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: 氤胳偓
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: 鞙勳箻
+  subtitle: 氤胳偓搿?氚╇頃?欤检劯鞖?
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

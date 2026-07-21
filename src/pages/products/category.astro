@@ -1,0 +1,15 @@
+---
+import type { ProductCategory } from '~/types';
+import { CATEGORY_SLUG_TO_URL, productCategoryLabels } from '~/utils/products';
+
+export function getStaticPaths() {
+  return (Object.entries(CATEGORY_SLUG_TO_URL) as [ProductCategory, string][]).flatMap(([cat, slug]) => ({
+    params: { slug },
+    props: { category: cat, urlSlug: slug, label: productCategoryLabels[cat] },
+  }));
+}
+
+const { category, urlSlug, label } = Astro.props;
+const redirectUrl = `/${urlSlug}`;
+return Astro.redirect(redirectUrl, 301);
+---

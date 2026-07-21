@@ -1,0 +1,134 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Seekingtex | 功能性面料制造商 — 防晒、防水、速干及高性能纺织品
+    template: '%s — Seekingtex'
+  description: 'Seekingtex 是一家领先的功能性面料制造商，专注于防晒 (UPF 50+)、防水、速干、抗菌和高性能面料，适用于运动服、户外服装和战术装备。提供 OEM/ODM 服务。'
+  keywords:
+    - Seekingtex
+    - 功能性面料制造商
+    - 防晒面料
+    - UPF 50+ 面料
+    - 防水面料
+    - 速干面料
+    - 高性能面料
+    - 运动服面料
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: zh_CN
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+
+i18n:
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'system'
+
+# Per-language site settings
+siteSettings:
+  siteName: 'Seekingtex 赛金泰克斯'
+  siteTagline: '功能性面料制造商 — 防晒、防水、速干及高性能纺织品'
+  siteDescription: 'Seekingtex 是领先的高性能功能性面料制造商，专注于 UPF 50+ 防晒、防水透气、速干吸湿排汗、抗菌及弹力面料，用于运动服、户外装备、战术服装及工业应用。提供 OEM/ODM 全球发货服务。'
+  organization:
+    name: 'Seekingtex 赛金泰克斯'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex 赛金泰克斯'
+  logo_image: ''
+  logo_alt: 'Seekingtex 赛金泰克斯 标志'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. 版权所有。'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: '您好，我想咨询功能性面料信息。'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

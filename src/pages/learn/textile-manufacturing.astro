@@ -1,0 +1,48 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Fabric Construction — Woven, Knit & Non-Woven Fabric Guides — ${SITE.name}`,
+  description: 'Technical guides on fabric construction — woven, knitted, and non-woven textiles — engineering, materials, properties, and applications.',
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Fabric Construction' }];
+
+const topics = [
+  { title: 'Woven Fabric Types', desc: 'Plain weave, twill, satin, and specialty weaves — learn the differences and choose the right construction.', href: '/v2/fabric-weave-types' },
+  { title: 'Knitted Fabric Types', desc: 'Warp knit, weft knit, jersey, and rib — comparing knit structures for different applications.', href: '/learn/knit-vs-woven' },
+  { title: 'Non-Woven Technology', desc: 'How fibers are bonded mechanically, chemically, or thermally to create non-woven fabrics.', href: '/learn/non-woven-basics' },
+  { title: 'Fabric Construction Reference', desc: 'GSM, thread count, denier, and what makes a high-performance fabric construction.', href: '/learn/materials' },
+  { title: 'Fabric Finishing Technology', desc: 'Construction methods — dyeing, printing, coating, and finishing processes explained.', href: '/learn/fabric-finishing' },
+  { title: 'Woven vs Knit vs Non-Woven', desc: 'Compare the three primary fabric construction types for different use cases.', href: '/learn/fabric-comparison' },
+  { title: 'Fabric Care & Maintenance', desc: 'Washing, drying, stain removal, and storage best practices for performance fabrics.', href: '/learn/fabric-care' },
+  { title: 'Fabric Safety & Chemicals', desc: 'Chemical safety, flame retardancy, and regulatory compliance for textile products.', href: '/learn/quality-standards' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd type="Article" article={{
+    headline: metadata.title,
+    description: metadata.description,
+    datePublished: '2024-12-01',
+    dateModified: '2025-06-10',
+  }} />
+  <section class="px-6 py-16 max-w-5xl mx-auto text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Fabric Construction</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Fabric Construction & Types Guides</h1>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">Technical guides covering woven, knitted, and non-woven fabric construction — engineering, properties, and applications.</p>
+  </section>
+
+  <section class="px-6 pb-20 max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {topics.map((t) => (
+        <a href={t.href} class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5">
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+          <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Layout>

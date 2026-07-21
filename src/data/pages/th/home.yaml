@@ -1,0 +1,159 @@
+hero:
+  tagline: ''
+  title: |
+    โรงงานผ้าฟังก์ชัน — <br class="hidden sm:inline" />
+    ผู้ผลิต <span class="text-accent dark:text-white">OEM/ODM</span>
+  subtitle: |
+    <span class="hidden sm:inline"><span class="font-semibold">Seekingtex</span> เป็นผู้ผลิต OEM/ODM ในจีนของผ้าฟังก์ชัน บอร์ด SUP เรือผ้าเทคนิค ผาเทคนค และอุปกรณ์ความปลอดภัยทางทะเลที่ได้รับการรับรอง CE</span>
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">Seekingtex: โรงงานที่เชื่อถือได้ตั้งแต่ 2012</span>
+    เราให้บริการลูกค้า B2B ในกว่า 50 ประเทศด้วยโซลูชันขายส่ง แบรนด์ส่วนตัว ออกแบบพิเศษ และห่วงโซ่อุปทานครบวงจร
+  actions:
+    - variant: primary
+      text: สำรวจสินค้า
+      href: /products
+      icon: tabler:shopping-bag
+    - text: เรียนรู้เพิ่มเติม
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Seekingtex hero image
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: โรงงานและสิ่งอำนวยความสะดวก Seekingtex
+      tagline: ยินดีต้อนรับ
+      title: |
+        ออกแบบมาเพื่อน้ำ <br />
+        สร้างมาเพื่อ <span class="text-sky-300">ชีวิตบนเรือ</span>
+      subtitle: ผ้าฟังก์ชันระดับพรีเมียม ผาเทคนค และผลิตภัณฑ์เทคนิคสำหรับมืออาชีพทางทะเลและผู้ที่ชื่นชอบ
+      actions:
+        - text: สำรวจสินค้า
+          href: /products
+          variant: primary
+        - text: ขอใบเสนอราคา
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: เรือ Seekingtex บนน้ำ
+      tagline: ฝีมือ
+      title: |
+        ตัวเรือที่อยู่ทนกว่าการรับประกัน <br />
+        บริการที่อยู่นานกว่าตัวเรือ
+      subtitle: วัสดุทางทะเล การเชื่อมอลูมิเนียม เรืออายุ 20 ปียังโทรหาอะไหล่
+      actions:
+        - text: เรื่องราวของเรา
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: ผ้าฟังก์ชัน Seekingtex บนน้ำ
+      tagline: สนับสนุน
+      title: |
+        สร้างก่อนขาย <br />
+        สนับสนุนนานหลังจากนั้น
+      subtitle: พันธมิตรบริการที่ได้รับอนุญาตในกว่า 40 ประเทศ ตัวเรืออายุ 20 ปียังโทรหาอะไหล่ — และเรายังรับโทรศัพท์
+      actions:
+        - text: ติดต่อเรา
+          href: /contact
+          variant: primary
+        - text: ติดต่อเรา
+          href: /contact
+          variant: secondary
+features:
+  id: features
+  tagline: ทำไม Seekingtex
+  title: สิ่งที่คุณได้รับกับ Seekingtex
+  subtitle: ประสบการณ์วิศวกรรมทางทะเลหลายทศวรรษ กลั่นกรองเป็นสายผลิตภัณฑ์ที่เน้นความสำคัญ สร้างอย่างแข็งแกร่ง ทดสอบในทะเล สนับสนุนตลอดชีพ
+  columns: 2
+  items:
+    - title: วัสดุทางทะเล
+      description: PVC หนัก Hypalon และตัวเรืออะลูมิเนียมที่เลือกเพื่อความทนทานต่อรังสี UV การเสียดสี และน้ำเค็ม
+      icon: tabler:shield-check
+    - title: คุณภาพพร้อมผลิต
+      description: ตัวเรือทุกลำผ่านการทดสอบแรงดัน รอยเชื่อมทุกจุดผ่านการตรวจสอบ เราส่งเฉพาะสิ่งที่เราจะนำลงน้ำด้วยตัวเอง
+      icon: tabler:certificate
+    - title: การออกแบบโมดูลาร์
+      description: ปรับแต่งผังท่อ ตำแหน่งคอนโซล ความจุเชื้อเพลิง และอุปกรณ์เสริมตามภารกิจของคุณ
+      icon: tabler:layout-grid
+    - title: ข้อมูลจำเพาะที่จริงใจ
+      description: ค่าการรับน้ำหนักจริง ขนาดจริง น้ำหนักจริง ไม่เคยพูดเกินจริงทางการตลาด
+      icon: tabler:ruler-measure
+    - title: จัดส่งรวดเร็วและอะไหล่
+      description: รุ่นทั่วไปจัดส่งภายในไม่กี่วัน อะไหล่แท้และวัสดุสิ้นเปลืองในสต็อกตลอดทั้งปี
+      icon: tabler:truck-delivery
+    - title: สนับสนุนตลอดชีพ
+      description: สายตรงถึงทีมวิศวกรของเราสำหรับคำถามทางเทคนิค การซ่อมแซม และคำแนะนำในการปรับปรุง
+      icon: tabler:lifebuoy
+featured_products:
+  id: featured
+  title: สินค้าแนะนำ
+  subtitle: คัดสรรจากแคตตาล็อกปัจจุบันของเรา — รุ่นยอดนิยมประจำฤดูกาลนี้
+  linkText: ดูสินค้าทั้งหมด
+  linkUrl: /products
+content_workshop:
+  isReversed: true
+  tagline: ในโรงงาน
+  title: ตั้งแต่แบบตัวเรือจนถึงการจัดส่ง ทุกขั้นตอนยังคงอยู่ภายใน
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">คุณภาพที่คุณเห็น รู้สึก และวัดได้</h3>
+  items:
+    - title: ออกแบบโดยสถาปนิกต่อเรือ
+      description: เส้นตัวเรือถูกวาดภายในและปรับปรุงผ่านการวิเคราะห์ CFD ก่อนที่ต้นแบบแรกจะลงน้ำ
+    - title: เชื่อมและประกอบในโรงงานของเราเอง
+      description: การเชื่อมท่อ การติดตั้งคอนโซล และการตกแต่งเกิดขึ้นภายใต้หลังคาเดียวกัน เราจึงควบคุมคุณภาพในทุกขั้นตอน
+    - title: ทดสอบในทะเลก่อนส่ง
+      description: ทุกรุ่นผ่านการทดสอบทางทะเลหลายชั่วโมง ครอบคลุมการไถล การเลี้ยว ความเร็วสูงสุด และการจัดการน้ำหนัก
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: โรงงานผลิต Seekingtex
+steps:
+  title: จากข้อมูลจำเพาะถึงการลงน้ำในห้าขั้นตอน
+  items:
+    - title: 'ขั้นตอนที่ 1: <span class="font-medium">กำหนดค่า</span>'
+      description: เลือกรุ่น เลือกตัวเลือก ขอใบเสนอราคาออนไลน์หรือทางโทรศัพท์ ทีมงานของเราตอบกลับภายในหนึ่งวันทำการ
+      icon: tabler:list-numbers
+    - title: 'ขั้นตอนที่ 2: <span class="font-medium">ยืนยัน</span>'
+      description: เรายืนยันข้อมูลจำเพาะ ระยะเวลาจัดส่ง และต้นทุนรวมเป็นลายลักษณ์อักษร ไม่มีเซอร์ไพรส์ ไม่มีค่าธรรมเนียมซ่อนเร้น
+      icon: tabler:checks
+    - title: 'ขั้นตอนที่ 3: <span class="font-medium">สร้าง</span>'
+      description: การผลิตเริ่มในโรงงานของเรา เราส่งรูปถ่ายความคืบหน้าในเหตุการณ์สำคัญ
+      icon: tabler:tool
+    - title: 'ขั้นตอนที่ 4: <span class="font-medium">จัดส่ง</span>'
+      description: วางในเปล ห่อด้วยฟิล์มหด และส่งทางเรือหรือทางอากาศ เอกสารศุลกากรดำเนินการตั้งแต่ต้นจนจบ
+      icon: tabler:truck-loading
+    - title: 'ขั้นตอนที่ 5: <span class="font-medium">สนับสนุน</span>'
+      description: รับประกันตัวเรือสองปีบวกสนับสนุนทางเทคนิคตลอดชีพ อะไหล่จัดส่งภายใน 48 ชั่วโมง
+      icon: tabler:headset
+blog_latest:
+  title: จากบล็อก
+  information: |
+    บทความ บันทึกทางเทคนิค และกรณีศึกษาจากทีมวิศวกร
+    โพสต์ใหม่จะถูกเพิ่มเมื่อโครงการถูกส่ง มาตรฐานได้รับการอัปเดต หรือมีใครมีเรื่องราวที่ควรค่าแก่การบอกเล่า
+faqs:
+  title: คำถามที่พบบ่อย
+  subtitle: คำถามทั่วไปเกี่ยวกับผ้าฟังก์ชัน Seekingtex การรับประกัน การจัดส่ง และพันธมิตร OEM/ODM ถ้าไม่พบคำตอบที่นี่ ติดต่อเรา
+  columns: 2
+  items:
+    - title: คลังสินค้า Seekingtex ในสหรัฐฯ อยู่ที่ไหน และใช้เวลาจัดส่งนานเท่าใด?
+      description: "คลังสินค้าสหรัฐฯ ของเราอยู่ใน Montclair, CA ฝั่งตะวันตก: 2-3 วัน กลางสหรัฐฯ: 3-4 วัน ฝั่งตะวันออก: 4-5 วัน สามารถจัดส่งระหว่างประเทศได้"
+      icon: tabler:truck-delivery
+    - title: นโยบายการรับประกันของ Seekingtex สำหรับผ้าฟังก์ชันคืออะไร?
+      description: ผ้าฟังก์ชัน Seekingtex รับประกันแบบจำกัด 5 ปีสำหรับความสมบูรณ์ของท่อ ตะเข็บ ตัวเรือไฟเบอร์กลาส และวาล์ว อุปกรณ์เสริมที่ติดตั้งจากโรงงานรับประกัน 1 ปี
+      icon: tabler:shield-check
+    - title: เรือ Seekingtex รวมเอกสารจดทะเบียนหรือไม่?
+      description: ใช่ ผ้าฟังก์ชัน Seekingtex ทุกลำรวมเอกสารที่จำเป็นสำหรับการจดทะเบียน ได้รับการอนุมัติจากหน่วยยามฝั่งสหรัฐฯ สำหรับการผลิต
+      icon: tabler:file-text
+cta:
+  title: |
+    พร้อมเริ่ม <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">โครงการ OEM/ODM ของคุณ</span>?
+  subtitle: บอกความต้องการของคุณ แล้วเราจะให้ข้อเสนอที่ปรับแต่ง รายละเอียด MOQ และระยะเวลาจัดส่งภายในหนึ่งวันทำการ
+  actions:
+    - variant: primary
+      text: ขอใบเสนอราคา
+      href: /contact
+      icon: tabler:message-circle
+    - text: เยี่ยมชมโรงงานของเรา
+      href: /factory

@@ -1,0 +1,120 @@
+site:
+  name: Seekingtex
+  site: 'https://seekingtex.com'
+  base: '/'
+  trailingSlash: false
+  googleSiteVerificationId: ''
+metadata:
+  title:
+    default: Seekingtex | Producător de țesături funcționale — Protecție solară, impermeabile & textile de performanță
+    template: '%s — Seekingtex'
+  description: 'Seekingtex este un producător lider de țesături funcționale specializat în protecție solară (UPF 50+), țesături impermeabile, cu uscare rapidă, antibacteriene și de performanță pentru îmbrăcăminte sportivă, echipament outdoor și echipament tactic. Servicii OEM/ODM disponibile.'
+  keywords:
+    - Seekingtex
+    - producător de țesături funcționale
+    - țesătură de protecție solară
+    - țesătură UPF 50+
+    - țesătură impermeabilă
+    - țesătură cu uscare rapidă
+    - țesătură de performanță
+    - țesătură sportivă
+  author: Seekingtex
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Seekingtex
+    images:
+      - url: '~/assets/images/default.webp'
+        width: 1200
+        height: 628
+    type: website
+    locale: ro_RO
+  twitter:
+    handle: '@Seekingtex'
+    site: '@Seekingtex'
+    cardType: summary_large_image
+i18n:
+  textDirection: ltr
+apps:
+  blog:
+    isEnabled: true
+    postsPerPage: 6
+    post:
+      isEnabled: true
+      permalink: '/news/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'news'
+      robots:
+        index: true
+        follow: true
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+        follow: true
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+        follow: true
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+  products:
+    isEnabled: true
+    productsPerPage: 12
+    product:
+      isEnabled: true
+      permalink: '/products/%slug%'
+      robots:
+        index: true
+        follow: true
+    list:
+      isEnabled: true
+      pathname: 'products'
+      robots:
+        index: true
+        follow: true
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+ui:
+  theme: 'system'
+
+siteSettings:
+  siteName: 'Seekingtex'
+  siteTagline: 'Producător de țesături funcționale — Protecție solară, impermeabile & textile de performanță'
+  siteDescription: 'Seekingtex este un producător lider de țesături funcționale de înaltă performanță, specializat în protecție solară UPF 50+, țesături impermeabile/transpirabile, cu uscare rapidă, antibacteriene și elastice pentru îmbrăcăminte sportivă, echipament outdoor și aplicații industriale. OEM/ODM cu livrare globală.'
+  organization:
+    name: 'Seekingtex'
+    logo: ''
+    contactEmail: gzb@seekingtex.com
+    contactPhone: '+86 0512-50178907'
+    address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+
+branding:
+  site_name: 'Seekingtex'
+  logo_image: ''
+  logo_alt: 'Logo Seekingtex'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Toate drepturile rezervate.'
+  phone: '+86 0512-50178907'
+  address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
+  email: gzb@seekingtex.com
+  whatsapp_number: '+8618651601133'
+  whatsapp_default_message: 'Salut, aș dori să întreb despre țesăturile dvs. funcționale.'
+  contact_email_to: gzb@seekingtex.com
+  contact_email_provider: resend
+  contact_from_email: web@seekingtex.com
+  contact_from_name: Seekingtex
+  contact_resend_api_key: Aa123456#
+  contact_submissions_pat: ''
+  gmap_api_key: ''
+  map_latitude: '36.8861'
+  map_longitude: '120.5261'

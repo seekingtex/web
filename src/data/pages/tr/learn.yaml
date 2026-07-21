@@ -1,0 +1,73 @@
+﻿hero:
+  tagline: 'Su Ke艧if Bilgisi'
+  title: '脰臒renin'
+  subtitle: |
+    Rehberler, e臒itimler ve derinlemesine bilgiler 鈥?suyu g眉venle ke艧fetmek<br />
+    i莽in ihtiyac谋n谋z olan her 艧ey. 陌lk SUP''inizi se莽mekten ileri tekniklerde ustala艧maya kadar.
+  taglineSection: 'Her k眉rek莽i i莽in bilgi. Ba艧lang谋莽 seviyesinden profesyonele.'
+
+featured:
+  tagline: '脰ne 脟谋kan Konular'
+  title: '脰臒renme yolculu臒unuza ba艧lay谋n'
+  subtitle: '陌ster su sporlar谋nda yeni olun ister seviyenizi y眉kseltmek isteyin, rehberlerimiz size yard谋mc谋 olur.'
+  items:
+    - title: 'SUP Temelleri'
+      description: 'Bir ba艧lang谋莽 seviyesinin bilmesi gereken her 艧ey 鈥?board t眉rleri, pala boyutland谋rmas谋, duru艧 ve ilk g眉n ipu莽lar谋.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: '艦i艧me vs Sert Board'
+      description: 'Hangisi size uygun? Ta艧谋nabilirlik, performans, dayan谋kl谋l谋k ve maliyeti yan yana kar艧谋la艧t谋r谋yoruz.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Su G眉venli臒i'
+      description: 'Her k眉rek莽inin sahip olmas谋 gereken temel g眉venlik bilgisi 鈥?hava durumu, can yelekleri, kendi kendine kurtarma ve daha fazlas谋.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Malzeme Rehberi'
+      description: 'PVC vs Hypalon, drop-stitch teknolojisi, denye de臒erleri 鈥?ekipman谋n谋z谋n nelerden yap谋ld谋臒谋n谋 anlay谋n.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP Boyut Rehberi'
+      description: 'Kilonuz, beceriniz ve k眉rek stiliniz i莽in do臒ru board uzunlu臒unu, geni艧li臒ini ve hacmini bulun.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Orta Seviye Teknikler'
+      description: 'Geli艧mi艧 k眉rek darbeleri, d枚n眉艧 teknikleri ve dalgal谋 su kullan谋m谋 ile k眉re臒inizi bir 眉st seviyeye ta艧谋y谋n.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Kategoriler'
+  title: 'Konuya g枚re ke艧fedin'
+  subtitle: 'T眉m 枚臒renme i莽eri臒i, beceri seviyesine ve ilgi alan谋na g枚re d眉zenlenmi艧tir.'
+  columns:
+    - title: 'Ba艧lang谋莽'
+      items:
+        - 'SUP Temelleri 鈥?buradan ba艧lay谋n'
+        - '艦i艧me vs Sert Board'
+        - 'Su G眉venli臒i Temelleri'
+        - 'SUP''inizi Nas谋l Se莽ersiniz'
+        - 'Pompa ve Paket Rehberi'
+    - title: 'Orta Seviye'
+      items:
+        - 'K眉rek Teknikleri'
+        - '艦i艧me Teknolojisi'
+        - 'Malzeme Referans谋'
+        - 'PVC vs Hypalon Kar艧谋la艧t谋rmas谋'
+        - 'Drop-Stitch 脟ekirdek A莽谋klamas谋'
+    - title: '陌leri ve Profesyonel'
+      items:
+        - 'Filo Operasyonlar谋'
+        - 'Ticari S谋n谋f Ekipman'
+        - 'G眉venlik ve Kurtarma Protokolleri'
+        - '脰zel Yap谋mlar ve OEM'
+
+cta:
+  title: 'Hala sorular谋n谋z m谋 var?'
+  subtitle: 'Ekipman, g眉venlik ve teknikler hakk谋nda ki艧iselle艧tirilmi艧 yan谋tlar i莽in AI rehberimize sorun.'
+  actions:
+    - variant: primary
+      text: 'Su Dan谋艧man谋 AI''ya Sorun'
+      href: '#ai-guide'
+    - text: 'T眉m rehberlere g枚z at谋n'
+      href: '/academy'

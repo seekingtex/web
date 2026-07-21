@@ -1,0 +1,14 @@
+hero:
+  tagline: 技术
+  title: 我们的技术
+  subtitle: Seekingtex 产品采用先进材料和创新工程技术设计，提供卓越的性能、耐用性和便携性。
+
+features:
+  - title: 军用级 PVC
+    description: 我们的功能性面料和 SUP 使用抗紫外线、耐磨损的 PVC 面料，具有高拉伸强度和抗穿刺性。
+  - title: Drop-Stitch 结构
+    description: 数千条高密度纤维线连接上下表面，形成刚性、高压的甲板——使功能性 SUP 达到接近硬板的性能。
+  - title: 热焊接接缝
+    description: 接缝采用热焊接而非胶合，在关键应力点提供持久的粘合强度。
+  - title: 自动功能性技术
+    description: Pro 救生衣采用自动功能性机制，入水后立即启动，提供可靠的浮力。

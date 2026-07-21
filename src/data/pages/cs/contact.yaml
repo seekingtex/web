@@ -1,0 +1,134 @@
+hero:
+  tagline: Kontakt
+  title: Kontaktujte Seekingtex
+  subtitle: Jsme tu, abychom v谩m pomohli. Kontaktujte n谩s ohledn臎 dotaz暖 na produkty, OEM/ODM partnerstv铆 nebo jak茅koli jin茅 ot谩zky.
+  image: /images/seekingtex/hero/contact-banner.webp
+  imageAlt: Kontakt Seekingtex
+
+contact_form:
+  id: form
+  title: Po拧lete n谩m zpr谩vu
+  subtitle: Pro popt谩vky, technick茅 dotazy nebo partnersk茅 dotazy n谩m napi拧te. Odpov铆me do jednoho pracovn铆ho dne.
+  email_to: gzb@seekingtex.com
+  submit_button: Odeslat popt谩vku 鈫?Z铆skat nab铆dku
+  success_message: D臎kujeme! Va拧e zpr谩va dorazila do na拧铆 schr谩nky. Odpov铆me do jednoho pracovn铆ho dne.
+  error_message: P艡i odes铆l谩n铆 zpr谩vy do拧lo k chyb臎. Zkuste to znovu nebo n谩m napi拧te p艡铆mo e-mail.
+  default_country_code: '+1'
+  captcha:
+    label: 'Ochrana proti spamu: vy艡e拧te n谩sleduj铆c铆'
+  fields:
+    - name: firstName
+      label: Jm茅no
+      row: 1
+    - name: lastName
+      label: P艡铆jmen铆
+      row: 1
+    - name: companyName
+      label: N谩zev spole膷nosti
+      row: 2
+    - name: address
+      label: Adresa
+      row: 3
+    - name: zip
+      label: PS膶
+      row: 4
+    - name: country
+      label: Zem臎
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-mail
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Odhadovan媒 objem objedn谩vky
+      row: 6
+      type: select
+      options:
+        - value: 'Z谩kaznick媒 servis'
+          label: Vyberte odhadovan媒 objem...
+        - value: sample
+          label: Pouze vzorky / prototypy
+        - value: '5-10'
+          label: 50鈥?00 jednotek (standardn铆 MOQ)
+        - value: '100-500'
+          label: 100鈥?00 jednotek
+        - value: '500-plus'
+          label: 500+ jednotek (mno啪stevn铆 ceny)
+    - name: customization
+      label: Pot艡ebujete 煤pravy?
+      row: 7
+      type: select
+      options:
+        - value: 'Technick谩 podpora'
+          label: Vyberte typ 煤prav...
+        - value: none
+          label: Standardn铆 produkt (bez 煤prav)
+        - value: logo
+          label: Pouze vlastn铆 logo / zna膷ka
+        - value: full
+          label: Pln茅 OEM (velikost, barva, grafika, balen铆)
+        - value: consultation
+          label: Nejsem si jist媒 鈥?pot艡ebuji konzultaci
+    - name: productInterest
+      label: Kategorie produkt暖
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: P艡edm臎t
+      row: 9
+    - name: message
+      label: Zpr谩va
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Dal拧铆 zp暖soby, jak n谩s kontaktovat
+  columns: 3
+  items:
+    - title: Prodejn铆 dotazy
+      description: Nab铆dky, konfigurace, dealersk茅 p艡ihl谩拧ky a velkoobchodn铆 objedn谩vky.
+      icon: tabler:shopping-bag
+    - title: Technick谩 podpora
+      description: Z谩ruka, opravy, n谩hradn铆 d铆ly a provozn铆 dotazy.
+      icon: tabler:tool
+    - title: M茅dia a partnerstv铆
+      description: Medi谩ln铆 sady, sponzoring a pr暖myslov谩 spolupr谩ce.
+      icon: tabler:news
+    - title: Telefon
+      description: +86 13305324192
+      icon: tabler:headset
+    - title: E-mail
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: S铆dlo spole膷nosti
+      description: Economic Development Zone, Laixi, Qingdao, 膶铆na, 266600
+      icon: tabler:map-pin
+map:
+  title: Na拧e poloha
+  subtitle: Nav拧tivte n谩s v na拧em s铆dle
+  address: Economic Development Zone, Laixi, Qingdao, 膶铆na, 266600
+  zoom: 15

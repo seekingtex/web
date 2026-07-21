@@ -1,0 +1,68 @@
+cases:
+  - id: sportswear
+    title: Sportswear & Activewear
+    desc: Functional fabrics for high-performance athletic and fitness apparel.
+    scenario: >-
+      A sportswear brand needs lightweight, moisture-wicking fabric for their new
+      running collection. The fabric must offer quick-dry performance, 4-way stretch,
+      and antibacterial protection for hygiene during intense workouts.
+    solution: >-
+      Our Quick-Dry Moisture Wicking Fabric combined with 4-Way Stretch Fabric
+      delivers superior moisture management and unrestricted movement. The 7A
+      Antibacterial treatment ensures lasting freshness through repeated wear.
+    products:
+      - Quick-Dry Moisture Wicking Fabric
+      - 4-Way Stretch Fabric
+      - 7A Antibacterial Fabric
+    image: /images/seekingtex/products/quick-dry-fabric.webp
+
+  - id: outdoor
+    title: Outdoor & Adventure Apparel
+    desc: Durable weather-resistant fabrics for hiking, camping, and exploration gear.
+    scenario: >-
+      An outdoor brand requires waterproof breathable fabric for their flagship
+      rain jacket line. The fabric must withstand heavy rain while allowing moisture
+      vapor to escape during high-output activities.
+    solution: >-
+      Our Waterproof Breathable Fabric with 10000mm water column rating and
+      three-layer hardshell laminate provides reliable weather protection with
+      excellent breathability. DWR finish adds extra durability.
+    products:
+      - Waterproof Breathable Fabric
+      - 3-Layer Hardshell Laminate Fabric
+      - Down-Proof Shell Fabric
+    image: /images/seekingtex/products/waterproof-fabric.webp
+
+  - id: tactical
+    title: Tactical & Workwear
+    desc: Heavy-duty performance fabrics for professional and industrial applications.
+    scenario: >-
+      A tactical gear manufacturer needs abrasion-resistant, tear-proof fabric for
+      duty uniforms and vests. The material must withstand harsh field conditions
+      while providing comfort during extended wear.
+    solution: >-
+      Our Tactical Ripstop Nylon Fabric offers exceptional tear and abrasion
+      resistance with reinforced ripstop grid. Combined with UPF 50+ sun protection
+      fabric, it delivers all-weather field performance.
+    products:
+      - Tactical Ripstop Nylon Fabric
+      - UPF 50+ Sun Protection Fabric
+      - Waterproof Breathable Fabric
+    image: /images/seekingtex/products/ripstop-fabric.webp
+
+  - id: fashion
+    title: Fashion & Casual Wear
+    desc: Performance-enhanced everyday fabrics combining style with function.
+    scenario: >-
+      A fashion brand wants to incorporate functional properties into their casual
+      clothing line — UV protection for summer shirts, quick-dry for travel wear,
+      and eco-friendly options for their sustainable collection.
+    solution: >-
+      Our Ice Silk Cooling Sun Protection Fabric delivers UPF 50+ with a premium
+      hand feel perfect for lifestyle apparel. Eco-Friendly Recycled Polyester
+      Fabric offers sustainable options without compromising quality.
+    products:
+      - Ice Silk Cooling Sun Protection Fabric
+      - Eco-Friendly Recycled Polyester Fabric
+      - UPF 50+ Sun Protection Fabric
+    image: /images/seekingtex/products/cooling-fabric.webp

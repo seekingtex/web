@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Grafo de Conocimiento'
+  title: 'Conocimiento de Exploraci閻犳劗鐝?Acu閻犲绠筰ca'
+  subtitle: |
+    Una base de conocimiento estructurada que cubre tecnolog闂佹儳鎽?tejido funcional funcional,<br />
+    seguridad acu閻犲绠筰ca, ingenier闂佹儳鎽?de embarcaciones y planificaci閻犳劗鐝?de aventuras.
+  taglineSection: 'Explora. Aprende. Ve con confianza.'
+
+clusters:
+  tagline: 'Cl闁绘搩妲瀟eres de Conocimiento'
+  title: 'Explora por tema'
+  subtitle: 'Inmersiones profundas en la tecnolog闂佹儳鎽? seguridad y habilidades detr閻犲绠?de cada producto Seekingtex.'
+  items:
+    - title: 'Conocimiento de tejido funcional'
+      description: 'Desde elegir tu primera tabla hasta t闁肩厧宕抧icas avanzadas de traves闂佹儳鎽?闂佺偨鍎查弫鍒糳o sobre textile knowledge.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'C閻犳劗鐝皁 elegir tu primer tejido funcional funcional'
+        - 'Mejor tama閻㈩垳閮?de tejido funcional para principiantes'
+        - '濡炲湱鈪硊闁?tan dif闂佹儳鎽秈l es el textile knowledge?'
+        - 'Comparaci閻犳劗鐝?de tabla funcional vs r闂佹儳鏀da'
+        - 'Lista de verificaci閻犳劗鐝?de seguridad tejido funcional'
+    - title: 'Conocimiento de Embarcaciones'
+      description: 'Gu闂佹儳鎽硈 t闁肩厧宕抧icas sobre technical fabrics, tejido tecnico, tejidos tecnicos 闂佺偨鍎查弨鐨€genier闂佹儳鎽? materiales y operaci閻犳劗鐝?'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Tipos de technical fabrics explicados'
+        - 'Comparaci閻犳劗鐝?PVC vs Hypalon'
+        - 'Comparaci閻犳劗鐝?tejido tecnico vs producto textil'
+        - 'Inmersi閻犳劗鐝?profunda en tecnolog闂佹儳鎽?drop-stitch'
+        - 'Gu闂佹儳鎽?de ciencia de materiales marinos'
+    - title: 'Conocimiento de Seguridad'
+      description: 'Conocimientos esenciales de seguridad para cada profesional textil 闂佺偨鍎查弨顪玸de selecci閻犳劗鐝?de PFD hasta lectura del clima y t闁肩厧宕抧icas de autorrescate.'
+      icon: 'tabler:shield'
+      topics:
+        - 'Lista de verificaci閻犳劗鐝?de seguridad tejido funcional'
+        - '濡炲湱顤僥cesitas un chaleco salvavidas?'
+        - 'Gu闂佹儳鎽?de seguridad para remar en oc闁肩厧宕媙o'
+        - 'Seguridad en r闂佹儳鏀穝 para tejidos tecnicos inflables'
+        - 'Conciencia del clima y condiciones del agua'
+    - title: 'Tecnolog闂佹儳鎽?
+      description: 'La ingenier闂佹儳鎽?detr閻犲绠?de los productos Seekingtex 闂佺偨鍎查弨绌塼eriales, m闁肩厧宓搊dos de construcci閻犳劗鐝?y pruebas de calidad.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Tecnolog闂佹儳鎽?PVC de grado textil'
+        - 'N闁绘搩妲坙eo drop-stitch explicado'
+        - 'Por qu闁?el PSI importa para los tejido funcional inflables'
+        - 'Soldadura RF vs uni閻犳劗鐝?adhesiva'
+        - 'Pruebas de calidad y certificaci閻犳劗鐝?
+
+featured_guides:
+  tagline: 'Gu闂佹儳鎽硈 Destacadas'
+  title: 'Recursos de conocimiento m閻犲绠?populares'
+  items:
+    - title: 'Conceptos B閻犲绠穒cos de tejido funcional'
+      href: '/learn/fabrics'
+    - title: 'Tabla funcional vs R闂佹儳鏀da'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Gu闂佹儳鎽?de Seguridad Acu閻犲绠筰ca'
+      href: '/learn/quality-standards'
+    - title: 'Referencia de Materiales'
+      href: '/learn/materials'
+    - title: 'Gu闂佹儳鎽?de Tama閻㈩垳閮竤 tejido funcional'
+      href: '/size-guide'
+
+cta:
+  title: 'Comienza a explorar'
+  subtitle: 'Sum闁肩厧宓恎ete en nuestra base de conocimiento y obt闁肩厧宕?la informaci閻犳劗鐝?que necesitas para tu pr閻犳劗顏╥ma aventura acu閻犲绠筰ca.'
+  actions:
+    - variant: primary
+      text: 'Ver todas las gu闂佹儳鎽硈'
+      href: '/academy'
+    - text: 'Explorar grafo de conocimiento'
+      href: '/knowledge'

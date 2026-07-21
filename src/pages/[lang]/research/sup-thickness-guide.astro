@@ -1,0 +1,122 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `Fabric Weight Guide — GSM Selection for Performance Textiles | ${SITE.name}`,
+  description: `Technical guide to fabric weight (GSM) for functional textiles: how 100 GSM, 200 GSM, and 300+ GSM fabrics differ in durability, drape, comfort, and performance. GSM recommendations for uniforms, workwear, healthcare, and hospitality textiles.`,
+  ignoreTitleTemplate: true,
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Fabric Weight Guide — GSM Selection for Performance Textiles',
+  description: metadata.description,
+  author: { '@type': 'Organization', name: SITE.name },
+  datePublished: '2024-04-12',
+  dateModified: '2025-06-01',
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={jsonLd} />
+
+  <article class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/research`} class="hover:text-sky-600">{t('home.research.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('home.research.supThickness')}</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Engineering</span>
+      <span class="ml-3 text-sm text-gray-400">6 min read</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">{t('home.research.supThickness')}</h1>
+    <p class="text-xl text-gray-500 mb-12 leading-relaxed">{t('home.research.supThickness.desc')}</p>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>The Three Standard GSM Ranges</h2>
+
+      <h3>100–150 GSM — Lightweight</h3>
+      <ul>
+        <li>Lightest weight – maximum breathability</li>
+        <li>Softest drape – best for shirts and blouses</li>
+        <li>Least durable – suitable for light-duty apparel</li>
+        <li>Best for: Corporate shirts, hospitality blouses, light summer uniforms</li>
+      </ul>
+
+      <h3>150–250 GSM — Mid-Weight</h3>
+      <ul>
+        <li>Good balance of durability and comfort</li>
+        <li>Moderate weight – standard uniform material usage</li>
+        <li>Good opacity and coverage</li>
+        <li>Best for: Healthcare scrubs, hospitality uniforms, corporate workwear</li>
+      </ul>
+
+      <h3>250–350+ GSM — Heavy Weight</h3>
+      <ul>
+        <li>Highest durability – maximum abrasion resistance</li>
+        <li>Heaviest – more material, increased warmth</li>
+        <li>Best structure retention – holds shape under heavy use</li>
+        <li>Best for: Industrial workwear, chef coats, heavy-duty uniforms, outerwear</li>
+      </ul>
+
+      <h2>Engineering Analysis</h2>
+      <p>
+        The performance of a fabric is governed by fiber type, yarn count, weave/knit structure, and GSM. A 200 GSM fabric in a twill weave will perform very differently from a 200 GSM fabric in a plain weave. At the same GSM, construction method significantly affects drape, breathability, and durability. Understanding the relationship between GSM and end-use requirements is essential for proper fabric selection.
+      </p>
+
+      <h2>GSM by Application</h2>
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-3 text-left font-semibold text-gray-900 border">Application</th>
+            <th class="p-3 text-left font-semibold text-gray-900 border">Recommended GSM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border">Corporate shirts / blouses</td><td class="p-3 border">100–150 GSM</td></tr>
+          <tr><td class="p-3 border">Healthcare scrubs</td><td class="p-3 border">150–200 GSM</td></tr>
+          <tr><td class="p-3 border">Hospitality uniforms</td><td class="p-3 border">180–250 GSM</td></tr>
+          <tr><td class="p-3 border">Chef coats / kitchen wear</td><td class="p-3 border">250–300 GSM</td></tr>
+          <tr><td class="p-3 border">Industrial workwear</td><td class="p-3 border">280–350+ GSM</td></tr>
+          <tr><td class="p-3 border">Outerwear / jackets</td><td class="p-3 border">200–350 GSM</td></tr>
+        </tbody>
+      </table>
+
+      <h2>GSM vs. Performance Trade-off</h2>
+      <p>
+        A common misconception is that higher GSM always means better quality. While higher GSM fabrics are generally more durable and opaque, they are also heavier, less breathable, and more expensive. For many applications, a mid-weight fabric (180–220 GSM) offers the optimal balance of performance and comfort. The key is matching GSM to the specific requirements of the end use.
+      </p>
+
+      <h2>Seekingtex Fabric Range</h2>
+      <ul>
+        <li><strong>100–150 GSM:</strong> Lightweight polyester and T/C blends for corporate shirts and hospitality tops</li>
+        <li><strong>150–200 GSM:</strong> Mid-weight performance fabrics for healthcare scrubs and uniforms</li>
+        <li><strong>200–250 GSM:</strong> Durable hospitality and corporate uniform fabrics</li>
+        <li><strong>250–350+ GSM:</strong> Heavy-duty fabrics for industrial workwear and protective apparel</li>
+      </ul>
+      <p>All Seekingtex fabrics utilize high-quality yarns with OEKO-TEX Standard 100 certification and are available in custom weights upon request.</p>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-gray-200">
+      <a href={`/${lang}/research`} class="text-sky-600 hover:text-sky-700 font-medium">&larr; {t('home.research.tagline')}</a>
+    </div>
+  </article>
+</Layout>

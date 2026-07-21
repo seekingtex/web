@@ -1,0 +1,67 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import { SITE } from 'astrowind:config';
+import { getProducts, isProductsEnabled, isProductsListEnabled } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+const products = await getProducts();
+const hidden = !isProductsEnabled() || !isProductsListEnabled();
+const metadata = merge({
+  title: `Printed Fabrics — Custom Pattern & Sublimation Textiles | ${SITE.name}`,
+  description: `Browse ${SITE.name} printed fabrics — sublimation, pigment, reactive, and discharge printed textiles for fashion, sportswear, and uniform applications. Custom pattern development available.`,
+  canonical: getCanonical(getPermalink('/collection/printed')),
+  robots: { index: !hidden, follow: true },
+  openGraph: { type: 'website' },
+}, {}) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Collection</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Printed Fabrics</h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Custom-printed fabrics with vibrant patterns — sublimation digital prints, pigment prints, reactive prints, and discharge printing on performance textiles.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Our printed fabric collection combines the performance of engineered textiles with the creativity of custom pattern design. Using advanced digital sublimation and rotary screen printing technology, we produce vibrant, colorfast prints on polyester, nylon, cotton blends, and performance knit substrates. Ideal for fashion collections, team uniforms, branded merchandise, and custom sportswear.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Sublimation Printing</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Vibrant, permanent prints on polyester fabrics. Dye sublimation transfers pattern into the fiber itself — no peeling, cracking, or fading. Ideal for sportswear and athletic uniforms.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Pigment & Reactive Printing</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">For cotton and cotton-blend fabrics. Reactive dyes bond chemically with cellulose fibers for excellent wash fastness. Pigment prints offer vibrant colors on dark fabrics.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Custom Pattern Development</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">From artwork to production — our in-house design team develops repeat patterns, color separations, and strike-offs. MOQ from 500 meters per design.</p>
+      </div>
+    </section>
+
+    {
+      products.length > 0 ? (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => <ProductCard product={p} />)}
+        </div>
+      ) : (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <p class="text-lg">Browse our product catalog for printable performance fabrics.</p>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+        </div>
+      )
+    }
+  </section>
+</Layout>

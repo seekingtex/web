@@ -1,0 +1,14 @@
+hero:
+  tagline: Tecnología
+  title: Nuestra tecnología
+  subtitle: Los productos Seekingtex están diseñados con materiales avanzados e ingeniería innovadora para ofrecer un rendimiento, durabilidad y portabilidad excepcionales.
+
+features:
+  - title: PVC de grado militar
+    description: Nuestros botes inflables y tejido funcional utilizan tela PVC resistente a los rayos UV y a la abrasión, con alta resistencia a la tracción y a las perforaciones.
+  - title: Construcción Drop-Stitch
+    description: Miles de hilos de fibra de alta densidad conectan las superficies superior e inferior, creando una cubierta rígida de alta presión – dando a los tejido funcional inflables un rendimiento cercano al de las tablas rígidas.
+  - title: Costuras termoselladas
+    description: Las costuras se sueldan con calor en lugar de pegarse, proporcionando una fuerza de unión duradera en los puntos de tensión críticos.
+  - title: Tecnología de inflado automático
+    description: Los chalecos salvavidas Pro utilizan un mecanismo de inflado automático que se activa inmediatamente al sumergirse, proporcionando flotabilidad confiable.

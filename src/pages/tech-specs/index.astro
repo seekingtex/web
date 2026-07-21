@@ -1,0 +1,101 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { ui, defaultLang } from '~/i18n/config';
+import { products, type ProductRecord } from '~/data/products';
+
+const t = (key: string) => (ui as any)['en']?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const metadata = {
+  title: `${t('techspecs.title')} | ${SITE.name}`,
+  description: t('techspecs.subtitle'),
+  ignoreTitleTemplate: true,
+};
+
+const categories: { key: ProductRecord['category']; label: string; desc: string }[] = [
+  { key: 'sun-protection', label: 'Sun Protection Fabrics', desc: 'UPF 50+ rated fabrics tested per AATCC 183. Available in woven and knitted constructions.' },
+  { key: 'waterproof', label: 'Waterproof Breathable Fabrics', desc: 'Microporous membrane and coated fabrics with hydrostatic pressure testing per AATCC 127.' },
+  { key: 'quick-dry', label: 'Quick-Dry Moisture Wicking Fabrics', desc: 'Moisture management fabrics with capillary-action wicking and rapid evaporation.' },
+  { key: 'antibacterial', label: '7A Antibacterial Fabrics', desc: 'Antimicrobial treated fabrics tested per GB/T 20944.3 with >99% bacterial reduction.' },
+  { key: 'stretch', label: '4-Way Stretch Fabrics', desc: 'Elastane-blended knits and wovens with warp and weft elasticity for maximum freedom of movement.' },
+  { key: 'breathable', label: 'Breathable Mesh Fabrics', desc: 'Engineered ventilation fabrics for sportswear, workwear, and lining applications.' },
+  { key: 'eco-friendly', label: 'Eco-Friendly Recycled Fabrics', desc: 'GRS-certified recycled polyester and nylon fabrics from post-consumer and pre-consumer waste.' },
+];
+
+const catProducts = categories.map((cat) => ({
+  ...cat,
+  items: products.filter((p) => p.category === cat.key),
+}));
+---
+
+<Layout metadata={metadata}>
+  <JsonLd type="Article" article={{
+    headline: t('techspecs.title'),
+    description: metadata.description,
+    datePublished: '2025-01-15',
+    dateModified: new Date().toISOString().split('T')[0],
+  }} />
+
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <section class="text-center mb-14">
+      <h1 class="text-4xl font-extrabold text-gray-900 dark:text-slate-100">{t('techspecs.title')}</h1>
+      <p class="mt-3 text-lg text-gray-500 dark:text-slate-400 max-w-3xl mx-auto">{t('techspecs.desc')}</p>
+    </section>
+
+    {catProducts.filter((c) => c.items.length > 0).map((cat) => (
+      <section class="mb-14">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 mb-2">{cat.label}</h2>
+        <p class="text-gray-500 dark:text-slate-400 mb-5 text-sm">{cat.desc}</p>
+        <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 dark:bg-slate-800 text-left text-gray-600 dark:text-slate-300">
+              <tr>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramName') || 'Product'}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWeight') || 'Weight (GSM)'}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramComposition') || 'Composition'}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWidth') || 'Width'}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramRating') || 'Performance Rating'}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramCertification') || 'Certification'}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-slate-700">
+              {cat.items.map((p) => (
+                <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-100">{p.name}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs?.weight || p.ai_specs?.gsm || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs?.composition || p.ai_specs?.material || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs?.width || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs?.rating || p.ai_specs?.performance || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs?.certification || p.ai_specs?.standard || '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+
+    <!-- Fabric Material Specs -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-slate-100 mb-2">{t('techspecs.materialsTitle')}</h2>
+      <p class="text-gray-500 dark:text-slate-400 mb-5 text-sm">{t('techspecs.materialsDesc')}</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {[
+          { key: 'materialPolyester', icon: '\u{1F9F5}', specs: '100% polyester, 50-300 GSM, mechanical stretch options, moisture wicking finish available' },
+          { key: 'materialNylon', icon: '\u{1F9F5}', specs: '100% nylon, 20-200 GSM, high tensile strength, abrasion resistant, lightweight' },
+          { key: 'materialCottonBlend', icon: '\u{1F3F3}\u{FE0F}', specs: 'Cotton-polyester blends, 120-250 GSM, natural feel with performance wicking' },
+          { key: 'materialSpandex', icon: '\u{1F3CA}', specs: 'Elastane 5-20%, 4-way stretch, excellent recovery, for activewear and yoga' },
+          { key: 'materialRecycled', icon: '\u{267B}\u{FE0F}', specs: '100% recycled polyester from PET bottles, GRS certified, 50-300 GSM' },
+        ].map((mat) => (
+          <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+            <div class="text-2xl mb-2">{mat.icon}</div>
+            <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('techspecs.' + mat.key)}</h3>
+            <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('techspecs.' + mat.key + 'Desc')}</p>
+            <div class="mt-3 text-xs font-mono bg-gray-100 dark:bg-slate-700 p-2 rounded text-gray-600 dark:text-slate-300">{mat.specs}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

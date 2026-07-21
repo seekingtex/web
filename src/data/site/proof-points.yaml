@@ -1,0 +1,17 @@
+points:
+  - id: products
+    metric: '15'
+    label: fabric types across 7 categories
+    detail: Sun Protection, Waterproof, Quick-Dry, Antibacterial, Stretch, Breathable, Eco-Friendly
+  - id: countries
+    metric: '20+'
+    label: countries served
+    detail: Global distribution network across EU, US, ASIA, Americas
+  - id: founded
+    metric: '2012'
+    label: founded
+    detail: Over a decade of textile manufacturing excellence
+  - id: certified
+    metric: OEKO
+    label: TEX certified
+    detail: Every fabric meets international safety and quality standards

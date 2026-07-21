@@ -1,0 +1,37 @@
+label: 'การรับประกัน'
+headline: 'การรับประกันแบบจำกัดของผู้ผลิต Seekingtex'
+subtitle: 'Seekingtex ยืนหยัดอยู่เบื้องหลังคุณภาพของผลิตภัณฑ์ทางทะเลทุกชิ้นที่เราผลิต'
+seo:
+  headline: 'การรับประกันผ้าฟังก์ชัน Seekingtex — รับประกันแบบจำกัด 5 ปี | Seekingtex'
+  description: 'Seekingtex ให้การรับประกันแบบจำกัด 5 ปีสำหรับผ้าหลักของท่อ ตะเข็บ และตัวเรือไฟเบอร์กลาส'
+  datePublished: '2024-01-01'
+  dateModified: '2026-06-01'
+body: |
+  <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+    การรับประกันแบบจำกัดนี้ใช้กับผลิตภัณฑ์ทางทะเลเป่าลมใหม่ภายใต้แบรนด์ Seekingtex
+  </p>
+  <div class="bg-sky-50 dark:bg-gray-900 border border-sky-200 dark:border-gray-800 rounded-xl p-6 mb-10">
+    <h2 class="text-xl font-bold mb-3">ความคุ้มครองการรับประกันและระยะเวลา</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 ปี</h3>
+        <p class="text-sm text-gray-600 mt-1">ผ้าหลักท่อ (CSM/PVC)</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 ปี</h3>
+        <p class="text-sm text-gray-600 mt-1">ความสมบูรณ์ของโครงสร้างตัวเรือไฟเบอร์กลาส</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 ปี</h3>
+        <p class="text-sm text-gray-600 mt-1">ความกันอากาศของตะเข็บ</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5 ปี</h3>
+        <p class="text-sm text-gray-600 mt-1">ฟังก์ชันการทำงานของวาล์ว</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">1 ปี</h3>
+        <p class="text-sm text-gray-600 mt-1">อุปกรณ์เสริมติดตั้งจากโรงงาน</p>
+      </div>
+    </div>
+  </div>

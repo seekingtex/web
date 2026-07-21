@@ -1,0 +1,137 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || '';
+
+const metadata = {
+  title: `${t('disasterRelief.title') || 'Medical & Healthcare Textiles — Functional Fabrics for Healthcare'} | ${SITE.name}`,
+  description: t('disasterRelief.desc') || `${SITE.name} functional fabrics engineered for medical and healthcare applications. Antimicrobial protection, fluid resistance, durability, and certified configurations for healthcare, medical, and institutional use.`,
+};
+
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: t('disasterRelief.nav') || 'Medical & Healthcare Textiles' },
+];
+
+const applications = [
+  { title: t('disasterRelief.a1') || 'Medical Uniforms & Scrubs', desc: t('disasterRelief.a1desc') || 'High-durability antimicrobial fabrics for healthcare professional attire. Exceptional comfort and fluid resistance.' },
+  { title: t('disasterRelief.a2') || 'Hospital Linens', desc: t('disasterRelief.a2desc') || 'Durable, easy-care fabrics for bed linens, patient gowns, and towels with antimicrobial properties.' },
+  { title: t('disasterRelief.a3') || 'Protective Apparel', desc: t('disasterRelief.a3desc') || 'Fluid-repellent and barrier fabrics for protective medical garments and isolation gowns.' },
+  { title: t('disasterRelief.a4') || 'Patient Care Textiles', desc: t('disasterRelief.a4desc') || 'Comfortable, breathable fabrics for patient care including blankets, drapes, and positioning aids.' },
+  { title: t('disasterRelief.a5') || 'Institutional Textiles', desc: t('disasterRelief.a5desc') || 'Durable fabrics for healthcare facilities including cubicle curtains, upholstery, and privacy screens.' },
+];
+
+const features = [
+  t('disasterRelief.f1') || 'Antimicrobial finish for hygiene and infection control',
+  t('disasterRelief.f2') || 'Fluid-repellent barrier protection',
+  t('disasterRelief.f3') || 'Reinforced seams for industrial laundering durability',
+  t('disasterRelief.f4') || 'Breathable construction for all-day comfort',
+  t('disasterRelief.f5') || 'High-visibility color options for safety',
+  t('disasterRelief.f6') || 'Colorfast and fade-resistant dyes',
+  t('disasterRelief.f7') || 'Easy-care wrinkle-resistant properties',
+  t('disasterRelief.f8') || 'Compact storage and transport efficiency',
+  t('disasterRelief.f9') || 'Rapid production and delivery-ready design',
+  t('disasterRelief.f10') || 'Customizable colors, branding, and labeling',
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">{t('disasterRelief.badge') || 'Healthcare Textiles'}</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{t('disasterRelief.heading') || 'Medical & Healthcare Textiles'}</h1>
+    <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
+      {t('disasterRelief.subtitle') || 'Seekingtex functional fabrics serve healthcare institutions — enabling superior hygiene, critical protection, and life-saving performance in the most challenging medical environments. Our textiles are engineered for reliability when it matters most.'}
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{t('disasterRelief.missionBadge') || 'Mission Profiles'}</p>
+      <h2 class="mt-2 text-3xl font-bold">{t('disasterRelief.missionTitle') || 'Critical Applications'}</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {applications.map((a) => (
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg font-bold">{a.title}</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+    <h2 class="text-2xl font-bold text-center">{t('disasterRelief.featureTitle') || 'Engineered for Extreme Conditions'}</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-4">
+      {features.map((f) => (
+        <div class="flex items-start gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+          <span class="text-primary mt-0.5 shrink-0">&#10003;</span>
+          <span class="text-sm text-muted">{f}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">{t('disasterRelief.sizeTitle') || 'Fabric Range: Light to Heavy Duty'}</h2>
+        <p class="mt-4 text-muted leading-relaxed">
+          {t('disasterRelief.sizeSub') || 'Our specialized fabric range covers the full spectrum of operational needs:'}
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex gap-3"><span class="text-primary font-bold">Lightweight</span><span class="text-muted text-sm">{t('disasterRelief.size1') || '100-150 GSM for patient gowns, linens, light-duty apparel'}</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">Medium Weight</span><span class="text-muted text-sm">{t('disasterRelief.size2') || '150-250 GSM for scrubs, uniforms, institutional textiles'}</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold">Heavy Duty</span><span class="text-muted text-sm">{t('disasterRelief.size3') || '250-350+ GSM for protective apparel, heavy-use linens, industrial textiles'}</span></li>
+        </ul>
+      </div>
+      <div class="p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold">{t('disasterRelief.advantageTitle') || 'The Seekingtex Advantage'}</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">
+          {t('disasterRelief.advantageDesc') || 'Every fabric batch undergoes comprehensive quality testing before shipping. Our materials are tested for tensile strength, color fastness, dimensional stability, and antimicrobial efficacy. We stand behind our products with OEKO-TEX certification and responsive after-sales support.'}
+        </p>
+        <a href={`/${lang}/contact`} class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+          {t('disasterRelief.cta') || 'Request humanitarian pricing'} →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ExperienceLayer
+    title={t('disasterRelief.expTitle') || 'Real-World Humanitarian Impact'}
+    subtitle={t('disasterRelief.expSub') || 'How Seekingtex functional fabrics support healthcare and humanitarian aid missions worldwide.'}
+    stories={[
+      {
+        quote: "When the pandemic hit, we needed antimicrobial scrubs for 5,000 healthcare workers. Seekingtex delivered 12,000 meters of fabric in 72 hours — air-freighted and ready for production.",
+        narrative: "An international healthcare organization faced a critical shortage of antimicrobial medical uniforms during a widespread health emergency. Seekingtex expedited production of 12,000 meters of antimicrobial fabric, coordinated air freight logistics, and had the fabric operational within 72 hours.",
+        context: "Healthcare emergency response, 2024",
+        source: "NGO Logistics Coordinator"
+      },
+      {
+        quote: "The ability to launder these uniforms at industrial scale with zero performance loss is a game-changer. We can outfit remote clinics with durable, antimicrobial apparel that lasts.",
+        narrative: "A medical relief organization operating in remote areas needed uniforms that could withstand repeated industrial laundering in harsh conditions. Seekingtex's high-durability antimicrobial fabrics, engineered for 50+ industrial launderings, allowed teams to maintain hygiene standards in remote clinic environments.",
+        context: "Remote medical missions, Sub-Saharan Africa, 2023-2025",
+        source: "Field Operations Director"
+      },
+    ]}
+  />
+  <RelatedPages
+    title={t('disasterRelief.relatedTitle') || 'Related Resources'}
+    subtitle={t('disasterRelief.relatedSub') || 'Explore more about Seekingtex healthcare and humanitarian textile solutions'}
+    links={[
+      { title: t('disasterRelief.rel1') || 'Healthcare Textile Solutions', description: t('disasterRelief.rel1desc') || 'Professional functional fabrics engineered for healthcare and medical applications worldwide.', href: `/${lang}/healthcare-textiles`, label: 'Use Case' },
+      { title: t('disasterRelief.rel2') || 'OEM/ODM Manufacturing', description: t('disasterRelief.rel2desc') || 'Custom fabric manufacturing for healthcare organizations with specific requirements.', href: `/${lang}/oem-odm-manufacturer`, label: 'Service' },
+      { title: t('disasterRelief.rel3') || 'Quality & Testing', description: t('disasterRelief.rel3desc') || 'OEKO-TEX and ISO certified quality management ensuring reliability in demanding environments.', href: `/${lang}/quality`, label: 'Quality' },
+      { title: t('disasterRelief.rel4') || 'Solutions by Industry', description: t('disasterRelief.rel4desc') || 'Industry-specific functional fabric solutions.', href: `/${lang}/solutions/by-industry`, label: 'Overview' },
+    ]}
+  />
+</Layout>

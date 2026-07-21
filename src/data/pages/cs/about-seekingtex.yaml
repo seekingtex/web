@@ -1,0 +1,52 @@
+hero:
+  tagline: O n谩s
+  title: O Seekingtex
+  subtitle: 'V媒roba nafukovac铆ch 膷lun暖, SUP a vybaven铆 pro vodn铆 sporty od roku 2012. CE a ISO certifikov谩no.'
+  cta: P艡e膷t臎te si n谩拧 p艡铆b臎h
+  image: /images/seekingtex/hero/about-banner.webp
+  imageAlt: Seekingtex tov谩rna
+
+stats:
+  - value: '2012'
+    label: Zalo啪eno
+  - value: '12 000'
+    label: m虏 v媒robn铆 plocha
+  - value: '50+'
+  - value: 'ISO 9001'
+    label: Certifikace
+
+brand:
+  tagline: Na拧e zna膷ka
+  title: V铆ce ne啪 v媒robce
+  body: |
+    Seekingtex je v铆ce ne啪 jen tov谩rna 鈥攋sme partne艡i pro zna膷ky, oper谩tory a profesion谩ly, kte艡铆 po啪aduj铆 to nejlep拧铆 ve vybaven铆 pro vodn铆 sporty. Od n谩vrhu konceptu a啪 po dod谩n铆, ka啪d媒 produkt je postaven podle stejn媒ch standard暖, kter茅 bychom po啪adovali pro vlastn铆 pou啪it铆.
+
+story:
+  tagline: N谩拧 p艡铆b臎h
+  title: Od skromn媒ch za膷谩tk暖 ke glob谩ln铆mu dosahu
+  milestones:
+    - year: '2012'
+      title: Zalo啪en铆
+      description: Seekingtex byl zalo啪en v Qingdao s viz铆 vyr谩b臎t vysoce kvalitn铆 nafukovac铆 produkty pro vodn铆 sporty.
+      image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+    - year: '2015'
+      title: Roz拧铆艡en铆
+      description: Roz拧铆艡ili jsme na拧e za艡铆zen铆 na 12 000 m虏 a p艡idali pokro膷il茅 v媒robn铆 linky pro SUP prkna a technicka textilie 膷luny.
+      image: /images/seekingtex/factory/producing department.jpeg
+    - year: '2018'
+      title: Certifikace
+      description: Z铆skali jsme  certifikaci a CE zna膷en铆 pro v拧echny produktov茅 艡ady, 膷铆m啪 jsme otev艡eli evropsk茅 trhy.
+      image: /images/seekingtex/factory/PVC material.jpeg
+    - year: '2020'
+      title: Glob谩ln铆 expanze
+      description: Roz拧铆艡ili jsme export do v铆ce ne啪 50 zem铆 a otev艡eli sklad v USA v Montclair, CA.
+      image: /images/seekingtex/factory/producing department2.jpeg
+    - year: '2024'
+      title: Inova膷n铆 centrum
+      description: Zalo啪ili jsme specializovan茅 v媒zkumn茅 a v媒vojov茅 centrum s pokro膷il媒mi testovac铆mi za艡铆zen铆mi a prototypovou d铆lnou.
+      image: /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp
+
+team:
+  tagline: N谩拧 t媒m
+  title: Lid茅 za Seekingtexem
+  subtitle: V铆ce ne啪 200 kvalifikovan媒ch technik暖, in啪en媒r暖 a specialist暖 pracuje na tom, aby ka啪d媒 produkt spl艌oval nejvy拧拧铆 standardy.

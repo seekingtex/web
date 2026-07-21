@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+import useCasesData from '~/data/site/use-cases.yaml';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+
+const d = useCasesData as any;
+const yamlCases: any[] = d.cases ?? [];
+
+const staticUseCases = [
+  { id: 'tourism-recreation', title: 'Sportswear & Athletic Apparel', desc: 'Moisture-wicking, quick-dry, stretch, and antibacterial fabrics for running, fitness, yoga, team sports, and performance activewear.' },
+  { id: 'search-and-rescue', title: 'Tactical & Workwear', desc: 'Ripstop nylon/cotton, DWR-coated, and antimicrobial fabrics for law enforcement, military, and industrial duty uniforms.' },
+  { id: 'maritime-safety-defense', title: 'Outdoor & Adventure Gear', desc: 'Waterproof breathable membranes, moisture-wicking base layers, and durable shell fabrics for hiking, camping, and exploration gear.' },
+  { id: 'fishing', title: 'Fashion & Casual Wear', desc: 'UPF 50+, quick-dry, cooling, and eco-friendly fabrics for lifestyle apparel, summer shirts, travel wear, and everyday fashion.' },
+  { id: 'disaster-relief', title: 'Medical & Healthcare Textiles', desc: 'Antibacterial, fluid-resistant, and protective fabrics for medical scrubs, healthcare uniforms, and clinical environments.' },
+  { id: 'commercial-workboats', title: 'Industrial & Technical Textiles', desc: 'High-performance fabrics for heavy-duty workwear, protective clothing, cleanroom garments, and specialized industrial applications.' },
+];
+
+const allUseCases = [
+  ...yamlCases.map((c: any) => ({
+    id: c.id,
+    title: t(`home.useCases.${c.id}.title`) || c.title,
+    desc: t(`home.useCases.${c.id}.desc`) || c.desc,
+    image: c.image,
+  })),
+  ...staticUseCases.map((s) => ({
+    ...s,
+    image: s.id === 'tourism-recreation' ? '/images/seekingtex/products/quick-dry-fabric.webp'
+      : s.id === 'search-and-rescue' ? '/images/seekingtex/products/ripstop-fabric.webp'
+      : s.id === 'maritime-safety-defense' ? '/images/seekingtex/products/waterproof-fabric.webp'
+      : s.id === 'fishing' ? '/images/seekingtex/products/cooling-fabric.webp'
+      : s.id === 'disaster-relief' ? '/images/seekingtex/products/antibacterial-fabric.webp'
+      : '/images/seekingtex/products/breathable-fabric.webp',
+  })),
+];
+
+const metadata = {
+  title: `Use Cases & Applications | ${SITE.name}`,
+  description: t('useCase.hubDesc'),
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd data={{
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    headline: 'Use Cases & Applications',
+    description: metadata.description,
+    author: { '@type': 'Organization', name: SITE.name },
+  }} />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">{t('useCase.label')}</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('home.useCases.tagline')}</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">{t('useCase.hubTitle')}</h1>
+      <p class="mt-4 text-lg text-gray-500">{t('useCase.hubDesc')}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {allUseCases.map((uc) => (
+        <a
+          href={`/${lang}/use-cases/${uc.id}`}
+          class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+        >
+          <div class="h-44 bg-gray-100 overflow-hidden">
+            <img src={uc.image} alt={uc.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">{uc.title}</h2>
+            <p class="text-sm text-gray-500 line-clamp-3 flex-1">{uc.desc}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+              {t('useCase.view')}
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

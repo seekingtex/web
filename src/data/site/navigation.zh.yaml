@@ -1,0 +1,133 @@
+header:
+  topBar: []
+  links:
+    - text: 产品
+      links:
+        - text: 防晒面料
+          href: /sun-protection-fabric
+        - text: 防水面料
+          href: /waterproof-fabric
+        - text: 速干面料
+          href: /quick-dry-fabric
+        - text: 抗菌面料
+          href: /antibacterial-fabric
+        - text: 弹力面料
+          href: /stretch-fabric
+        - text: 透气面料
+          href: /breathable-fabric
+        - text: 环保面料
+          href: /eco-friendly-fabric
+        - text: 全部产品
+          href: /products
+    - text: 应用领域
+      links:
+        - text: 运动服装
+          href: /applications/sportswear
+        - text: 户外服装
+          href: /applications/outdoor-apparel
+        - text: 战术与工装
+          href: /applications/tactical-workwear
+        - text: 时尚休闲
+          href: /applications/fashion-casual
+    - text: 技术
+      links:
+        - text: 技术概览
+          href: /technology
+        - text: 研发中心
+          href: /randdcenter
+        - text: 质量检测
+          href: /quality
+        - text: 材料科学
+          href: /learn/materials
+    - text: 公司
+      links:
+        - text: 关于我们
+          href: /about
+        - text: 工厂
+          href: /factory
+        - text: 新闻
+          href: /news
+        - text: 联系我们
+          href: /contact
+    - text: 支持
+      links:
+        - text: 联系我们
+          href: /contact
+        - text: 常见问题
+          href: /faq
+        - text: OEM/ODM
+          href: /oem-odm-manufacturer
+  actions:
+    - text: 获取报价
+      href: /contact
+      variant: primary
+footer:
+  links:
+    - title: 产品
+      links:
+        - text: 防晒面料
+          href: /sun-protection-fabric
+        - text: 防水面料
+          href: /waterproof-fabric
+        - text: 速干面料
+          href: /quick-dry-fabric
+        - text: 抗菌面料
+          href: /antibacterial-fabric
+        - text: 弹力面料
+          href: /stretch-fabric
+        - text: 透气面料
+          href: /breathable-fabric
+        - text: 环保面料
+          href: /eco-friendly-fabric
+        - text: 全部产品
+          href: /products
+    - title: 应用领域
+      links:
+        - text: 运动服装
+          href: /applications/sportswear
+        - text: 户外服装
+          href: /applications/outdoor-apparel
+        - text: 战术与工装
+          href: /applications/tactical-workwear
+        - text: 时尚休闲
+          href: /applications/fashion-casual
+    - title: 技术
+      links:
+        - text: 技术概览
+          href: /technology
+        - text: 研发中心
+          href: /randdcenter
+        - text: 质量检测
+          href: /quality
+        - text: 材料科学
+          href: /learn/materials
+    - title: 公司
+      links:
+        - text: 关于我们
+          href: /about
+        - text: 工厂
+          href: /factory
+        - text: 新闻
+          href: /news
+        - text: 联系我们
+          href: /contact
+    - title: 支持
+      links:
+        - text: 联系我们
+          href: /contact
+        - text: 常见问题
+          href: /faq
+        - text: OEM/ODM
+          href: /oem-odm-manufacturer
+  secondaryLinks:
+    - text: 条款
+      href: /terms
+    - text: 隐私政策
+      href: /privacy
+  socialLinks:
+    - text: LinkedIn
+      href: https://www.linkedin.com/company/seekingtex
+    - text: X
+      href: https://x.com/seekingtex
+    - text: RSS
+      href: /rss.xml

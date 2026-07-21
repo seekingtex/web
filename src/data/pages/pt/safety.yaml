@@ -1,0 +1,24 @@
+hero:
+  tagline: Seguran莽a
+  title: Padr玫es e certifica莽茫o de seguran莽a
+  subtitle: Cada produto Seekingtex passa por testes rigorosos e atende aos padr玫es internacionais de seguran莽a para uso recreativo e profissional.
+
+certifications:
+  - title: Certifica莽茫o CE
+    description: Todos os equipamentos de seguran莽a Seekingtex cumprem os requisitos de marca莽茫o CE sob o Regulamento Europeu de Equipamentos de Prote莽茫o Individual (UE) 2016/425.
+  - title: 
+    description: Os coletes salva-vidas atendem aos padr玫es de flutua莽茫o . O Safety Fabric Classic fornece safety performance 50N+; o Safety Fabric Pro atende aos requisitos SOLAS com infla莽茫o autom谩tica.
+  - title: Conformidade SOLAS
+    description: O Safety Fabric Pro est谩 em conformidade com os regulamentos SOLAS (Seguran莽a da Vida no Mar) para opera莽玫es mar铆timas offshore e comerciais.
+
+related:
+  title: Relacionado
+  links:
+    - text: Guia de dicas de seguran莽a
+      url: /guides/safety-tips
+    - text: Tecnologia
+      url: /technology
+    - text: Todos os produtos
+      url: /products
+    - text: Guias
+      url: /guides

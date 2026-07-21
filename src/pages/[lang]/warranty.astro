@@ -1,0 +1,55 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent } from '~/i18n/page-content';
+import { articleSchema } from '~/lib/seo/schema';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPageContent(lang, 'warranty') || {};
+
+const metadata = {
+  title: `Warranty — ${SITE.name}`,
+  description: 'Seekingtex warranty coverage for functional fabrics, performance textiles, and technical materials. Fabric integrity, seams, coating durability, and color fastness warranty terms.',
+};
+
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Warranty' }];
+
+const graphJsonLd = articleSchema({
+  headline: page.headline || 'Seekingtex Manufacturer Limited Warranty',
+  description: page.seo?.description || 'Seekingtex warranty on functional fabric products.',
+  datePublished: page.seo?.datePublished || '2024-01-01',
+  dateModified: page.seo?.dateModified || '2026-06-01',
+  author: SITE.name,
+  publisher: SITE.name,
+});
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
+
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Warranty'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-gray-100">
+      {page.headline || 'Manufacturer Limited Warranty'}
+    </h1>
+    <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+      {page.subtitle || 'Seekingtex stands behind the quality of every fabric we manufacture.'}
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+</Layout>

@@ -1,0 +1,32 @@
+hero:
+  tagline: 鍝佺墝
+  title: '{BRAND}'
+  subtitle: 涓烘瘡浣嶅啿娴€呰€岀敓鐨勭汉缁囨€ц兘
+  cta: 鎺㈢储瑁呭 鈫?
+  cta_link: /products
+  secondary_cta: 瀛︿範鍐叉氮
+  secondary_cta_link: /guides
+
+position:
+  tagline: 瀹氫綅
+  subtitle: 涓烘瘡浣嶅啿娴€呰€岀敓鐨勭汉缁囨€ц兘
+
+products_section:
+  tagline: 浜у搧
+  cta: 鎵€鏈変骇鍝?鈫?
+  cta_link: /products
+
+global_section:
+  tagline: 鍏ㄧ悆
+  title: 瑕嗙洊{count}涓湴鍖?
+
+social_section:
+  tagline: 绀句氦濯掍綋
+  title: 鍐叉氮鑰呮鍦ㄩ槄璇?
+  read_guide: 闃呰鎸囧崡 鈫?
+
+cta_section:
+  title: 寮€鍚偍鐨勭汉缁囦箣鏃?
+  subtitle: 姣忔浜у搧鍧囬€氳繃CE璁よ瘉銆備韩鏈変繚淇€備负鐪熷疄鍐叉氮鑰岃璁°€?
+  cta_suffix: '鈫?
+  secondary_cta: 鍏充簬{BRAND}

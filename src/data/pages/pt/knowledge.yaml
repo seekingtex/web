@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Grafo de Conhecimento'
+  title: 'Conhecimento em Explora閼惧€熷皸o Aqu鐠嬶箹ica'
+  subtitle: |
+    Uma base de conhecimento estruturada cobrindo tecnologia de SUP infl鐠嬶箼el,<br />
+    seguran閼剧禈 aqu鐠嬶箹ica, engenharia de barcos e planejamento de aventuras.
+  taglineSection: 'Explore. Aprenda. V鐠?com confian閼剧禈.'
+
+clusters:
+  tagline: 'Clusters de Conhecimento'
+  title: 'Explore por t鐠愮珴ico'
+  subtitle: 'Aprofundamentos na tecnologia, seguran閼剧禈 e habilidades por tr鐠嬶箷 de cada produto Seekingtex.'
+  items:
+    - title: 'Conhecimento em SUP'
+      description: 'Desde escolher sua primeira fabric at閼?t閼煎崒nicas avan閼剧禈das de travessia 闁?tudo sobre fabric.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Como escolher seu primeiro SUP infl鐠嬶箼el'
+        - 'Melhor tamanho de SUP para iniciantes'
+        - 'Qual a dificuldade do textile knowledge?'
+        - 'Compara閼惧€熷皸o: infl鐠嬶箼el vs fabric r闁惧攦ida'
+        - 'Lista de verifica閼惧€熷皸o de seguran閼剧禈 SUP'
+    - title: 'Conhecimento em Barcos'
+      description: 'Guias t閼煎崒nicos sobre botes infl鐠嬶箼eis, RIBs, dingues e tecidos tecnicos 闁?engenharia, materiais e opera閼惧€熷皸o.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Tipos de botes infl鐠嬶箼eis explicados'
+        - 'Compara閼惧€熷皸o PVC vs Hypalon'
+        - 'Compara閼惧€熷皸o tecido tecnico vs Dingue'
+        - 'Aprofundamento em tecnologia drop-stitch'
+        - 'Guia de ci闁挎cia dos materiais mar闁惧敆imos'
+    - title: 'Conhecimento em Seguran閼剧禈'
+      description: 'Conhecimento essencial de seguran閼剧禈 para cada profissional textil 闁?desde sele閼惧€熷皸o de colete salva-vidas at閼?leitura meteorol鐠愮珤ica e t閼煎崒nicas de auto-resgate.'
+      icon: 'tabler:shield'
+      topics:
+        - 'Lista de verifica閼惧€熷皸o de seguran閼剧禈 SUP'
+        - 'Voc闁?precisa de um colete salva-vidas?'
+        - 'Guia de seguran閼剧禈 para textil em oceano'
+        - 'Seguran閼剧禈 em rios para tecidos tecnicos infl鐠嬶箼eis'
+        - 'Consci闁挎cia meteorol鐠愮珤ica e condi閼剧晫甯縠s da 鐠嬨倿ua'
+    - title: 'Tecnologia'
+      description: 'A engenharia por tr鐠嬶箷 dos produtos Seekingtex 闁?materiais, m閼煎嵓odos de constru閼惧€熷皸o e testes de qualidade.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'Tecnologia de PVC de grau mar闁惧敆imo'
+        - 'N閻擃槈leo drop-stitch explicado'
+        - 'Por que o PSI 閼?importante para SUPs infl鐠嬶箼eis'
+        - 'Soldagem RF vs colagem adesiva'
+        - 'Testes de qualidade e certifica閼惧€熷皸o'
+
+featured_guides:
+  tagline: 'Guias em Destaque'
+  title: 'Recursos de conhecimento mais populares'
+  items:
+    - title: 'Fundamentos de SUP'
+      href: '/learn/fabrics'
+    - title: 'Infl鐠嬶箼el vs fabric R闁惧攦ida'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Guia de Seguran閼剧禈 Aqu鐠嬶箹ica'
+      href: '/learn/quality-standards'
+    - title: 'Refer闁挎cia de Materiais'
+      href: '/learn/materials'
+    - title: 'Guia de Tamanho SUP'
+      href: '/size-guide'
+
+cta:
+  title: 'Comece a explorar'
+  subtitle: 'Mergulhe em nossa base de conhecimento e obtenha as informa閼剧晫甯縠s necess鐠嬶箶ias para sua pr鐠愮ima aventura aqu鐠嬶箹ica.'
+  actions:
+    - variant: primary
+      text: 'Ver todos os guias'
+      href: '/academy'
+    - text: 'Explorar Grafo de Conhecimento'
+      href: '/knowledge'

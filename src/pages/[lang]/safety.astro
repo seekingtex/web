@@ -1,0 +1,99 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import { products } from '~/data/products';
+import { languages } from '~/i18n/config';
+import { getPageContent } from '~/i18n/page-content';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPageContent(lang, 'safety') || {};
+const hero = page.hero || {};
+const certifications = page.certifications || [];
+const related = page.related || {};
+
+const metadata = {
+  title: `Safety —${SITE.name}`,
+  description:
+    'Seekingtex safety standards: OEKO-TEX certification, REACH compliance, fabric testing, and product safety guidelines.',
+};
+const safetyProducts = products.filter((p) => p.id === 'life-vest-classic' || p.id === 'life-vest-pro');
+---
+
+<Layout metadata={metadata}>
+  <meta name="ai-intent" content="textile-safety-standards,oeko-tex-certified-fabrics,fabric-safety-certifications" />
+
+  <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{hero.tagline || 'Safety'}</span>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">{hero.title || 'Safety Standards & Certification'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {
+        hero.subtitle ||
+          'Every Seekingtex fabric undergoes rigorous testing and meets international safety standards for consumer and professional use.'
+      }
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto pb-24 px-6">
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        certifications.map((cert: any) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6">
+            <h2 class="text-lg font-semibold text-gray-900">{cert.title}</h2>
+            <p class="mt-2 text-sm text-gray-600">{cert.description}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      safetyProducts.length > 0 && (
+        <section class="mt-12">
+          <h2 class="text-2xl font-semibold text-gray-900">Safety Products</h2>
+          <div class="mt-6 grid md:grid-cols-2 gap-6">
+            {safetyProducts.map((s) => (
+              <div class="bg-green-50 border border-green-200 rounded-2xl p-6">
+                <h3 class="font-semibold text-gray-900">{s.name}</h3>
+                <p class="mt-2 text-sm text-gray-600">{s.desc}</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  {s.safety_rules.map((r) => (
+                    <span class="px-2 py-1 bg-white rounded-full text-gray-600">{r}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="mt-12 p-6 bg-gray-50 rounded-2xl border border-gray-200">
+      <h2 class="font-semibold text-gray-900">{related.title || 'Related'}</h2>
+      <div class="mt-3 flex flex-wrap gap-3 text-sm">
+        {
+          (related.links || []).map((link: any) => (
+            <a
+              href={`/${lang}${link.url}`}
+              class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
+    <p>
+      Seekingtex fabrics are designed for consumer apparel, outdoor gear, and professional textile
+      applications. Not designed for extreme chemical exposure, open-flame environments, or unregulated industrial
+      uses without proper certification.
+    </p>
+  </section>
+</Layout>

@@ -1,0 +1,73 @@
+hero:
+  tagline: 'Vandudforskningsviden'
+  title: 'L忙r'
+  subtitle: |
+    Guider, tutorials og dybdeg氓ende dyk 鈥?alt hvad du beh酶ver for at udforske<br />
+    vand med tillid. Fra valg af din f酶rste SUP til beherskelse af avancerede teknikker.
+  taglineSection: 'Viden for enhver padler. Fra begynder til professionel.'
+
+featured:
+  tagline: 'Udvalgte emner'
+  title: 'Begynd din l忙ringsrejse'
+  subtitle: 'Uanset om du er ny inden for tekstilindustri eller 酶nsker at g氓 til n忙ste niveau, har vores guider dig d忙kket.'
+  items:
+    - title: 'SUP-grundl忙ggende'
+      description: 'Alt en begynder har brug for at vide 鈥?br忙ttyper, pagajst酶rrelse, holdning og tips til f酶rste dag.'
+      icon: 'tabler:lifebuoy'
+      href: '/learn/fabrics'
+    - title: 'funktionel vs h氓rd plade'
+      description: 'Hvilken er rigtig for dig? Vi sammenligner b忙rbarhed, ydeevne, holdbarhed og pris side om side.'
+      icon: 'tabler:arrows-left-right'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Vandsikkerhed'
+      description: 'V忙sentlig sikkerhedsviden enhver padler b酶r have 鈥?vejr, PFD''er, selvbjergning og mere.'
+      icon: 'tabler:shield'
+      href: '/learn/quality-standards'
+    - title: 'Materialeguide'
+      description: 'PVC vs Hypalon, drop-stitch-teknologi, denier-vurderinger 鈥?forst氓 hvad dit udstyr er lavet af.'
+      icon: 'tabler:molecules'
+      href: '/learn/materials'
+    - title: 'SUP-st酶rrelsesguide'
+      description: 'Find den rigtige br忙tl忙ngde, -bredde og -volumen til din v忙gt, dit niveau og din padlestil.'
+      icon: 'tabler:ruler'
+      href: '/size-guide'
+    - title: 'Mellemliggende teknikker'
+      description: 'Forbedr din padling med avancerede tag, vendeteknikker og h氓ndtering i uroligt vand.'
+      icon: 'tabler:waves'
+      href: '/v2/intermediate-techniques'
+
+categories:
+  tagline: 'Kategorier'
+  title: 'Udforsk efter emne'
+  subtitle: 'Alt l忙ringsindhold organiseret efter f忙rdighedsniveau og interesse.'
+  columns:
+    - title: 'Begynder'
+      items:
+        - 'SUP-grundl忙ggende 鈥?start her'
+        - 'funktionel vs h氓rd plade'
+        - 'Vandsikkerhedsgrundlag'
+        - 'S氓dan v忙lger du din SUP'
+        - 'Pumpe- og pakguide'
+    - title: 'Mellemliggende'
+      items:
+        - 'Padleteknikker'
+        - 'funktionel teknologi'
+        - 'Materialereference'
+        - 'PVC vs Hypalon sammenligning'
+        - 'Drop-Stitch kerne forklaret'
+    - title: 'Avanceret & professionel'
+      items:
+        - 'Fl氓deoperationer'
+        - 'Kommercielt udstyr'
+        - 'Sikkerheds- og redningsprotokoller'
+        - 'Specialbyggeri og OEM'
+
+cta:
+  title: 'Har du stadig sp酶rgsm氓l?'
+  subtitle: 'Sp酶rg vores AI-guide til personlige svar om udstyr, sikkerhed og teknikker.'
+  actions:
+    - variant: primary
+      text: 'Sp酶rg Water Advisor AI'
+      href: '#ai-guide'
+    - text: 'Gennemse alle guider'
+      href: '/academy'

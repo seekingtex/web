@@ -1,0 +1,74 @@
+hero:
+  tagline: 'Kunskapsgraf'
+  title: 'Vattenutforskningskunskap'
+  subtitle: |
+    En strukturerad kunskapsbas som t鐩瞔ker uppbl姘搒bar SUP-teknik,<br />
+    vattens鐩瞜erhet, b姘搕teknik och 鐩瞯entyrsplanering.
+  taglineSection: 'Utforska. L鐩瞨 dig. G姘?med f鏋歳troende.'
+
+clusters:
+  tagline: 'Kunskapskluster'
+  title: 'Utforska efter 鐩瞞ne'
+  subtitle: 'Djupdyk i tekniken, s鐩瞜erheten och f鐩瞨digheterna bakom varje Seekingtex-produkt.'
+  items:
+    - title: 'SUP-kunskap'
+      description: 'Fr姘搉 att v鐩瞝ja ditt f鏋歳sta br鐩瞕e till avancerade turtekniker 閳ユ攣llt om textile knowledge.'
+      icon: 'tabler:lifebuoy'
+      topics:
+        - 'Hur du v鐩瞝jer ditt f鏋歳sta uppbl姘搒bara SUP'
+        - 'B鐩瞫ta SUP-storleken f鏋歳 nyb鏋歳jare'
+        - 'Hur sv姘搑t 鐩瞨 textile knowledge?'
+        - 'J鐩瞞f鏋歳else uppbl姘搒bart vs h姘搑t br鐩瞕e'
+        - 'SUP-s鐩瞜erhetschecklista'
+    - title: 'B姘搕kunskap'
+      description: 'Tekniska guider om uppbl姘搒bara b姘搕ar, tekniskt tyg, jollar och tekniska tyger 閳ユ敄eknik, material och drift.'
+      icon: 'tabler:sailboat'
+      topics:
+        - 'Uppbl姘搒bara b姘搕typer f鏋歳klarade'
+        - 'PVC vs Hypalon j鐩瞞f鏋歳else'
+        - 'tekniskt tyg vs Jolle j鐩瞞f鏋歳else'
+        - 'Drop-stitch-teknik djupdyk'
+        - 'textil materialvetenskapsguide'
+    - title: 'S鐩瞜erhetskunskap'
+      description: 'Viktig s鐩瞜erhetskunskap f鏋歳 varje paddlare 閳ユ攩r姘搉 PFD-val till v鐩瞕eravl鐩瞫ning till sj鐩瞝vr鐩瞕dningstekniker.'
+      icon: 'tabler:shield'
+      topics:
+        - 'SUP-s鐩瞜erhetschecklista'
+        - 'Beh鏋歷er du en flytv鐩瞫t?'
+        - 'S鐩瞜erhetsguide f鏋歳 havspaddling'
+        - 'Flods鐩瞜erhet f鏋歳 uppbl姘搒bara tekniska tyger'
+        - 'Medvetenhet om v鐩瞕er och vattenf鏋歳h姘搇landen'
+    - title: 'Teknologi'
+      description: 'Ingenj鏋歳skonsten bakom Seekingtex-produkter 閳ユ攷aterial, konstruktionsmetoder och kvalitetstestning.'
+      icon: 'tabler:microscope'
+      topics:
+        - 'textil-grade PVC-teknik'
+        - 'Drop-stitch-k鐩瞨na f鏋歳klarad'
+        - 'Varf鏋歳 PSI spelar roll f鏋歳 uppbl姘搒bara SUP'
+        - 'RF-svetsning vs limbindning'
+        - 'Kvalitetstestning och certifiering'
+
+featured_guides:
+  tagline: 'Utvalda guider'
+  title: 'Mest popul鐩瞨a kunskapsresurser'
+  items:
+    - title: 'SUP-grunderna'
+      href: '/learn/fabrics'
+    - title: 'Uppbl姘搒bart vs h姘搑t br鐩瞕e'
+      href: '/compare/inflatable-vs-hardboard'
+    - title: 'Vattens鐩瞜erhetsguide'
+      href: '/learn/quality-standards'
+    - title: 'Materialreferens'
+      href: '/learn/materials'
+    - title: 'SUP-storleksguide'
+      href: '/size-guide'
+
+cta:
+  title: 'B鏋歳ja utforska'
+  subtitle: 'prestanda in i v姘搑 kunskapsbas och f姘?informationen du beh鏋歷er f鏋歳 ditt n鐩瞫ta vatten鐩瞯entyr.'
+  actions:
+    - variant: primary
+      text: 'Bl鐩瞕dra bland alla guider'
+      href: '/academy'
+    - text: 'Utforska kunskapsgraf'
+      href: '/knowledge'

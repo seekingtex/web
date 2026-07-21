@@ -1,0 +1,177 @@
+hero:
+  tagline: 'Ingénierie pour des aventures fiables sur l''eau'
+  title: 'Seekingtex'
+  subtitle: |
+    Une marque mondiale d'exploration aquatique créant des SUPs gonflables,<br />
+    des tissu et des équipements marins pour les familles, les explorateurs et les professionnels.
+  taglineSection: 'Conçu pour l''exploration. Conçu pour la fiabilité. Construit pour les partenaires mondiaux.'
+  actions:
+    - variant: primary
+      text: Voir les produits
+      href: /products
+      icon: tabler:shopping-bag
+    - text: En savoir plus
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Image principale Seekingtex
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: Atelier Seekingtex au bord de la mer
+      tagline: Bienvenue
+      title: |
+        Conçu pour l'eau. <br />
+        Construit pour <span class="text-sky-300">la vie à bord</span>.
+      subtitle: tissu pneumatiques, tissu technique et produits techniques haut de gamme pour professionnels et passionnés.
+      actions:
+        - text: Voir les produits
+          href: /products
+          variant: primary
+        - text: Demander un devis
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: Construction de tissu personnalisé en cours
+      tagline: Artisanat
+      title: |
+        Des coques qui durent plus longtemps que la garantie. <br />
+        Un service qui dure plus longtemps que la coque.
+      subtitle: Matériaux de qualité textile. Soudure aluminium. Des tissu de vingt ans nous appellent encore pour des pièces.
+      actions:
+        - text: Notre histoire
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: tissu pneumatique sur l'eau
+      tagline: Assistance
+      title: |
+        Conçu avant d'être vendu. <br />
+        Assistent longtemps après.
+      subtitle: Partenaires de service agréés dans plus de 40 pays. Des coques de vingt ans nous appellent encore et nous répondons toujours présents.
+      actions:
+        - text: Nous contacter
+          href: /contact
+          variant: primary
+        - text: Voir les tarifs
+          href: /pricing
+          variant: secondary
+
+features:
+  id: features
+  tagline: Pourquoi Seekingtex
+  title: Ce que vous obtenez avec Seekingtex
+  subtitle: Des décennies d'expérience en ingénierie textile, distillées dans une gamme de produits ciblée. Construit robuste, testé en mer, assisté à vie.
+  columns: 2
+  items:
+    - title: Matériaux de qualité textile
+      description: PVC haute résistance, Hypalon et coques en aluminium sélectionnés pour leur résistance aux UV, à l'abrasion et à l'eau salée.
+      icon: tabler:shield-check
+    - title: Qualité prête à produire
+      description: Chaque coque est testée sous pression, chaque soudure inspectée. Nous expédions uniquement ce que nous mettrions nous-mêmes à l'eau.
+      icon: tabler:certificate
+    - title: Conception modulaire
+      description: Personnalisez la disposition des tubes, la position de la console, la capacité carburant et les accessoires selon votre mission.
+      icon: tabler:layout-grid
+    - title: Spécifications honnêtes
+      description: Charges réelles, dimensions réelles, poids réel. Aucune exagération marketing, jamais.
+      icon: tabler:ruler-measure
+    - title: Livraison rapide et pièces détachées
+      description: Les modèles courants sont expédiés en quelques jours. Pièces d'origine et consommables en stock toute l'année.
+      icon: tabler:truck-delivery
+    - title: Assistance à vie
+      description: Ligne directe avec notre équipe d'ingénierie pour les questions techniques, réparations et conseils de rénovation.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: Produits en vedette
+  subtitle: Sélectionnés dans notre catalogue actuel —?les modèles les plus populaires de la saison.
+  linkText: Voir tous les produits
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Dans l'atelier
+  title: Du dessin de la coque à la livraison, chaque étape reste en interne
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Une qualité que vous pouvez voir, ressentir et mesurer</h3>
+  items:
+    - title: Conçu par des architectes navals
+      description: Les lignes de coque sont dessinées en interne et itérées par analyse CFD avant que le premier prototype ne touche l'eau.
+    - title: Soudé et assemblé dans notre propre installation
+      description: Soudure des tubes, aménagement de la console et gréement se font sous un même toit pour contréler la qualité à chaque étape.
+    - title: Testé en mer avant expédition
+      description: Chaque modèle effectue un essai en mer de plusieurs heures couvrant le déjaugeage, les virages, la vitesse maximale et la manutention de charge.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Atelier
+
+steps:
+  title: De la fiche technique au lancement en cinq étapes
+  items:
+    - title: 'êtape 1 : <span class="font-medium">Configurer</span>'
+      description: Choisissez un modèle, définissez vos options, demandez un devis en ligne ou par téléphone. Notre équipe répond sous un jour ouvrable.
+      icon: tabler:list-numbers
+    - title: 'êtape 2 : <span class="font-medium">Confirmer</span>'
+      description: Nous confirmons les spécifications, le délai de livraison et le coét total par écrit. Pas de surprises, pas de frais cachés.
+      icon: tabler:checks
+    - title: 'êtape 3 : <span class="font-medium">Construire</span>'
+      description: La production démarre dans notre atelier. Nous envoyons des photos d'avancement aux étapes clés.
+      icon: tabler:tool
+    - title: 'êtape 4 : <span class="font-medium">Livrer</span>'
+      description: Emballé sur berceau, sous film rétractable et expédié par mer ou par air. Paperasse douanière gérée de bout en bout.
+      icon: tabler:truck-loading
+    - title: 'êtape 5 : <span class="font-medium">Assister</span>'
+      description: Garantie coque de deux ans plus assistance technique à vie. Pièces détachées expédiées sous 48 heures.
+      icon: tabler:headset
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Processus de fabrication
+
+blog_latest:
+  title: Du journal
+  information: |
+    Articles, notes techniques et études de cas de l'équipe d'ingénierie.
+    De nouveaux articles sont ajoutés à chaque fois qu'un projet est expédié, qu'une norme est mise à jour ou que quelqu'un a une histoire qui mérite d'être racontée.
+
+faqs:
+  title: Foire aux questions
+  subtitle: Les questions que nous entendons le plus souvent. Si la vétre n'est pas ici, écrivez-nous et nous vous répondrons rapidement.
+  columns: 2
+  items:
+    - title: Quel modèle choisir ?
+      description: Cela dépend de la taille de votre équipage, des eaux oé vous naviguez et de vos priorités (vitesse, charge utile ou économie de carburant). Envoyez-nous une brève description et nous vous recommanderons deux ou trois modèles adaptés.
+      icon: tabler:anchor
+    - title: Expédiez-vous à l'international ?
+      description: Oui —?nous livrons dans plus de 40 pays. Le fret maritime est l'option la plus économique pour les tissu complets ; le fret aérien est disponible pour les commandes urgentes.
+      icon: tabler:ship
+    - title: Quelle garantie offrez-vous ?
+      description: Deux ans sur la coque, un an sur les accessoires, à vie sur nos soudures. L'enregistrement de la garantie est inclus avec chaque livraison.
+      icon: tabler:shield
+    - title: Puis-je personnaliser un modèle existant ?
+      description: Presque toujours. La position de la console, la couleur des tubes, l'agencement des sièges, l'électronique et le moteur peuvent tous être adaptés. Les coques sur mesure sont devisées projet par projet.
+      icon: tabler:palette
+    - title: Proposez-vous des formations et certifications ?
+      description: Pour les opérateurs commerciaux, nous pouvons organiser une formation en essai maritime dans notre installation. Les clients particuliers reçoivent une séance de prise en main gratuite à la livraison.
+      icon: tabler:school
+    - title: Comment obtenir des pièces détachées ?
+      description: Commandez via la page de contact ou appelez notre ligne pièces détachées. Les articles courants (soupapes, avirons, pompes, kits de réparation) sont expédiés sous 48 heures dans le monde entier.
+      icon: tabler:settings
+
+cta:
+  title: |
+    Prêt à configurer votre <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">prochain tissu</span> ?
+  subtitle: Dites-nous comment vous utilisez votre tissu et nous vous recommanderons un modèle, des options et un prix en un jour ouvrable.
+  actions:
+    - variant: primary
+      text: Demander un devis
+      href: /contact
+      icon: tabler:message-circle
+    - text: Parcourir le catalogue
+      href: /products

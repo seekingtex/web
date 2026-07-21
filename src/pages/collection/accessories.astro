@@ -1,0 +1,68 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import { SITE } from 'astrowind:config';
+import { getProducts, isProductsEnabled, isProductsListEnabled } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+const products = await getProducts();
+const filteredProducts = products.filter((p) => p.tags?.some((t) => ['accessory', 'lining', 'trim', 'ribbon', 'belt', 'tape'].includes(t.slug)));
+const hidden = !isProductsEnabled() || !isProductsListEnabled();
+const metadata = merge({
+  title: `Fabric Accessories — Ribbons, Trims & Lining Fabrics | ${SITE.name}`,
+  description: `Browse ${SITE.name} fabric accessories — ribbons, trims, waistband tapes, lining fabrics, and beltings. OEM/ODM available for bulk orders. Factory-direct pricing.`,
+  canonical: getCanonical(getPermalink('/collection/accessories')),
+  robots: { index: !hidden, follow: true },
+  openGraph: { type: 'website' },
+}, {}) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Collection</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Fabric Accessories</h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Ribbons, trims, waistband tapes, lining fabrics, and beltings — the finishing touches for your garment production.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Complete your garment with our range of fabric accessories. From grosgrain ribbons and elastic waistband tapes to breathable linings and decorative trims, every accessory is manufactured to the same quality standards as our performance fabrics. Available in matching or contrasting colors, custom widths, and OEM packaging.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 text-center">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Waistband Tapes</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Elastic and non-elastic waistband tapes in various widths, colors, and stretch properties for apparel manufacturing.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 text-center">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Lining Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Lightweight breathable linings — tricot, taffeta, and mesh — for jackets, bags, and garments requiring a smooth interior finish.</p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 text-center">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Ribbons & Trims</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Grosgrain, satin, and printed ribbons plus decorative trims for branding, edging, and embellishment applications.</p>
+      </div>
+    </section>
+
+    {
+      filteredProducts.length > 0 ? (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {filteredProducts.map((p) => <ProductCard product={p} />)}
+        </div>
+      ) : (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <p class="text-lg">Browse our full product catalog for accessory fabrics and trims.</p>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+        </div>
+      )
+    }
+  </section>
+</Layout>

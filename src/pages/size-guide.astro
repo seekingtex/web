@@ -1,0 +1,148 @@
+---
+export const prerender = false;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { getPageContent } from '~/i18n/page-content';
+
+const lang = Astro.locals.lang;
+
+const page = getPageContent(lang, 'size-guide') || {};
+const hero = page.hero || {};
+const categoriesText = page.categories || {};
+const tableHeaders = page.table?.headers || {};
+const howToChoose = page.how_to_choose || {};
+
+const metadata = {
+  title: `Fabric Specifications Guide —${SITE.name}`,
+  description:
+    'Find the right fabric specifications for your needs. Compare weights, widths, constructions, and performance ratings.',
+};
+
+const products = await getProducts();
+
+const getSpec = (p: (typeof products)[number], label: string) => {
+  const s = p.specs?.find((s) => s.label.toLowerCase().includes(label.toLowerCase()));
+  return s?.value || '-';
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd type="Article" article={{
+    headline: 'Fabric Specifications Guide',
+    description: metadata.description,
+    datePublished: '2024-09-01',
+    dateModified: '2025-06-15',
+  }} />
+  <section class="max-w-6xl mx-auto py-24 px-6">
+    <h1 class="text-4xl font-semibold text-gray-900">{hero.title || 'Fabric Specifications Guide'}</h1>
+    <p class="mt-4 text-lg text-gray-500">
+      {hero.subtitle || 'Weights, widths, constructions, and performance ratings for every Seekingtex fabric.'}
+    </p>
+
+    <div class="mt-12 space-y-16">
+      {
+        (['woven', 'knit', 'coated'] as const).map((cat) => {
+          const catProducts = products.filter((p) => p.category === cat);
+          if (catProducts.length === 0) return null;
+          const catLabel = catProducts[0]?.categoryLabel || cat;
+          return (
+            <section>
+              <h2 class="text-2xl font-semibold text-gray-900 mb-2">{catLabel}</h2>
+              <p class="text-gray-500 mb-6">
+                {categoriesText[cat] ||
+                  (cat === 'woven'
+                    ? 'Woven fabrics for apparel, workwear, and industrial applications. Choose by weight, weave, and width for your specific application.'
+                    : cat === 'knit'
+                      ? 'Knit fabrics for activewear, sportswear, and comfort-focused applications. Stretch, recovery, and moisture management characteristics.'
+                      : 'Coated and laminated fabrics for waterproof, FR, and protective applications. Performance ratings and construction details.')}
+              </p>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                  <thead>
+                    <tr class="bg-gray-50">
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.product || 'Product'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.weight || 'Weight'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.width || 'Width'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.construction || 'Construction'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.finish || 'Finish'}
+                      </th>
+                      <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">
+                        {tableHeaders.best_for || 'Best For'}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {catProducts.map((p, i) => (
+                      <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}>
+                        <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-200">
+                          <a href={`/products/${p.slug}`} class="hover:text-sky-600">
+                            {p.title}
+                          </a>
+                        </td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'weight') || getSpec(p, 'gsm') || '-'}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'width')}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'weave') || getSpec(p, 'construction') || '-'}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{getSpec(p, 'finish') || getSpec(p, 'coating') || '-'}</td>
+                        <td class="px-4 py-3 text-gray-600 border-b border-gray-200">{p.summary || '-'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          );
+        })
+      }
+    </div>
+
+    <section class="mt-16 p-6 bg-sky-50 rounded-2xl border border-sky-100">
+      <h2 class="text-xl font-semibold text-gray-900">{howToChoose.title || 'How to Choose the Right Fabric'}</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-6">
+        {
+          (howToChoose.cards && howToChoose.cards.length > 0
+            ? howToChoose.cards
+            : [
+                {
+                  title: 'Weight & GSM',
+                  description:
+                    'Choose weight based on application. Lightweight (80-120 g/m²) for shirts and linings. Mid-weight (120-200 g/m²) for most apparel. Heavy-weight (200-350+ g/m²) for workwear and outerwear.',
+                },
+                {
+                  title: 'Construction & Weave',
+                  description:
+                    'Plain weave for general use. Twill for durability and drape. Ripstop for tear resistance. Knit for stretch and comfort. Consider end-use requirements for optimal construction.',
+                },
+                {
+                  title: 'Finishes & Coatings',
+                  description:
+                    'DWR for water repellency. PU coating for waterproofing. UPF treatment for sun protection. Antibacterial for healthcare. FR treatment for safety. Multiple finishes can be combined.',
+                },
+              ]
+          ).map((card: any) => (
+            <div>
+              <h3 class="font-medium text-gray-900">{card.title}</h3>
+              <p class="mt-2 text-sm text-gray-600">{card.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+      <p>
+        Seekingtex fabric specifications guide comparing product weights, widths, constructions, finishes, and recommended applications across woven, knit, and coated/classified fabric categories.
+      </p>
+    </section>
+  </section>
+</Layout>

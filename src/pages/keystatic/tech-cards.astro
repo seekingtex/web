@@ -1,0 +1,233 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/tech-cards.yaml';
+
+interface Card {
+  badge: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+const defaults: Card[] = [
+  {
+    badge: 'UV',
+    title: 'UPF 50+ Sun Protection',
+    description:
+      'Advanced UV-blocking technology integrated into fabric construction. Tested per AATCC 183 for reliable sun protection.',
+    image: '/images/seekingtex/products/1.webp',
+  },
+  {
+    badge: 'WB',
+    title: 'Waterproof Breathable Laminate',
+    description:
+      'Multi-layer membrane lamination technology delivering 10,000 mm hydrostatic head with superior moisture vapor transmission.',
+    image: '/images/seekingtex/products/fabric-laminate.webp',
+  },
+  {
+    badge: 'AB',
+    title: '7A Antibacterial Protection',
+    description: 'Silver-ion antibacterial treatment providing >99% bacterial reduction, tested per AATCC 100 after 100 washes.',
+    image: '/images/seekingtex/products/fabric-antibacterial.webp',
+  },
+];
+
+let cards: Card[] = defaults.map((c) => ({ ...c }));
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed?.cards && Array.isArray(parsed.cards)) {
+    cards = parsed.cards.map((c: any, i: number) => ({
+      badge: c.badge || defaults[i]?.badge || '',
+      title: c.title || defaults[i]?.title || '',
+      description: c.description || defaults[i]?.description || '',
+      image: c.image || defaults[i]?.image || '',
+    }));
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="Tech Cards" active="tech" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Technology Feature Cards</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      3 feature cards in the Technology section on the homepage. File: <code class="font-mono">{file}</code>. Note: on
+      localized pages, card titles/descriptions use i18n translations; edit those in the Languages admin page.
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="tech-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    {
+      cards.map((card, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">Card {i + 1}</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Badge Text</label>
+              <input
+                type="text"
+                name={'card' + i + '.badge'}
+                value={card.badge}
+                placeholder="PVC"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                Title (non-localized)
+              </label>
+              <input
+                type="text"
+                name={'card' + i + '.title'}
+                value={card.title}
+                placeholder="Military-Grade PVC Layer"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Image Path</label>
+              <input
+                type="text"
+                name={'card' + i + '.image'}
+                value={card.image}
+                placeholder="/images/seekingtex/products/..."
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+              />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              Description (non-localized)
+            </label>
+            <textarea
+              name={'card' + i + '.description'}
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {card.description}
+            </textarea>
+          </div>
+          {card.image && (
+            <div class="flex gap-2 items-center">
+              <img
+                src={card.image}
+                alt=""
+                class="h-16 w-24 rounded object-cover border border-gray-200"
+                loading="lazy"
+              />
+              <span class="text-xs text-gray-400">Preview</span>
+            </div>
+          )}
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('tech-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const cards = [];
+        for (let i = 0; i < 3; i++) {
+          cards.push({
+            badge: String(fd.get('card' + i + '.badge') || '').trim(),
+            title: String(fd.get('card' + i + '.title') || '').trim(),
+            description: String(fd.get('card' + i + '.description') || '').trim(),
+            image: String(fd.get('card' + i + '.image') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { cards },
+              commitMessage: 'Update tech feature cards',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

@@ -1,0 +1,22 @@
+hero:
+  tagline: Proces de producție
+  title: Procesul nostru de producție
+  subtitle: De la materie primă la produs finit — fiecare pas este controlat calitativ.
+  image: /images/seekingtex/factory/process-banner.webp
+  imageAlt: Proces de producție Seekingtex
+steps:
+  - title: Tăiere
+    description: Mașini CNC automate taie materialele textil cu precizie după specificații.
+    icon: tabler:scissors
+  - title: Sudare
+    description: Sudarea RF și cu aer cald creează îmbinări puternice și etanșe.
+    icon: tabler:flame
+  - title: Asamblare
+    description: Tehnicieni calificați montează valve, accesorii și fittinguri.
+    icon: tabler:tool
+  - title: Testare
+    description: Fiecare produs trece prin teste de presiune, flotabilitate și inspecție.
+    icon: tabler:clipboard-check
+  - title: Ambalare
+    description: Produsele sunt ambalate cu grijă și pregătite pentru expediere.
+    icon: tabler:package

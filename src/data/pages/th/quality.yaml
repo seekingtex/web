@@ -1,0 +1,46 @@
+hero:
+  tagline: การประกันคุณภาพ
+  title: การทดสอบประสิทธิภาพและคุณภาพ
+  subtitle: ผ้าฟังก์ชันและบอร์ดSUP Seekingtex ทุกชิ้นผ่านการทดสอบประสิทธิภาพและคุณภาพอย่างเข้มงวดที่ศูนย์วิจัยและพัฒนาก่อนจัดส่ง
+stats:
+  - value: 100%
+    label: หน่วยที่ทดสอบแรงดัน
+  - value: '8'
+    label: โปรโตคอลการทดสอบ
+  - value: 'ISO 9001'
+    label: รับรองคุณภาพ
+  - value: 3 ปี
+    label: รับประกันแบบจำกัด
+tests:
+  - title: การทดสอบแรงดัน
+    description: ห้องเป่าลมถูกทดสอบด้วยแรงดันที่เกินขีดจำกัดการใช้งานที่แนะนำเป็นระยะเวลานาน
+    image: /images/seekingtex/factory/Pressure Testing.jpeg
+  - title: การทดสอบแรงกระแทก
+    description: สินค้าถูกทดสอบด้วยการกระแทกควบคุมจากน้ำหนักและมุมต่างๆ
+    image: /images/seekingtex/factory/producing department.jpeg
+  - title: การทดสอบความต้านทานรังสี UV
+    description: สินค้าสำเร็จถูกทดสอบด้วยแสงแดดจำลองเป็นระยะเวลานาน
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+  - title: การทดสอบความต้านทานการเสียดสี
+    description: ตัวอย่างวัสดุถูกับพื้นผิวขรุขระตามจำนวนรอบที่กำหนด
+    image: /images/seekingtex/factory/PVC material.jpeg
+  - title: การทดสอบอุณหภูมิต่ำ
+    description: สินค้าถูกทดสอบในสภาพแวดล้อมเย็นเพื่อฟังก์ชันการทำงานและความทนทาน
+    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+  - title: การทดสอบการลอยตัวและการรับน้ำหนัน
+    description: สินค้าถูกทดสอบด้วยน้ำหนักต่างๆเพื่อกำหนดความสามารถในการรับน้ำหนักสูงสุด
+    image: /images/seekingtex/factory/Stock Boat.webp
+  - title: การทดสอบความคล่องแคล่ว
+    description: สินค้าถูกทดสอบการตอบสนองต่อการป้อนของสิ่งทอหรือเครื่องยนต์
+    image: /images/seekingtex/factory/sup making.jpeg
+  - title: การทดสอบกันน้ำ
+    description: สินค้าที่ประกอบเสร็จถูกจุ่มหรือทดสอบด้วยการฉีดน้ำเพื่อตรวจสอบการรั่วซึง
+    image: /images/seekingtex/factory/producing department2.jpeg
+testing_section:
+  tagline: ขั้นตอนการทดสอน
+  title: การทดสอบอย่างละเอียดในทุกขั้นตอน
+commitment:
+  title: ความมุ่งมั่นของเรา
+  body: ด้วยขั้นตอนการทดสอบที่เข้มงวดเหล่านี๙{SITE} ให้ความมั่นใจแก่ลูกค้าว่าผ้าฟังก์ชันและบอร์ดSUP ของเราไม่เพียงมีประสิทธิภาพสูง แต่ยังสร้างมาให้ทนทาน
+  cta: ขอเอกสารการทดสอน
+  cta_link: /contact

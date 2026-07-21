@@ -1,0 +1,96 @@
+hero:
+  tagline: O firmie
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Warsztat Seekingtex
+  title: |
+    In偶ynieria okr臋towa <br />
+    w stylu <span class="text-accent dark:text-white">Seekingtex</span>
+  subtitle: 'Zacz臋li艣my w nadmorskim warsztacie z jedn膮 艂odzi膮 i niezachwianym przekonaniem: produkty morskie powinny by膰 zaprojektowane tak, jakby od nich zale偶a艂o 偶ycie 鈥?bo tak jest. Dzi艣 dostarczamy do 40+ kraj贸w, ale ka偶dy kad艂ub wci膮偶 przechodzi przez te same r臋ce, kt贸re za艂o偶y艂y firm臋.'
+
+stats:
+  title: W liczbach
+  columns: 4
+  stats:
+    - title: Dostarczone kad艂uby
+      amount: '2,400+'
+    - title: Kraje dostaw
+      amount: '40'
+    - title: 艁膮czne do艣wiadczenie (lata)
+      amount: '60'
+    - title: 艢redni czas odpowiedzi (h)
+      amount: '24'
+
+features3_what_we_build:
+  title: Co budujemy
+  subtitle: Skoncentrowana linia produkt贸w, kt贸r膮 znamy od podszewki 鈥?偶adnych p贸艂艣rodk贸w ani badge engineeringu.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 艁odzie techniczna tkanina
+      description: techniczna tkanina z kad艂ubem aluminiowym od 3,3 m do 7,5 m. Zaprojektowane do patrolowania, nurkowania, w臋dkowania i u偶ytku rodzinnego.
+      icon: tabler:ship
+    - title: 艁odzie pneumatyczne
+      description: 艁odzie pneumatyczne z PVC i Hypalon od 2,4 m do 4,2 m. Lekkie, wytrzyma艂e i 艂atwe w przechowywaniu.
+      icon: tabler:speedboat
+    - title: Tender do superjacht贸w
+      description: Kompaktowe techniczna tkanina o wysokich specyfikacjach, wykonane na miar臋 projektu jachtu macierzystego.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Akcesoria
+      description: Pasy, pompy, pokrowce, torby wodoodporne, zbiorniki paliwa i elektronika. Wszystko kompatybilne z naszymi 艂odziami.
+      icon: tabler:package
+    - title: Modyfikacje i naprawy
+      description: Naprawa przedzia艂贸w pneumatycznych, modernizacja elektroniki i wymiana silnik贸w.
+      icon: tabler:tool
+    - title: Produkty na zam贸wienie
+      description: Projektowanie dla klient贸w komercyjnych, naukowych i wojskowych.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 艁贸d藕 na zam贸wienie
+
+steps2_values:
+  title: Nasze warto艣ci
+  subtitle: Trzy zasady kszta艂tuj膮ce ka偶dy produkt od pierwszego dnia.
+  items:
+    - title: Buduj tak, jakby w 艂odzi by艂a twoja rodzina
+      description: Ka偶dy kad艂ub, ka偶dy spaw i ka偶dy komponent s膮 traktowane tak, jakby mia艂y by膰 u偶ywane przez nasze w艂asne rodziny.
+      icon: tabler:heart
+    - title: In偶ynieria przed sprzeda偶膮
+      description: Je艣li specyfikacja jest b艂臋dna, zmieniamy specyfikacj臋 鈥?nigdy klienta.
+      icon: tabler:settings
+    - title: Wsparcie poza gwarancj膮
+      description: Dwudziestoletnie kad艂uby wci膮偶 dzwoni膮 po cz臋艣ci 鈥?i wci膮偶 odbieramy.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Kamienie milowe
+  subtitle: Kr贸tka wersja historii Seekingtex.
+  isReversed: true
+  items:
+    - title: Za艂o偶ona w nadmorskim warsztacie
+      description: Dw贸ch in偶ynier贸w okr臋towych z jedn膮 frezark膮 CNC i niezachwian膮 ide膮.
+      icon: tabler:building-factory
+    - title: Pierwsze 1 000 dostarczonych kad艂ub贸w
+      description: Osi膮gni臋te w si贸dmym roku, g艂贸wnie dzi臋ki poczcie pantoflowej i sta艂ym klientom.
+      icon: tabler:circle-check
+    - title: Mi臋dzynarodowy program eksportowy
+      description: Dostawy do 40+ kraj贸w z lokalnymi partnerami serwisowymi na pi臋ciu kontynentach.
+      icon: tabler:world
+
+features2_locations:
+  title: Nasze lokalizacje
+  tagline: Gdzie nas znale藕膰
+  columns: 3
+  items:
+    - title: Siedziba g艂贸wna i warsztat
+      description: Nadmorski park przemys艂owy, budynek 4 鈥?otwarte pn-pt dla odwiedzin po um贸wieniu.
+    - title: Centrum serwisowe UE
+      description: Port 艣r贸dziemnomorski 鈥?modyfikacje, naprawy i wsparcie gwarancyjne dla klient贸w europejskich.
+    - title: Sie膰 partnerska APAC
+      description: Autoryzowani partnerzy serwisowi w Australii, Japonii, Singapurze i Hongkongu.

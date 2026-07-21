@@ -1,0 +1,72 @@
+hero:
+  tagline: Acad茅mie Seekingtex
+  title: Centre d'apprentissage
+  subtitle: Guides et tutoriels pour tous les niveaux 鈥?des bases du SUP aux techniques de sauvetage avanc茅es
+
+categories:
+  - level: D茅butant
+    color: from-green-500 to-emerald-600
+    badge: bg-green-100 text-green-700
+    guides:
+      - title: Bases du SUP
+        desc: Apprenez les fondamentaux du textile technology 鈥?posture, technique de textile et 茅quilibre.
+        slug: sup-basics
+      - title: Techniques de textile
+        desc: Coup avant, coup circulaire, coup de traction et appui bas 鈥?ma卯trisez les mouvements essentiels de textile.
+        slug: paddle-techniques
+      - title: S茅curit茅 d'abord
+        desc: Pratiques de s茅curit茅 essentielles incluant la v茅rification m茅t茅o, l'utilisation du VFI, les r猫gles de leash et l'auto-sauvetage.
+        slug: safety-first
+  - level: Interm茅diaire
+    color: from-blue-500 to-indigo-600
+    badge: bg-blue-100 text-blue-700
+    guides:
+      - title: Essentiels du tourisme
+        desc: Planification de pagaies de plusieurs heures 鈥?navigation, hydratation, rythme et lecture des pr茅visions de vent.
+        slug: touring-essentials
+      - title: Lecture m茅t茅o
+        desc: Interpr茅ter les pr茅visions marines, identifier les motifs nuageux et comprendre les effets du vent sur l'eau.
+        slug: weather-reading
+      - title: Bases de la navigation
+        desc: Lecture de cartes, utilisation de la boussole, points de cheminement GPS et planification d'itin茅raires pour la textile c么ti猫re.
+        slug: navigation-basics
+      - title: Connaissance des mar茅es
+        desc: Comprendre les cycles des mar茅es, les courants et leur impact sur le moment du d茅part et le routage.
+        slug: tidal-awareness
+  - level: Avanc茅
+    color: from-purple-500 to-violet-600
+    badge: bg-purple-100 text-purple-700
+    guides:
+      - title: Planification de voyages multi-jours
+        desc: Logistique d'exp茅dition 鈥?s茅lection d'茅quipement, planification des repas, protocoles de s茅curit茅 et contacts d'urgence.
+        slug: multi-day-trip-planning
+      - title: Techniques de sauvetage
+        desc: Auto-sauvetage, sauvetage en T, sauvetage esquimau pour tissus techniques et protocoles de remorquage en eau libre.
+        slug: rescue-techniques
+      - title: textile de nuit
+        desc: Navigation apr猫s la tomb茅e de la nuit 鈥?exigences d'茅clairage, m茅moire d'itin茅raire, communication de groupe et sensibilisation aux dangers.
+        slug: night-paddling
+  - level: Entretien
+    color: from-amber-500 to-orange-600
+    badge: bg-amber-100 text-amber-700
+    guides:
+      - title: Nettoyage & entretien
+        desc: Rin莽age 脿 l'eau douce, protection UV, pr茅vention des moisissures et techniques de s茅chage appropri茅es apr猫s chaque session.
+        slug: cleaning-and-care
+      - title: Guide de stockage
+        desc: Meilleures pratiques pour le stockage des planches et tissus fonctionnels 鈥?d茅gonflage, pliage, contr么le de la temp茅rature et dur茅e de conservation.
+        slug: storage-guide
+      - title: Bases de la r茅paration
+        desc: R茅parer les petites perforations, fuites de soudure et probl猫mes de valve avec des kits de r茅paration PVC et techniques de rapi茅莽age.
+        slug: repair-basics
+      - title: Entretien des valves
+        desc: Identifier les types de valves (Halkey-Roberts, Boston, Leafield), nettoyer les d茅bris et remplacer les tiges d茅fectueuses.
+        slug: valve-maintenance
+
+read_guide: Lire le guide 鈫?
+
+cta:
+  title: Vous ne savez pas par o霉 commencer ?
+  desc: Faites notre quiz d'茅valuation pour trouver les guides et l'茅quipement adapt茅s 脿 votre niveau.
+  label: Contactez-nous 鈫?
+  link: /contact

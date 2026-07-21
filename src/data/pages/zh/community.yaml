@@ -1,0 +1,83 @@
+hero:
+  tagline: '社区'
+  title: 'Seekingtex社区'
+  subtitle: |
+    真实的人，真实的水域，真实的冒险。从周末纺织技术者到<br />
+    专业操作人员——了解我们的社区如何在纺织探索世界。
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Seekingtex community paddling on calm waters'
+
+stats:
+  title: '社区数据一览'
+  stats:
+    - title: '40+'
+      description: '拥有Seekingtex客户的国家'
+    - title: '12+'
+      description: '社区冒险的年头'
+    - title: '10,000+'
+      description: '全球快乐的纺织技术者'
+    - title: '98%'
+      description: '会推荐Seekingtex'
+
+stories:
+  tagline: '探索者故事'
+  title: '来自真实人物的真实冒险'
+  subtitle: '听听使用Seekingtex装备在纺织活动的纺织技术者、家庭和专业人员的亲身经历。'
+  items:
+    - name: 'Sarah & Mike'
+      title: 'SUP Explorer 11拥有者，加拿大'
+      content: '我们带着Explorer 11在阿尔冈金公园进行了一周之旅。它们完美地应对了搬运和湖泊穿越。滴塑结构让我们可以功能性到15 PSI，从可打包的板子获得硬板的性能。'
+      image: '/images/seekingtex/products/Seekingtex-sup-allround-board.webp'
+      location: '阿尔冈金公园，加拿大'
+    - name: 'Carlos R.'
+      title: 'Cheetah Surge骑手，西班牙'
+      content: 'Cheetah Surge是我沿海巡游的首选。鲜艳的设计在沙滩上引人注目，稳定性让我在轻波中充满信心。无论是旅行还是欣赏日落，它都表现出色。'
+      image: '/images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp'
+      location: '布拉瓦海岸，西班牙'
+    - name: 'Lina和家人'
+      title: 'Flowing Lotus纺织技术者，瑞典'
+      content: '周末在群岛上的家庭冒险。Flowing Lotus足够稳定，我女儿可以站在上面而我在纺织技术。不到10分钟功能性完毕——不需要拖车，只有纯粹的纺织家庭乐趣。'
+      image: '/images/seekingtex/products/sup-series/sup-flowing-lotus-1.webp'
+      location: '斯德哥尔摩群岛，瑞典'
+    - name: 'Andres中校'
+      title: 'Ocean Voyager探险家，菲律宾'
+      content: '我用我的Ocean Voyager在巴拉望周围进行长距离沿海旅行。在热带条件下每天使用数月后，板子仍然像新的一样。旅行形状能切开那些会阻止较弱板子的波浪。'
+      image: '/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp'
+      location: '巴拉望，菲律宾'
+    - name: 'Emma T.'
+      title: 'Tropical Breeze初学者，澳大利亚'
+      content: '我以前从未玩过SUP。Tropical Breeze非常稳定，我第一次尝试就充满信心。现在我每个周末都划。学习曲线基本为零——而且板子在纺织看起来很棒。'
+      image: '/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp'
+      location: '黄金海岸，澳大利亚'
+
+adventures_cta:
+  tagline: '分享你的冒险'
+  title: '你的故事可能在这里'
+  subtitle: '在Instagram上标记@seekingtex_watersports或使用#SeekingtexAdventure，就有机会被推荐。'
+  instagram: '关注Instagram'
+  youtube: '订阅YouTube'
+  facebook: '加入Facebook'
+
+locations:
+  tagline: '全球社区'
+  title: 'Seekingtex的足迹'
+  subtitle: '从欧洲湖泊到东南亚海岸线——我们的社区无处不在。'
+  regions:
+    - title: '欧洲'
+      description: '科莫湖 · 斯德哥尔摩群岛 · 布拉瓦海岸 · 克罗地亚海岸 · 苏格兰湖泊'
+    - title: '亚太'
+      description: '巴拉望 · 黄金海岸 · 下龙湾 · 山中湖 · 巴厘岛海岸'
+    - title: '美洲'
+      description: '阿尔冈金公园 · 五大湖 · 佛罗里达礁岛群 · 太浩湖 · 巴塔哥尼亚'
+    - title: '中东和非洲'
+      description: '红海海岸 · 维多利亚湖 · 开普半岛 · 加利利海'
+
+cta:
+  title: '准备好加入社区了吗？'
+  subtitle: '每件Seekingtex产品都经过CE认证、有保修支持，并为真正冒险而设计。今天就找到你的产品。'
+  actions:
+    - variant: primary
+      text: '探索产品'
+      href: '/products'
+    - text: '分享你的故事'
+      href: '/contact'

@@ -1,0 +1,121 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Factory', href: '/factory' },
+  { name: 'Production Process' },
+];
+
+const metadata = {
+  title: `Manufacturing Process — From Raw Yarn to Finished Fabric | ${SITE.name}`,
+  description: `${SITE.name} manufacturing process: material inspection, yarn weaving, dyeing, coating, lamination, digital printing, quality testing, and shipping.`,
+};
+
+const steps = [
+  {
+    step: '01',
+    title: 'Yarn Receipt & Inspection',
+    description:
+      'Every incoming batch of yarn, fiber, chemical, and additive is inspected against specification. Yarn samples are tested for tensile strength, count consistency, and twist uniformity before release to production. Non-conforming materials are quarantined and returned.',
+    duration: '1–2 days',
+  },
+  {
+    step: '02',
+    title: 'Weaving & Knitting',
+    description:
+      'Approved yarns are loaded onto rapier or air-jet looms and woven with precision control. Computer-optimised settings ensure consistent fabric density, GSM, and width — typically within ±3% tolerance. Greige fabric is inspected, rolled, and labelled for transfer to the dyeing workshop.',
+    duration: '2–4 hours per 1,000 yards',
+  },
+  {
+    step: '03',
+    title: 'Dyeing & Finishing',
+    description:
+      'Greige fabric is scoured, heat-set, and dyed in jet dyeing machines with controlled temperature ramps and chemical dosing. Finishing processes include sanforizing, chemical application (DWR, antibacterial, FR), and mechanical finishing for hand feel and drape.',
+    duration: '1–2 days per batch',
+  },
+  {
+    step: '04',
+    title: 'Coating & Lamination',
+    description:
+      'Finished fabric passes through precision coating lines for PU, acrylic, or silicone application. For waterproof breathable fabrics, hot-melt lamination bonds a membrane to the face fabric. Coating thickness is monitored continuously with IR sensors.',
+    duration: '1–2 days per batch',
+  },
+  {
+    step: '05',
+    title: 'Digital Printing & Decoration',
+    description:
+      'Custom branded fabrics are printed using high-resolution digital inkjet printers with eco-friendly water-based inks. Prints are cured and fixed for wash fastness and UV resistance. Suitable for apparel, flags, and specialty textiles.',
+    duration: '1–2 days',
+  },
+  {
+    step: '06',
+    title: 'Final Inspection & Grading',
+    description:
+      'Every fabric roll passes through automated inspection frames. Defects are flagged, measured, and graded per ASTM D5430. Samples are cut for lab testing (tensile, hydrostatic head, colorfastness, shrinkage). Each roll receives a unique batch number.',
+    duration: '1–2 days',
+  },
+  {
+    step: '07',
+    title: 'Quality Lab Testing',
+    description:
+      'Representative samples from every batch undergo mandatory performance testing: tensile strength (ASTM D5034), tear strength (ASTM D2261), hydrostatic head (AATCC 127), UPF rating (AS/NZS 4399), colorfastness (AATCC 61), and shrinkage (AATCC 135).',
+    duration: '1–2 days',
+  },
+  {
+    step: '08',
+    title: 'Packing & Shipping',
+    description:
+      'Approved rolls are wrapped in PE film, labelled with batch details and spec sheet, and packed in woven bags or cartons. We coordinate with freight forwarders for FCL and LCL container shipments worldwide.',
+    duration: '1 day',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href="/factory" class="text-sm text-gray-500 hover:underline">&larr; Back to Factory</a>
+    <div class="mt-4 max-w-3xl">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Process</p>
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold">Manufacturing Process</h1>
+      <p class="mt-3 text-lg text-muted">From raw yarn to finished fabric — every step under our control</p>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl">
+    <p class="text-muted leading-relaxed mb-12">
+      Unlike brands that outsource production to third-party mills, {SITE.name} owns and operates its entire
+      manufacturing chain. This vertical integration allows us to maintain strict quality control at every stage, respond
+      quickly to custom requirements, and deliver consistent fabric quality batch after batch. Here is how fabric is
+      produced in our facility.
+    </p>
+
+    <div class="space-y-10">
+      {steps.map((s) => (
+        <div class="relative pl-16">
+          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+            {s.step}
+          </div>
+          <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-8 pb-2">
+            <div class="flex items-start justify-between gap-4">
+              <h2 class="text-xl font-bold">{s.title}</h2>
+              <span class="text-xs text-muted whitespace-nowrap shrink-0 mt-1">{s.duration}</span>
+            </div>
+            <p class="mt-2 text-muted leading-relaxed">{s.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">See our equipment and machinery</h2>
+      <p class="mt-2 text-sm text-muted">Explore the industrial-grade equipment behind every Seekingtex fabric.</p>
+      <a href="/factory/equipment" class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+        View equipment →
+      </a>
+    </div>
+  </section>
+</Layout>

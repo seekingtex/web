@@ -1,0 +1,45 @@
+hero:
+  tagline: Yaşam Tarzı
+  title: Seekingtex<br />Yaşam Tarzı
+  subtitle: tekstil\ üzerinde yaşayanlar için tasarlandı — hafta sonu kaşiflerinden her gün ekipmanlarına güvenen ticari operatörlere kadar.
+
+values:
+  - icon: 🌊
+    title: Sudan Doğan
+    desc: Her tasarım, suyun nasıl davrandığını anlamakla başlar. Koşulların sınırından içe doğru tasarlıyoruz — çünkü okyanus bizim öğretmenimiz, işyerimiz değil.
+  - icon: 🔧
+    title: Dayanmak Üzere Üretildi
+    desc: En sürdürülebilir ürün, değiştirilmesi gerekmeyendir. Denizcilik sınıfı malzemeler, 15 PSI dayanıklı drop-stitit çekirdekler ve sezonlar boyu dayanan dikişler.
+  - icon: '🏆'
+    title: Tasarım Gereği Erişilebilir
+    desc: Su sporları bir lüks olmamalı. Aileler, eğitmenler ve küçük işletmeler için anlamlı fiyata profesyonel performans — yalnızca ticari filolar için değil.
+  - icon: 🌍
+    title: Küresel Topluluk
+    desc: "Qingdao kıyılarından Avrupa göllerine, Güneydoğu Asya nehirlerinden Amerika koylarına — müşterilerimizi tek bir şey birleştirir: suda olma sevgisi."
+  - icon: ♻️
+    title: Sorumlu Üretim
+    desc: "Optimize edilmiş CNC kesim, malzeme atığını %5'in altına indirir. Dayanıklı yapı, değiştirme döngülerini azaltır. Uzun ömür için inşa ediyoruz çünkü en sürdürülebilir seçim budur."
+  - icon: 🤝
+    title: Kalıcı Destek
+    desc: Yirmi yıllık tekneler hala yedek parça için bizi arar. Garanti yanıt süremiz ortalama 24 saattir. Satıştan sonra kaybolmayız — ürünün tüm ömrü boyunca buradayız.
+
+ethos_section:
+  tagline: Felsefemiz
+  title: Bir Üründen Fazlası. Bir Felsefe.
+  subtitle: Malzeme seçiminden müşteri hizmetlerine kadar her kararımızı şekillendiren altı ilke.
+
+community_section:
+  tagline: Topluluk
+  title: Seekingtex Topluluğuna Katılın
+  subtitle: Yolculuğumuzu takip edin ve kendi su maceralarınızı paylaşın.
+  instagram: Instagram'da Takip Et
+  youtube: YouTube'a Abone Ol
+  x: X'te Takip Et
+
+cta_section:
+  title: Maceranıza Başlayın
+  subtitle: Her ürün CE sertifikalıdır. Garanti kapsamındadır. Gerçek suda yaşam için tasarlanmıştır.
+  products_cta: Ürünleri Keşfet →
+  about_cta: Hakkımızda
+  products_link: /products
+  about_link: /about

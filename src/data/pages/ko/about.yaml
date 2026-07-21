@@ -1,0 +1,96 @@
+hero:
+  tagline: 회사 소개
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex 공장 및 작업장
+  title: |
+    섬유 엔지니어링, <br />
+    <span class="text-accent dark:text-white">Seekingtex</span> 방식으로 구축되다
+  subtitle: '저희는 한 척의 원단와 하나의 확고한 신념을 가지고 해안 작업장에서 시작했습니다: 섬유 제품은 중요하므로 그에 걸맞게 엔지니어링되어야 한다는 것입니다. 현재 40여 개국으로 배송하고 있지만, 모든 선체는 여전히 회사를 설립한 그 손길을 거쳐 갑니다.'
+
+stats:
+  title: 수치로 보는 Seekingtex
+  columns: 4
+  stats:
+    - title: 출고 선체
+      amount: '2,400+'
+    - title: 배송 국가
+      amount: '40'
+    - title: 누적 경력
+      amount: '60'
+    - title: 평균 보증 응답 시간(시간)
+      amount: '24'
+
+features3_what_we_build:
+  title: 제품 소개
+  subtitle: 당사가 완벽히 이해하는 특화 제품 라인 — 미완성 실험도, 배지 엔지니어링도 없습니다.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 기술 원단 원단
+      description: 3.3m~7.5m 알루미늄 선체 기술 원단. 순찰, 다이빙, 낚시 및 가족용으로 설계.
+      icon: tabler:ship
+    - title: 고무원단
+      description: 2.4m~4.2m PVC 및 하이팔론 고무 딩기. 가볍고 튼튼하며 보관이 용이.
+      icon: tabler:speedboat
+    - title: 슈퍼프리미엄 원단 텐더
+      description: 모선의 디자인에 맞춰 제작된 컴팩트한 고사양 기술 원단.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: 액세서리
+      description: 노, 펌프, 커버, 드라이백, 연료 탱크 및 전자 장비. 모두 당사 원단에 최적화.
+      icon: tabler:package
+    - title: 개조 및 수리
+      description: 자체 튜브 교체, 전자 장비 개장 및 엔진 업그레이드.
+      icon: tabler:tool
+    - title: 맞춤 제작
+      description: 상업, 과학 및 군사 고객을 위한 프로젝트별 설계.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: 원단 설계 및 엔지니어링 논의
+
+steps2_values:
+  title: 핵심 가치
+  subtitle: 첫날부터 모든 제품을 형성해 온 세 가지 원칙.
+  items:
+    - title: 가족이 탄다고 생각하고 제작하라
+      description: 모든 선체, 용접부 및 체결구는 우리 가족이 사용할 것처럼 다뤄집니다.
+      icon: tabler:heart
+    - title: 판매하기 전에 엔지니어링하라
+      description: 사양이 잘못되었다면 사양을 변경합니다 — 절대 고객을 탓하지 않습니다.
+      icon: tabler:settings
+    - title: 보증 기간을 넘어서는 지원
+      description: 20년 된 선체도 예비 부품을 위해 전화하고, 우리는 여전히 받습니다.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: 주요 이정표
+  subtitle: Seekingtex 이야기의 짧은 버전.
+  isReversed: true
+  items:
+    - title: 해안 작업장에서 설립
+      description: 두 명의 조선 기술자가 CNC 밀링 머신과 한 가지 확고한 아이디어로 시작.
+      icon: tabler:building-factory
+    - title: 첫 1,000척 선체 출하
+      description: 설립 7년 차에 달성, 주로 입소문과 재구매 고객을 통해.
+      icon: tabler:circle-check
+    - title: 국제 수출 프로그램
+      description: 현재 5개 대륙의 현지화된 지원 파트너와 함께 40여 개국으로 배송.
+      icon: tabler:world
+
+features2_locations:
+  title: 위치 안내
+  tagline: 찾아오시는 길
+  columns: 3
+  items:
+    - title: 본사 및 작업장
+      description: 해안 산업단지, 4동 — 월~금 예약 방문 가능.
+    - title: EU 서비스 센터
+      description: 지중해 항구 — 유럽 고객을 위한 개조, 수리 및 보증 지원.
+    - title: APAC 파트너 네트워크
+      description: 호주, 일본, 싱가포르, 홍콩 소재 공인 서비스 파트너.

@@ -1,0 +1,23 @@
+hero:
+  tagline: Journal
+  title: Seekingtex-journalen
+  subtitle: Siste nytt, padleeventyr og produkthistorier fra Seekingtex-teamet.
+
+meta:
+  read_more: Les mer
+  published: Publisert
+  by: Av
+  browse_all: Bla gjennom alle artikler
+  categories: Kategorier
+  subscribe: Abonner på journalen
+
+categories:
+  all: Alle
+  adventures: Eventyr
+  product: Produkt
+  tips: Tips
+  culture: Kultur
+
+featured: Utvalgt
+latest: Siste artikler
+no_articles: Ingen artikler foreløpig.

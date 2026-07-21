@@ -1,0 +1,32 @@
+hero:
+  tagline: 品牌
+  title: '{BRAND}'
+  subtitle: 为每位冲浪者而生的纺织性能
+  cta: 探索装备 →
+  cta_link: /products
+  secondary_cta: 学习冲浪
+  secondary_cta_link: /guides
+
+position:
+  tagline: 定位
+  subtitle: 为每位冲浪者而生的纺织性能
+
+products_section:
+  tagline: 产品
+  cta: 所有产品 →
+  cta_link: /products
+
+global_section:
+  tagline: 全球
+  title: 覆盖{count}个地区
+
+social_section:
+  tagline: 社交媒体
+  title: 冲浪者正在阅读
+  read_guide: 阅读指南 →
+
+cta_section:
+  title: 开启您的纺织之旅
+  subtitle: 每款产品均通过CE认证。享有保修。为真实冲浪而设计。
+  cta_suffix: '→'
+  secondary_cta: 关于{BRAND}

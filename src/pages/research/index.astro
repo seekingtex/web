@@ -1,0 +1,81 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import researchData from '~/data/site/research.yaml';
+
+const metadata = {
+  title: `Research & Knowledge Center | ${SITE.name}`,
+  description: `In-depth technical research on functional fabrics: UPF/UV protection technology, waterproof breathable systems, textile certifications, fabric weight and thickness, and OEM/ODM sourcing.`,
+  ignoreTitleTemplate: true,
+};
+
+interface ResearchTopic { slug: string; category: string; readTime: string }
+
+const topics: ResearchTopic[] = (researchData as any)?.topics ?? [];
+
+const topicMeta: Record<string, { title: string; desc: string; image?: string }> = {
+  'upf-uv-protection-technology': { title: 'UPF & UV Protection Technology', desc: 'The engineering behind fiber-level UV stabilizers and fabric construction techniques that deliver UPF 50+ sun protection.' },
+  'waterproof-breathable-technology': { title: 'Waterproof Breathable Technology', desc: 'A technical comparison of PU, PTFE, and ePTFE membrane technologies for waterproof breathable fabrics.' },
+  'textile-certifications-guide': { title: 'Textile Certifications Guide', desc: 'The full guide to textile certifications: OEKO-TEX Standard 100, bluesign, GOTS, GRS, and STeP certification processes and requirements.' },
+  'fabric-weight-thickness-guide': { title: 'Fabric Weight & Thickness Guide', desc: 'Engineering analysis of how fabric weight (GSM) and thickness affect performance, warmth, durability, and application suitability.' },
+  'fabric-oem-odm-buyer-guide': { title: 'Fabric OEM/ODM Buyer Guide', desc: 'A comprehensive guide for sourcing functional fabrics from manufacturers, from factory evaluation to logistics and compliance.' },
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Research & Knowledge Center',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Research</span>
+    </nav>
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Latest Research</span>
+      <h1 class="mt-4 text-4xl font-bold text-gray-900">Knowledge Center</h1>
+      <p class="mt-4 text-lg text-gray-500">
+        In-depth technical research on functional fabric technologies, certifications, and manufacturing <span class="text-gray-800 font-semibold">—</span> written for product developers, sourcing professionals, and informed buyers.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        topics.map((t) => {
+          const meta = topicMeta[t.slug];
+          if (!meta) return null;
+          return (
+            <a
+              href={`/research/${t.slug}`}
+              class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+            >
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+                  {t.category}
+                </span>
+                <span class="text-xs text-gray-400">{t.readTime}</span>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                {meta.title}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 flex-1">{meta.desc}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                Read Research &rarr;
+              </span>
+            </a>
+          );
+        })
+      }
+    </div>
+  </div>
+</Layout>

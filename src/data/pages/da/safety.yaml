@@ -1,0 +1,22 @@
+hero:
+  tagline: Sikkerhed
+  title: Sikkerhedsstandarder og certificering
+  subtitle: Alle Seekingtex produkter gennemg氓r streng testning og opfylder internationale sikkerhedsstandarder.
+certifications:
+  - title: CE-certificering
+    description: Alt Seekingtex sikkerhedsudstyr overholder CE-m忙rkningskravene under EU-forordningen om personlige v忙rnemidler (EU) 2016/425.
+  - title: 'ISO 6185'
+    description: safety fabrice opfylder ISO 6185 flydestandarder.
+  - title: SOLAS-overholdelse
+    description: Safety Fabric Pro overholder SOLAS-regler for offshore og kommerciel maritim drift.
+related:
+  title: Relateret
+  links:
+    - text: Sikkerhedstips guide
+      url: /guides/safety-tips
+    - text: Teknologi
+      url: /technology
+    - text: Alle produkter
+      url: /products
+    - text: Guides
+      url: /guides

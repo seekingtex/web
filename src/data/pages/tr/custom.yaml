@@ -1,0 +1,80 @@
+hero:
+  tagline: Seekingtex Özel Laboratuvar
+  title: Kendi teknenizi<br />tasarlayın
+  subtitle: Dünya çapındaki işletmeler için OEM, ODM, özel marka ve özel markalama hizmetleri. Tek bir prototipten tam üretim serisine.
+  cta: Projeye Başlayın
+  footer_link: /contact
+
+steps_section:
+  tagline: Nasıl Çalışır
+  title: Konseptten Üretime
+  subtitle: Fikrinizden denize hazır, bitmiş bir tekneye dört adım.
+  steps:
+    - num: '01'
+      title: Bir Tahta Seçin
+      desc: Temel modellerimizden seçim yapın — SUP, kano, tekstil ürünü veya teknik kumaş. Boyut, malzeme ve rengi belirleyin.
+    - num: '02'
+      title: Tasarımınızı Gönderin
+      desc: Logonuzu, grafiklerinizi veya marka yönergelerinizi bize gönderin. Tasarım ekibimiz dijital bir prova hazırlayacak.
+    - num: '03'
+      title: AI Maket İncelemesi
+      desc: Üretim başlamadan önce özel tahtanızın AI tarafından oluşturulmuş fotogerçekçi maketini görün.
+    - num: '04'
+      title: Üretim ve Teslimat
+      desc: Onayınızdan sonra siparişiniz sertifikalı ISO üretim hattımıza girer. Teslim süresi 30 günden itibaren.
+
+services_section:
+  tagline: Hizmetler
+  title: Küresel Markalar İçin Üretim Hizmetleri
+  subtitle: Sözleşmeli üretimden anahtar teslim marka oluşturmaya kadar esnek iş birliği modelleri.
+  items:
+    - title: OEM Üretimi
+      desc: Kendi spesifikasyonlarınıza göre üretim — sizin fikri mülkiyetiniz, sizin çizimleriniz, sizin kalite standartlarınız. Tam Gizlilik Sözleşmesi (NDA) koruması.
+      icon: ⚙️
+    - title: ODM Çözümleri
+      desc: 50'den fazla kanıtlanmış platform arasından seçim yapın ve boyut, renk, grafik ve ambalajı özelleştirin.
+      icon: '🎨'
+    - title: Özel Marka (Private Label)
+      desc: Ürünlerimizde sizin markanız — logo, ambalaj, etiketler, kullanım kılavuzları. Kutudan çıktığı gibi satışa hazır.
+      icon: 🏷️
+    - title: Özel Markalama
+      desc: Güverte baskısı, gövde grafiği, tüp çıkartmaları ve özel etiketler — tam marka entegrasyonu.
+      icon: ✨
+
+capabilities_section:
+  tagline: Yetenekler
+  title: Üretim ve Özelleştirme Yetenekleri
+  subtitle: Sipariş vermeden önce bilmeniz gereken her şey.
+  capabilities:
+    - label: Sipariş Hacmi
+      value: MOQ 5–10 adet (SUP/kano), 2–5 adet (teknik kumaş)
+    - label: Teslim Süresi
+      value: Standart 30–45 gün; prototipler için 15–20 gün
+    - label: Özelleştirme
+      value: Boyut, şekil, renk, grafik, ambalaj, donanım
+    - label: Malzemeler
+      value: PVC, Hypalon, drop-stitch, fiberglas, alüminyum
+    - label: Baskı
+      value: Dijital (CMYK), serigrafi, termal transfer, sublimasyon
+    - label: Sertifikasyon
+      value: CE, UKCA, FCC (küresel uyumluluk desteği)
+
+why_section:
+  tagline: Neden Seekingtex
+  title: Tek fabrika. Tek standart. Sıfır taviz.
+  points:
+    - text: 12.000 m² entegre üretim tesisi
+      highlight: 12.000 m²
+    - text: 200'den fazla nitelikli çalışan ve mühendis
+      highlight: 200+
+    - text: Yılda 15.000'den fazla tekne üretimi
+      highlight: 15.000+
+    - text: ISO 9001 sertifikalı kalite yönetim sistemi
+      highlight: 'ISO 9001'
+    - text: AB pazarı için CE sertifikalı ürünler
+      highlight: CE
+  cta: Fabrika Detaylarını Görün
+  cta_link: /factory
+  contact:
+    title: Projenizi görüşmeye hazır mısınız?
+    desc: Ekibimiz 24 saat içinde ön fiyat teklifiyle yanıt verir.

@@ -1,0 +1,32 @@
+hero:
+  tagline: Marka
+  title: '{BRAND}'
+  subtitle: Her Sörfçü İçin Okyanus Performansı
+  cta: Ekipmanı Keşfedin →
+  cta_link: /products
+  secondary_cta: Sörf yapmayı öğrenin
+  secondary_cta_link: /guides
+
+position:
+  tagline: Konum
+  subtitle: Her Sörfçü İçin Okyanus Performansı
+
+products_section:
+  tagline: Ürünler
+  cta: Tüm Ürünler →
+  cta_link: /products
+
+global_section:
+  tagline: Küresel
+  title: "{count} bölgede mevcut"
+
+social_section:
+  tagline: Sosyal medya
+  title: Sörfçüler ne okuyor
+  read_guide: Rehberi Oku →
+
+cta_section:
+  title: Okyanus maceranıza başlayın
+  subtitle: Her ürün CE sertifikalıdır. Garantilidir. Gerçek sörf için tasarlanmıştır.
+  cta_suffix: '→'
+  secondary_cta: "{BRAND} Hakkında"

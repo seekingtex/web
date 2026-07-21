@@ -1,0 +1,29 @@
+hero:
+  tagline: Značka
+  title: Značka Seekingtex
+  subtitle: Kvalita, inovace a spolehlivost — to je Seekingtex.
+
+story:
+  tagline: Náš příběh
+  title: Budování důvěry od roku 2012
+  body: |
+    Seekingtex byl založen s jasnou vizí — vyrábět prémiové nafukovací čluny a vybavení pro vodní sporty, které obstojí v reálných podmínkách. Za více než desetiletí jsme vyrostli z malé dílny v celosvětově uznávaného výrobce s továrnou o rozloze 12 000 m².
+
+mission:
+  tagline: Poslání
+  title: Naše poslání
+  body: Poskytovat vysoce kvalitní, inovativní a cenově dostupné vybavení pro vodní sporty, které zpřístupňuje vodní aktivity všem — od začátečníků po profesionály.
+
+values:
+  - icon: 🔬
+    title: Inovace
+    desc: Neustále posouváme hranice technologie nafukovacích člunů.
+  - icon: 🛡️
+    title: Kvalita
+    desc: Každý produkt prochází přísným testováním před odesláním.
+  - icon: 🌍
+    title: Udržitelnost
+    desc: Zavázali jsme se k odpovědným výrobním postupům.
+  - icon: 🤝
+    title: Partnerství
+    desc: Stavíme dlouhodobé vztahy s našimi zákazníky a partnery.

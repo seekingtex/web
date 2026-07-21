@@ -1,0 +1,130 @@
+hero_text:
+  tagline: 陌leti艧im
+  title: B陌ZE ULA艦IN
+contact_form:
+  id: form
+  title: Mesaj G枚nderin
+  subtitle: Fiyat teklifi, teknik sorular veya i艧 birli臒i i莽in bize yaz谋n. Bir i艧 g眉n眉 i莽inde yan谋tl谋yoruz.
+  email_to: gzb@seekingtex.com
+  submit_button: G枚nder
+  success_message: Te艧ekk眉rler! Mesaj谋n谋z al谋nd谋. Bir i艧 g眉n眉 i莽inde yan谋tlayaca臒谋z.
+  error_message: G枚nderim s谋ras谋nda bir hata olu艧tu. L眉tfen tekrar deneyin veya do臒rudan e-posta adresine yaz谋n.
+  default_country_code: '+1'
+  captcha:
+    label: 'Anti-spam: a艧a臒谋daki i艧lemi 莽枚z眉n'
+  fields:
+    - name: firstName
+      label: Ad
+      row: 1
+    - name: lastName
+      label: Soyad
+      row: 1
+    - name: companyName
+      label: 艦irket
+      row: 2
+    - name: address
+      label: Adres
+      row: 3
+    - name: zip
+      label: Posta Kodu
+      row: 4
+    - name: country
+      label: 脺lke
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: E-posta
+      row: 5
+      type: email
+    - name: tel
+      label: Telefon
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: Tahmini Sipari艧 Hacmi
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: Tahmini hacmi se莽in...
+        - value: sample
+          label: Sadece numuneler / prototipler
+        - value: '5-10'
+          label: 50鈥?00 adet (standart MOQ)
+        - value: '100-500'
+          label: 100鈥?00 adet
+        - value: '500-plus'
+          label: 500+ adet (hacim fiyatland谋rmas谋)
+    - name: customization
+      label: 脰zelle艧tirme gerekli mi?
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: 脰zelle艧tirme t眉r眉n眉 se莽in...
+        - value: none
+          label: Standart 眉r眉n (枚zelle艧tirme yok)
+        - value: logo
+          label: Sadece 枚zel logo / marka
+        - value: full
+          label: Tam OEM (boyut, renk, grafik, paketleme)
+        - value: consultation
+          label: Emin de臒ilim 鈥?dan谋艧manl谋k gerekli
+    - name: productInterest
+      label: 陌lgilenilen 脺r眉n Kategorileri
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: Konu
+      row: 9
+    - name: message
+      label: Mesaj
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: Di臒er 陌leti艧im Yollar谋
+  columns: 3
+  items:
+    - title: Sat谋艧 Sorular谋
+      description: Fiyat teklifleri, konfig眉rasyonlar, bayi ba艧vurular谋 ve toptan sipari艧ler.
+      icon: tabler:shopping-bag
+    - title: Teknik Destek
+      description: Garanti, onar谋m, yedek par莽a ve kullan谋m sorular谋.
+      icon: tabler:tool
+    - title: Bas谋n ve Ortakl谋klar
+      description: Medya kitleri, sponsorluk ve sekt枚r i艧 birlikleri.
+      icon: tabler:news
+    - title: Telefon
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: E-posta
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: Genel Merkez
+      description: Ekonomik Kalk谋nma B枚lgesi, Laixi, Qingdao, 脟in, 266600
+      icon: tabler:map-pin
+map:
+  title: Konumumuz
+  subtitle: Bizi Ziyaret Edin
+  address: Ekonomik Kalk谋nma B枚lgesi, Laixi, Qingdao, 脟in, 266600
+  zoom: 15

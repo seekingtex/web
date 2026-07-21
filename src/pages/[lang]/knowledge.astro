@@ -1,0 +1,241 @@
+---
+export const prerender = true;
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getPageContent } from '~/i18n/page-content';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPageContent(lang, 'knowledge');
+
+const hero = page.hero ?? {};
+const clusters = page.clusters ?? {};
+const featured = page.featured_guides ?? {};
+const cta = page.cta ?? {};
+
+const metadata = {
+  title: `Fabric Knowledge — ${SITE.name}`,
+  description: `Structured knowledge base on functional fabric technology, textile safety, fabric engineering, and material planning. Guides, comparisons, and deep dives.`,
+};
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Knowledge', href: `/${lang}/knowledge` }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <Hero tagline={hero.tagline} title={hero.title} subtitle={hero.subtitle} />
+
+  <!-- Knowledge Clusters -->
+  <section class="max-w-6xl mx-auto py-20 px-6">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{clusters.tagline || 'Knowledge Topics'}</span>
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{clusters.title || 'Explore by topic'}</h2>
+      <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{clusters.subtitle || ''}</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        (clusters.items || []).map((cluster: any) => (
+          <div class="p-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+            <div class="w-12 h-12 bg-sky-50 dark:bg-sky-900/30 rounded-xl flex items-center justify-center text-sky-600">
+              {cluster.icon && <Icon name={cluster.icon} class="w-6 h-6" />}
+            </div>
+            <h3 class="mt-5 text-xl font-bold text-gray-900 dark:text-slate-100">{cluster.title || ''}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{cluster.description || ''}</p>
+            <ul class="mt-5 space-y-2">
+              {(cluster.topics || []).map((topic: string) => (
+                <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
+                  <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Featured Guides -->
+  <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{featured.tagline || 'Featured Guides'}</span>
+        <h2 class="mt-4 text-3xl font-semibold text-gray-900 dark:text-slate-100">{featured.title || 'Popular resources'}</h2>
+      </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
+        {
+          (featured.items || []).map((item: any) => (
+            <a
+              href={item.href || '#'}
+              class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 text-center hover:shadow-md transition-shadow"
+            >
+              <span class="text-sm font-medium text-gray-900 dark:text-slate-100">{item.title || ''}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- JSON-LD Knowledge Graph -->
+  <script is:inline type="application/ld+json">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Seekingtex Fabric Knowledge",
+      "description": "Structured knowledge base on functional fabric, textile technology, and material science topics.",
+      "about": {
+        "@type": "Thing",
+        "name": "Functional Fabric Knowledge",
+        "description": "Knowledge about sun-protective textiles, waterproof membranes, quick-dry fabrics, and performance materials."
+      },
+      "hasPart": [
+        { "@type": "Article", "name": "Fabric Knowledge", "about": "Functional fabric technology and textile guides" },
+        { "@type": "Article", "name": "Material Knowledge", "about": "Textile material science and engineering guides" },
+        { "@type": "Article", "name": "Certification Knowledge", "about": "Textile safety and quality certification guides" },
+        { "@type": "Article", "name": "Technology", "about": "Textile engineering and material processing" }
+      ],
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "Sun-Protective Fabric",
+              "category": "Functional Textile",
+              "audience": { "@type": "Audience", "audienceType": "Consumer to Professional" },
+              "application": { "@type": "Thing", "name": "Outdoor apparel, protective clothing, everyday wear" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "Waterproof Fabric",
+              "category": "Performance Textile",
+              "audience": { "@type": "Audience", "audienceType": "Consumer to Professional" },
+              "application": { "@type": "Thing", "name": "Outdoor gear, protective wear, industrial use" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "Quick-Dry Textile",
+              "category": "Performance Fabric",
+              "audience": { "@type": "Audience", "audienceType": "All levels" },
+              "application": { "@type": "Thing", "name": "Sportswear, travel apparel, active lifestyle" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Product",
+              "name": "Breathable Membrane Fabric",
+              "category": "Technical Textile",
+              "audience": { "@type": "Audience", "audienceType": "Professional" },
+              "application": { "@type": "Thing", "name": "Medical textiles, protective gear, industrial applications" }
+            }
+          }
+        ]
+      }
+    }
+  `}
+  </script>
+
+  <!-- Entity Relationship Graph for AI -->
+  <script is:inline type="application/ld+json">
+  {`
+    {
+      "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "https://schema.org/",
+        "st": "https://seekingtex.com/kg/"
+      },
+      "@graph": [
+        {
+          "@id": "st:seekingtex",
+          "@type": "schema:Brand",
+          "schema:name": "Seekingtex",
+          "schema:description": "Functional Fabric & Textile Brand",
+          "schema:manufactures": [
+            { "@id": "st:product-sun-protection" },
+            { "@id": "st:product-waterproof" },
+            { "@id": "st:product-quick-dry" },
+            { "@id": "st:product-breathable" }
+          ]
+        },
+        {
+          "@id": "st:technology-weave",
+          "@type": "schema:Thing",
+          "schema:name": "Advanced Weave Technology",
+          "schema:description": "Proprietary weaving method creating high-density fabric structures with optimal performance characteristics",
+          "st:usedIn": [
+            { "@id": "st:product-sun-protection" },
+            { "@id": "st:product-waterproof" }
+          ]
+        },
+        {
+          "@id": "st:technology-coating",
+          "@type": "schema:Thing",
+          "schema:name": "Functional Coating Technology",
+          "schema:description": "Specialized coating application for UV protection, water repellency, and durability enhancement",
+          "st:usedIn": [
+            { "@id": "st:product-sun-protection" },
+            { "@id": "st:product-waterproof" },
+            { "@id": "st:product-quick-dry" }
+          ]
+        },
+        {
+          "@id": "st:use-consumer",
+          "@type": "schema:Audience",
+          "schema:name": "Consumers",
+          "schema:description": "Individuals seeking functional fabrics for everyday and outdoor use",
+          "st:recommendedProduct": [
+            { "@id": "st:product-sun-protection" },
+            { "@id": "st:product-quick-dry" }
+          ]
+        },
+        {
+          "@id": "st:use-industrial",
+          "@type": "schema:Audience",
+          "schema:name": "Industrial",
+          "schema:description": "Businesses needing technical textiles for manufacturing and specialized applications",
+          "st:recommendedProduct": [
+            { "@id": "st:product-waterproof" },
+            { "@id": "st:product-quick-dry" }
+          ]
+        },
+        {
+          "@id": "st:use-professional",
+          "@type": "schema:Audience",
+          "schema:name": "Professionals",
+          "schema:description": "Textile industry professionals, manufacturers, and procurement specialists",
+          "st:recommendedProduct": [
+            { "@id": "st:product-breathable" }
+          ]
+        }
+      ]
+    }
+  `}
+  </script>
+
+  <CallToAction
+    title={cta.title}
+    subtitle={cta.subtitle}
+    actions={cta.actions}
+  />
+</Layout>

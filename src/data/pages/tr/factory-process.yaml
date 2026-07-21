@@ -1,0 +1,48 @@
+hero:
+  tagline: Süreç
+  title: Üretim Süreci
+  subtitle: Ham maddeden denize hazır tekneye — her adım bizim kontrolümüzde
+  back_label: Fabrikaya Dön
+  back_link: /factory
+
+intro: Üretimi üçüncü taraf fabrikalara yaptıran markaların aksine Seekingtex, tüm üretim zincirinin sahibidir ve işletir. Bu dikey entegrasyon, her aşamada sıkı kalite kontrolü sağlamamıza, özel taleplere hızlı yanıt vermemize ve partiden partiye tutarlı ürün kalitesi sunmamıza olanak tanır. İşte tesisimizde bir teknenin nasıl inşa edildiği.
+
+steps:
+  - step: '01'
+    title: Malzeme Kabul ve Muayene
+    description: Gelen her PVC kumaş, fiberglas keçe, reçine ve donanım partisi spesifikasyonlara göre incelenir. Kumaş numuneleri, üretime kabul edilmeden önce çekme mukavemeti, kalınlık homojenliği ve UV direnci açısından test edilir. Uygun olmayan malzemeler karantinaya alınır ve iade edilir.
+    duration: 1–2 gün
+  - step: '02'
+    title: Otomatik PVC Kesim
+    description: "Onaylanan kumaşlar, otomatik CNC kesim makinesine serilir ve milimetre altı hassasiyetle kesilir. Bilgisayar destekli optimizasyon, panelleri atığı en aza indirecek şekilde yerleştirir — tipik olarak %5'in altında. Kesilen paneller, tekne modeli ve odasına göre etiketlenir ve kaynak atölyesine aktarılmak üzere paketlenir."
+    duration: Tekne seti başına 2–4 saat
+  - step: '03'
+    title: Boru Kaynağı ve Birleştirme
+    description: Paneller, kontrollü 200–600 °C sıcaklıklarda sıcak hava kaynak makineleri ile teyellenir ve birleştirilir. Ana dikişler, hava geçirmez, yüksek mukavemetli bağlantılar için dielektrik RF kaynağı ile güçlendirilir. Bitmiş odalar, 30 dakikalık hava tutma doğrulaması için çalışma basıncının 1,5 katına şişirilir.
+    duration: Tekne başına 1–2 gün
+  - step: '04'
+    title: teknik kumaş Fiberglas Gövde Kalıplama
+    description: "teknik kumaş kumaş gövdeleri, el yatırmalı fiberglas yöntemiyle üretilir. Fiberglas keçe ve roving kumaş katmanları, hassas kalıplarda polyester veya vinil ester reçine ile elle rulolanır. Her kat, tutarlı laminat kalitesi için vakumla paketlenir. Gövde, yüksek parlaklıkta, UV'ye dayanıklı tekstil yüzeyi için jelkot ile kaplanır."
+    duration: Gövde başına 2–4 gün
+  - step: '05'
+    title: SUP Baskı ve Dekorasyon
+    description: SUP tahtası güverte grafikleri, tam renkli, fotoğraf kalitesinde desenler için dijital baskı ve dayanıklı logolar ile tekrarlayan desenler için serigrafi baskı ile uygulanır. Baskılar, UV ve aşınma direnci için kürlenir ve sızdırmaz hale getirilir.
+    duration: 1–2 gün
+  - step: '06'
+    title: Son Montaj ve Donanım
+    description: Fiberglas gövdeler ve PVC boru tertibatları montaj hattında birleştirilir. Motor monte edilir, direksiyon ve kontrol sistemleri bağlanır, yakıt sistemi kurulur ve tam elektrik tesisatı yapılır. Her tekne, her aşamada zorunlu onay ile 100 maddelik bir montaj kontrol listesinden geçer.
+    duration: 2–3 gün
+  - step: '07'
+    title: Kalite Testi ve Muayene
+    description: "Tamamlanan her tekne zorunlu kalite aşamalarından geçer: oda hava tutma testi, sistem fonksiyonel kontrolü, bağlantı elemanı tork doğrulaması ve kozmetik muayene. Özel ve prototip tasarımlar ayrıca hız, kullanım, denge ve dayanıklılık içeren suda tekstil denemelerinden geçer."
+    duration: 1–2 gün
+  - step: '08'
+    title: Paketleme ve Sevkiyat
+    description: Botların havası alınır, prosedüre göre katlanır, sağlam kumaş veya kontrplak torbalara paketlenir ve nakliye için yüklenir. Her paket, model, seri numarası ve varış yeri ile etiketlenir. Dünya çapında FCL ve LCL gönderileri için nakliyecilerle koordinasyon sağlarız.
+    duration: 1 gün
+
+cta:
+  title: Ekipman ve makinelerimizi görün
+  desc: Her Seekingtex teknesinin arkasındaki endüstriyel ekipmanı keşfedin.
+  label: Ekipmanı Görün →
+  link: /factory/equipment

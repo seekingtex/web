@@ -1,0 +1,111 @@
+hero:
+  tagline: Centru CD
+  title: Centru de cercetare 葯i dezvoltare
+  subtitle: Focalizat pe progres
+intro:
+  - Centrul de cercetare 葯i dezvoltare Seekingtex este for葲a motrice din spatele misiunii noastre de a revolu葲iona echipamentele sportive acvatice.
+  - Facilitatea noastr膬 CD reune葯te cercet膬tori de materiale, arhitec葲i navali 葯i ingineri de produc葲ie sub acela葯i acoperi葯.
+mission:
+  tagline: Misiunea noastr膬
+  title: Inova葲ie 卯n viitorul sporturilor acvatice
+  pillars:
+    - icon: lightning
+      title: Progres tehnologic
+      desc: Inovare 卯n materiale, designuri 葯i produc葲ie.
+    - icon: design
+      title: Design centrat pe utilizator
+      desc: 脦n葲elegere profund膬 葯i dep膬葯irea nevoilor utilizatorilor.
+    - icon: globe
+      title: Practici sustenabile
+      desc: Minimizarea amprentei noastre atextile productsra mediului.
+    - icon: shield
+      title: Siguran葲膬 f膬r膬 compromisuri
+      desc: Asigurarea celor mai 卯nalte standarde de siguran葲膬.
+pillars:
+  - title: Progres tehnologic
+    desc: Inovare 卯n materiale 葯i procese.
+    icon: tech
+  - title: Materiale avansate
+    desc: Cercetare 卯n PVC de ultim膬 genera葲ie, Hypalon 葯i compozite.
+    icon: materials
+  - title: Sustenabilitate
+    desc: 'Un angajament fundamental: suntem dedica葲i gestion膬rii mediului.'
+    icon: sustainability
+capabilities:
+  tagline: Capacit膬葲i
+  title: Capacit膬葲i CD
+  subtitle: Patru domenii principale care ne ofer膬 control end-to-end atextile productsra dezvolt膬rii produselor.
+  groups:
+    - title: 葮tiin葲a materialelor 葯i tehnologia materialelor textile
+      items:
+        - Formulare PVC 葯i Hypalon
+        - Stabilizare UV 葯i ignifugan葲i
+        - Laminare material textil multistrat
+    - title: Ingineria carenei 葯i hidrodinamic膬
+      items:
+        - Design parametric 3D al carenei
+        - Analiz膬 cu elemente finite
+        - Testare 卯n bazin de remorcare
+    - title: Tehnologie de sudare 葯i 卯mbinare
+      items:
+        - Sudare dielectric膬 RF
+        - Sudare cu aer cald 葯i ultrasonic膬
+    - title: Testare, certificare 葯i conformitate
+      items:
+        - Testare ,  葯i CE
+        - Testare 葯i certificare ter葲膬 parte
+rd_numbers:
+  tagline: Inova葲ie
+  title: CD 卯n cifre
+  stats:
+    - value: '14'
+      label: Ingineri 葯i cercet膬tori CD
+    - value: '8'
+      label: Brevete active
+    - value: '6'
+      label: Laboratoare specializate
+    - value: 12 ani
+      label: Exp. medie a echipei
+rd_services:
+  tagline: CD special
+  title: Servicii CD pentru parteneri
+  services:
+    - title: Dezvoltare materiale speciale
+      desc: Dezvolt膬m formul膬ri personalizate de materiale textile.
+    - title: Inginerie produs OEM / ODM
+      desc: De la concept la inginerie gata de produc葲ie.
+    - title: Testare 葯i certificare ter葲膬 parte
+      desc: Folose葯te facilit膬葲ile noastre de testare ISO.
+  cta: Discut膬 nevoile tale CD 鈫?  cta_link: /contact
+vision:
+  tagline: Viziunea noastr膬
+  title: Modelarea viitorului sporturilor acvatice
+  body: Seekingtex aspir膬 s膬 conduc膬 industria b膬rcilor gonflabile 葯i textile products prin inova葲ie continu膬.
+labs_section:
+  tagline: Laboratoare
+  title: Laboratoarele noastre
+  labs:
+    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+      title: Laborator materiale textile PVC
+      description: Cercetare 葯i testare continu膬 a materialelor textile PVC 葯i Hypalon.
+      href: /randdcenter/pvc-fabric-lab
+    - image: /images/seekingtex/factory/design discuss2.jpeg
+      title: Studioul de inginerie a carenei
+      description: Design asistat de calculator 葯i analiz膬 cu elemente finite.
+      href: /randdcenter/hull-engineering
+    - image: /images/seekingtex/factory/textile products making3.jpeg
+      title: Centru de sudare RF
+      description: Facilitate dedicat膬 de sudare prin radiofrecven葲膬.
+      href: /randdcenter/rf-welding
+    - image: /images/seekingtex/factory/design discuss original.jpeg
+      title: Bazin hidrodinamic de testare
+      description: Testare pe model la scar膬 卯n propriul nostru bazin de testare.
+      href: /randdcenter/hydrodynamic-test-tank
+    - image: /images/seekingtex/products/textile products-series/textile products-ocean-voyager-1.webp
+      title: Atelier de prototipuri
+      description: Facilitate de prototipare la scar膬 real膬 葯i echipare.
+      href: /randdcenter/prototype-workshop
+    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+      title: Laborator de calitate 葯i inspec葲ie
+      description: Laborator dedicat asigur膬rii calit膬葲ii.
+      href: /randdcenter/quality-inspection-lab

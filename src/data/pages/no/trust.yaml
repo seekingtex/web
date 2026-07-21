@@ -1,0 +1,142 @@
+hero:
+  tagline: 'Bygget til standarder som betyr noe'
+  title: 'Stol p姘?Seekingtex'
+  subtitle: |
+    Hvert produkt vi bygger er CE-sertifisert 閳ユ敄estet for sikkerhet,<br />
+    holdbarhet og ytelse. Ingen snarveier. Ingen unntak.
+  taglineSection: 'Sertifisert. Testet. Bevist.'
+  image: '/images/seekingtex/hero/trust-hero.webp'
+  imageAlt: 'Seekingtex-produkt gjennomg姘搑 kvalitetstesting'
+
+stats:
+  title: 'Seekingtex i tall'
+  stats:
+    - title: 'CE-sertifisert'
+      description: 'Alle rekreasjonsprodukter oppfyller EUs sikkerhetsstandarder'
+    - title: ''
+      description: 'Kvalitetsstyringssystem siden 2012'
+    - title: 'BSCI og REACH'
+      description: 'Etisk produksjon og materialoverholdelse'
+    - title: '2 姘搑s garanti'
+      description: 'P姘?hvert Seekingtex-produkt 閳ユ敆ten sp閰秗sm姘搇'
+
+features3_certifications:
+  title: 'Sertifiseringer og overholdelse'
+  subtitle: 'Hvert produkt er uavhengig testet og sertifisert etter internasjonale standarder.'
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: 'CE-sertifisering'
+      description: 'Alle Seekingtex Fabric-er, tekniske stoffer, joller og teknisk stoff-er oppfyller den europeiske CE-sikkerhetsstandarden for rekreasjonsfart閰秠. Hvert produkt gjennomg姘搑 trykk-, oppdrifts- og lastetesting f閰秗 det forlater fabrikken.'
+      icon: 'tabler:certificate'
+    - title: ''
+      description: 'V姘搑t 12.000 m铏?Qingdao-anlegg opererer under et  kvalitetsstyringssystem. Hver produksjonsbatch er sporbar, dokumentert og inspisert.'
+      icon: 'tabler:clipboard-check'
+    - title: 'BSCI sosial overholdelse'
+      description: 'Vi er BSCI-sertifisert, noe som sikrer etisk arbeidspraksis, trygge arbeidsforhold og milj閰禷nsvar p姘?tvers av forsyningskjeden v姘搑.'
+      icon: 'tabler:users'
+    - title: 'REACH og RoHS'
+      description: 'Alle materialer 閳ユ摨VC, Hypalon, EVA-skum, lim 閳ユ攼verholder EUs REACH- og RoHS-forskrifter. Ingen forbudte stoffer, ingen kompromisser.'
+      icon: 'tabler:flask'
+    - title: 'Materialtestlaboratorium'
+      description: 'Internt materialelaboratorium tester strekkfasthet, UV-bestandighet, s閰秏integritet og slitestyrke for hvert stoffparti f閰秗 produksjon.'
+      icon: 'tabler:microscope'
+    - title: '2 姘搑s garanti'
+      description: 'Hvert Seekingtex-produkt leveres med to 姘搑s garanti mot produksjonsfeil. Vi st姘搑 for det vi bygger.'
+      icon: 'tabler:shield-check'
+
+testimonials:
+  tagline: 'Kundetillit'
+  title: 'Hva v姘搑e kunder sier'
+  subtitle: 'Fra f閰秗stegangspadlere til profesjonelle fl姘搕eoperat閰秗er 閳ユ敃e hvorfor de stoler p姘?Seekingtex.'
+  items:
+    - content: 'Vi utstyrte hele utleiefl姘搕en v姘搑 med Seekingtex teknisk stoff-er. To sesonger inn, null feil. CE-sertifiseringen gjorde forsikringsgodkjenningen s閰秏l閰秙.'
+      name: 'Marco V.'
+      title: 'Turarrang閰秗, Kroatia'
+    - content: 'Som f閰秗stegangskj閰秔er var jeg nerv閰秙 for kvaliteten. ISO-dokumentasjonen og testrapportene de delte ga meg full tillit.'
+      name: 'James T.'
+      title: 'Fabric Explorer 11-eier, Canada'
+    - content: 'Vi samarbeider med Seekingtex for kystpatruljeenhetene v姘搑e. QC-prosessen deres er konsistent p姘?tvers av hver batch 閳ユ攧en p姘搇iteligheten betyr noe i oppdragskritiske operasjoner.'
+      name: 'Lt. Cmdr. Andres'
+      title: 'Marineinnkj閰秔, Filippinene'
+
+steps2_manufacturing:
+  title: 'Slik sikrer vi kvalitet'
+  subtitle: 'Fra r姘搗areinspeksjon til endelig trykktesting 閳ユ攬vert produkt gjennomg姘搑 en streng kvalitetskjede.'
+  items:
+    - title: 'R姘搗areinspeksjon'
+      description: 'Hver rull PVC-stoff testes for tykkelse, strekkfasthet og UV-bestandighet f閰秗 den g姘搑 inn i produksjon.'
+      icon: 'tabler:search'
+    - title: 'L閰秔ende QC'
+      description: 'Sveises閰秏mer, ventilinstallasjoner og kammertilkoblinger inspiseres ved hver stasjon under montering.'
+      icon: 'tabler:eye'
+    - title: 'Trykktesting'
+      description: 'Hvert oppbl姘搒bart produkt pumpes opp til 1,5x nominelt PSI og holdes i 24 timer for 姘?verifisere luftretensjon og s閰秏integritet.'
+      icon: 'tabler:wind'
+    - title: 'Sluttinspeksjon'
+      description: 'Hver enhet inspiseres for finish, maskinvare og emballasje f閰秗 den godkjennes for forsendelse. Batchpr閰秜er sendes til laboratoriet v姘搑t for destruktiv testing.'
+      icon: 'tabler:clipboard-check'
+
+faqs_rib:
+  title: 'teknisk stoff-b姘搕 FAQ'
+  subtitle: 'Vanlige sp閰秗sm姘搇 om v姘搑e oppbl姘搒bare b姘搕er med stivt skrog.'
+  columns: 2
+  items:
+    - title: 'Hvilke st閰秗relser teknisk stoff-b姘搕er tilbyr Seekingtex?'
+      description: 'Vi tilbyr 35 teknisk stoff-modeller fra 2,5 m til 7,6 m, alt fra kompakte tendere til tunge kommersielle og patruljefart閰秠er. Hver modell er tilgjengelig med flere konfigurasjonsalternativer.'
+    - title: 'Hva er forskjellen mellom en teknisk stoff og en tradisjonell oppbl姘搒bar b姘搕?'
+      description: 'En teknisk stoff (Technical Fabric) kombinerer et solid glassfiber- eller aluminiumsskrog i dyp V-form med oppbl姘搒bare Hypalon- eller PVC-r閰秗. Dette gir deg stabiliteten og lastekapasiteten til en hard b姘搕 med st閰秚dempingen og oppdriften til en oppbl姘搒bar.'
+    - title: 'Hvilke motorer er kompatible med Seekingtex teknisk stoff-er?'
+      description: 'teknisk stoff-ene v姘搑e st閰秚ter p姘揾engsmotorer fra 3 HK til 250 HK avhengig av modell. Hver produktside viser maksimal motoreffekt. Vi anbefaler 姘?r姘揹f閰秗e seg med din forhandler for ideell match.'
+    - title: 'Er Seekingtex teknisk stoff-er CE-sertifisert?'
+      description: 'Ja. Alle rekreasjonsmodeller er CE-sertifisert i henhold til gjeldende europeiske standarder for rekreasjonsfart閰秠er. Kommersielle og patruljemodeller oppfyller ytterligere stabilitets- og lastekrav.'
+    - title: 'Hva er garantien p姘?teknisk stoff-b姘搕er?'
+      description: 'Alle Seekingtex teknisk stoff-er leveres med standard ett 姘搑s garanti mot produksjonsfeil, som dekker skrogdelaminering, r閰秗s閰秏ssvikt, ventilfeil og maskinvareproblemer.'
+    - title: 'Hvor mange luftkammer har Seekingtex teknisk stoff-er?'
+      description: 'teknisk stoff-ene v姘搑e har 3 til 7 uavhengige luftkammer avhengig av modellengde. Denne flerkammerdesignen sikrer at b姘搕en forblir flytende selv om ett rom kompromitteres.'
+
+faqs_inflatable:
+  title: 'Oppbl姘搒bar b姘搕 FAQ'
+  subtitle: 'Vanlige sp閰秗sm姘搇 om v姘搑e oppbl姘搒bare joller, tekniske stoffer og b姘搕er.'
+  columns: 2
+  items:
+    - title: 'Hvilke materialer brukes i Seekingtex oppbl姘搒bare b姘搕er?'
+      description: 'Vi bruker milit蹇檙-grade PVC (1100 denier) og premium Hypalon/CSM-gummi, avhengig av modell. Begge materialene er UV-stabiliserte, slitesterke og overholder EUs REACH- og RoHS-forskrifter.'
+    - title: 'Hvor lenge varer oppbl姘搒bare b姘搕er?'
+      description: 'Med riktig pleie varer en kvalitets-PVC oppbl姘搒bar b姘搕 7閳?0 姘搑, mens Hypalon-modeller kan vare 15閳?0 姘搑. Regelmessig rengj閰秗ing, UV-beskyttelse og riktig oppbevaring forlenger levetiden betydelig.'
+    - title: 'Hvilket vedlikehold kreves for en oppbl姘搒bar b姘搕?'
+      description: 'Grunnleggende vedlikehold inkluderer skylling med ferskvann etter hver bruk (spesielt i saltvann), t閰秗king f閰秗 oppbevaring, 姘搑lig kontroll av ventiltetninger og p姘揻閰秗ing av UV-beskyttelse p姘?r閰秗. Unng姘?langvarig soleksponering n姘搑 den ikke er i bruk.'
+    - title: 'Kan oppbl姘搒bare b姘搕er brukes i saltvann?'
+      description: 'Ja. Alle Seekingtex oppbl姘搒bare b姘搕er er designet for b姘揹e ferskvanns- og saltvannsbruk. Vi anbefaler skylling med ferskvann og grundig t閰秗king etter saltvannseksponering for 姘?forhindre korrosjon av beslag og saltkrystallisering i stoffet.'
+    - title: 'Hvordan oppbevarer jeg en oppbl姘搒bar b姘搕?'
+      description: 'T閰秏 luften, rengj閰秗 og t閰秗k b姘搕en helt f閰秗 oppbevaring. Rull l閰秙t (unng姘?skarpe folder), oppbevar p姘?et kj閰秎ig, t閰秗t sted unna direkte sollys, og hold unna betonggulv for 姘?forhindre fuktsuging.'
+    - title: 'Hva er vektkapasiteten til Seekingtex oppbl姘搒bare b姘搕er?'
+      description: 'Vektkapasiteter spenner fra 290 kg for v姘搑e minste modeller til over 2000 kg for st閰秗re kommersielle fart閰秠er. Hver produktside viser maksimal belastning for din spesifikke modell.'
+
+faqs_Fabric:
+  title: 'Fabric-brett FAQ'
+  subtitle: 'Vanlige sp閰秗sm姘搇 om v姘搑e fabric.'
+  columns: 2
+  items:
+    - title: 'Hvilke Fabric-brettst閰秗relser er tilgjengelige?'
+      description: 'Vi tilbyr Fabric-brett fra 9 ft til 12 ft, inkludert all-round, touring, yoga og spesialdesign. V姘搑e bestselgende modeller inkluderer Tropical Breeze (10 ft) og Ocean Voyager (11 ft).'
+    - title: 'Hva er drop-stitch-konstruksjon?'
+      description: 'Drop-stitch-konstruksjon bruker tusenvis av polyestertr姘揹er som forbinder topp- og bunnlaget p姘?brettet, slik at det kan holde h閰秠t lufttrykk (15閳?0 PSI) og oppn姘?en stiv, stabil plattform. Dette er industristandarden for premium oppbl姘搒bare Fabric-er.'
+    - title: 'Hva er vektgrensen for Fabric-brett?'
+      description: 'Fabric-brettene v姘搑e st閰秚ter opptil 150 kg avhengig av modell og volum. Leviathan Wake er modellen v姘搑 med h閰秠est kapasitet, designet for st閰秗re brukere og yogabruk.'
+    - title: 'Tilbyr du komplette Fabric-pakker?'
+      description: 'Ja. Hvert Fabric-brett leveres med en komplett pakke som inkluderer 3-delt aluminiumspadle, h閰秠trykks h姘搉dpumpe, spiralfeste, reiseryggsekk og reparasjonssett. Noen modeller inkluderer ogs姘?et avtakbart finnesett.'
+    - title: 'Hva er garantien p姘?Fabric-brett?'
+      description: 'Alle Seekingtex Fabric-brett har ett 姘搑s garanti mot produksjonsfeil, inkludert s閰秏feil, ventilfeil og materialdelaminering under normal bruk.'
+    - title: 'Hvor lang tid tar det 姘?pumpe opp et Fabric-brett?'
+      description: 'Ved bruk av den medf閰秎gende h姘搉dpumpen tar full oppumping til 15 PSI omtrent 8閳?2 minutter. For raskere oppumping anbefaler vi Seekingtex 12V elektrisk pumpe, som pumper opp et brett p姘?under 4 minutter.'
+
+cta:
+  title: 'Vil du se sertifiseringene selv?'
+  subtitle: 'Be om v姘搑 sertifiseringsportef閰秎je, fabrikkauditrapporter eller materialoverholdelsesdokumentasjon. Ingen NDA p姘搆revd.'
+  actions:
+    - variant: primary
+      text: 'Be om sertifiseringsdokumenter'
+      href: '/contact'
+    - text: 'Bes閰秌 fabrikksiden v姘搑'
+      href: '/factory'

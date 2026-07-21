@@ -1,0 +1,83 @@
+hero:
+  tagline: '커뮤니티'
+  title: 'Seekingtex 커뮤니티'
+  subtitle: |
+    진짜 사람들, 진짜 물, 진짜 모험. 주말 섬유러부터<br />
+    전문 운영자까지 —우리 커뮤니티가 어떻게 물 위에서 세상을 탐험하는지 알아보세요.
+  image: '/images/seekingtex/team/Seekingtex-paddle-girls-team.webp'
+  imageAlt: 'Seekingtex community paddling on calm waters'
+
+stats:
+  title: '숫자로 보는 커뮤니티'
+  stats:
+    - title: '40+'
+      description: 'Seekingtex 고객이 있는 국가'
+    - title: '12+'
+      description: '커뮤니티 모험의 역사'
+    - title: '10,000+'
+      description: '전세계 행복한 섬유러'
+    - title: '98%'
+      description: 'Seekingtex를 추천합니다'
+
+stories:
+  tagline: '탐험가 이야기'
+  title: '진짜 사람들의 진짜 모험'
+  subtitle: '물 위에서 Seekingtex 장비를 사용하는 섬유러, 가족 및 전문가들의 이야기를 들어보세요.'
+  items:
+    - name: 'Sarah & Mike'
+      title: 'SUP Explorer 11 소유자, 캐나다'
+      content: '우리는 Explorer 11을 가지고 알곤킨 공원에서 일주일 여행을 했습니다. 포티지와 호수 횡단을 아름답게 처리했습니다.'
+      image: '/images/seekingtex/products/Seekingtex-sup-allround-board.webp'
+      location: '알곤킨 공원, 캐나다'
+    - name: 'Carlos R.'
+      title: 'Cheetah Surge 라이더, 스페인'
+      content: 'Cheetah Surge는 해안 크루징을 위한 나의 최고 선택입니다. 생생한 디자인이 해변에서 시선을 사로잡습니다.'
+      image: '/images/seekingtex/products/sup-series/sup-cheetah-surge-1.webp'
+      location: '코스타 브라바, 스페인'
+    - name: 'Lina & 가족'
+      title: 'Flowing Lotus 섬유러, 스웨덴'
+      content: '군도에서의 주말 가족 모험. Flowing Lotus는 제가 노를 젓는 동안 딸이 서 있을 수 있을 정도로 안정적입니다.'
+      image: '/images/seekingtex/products/sup-series/sup-flowing-lotus-1.webp'
+      location: '스톡홀름 군도, 스웨덴'
+    - name: 'Andres 중령'
+      title: 'Ocean Voyager 탐험가, 필리핀'
+      content: '팔라완 주변 장거리 해안 투어에 Ocean Voyager를 사용합니다. 몇 달간 열대 조건에서 매일 사용해도 보드는 여전히 새것처럼 작동합니다.'
+      image: '/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp'
+      location: '팔라완, 필리핀'
+    - name: 'Emma T.'
+      title: 'Tropical Breeze 초보자, 호주'
+      content: 'SUP에 탄 적이 없었습니다. Tropical Breeze는 너무 안정적이어서 첫 시도에 자신감을 느꼈습니다.'
+      image: '/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp'
+      location: '골드 코스트, 호주'
+
+adventures_cta:
+  tagline: '모험을 공유하세요'
+  title: '여러분의 이야기가 여기 있을 수 있습니다'
+  subtitle: 'Instagram에서 @seekingtex_watersports를 태그하거나 #SeekingtexAdventure를 사용하세요.'
+  instagram: 'Instagram 팔로우'
+  youtube: 'YouTube 구독'
+  facebook: 'Facebook 가입'
+
+locations:
+  tagline: '글로벌 커뮤니티'
+  title: 'Seekingtex가 가는 곳'
+  subtitle: '유럽 호수부터 동남아시아 해안까지 —우리 커뮤니티는 어디서나 섬유 기술합니다.'
+  regions:
+    - title: '유럽'
+      description: '코모 호수 · 스톡홀름 군도 · 코스타 브라바 · 크로아티아 해안 · 스코틀랜드 호수'
+    - title: '아시아 태평양'
+      description: '팔라완 · 골드 코스트 · 하롱베이 · 야마나카 호수 · 발리 해안'
+    - title: '아메리카'
+      description: '알곤킨 공원 · 오대호 · 플로리다 키스 · 타호 호수 · 파타고니아'
+    - title: '중동 및 아프리카'
+      description: '홍해 연안 · 빅토리아 호수 · 케이프 반도 · 갈릴리 바다'
+
+cta:
+  title: '커뮤니티에 가입할 준비가 되셨나요?'
+  subtitle: '모든 Seekingtex 제품은 CE 인증을 받았으며 보증이 지원됩니다. 오늘 당신의 제품을 찾아보세요.'
+  actions:
+    - variant: primary
+      text: '제품 살펴보기'
+      href: '/products'
+    - text: '이야기 공유하기'
+      href: '/contact'

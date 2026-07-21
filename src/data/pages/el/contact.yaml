@@ -1,0 +1,130 @@
+hero_text:
+  tagline: 螘蟺喂魏慰喂谓蠅谓委伪
+  title: 螘螤螜螝螣螜螡惟螡螚危韦螘 螠螒螙螜 螠螒危
+contact_form:
+  id: form
+  title: 危蟿蔚委位蟿蔚 渭萎谓蠀渭伪
+  subtitle: 螕喂伪 蟺蟻慰蟽蠁慰蟻维, 蟿蔚蠂谓喂魏苇蟼 蔚蟻蠅蟿萎蟽蔚喂蟼 萎 蟽蠀谓蔚蟻纬伪蟽委伪 鈥?纬蟻维蠄蟿蔚 渭伪蟼. 螒蟺伪谓蟿维渭蔚 蔚谓蟿蠈蟼 渭委伪蟼 蔚蟻纬维蟽喂渭畏蟼 畏渭苇蟻伪蟼.
+  email_to: gzb@seekingtex.com
+  submit_button: 螒蟺慰蟽蟿慰位萎
+  success_message: 螘蠀蠂伪蟻喂蟽蟿慰蠉渭蔚! 韦慰 渭萎谓蠀渭维 蟽伪蟼 蔚位萎蠁胃畏. 螛伪 伪蟺伪谓蟿萎蟽慰蠀渭蔚 蔚谓蟿蠈蟼 渭委伪蟼 蔚蟻纬维蟽喂渭畏蟼 畏渭苇蟻伪蟼.
+  error_message: 螤伪蟻慰蠀蟽喂维蟽蟿畏魏蔚 蟽蠁维位渭伪 魏伪蟿维 蟿畏谓 伪蟺慰蟽蟿慰位萎. 螖慰魏喂渭维蟽蟿蔚 尉伪谓维 萎 纬蟻维蠄蟿蔚 伪蟺蔚蠀胃蔚委伪蟼 蟽蟿慰 email.
+  default_country_code: '+1'
+  captcha:
+    label: 'Antispam: 位蠉蟽蟿蔚 蟿畏谓 蟺伪蟻伪魏维蟿蠅 维蟽魏畏蟽畏'
+  fields:
+    - name: firstName
+      label: 螌谓慰渭伪
+      row: 1
+    - name: lastName
+      label: 螘蟺蠋谓蠀渭慰
+      row: 1
+    - name: companyName
+      label: 螘蟿伪喂蟻蔚委伪
+      row: 2
+    - name: address
+      label: 螖喂蔚蠉胃蠀谓蟽畏
+      row: 3
+    - name: zip
+      label: 韦伪蠂. 螝蠋未喂魏伪蟼
+      row: 4
+    - name: country
+      label: 围蠋蟻伪
+      row: 4
+      type: select
+      optionsKey: countries
+    - name: email
+      label: Email
+      row: 5
+      type: email
+    - name: tel
+      label: 韦畏位苇蠁蠅谓慰
+      row: 5
+      type: tel
+      withCountryCode: true
+    - name: orderVolume
+      label: 螘魏蟿喂渭蠋渭蔚谓慰蟼 蠈纬魏慰蟼 蟺伪蟻伪纬纬蔚位委伪蟼
+      row: 6
+      type: select
+      options:
+        - value: ''
+          label: 螘蟺喂位苇尉蟿蔚 蟿慰谓 蔚魏蟿喂渭蠋渭蔚谓慰 蠈纬魏慰...
+        - value: sample
+          label: 螠蠈谓慰 未蔚委纬渭伪蟿伪 / 蟺蟻蠅蟿蠈蟿蠀蟺伪
+        - value: '5-10'
+          label: 50鈥?00 渭慰谓维未蔚蟼 (蟿蠀蟺喂魏萎 MOQ)
+        - value: '100-500'
+          label: 100鈥?00 渭慰谓维未蔚蟼
+        - value: '500-plus'
+          label: 500+ 渭慰谓维未蔚蟼 (蟿喂渭慰位蠈纬畏蟽畏 蠈纬魏慰蠀)
+    - name: customization
+      label: 围蟻蔚喂维味蔚蟽蟿蔚 蟺蟻慰蟽伪蟻渭慰纬萎;
+      row: 7
+      type: select
+      options:
+        - value: ''
+          label: 螘蟺喂位苇尉蟿蔚 蟿蠉蟺慰 蟺蟻慰蟽伪蟻渭慰纬萎蟼...
+        - value: none
+          label: 韦蠀蟺喂魏蠈 蟺蟻慰蠆蠈谓 (蠂蠅蟻委蟼 蟺蟻慰蟽伪蟻渭慰纬萎)
+        - value: logo
+          label: 螠蠈谓慰 蟺蟻慰蟽伪蟻渭慰蟽渭苇谓慰 位慰纬蠈蟿蠀蟺慰 / 蔚蟺蠅谓蠀渭委伪
+        - value: full
+          label: 螤位萎蟻蔚蟼 OEM (渭苇纬蔚胃慰蟼, 蠂蟻蠋渭伪, 纬蟻伪蠁喂魏维, 蟽蠀蟽魏蔚蠀伪蟽委伪)
+        - value: consultation
+          label: 螖蔚谓 蔚委渭伪喂 蟽委纬慰蠀蟻慰蟼 鈥?蠂蟻蔚喂维味慰渭伪喂 蟽蠀渭尾慰蠀位萎
+    - name: productInterest
+      label: 螝伪蟿畏纬慰蟻委蔚蟼 蟺蟻慰蠆蠈谓蟿蠅谓 蔚谓未喂伪蠁苇蟻慰谓蟿慰蟼
+      row: 8
+      type: select
+      options:
+        - value: ''
+          label: Select fabric category...
+        - value: all
+          label: All products / Full catalog
+        - value: upf
+          label: Sun Protection / UPF 50+ Fabrics
+        - value: waterproof
+          label: Waterproof / Breathable Fabrics
+        - value: quickdry
+          label: Quick-Dry / Moisture-Wicking Fabrics
+        - value: antibacterial
+          label: Antibacterial / Antimicrobial Fabrics
+        - value: stretch
+          label: Stretch / 4-Way Stretch Fabrics
+        - value: eco
+          label: Eco-Friendly / Recycled Fabrics
+    - name: subject
+      label: 螛苇渭伪
+      row: 9
+    - name: message
+      label: 螠萎谓蠀渭伪
+      row: 10
+      type: textarea
+      rows: 6
+features2_other_ways:
+  title: 螁位位慰喂 蟿蟻蠈蟺慰喂 蔚蟺喂魏慰喂谓蠅谓委伪蟼
+  columns: 3
+  items:
+    - title: 螘渭蟺慰蟻喂魏维 蔚蟻蠅蟿萎渭伪蟿伪
+      description: 螤蟻慰蟽蠁慰蟻苇蟼, 未喂伪渭慰蟻蠁蠋蟽蔚喂蟼, 伪喂蟿萎渭伪蟿伪 伪谓蟿喂蟺蟻慰蟽蠋蟺蠅谓 魏伪喂 蠂慰谓未蟻喂魏苇蟼 蟺伪蟻伪纬纬蔚位委蔚蟼.
+      icon: tabler:shopping-bag
+    - title: 韦蔚蠂谓喂魏萎 蠀蟺慰蟽蟿萎蟻喂尉畏
+      description: 螘纬纬蠉畏蟽畏, 蔚蟺喂蟽魏蔚蠀苇蟼, 伪谓蟿伪位位伪魏蟿喂魏维 魏伪喂 蔚蟻蠅蟿萎蟽蔚喂蟼 位蔚喂蟿慰蠀蟻纬委伪蟼.
+      icon: tabler:tool
+    - title: 韦蠉蟺慰蟼 魏伪喂 蟽蠀谓蔚蟻纬伪蟽委蔚蟼
+      description: 螤伪魏苇蟿伪 渭苇蟽蠅谓, 蠂慰蟻畏纬委蔚蟼 魏伪喂 尾喂慰渭畏蠂伪谓喂魏苇蟼 蟽蠀谓蔚蟻纬伪蟽委蔚蟼.
+      icon: tabler:news
+    - title: 韦畏位苇蠁蠅谓慰
+      description: '+86 13305324192'
+      icon: tabler:headset
+    - title: Email
+      description: gzb@seekingtex.com
+      icon: tabler:mail
+    - title: 螆未蟻伪
+      description: Economic Development Zone, Laixi, Qingdao, China, 266600
+      icon: tabler:map-pin
+map:
+  title: 螚 蟿慰蟺慰胃蔚蟽委伪 渭伪蟼
+  subtitle: 螘蟺喂蟽魏蔚蠁胃蔚委蟿蔚 渭伪蟼
+  address: Economic Development Zone, Laixi, Qingdao, China, 266600
+  zoom: 15

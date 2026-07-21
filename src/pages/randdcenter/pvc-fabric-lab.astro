@@ -1,0 +1,209 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'R&D Center', href: '/randdcenter' }, { name: 'Advanced Materials Lab' }];
+
+const metadata = {
+  title: `Advanced Materials Lab — Performance Fiber & Coating Research | ${SITE.name}`,
+  description: `Scientific materials research from fiber to finished fabric. Performance fibers, functional coatings, sustainable materials development. Contact our lab team for custom material specification.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href="/randdcenter" class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 01</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Advanced Materials Lab</h1>
+        <p class="mt-3 text-lg text-muted">Scientific materials research — from fiber to finished fabric</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/randd/fabric-materials-lab.webp"
+          alt="Seekingtex advanced materials laboratory"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>The foundation of every functional fabric</h2>
+    <p>
+      The fiber and coating are the most critical elements in a functional textile. They must deliver specific performance
+      characteristics — UPF protection, waterproofness, breathability, antimicrobial activity, stretch recovery, and
+      abrasion resistance — all while maintaining comfort and durability over the product's lifetime. At {SITE.name}, our
+      Advanced Materials Lab is dedicated exclusively to the research, characterization, validation, and continuous
+      improvement of the fibers, coatings, and sustainable materials we use in every fabric we produce.
+    </p>
+    <p>
+      We do not rely solely on supplier data sheets. Every batch of fiber, yarn, coating chemical, and laminate film that
+      enters our facility is independently tested and characterized in-house. This guarantees that the material
+      specification we publish is the material performance you receive — lot after lot, year after year.
+    </p>
+
+    <h2>Standardized testing equipment</h2>
+    <p>Our materials lab is equipped with industrial-grade instruments that conform to AATCC, ASTM, and ISO test methods:</p>
+    <table>
+      <thead><tr><th>Equipment</th><th>Parameters Measured</th><th>Standard</th></tr></thead>
+      <tbody>
+        <tr
+          ><td>Universal tensile tester (50 kN)</td><td>Breaking force, elongation at break, tear propagation</td><td
+            >ASTM D5034 / ASTM D2261</td
+          ></tr
+        >
+        <tr
+          ><td>Xenon-arc weathering chamber</td><td>UV resistance (color change, strength retention after 2000 h)</td
+          ><td>AATCC TM16 / ASTM G155</td></tr
+        >
+        <tr
+          ><td>UV-Vis spectrophotometer</td><td>UPF rating (290-400 nm), UV blocking efficiency</td><td
+            >AATCC 183 / AS/NZS 4399</td
+          ></tr
+        >
+        <tr
+          ><td>Contact angle goniometer</td><td>Surface wettability, water repellency durability</td><td
+            >AATCC TM22 / ISO 14419</td
+          ></tr
+        >
+        <tr
+          ><td>FTIR spectrometer</td><td>Chemical composition analysis, coating uniformity, contaminant identification</td><td
+            >ASTM E1252</td
+          ></tr
+        >
+        <tr><td>Hydrostatic head tester</td><td>Water penetration resistance</td><td>ISO 811 / AATCC TM127</td></tr>
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-500">* All equipment is calibrated annually by third-party accredited laboratories.</p>
+
+    <h2>From data to decision: a typical test workflow</h2>
+    <p>When a new fiber, coating, or sustainable material candidate arrives, it follows a standardized seven-step qualification process:</p>
+    <ol>
+      <li>
+        <strong>Receipt inspection</strong> — visual check for surface defects, contamination, and dimensional compliance.
+      </li>
+      <li>
+        <strong>Chemical characterization</strong> — FTIR analysis to verify chemical composition and identify any unexpected additives.
+      </li>
+      <li>
+        <strong>Tensile testing</strong> — 5 specimens in warp and weft directions. Minimum specification must be met for acceptance.
+      </li>
+      <li>
+        <strong>UV conditioning</strong> — 1000 h exposure in xenon-arc chamber; minimum 80 % strength retention required.
+      </li>
+      <li>
+        <strong>Performance testing</strong> — UPF rating, waterproofness, breathability, antimicrobial effectiveness as applicable.
+      </li>
+      <li><strong>Abrasion resistance</strong> — Martindale testing, minimum 20 000 cycles to breakthrough.</li>
+      <li>
+        <strong>Approval sign-off</strong> — only after all seven gates are passed is the material released for production sampling.
+      </li>
+    </ol>
+
+    <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+      <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+        Typical Polyester 150D — Tensile Retention After UV Exposure
+      </p>
+      <div class="flex items-end gap-3 h-40">
+        <div class="flex-1 flex flex-col items-center">
+          <div class="w-full bg-blue-600 rounded-t" style="height:100%"></div><span class="text-xs mt-1"
+            >0 h<br />100%</span
+          >
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+          <div class="w-full bg-blue-500 rounded-t" style="height:95%"></div><span class="text-xs mt-1"
+            >500 h<br />95%</span
+          >
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+          <div class="w-full bg-blue-400 rounded-t" style="height:88%"></div><span class="text-xs mt-1"
+            >1000 h<br />88%</span
+          >
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+          <div class="w-full bg-blue-300 rounded-t" style="height:82%"></div><span class="text-xs mt-1"
+            >2000 h<br />82%</span
+          >
+        </div>
+        <div class="flex-1 flex flex-col items-center">
+          <div class="w-full bg-gray-300 rounded-t" style="height:65%"></div><span class="text-xs mt-1"
+            >Competitor<br />~65%</span
+          >
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-2">
+        Our polyester 150D fabric retains > 80 % tensile strength after 2000 h xenon-arc exposure, compared to typical
+        industry grades that drop below 70 %.
+      </p>
+    </div>
+
+    <h2>Our professional team</h2>
+    <p>
+      The lab is staffed by two full-time materials scientists, each holding a degree in polymer science or textile
+      engineering with a minimum of six years of industry experience. They are supported by three technicians who
+      perform day-to-day testing and data logging. The team regularly participates in inter-laboratory round-robin
+      trials organized by AATCC to validate the accuracy of our test methods.
+    </p>
+
+    <h2>Solving your toughest material challenges</h2>
+    <p>
+      Every application is different. An outdoor performance fabric for tropical environments faces vastly different UV and
+      humidity conditions than a medical textile in a controlled indoor setting. Our Advanced Materials Lab helps you
+      select — or develop — a material specification that is optimized for your application.
+    </p>
+    <p>Recent custom solutions include:</p>
+    <ul>
+      <li>
+        A high-durability nylon 6,6 formulation for military uniforms, with enhanced UV resistance and abrasion life (+40 %
+        abrasion life).
+      </li>
+      <li>
+        A sustainable polyester blend using 100 % post-consumer recycled fiber, with PFC-free DWR finish, tested to maintain
+        performance after 50 industrial launderings.
+      </li>
+      <li>
+        An antimicrobial polyester fabric for healthcare applications, with silver-ion treatment maintaining >99 % bacterial reduction
+        after 100 wash cycles.
+      </li>
+    </ul>
+    <p>
+      We do not sell "off-the-shelf" materials and hope they work. We test, validate, and recommend — or create — a
+      tailored solution for your specific application. That is the {SITE.name} difference.
+    </p>
+
+    <h2>How we serve you</h2>
+    <p>When you bring a material challenge to us, here is what you can expect:</p>
+    <ol>
+      <li><strong>Consultation</strong> — we discuss your application, performance targets, and budget.</li>
+      <li><strong>Proposal</strong> — a test plan is drafted with clear pass/fail criteria and a timeline.</li>
+      <li>
+        <strong>Execution</strong> — our lab runs the tests and produces a detailed report with raw data and comparative analysis.
+      </li>
+      <li>
+        <strong>Recommendation</strong> — we present a material specification, including alternative options if multiple materials
+        meet your requirements.
+      </li>
+      <li>
+        <strong>Follow-up</strong> — after delivery, we remain available to support any in-service material questions.
+      </li>
+    </ol>
+    <p>
+      Our goal is not simply to supply you with fabric. It is to ensure that the fabric you receive performs reliably in the
+      conditions you operate in — and that starts with the materials.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Need a custom material specification?</h2>
+      <p class="mt-2 text-sm text-muted">Contact our materials science team to discuss your requirements.</p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our lab team</a
+      >
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,96 @@
+hero:
+  tagline: 脺ber uns
+  image:
+    src: /images/seekingtex/factory/Seekingtex factory.webp
+    alt: Seekingtex Werkstatt
+  title: |
+    Schiffstechnik, <br />
+    auf die <span class="text-accent dark:text-white">Seekingtex</span>-Art
+  subtitle: 'Wir begannen in einer K眉stenwerkstatt mit einem Gewebe und einer unbeirrbaren 脺berzeugung: Marineprodukte sollten so konstruiert sein, als ob es darauf ankommt 鈥?denn das tun sie. Heute liefern wir in 眉ber 40 L盲nder, aber jeder Rumpf durchl盲uft noch immer dieselben H盲nde, die das Unternehmen gegr眉ndet haben.'
+
+stats:
+  title: In Zahlen
+  columns: 4
+  stats:
+    - title: Ausgelieferte R眉mpfe
+      amount: '2,400+'
+    - title: Belieferte L盲nder
+      amount: '40'
+    - title: Jahre kombinierte Erfahrung
+      amount: '60'
+    - title: Durchschnittliche Reaktionszeit (Std.)
+      amount: '24'
+
+features3_what_we_build:
+  title: Was wir bauen
+  subtitle: Eine fokussierte Produktlinie, die wir in- und auswendig kennen 鈥?keine halbfertigen Experimente, kein Badge-Engineering.
+  columns: 3
+  isBeforeContent: true
+  items:
+    - title: Funktionstextil-Gewebe
+      description: Aluminiumrumpf-RIBs von 3,3 m bis 7,5 m. Konzipiert f眉r Patrouillen-, Tauch-, Angel- und Familiennutzung.
+      icon: tabler:ship
+    - title: Funktionsgewebe
+      description: PVC- und Hypalon-Funktionsgewebe von 2,4 m bis 4,2 m. Leicht, robust und einfach zu verstauen.
+      icon: tabler:speedboat
+    - title: Superyacht-Tender
+      description: Kompakte, hochspezifizierte RIBs, ma脽geschneidert auf das Design Ihres Mutterschiffs.
+      icon: tabler:crown
+
+features3_more:
+  columns: 3
+  isAfterContent: true
+  items:
+    - title: Zubeh枚r
+      description: Riemen, Pumpen, Abdeckungen, Trockentaschen, Kraftstofftanks und Elektronik. Alle auf unsere Gewebe abgestimmt.
+      icon: tabler:package
+    - title: Umbau & Reparatur
+      description: Interne Schlauchreparatur, Elektroniknachr眉stung und Motor-Upgrades.
+      icon: tabler:tool
+    - title: Sonderanfertigungen
+      description: Projektbezogenes Design f眉r gewerbliche, wissenschaftliche und milit盲rische Kunden.
+      icon: tabler:hammer
+  image:
+    src: /images/seekingtex/factory/design discuss2.jpeg
+    alt: Sonderanfertigung eines Bootes
+
+steps2_values:
+  title: Unsere Werte
+  subtitle: Drei Grunds盲tze, die jedes Produkt von Anfang an gepr盲gt haben.
+  items:
+    - title: Bauen, als ob Ihre Familie darin sitzt
+      description: Jeder Rumpf, jede Schwei脽naht und jedes Bauteil wird so behandelt, als ob unsere eigenen Familien es nutzen w眉rden.
+      icon: tabler:heart
+    - title: Technik vor dem Verkauf
+      description: Wenn eine Spezifikation falsch ist, 盲ndern wir die Spezifikation 鈥?niemals den Kunden.
+      icon: tabler:settings
+    - title: Support, der 眉ber die Garantie hinausgeht
+      description: Zwanzig Jahre alte R眉mpfe rufen uns noch immer wegen Ersatzteilen an 鈥?und wir gehen noch immer ran.
+      icon: tabler:headset
+
+steps2_milestones:
+  title: Meilensteine
+  subtitle: Eine kurze Version der Seekingtex-Geschichte.
+  isReversed: true
+  items:
+    - title: Gegr眉ndet in einer K眉stenwerkstatt
+      description: Gestartet von zwei Schiffsarchitekten mit einer CNC-Fr盲se und einer unbeirrbaren Idee.
+      icon: tabler:building-factory
+    - title: Erste 1.000 ausgelieferte R眉mpfe
+      description: Im siebten Jahr erreicht, haupts盲chlich durch Mundpropaganda und Stammkunden.
+      icon: tabler:circle-check
+    - title: Internationales Exportprogramm
+      description: Lieferung in 40+ L盲nder mit lokalen Support-Partnern auf f眉nf Kontinenten.
+      icon: tabler:world
+
+features2_locations:
+  title: Unsere Standorte
+  tagline: Finden Sie uns
+  columns: 3
+  items:
+    - title: Hauptsitz & Werkstatt
+      description: K眉stenindustriepark, Geb盲ude 4 鈥?ge枚ffnet Mo鈥揊r f眉r Besuche nach Vereinbarung.
+    - title: EU-Servicezentrum
+      description: Mittelmeerhafen 鈥?Umbau, Reparatur und Garantiesupport f眉r europ盲ische Kunden.
+    - title: APAC-Partnernetzwerk
+      description: Autorisierte Servicepartner in Australien, Japan, Singapur und Hongkong.

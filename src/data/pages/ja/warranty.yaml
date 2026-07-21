@@ -1,0 +1,98 @@
+label: '保証'
+headline: 'Seekingtex 製造元限定保証'
+subtitle: 'Seekingtexは、当社が製造するすべての機能性繊維製品の品質を保証します。この限定保証は、Seekingtex製品の条件と補償範囲を定めるものです。'
+seo:
+  headline: 'Seekingtex 機能性ボート保証 — 5年間限定保証 | Seekingtex'
+  description: 'Seekingtexは、一次チューブ生地の完全性、シーム、およびグラスファイバーハルの構造的完全性に対して5年間の限定保証を提供します。インフレーションバルブおよび工場装着アクセサリーも対象です。Seekingtex機能性ボート保証の完全な条件。'
+  datePublished: '2024-01-01'
+  dateModified: '2026-06-01'
+body: |
+  <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+    この限定保証は、Seekingtexから直接、またはSeekingtexの正規販売店から購入された新しいSeekingtexブランドの機能性繊維製品に適用されます。発効日は、検証可能な最初の小売購入日です。
+  </p>
+
+  <div class="bg-sky-50 dark:bg-gray-900 border border-sky-200 dark:border-gray-800 rounded-xl p-6 mb-10">
+    <h2 class="text-xl font-bold mb-3">保証範囲と期間</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5年</h3>
+        <p class="text-sm text-gray-600 mt-1">一次チューブ生地の完全性（CSM/PVC）</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5年</h3>
+        <p class="text-sm text-gray-600 mt-1">グラスファイバーハルの構造的完全性</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5年</h3>
+        <p class="text-sm text-gray-600 mt-1">機能性チューブシームの気密性</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">5年</h3>
+        <p class="text-sm text-gray-600 mt-1">インフレーションバルブの機能</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-sky-700 dark:text-sky-400">1年</h3>
+        <p class="text-sm text-gray-600 mt-1">工場装着アクセサリーおよび補助フィッティング</p>
+      </div>
+      <div class="bg-white dark:bg-gray-950 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+        <h3 class="font-bold text-amber-700 dark:text-amber-400">1年*</h3>
+        <p class="text-sm text-gray-600 mt-1">業務用、レンタル、フリート使用 — 全コンポーネント</p>
+      </div>
+    </div>
+    <p class="text-xs text-gray-500 mt-4">*業務用、政府用、チャーター用、レンタル用、教育目的での使用は保証期間が1年に短縮されます。レースや競技での使用は保証を完全に無効にします。</p>
+  </div>
+
+  <h2>保証対象</h2>
+  <h3>一次チューブ生地（5年）</h3>
+  <p>Seekingtexは、一次チューブ生地が、製品の動作膨張を維持する能力を実質的に損なう多孔性劣化に対して保証します。これはCSM（Hypalon）コーティング生地および製造に使用される他のすべてのチューブ素材に適用されます。</p>
+
+  <h3>グラスファイバーハルの構造的完全性（5年）</h3>
+  <p>グラスファイバー強化プラスチック（GRP）ハルを備えた製品の場合、基本的な複合構造は、材料または製造上の欠陥による構造的破損に対して保証されます。</p>
+
+  <h3>機能性チューブシームの気密性（5年）</h3>
+  <p>機能性チューブのシームは、シームを通じての大幅な空気漏れを生じさせる製造上の欠陥に対して保証されます。定期的な点検と適切な膨張圧力の維持は、補償の条件となります。</p>
+
+  <h3>インフレーションバルブの機能（5年）</h3>
+  <p>Seekingtexが最初に取り付けたインフレーションバルブは、設計どおりに空気を保持できないようにする材料または製造上の欠陥に対して保証されます。</p>
+
+  <h3>工場装着アクセサリー（1年）</h3>
+  <p>Seekingtexが製造し工場で最初に取り付けたコンポーネントおよびフィッティングは、1年間、材料および製造上の欠陥に対して保証されます。これにはサードパーティ製のアイテムは含まれません。これらはそれぞれの製造元保証によってのみカバーされます。</p>
+
+  <h2>保証対象外</h2>
+  <ul>
+    <li>変色、シミ、色あせ、チョーキング、その他の外観の変化を含む外観上の欠陥</li>
+    <li>パンク、切断、引き裂き、その他の物理的損傷</li>
+    <li>摩擦または接触によるひび割れ、摩耗、擦り傷、劣化</li>
+    <li>紫外線、風雨、大気条件への曝露による劣化</li>
+    <li>燃料、溶剤、酸、アルカリ、化学物質との接触による損傷</li>
+    <li>過失、不適切な使用、乱用、事故、または通常の摩耗による損傷</li>
+    <li>ゲルコートまたは塗装表面の問題（膨れ、ひび割れ、変色、色あせ）</li>
+    <li>衝撃、ストレス、不適切な支持、またはトレーラー輸送による損傷</li>
+    <li>不適切な膨張/収縮または未承認の膨張装置の使用による損傷</li>
+    <li>サードパーティ製の機器、コンポーネント、またはシステム（それぞれの製造元が保証）</li>
+  </ul>
+
+  <h2>製造元の義務と救済</h2>
+  <p>Seekingtexの唯一かつ排他的な義務は、材料または製造に欠陥があり、この保証の対象となると判断されたコンポーネントの修理または交換（Seekingtexの選択による）です。修理または交換は、Seekingtexまたはその指定された正規サービスセンターによって実行されます。修理または交換されたコンポーネントの保証は、元の保証期間の未経過部分に限ります。</p>
+
+  <h2>保証条件</h2>
+  <ul>
+    <li><strong>登録：</strong> 保証条件に従って製品を適切に登録する必要があります。</li>
+    <li><strong>メンテナンス：</strong> 定期的な点検と適切な膨張圧力の維持を含む、Seekingtexの公開ガイドラインに従って製品を維持する必要があります。</li>
+    <li><strong>協力：</strong> 購入者は、保証請求に関するすべての事項についてSeekingtexに完全かつ速やかに協力するものとします。</li>
+    <li><strong>最初の購入者：</strong> この保証は最初の最終使用者購入者に排他的に提供され、譲渡不可です。</li>
+  </ul>
+
+  <h2>業務用</h2>
+  <p>製品が業務用、政府用、非営利目的、チャーター用、レンタル用、教育目的、または私的なレクリエーション以外の目的で使用される場合、すべてのコンポーネントの保証期間は、最初の購入日から1年間に短縮されます。レース、速度または耐久競技での使用は、直ちにかつ取消不能に保証を完全に無効にします。</p>
+
+  <h2>保証請求の方法</h2>
+  <p>購入証明と問題の詳細な説明を添えて、Seekingtexまたは正規販売店にお問い合わせください。Seekingtexが請求を審査し、点検およびサービスの指示を提供します。</p>
+  <p>保証サービスに関するお問い合わせは、<a href="/contact" class="text-sky-600 underline">お問い合わせページ</a>からご注文番号と製品詳細をご連絡ください。</p>
+
+  <h2>サードパーティ製アイテム</h2>
+  <p>サードパーティが製造した機器、コンポーネント、またはシステム（Seekingtexが取り付けた場合でも）は、それぞれの製造元が提供する保証によってのみカバーされます。Seekingtexは、かかるサードパーティ製アイテムに対する一切の保証責任を明示的に否認します。</p>
+
+  <p class="text-sm text-gray-500 mt-8 border-t border-gray-200 dark:border-gray-800 pt-6">
+    この保証声明は、完全なSeekingtex製造元限定保証の要約です。完全な法的保証文書がすべての保証条件を規定します。仕様は予告なく変更される場合があります。SeekingtexはQingdao Vatrad Groupのブランドです。
+  </p>

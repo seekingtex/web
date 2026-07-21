@@ -1,0 +1,64 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const metadata = {
+  title: 'Woven vs Knit Fabric — Which Construction Is Right for You?',
+  description: 'Compare woven and knit fabric constructions across stretch, durability, breathability, drape, and use cases. Find the right fabric construction for your product.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <JsonLd
+    type="Article"
+    article={{
+      headline: 'Woven vs Knit Fabric — Which Construction Is Right for You?',
+      description: 'Compare woven and knit fabric constructions across stretch, durability, breathability, drape, and use cases.',
+      datePublished: '2026-07-07',
+    }}
+    data={{ url: 'https://seekingtex.com/compare/woven-vs-knit' }}
+  />
+  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Compare', href: '/compare' }, { name: 'Woven vs Knit' }]} />
+  <section class="max-w-4xl mx-auto py-24 px-6">
+    <a href="/products" class="text-sm text-sky-600 hover:text-sky-700">&larr; Products</a>
+    <h1 class="mt-4 text-4xl font-semibold text-gray-900">Woven vs Knit Fabric</h1>
+    <p class="mt-4 text-lg text-gray-500">A practical comparison between woven and knit fabric constructions to help you choose the right structure for your product requirements.</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Woven Fabric</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>Construction:</strong> Two sets of yarns (warp and weft) interlaced at right angles. Stable, structured fabric.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>Durability:</strong> High — stable structure resists stretching, distortion, and seam slippage. Ideal for outerwear.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>Stretch:</strong> Minimal (bias stretch only) unless spandex or mechanical stretch is added.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>Breathability:</strong> Moderate — depends on weave density. Tighter weaves reduce airflow.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 mt-2 flex-shrink-0"></span><span><strong>Best for:</strong> Outerwear, uniforms, workwear, shirts, pants, jackets, tailored garments.</span></li>
+        </ul>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">Knit Fabric</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>Construction:</strong> Single yarn system interlooped to form rows (courses) and columns (wales). Flexible fabric.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>Durability:</strong> Moderate — prone to snagging, runs, and edge curling. Distorts more than woven.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>Stretch:</strong> 20-60% natural stretch. Excellent recovery. Ideal for activewear and sportswear.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>Breathability:</strong> High — open loop structure allows excellent airflow and moisture transport.</span></li>
+          <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 flex-shrink-0"></span><span><strong>Best for:</strong> Sportswear, activewear, base layers, T-shirts, underwear, loungewear, yoga wear.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 border border-sky-200">
+      <h2 class="text-xl font-semibold text-gray-900">Which Should You Choose?</h2>
+      <p class="mt-4 text-gray-600 text-sm leading-relaxed">Choose <strong>woven fabric</strong> for products requiring structural stability, durability, and shape retention — shirts, pants, jackets, workwear, and outerwear. Wovens hold their shape and resist distortion. Choose <strong>knit fabric</strong> for products requiring stretch, comfort, and breathability — sportswear, activewear, base layers, and casual apparel. Knits move with the body and manage moisture better. Many garments combine both — a woven shell with knit lining for the best of both worlds.</p>
+      <div class="mt-6 flex gap-4 flex-wrap">
+        <a href="/products" class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Browse Products</a>
+        <a href="/guides" class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">Buying Guides</a>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Comprehensive comparison between woven and knit fabric constructions. Covers construction method, durability, stretch, breathability, drape, and best-use applications. Woven fabrics feature interlaced yarns providing stability, durability, and minimal stretch — ideal for outerwear, uniforms, and tailored garments. Knit fabrics feature interlooped yarns providing stretch, breathability, and comfort — ideal for sportswear, activewear, and casual apparel. Recommendation: woven for structure and durability, knit for stretch and comfort. Many products use both woven and knit components.</p>
+  </section>
+</Layout>

@@ -1,0 +1,192 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Lamination & Coating Technology' },
+];
+
+const metadata = {
+  title: `Lamination & Coating Technology — Fabric Bonding & Coating Application | ${SITE.name}`,
+  description: `Hot-melt lamination, solvent/water-based coating, and adhesive bonding technology delivering high-performance fabric finishes. Peel testing, bond strength validation, and custom coating specifications. Discuss your lamination requirements with our team.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href="/randdcenter" class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 03</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Lamination & Coating Technology</h1>
+        <p class="mt-3 text-lg text-muted">Fabric bonding technology for bonds that hold under stress</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/factory/fabric-lamination-process.webp"
+          alt="Seekingtex lamination and coating process"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>The science behind the bond</h2>
+    <p>
+      A functional fabric is only as reliable as its lamination or coating. A single weak bond can compromise the entire fabric's
+      performance — delamination, coating failure, or loss of waterproofness can render a fabric unsuitable for its intended
+      application. At {SITE.name}, we have invested in a dedicated Lamination & Coating Technology lab that combines industrial-grade
+      lamination and coating equipment with rigorous process control and post-application testing. Every bond we produce is
+      documented, traceable, and certified to meet or exceed the requirements of AATCC and ASTM standards for fabric
+      laminates.
+    </p>
+    <p>
+      Lamination uses heat and pressure to bond fabric layers with adhesive films (hot-melt, polyurethane, polyester),
+      creating a composite material with combined properties. Coating applies a liquid formulation (PU, acrylic, silicone)
+      directly to the fabric surface in precise thicknesses, then cures it to form a continuous film. Our lab is equipped for both
+      technologies, allowing us to select the optimal method for each performance requirement.
+    </p>
+
+    <h2>Equipment and process control</h2>
+    <p>Our lamination & coating centre is equipped with:</p>
+    <table>
+      <thead><tr><th>Machine</th><th>Capacity / Capability</th><th>Application</th></tr></thead>
+      <tbody>
+        <tr
+          ><td>Hot-melt laminator</td><td>Working width 1800 mm, temperature up to 220 °C, nip pressure adjustable</td><td
+            >Fabric-to-fabric lamination, membrane lamination, film bonding</td
+          ></tr
+        >
+        <tr
+          ><td>Knife-over-roll coater</td><td>Working width 1600 mm, coating weight 10-200 g/m&sup2;</td><td
+            >PU, acrylic, and silicone coating application for waterproofing and breathability</td
+          ></tr
+        >
+        <tr
+          ><td>Gravure coater</td><td>Precision coating with engraved roller, 5-50 g/m&sup2; range</td><td
+            >Precise low-weight coatings, patterned adhesive application</td
+          ></tr
+        >
+        <tr
+          ><td>Thermal curing oven</td><td>3-zone temperature control, 120-200 °C, variable speed</td><td
+            >Curing and crosslinking of applied coatings and laminates</td
+          ></tr
+        >
+      </tbody>
+    </table>
+    <p>
+      Every machine is equipped with closed-loop temperature and pressure monitoring. Process parameters — temperature,
+      nip pressure, line speed, coating gap — are programmed per material type and recorded in our Manufacturing
+      Execution System (MES) for full traceability.
+    </p>
+
+    <h2>Bond quality tests — every bond, every fabric</h2>
+    <p>Bond integrity is verified through a mandatory four-test protocol:</p>
+    <ol>
+      <li>
+        <strong>Visual inspection</strong> — 100 % of bonded areas are visually inspected for delamination, bubbles, contamination,
+        or incomplete bonding. Reject rate threshold: 0.5 % of linear metres.
+      </li>
+      <li>
+        <strong>Peel test (ASTM D1876 / ASTM D2724)</strong> — A 25 mm wide strip is cut from a test coupon produced with each
+        production batch. Minimum peel force depends on the application but typically 10 N/25 mm for laminates.
+      </li>
+      <li>
+        <strong>Hydrostatic head test</strong> — Coated/laminated fabric is tested for water penetration resistance.
+        Minimum specification is defined by the end-use requirement.
+      </li>
+      <li>
+        <strong>Thermal cycling test</strong> — Sample coupons are cycled from -20 °C to +60 °C for 50 cycles, then
+        peel-tested again. Acceptable bond strength loss: &lt; 10 %.
+      </li>
+    </ol>
+
+    <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+      <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+        Peel Strength Comparison — Hot-Melt vs Solvent-Based Lamination (Polyester 150D + PU Film)
+      </p>
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <span class="w-32 text-xs font-medium">Hot-Melt Laminate</span><div
+            class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+          >
+            <div class="h-full bg-blue-600 rounded" style="width:92%"></div>
+          </div><span class="text-xs font-bold w-12 text-right">18 N</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-32 text-xs font-medium">Solvent-Based</span><div
+            class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+          >
+            <div class="h-full bg-gray-400 rounded" style="width:72%"></div>
+          </div><span class="text-xs font-bold w-12 text-right">14 N</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-32 text-xs font-medium">Industry minimum</span><div
+            class="flex-1 h-6 bg-gray-200 dark:bg-gray-700 rounded"
+          >
+            <div class="h-full bg-green-500 rounded" style="width:52%"></div>
+          </div><span class="text-xs font-bold w-12 text-right">10 N</span>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-2">
+        Hot-melt lamination consistently achieves 80-95 % higher bond strength than the industry minimum, with better
+        consistency across production runs.
+      </p>
+    </div>
+
+    <h2>Professional expertise</h2>
+    <p>
+      Our lamination and coating team is led by a senior process engineer with 11 years of experience in textile coating
+      and lamination. Each operator completes a 6-month in-house certification programme before being allowed to work on
+      production runs. Recertification is required annually, including a practical bond test evaluated against our
+      internal Grade-A standard.
+    </p>
+
+    <h2>Custom coating solutions for unique requirements</h2>
+    <p>
+      We understand that one coating specification does not fit every application. Our Lamination & Coating Technology lab
+      routinely develops custom coating formulations for clients with special requirements:
+    </p>
+    <ul>
+      <li>
+        <strong>Breathable waterproof coatings</strong> — microporous PU and hydrophilic coatings engineered to balance waterproofness
+        (up to 10 000 mm) with breathability (up to 10 000 g/m&sup2;/24h MVTR).
+      </li>
+      <li>
+        <strong>Flame retardant coatings</strong> — intumescent and non-halogenated FR coatings for protective clothing and
+        industrial textiles.
+      </li>
+      <li>
+        <strong>Antimicrobial and antiviral coatings</strong> — silver-ion, zinc, and copper-based coatings for healthcare,
+        hospitality, and high-touch surface applications.
+      </li>
+    </ul>
+
+    <h2>Our commitment to you</h2>
+    <p>
+      Every fabric we deliver carries our bond-quality guarantee: if any laminate or coating fails in normal service within the warranty
+      period, we replace the affected fabric at no cost, and a root-cause investigation is performed to
+      prevent recurrence. This is not simply a warranty — it is a commitment to continuous improvement driven by
+      real-world operational data.
+    </p>
+    <p>
+      When you choose {SITE.name}, you are choosing bonds that are engineered, tested, and documented — not just applied.
+      That is the difference between a fabric that meets spec and a fabric that exceeds expectations.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Discuss your lamination & coating requirements</h2>
+      <p class="mt-2 text-sm text-muted">Custom coating formulations, film lamination, or process validation.</p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our coating team</a
+      >
+    </div>
+  </section>
+</Layout>

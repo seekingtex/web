@@ -1,0 +1,23 @@
+hero:
+  tagline: Ημερολόγιο
+  title: Ημερολόγιο Seekingtex
+  subtitle: Τα τελευταία νέα, υφαντουργικόιες περιπέτειες και ιστορίες προϊόντων από την ομάδα Seekingtex.
+
+meta:
+  read_more: Διάβασε περισσότερα
+  published: Δημοσιεύτηκε
+  by: Από
+  browse_all: Περιήγηση σε όλα τα άρθρα
+  categories: Κατηγορίες
+  subscribe: Εγγραφή στο ημερολόγιο
+
+categories:
+  all: Όλα
+  adventures: Περιπέτειες
+  product: Προϊόν
+  tips: Συμβουλές
+  culture: Κουλτούρα
+
+featured: Προτεινόμενα
+latest: Τελευταία άρθρα
+no_articles: Δεν υπάρχουν άρθρα προς το παρόν.

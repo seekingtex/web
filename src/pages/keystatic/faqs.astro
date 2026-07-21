@@ -1,0 +1,196 @@
+---
+export const prerender = false;
+import AdminLayout from '~/layouts/AdminLayout.astro';
+import { verifySessionToken } from '~/lib/auth';
+import { readTokenFromCookies } from '~/lib/token-store';
+import { GitHubClient } from '~/lib/github';
+
+const session = Astro.cookies.get('ks-admin-session')?.value;
+const verified = session ? verifySessionToken(session) : null;
+if (!verified) return Astro.redirect('/login');
+const token = readTokenFromCookies(Astro.cookies);
+if (!token) return Astro.redirect('/keystatic/github-token');
+
+const file = 'src/data/site/faqs.yaml';
+
+interface FaqEntry {
+  q: string;
+  a: string;
+}
+
+const defaultFaqs: FaqEntry[] = [
+  {
+    q: 'What is the minimum order quantity for fabric?',
+    a: 'Our MOQ starts at 500 yards per SKU for standard woven fabrics and 200 kg for knits. Custom development projects have varying MOQs depending on the scope. Contact our sales team for specific requirements.',
+  },
+  {
+    q: 'Do you offer OEKO-TEX certified fabrics?',
+    a: 'Yes. All our fabrics are OEKO-TEX Standard 100 certified. We also hold GRS, REACH, and RoHS certifications. Compliance documentation is provided with every shipment.',
+  },
+  {
+    q: 'What is the typical lead time?',
+    a: 'Standard lead time is 30–45 days from confirmed PO. Custom fabric development adds 15–20 days for lab dips and sampling. Stock fabric samples ship within 3–5 days.',
+  },
+  {
+    q: 'Can you match a specific color?',
+    a: 'Yes. We offer custom color matching with a tolerance of Delta-E < 1.0 per AATCC standards. Lab dips are produced within 5–7 days for customer approval before bulk production.',
+  },
+  {
+    q: 'What fabric types do you manufacture?',
+    a: 'We manufacture woven (plain, twill, satin, ripstop), knitted (jersey, rib, interlock, fleece), and non-woven fabrics. All constructions can be customized with functional finishes including UPF 50+, waterproof coating, DWR, antibacterial, and FR treatment.',
+  },
+  {
+    q: 'Do you offer private label / OEM services?',
+    a: 'Yes. We offer full OEM/ODM services including custom fabric development, private labeling, custom packaging, and drop-ship fulfillment. NDA protection available for all projects.',
+  },
+  {
+    q: 'What are your shipping terms?',
+    a: 'We ship FOB Shanghai, CIF major global ports, and DDP for qualified partners. Our logistics team manages container booking, export documentation, and customs clearance to 50+ countries.',
+  },
+];
+
+let faqs: FaqEntry[] = defaultFaqs.map((f) => ({ ...f }));
+let sha = '';
+let loadError: string | null = null;
+
+try {
+  const client = new GitHubClient(token);
+  const f = await client.readFile(file);
+  const yamlMod = await import('js-yaml');
+  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  if (parsed?.faqs && Array.isArray(parsed.faqs)) {
+    faqs = parsed.faqs.map((item: any, i: number) => ({
+      q: item.q || defaultFaqs[i]?.q || '',
+      a: item.a || defaultFaqs[i]?.a || '',
+    }));
+  }
+  sha = f.sha;
+} catch (err) {
+  loadError = err instanceof Error ? err.message : 'Failed to read';
+}
+---
+
+<AdminLayout title="FAQs" active="faqs" username={verified?.username}>
+  <div class="mb-6">
+    <h1 class="text-2xl font-semibold">Homepage FAQs</h1>
+    <p class="mt-1 text-sm text-gray-500">
+      7 questions and answers displayed on the homepage. File: <code class="font-mono">{file}</code>
+    </p>
+  </div>
+
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
+
+  <form id="faqs-form" class="space-y-6 pb-32" data-file={file} data-sha={sha}>
+    {
+      faqs.map((item, i) => (
+        <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-4">
+          <h2 class="text-base font-semibold">FAQ #{i + 1}</h2>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Question</label>
+            <input
+              type="text"
+              name={'faq' + i + '.q'}
+              value={item.q}
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Answer</label>
+            <textarea
+              name={'faq' + i + '.a'}
+              rows="4"
+              class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
+              {item.a}
+            </textarea>
+          </div>
+        </div>
+      ))
+    }
+
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
+      <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+        <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
+        <div class="flex gap-2">
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script is:inline>
+    (function () {
+      const form = document.getElementById('faqs-form');
+      if (!form) return;
+      const submitBtn = document.getElementById('submit-btn');
+      const file = form.dataset.file;
+      const sha = form.dataset.sha;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
+
+        const fd = new FormData(form);
+        const faqs = [];
+        for (let i = 0; i < 7; i++) {
+          faqs.push({
+            q: String(fd.get('faq' + i + '.q') || '').trim(),
+            a: String(fd.get('faq' + i + '.a') || '').trim(),
+          });
+        }
+
+        try {
+          const res = await fetch('/api/admin/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              format: 'yaml',
+              path: file,
+              sha,
+              data: { faqs },
+              commitMessage: 'Update homepage FAQs',
+            }),
+          });
+          const result = await res.json();
+          if (!res.ok || !result.success) {
+            window.__adminToast?.(result.error || 'Save failed', 'error');
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
+            return;
+          }
+          window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        } catch {
+          window.__adminToast?.('Network error', 'error');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
+        }
+      });
+    })();
+  </script>
+</AdminLayout>

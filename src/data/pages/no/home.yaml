@@ -1,0 +1,179 @@
+hero:
+  tagline: ''
+  title: |
+    Designet for vannet. <br class="hidden sm:inline" />
+    Bygget for <span class="text-accent dark:text-white">livet om bord</span>.
+  subtitle: |
+    <span class="hidden sm:inline"><span class="font-semibold">Seekingtex</span> designer og produserer høykvalitets oppblåsbare båter, teknisk stoff og tekniske produkter.</span>
+    <span class="block mb-1 sm:hidden font-bold text-blue-600">Seekingtex: skapt for ytelse.</span>
+    For marine fagfolk, kommersielle operatører og entusiaster som krever pålitelighet og håndverk.
+  actions:
+    - variant: primary
+      text: Se produkter
+      href: /products
+      icon: tabler:shopping-bag
+    - text: Finn ut mer
+      href: '#features'
+  image:
+    src: ~/assets/images/hero-image.webp
+    alt: Seekingtex forside
+
+hero_carousel:
+  autoplay_interval: 5000
+  slides:
+    - image:
+        src: /images/seekingtex/hero/hero-scenic.webp
+        alt: Seekingtex-verksted ved sjøen
+      tagline: Velkommen
+      title: |
+        Designet for vannet. <br />
+        Bygget for <span class="text-sky-300">livet om bord</span>.
+      subtitle: Høykvalitets oppblåsbare båter, teknisk stoff og tekniske produkter for marine fagfolk og entusiaster.
+      actions:
+        - text: Se produkter
+          href: /products
+          variant: primary
+        - text: Be om pristilbud
+          href: /contact
+          variant: secondary
+    - image:
+        src: /images/seekingtex/hero/hero-5.webp
+        alt: Båtbygging på bestilling
+      tagline: Håndverk
+      title: |
+        Skrog som varer lenger enn garantien. <br />
+        Service som varer lenger enn skroget.
+      subtitle: Marine-grade materialer. Aluminiumssveising. Tjue år gamle båter ringer fortsatt til oss etter deler.
+      actions:
+        - text: Vår historie
+          href: /about
+          variant: primary
+    - image:
+        src: /images/seekingtex/hero/boat man Seekingtex-min.jpeg
+        alt: Oppblåsbar båt på vannet
+      tagline: Støtte
+      title: |
+        Designet før salget. <br />
+        Støttet lenge etter.
+      subtitle: Autoriserte servicepartnere i 40+ land. Tjue år gamle skrog ringer fortsatt —?og vi svarer fortsatt.
+      actions:
+        - text: Kontakt oss
+          href: /contact
+          variant: primary
+        - text: Se priser
+          href: /pricing
+          variant: secondary
+
+features:
+  id: features
+  tagline: Hvorfor Seekingtex
+  title: Hva du får med Seekingtex
+  subtitle: Tiår med verftserfaring kondensert i én fokusert produktlinje. Solid konstruksjon, sjøprøvd, livslang støtte.
+  columns: 2
+  items:
+    - title: Marine-grade materialer
+      description: Høyfast PVC, Hypalon og aluminiumsskrog valgt for UV-bestandighet, slitestyrke og saltvannsbestandighet.
+      icon: tabler:shield-check
+    - title: Produksjonskvalitet
+      description: Hvert skrog trykktestes, hver sveis inspiseres. Vi sender bare det vi selv ville sjøsatt.
+      icon: tabler:certificate
+    - title: Modulær konstruksjon
+      description: Tilpass rominndeling, konsollplassering, drivstoffkapasitet og tilbehør etter dine behov.
+      icon: tabler:layout-grid
+    - title: Ærlige spesifikasjoner
+      description: Virkelig last, virkelige mål, virkelig vekt. Ingen markedsføringsoverdrifter. Aldri.
+      icon: tabler:ruler-measure
+    - title: Rask levering og deler
+      description: Standardmodeller sendes innen dager. Originaldeler og forbruksvarer på lager året rundt.
+      icon: tabler:truck-delivery
+    - title: Livslang støtte
+      description: Direkte linje til designteamet vårt for tekniske råd, reparasjoner og oppgraderinger.
+      icon: tabler:lifebuoy
+
+featured_products:
+  id: featured
+  title: Anbefalte produkter
+  subtitle: Utvalgt fra vår gjeldende katalog —?sesongens mest populære modeller.
+  linkText: Se alle produkter
+  linkUrl: /products
+
+content_workshop:
+  isReversed: true
+  tagline: Inne i verkstedet
+  title: Fra skrogdesign til levering —?hvert steg internt
+  content: |
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Kvalitet du ser, kjenner og kan måle</h3>
+  items:
+    - title: Designet av marineingeniører
+      description: Skroglinjer tegnes internt og itereres gjennom CFD-analyse før første prototype.
+    - title: Sveiset og montert i eget anlegg
+      description: Sveising av oppblåsbare kamre, konsollmontering og beslag skjer under ett tak.
+    - title: Sjøprøver før forsendelse
+      description: Hver modell gjennomgår flertimers sjøprøve som tester planing, svinger, toppfart og oppførsel under last.
+  image:
+    src: /images/seekingtex/hero/production-workshop.webp
+    alt: Verksted
+
+steps:
+  title: Fra spesifikasjon til sjøsetting i fem trinn
+  items:
+    - title: 'Trinn 1: <span class="font-medium">Konfigurasjon</span>'
+      description: Velg modell, spesifiser alternativer og be om pristilbud på nett eller telefon. Teamet svarer innen én virkedag.
+      icon: tabler:list-numbers
+    - title: 'Trinn 2: <span class="font-medium">Bekreftelse</span>'
+      description: Vi bekrefter spesifikasjon, leveringstid og totalpris skriftlig. Ingen overraskelser, ingen skjulte avgifter.
+      icon: tabler:checks
+    - title: 'Trinn 3: <span class="font-medium">Produksjon</span>'
+      description: Produksjonen starter i verkstedet vårt. Vi sender bildeoppdateringer ved milepælene.
+      icon: tabler:tool
+    - title: 'Trinn 4: <span class="font-medium">Levering</span>'
+      description: Pakket på pall, krympefoliert og sendt sjø- eller luftveien. Tollbehandling fullt inkludert.
+      icon: tabler:truck-loading
+    - title: 'Trinn 5: <span class="font-medium">Støtte</span>'
+      description: To års garanti på skrog pluss livslang teknisk støtte. Deler sendt innen 48 timer.
+      icon: tabler:headset
+  image:
+    src: /images/seekingtex/hero/production-dept.webp
+    alt: Produksjonsprosess
+
+blog_latest:
+  title: Fra bloggen
+  information: |
+    Artikler, tekniske notater og casestudier fra designteamet.
+    Nye innlegg kommer når et prosjekt leveres, en standard oppdateres, eller når noen har en historie verdt å fortelle.
+
+faqs:
+  title: Ofte stilte spørsmål
+  subtitle: Spørsmålene vi hører oftest. Hvis ditt ikke er her, send oss en melding —?vi svarer raskt.
+  columns: 2
+  items:
+    - title: Hvilken modell skal jeg velge
+      description: Avhenger av mannskapsstørrelse, farvann og prioriteringer —?hastighet, lastekapasitet eller drivstofføkonomi. Send en kort beskrivelse, så anbefaler vi 2-3 passende modeller.
+      icon: tabler:anchor
+    - title: Leverer dere internasjonalt?
+      description: Ja —?vi leverer til 40+ land. Sjøfrakt er mest økonomisk for hele båter; luftfrakt tilgjengelig for hasteordrer.
+      icon: tabler:ship
+    - title: Hva slags garanti gir dere?
+      description: To år på skrog, ett år på tilbehør, livstid på våre sveiser. Garantiregistrering følger med hver levering.
+      icon: tabler:shield
+    - title: Kan man tilpasse en eksisterende modell?
+      description: Nesten alltid. Konsollplassering, romfarge, sitteoppsett, elektronikk og motor kan tilpasses. Spesialskrog prises individuelt.
+      icon: tabler:palette
+    - title: Tilbyr dere opplæring og sertifisering?
+      description: For kommersielle operatører kan vi arrangere opplæring på vannet ved vårt anlegg. Private kunder får gratis instruksjon ved overlevering.
+      icon: tabler:school
+    - title: Hvordan får jeg reservedeler?
+      description: Bestill via kontaktsiden eller ring delerinfotelefonen. Typiske artikler (ventiler, belter, pumper, reparasjonssett) sendes innen 48 timer over hele verden.
+      icon: tabler:settings
+
+cta:
+  title: |
+    Klar til å konfigurere <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">din neste båt</span>?
+  subtitle: Fortell oss hvordan du skal bruke båten, så foreslår vi modell, alternativer og pris innen én virkedag.
+  actions:
+    - variant: primary
+      text: Be om pristilbud
+      href: /contact
+      icon: tabler:message-circle
+    - text: Bla i katalogen
+      href: /products

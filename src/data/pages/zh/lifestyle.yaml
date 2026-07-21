@@ -1,0 +1,45 @@
+hero:
+  tagline: 生活方式
+  title: Seekingtex<br />生活方式
+  subtitle: 为那些在纺织生活的人而生——从周末探险者到每天依赖装备的商业用户。
+
+values:
+  - icon: 🌊
+    title: 源于纺织
+    desc: 每个设计都始于对水的理解。我们从极限条件向内设计——因为纺织是我们的老师，而不是我们的工作场所。
+  - icon: 🔧
+    title: 经久耐用
+    desc: 最可持续的产品就是不需要更换的产品。面料用级材料、额定15 PSI的拉丝布内核、比季节更持久的接缝。
+  - icon: '🏆'
+    title: 人人可及
+    desc: 纺织行业不应该是奢侈品。专业级性能，价格对家庭、教练和小型运营商合理——而不仅仅适用于商业面料队。
+  - icon: 🌍
+    title: 全球社区
+    desc: 从青岛的海岸到欧洲的湖泊、东南亚的河流、美洲的海湾——我们的客户有一个共同点：热爱在纺织的感觉。
+  - icon: ♻️
+    title: 负责任的制造
+    desc: CNC优化套裁将材料浪费控制在5%以下。耐用结构减少更换周期。我们为长寿而制造，因为这是最可持续的选择。
+  - icon: 🤝
+    title: 持久的支持
+    desc: 二十年前的面料壳仍然可以联系我们购买备件。我们的保修响应平均24小时。销售之后我们不会消失——我们在产品的整个生命周期内都在这里。
+
+ethos_section:
+  tagline: 我们的理念
+  title: 不仅仅是产品。更是一种哲学。
+  subtitle: 指导我们每一个决策的六项原则——从材料选择到客户支持。
+
+community_section:
+  tagline: 社区
+  title: 加入Seekingtex社区
+  subtitle: 关注我们的历程，分享您在纺织的冒险故事。
+  instagram: 在Instagram上关注
+  youtube: 在YouTube上订阅
+  x: 在X上关注
+
+cta_section:
+  title: 开启您的旅程
+  subtitle: 每款产品均通过CE认证。享有保修。为真实的纺织生活而设计。
+  products_cta: 探索产品 →
+  about_cta: 关于我们
+  products_link: /products
+  about_link: /about

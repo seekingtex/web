@@ -1,0 +1,41 @@
+hero:
+  tagline: เกี่ยวกับเรา
+  title: เกี่ยวกับ Seekingtex
+  subtitle: 'ผู้ผลิตผ้าฟังก์ชันSUP และอุปกรณ์อุตสาหกรรมสิ่งทอตั้งแต่2012 รับรอง CE และISO'
+  cta: อ่านเรื่องราวของเรา
+  image: /images/seekingtex/hero/about-banner.webp
+  imageAlt: โรงงาน Seekingtex
+stats:
+  - value: '2012'
+    label: ก่อตั้ง
+  - value: '12,000'
+    label: ตร.ม พื้นที่ผลิต
+  - value: '50+'
+    label: ประเทศส่งออก
+  - value: 'ISO 9001'
+    label: การรับรอง
+brand:
+  tagline: แบรนด์ของเรา
+  title: มากกว่าผู้ผลิต
+  body: |
+    Seekingtex เป็นมากกว่าโรงงาน —เราเป็นพันธมิตรสำหรับแบรนด์ผู้ประกอบการ และมืออาชีพที่ต้องการสิ่งที่ดีที่สุดในอุปกรณ์กีฬาทางน้า
+story:
+  tagline: เรื่องราวของเรา
+  title: จากจุดเริ่มต้นเล็กๆสู่การเข้าถึงทั่วโลก
+  milestones:
+    - year: '2012'
+      title: ก่อตั้ง
+      description: Seekingtex ก่อตั้งขึ้นในชิงเต่มด้วยวิสัยทัศน์ในการผลิตผลิตภัณฑ์เป่าลมคุณภาพสูงสำหรับอุตสาหกรรมสิ่งทอ
+      image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+    - year: '2015'
+      title: ขยาย
+      description: เราขยายสิ่งอำนวยความสะดวกเป็น12,000 ตร.ม และเพิ่มสายการผลิตที่ทันสมัย
+      image: /images/seekingtex/factory/producing department.jpeg
+    - year: '2018'
+      title: การรับรอง
+      description: เราได้รับการรับรอง และเครื่องหมาย CE สำหรับทุกสายผลิตภัณฑ์
+      image: /images/seekingtex/factory/PVC material.jpeg
+    - year: '2024'
+      title: ศูนย์นวัตกรรม
+      description: เราจัดตั้งศูนย์วิจัยและพัฒนาโดยเฉพาะพร้อมสิ่งอำนวยความสะดวกการทดสอบขั้นสูง
+      image: /images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp

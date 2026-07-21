@@ -1,0 +1,145 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: `Engineering Perfection — Functional Textile Manufacturing Excellence — ${SITE.name}`,
+  description: `${SITE.name}'s engineering philosophy: precision manufacturing, premium material selection, rigorous quality control, and application-specific design for performance textiles.`,
+};
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Engineering Perfection' },
+];
+
+const pillars = [
+  {
+    title: 'Superior Material Sourcing',
+    content: 'We invest considerable resources in identifying, testing, and procuring the finest yarns, fibers, chemicals, and components available globally. We do not compromise on material specifications for cost savings. Our sourcing protocol includes batch testing for tensile strength, tear resistance, coating adhesion, and UV stability.',
+  },
+  {
+    title: 'Precision Engineering & Design',
+    content: 'Our design team comprises experienced textile engineers who leverage advanced CAD software and real-world testing to create fabrics that are dimensionally stable, exceptionally consistent, and robust. Every weave, finish, and coating is meticulously planned and analyzed.',
+  },
+  {
+    title: 'Craftsmanship & Manufacturing Excellence',
+    content: 'Seekingtex employs highly skilled technicians who are masters of their craft. Our production facility is equipped with state-of-the-art rapier looms, coating lines, and lamination equipment. We foster a culture of meticulousness, where attention to detail is paramount at every stage of production.',
+  },
+  {
+    title: 'Rigorous Quality Control & Testing',
+    content: 'Quality is built in from the very beginning. We implement a multi-layered QC system with stringent checks at each critical step, culminating in comprehensive final testing including tensile strength, colorfastness, shrinkage, and hydrostatic head verification.',
+  },
+];
+
+const segments = [
+  {
+    name: 'Outdoor & Apparel Textiles',
+    desc: 'Lightweight yet durable fabrics with UPF 50+, DWR finishes, and breathable waterproof coatings. Optimized for comfort, mobility, and weather protection.',
+  },
+  {
+    name: 'Uniform & Workwear Fabrics',
+    desc: 'High-tenacity polyester and cotton blends with FR treatment, antibacterial finish, and stain resistance. Designed for durability and professional appearance.',
+  },
+  {
+    name: 'Medical & Healthcare Textiles',
+    desc: 'Antibacterial, fluid-repellent, and breathable fabrics meeting medical-grade standards. Soft hand feel with barrier performance for healthcare environments.',
+  },
+  {
+    name: 'Industrial & Technical Textiles',
+    desc: 'Heavy-duty woven and coated fabrics for industrial applications. High abrasion resistance, chemical resistance, and dimensional stability for demanding environments.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Manufacturing Philosophy</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Engineering Perfection</h1>
+    <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
+      Seekingtex was founded on a simple yet profound principle: to produce perfect products.
+      This is not a marketing slogan — it is the bedrock of our operational philosophy,
+      driving every material selection, design decision, and quality control protocol.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl space-y-12">
+    {pillars.map((p, i) => (
+      <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+        <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+          <h2 class="text-xl font-bold">{p.title}</h2>
+          <p class="mt-3 text-muted leading-relaxed">{p.content}</p>
+        </div>
+        <div class={`rounded-xl overflow-hidden ${i % 2 === 1 ? 'md:order-1' : ''}`}>
+          <img
+            src={['/images/seekingtex/factory/fabric-material-testing.webp', '/images/seekingtex/factory/fabric-design-discussion.webp', '/images/seekingtex/factory/fabric-weaving-production.webp', '/images/seekingtex/factory/fabric-quality-testing.webp'][i]}
+            alt={p.title}
+            class="w-full h-64 object-cover rounded-xl"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    ))}
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Specialized Segments</p>
+      <h2 class="mt-2 text-3xl font-bold">Tailored for Application</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {segments.map((s) => (
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg font-bold">{s.name}</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+    <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
+      <h2 class="text-2xl font-bold text-center">The Art & Science of Textile Manufacturing</h2>
+      <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
+        From precision weaving and controlled coating application to exhaustive multi-stage testing,
+        every Seekingtex fabric represents the pinnacle of functional textile manufacturing.
+        Our production process is designed to prevent common defects — uneven coating, color variation, shrinkage,
+        coating delamination — before they can occur.
+      </p>
+      <div class="text-center mt-8">
+        <a href="/contact" class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+          Discuss your project →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ExperienceLayer
+    title="Engineering Philosophy in Practice"
+    subtitle="Real examples of how our engineering standards translate into field performance."
+    stories={[
+      {
+        quote: "We tested five manufacturers' fabrics for our outdoor apparel line. After 100 industrial wash cycles, the Seekingtex fabrics had the lowest shrinkage and best color retention by a wide margin — less than 2% shrinkage vs 5-8% for competitors.",
+        narrative: "A European outdoor brand conducted a year-long comparative test of performance fabrics from five manufacturers for their apparel line. Seekingtex fabrics were tested alongside products from China, Europe, and US manufacturers. After 100 industrial wash cycles, the Seekingtex fabrics showed the least shrinkage, the best colorfastness, and the highest tensile strength retention. The brand standardized on Seekingtex for all future fabric sourcing.",
+        context: "Apparel fabric comparison, Europe, 2024",
+        source: "Brand Sourcing Director"
+      },
+      {
+        quote: "When a customer reported coating delamination after two years, we traced it to a specific batch of chemical that had been stored improperly at the customer's facility. The fabric itself was still structurally perfect.",
+        narrative: "Seekingtex's quality team investigates every claim thoroughly. In this case, a two-year-old fabric returned with coating delamination was found to have no manufacturing defects — the weave, coating formulation, and finish were all within specification. The issue was traced to chemical degradation from improper storage. The fabric was re-coated and returned. The incident reinforced Seekingtex's commitment to providing clear care and maintenance documentation.",
+        context: "Quality analysis, North America, 2024",
+        source: "Quality Assurance Team"
+      },
+    ]}
+  />
+  <RelatedPages
+    title="Explore More"
+    subtitle="Related engineering and manufacturing resources"
+    links={[
+      { title: 'Quality Control & Testing', description: 'Multi-layered QC system with stringent checks at each critical manufacturing step.', href: '/quality', label: 'Quality' },
+      { title: 'R&D Center', description: 'Our research facilities including Textile Lab, Coating Development Lab, and Sampling Workshop.', href: '/randdcenter', label: 'R&D' },
+      { title: 'Factory Overview', description: '12,000 m² facility with rapier looms, coating lines, and quality testing lab.', href: '/factory', label: 'Facility' },
+      { title: 'Design & Innovation', description: 'Full-service textile design studio for custom ODM projects, from concept to production.', href: '/design-powerhouse', label: 'Design' },
+    ]}
+  />
+</Layout>

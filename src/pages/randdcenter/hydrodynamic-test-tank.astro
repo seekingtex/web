@@ -1,0 +1,194 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Textile Performance Testing Lab' },
+];
+
+const metadata = {
+  title: `Textile Performance Testing Lab — UPF, Waterproof, Breathability & Abrasion Testing | ${SITE.name}`,
+  description: `Validate your fabric performance with our textile testing lab. UPF rating, waterproofness, breathability, tensile strength, and abrasion testing. Book a testing session today.`,
+};
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 mx-auto max-w-5xl">
+    <a href="/randdcenter" class="text-sm text-gray-500 hover:underline">&larr; Back to R&D Center</a>
+    <div class="mt-4 grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wider">Lab 04</p>
+        <h1 class="mt-2 text-3xl md:text-4xl font-bold">Textile Performance Testing Lab</h1>
+        <p class="mt-3 text-lg text-muted">Validating performance before full-scale production</p>
+      </div>
+      <div class="md:col-span-2">
+        <img
+          src="/images/seekingtex/factory/fabric-performance-testing.webp"
+          alt="Seekingtex textile performance testing laboratory"
+          class="w-full h-48 object-cover rounded-xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
+    <h2>Why test fabric performance?</h2>
+    <p>
+      It is a common misconception that fabric testing is only necessary for high-end technical textiles. In reality, the
+      performance of any functional fabric — from outdoor apparel to upholstery to medical textiles — is just as dependent on its
+      construction, finish, and coating as any engineered material. UPF rating, waterproofness, breathability, tensile strength, and abrasion resistance all have a
+      dramatic effect on the fabric's fit-for-purpose performance and longevity. At {SITE.name}, we operate a dedicated textile
+      performance testing lab that allows us to quantify these properties — before committing resources to
+      full-scale production.
+    </p>
+    <p>
+      Testing at our facility gives us the ability to iterate fabric constructions and finishes rapidly and
+      cost-effectively. A week in the lab can generate the same performance data that would require months of
+      production trial-and-error — and at a fraction of the cost.
+    </p>
+
+    <h2>Facility specifications</h2>
+    <table>
+      <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
+      <tbody>
+        <tr><td>Lab area</td><td>200 m&sup2; climate-controlled (21 &plusmn; 1 &deg;C, 65 &plusmn; 2 % RH)</td></tr>
+        <tr
+          ><td>UPF testing</td><td
+            >UV transmittance analyzer, ASTM D6544 / AATCC 183, UPF 15-50+ rating</td
+          ></tr
+        >
+        <tr
+          ><td>Waterproofness</td><td
+            >Hydrostatic head tester, ISO 811, range 0-5000 mbar</td
+          ></tr
+        >
+        <tr
+          ><td>Breathability (MVTR)</td><td
+            >Permeability cup system, ASTM E96 (desiccant & water methods), range 500-20000 g/m&sup2;/24h</td
+          ></tr
+        >
+        <tr
+          ><td>Tensile & tear testing</td><td>Universal tester (50 kN), ASTM D5034 (grab test), ASTM D2261 (tongue tear), ASTM D3786 (burst)</td
+          ></tr
+        >
+        <tr><td>Abrasion testing</td><td>Martindale abrasion tester, ASTM D4966 / ISO 12947, up to 100 000 cycles</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Our test programme</h2>
+    <p>A standard fabric development programme in our lab follows this sequence:</p>
+    <ol>
+      <li>
+        <strong>Sample conditioning</strong> — Fabric samples are conditioned in the climate-controlled lab for 24 h at
+        standard atmospheric conditions before any test begins.
+      </li>
+      <li>
+        <strong>UPF rating</strong> — Fabric is measured for UV transmittance across the 290-400 nm spectrum. UPF rating is
+        calculated per AATCC 183, with UPF 50+ as the target for sun-protection fabrics.
+      </li>
+      <li>
+        <strong>Waterproofness & breathability</strong> — Hydrostatic head testing measures water penetration resistance. MVTR
+        testing measures moisture vapor transmission. The balance between waterproofness and breathability is optimized for each application.
+      </li>
+      <li>
+        <strong>Tensile & tear strength</strong> — Grab tensile testing in warp and weft directions. Trapezoid tear testing
+        to evaluate tear propagation resistance. Burst strength for knit and non-woven fabrics.
+      </li>
+      <li>
+        <strong>Abrasion resistance (optional)</strong> — Martindale abrasion testing to simulate long-term wear. Samples are
+        inspected at regular intervals for surface change, pilling, and breakthrough.
+      </li>
+      <li>
+        <strong>Data analysis & recommendations</strong> — A full report is delivered with comparative charts, performance
+        curves, and specific recommendations for the fabric construction or finish.
+      </li>
+    </ol>
+
+    <div class="not-prose my-10 p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+      <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">
+        Typical Test Results — UPF Rating vs Fabric Construction
+      </p>
+      <div class="space-y-2">
+        <div class="flex items-center gap-2 text-xs">
+          <span class="w-32">Polyester 150D plain weave</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+            <div class="h-full bg-blue-600 rounded" style="width:30%"></div>
+          </div><span class="w-16 text-right">UPF 15</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="w-32">Polyester 150D + UV absorber</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+            <div class="h-full bg-blue-600 rounded" style="width:60%"></div>
+          </div><span class="w-16 text-right">UPF 40</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="w-32">Polyester tight weave + TiO2</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+            <div class="h-full bg-blue-600 rounded" style="width:80%"></div>
+          </div><span class="w-16 text-right">UPF 50</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="w-32">Nylon ripstop + PU coating</span><div class="flex-1 bg-gray-200 dark:bg-gray-700 h-5 rounded">
+            <div class="h-full bg-blue-600 rounded" style="width:100%"></div>
+          </div><span class="w-16 text-right">UPF 50+</span>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-2">
+        Fabric construction, fiber type, and UV-blocking additives all contribute to the final UPF rating.
+        Our lab optimizes the combination for each application.
+      </p>
+    </div>
+
+    <h2>Expert team</h2>
+    <p>
+      Our lab is operated by a textile technologist with a degree in textile engineering and 8 years of performance-testing experience
+      at a major international textile testing institute. She is supported by two technicians who prepare all
+      samples and instrumentation. The team follows AATCC and ASTM standard procedures to ensure
+      that every test is repeatable, traceable, and internationally defensible.
+    </p>
+
+    <h2>Testing for custom fabric development</h2>
+    <p>
+      Our lab is not only used for house-designed fabrics — we regularly run test programmes for clients who want to
+      validate a custom fabric construction or investigate a performance issue:
+    </p>
+    <ul>
+      <li>
+        <strong>Fabric comparison</strong> — Two or more candidate fabric constructions tested under identical conditions, providing
+        an objective performance comparison to inform your selection.
+      </li>
+      <li>
+        <strong>Finish optimization</strong> — Different coating weights, application methods, or curing conditions can be tested to
+        quantify their individual contribution to performance.
+      </li>
+      <li>
+        <strong>End-use suitability study</strong> — Performance data is analyzed against end-use requirements, allowing you to
+        select the optimum fabric construction for your target application.
+      </li>
+    </ul>
+
+    <h2>Why test with us?</h2>
+    <p>
+      We do not just give you a set of raw numbers. Our reports translate test data into actionable engineering
+      recommendations: "Increase the weave density by 15 % to achieve UPF 50+", "Apply an additional 5 g/m&sup2; of PU coating
+      to meet the 1000 mbar waterproofness target", or "Switch to a textured yarn for improved moisture vapor transmission." You leave with a clear understanding of what to change and why.
+    </p>
+    <p>
+      Our lab is also available for independent third-party testing on a fee-for-service basis. If you are developing a
+      fabric and want an unbiased, professionally executed performance assessment, we welcome your enquiry.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
+      <h2 class="text-xl font-bold">Book a fabric testing session</h2>
+      <p class="mt-2 text-sm text-muted">
+        Whether you need a full development programme or a single comparative test, we can accommodate your schedule.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >Contact our testing team</a
+      >
+    </div>
+  </section>
+</Layout>
