@@ -1194,9 +1194,9 @@ const trustBarItems = rawTrustBar.length
       {
         testimonialItems.map((item: { name: string; quote: string; rating: number }) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-6">
-            <div class="flex text-amber-400 text-lg">{'猸?.repeat(item.rating)}</div>
+            <div class="flex text-amber-400 text-lg">{'★'.repeat(item.rating)}</div>
             <p class="mt-4 text-gray-600 text-sm italic">{item.quote}</p>
-            <p class="mt-3 text-sm font-semibold text-gray-900">鈥攞item.name}</p>
+            <p class="mt-3 text-sm font-semibold text-gray-900">{item.name}</p>
           </div>
         ))
       }

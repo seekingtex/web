@@ -13,7 +13,7 @@ const BASE = 'D:\\OneDrive\\Daily work\\E3\\processing\\seekingtex';
 const BOATS = path.join(BASE, 'boats');
 const PADDLE = path.join(BASE, 'paddle');
 const ACC = path.join(BASE, 'paddles-and-accessories');
-const AQUA = 'D:\\OneDrive\\Daily work\\E3\\processing\\seekingtex Helen\\閸忣剙寰冮弬鍥︽\\seekingtex\\閸ュ墽澧?;
+const AQUA = 'D:\\OneDrive\\Daily work\\E3\\processing\\seekingtex Helen';
 
 function normalize(p) {
   return p.replace(/\\/g, '/');

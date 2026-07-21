@@ -122,7 +122,7 @@
     - q: What is an acceptable defect level?
       a: First quality = under 40 points per 100 square yards. Premium mills achieve under 20 points.
     - q: How is color consistency measured?
-      a: Grey scale rating under D65 daylight. Acceptable: minimum 4.0 for solid shades, 3.5 for patterns.
+      a: "Grey scale rating under D65 daylight. Acceptable: minimum 4.0 for solid shades, 3.5 for patterns."
   relatedGuides:
     - textile-quality
     - fabric-certifications-guide
