@@ -24,10 +24,6 @@ binding = "ASSETS"
 [ai]
 binding = "AI"
 
-[[vectorize]]
-binding = "VECTORIZE"
-index_name = "ai-index"
-
 # --- Environment Variables ---
 
 [vars]
