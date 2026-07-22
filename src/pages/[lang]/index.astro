@@ -267,8 +267,11 @@ const catalogCategories = [
 ];
 const groupedProducts: Record<string, typeof products> = {};
 for (const cat of catalogCategories) {
-  groupedProducts[cat.key] = products.filter((p) => p.category === cat.key).slice(0, 6);
+  groupedProducts[cat.key] = products.filter((p) => p.category === (cat.key as any)).slice(0, 6);
 }
+const activeCategories = catalogCategories
+  .map((cat) => ({ ...cat, items: groupedProducts[cat.key] || [] }))
+  .filter((c) => c.items.length > 0);
 
 const rawTrustBar = ((trustBarData as any)?.items || []) as Array<{ label: string }>;
 const trustLabels = ['stable', 'travel', 'tested'];
@@ -277,6 +280,18 @@ const trustBarItems = rawTrustBar.length
       label: t('home.trust.' + trustLabels[i]) || item.label,
     }))
   : trustLabels.map((key) => ({ label: t('home.trust.' + key) }));
+
+const boardItems = [
+  { id: 'performance', label: t('home.boards.performance') || 'Performance', desc: t('home.boards.performance.desc') || 'High-performance fabrics for sportswear and active apparel.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
+  { id: 'medical', label: t('home.boards.medical') || 'Medical', desc: t('home.boards.medical.desc') || 'Antimicrobial and fluid-repellent fabrics for healthcare.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
+  { id: 'uniform', label: t('home.boards.uniform') || 'Uniform', desc: t('home.boards.uniform.desc') || 'Professional fabrics for corporate and hospitality uniforms.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
+  { id: 'industrial', label: t('home.boards.industrial') || 'Industrial', desc: t('home.boards.industrial.desc') || 'Heavy-duty textiles for workwear and protective apparel.', img: '/images/seekingtex/fabrics/drop-stitch-fabric-1.webp' },
+  { id: 'sustainable', label: t('home.boards.sustainable') || 'Sustainable', desc: t('home.boards.sustainable.desc') || 'Eco-friendly fabrics from recycled and organic materials.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
+  { id: 'outdoor', label: t('home.boards.outdoor') || 'Outdoor', desc: t('home.boards.outdoor.desc') || 'Weather-resistant fabrics for outdoor and adventure gear.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
+  { id: 'knit', label: t('home.boards.knit') || 'Knit', desc: t('home.boards.knit.desc') || 'Stretch knits for comfort and mobility in activewear.', img: '/images/seekingtex/fabrics/drop-stitch-fabric-1.webp' },
+  { id: 'woven', label: t('home.boards.woven') || 'Woven', desc: t('home.boards.woven.desc') || 'Durable woven fabrics for shirts, uniforms, and outerwear.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
+  { id: 'coated', label: t('home.boards.coated') || 'Coated', desc: t('home.boards.coated.desc') || 'Specialty coated fabrics for protective and technical applications.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -888,17 +903,7 @@ const trustBarItems = rawTrustBar.length
       <p class="mt-4 text-lg text-gray-500">{t('home.products.subtitle') || 'Every Seekingtex fabric is engineered for performance, comfort, and durability 鈥?built to perform, designed to inspire.'}</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        { id: 'performance', label: t('home.boards.performance') || 'Performance', desc: t('home.boards.performance.desc') || 'High-performance fabrics for sportswear and active apparel.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
-        { id: 'medical', label: t('home.boards.medical') || 'Medical', desc: t('home.boards.medical.desc') || 'Antimicrobial and fluid-repellent fabrics for healthcare.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
-        { id: 'uniform', label: t('home.boards.uniform') || 'Uniform', desc: t('home.boards.uniform.desc') || 'Professional fabrics for corporate and hospitality uniforms.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
-        { id: 'industrial', label: t('home.boards.industrial') || 'Industrial', desc: t('home.boards.industrial.desc') || 'Heavy-duty textiles for workwear and protective apparel.', img: '/images/seekingtex/fabrics/drop-stitch-fabric-1.webp' },
-        { id: 'sustainable', label: t('home.boards.sustainable') || 'Sustainable', desc: t('home.boards.sustainable.desc') || 'Eco-friendly fabrics from recycled and organic materials.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
-        { id: 'outdoor', label: t('home.boards.outdoor') || 'Outdoor', desc: t('home.boards.outdoor.desc') || 'Weather-resistant fabrics for outdoor and adventure gear.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
-        { id: 'knit', label: t('home.boards.knit') || 'Knit', desc: t('home.boards.knit.desc') || 'Stretch knits for comfort and mobility in activewear.', img: '/images/seekingtex/fabrics/drop-stitch-fabric-1.webp' },
-        { id: 'woven', label: t('home.boards.woven') || 'Woven', desc: t('home.boards.woven.desc') || 'Durable woven fabrics for shirts, uniforms, and outerwear.', img: '/images/seekingtex/fabrics/performance-fabric-1.webp' },
-        { id: 'coated', label: t('home.boards.coated') || 'Coated', desc: t('home.boards.coated.desc') || 'Specialty coated fabrics for protective and technical applications.', img: '/images/seekingtex/fabrics/coated-fabric-1.webp' },
-      ].map((board) => (
+      {boardItems.map((board) => (
         <a
           href={'/' + lang + '/products'}
           class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
@@ -933,24 +938,19 @@ const trustBarItems = rawTrustBar.length
       </div>
 
       {
-        catalogCategories.map((cat) => {
-          const items = groupedProducts[cat.key];
-          if (items.length === 0) return null;
-          return (
+        activeCategories.map((cat) => (
             <div class="mb-16 last:mb-0">
               <div class="mb-8">
                 <h3 class="text-2xl font-bold text-gray-900">{cat.label}</h3>
                 <p class="mt-1 text-gray-500">{cat.desc}</p>
               </div>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {items.map((p) => {
-                  const img = productVisuals[p.id] || '';
-                  return (
+                {cat.items.map((p) => (
                     <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
                       <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                        {img ? (
+                        {productVisuals[p.id] ? (
                           <>
-                            <img src={img} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
+                            <img src={productVisuals[p.id]} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                           </>
                         ) : (
@@ -975,12 +975,11 @@ const trustBarItems = rawTrustBar.length
                         )}
                       </div>
                     </div>
-                  );
-                })}
+                ))}
               </div>
             </div>
-          );
-        })
+          )
+        ))
       }
     </div>
   </section>
