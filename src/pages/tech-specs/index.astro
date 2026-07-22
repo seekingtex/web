@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { ui, defaultLang } from '~/i18n/config';
-import { products, type ProductRecord } from '~/data/products';
+import { products } from '~/data/products';
 
 const t = (key: string) => (ui as any)['en']?.[key] || (ui as any)[defaultLang]?.[key] || key;
 

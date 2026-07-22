@@ -133,8 +133,6 @@ const commands = {
     const sec = findSection(lines, lang);
     if (!sec) { console.log(`${lang}: section not found`); return; }
 
-    const en = findSection(lines, 'en');
-    const enKeys = getKeys(lines, en.start, en.end);
     let updated = 0;
 
     for (const [key, value] of Object.entries(trans)) {

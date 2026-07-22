@@ -50,9 +50,7 @@ const dataJson = JSON.stringify(graphData);
   const canvas = document.getElementById('kg-canvas');
   const ctx = canvas.getContext('2d');
   const detailEl = document.getElementById('kg-detail');
-  const legendEl = document.getElementById('kg-legend');
-
-  const NODE_RADIUS = 8;
+  
   const LABEL_FONT = '11px Inter, system-ui, sans-serif';
   const COLORS = {
     'product-category': { bg: '#0284c7', border: '#0369a1' },
@@ -63,7 +61,6 @@ const dataJson = JSON.stringify(graphData);
     'concept': { bg: '#0891b2', border: '#0e7490' },
   };
 
-  const TYPE_ORDER = ['product-category', 'technology', 'material', 'use-case', 'component', 'concept'];
   const TYPE_LABELS = {
     'product-category': 'Product Category',
     'technology': 'Technology',
@@ -97,10 +94,9 @@ const dataJson = JSON.stringify(graphData);
   let scale = 1;
   let offsetX = 0, offsetY = 0;
   let isDragging = false, dragNode = null, dragOffX = 0, dragOffY = 0;
-  let lastX = 0, lastY = 0;
   let animId = null;
   let isPanning = false, panStartX = 0, panStartY = 0;
-  let running = true;
+  const running = true;
 
   function resize() {
     const rect = canvas.parentElement.getBoundingClientRect();

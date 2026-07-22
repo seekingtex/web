@@ -4,7 +4,6 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { languages, defaultLang, ui } from '~/i18n/config';
-import { guides } from '~/data/guides';
 
 export function getStaticPaths() {
   const slugs = [

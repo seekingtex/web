@@ -13,12 +13,10 @@ import { contentV2Records } from '~/data/content-v2';
 import cfg from '~/config.yaml';
 const branding = (cfg as any)?.branding || {};
 import heroImagesData from '~/data/site/hero-images.yaml';
-import categoriesData from '~/data/site/categories.yaml';
 import techCardsData from '~/data/site/tech-cards.yaml';
 import productVisualsData from '~/data/site/product-visuals.yaml';
 import useCasesData from '~/data/site/use-cases.yaml';
 import proofPointsData from '~/data/site/proof-points.yaml';
-import faqsData from '~/data/site/faqs.yaml';
 import testimonialsData from '~/data/site/testimonials.yaml';
 import learnData from '~/data/site/learning-center.yaml';
 import trustBarData from '~/data/site/trust-bar.yaml';
@@ -1613,13 +1611,13 @@ const boardItems = [
     }
 
     // FAQ filter
-    var faqTabs = document.querySelector('[data-faq-tabs]');
-    var faqList = document.querySelector('[data-faq-list]');
+    vletfaqTabs = document.querySelector('[data-faq-tabs]');
+    vletfaqList = document.querySelector('[data-faq-list]');
     if (faqTabs && faqList) {
-      var allItems = faqList.querySelectorAll('[data-faq-item]');
+      vletallItems = faqList.querySelectorAll('[data-faq-item]');
       function filterFaq(category) {
         faqTabs.querySelectorAll('[data-faq-tab]').forEach(function (btn) {
-          var isActive = btn.getAttribute('data-faq-tab') === category;
+          vletisActive = btn.getAttribute('data-faq-tab') === category;
           btn.className = 'px-4 py-2 text-sm font-medium rounded-full border transition ' + (isActive ? 'bg-gray-900 text-white border-gray-900 dark:bg-white dark:text-gray-900 dark:border-white' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:border-gray-500');
         });
         allItems.forEach(function (item) {
@@ -1627,7 +1625,7 @@ const boardItems = [
         });
       }
       faqTabs.addEventListener('click', function (e) {
-        var btn = e.target.closest('[data-faq-tab]');
+        vletbtn = e.target.closest('[data-faq-tab]');
         if (btn) filterFaq(btn.getAttribute('data-faq-tab'));
       });
       filterFaq('woven');

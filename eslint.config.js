@@ -76,6 +76,12 @@ export default [
     },
   },
   {
+    files: ['**/*.cjs'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+  },
+  {
     ignores: ['dist', 'node_modules', '.github', '.wrangler', 'types.generated.d.ts', '.astro'],
   },
 ];

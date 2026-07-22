@@ -133,10 +133,10 @@ const { position = 'bottom-right', title = 'Seekingtex Fabric Advisor AI' } = As
     if (!toggle || !panel || !close || !form || !input || !messages || !sendBtn) return;
 
     // Hint chips
-    var hints = document.getElementById('ai-chat-hints');
+    const hints = document.getElementById('ai-chat-hints');
     if (hints) {
       hints.addEventListener('click', function (e) {
-        var target = e.target;
+        const target = e.target;
         if (target.tagName === 'BUTTON' && target.getAttribute('data-hint')) {
           input.value = target.getAttribute('data-hint');
           form.dispatchEvent(new Event('submit'));

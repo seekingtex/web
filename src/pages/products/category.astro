@@ -9,7 +9,7 @@ export function getStaticPaths() {
   }));
 }
 
-const { category, urlSlug, label } = Astro.props;
+const { urlSlug } = Astro.props;
 const redirectUrl = `/${urlSlug}`;
 return Astro.redirect(redirectUrl, 301);
 ---

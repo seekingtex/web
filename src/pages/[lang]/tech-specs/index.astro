@@ -5,7 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { languages, defaultLang, ui } from '~/i18n/config';
-import { products, type ProductRecord } from '~/data/products';
+import { products } from '~/data/products';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));

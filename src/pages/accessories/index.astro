@@ -1,13 +1,11 @@
 ---
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
-import ProductCard from '~/components/widgets/ProductCard.astro';
 import { SITE } from 'astrowind:config';
-import { getProducts, isProductsEnabled, isProductsListEnabled } from '~/utils/products';
+import { isProductsEnabled, isProductsListEnabled } from '~/utils/products';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
-const products = await getProducts();
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
 const metadata = merge({
   title: `Fabric Accessories — Ribbons, Trims & Linings | ${SITE.name}`,

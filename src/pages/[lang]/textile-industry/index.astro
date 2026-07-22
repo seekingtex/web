@@ -6,15 +6,13 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import AiQuickAnswer from '~/components/common/AiQuickAnswer.astro';
 
 
-import { languages, defaultLang, ui } from '~/i18n/config';
-import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
-const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
 
 const metadata = {
   title: 'Textile Industry Guide — Complete Resource on Fabrics, Materials, Selection & Standards',

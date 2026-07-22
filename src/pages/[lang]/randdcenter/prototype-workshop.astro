@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 
 export const prerender = true;
 
-import { languages, defaultLang, ui } from '~/i18n/config';
+import { languages } from '~/i18n/config';
 import { SITE } from 'astrowind:config';
 
 export async function getStaticPaths() {
@@ -11,7 +11,6 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
 
 const crumbs = [
   { name: 'Home', href: `/${lang}/` },

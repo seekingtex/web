@@ -1,12 +1,11 @@
 ---
 export const prerender = true;
 
-import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
 import ProductCard from '~/components/widgets/ProductCard.astro';
-import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
+import merge from 'lodash.merge';
 
 import { SITE } from 'astrowind:config';
 import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';

@@ -158,32 +158,32 @@ const {
 
 <script is:inline>
 (function () {
-  var form = document.getElementById('ac-form');
-  var input = document.getElementById('ac-input');
-  var submitBtn = document.getElementById('ac-submit');
-  var answerSection = document.getElementById('ac-answer-section');
-  var answerContent = document.getElementById('ac-answer-content');
-  var answerQuestion = document.getElementById('ac-answer-question');
-  var answerLoading = document.getElementById('ac-answer-loading');
-  var sourcesSection = document.getElementById('ac-answer-sources');
-  var sourcesList = document.getElementById('ac-sources-list');
-  var answerActions = document.getElementById('ac-answer-actions');
-  var askAnother = document.getElementById('ac-ask-another');
-  var categories = document.getElementById('ac-categories');
+  const form = document.getElementById('ac-form');
+  const input = document.getElementById('ac-input');
+  const submitBtn = document.getElementById('ac-submit');
+  const answerSection = document.getElementById('ac-answer-section');
+  const answerContent = document.getElementById('ac-answer-content');
+  const answerQuestion = document.getElementById('ac-answer-question');
+  const answerLoading = document.getElementById('ac-answer-loading');
+  const sourcesSection = document.getElementById('ac-answer-sources');
+  const sourcesList = document.getElementById('ac-sources-list');
+  const answerActions = document.getElementById('ac-answer-actions');
+  const askAnother = document.getElementById('ac-ask-another');
+  const categories = document.getElementById('ac-categories');
 
   function addAnswer(text) {
-    var existing = document.querySelector('.ac-answer-text');
+    const existing = document.querySelector('.ac-answer-text');
     if (existing) existing.remove();
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'ac-answer-text';
     div.textContent = text;
     answerContent.appendChild(div);
   }
 
   function showError(msg) {
-    var existing = document.querySelector('.ac-answer-text');
+    const existing = document.querySelector('.ac-answer-text');
     if (existing) existing.remove();
-    var div = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'ac-answer-text ac-error';
     div.textContent = msg || 'Sorry, I could not process that request. Please try again.';
     answerContent.appendChild(div);
@@ -214,9 +214,9 @@ const {
           if (data.sources && data.sources.length > 0) {
             sourcesSection.classList.remove('hidden');
             data.sources.forEach(function (s) {
-              var li = document.createElement('li');
+              const li = document.createElement('li');
               if (s.url) {
-                var a = document.createElement('a');
+                const a = document.createElement('a');
                 a.href = s.url;
                 a.textContent = s.title || s.url;
                 a.target = '_blank';
@@ -245,14 +245,14 @@ const {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var q = input.value.trim();
+    const q = input.value.trim();
     if (q) ask(q);
   });
 
   document.addEventListener('click', function (e) {
-    var btn = e.target.closest('.ac-question-btn');
+    const btn = e.target.closest('.ac-question-btn');
     if (btn) {
-      var q = btn.getAttribute('data-question');
+      const q = btn.getAttribute('data-question');
       if (q) ask(q);
     }
   });

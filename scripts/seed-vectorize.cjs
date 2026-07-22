@@ -13,9 +13,9 @@
  * (OAuth token from `npx wrangler login` works as API_TOKEN.)
  */
 
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+ 
 const fs = require('fs');
-// eslint-disable-next-line @typescript-eslint/no-require-imports
+ 
 const path = require('path');
 
 const DIST = path.resolve(__dirname, '..', 'dist', 'client');

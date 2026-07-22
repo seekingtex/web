@@ -12,7 +12,6 @@ import cfg from '~/config.yaml';
 import { getEntityGraphJsonLd } from '~/lib/geo-v7/entity-graph';
 const branding = (cfg as any)?.branding || {};
 import heroImagesData from '~/data/site/hero-images.yaml';
-import categoriesData from '~/data/site/categories.yaml';
 import techCardsData from '~/data/site/tech-cards.yaml';
 import productVisualsData from '~/data/site/product-visuals.yaml';
 import useCasesData from '~/data/site/use-cases.yaml';
@@ -298,8 +297,8 @@ const faqCategories = [
     </div>
     <!-- Carousel dots (kept for reference) -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-      {heroSlides.map((_, i) => (
-        <button data-carousel-dot class="w-2.5 h-2.5 rounded-full transition-all duration-300 border border-white/50 {i === 0 ? 'bg-white scale-125' : 'bg-transparent'}" />
+      {heroSlides.map((_, _i) => (
+        <button data-carousel-dot class="w-2.5 h-2.5 rounded-full transition-all duration-300 border border-white/50 {_i === 0 ? 'bg-white scale-125' : 'bg-transparent'}" />
       ))}
     </div>
   </section>
@@ -630,7 +629,7 @@ const faqCategories = [
             >
               <div>
                 <span class="text-sm font-semibold text-gray-900">Antibacterial Fabrics</span>
-                <p class="text-xs text-gray-500">7A rated >99% bacterial reduction</p>
+                <p class="text-xs text-gray-500">7A rated &gt;99% bacterial reduction</p>
               </div>
               <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
@@ -1579,13 +1578,13 @@ const faqCategories = [
     }
 
     // FAQ filter
-    var faqTabs = document.querySelector('[data-faq-tabs]');
-    var faqList = document.querySelector('[data-faq-list]');
+    const faqTabs = document.querySelector('[data-faq-tabs]');
+    const faqList = document.querySelector('[data-faq-list]');
     if (faqTabs && faqList) {
-      var faqAllItems = faqList.querySelectorAll('[data-faq-item]');
+      const faqAllItems = faqList.querySelectorAll('[data-faq-item]');
       function filterFaq(cat) {
         faqTabs.querySelectorAll('[data-faq-tab]').forEach(function (btn) {
-          var isActive = btn.getAttribute('data-faq-tab') === cat;
+          const isActive = btn.getAttribute('data-faq-tab') === cat;
           if (isActive) { btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900'); btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300'); }
           else { btn.classList.remove('bg-gray-900', 'text-white', 'border-gray-900'); btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300'); }
         });
@@ -1594,7 +1593,7 @@ const faqCategories = [
         });
       }
       faqTabs.addEventListener('click', function (e) {
-        var btn = e.target.closest('[data-faq-tab]');
+        const btn = e.target.closest('[data-faq-tab]');
         if (btn) filterFaq(btn.getAttribute('data-faq-tab'));
       });
       filterFaq('sun-protection');
