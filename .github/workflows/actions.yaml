@@ -53,7 +53,7 @@ jobs:
 
       - name: Ensure Vectorize index exists
         run: |
-          yarn wrangler vectorize create ai-index --dimensions=768 --metric=cosine 2>/dev/null || true
+          yarn wrangler vectorize create ai-index --dimensions=768 --metric=cosine 2>&1 || echo "Index may already exist, continuing..."
 
       - name: Deploy to Cloudflare Workers
         run: |
