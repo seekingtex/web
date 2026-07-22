@@ -24,6 +24,11 @@ binding = "ASSETS"
 [ai]
 binding = "AI"
 
+# --- R2 Asset Storage ---
+[[r2_buckets]]
+binding = "ASSETS_BUCKET"
+bucket_name = "seekingtex-assets"
+
 # --- Environment Variables ---
 
 [vars]

@@ -34,6 +34,7 @@ All locale URLs use **path-based** format: `seekingtex.com/fr/products`, `seekin
 | Vector DB   | Cloudflare Vectorize (768-dim cosine)                |
 | Admin CMS   | Keystatic (GitHub API-backed)                        |
 | Contact     | Turnstile captcha + AES-256-GCM encryption + Resend email |
+| Asset Storage | Cloudflare R2 (`seekingtex-assets`, custom domain `products.asset.seekingtex.com`) |
 | Deployment  | Cloudflare Workers (`output:'server'`)               |
 | CI/CD       | GitHub Actions                                       |
 | SEO         | astro-seo, @astrojs/sitemap, JSON-LD, GEO AI         |
@@ -500,7 +501,7 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 | Secret                  | Purpose                               |
 | ----------------------- | ------------------------------------- |
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account                    |
-| `CLOUDFLARE_API_TOKEN`  | Workers + Vectorize + AI permissions   |
+| `CLOUDFLARE_API_TOKEN`  | Workers + Vectorize + AI + **R2 (Edit)** permissions |
 | `SESSION_SECRET`        | Session encryption + contact form key |
 
 ### 10.3 Required Cloudflare Resources
@@ -510,12 +511,14 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 | Worker          | `seekingtex`        | Astro site (SSG + SSR)    |
 | Vectorize Index | `ai-index`          | 768-dim cosine similarity |
 | AI Binding      | `AI`                | Workers AI                |
+| R2 Bucket       | `seekingtex-assets` | Product images & static assets |
 
 ### 10.4 DNS
 
 ```
-seekingtex.com  A  (Cloudflare proxied)
-*.seekingtex.com  CNAME  seekingtex.com  (Cloudflare proxied)
+seekingtex.com                      A       (Cloudflare proxied)
+*.seekingtex.com                    CNAME   seekingtex.com (Cloudflare proxied)
+products.asset.seekingtex.com       CNAME   seekingtex-assets.r2.cloudflarestorage.com (Cloudflare proxied)
 ```
 
 ---
