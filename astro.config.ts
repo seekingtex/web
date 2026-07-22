@@ -119,6 +119,11 @@ export default defineConfig({
     remoteBindings: process.env.CI ? false : undefined,
   }),
 
+  session: {
+    driver: 'memory',
+    ttl: 86400,
+  },
+
   integrations: [
     sitemap({
       filter: (page) => !/\/(keystatic|admin|login|api|404|500)(?:\/|$)/.test(page),
