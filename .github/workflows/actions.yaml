@@ -55,11 +55,18 @@ jobs:
         run: |
           yarn wrangler vectorize create ai-index --dimensions=768 --metric=cosine 2>/dev/null || true
 
+      - name: Create SESSION KV namespace if needed
+        run: |
+          yarn wrangler kv:namespace create SESSION 2>/dev/null || echo "KV namespace SESSION already exists or creation skipped"
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: Deploy to Cloudflare Workers
         run: |
           cd dist/server
-          yarn wrangler deploy --config wrangler.ci.json --name seekingtex > /tmp/deploy.log 2>&1
-          rc=$?; cat /tmp/deploy.log; exit $rc
+          yarn wrangler deploy --config wrangler.ci.json --name seekingtex 2>&1 | tee /tmp/deploy.log
+          exit ${PIPESTATUS[0]}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
