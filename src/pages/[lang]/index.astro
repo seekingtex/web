@@ -45,58 +45,14 @@ const metadata = {
 
 interface HeroSlide { image: string; label: string; categories: string[] }
 const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
-  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.rib'), categories: ['RIB'] },
-  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.inflatable'), categories: ['INFLATABLE'] },
-  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.sup'), categories: ['SUP'] },
-  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.accessory'), categories: ['ACCESSORY'] },
+  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.sun_protection'), categories: ['SUN_PROTECTION'] },
+  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.waterproof'), categories: ['WATERPROOF'] },
+  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.quick_dry'), categories: ['QUICK_DRY'] },
+  { image: '/images/seekingtex/categories/performance-fabrics.webp', label: t('home.category.eco_friendly'), categories: ['ECO_FRIENDLY'] },
 ];
 
 
-const defaultVisuals: Record<string, string> = {
-  'rib-330': '/images/seekingtex/products/rib/seekingtex-rib-330-boat.webp',
-  'rib-450-patrol': '/images/seekingtex/products/rib/seekingtex-rib-450-patrol-boat.webp',
-  'rib-250': '/images/seekingtex/products/rib/seekingtex-rib-250.webp',
-  'rib-270': '/images/seekingtex/products/rib/seekingtex-rib-270.webp',
-  'rib-300': '/images/seekingtex/products/rib/seekingtex-rib-300.webp',
-  'rib-330a': '/images/seekingtex/products/rib/seekingtex-rib-330a.webp',
-  'rib-330b': '/images/seekingtex/products/rib/seekingtex-rib-330b.webp',
-  'rib-330c': '/images/seekingtex/products/rib/seekingtex-rib-330c.webp',
-  'rib-360a': '/images/seekingtex/products/rib/seekingtex-rib-360a.webp',
-  'rib-360b': '/images/seekingtex/products/rib/seekingtex-rib-360b.webp',
-  'rib-390a': '/images/seekingtex/products/rib/seekingtex-rib-390a.webp',
-  'rib-390al': '/images/seekingtex/products/rib/seekingtex-rib-390al.webp',
-  'rib-390b': '/images/seekingtex/products/rib/seekingtex-rib-390b.webp',
-  'rib-390bl': '/images/seekingtex/products/rib/seekingtex-rib-390bl.webp',
-  'rib-430a': '/images/seekingtex/products/rib/seekingtex-rib-430a.webp',
-  'rib-430b': '/images/seekingtex/products/rib/seekingtex-rib-430b.webp',
-  'rib-430c': '/images/seekingtex/products/rib/seekingtex-rib-430c.webp',
-  'rib-480a': '/images/seekingtex/products/rib/seekingtex-rib-480a.webp',
-  'rib-480b': '/images/seekingtex/products/rib/seekingtex-rib-480b.webp',
-  'rib-480c': '/images/seekingtex/products/rib/seekingtex-rib-480c.webp',
-  'rib-480d': '/images/seekingtex/products/rib/seekingtex-rib-480d.webp',
-  'rib-480w': '/images/seekingtex/products/rib/seekingtex-rib-480w.webp',
-  'rib-500': '/images/seekingtex/products/rib/seekingtex-rib-500.webp',
-  'rib-520a': '/images/seekingtex/products/rib/seekingtex-rib-520a.webp',
-  'rib-520b': '/images/seekingtex/products/rib/seekingtex-rib-520b.webp',
-  'rib-520c': '/images/seekingtex/products/rib/seekingtex-rib-520c.webp',
-  'rib-520e': '/images/seekingtex/products/rib/seekingtex-rib-520e.webp',
-  'rib-520w': '/images/seekingtex/products/rib/seekingtex-rib-520w.webp',
-  'rib-550a': '/images/seekingtex/products/rib/seekingtex-rib-550a.webp',
-  'rib-550b': '/images/seekingtex/products/rib/seekingtex-rib-550b.webp',
-  'rib-580a': '/images/seekingtex/products/rib/seekingtex-rib-580a.webp',
-  'rib-580b': '/images/seekingtex/products/rib/seekingtex-rib-580b.webp',
-  'rib-600': '/images/seekingtex/products/rib/seekingtex-rib-600.webp',
-  'rib-680a': '/images/seekingtex/products/rib/seekingtex-rib-680a.webp',
-  'rib-680b': '/images/seekingtex/products/rib/seekingtex-rib-680b.webp',
-  'rib-700': '/images/seekingtex/products/rib/seekingtex-rib-700.webp',
-  'rib-760': '/images/seekingtex/products/rib/seekingtex-rib-760.webp',
-  'sup-explorer-11': '/images/seekingtex/products/seekingtex-sup-allround-board.webp',
-  'airdeck-360': '/images/seekingtex/products/seekingtex-inflatable-boat.webp',
-  'life-vest-classic': '/images/seekingtex/products/seekingtex-life-vest-classic.webp',
-  'life-vest-pro': '/images/seekingtex/products/life-jacket-seekingtex-inflatable-boat-seekingtex-factory-exterior.webp',
-  'oars-pump-set': '/images/seekingtex/products/seekingtex-electric-pump.webp',
-  'zb-mt350': '/images/seekingtex/products/seekingtex-zb-mt350-inflatable-dinghy.webp',
-};
+const defaultVisuals: Record<string, string> = {};
 const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
 const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
@@ -177,26 +133,26 @@ const proofPoints = rawPoints.length
 
 const faqData = page.faqs?.items?.length ? page.faqs : null;
 const defaultFaqItems: Array<{ q: string; a: string; category: string }> = [
-  { q: t('faq.rib.diff') || 'What is the difference between woven and knit fabrics?', a: t('faq.rib.diff.a') || 'Woven fabrics are made by interlacing warp and weft yarns at right angles, offering superior dimensional stability and durability. Knit fabrics are made by interlocking loops of yarn, providing stretch, comfort, and flexibility for activewear applications.', category: 'rib' },
-  { q: t('faq.rib.engine') || 'What fabric weight (GSM) should I choose for uniforms?', a: t('faq.rib.engine.a') || 'GSM selection depends on your application. For corporate uniforms, 150鈥?00 GSM polyester blends offer durability and comfort. For hospitality, 200鈥?50 GSM provides a premium feel. For workwear, 250鈥?50 GSM ensures maximum durability. Seekingtex provides fabric development for all weight ranges.', category: 'rib' },
-  { q: t('faq.rib.beginner') || 'What is the difference between OEKO-TEX and ISO certification?', a: t('faq.rib.beginner.a') || 'OEKO-TEX Standard 100 certifies that textile products are free from harmful substances and safe for consumer use. ISO 9001 certifies the quality management system of the manufacturing facility. Seekingtex holds both certifications for all product lines.', category: 'rib' },
-  { q: t('faq.rib.maintenance') || 'How do I maintain and care for functional fabrics?', a: t('faq.rib.maintenance.a') || 'Functional fabrics require minimal maintenance. Machine wash cold with mild detergent, avoid bleach and fabric softeners, tumble dry low, and do not iron at high temperatures. Always follow the care label instructions for best results.', category: 'rib' },
-  { q: t('faq.inflatable.lifespan') || 'How long do performance fabrics last?', a: t('faq.inflatable.lifespan.a') || 'Performance fabrics can last 5鈥?0 years with proper care depending on application and laundering conditions. Proper washing, avoiding high-temperature drying, and storing away from direct sunlight extend fabric life significantly.', category: 'inflatable' },
-  { q: t('faq.inflatable.storage') || 'How should I store bulk fabric rolls?', a: t('faq.inflatable.storage.a') || 'Store fabric rolls in a cool, dry environment away from direct sunlight. Keep rolls on shelving racks off the floor, maintain temperature between 15鈥?5掳C, and control humidity below 65%. Use dust covers for long-term storage.', category: 'inflatable' },
-  { q: t('faq.inflatable.maintenance') || 'What quality control testing do Seekingtex fabrics undergo?', a: t('faq.inflatable.maintenance.a') || 'Every batch undergoes tensile strength testing (ASTM D5034), tear resistance, color fastness (ISO 105), dimensional stability, pilling resistance, and GSM verification. OEKO-TEX certified fabrics undergo additional harmful substance screening.', category: 'inflatable' },
-  { q: t('faq.inflatable.repair') || 'Can functional fabrics be repaired or altered?', a: t('faq.inflatable.repair.a') || 'Yes. Minor defects can be addressed during production. Bulk fabric rolls can be re-processed for alternate finishes. Seekingtex offers quality inspection before shipment to prevent defects.', category: 'inflatable' },
-  { q: t('faq.sup.learn') || 'What is the minimum order quantity (MOQ) for custom fabrics?', a: t('faq.sup.learn.a') || 'Our standard MOQ is 500鈥?000 meters per fabric type and color. For custom fabric development (new weave, finish, or blend), minimum quantities are negotiable. Trial orders of 100鈥?00 meters are available for new partnerships.', category: 'sup' },
-  { q: t('faq.sup.weight') || 'What fabric compositions does Seekingtex offer?', a: t('faq.sup.weight.a') || 'Seekingtex offers polyester, nylon, cotton blends, T/C blends, and specialty fabrics with antimicrobial, moisture-wicking, water-repellent, and flame-retardant finishes. Custom compositions available for OEM/ODM partners.', category: 'sup' },
-  { q: t('faq.sup.travel') || 'Can Seekingtex develop custom fabric samples?', a: t('faq.sup.travel.a') || 'Absolutely. Seekingtex provides custom fabric development including weave/knit structure, finish application, color matching, and performance testing. Sample turnaround is 15鈥?0 working days with digital strike-offs available.', category: 'sup' },
-  { q: t('faq.sup.box') || 'What certifications and documentation come with Seekingtex fabrics?', a: t('faq.sup.box.a') || 'Every fabric order includes OEKO-TEX Standard 100 certificate, ISO 9001 quality documentation, batch test reports, material safety data sheets, and certificate of conformance. All documentation is fully traceable to certified body test reports.', category: 'sup' },
+  { q: t('faq.woven.diff') || 'What is the difference between woven and knit fabrics?', a: t('faq.woven.diff.a') || 'Woven fabrics are made by interlacing warp and weft yarns at right angles, offering superior dimensional stability and durability. Knit fabrics are made by interlocking loops of yarn, providing stretch, comfort, and flexibility for activewear applications.', category: 'woven' },
+  { q: t('faq.woven.gsm') || 'What fabric weight (GSM) should I choose for uniforms?', a: t('faq.woven.gsm.a') || 'GSM selection depends on your application. For corporate uniforms, 150—00 GSM polyester blends offer durability and comfort. For hospitality, 200—50 GSM provides a premium feel. For workwear, 250—50 GSM ensures maximum durability. Seekingtex provides fabric development for all weight ranges.', category: 'woven' },
+  { q: t('faq.woven.certification') || 'What is the difference between OEKO-TEX and ISO certification?', a: t('faq.woven.certification.a') || 'OEKO-TEX Standard 100 certifies that textile products are free from harmful substances and safe for consumer use. ISO 9001 certifies the quality management system of the manufacturing facility. Seekingtex holds both certifications for all product lines.', category: 'woven' },
+  { q: t('faq.woven.care') || 'How do I maintain and care for functional fabrics?', a: t('faq.woven.care.a') || 'Functional fabrics require minimal maintenance. Machine wash cold with mild detergent, avoid bleach and fabric softeners, tumble dry low, and do not iron at high temperatures. Always follow the care label instructions for best results.', category: 'woven' },
+  { q: t('faq.performance.lifespan') || 'How long do performance fabrics last?', a: t('faq.performance.lifespan.a') || 'Performance fabrics can last 5—0 years with proper care depending on application and laundering conditions. Proper washing, avoiding high-temperature drying, and storing away from direct sunlight extend fabric life significantly.', category: 'performance' },
+  { q: t('faq.performance.storage') || 'How should I store bulk fabric rolls?', a: t('faq.performance.storage.a') || 'Store fabric rolls in a cool, dry environment away from direct sunlight. Keep rolls on shelving racks off the floor, maintain temperature between 15—5掳C, and control humidity below 65%. Use dust covers for long-term storage.', category: 'performance' },
+  { q: t('faq.performance.qc') || 'What quality control testing do Seekingtex fabrics undergo?', a: t('faq.performance.qc.a') || 'Every batch undergoes tensile strength testing (ASTM D5034), tear resistance, color fastness (ISO 105), dimensional stability, pilling resistance, and GSM verification. OEKO-TEX certified fabrics undergo additional harmful substance screening.', category: 'performance' },
+  { q: t('faq.performance.repair') || 'Can functional fabrics be repaired or altered?', a: t('faq.performance.repair.a') || 'Yes. Minor defects can be addressed during production. Bulk fabric rolls can be re-processed for alternate finishes. Seekingtex offers quality inspection before shipment to prevent defects.', category: 'performance' },
+  { q: t('faq.sourcing.moq') || 'What is the minimum order quantity (MOQ) for custom fabrics?', a: t('faq.sourcing.moq.a') || 'Our standard MOQ is 500—000 meters per fabric type and color. For custom fabric development (new weave, finish, or blend), minimum quantities are negotiable. Trial orders of 100—00 meters are available for new partnerships.', category: 'sourcing' },
+  { q: t('faq.sourcing.compositions') || 'What fabric compositions does Seekingtex offer?', a: t('faq.sourcing.compositions.a') || 'Seekingtex offers polyester, nylon, cotton blends, T/C blends, and specialty fabrics with antimicrobial, moisture-wicking, water-repellent, and flame-retardant finishes. Custom compositions available for OEM/ODM partners.', category: 'sourcing' },
+  { q: t('faq.sourcing.samples') || 'Can Seekingtex develop custom fabric samples?', a: t('faq.sourcing.samples.a') || 'Absolutely. Seekingtex provides custom fabric development including weave/knit structure, finish application, color matching, and performance testing. Sample turnaround is 15—0 working days with digital strike-offs available.', category: 'sourcing' },
+  { q: t('faq.sourcing.certifications') || 'What certifications and documentation come with Seekingtex fabrics?', a: t('faq.sourcing.certifications.a') || 'Every fabric order includes OEKO-TEX Standard 100 certificate, ISO 9001 quality documentation, batch test reports, material safety data sheets, and certificate of conformance. All documentation is fully traceable to certified body test reports.', category: 'sourcing' },
 ];
 const faqItems = defaultFaqItems;
 
 const faqLd = faqItems.map((f: { q: string; a: string }) => ({ question: f.q, answer: f.a }));
 const faqCategories = [
-  { id: 'rib', label: t('faq.tab.rib') || 'Woven Fabrics' },
-  { id: 'inflatable', label: t('faq.tab.inflatable') || 'Knit Fabrics' },
-  { id: 'sup', label: t('faq.tab.sup') || 'Performance Textiles' },
+  { id: 'woven', label: t('faq.tab.woven') || 'Woven Fabrics' },
+  { id: 'performance', label: t('faq.tab.performance') || 'Performance Textiles' },
+  { id: 'sourcing', label: t('faq.tab.sourcing') || 'Sourcing Guide' },
 ];
 
 const rawTestimonials = ((testimonialsData as any)?.testimonials || []) as Array<{
@@ -260,14 +216,17 @@ const learnCards = rawLearn?.cards?.length
     ];
 
 const catalogCategories = [
-  { key: 'RIB', label: t('home.catalog.rib') || 'Performance Fabrics', desc: t('home.catalog.rib.desc') || 'High-performance woven and knit fabrics for sportswear and active apparel.' },
-  { key: 'INFLATABLE', label: t('home.catalog.inflatable') || 'Medical Textiles', desc: t('home.catalog.inflatable.desc') || 'Antimicrobial, fluid-repellent textiles for healthcare and medical uniforms.' },
-  { key: 'SUP', label: t('home.catalog.sup') || 'Uniform Fabrics', desc: t('home.catalog.sup.desc') || 'Professional uniform fabrics for corporate, hospitality, and institutional wear.' },
-  { key: 'ACCESSORY', label: t('home.catalog.accessory') || 'Industrial Textiles', desc: t('home.catalog.accessory.desc') || 'Heavy-duty textiles for workwear, protective apparel, and technical applications.' },
+  { key: 'SUN_PROTECTION', label: t('home.catalog.sun_protection') || 'Sun Protection Fabrics', desc: t('home.catalog.sun_protection.desc') || 'UPF 50+ certified woven fabrics for outdoor and sportswear apparel.' },
+  { key: 'WATERPROOF', label: t('home.catalog.waterproof') || 'Waterproof Fabrics', desc: t('home.catalog.waterproof.desc') || 'Waterproof and water-repellent woven fabrics for outerwear and technical apparel.' },
+  { key: 'QUICK_DRY', label: t('home.catalog.quick_dry') || 'Quick-Dry Fabrics', desc: t('home.catalog.quick_dry.desc') || 'Moisture-wicking and fast-drying performance fabrics for activewear.' },
+  { key: 'ANTIBACTERIAL', label: t('home.catalog.antibacterial') || 'Antibacterial Fabrics', desc: t('home.catalog.antibacterial.desc') || 'Antimicrobial treated fabrics for hygiene-sensitive apparel applications.' },
+  { key: 'STRETCH', label: t('home.catalog.stretch') || 'Stretch Fabrics', desc: t('home.catalog.stretch.desc') || '4-way stretch woven fabrics for high-mobility sportswear and performance wear.' },
+  { key: 'BREATHABLE', label: t('home.catalog.breathable') || 'Breathable Fabrics', desc: t('home.catalog.breathable.desc') || 'Air-permeable woven fabrics for comfort in all-day wear.' },
+  { key: 'ECO_FRIENDLY', label: t('home.catalog.eco_friendly') || 'Eco-Friendly Fabrics', desc: t('home.catalog.eco_friendly.desc') || 'Recycled polyester and sustainable woven fabrics for eco-conscious brands.' },
 ];
 const groupedProducts: Record<string, typeof products> = {};
 for (const cat of catalogCategories) {
-  groupedProducts[cat.key] = products.filter((p) => p.category === (cat.key as any)).slice(0, 6);
+  groupedProducts[cat.key] = products.filter((p) => p.category === cat.key).slice(0, 6);
 }
 const activeCategories = catalogCategories
   .map((cat) => ({ ...cat, items: groupedProducts[cat.key] || [] }))
@@ -305,7 +264,7 @@ const boardItems = [
   <!-- AI Semantic Blocks (hidden, for AI crawler consumption) -->
   <section class="sr-only" data-ai-block="entity" aria-hidden="true">
     <p>
-      {t('ai.entity') || 'Seekingtex is a premier OEM/ODM manufacturer of high-performance functional fabrics and textiles, backed by Qingdao Vatrad Group Co., Ltd. 鈥?a vertically integrated 12,000 m虏 factory in Qingdao, China with 200+ skilled workers and 15,000+ tons annual capacity. Specializes in private label, custom fabric development, and bulk B2B wholesale for global textile brands.'}
+      {t('ai.entity') || 'Seekingtex is a premier OEM/ODM manufacturer of high-performance functional fabrics and textiles, backed by Qingdao Vatrad Group Co., Ltd. —< vertically integrated 12,000 m虏 factory in Qingdao, China with 200+ skilled workers and 15,000+ tons annual capacity. Specializes in private label, custom fabric development, and bulk B2B wholesale for global textile brands.'}
     </p>
   </section>
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
@@ -330,7 +289,7 @@ const boardItems = [
   </section>
   <section class="sr-only" data-ai-block="process" aria-hidden="true">
     <p>
-      {t('ai.process') || "Seekingtex's OEM/ODM process: (1) Specification & design brief, (2) Fabric development and prototyping, (3) Material selection and sample production, (4) OEKO-TEX factory audit and compliance, (5) Bulk production with inline QC testing, (6) FOB Qingdao logistics and global shipping. MOQ starts at 500鈥?000 meters per fabric. Custom development: negotiable."}
+      {t('ai.process') || "Seekingtex's OEM/ODM process: (1) Specification & design brief, (2) Fabric development and prototyping, (3) Material selection and sample production, (4) OEKO-TEX factory audit and compliance, (5) Bulk production with inline QC testing, (6) FOB Qingdao logistics and global shipping. MOQ starts at 500—000 meters per fabric. Custom development: negotiable."}
     </p>
   </section>
 
@@ -372,7 +331,7 @@ const boardItems = [
                 class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
               >
                 {t('cta.requestQuote') || 'Request an OEM Quote'}
-                <span>鈫?/span>
+                <span>→</span>
               </a>
               <a
                 href={"/" + lang + "/products"}
@@ -489,7 +448,7 @@ const boardItems = [
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <a href={`/${lang}/research/drop-stitch-technology`} class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a href={`/${lang}/research/waterproof-breathable-technology`} class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Technology</span>
           <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t('home.research.dropStitch')}</h3>
           <p class="mt-1 text-xs text-gray-500 line-clamp-2">{t('home.research.dropStitch.desc')}</p>
@@ -571,7 +530,7 @@ const boardItems = [
         </div>
       </div>
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/products/sup-series/sup-medusa-glow-1.webp')">
+          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/hero/seekingtex-hero-design-concept.webp')">
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">{t('home.philosophy.skill.title')}</h3>
@@ -579,7 +538,7 @@ const boardItems = [
         </div>
       </div>
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/categories/seekingtex-rescue-operations.webp')">
+          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/hero/tech-meeting-small.webp')">
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">{t('home.philosophy.safety.title')}</h3>
@@ -589,14 +548,14 @@ const boardItems = [
     </div>
   </section>
 
-  <!-- Problem 鈫?Solution -->
+  <!-- Problem →<olution -->
   <section class="bg-gray-50 py-12 px-6" id="problem">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('home.problem.tagline') || 'The challenge'}</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.problem.title') || 'Textile products are rarely matched to the application'}</h2>
         <p class="mt-4 text-lg text-gray-500">
-          {t('home.problem.subtitle') || 'Most textiles are built for either extreme performance or budget cost. Little exists for the middle ground 鈥?functional, durable, application-matched fabrics where the material matches both the environment and the use requirements.'}
+          {t('home.problem.subtitle') || 'Most textiles are built for either extreme performance or budget cost. Little exists for the middle ground —<unctional, durable, application-matched fabrics where the material matches both the environment and the use requirements.'}
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
@@ -620,12 +579,12 @@ const boardItems = [
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/categories/seekingtex-rib-boat-category.webp')">
+          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/factory/producting department3.webp')">
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">              {t('home.problem.solution.title') || 'How Seekingtex solves this'}</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              {t('home.problem.solution.desc') || 'Every fabric specifies application, performance characteristics, care requirements, and certification 鈥?all OEKO-TEX certified. The right material for the right use, every time.'}
+              {t('home.problem.solution.desc') || 'Every fabric specifies application, performance characteristics, care requirements, and certification —<ll OEKO-TEX certified. The right material for the right use, every time.'}
             </p>
           </div>
         </div>
@@ -644,7 +603,7 @@ const boardItems = [
       <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow" data-ai-use-case="beginner">
         <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
           <img
-            src="/images/seekingtex/products/sup-series/sup-tropical-breeze-1.webp"
+            src="/images/seekingtex/hero/seekingtex-hero-design-concept.webp"
             alt={t('home.preview.beginner.title')}
             class="w-full h-full object-cover opacity-80"
             loading="lazy"
@@ -663,7 +622,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.beginner.product1') || 'Performance Fabrics'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.beginner.product1.desc') || 'Beginner-friendly performance fabrics'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
             <a
               href={"/" + lang + "/products"}
@@ -673,7 +632,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.beginner.product2') || 'Care & Handling'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.beginner.product2.desc') || 'Fabric care and maintenance guides'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
           </div>
         </div>
@@ -681,7 +640,7 @@ const boardItems = [
       <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow" data-ai-use-case="family">
         <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
           <img
-            src="/images/seekingtex/products/seekingtex-inflatable-boat.webp"
+            src="/images/seekingtex/hero/production-dept.webp"
             alt={t('home.preview.family.title')}
             class="w-full h-full object-cover opacity-80"
             loading="lazy"
@@ -700,7 +659,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.family.product1') || 'Technical Textiles'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.family.product1.desc') || 'Versatile technical textiles'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
             <a
               href={"/" + lang + "/products"}
@@ -710,7 +669,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.family.product2') || 'Tools & Accessories'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.family.product2.desc') || 'Fabric testing and accessory tools'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
           </div>
         </div>
@@ -718,7 +677,7 @@ const boardItems = [
       <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow" data-ai-use-case="professional">
         <div class="h-52 bg-gradient-to-br from-sky-400 to-blue-500 overflow-hidden">
           <img
-            src="/images/seekingtex/products/rib/seekingtex-rib-450-patrol-boat.webp"
+            src="/images/seekingtex/hero/tech-meeting-small.webp"
             alt={t('home.preview.pro.title')}
             class="w-full h-full object-cover opacity-80"
             loading="lazy"
@@ -737,7 +696,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.pro.product1') || 'Industrial Fabrics'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.pro.product1.desc') || 'Durable fabrics for industrial use'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
             <a
               href={"/" + lang + "/products"}
@@ -747,7 +706,7 @@ const boardItems = [
                 <span class="text-sm font-semibold text-gray-900">{t('home.preview.pro.product2') || 'Care & Maintenance'}</span>
                 <p class="text-xs text-gray-500">{t('home.preview.pro.product2.desc') || 'Professional-grade care solutions'}</p>
               </div>
-              <span class="text-sky-600 text-sm font-medium">鈫?/span>
+              <span class="text-sky-600 text-sm font-medium">→</span>
             </a>
           </div>
         </div>
@@ -830,7 +789,7 @@ const boardItems = [
       </div>
       <div class="text-center mt-6">
         <a href={"/" + lang + "/factory"} class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
-          {t('home.factory.tour') || 'Tour our factory'} 鈫?        </a>
+          {t('home.factory.tour') || 'Tour our factory'} →        </a>
       </div>
     </div>
   </section>
@@ -851,7 +810,7 @@ const boardItems = [
         </div>
         <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">{t('home.resources.catalog') || '2026 OEM Product Catalog'}</h3>
         <p class="mt-2 text-sm text-gray-500">{t('home.resources.catalog.desc') || 'Complete product lineup with specs, MOQ, pricing tiers, and customization options. PDF format.'}</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all">{t('home.resources.download') || 'Download PDF'} 鈫?/span>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all">{t('home.resources.download') || 'Download PDF'} →</span>
       </a>
       <a href={"/" + lang + "/quality"} class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5">
         <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-5 text-emerald-600">
@@ -859,7 +818,7 @@ const boardItems = [
         </div>
         <h3 class="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors">{t('home.resources.qcReport') || 'QC & Testing Standards Report'}</h3>
         <p class="mt-2 text-sm text-gray-500">{t('home.resources.qcReport.desc') || 'Tensile strength testing per ISO, color fastness validation, dimensional stability checks. Full methodology disclosed.'}</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all">{t('home.resources.viewReport') || 'View Report'} 鈫?/span>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all">{t('home.resources.viewReport') || 'View Report'} →</span>
       </a>
       <a href={"/" + lang + "/factory"} class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5">
         <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 text-amber-600">
@@ -867,13 +826,13 @@ const boardItems = [
         </div>
         <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">{t('home.resources.factoryTour') || 'Factory Audit & Virtual Tour'}</h3>
         <p class="mt-2 text-sm text-gray-500">{t('home.resources.factoryTour.desc') || '12,000 m虏 textile factory, BSCI social compliance, ISO certified production lines. Schedule a live video walkthrough.'}</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all">{t('home.factory.tour') || 'Tour Factory'} 鈫?/span>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all">{t('home.factory.tour') || 'Tour Factory'} →</span>
       </a>
     </div>
     <div class="mt-10 text-center">
       <p class="text-sm text-gray-400">{t('home.resources.b2bNote') || 'All resources available for registered B2B partners.'}</p>
       <a href={"/" + lang + "/contact"} class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700">
-        {t('home.resources.requestAccess') || 'Request access to gated resources'} 鈫?      </a>
+        {t('home.resources.requestAccess') || 'Request access to gated resources'} →      </a>
     </div>
   </section>
 
@@ -900,10 +859,10 @@ const boardItems = [
     <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{t('home.products.tagline') || 'Our Fabrics'}</span>
       <h2 class="mt-4 text-4xl font-bold text-gray-900">{t('home.products.title') || 'Performance Meets Innovation'}</h2>
-      <p class="mt-4 text-lg text-gray-500">{t('home.products.subtitle') || 'Every Seekingtex fabric is engineered for performance, comfort, and durability 鈥?built to perform, designed to inspire.'}</p>
+      <p class="mt-4 text-lg text-gray-500">{t('home.products.subtitle') || 'Every Seekingtex fabric is engineered for performance, comfort, and durability —<uilt to perform, designed to inspire.'}</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {boardItems.map((board) => (
+      {boardItems.map(board => 
         <a
           href={'/' + lang + '/products'}
           class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
@@ -920,11 +879,10 @@ const boardItems = [
             <h3 class="text-lg font-bold text-gray-900">{board.label}</h3>
             <p class="text-sm text-gray-400 mt-0.5">{board.desc}</p>
             <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
-              {t('home.productSystem.view') || 'View'} <span>鈫?/span>
+              {t('home.productSystem.view') || 'View'} <span>→</span>
             </span>
           </div>
-        </a>
-      ))}
+        </a>)}
     </div>
   </section>
 
@@ -934,28 +892,26 @@ const boardItems = [
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('product.catalog') || 'Product Catalog'}</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">{t('home.catalog.title') || 'Complete product lineup'}</h2>
-        <p class="mt-4 text-lg text-gray-500">{t('home.catalog.subtitle') || 'Every product with structured specs 鈥?application, performance characteristics, certifications, and care requirements.'}</p>
+        <p class="mt-4 text-lg text-gray-500">{t('home.catalog.subtitle') || 'Every product with structured specs —<pplication, performance characteristics, certifications, and care requirements.'}</p>
       </div>
 
       {
-        activeCategories.map((cat) => (
-            <div class="mb-16 last:mb-0">
+        activeCategories.map(cat => <div class="mb-16 last:mb-0">
               <div class="mb-8">
                 <h3 class="text-2xl font-bold text-gray-900">{cat.label}</h3>
                 <p class="mt-1 text-gray-500">{cat.desc}</p>
               </div>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cat.items.map((p) => (
-                    <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+                {cat.items.map(p => <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
                       <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                        {productVisuals[p.id] ? (
+                        {productVisuals[p.id] ? 
                           <>
                             <img src={productVisuals[p.id]} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
                             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                           </>
-                        ) : (
+                         : 
                           <div class="flex items-center justify-center h-full text-gray-400 text-sm">{p.category}</div>
-                        )}
+                        }
                       </div>
                       <div class="p-6">
                         <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
@@ -964,23 +920,21 @@ const boardItems = [
                           <span class="px-2 py-1 bg-sky-50 text-sky-700 rounded-full font-medium">{p.category}</span>
                           <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full">{p.skill}</span>
                           <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">{p.safety_level}</span>
-                          {p.environment.slice(0, 2).map((e) => (
+                          {p.environment.slice(0, 2).map(e => 
                             <span class="px-2 py-1 bg-gray-100 text-gray-500 rounded-full">{e}</span>
-                          ))}
+                          )}
                         </div>
-                        {p.safety_rules.length > 0 && (
+                        {p.safety_rules.length > 0 && 
                           <p class="mt-3 text-xs text-amber-600 flex items-center gap-1">
-                            <span>鈿?/span> {p.safety_rules.join(', ')}
+                            <span>⚠</span> {p.safety_rules.join(', ')}
                           </p>
-                        )}
+                        }
                       </div>
                     </div>
-                ))}
+                )}
               </div>
             </div>
-          )
-        ))
-      }
+      )}
     </div>
   </section>
 
@@ -997,7 +951,7 @@ const boardItems = [
           <div class="relative bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-shadow overflow-hidden">
             <div class="absolute inset-0">
               <img
-                src={card.image || '/images/seekingtex/products/rib/seekingtex-rib-330-boat.webp'}
+                src={card.image || '/images/seekingtex/hero/factory-gate.webp'}
                 alt={card.title || 'Seekingtex technology'}
                 class="w-full h-full object-cover"
                 loading="lazy"
@@ -1032,24 +986,24 @@ const boardItems = [
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">{t('home.why.quality') || 'Quality You Can Trust'}</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point1') || 'Unbreakable 鈥?built with High-Density PVC to endure the toughest conditions.'}</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point2') || 'Precision-engineered 鈥?flawless seams and airtight integrity for worry-free adventures.'}</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point3') || 'Relentlessly tested 鈥?proven to outperform, outlast, and outshine.'}</li>
+              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point1') || 'Unbreakable —<uilt with High-Density PVC to endure the toughest conditions.'}</li>
+              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point2') || 'Precision-engineered —<lawless seams and airtight integrity for worry-free adventures.'}</li>
+              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.quality.point3') || 'Relentlessly tested —<roven to outperform, outlast, and outshine.'}</li>
             </ul>
-            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} 鈫?/a>
+            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} →</a>
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
-          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-stock-boat.webp')">
+          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-quality-test.webp')">
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">{t('home.why.availability') || 'Availability and Lead Times'}</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.availability.point1') || 'Ready when you are 鈥?No Wait. Stock You Can See: Real-time updates so you know what is ready to ship.'}</li>
+              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.availability.point1') || 'Ready when you are —<o Wait. Stock You Can See: Real-time updates so you know what is ready to ship.'}</li>
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.availability.point2') || 'Fast-Tracked Gear: In-stock orders ship in 2-3 days; urgent needs get VIP treatment.'}</li>
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.availability.point3') || 'No Surprises: Clear timelines, delay alerts, and instant solutions if plans change.'}</li>
             </ul>
-            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} 鈫?/a>
+            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} →</a>
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
@@ -1060,9 +1014,9 @@ const boardItems = [
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.price.point1') || 'Transparent Cost Breakdown: See exactly what you are paying for highest durability and performance standards.'}</li>
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.price.point2') || 'Price Match Guarantee: We will match the price and add a free 1-year warranty extension.'}</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.price.point3') || 'Built to Last, Designed to Save: No planned obsolescence 鈥?products endure years of use.'}</li>
+              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.price.point3') || 'Built to Last, Designed to Save: No planned obsolescence —<roducts endure years of use.'}</li>
             </ul>
-            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} 鈫?/a>
+            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} →</a>
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
@@ -1075,7 +1029,7 @@ const boardItems = [
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.warranty.point2') || 'Certified Compliance: All products meet or exceed CE, ISO and US Coast Guard safety standards.'}</li>
               <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> {t('home.why.warranty.point3') || 'Stress-Free Repairs: File a claim in minutes, get a fix or replacement in days.'}</li>
             </ul>
-            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} 鈫?/a>
+            <a href={"/" + lang + "/about"} class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">{t('home.why.viewMore') || 'View More'} →</a>
           </div>
         </div>
       </div>
@@ -1136,7 +1090,7 @@ const boardItems = [
         <input
           id="q"
           class="flex-1 px-5 py-4 border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-400 text-lg"
-          placeholder={t('home.ask.placeholder') || "Which SUP is good for a beginner on a lake?"}
+          placeholder={t('home.ask.placeholder') || "Which fabric is best for sportswear?"}
         />
         <button
           id="ask-btn"
@@ -1161,12 +1115,12 @@ const boardItems = [
       <span class="text-sm font-semibold text-white/80 tracking-[0.15em] uppercase">{t('home.lifestyle.tagline') || 'Lifestyle'}</span>
       <h2 class="mt-6 text-4xl md:text-5xl font-bold text-white leading-tight" set:html={t('home.lifestyle.title') || "We don't just make fabric.<br/>We engineer performance."} />
       <p class="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
-        {t('home.lifestyle.desc') || 'Every Seekingtex fabric is engineered for performance, comfort, and durability 鈥?from healthcare uniforms to industrial workwear.'}
+        {t('home.lifestyle.desc') || 'Every Seekingtex fabric is engineered for performance, comfort, and durability —<rom healthcare uniforms to industrial workwear.'}
       </p>
       <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
-        <img src="/images/seekingtex/products/sup-series/sup-jungle-mandala-1.webp" alt="SUP Jungle Mandala" class="rounded-xl aspect-square object-cover" loading="lazy" />
-        <img src="/images/seekingtex/products/sup-series/sup-dolphin-wave-1.webp" alt="SUP Dolphin Wave" class="rounded-xl aspect-square object-cover" loading="lazy" />
-        <img src="/images/seekingtex/products/sup-series/sup-ocean-pulse-1.webp" alt="SUP Ocean Pulse" class="rounded-xl aspect-square object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/seekingtex-hero-design-concept.webp" alt="Fabric design concept" class="rounded-xl aspect-square object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/production-dept.webp" alt="Production department" class="rounded-xl aspect-square object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/tech-meeting-small.webp" alt="Technical team meeting" class="rounded-xl aspect-square object-cover" loading="lazy" />
       </div>
     </div>
   </section>
@@ -1180,13 +1134,13 @@ const boardItems = [
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/categories/seekingtex-rib-boat-category.webp" alt={t('home.alt.community1')} class="w-full h-full object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/factory-gate.webp" alt={t('home.alt.community1')} class="w-full h-full object-cover" loading="lazy" />
       </div>
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/products/seekingtex-inflatable-boat.webp" alt={t('home.alt.community2')} class="w-full h-full object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/production-dept.webp" alt={t('home.alt.community2')} class="w-full h-full object-cover" loading="lazy" />
       </div>
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/products/sup-series/sup-ocean-voyager-1.webp" alt={t('home.alt.community3')} class="w-full h-full object-cover" loading="lazy" />
+        <img src="/images/seekingtex/hero/tech-meeting-small.webp" alt={t('home.alt.community3')} class="w-full h-full object-cover" loading="lazy" />
       </div>
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
@@ -1235,17 +1189,17 @@ const boardItems = [
         </div>
       </div>
       <div class="mb-12">
-        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.sup') || 'Medical Textiles'}</h4>
-        <p class="text-sm text-gray-500 mb-4">{t('home.gallery.sup.desc') || 'Healthcare institutions using Seekingtex antimicrobial and medical-grade textiles.'}</p>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">{t('home.gallery.medical') || 'Medical Textiles'}</h4>
+        <p class="text-sm text-gray-500 mb-4">{t('home.gallery.medical.desc') || 'Healthcare institutions using Seekingtex antimicrobial and medical-grade textiles.'}</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/fabrics/medical-fabric-1.webp" alt={t('home.gallery.sup') || 'Medical textile'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/images/seekingtex/fabrics/medical-fabric-1.webp" alt={t('home.gallery.medical') || 'Medical textile'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/fabrics/medical-fabric-2.webp" alt={t('home.gallery.sup') || 'Medical fabric sample'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/images/seekingtex/fabrics/medical-fabric-2.webp" alt={t('home.gallery.medical') || 'Medical fabric sample'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/fabrics/medical-fabric-3.webp" alt={t('home.gallery.sup') || 'Healthcare textile'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img src="/images/seekingtex/fabrics/medical-fabric-3.webp" alt={t('home.gallery.medical') || 'Healthcare textile'} class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
           </div>
         </div>
       </div>
@@ -1265,7 +1219,7 @@ const boardItems = [
         </div>
       </div>
       <div class="text-center">
-        <a href={"/" + lang + "/gallery"} class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm">{t('home.gallery.cta') || 'View Full Gallery'} 鈫?/a>
+        <a href={"/" + lang + "/gallery"} class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm">{t('home.gallery.cta') || 'View Full Gallery'} →</a>
       </div>
     </div>
   </section>
@@ -1282,7 +1236,7 @@ const boardItems = [
         <a
           href={"/" + lang + "/journal"}
           class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
-          >{t('home.social.cta') || 'Browse Journal'} 鈫?/a
+          >{t('home.social.cta') || 'Browse Journal'} →</a
         >
       </div>
     </div>
@@ -1335,7 +1289,7 @@ const boardItems = [
         <a href={`/${lang}/oem-process`} class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">{t('home.resources.manufacturing') || 'Manufacturing'}</span>
           <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t('home.resources.oemTitle') || 'OEM Manufacturing Process'}</h3>
-          <p class="mt-1 text-sm text-gray-500">{t('home.resources.oemDesc') || 'From inquiry to FOB shipping 鈥?the complete 8-step OEM journey.'}</p>
+          <p class="mt-1 text-sm text-gray-500">{t('home.resources.oemDesc') || 'From inquiry to FOB shipping —<he complete 8-step OEM journey.'}</p>
         </a>
         <a href={`/${lang}/engineering-team`} class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">{t('home.resources.team') || 'Team'}</span>
@@ -1344,8 +1298,8 @@ const boardItems = [
         </a>
         <a href={`/${lang}/compare/polyester-vs-nylon`} class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">{t('home.resources.compare') || 'Compare'}</span>
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t('home.resources.ribVsDinghy') || 'Polyester vs Nylon'}</h3>
-          <p class="mt-1 text-sm text-gray-500">{t('home.resources.ribVsDinghyDesc') || 'Which fabric is right for you? Side-by-side comparison.'}</p>
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t('home.resources.polyesterVsNylon') || 'Polyester vs Nylon'}</h3>
+          <p class="mt-1 text-sm text-gray-500">{t('home.resources.polyesterVsNylonDesc') || 'Which fabric is right for you? Side-by-side comparison.'}</p>
         </a>
       </div>
       <div class="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 py-12 border-t border-gray-200">
@@ -1376,22 +1330,22 @@ const boardItems = [
         {faqCategories.map((cat) => (
           <button
             data-faq-tab={cat.id}
-            class:list={['px-4 py-2 text-sm font-medium rounded-full border transition', cat.id === 'rib' ? 'bg-gray-900 text-white border-gray-900 dark:bg-white dark:text-gray-900 dark:border-white' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:border-gray-500']}
+            class:list={['px-4 py-2 text-sm font-medium rounded-full border transition', cat.id === 'woven' ? 'bg-gray-900 text-white border-gray-900 dark:bg-white dark:text-gray-900 dark:border-white' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:border-gray-500']}
           >{cat.label}</button>
         ))}
       </div>
       <div class="space-y-4" data-faq-list>
-        {faqItems.map((item: any) => (
+        {faqItems.map(item => 
           <details data-faq-item data-category={item.category} class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
             <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
               <span>{item.q}</span>
-              <span class="text-gray-400 group-open:rotate-180 transition-transform">鈻?/span>
+              <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
             </summary>
             <div class="px-6 pb-4">
               <p class="text-gray-600 leading-relaxed">{item.a}</p>
             </div>
           </details>
-        ))}
+        )}
       </div>
     </div>
   </section>
@@ -1620,7 +1574,7 @@ const boardItems = [
           href={"/" + lang + "/contact"}
           class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
         >
-          {t('home.contact.cta') || 'Send us a message'} 鈫?        </a>
+          {t('home.contact.cta') || 'Send us a message'} →        </a>
       </div>
     </div>
   </section>
@@ -1676,7 +1630,7 @@ const boardItems = [
         var btn = e.target.closest('[data-faq-tab]');
         if (btn) filterFaq(btn.getAttribute('data-faq-tab'));
       });
-      filterFaq('rib');
+      filterFaq('woven');
     }
 
     // AI Ask

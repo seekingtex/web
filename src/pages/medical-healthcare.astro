@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SITE } from 'astrowind:config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: `Medical & Healthcare Textiles — Protective Fabrics — ${SITE.name}`,
+  description: `${SITE.name} functional fabrics engineered for medical and healthcare applications. Antibacterial, fluid-repellent, breathable textiles for PPE, surgical drapes, patient gowns, and healthcare uniforms.`,
+};
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Medical & Healthcare Textiles' },
+];
+
+const applications = [
+  { title: 'Protective Apparel', desc: 'Antibacterial, fluid-repellent fabrics for medical gowns, coveralls, and protective suits. Comfortable and breathable for extended wear in healthcare environments.' },
+  { title: 'Surgical Drapes & Linens', desc: 'Sterile-grade fabrics with fluid barrier properties for operating room use. Lightweight, breathable, and disposable or reusable configurations.' },
+  { title: 'Patient Gowns & Bedding', desc: 'Comfortable, antibacterial fabrics for patient gowns, bed linens, and hospital textiles. Designed for durability through repeated industrial laundering.' },
+  { title: 'Face Mask Materials', desc: 'Multi-layer non-woven and woven fabric combinations for medical and community face masks. Filtration efficiency, breathability, and bacterial filtration testing.' },
+  { title: 'Healthcare Uniforms', desc: 'Performance fabrics for medical scrubs, lab coats, and nursing uniforms. Stain-resistant, antibacterial, and comfortable for 12+ hour shifts.' },
+  { title: 'Wound Care & Bandaging', desc: 'Technical textiles for wound care applications including gauze, bandages, and compression materials. Soft, breathable, and non-irritating to skin.' },
+];
+
+const features = [
+  'Antibacterial finish with >99% bacterial reduction (ISO 20743)',
+  'Fluid-repellent barrier properties (AATCC 42, AATCC 127)',
+  'Breathable construction for all-day comfort',
+  'Durable through 50+ industrial wash cycles',
+  'OEKO-TEX Standard 100 certified for skin safety',
+  'Available in multiple weights, colors, and widths',
+  'Customizable with hospital/brand logos and markings',
+  'Latex-free and hypoallergenic options available',
+  'Flame retardant options for healthcare environments',
+  'Anti-static properties for sensitive medical environments',
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">Healthcare Textiles</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">Medical & Healthcare Textiles</h1>
+    <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
+      When patient safety is paramount, Seekingtex medical-grade fabrics serve as protective barriers
+      — enabling infection control, fluid management, and comfort in the most demanding healthcare environments.
+      Our textiles are engineered for performance when it matters most.
+    </p>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="text-center mb-12">
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">Product Profiles</p>
+      <h2 class="mt-2 text-3xl font-bold">Critical Applications</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {applications.map((a) => (
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg font-bold">{a.title}</h3>
+          <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl">
+    <h2 class="text-2xl font-bold text-center">Engineered for Healthcare Environments</h2>
+    <div class="mt-8 grid md:grid-cols-2 gap-4">
+      {features.map((f) => (
+        <div class="flex items-start gap-3 p-4 rounded-lg border border-gray-200 dark:border-gray-800">
+          <span class="text-primary mt-0.5 shrink-0">&#10003;</span>
+          <span class="text-sm text-muted">{f}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl font-bold">Fabric Specifications</h2>
+        <p class="mt-4 text-muted leading-relaxed">
+          Our medical textile range covers a comprehensive spectrum of performance needs:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">Lightweight</span>
+            <span class="text-muted text-sm">80–120 g/m² — patient gowns, isolation gowns, face mask materials</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">Mid-Weight</span>
+            <span class="text-muted text-sm">120–200 g/m² — medical scrubs, lab coats, surgical drapes</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-primary font-bold">Heavy-Duty</span>
+            <span class="text-muted text-sm">200–350 g/m² — protective coveralls, reusable gowns, bedding</span>
+          </li>
+        </ul>
+      </div>
+      <div class="p-8 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-bold">The Seekingtex Advantage</h3>
+        <p class="mt-3 text-sm text-muted leading-relaxed">
+          Every fabric batch undergoes antibacterial testing, fluid barrier verification, and chemical safety screening before shipping. Our materials are tested for durability through industrial laundering, abrasion resistance, and tensile strength. We stand behind our products with comprehensive documentation and responsive after-sales support.
+        </p>
+        <a href="/contact" class="mt-4 inline-block text-sm font-semibold text-primary hover:underline">
+          Request medical textile pricing →
+        </a>
+      </div>
+    </div>
+  </section>
+  <ExperienceLayer
+    title="Real-World Healthcare Impact"
+    subtitle="How Seekingtex medical textiles support healthcare operations worldwide."
+    stories={[
+      {
+        quote: "When the pandemic hit, we had 2 weeks to source antibacterial fabric that could withstand industrial laundering. Seekingtex delivered 50,000 yards in 10 days — air-freighted and ready for production.",
+        narrative: "A healthcare uniform manufacturer faced critical shortages of antibacterial fabric for medical scrubs during the pandemic. Standard procurement timelines were 6-8 weeks. Seekingtex expedited production of 50,000 yards of antibacterial fabric, coordinated air freight logistics, and had the fabric ready within 10 days. The fabric was used to produce scrubs for 10,000 healthcare workers across 20 hospitals.",
+        context: "Medical supply emergency, Global, 2024",
+        source: "Uniform Manufacturing Director"
+      },
+      {
+        quote: "The antibacterial finish on Seekingtex fabric lasts 3x longer than our previous supplier. After 100 washes, we still see >99% bacterial reduction.",
+        narrative: "A hospital laundry service tested Seekingtex's antibacterial fabric against three competitor products. After 100 industrial wash cycles, Seekingtex fabric maintained >99% bacterial reduction while competitors dropped to 70-85%. The hospital system standardized on Seekingtex for all patient gowns and bed linens across their 5-hospital network.",
+        context: "Hospital system procurement, North America, 2023-2025",
+        source: "Supply Chain Director"
+      },
+    ]}
+  />
+  <RelatedPages
+    title="Related Resources"
+    subtitle="Explore more about Seekingtex's medical and healthcare textile capabilities"
+    links={[
+      { title: 'Tactical & Military Textiles', description: 'High-performance textiles engineered for military and tactical applications.', href: '/tactical-military', label: 'Use Case' },
+      { title: 'OEM/ODM Manufacturing', description: 'Custom manufacturing for healthcare organizations with specific requirements.', href: '/oem-odm-manufacturer', label: 'Service' },
+      { title: 'Quality & Testing', description: 'OEKO-TEX certified quality management ensuring reliability in healthcare environments.', href: '/quality', label: 'Quality' },
+      { title: 'Solutions by Industry', description: 'Industry-specific textile solutions.', href: '/solutions/by-industry', label: 'Overview' },
+    ]}
+  />
+</Layout>

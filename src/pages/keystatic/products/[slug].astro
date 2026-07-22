@@ -29,7 +29,7 @@ try {
   initial = {
     frontmatter: {
       title: '',
-      category: 'inflatable',
+      category: 'SUN_PROTECTION',
       inStock: true,
       ...parsed.frontmatter,
     },
@@ -42,7 +42,7 @@ try {
 
 <AdminLayout title={`Edit: ${initial.frontmatter.title ?? filename}`} active="products" username={verified?.username}>
   <div class="mb-6">
-    <a href="/keystatic/products" class="text-sm text-gray-500 hover:underline">← Back to Products list</a>
+    <a href="/keystatic/products" class="text-sm text-gray-500 hover:underline">鈫?Back to Products list</a>
     <h1 class="mt-2 text-2xl font-semibold">Edit: {initial.frontmatter.title ?? filename}</h1>
     <p class="mt-1 text-sm text-gray-500 font-mono">{filePath}</p>
   </div>
@@ -153,7 +153,7 @@ try {
         if (description) frontmatter.description = description;
         const image = data.get('image')?.toString().trim();
         if (image) frontmatter.image = image;
-        frontmatter.category = data.get('category')?.toString() || 'inflatable';
+        frontmatter.category = data.get('category')?.toString() || 'SUN_PROTECTION';
         if (gallery.length) frontmatter.gallery = gallery;
         if (specs.length) frontmatter.specs = specs;
         if (Object.keys(price).length) frontmatter.price = price;

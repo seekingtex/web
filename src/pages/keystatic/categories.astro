@@ -170,7 +170,7 @@ const keys = Object.keys(defaultData);
         }
 
         const fd = new FormData(form);
-        const keys = ['RIB', 'INFLATABLE', 'SUP', 'ACCESSORY'];
+        const keys = Object.keys(defaultData);
         const data = {};
         for (const key of keys) {
           data[key] = {

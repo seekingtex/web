@@ -1,72 +1,69 @@
 hero:
   tagline: Seekingtex Academy
   title: Learning Center
-  subtitle: Guides and tutorials for every skill level — from functional fabric basics to advanced rescue techniques
+  subtitle: Guides and tutorials for every skill level — from textile basics to advanced fabric technology.
 
 categories:
   - level: Beginner
     color: from-green-500 to-emerald-600
     badge: bg-green-100 text-green-700
     guides:
-      - title: functional fabric Basics
-        desc: Learn the fundamentals of functional fabric expertise — stance, stroke technique, and balance.
-        slug: functional fabric-basics
-      - title: fabric Techniques
-        desc: Forward stroke, sweep stroke, draw stroke, and low brace — master the essential fabric moves.
-        slug: fabric-techniques
-      - title: Safety First
-        desc: Essential safety practices including weather checks, PFD use, leash rules, and self-rescue.
-        slug: safety-first
+      - title: Fabric Basics
+        desc: Learn the fundamentals of textile construction — weaves, knits, yarn types, and fabric weights.
+        slug: fabric-basics
+      - title: Fiber Types Explained
+        desc: Polyester vs nylon vs cotton vs blends — understand fiber properties and how they affect performance.
+        slug: fiber-types-guide
+      - title: Fabric Finishes 101
+        desc: Introduction to functional finishes — DWR, antibacterial, UPF, FR, and how they are applied.
+        slug: fabric-finishes-guide
   - level: Intermediate
     color: from-blue-500 to-indigo-600
     badge: bg-blue-100 text-blue-700
     guides:
-      - title: Touring Essentials
-        desc: Planning multi-hour paddles — navigation, hydration, pacing, and reading wind forecasts.
-        slug: touring-essentials
-      - title: Weather Reading
-        desc: Interpret marine forecasts, identify cloud patterns, and understand wind effects on water.
-        slug: weather-reading
-      - title: Navigation Basics
-        desc: Chart reading, compass use, GPS waypoints, and route planning for coastal fabric expertise.
-        slug: navigation-basics
-      - title: Tidal Awareness
-        desc: Understanding tide cycles, currents, and how they affect launch timing and routing.
-        slug: tidal-awareness
+      - title: Performance Fabric Selection
+        desc: How to choose the right fabric for your application — weight, weave, finish, and performance trade-offs.
+        slug: fabric-selection-guide
+      - title: Understanding Fabric Testing
+        desc: Interpret tensile, tear, hydrostatic head, UPF, and colorfastness test results for informed sourcing decisions.
+        slug: fabric-testing-guide
+      - title: Coating & Lamination Guide
+        desc: PU coating vs acrylic vs silicone vs lamination — understand the differences and choose the right option.
+        slug: coating-lamination-guide
+      - title: Sustainable Textile Basics
+        desc: Recycled fibers, bio-based materials, low-impact dyes, and certifications (GRS, GOTS, bluesign).
+        slug: sustainable-textile-guide
   - level: Advanced
     color: from-purple-500 to-violet-600
     badge: bg-purple-100 text-purple-700
     guides:
-      - title: Multi-Day Trip Planning
-        desc: Expedition logistics — gear selection, food planning, safety protocols, and emergency contacts.
-        slug: multi-day-trip-planning
-      - title: Rescue Techniques
-        desc: Self-rescue, T-rescue, eskimo rescue for performance textiles, and towing protocols for performance conditions.
-        slug: rescue-techniques
-      - title: Night fabric expertise
-        desc: Navigation after dark — lighting requirements, route memory, group communication, and hazard awareness.
-        slug: night-fabric expertise
+      - title: Fabric Engineering
+        desc: Advanced textile engineering — yarn engineering, weave optimization, and performance finish chemistry.
+        slug: fabric-engineering
+      - title: Quality Control Systems
+        desc: Statistical process control, AQL inspection, and quality management systems in textile manufacturing.
+        slug: quality-control-systems
+      - title: OEM Development Process
+        desc: From specification to shipment — how custom fabric development works for apparel brands and manufacturers.
+        slug: oem-development-process
   - level: Maintenance
     color: from-amber-500 to-orange-600
     badge: bg-amber-100 text-amber-700
     guides:
-      - title: Cleaning & Care
-        desc: Freshwater rinsing, UV protection, mildew prevention, and proper drying techniques after every session.
-        slug: cleaning-and-care
-      - title: Storage Guide
-        desc: Best practices for storing high-performance boards and boats — deflation, folding, temperature control, and shelf life.
-        slug: storage-guide
-      - title: Repair Basics
-        desc: Fix small punctures, seam leaks, and valve issues with PVC repair kits and patch techniques.
-        slug: repair-basics
-      - title: Valve Maintenance
-        desc: Identify valve types (Halkey-Roberts, Boston, Leafield), clean debris, and replace faulty stems.
-        slug: valve-maintenance
+      - title: Fabric Care Guide
+        desc: Best practices for washing, drying, and storing performance fabrics to maintain properties and extend lifespan.
+        slug: fabric-care-guide
+      - title: Quality Assurance
+        desc: Understanding textile quality standards, inspection protocols, and how to verify fabric compliance.
+        slug: quality-assurance
+      - title: Certification Guide
+        desc: OEKO-TEX, REACH, GRS, bluesign — what each certification means and how to verify compliance.
+        slug: certification-guide
 
 read_guide: Read guide →
 
 cta:
   title: Not sure where to start?
-  desc: Take our skill assessment quiz to find the right guides and gear for your level.
+  desc: Contact our team for personalized guidance on fabric selection and product development.
   label: Contact us →
   link: /contact

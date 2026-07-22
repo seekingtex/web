@@ -1,40 +1,40 @@
-hero:
-  tagline: 'textile knowledge Knowledge'
+﻿hero:
+  tagline: 'Textile Knowledge'
   title: 'Learn'
   subtitle: |
-    Guides, tutorials, and deep dives 鈥?everything you need to explore<br />
-    water with confidence. From choosing your first functional fabric to mastering advanced techniques.
-  taglineSection: 'Knowledge for every professional. From beginner to professional.'
+    Guides, tutorials, and deep dives — everything you need to master<br />
+    functional fabric technology. From fiber basics to advanced textile engineering.
+  taglineSection: 'Knowledge for every professional. From beginner to expert.'
 
 featured:
   tagline: 'Featured Topics'
   title: 'Start your learning journey'
-  subtitle: 'Whether you are new to textile industry or looking to level up, our guides have you covered.'
+  subtitle: 'Whether you are new to textiles or looking to level up, our guides have you covered.'
   items:
-    - title: 'functional fabric Basics'
-      description: 'Everything a beginner needs to know 鈥?board types, fabric sizing, stance, and first-day tips.'
+    - title: 'Fabric Basics'
+      description: 'Everything a beginner needs to know — yarn types, weaves, knits, and fabric construction fundamentals.'
       icon: 'tabler:lifebuoy'
       href: '/learn/fabrics'
-    - title: 'high-performance vs Hard Board'
-      description: 'Which is right for you? We compare portability, performance, durability, and cost side by side.'
+    - title: 'Woven vs Knit Fabrics'
+      description: 'Which construction is right for you? We compare strength, stretch, breathability, and cost side by side.'
       icon: 'tabler:arrows-left-right'
-      href: '/compare/high-performance-vs-hardboard'
-    - title: 'Water Safety'
-      description: 'Essential safety knowledge every professional should have 鈥?weather, PFDs, self-rescue, and more.'
+      href: '/compare/woven-vs-knit'
+    - title: 'Quality Standards'
+      description: 'Essential quality knowledge every professional should have — testing, certifications, and compliance.'
       icon: 'tabler:shield'
       href: '/learn/quality-standards'
     - title: 'Materials Guide'
-      description: 'PVC vs Hypalon, advanced construction technology, denier ratings 鈥?understand what your gear is made of.'
+      description: 'Polyester vs nylon, functional finishes, denier ratings — understand what your fabric is made of.'
       icon: 'tabler:molecules'
       href: '/learn/materials'
-    - title: 'functional fabric Size Guide'
-      description: 'Find the right board length, width, and volume for your weight, skill, and fabric expertise style.'
+    - title: 'Size Guide'
+      description: 'Find the right fabric weight, width, and specifications for your application and production needs.'
       icon: 'tabler:ruler'
       href: '/size-guide'
-    - title: 'Intermediate Techniques'
-      description: 'Step up your fabric expertise with advanced strokes, turning techniques, and rough-water handling.'
+    - title: 'Textile Technology'
+      description: 'Advanced textile engineering, coating technologies, and smart fabric innovation.'
       icon: 'tabler:waves'
-      href: '/v2/intermediate-techniques'
+      href: '/v2/textile-technology'
 
 categories:
   tagline: 'Categories'
@@ -43,31 +43,31 @@ categories:
   columns:
     - title: 'Beginner'
       items:
-        - 'functional fabric Basics 鈥?start here'
-        - 'high-performance vs Hard Board'
-        - 'Water Safety Essentials'
-        - 'How to Choose Your functional fabric'
-        - 'Pump & Pack Guide'
+        - 'Fabric Basics — start here'
+        - 'Woven vs Knit Fabrics'
+        - 'Quality Standards Essentials'
+        - 'How to Choose Your Fabric'
+        - 'Fiber Types Guide'
     - title: 'Intermediate'
       items:
-        - 'fabric expertise Techniques'
-        - 'high-performance Technology'
+        - 'Textile Technology'
+        - 'Performance Fabric Engineering'
         - 'Materials Reference'
-        - 'PVC vs Hypalon Comparison'
-        - 'advanced construction Core Explained'
+        - 'Coating & Lamination Comparison'
+        - 'Sustainable Textile Basics'
     - title: 'Advanced & Professional'
       items:
-        - 'Fleet Operations'
-        - 'Commercial-Grade Equipment'
-        - 'Safety & Rescue Protocols'
-        - 'Custom Builds & OEM'
+        - 'Industrial Textile Applications'
+        - 'Commercial-Grade Fabric Specs'
+        - 'Quality Control & Certification'
+        - 'Custom Development & OEM'
 
 cta:
   title: 'Still have questions?'
-  subtitle: 'Ask our AI guide for personalized answers about gear, safety, and techniques.'
+  subtitle: 'Ask our team for personalized answers about fabric selection, specifications, and sourcing.'
   actions:
     - variant: primary
-      text: 'Ask the Water Advisor AI'
-      href: '#ai-guide'
+      text: 'Contact us'
+      href: '/contact'
     - text: 'Browse all guides'
       href: '/academy'

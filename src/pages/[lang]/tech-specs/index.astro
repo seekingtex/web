@@ -22,15 +22,18 @@ const metadata = {
 };
 
 const categories: { key: string; label: string; desc: string }[] = [
-  { key: 'RIB', label: t('techspecs.rib'), desc: t('techspecs.ribDesc') },
-  { key: 'INFLATABLE', label: t('techspecs.inflatable'), desc: t('techspecs.inflatableDesc') },
-  { key: 'SUP', label: t('techspecs.sup'), desc: t('techspecs.supDesc') },
-  { key: 'ACCESSORY', label: t('techspecs.accessories'), desc: t('techspecs.accessoriesDesc') },
+  { key: 'SUN_PROTECTION', label: t('techspecs.sunProtection'), desc: t('techspecs.sunProtectionDesc') },
+  { key: 'WATERPROOF', label: t('techspecs.waterproof'), desc: t('techspecs.waterproofDesc') },
+  { key: 'QUICK_DRY', label: t('techspecs.quickDry'), desc: t('techspecs.quickDryDesc') },
+  { key: 'ANTIBACTERIAL', label: t('techspecs.antibacterial'), desc: t('techspecs.antibacterialDesc') },
+  { key: 'STRETCH', label: t('techspecs.stretch'), desc: t('techspecs.stretchDesc') },
+  { key: 'BREATHABLE', label: t('techspecs.breathable'), desc: t('techspecs.breathableDesc') },
+  { key: 'ECO_FRIENDLY', label: t('techspecs.ecoFriendly'), desc: t('techspecs.ecoFriendlyDesc') },
 ];
 
 const catProducts = categories.map((cat) => ({
   ...cat,
-  items: products.filter((p) => p.category === (cat.key as any)),
+  items: products.filter((p) => p.category === cat.key),
 }));
 ---
 
@@ -56,29 +59,25 @@ const catProducts = categories.map((cat) => ({
           <table class="w-full text-sm">
             <thead class="bg-gray-50 dark:bg-slate-800 text-left text-gray-600 dark:text-slate-300">
               <tr>
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramLength')}</th>
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramBeam')}</th>
-                {cat.key === 'RIB' && <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramTubeDiam')}</th>}
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWeight')}</th>
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaxLoad')}</th>
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramCapacity')}</th>
-                {cat.key !== 'SUP' && <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaxEngine')}</th>}
-                {(cat.key === 'RIB' || cat.key === 'INFLATABLE') && <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramMaterial')}</th>}
-                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.paramWarranty')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.productName')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.weight')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.width')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.composition')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.construction')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.finish')}</th>
+                <th class="px-4 py-3 font-semibold whitespace-nowrap">{t('techspecs.certification')}</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 dark:divide-slate-700">
               {cat.items.map((p) => (
                 <tr class="hover:bg-gray-50 dark:hover:bg-slate-800/50">
-                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-100">{p.ai_specs.length || '—'}</td>
-                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.beam || p.ai_specs.width || '—'}</td>
-                  {cat.key === 'RIB' && <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.tube_diameter || '—'}</td>}
+                  <td class="px-4 py-3 font-medium text-gray-900 dark:text-slate-100">{p.name}</td>
                   <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.weight || '—'}</td>
-                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.max_load || '—'}</td>
-                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.capacity || '—'}</td>
-                  {cat.key !== 'SUP' && <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.max_engine || '—'}</td>}
-                  {(cat.key === 'RIB' || cat.key === 'INFLATABLE') && <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.hull || p.ai_specs.tubes || p.ai_specs.material || '—'}</td>}
-                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.warranty || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.width || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.composition || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.construction || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.finish || '—'}</td>
+                  <td class="px-4 py-3 text-gray-500 dark:text-slate-400">{p.ai_specs.certification || '—'}</td>
                 </tr>
               ))}
             </tbody>
@@ -92,14 +91,14 @@ const catProducts = categories.map((cat) => ({
       <p class="text-gray-500 dark:text-slate-400 mb-5 text-sm">{t('techspecs.materialsDesc')}</p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {[
-          { key: 'materialPvc', icon: '\u{1F9F5}', specs: '0.9-1.2 mm, UV stabilized, 2000+ h, -30°C to +70°C' },
-          { key: 'materialHypalon', icon: '\u{1F9F5}', specs: '1.2 mm CSM rubber, ozone resistant, 10+ yr life' },
-          { key: 'materialDropstitch', icon: '\u{1F6E1}\u{FE0F}', specs: '12-15 PSI, 10 cm core, 500+ denier, 1500 N' },
-          { key: 'materialAluminum', icon: '\u{1F3CA}', specs: '5083 alloy, 3 mm plate, welded, anodized' },
-          { key: 'materialFiberglass', icon: '\u{1F680}', specs: 'Hand-laid fiberglass, gelcoat, deep-V, foam' },
+          { key: 'materialPolyester', specs: '100% polyester filament, 30D-600D, various weaves, moisture-wicking, UV-stabilized' },
+          { key: 'materialNylon', specs: '100% nylon 6.6 filament, 20D-840D, ripstop and plain weaves, abrasion-resistant' },
+          { key: 'materialCottonBlend', specs: 'Cotton-polyester blends (65/35, 50/50), twill and poplin weaves, breathable' },
+          { key: 'materialRecycledPolyester', specs: '100% recycled polyester (GRS-certified), 75D-300D, eco-friendly production' },
+          { key: 'materialTencel', specs: 'Tencel/cotton blends, biodegradable, mechanical stretch, soft hand feel' },
+          { key: 'materialCoated', specs: 'PU/TPU coated polyester or nylon, 5000-30000mm hydrostatic head, breathable laminates' },
         ].map((mat) => (
           <div class="p-5 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-            <div class="text-2xl mb-2">{mat.icon}</div>
             <h3 class="font-semibold text-gray-900 dark:text-slate-100">{t('techspecs.' + mat.key)}</h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-slate-400">{t('techspecs.' + mat.key + 'Desc')}</p>
             <div class="mt-3 text-xs font-mono bg-gray-100 dark:bg-slate-700 p-2 rounded text-gray-600 dark:text-slate-300">{mat.specs}</div>

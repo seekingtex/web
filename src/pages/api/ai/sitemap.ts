@@ -3,7 +3,7 @@ import type { APIRoute } from 'astro';
 export const prerender = false;
 
 /**
- * AI Sitemap — returns structured page index for the AI knowledge base.
+ * AI Sitemap 鈥?returns structured page index for the AI knowledge base.
  *
  * This endpoint is consumed by the indexing pipeline (seed-vectorize.js)
  * to discover all pages that should be chunked and embedded.
@@ -11,10 +11,10 @@ export const prerender = false;
  * Extend this as new sections are added to the site.
  */
 export const GET: APIRoute = async ({ locals: _locals }) => {
-  // Static page list — these form the AI knowledge base
+  // Static page list 鈥?these form the AI knowledge base
   const pages = [
     // Main
-    { id: 'home', url: '/', title: 'Seekingtex — Premium Inflatables', section: 'main', type: 'page' },
+    { id: 'home', url: '/', title: 'Seekingtex 鈥?Premium Inflatables', section: 'main', type: 'page' },
     { id: 'about', url: '/about', title: 'About Seekingtex', section: 'main', type: 'page' },
     { id: 'contact', url: '/contact', title: 'Contact', section: 'main', type: 'page' },
 
@@ -84,7 +84,7 @@ export const GET: APIRoute = async ({ locals: _locals }) => {
     // Use Cases
     {
       id: 'use-case-commercial-workboats',
-      url: '/use-cases/commercial-workboats',
+      url: '/use-cases/industrial-textiles',
       title: 'Commercial Workboat Industry Solutions',
       section: 'technology',
       type: 'use-case',

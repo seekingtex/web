@@ -1,0 +1,54 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { articleSchema } from '~/lib/seo/schema';
+import { nodes } from '~/content/graph/nodes';
+import { getPageContent } from '~/i18n/page-content';
+
+const lang = 'en';
+const page = getPageContent(lang, 'medical-healthcare');
+const node = nodes.find((n) => n.id === 'medical-healthcare');
+
+const graphJsonLd = node
+  ? {
+      '@context': 'https://schema.org',
+      '@graph': [
+        articleSchema({
+          headline: page.seo?.headline || 'Medical & Healthcare Textiles 鈥?OEM Manufacturing',
+          description: page.seo?.description || 'Seekingtex manufactures antibacterial, fluid-resistant, and protective fabrics for healthcare applications: medical scrubs, uniforms, protective wear.',
+          datePublished: page.seo?.datePublished || '2024-06-01',
+          dateModified: page.seo?.dateModified || '2026-06-01',
+          author: 'Seekingtex',
+          publisher: 'Seekingtex',
+        }),
+        {
+          '@type': 'Product',
+          name: node?.name?.en || 'Medical & Healthcare Textiles',
+          description: node?.description?.en || 'Antibacterial, fluid-resistant, and protective fabrics engineered for healthcare environments.',
+          brand: { '@type': 'Brand', name: 'Seekingtex' },
+          category: 'Medical & Healthcare Textiles',
+        },
+      ],
+    }
+  : null;
+
+const metadata = {
+  title: page.seo?.headline || 'Medical & Healthcare Textiles 鈥?OEM Manufacturing',
+  description: page.seo?.description || 'Seekingtex manufactures antibacterial, fluid-resistant, and protective fabrics for healthcare applications: medical scrubs, uniforms, protective wear.',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <script slot="before" is:inline type="application/ld+json" set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''} />
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>
+    <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">
+      {page.headline || 'Medical & Healthcare Textile Solutions'}
+    </h1>
+    <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
+      {page.subtitle || 'Seekingtex antibacterial and protective fabrics for medical apparel, healthcare uniforms, and clinical environments.'}
+    </p>
+
+    <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />
+  </section>
+</PageLayout>

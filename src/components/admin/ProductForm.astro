@@ -21,7 +21,7 @@ const tags = Array.isArray(fm.tags) ? (fm.tags as string[]) : [];
 const gallery = Array.isArray(fm.gallery) ? (fm.gallery as Array<{ url: string; alt?: string }>) : [];
 const specs = Array.isArray(fm.specs) ? (fm.specs as Array<{ label: string; value: string }>) : [];
 const price = (fm.price as Record<string, unknown> | undefined) ?? {};
-const category = (fm.category as string) ?? 'inflatable';
+const category = (fm.category as string) ?? 'SUN_PROTECTION';
 ---
 
 <form id="entry-form" class="space-y-6" data-mode={mode}>
@@ -94,10 +94,10 @@ const category = (fm.category as string) ?? 'inflatable';
           name="category"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
         >
-          <option value="rib" selected={category === 'rib'}>RIB Powerboat</option>
-          <option value="inflatable" selected={category === 'inflatable'}>Inflatable</option>
-          <option value="accessory" selected={category === 'accessory'}>Accessory</option>
-          <option value="service" selected={category === 'service'}>Service</option>
+          <option value="SUN_PROTECTION" selected={category === 'SUN_PROTECTION'}>Sun Protection</option>
+          <option value="WATERPROOF" selected={category === 'WATERPROOF'}>Waterproof</option>
+          <option value="QUICK_DRY" selected={category === 'QUICK_DRY'}>Quick-Dry</option>
+          <option value="ECO_FRIENDLY" selected={category === 'ECO_FRIENDLY'}>Eco-Friendly</option>
         </select>
       </div>
       <div>

@@ -24,9 +24,9 @@ const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?
 const products = await getProducts();
 const categories = await getProductCategories();
 const rawCategory = (Astro.url?.searchParams?.get('category') ?? '') as
-  'rib' | 'inflatable' | 'accessory' | 'sup' | '';
+  'SUN_PROTECTION' | 'WATERPROOF' | 'QUICK_DRY' | 'ANTIBACTERIAL' | 'STRETCH' | 'BREATHABLE' | 'ECO_FRIENDLY' | '';
 const activeCategory =
-  rawCategory === 'rib' || rawCategory === 'inflatable' || rawCategory === 'accessory' || rawCategory === 'sup'
+  ['SUN_PROTECTION','WATERPROOF','QUICK_DRY','ANTIBACTERIAL','STRETCH','BREATHABLE','ECO_FRIENDLY'].includes(rawCategory)
     ? rawCategory
     : null;
 const filteredProducts = activeCategory ? products.filter((p) => p.category === (activeCategory as any)) : products;

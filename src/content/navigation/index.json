@@ -5,71 +5,51 @@
       {
         "text": "Products",
         "links": [
-          { "text": "RIB Boats", "href": "/ribboat" },
-          { "text": "Inflatable Boats", "href": "/inflatableboat" },
-          { "text": "SUP Boards", "href": "/supboard" },
-          { "text": "Accessories", "href": "/accessory" },
-          { "text": "Compare", "href": "/products/compare" },
-          { "text": "SUP vs Kayak", "href": "/compare/sup-vs-kayak" },
-          { "text": "Inflatable vs Hardboard", "href": "/compare/inflatable-vs-hardboard" }
+          { "text": "Sun Protection Fabrics", "href": "/sun-protection-fabric" },
+          { "text": "Waterproof Fabrics", "href": "/waterproof-fabric" },
+          { "text": "Quick-Dry Fabrics", "href": "/quick-dry-fabric" },
+          { "text": "Antibacterial Fabrics", "href": "/antibacterial-fabric" },
+          { "text": "Stretch Fabrics", "href": "/stretch-fabric" },
+          { "text": "Breathable Fabrics", "href": "/breathable-fabric" },
+          { "text": "Eco-Friendly Fabrics", "href": "/eco-friendly-fabric" },
+          { "text": "All Products", "href": "/products" }
         ]
       },
       {
-        "text": "Technology & Innovation",
+        "text": "Applications",
+        "links": [
+          { "text": "Sportswear", "href": "/applications/sportswear" },
+          { "text": "Outdoor Apparel", "href": "/applications/outdoor-apparel" },
+          { "text": "Tactical & Workwear", "href": "/applications/tactical-workwear" },
+          { "text": "Fashion & Casual", "href": "/applications/fashion-casual" }
+        ]
+      },
+      {
+        "text": "Technology",
         "links": [
           { "text": "Technology Overview", "href": "/technology" },
           { "text": "R&D Center", "href": "/randdcenter" },
-          { "text": "Design & Innovation", "href": "/design-powerhouse" },
-          { "text": "Engineering Excellence", "href": "/engineering-perfection" },
+          { "text": "Quality & Testing", "href": "/quality" },
           { "text": "Materials Science", "href": "/learn/materials" }
-        ]
-      },
-      {
-        "text": "Learn",
-        "links": [
-          { "text": "Knowledge Graph", "href": "/knowledge" },
-          { "text": "Academy", "href": "/academy" },
-          { "text": "SUP Knowledge", "href": "/learn/sup" },
-          { "text": "Boat Knowledge", "href": "/learn/inflatable-boat" },
-          { "text": "Water Safety", "href": "/learn/water-safety" },
-          { "text": "Size Guide", "href": "/size-guide" }
-        ]
-      },
-      {
-        "text": "Solutions",
-        "links": [
-          { "text": "By Industry", "href": "/solutions/by-industry" },
-          { "text": "By Use Case", "href": "/solutions/by-use-case" },
-          { "text": "Commercial Workboats", "href": "/commercial-workboats" },
-          { "text": "Search & Rescue", "href": "/search-rescue-operations" },
-          { "text": "Disaster Relief", "href": "/disaster-relief-humanitarian-aid" },
-          { "text": "OEM/ODM Manufacturing", "href": "/oem-odm-manufacturer" },
-          { "text": "Custom Lab", "href": "/custom" }
         ]
       },
       {
         "text": "Company",
         "links": [
-          { "text": "About", "href": "/about" },
+          { "text": "About Us", "href": "/about" },
           { "text": "Brand", "href": "/brand" },
           { "text": "Factory", "href": "/factory" },
           { "text": "Quality & Testing", "href": "/quality" },
-          { "text": "Safety", "href": "/safety" },
-          { "text": "Warranty", "href": "/warranty" },
-          { "text": "Community", "href": "/community" },
-          { "text": "Gallery", "href": "/gallery" },
-          { "text": "Lifestyle", "href": "/lifestyle" },
           { "text": "News", "href": "/news" },
-          { "text": "Trust", "href": "/trust" }
+          { "text": "Contact", "href": "/contact" }
         ]
       },
       {
         "text": "Support",
         "links": [
           { "text": "Contact", "href": "/contact" },
-          { "text": "Media Center", "href": "/media" },
           { "text": "FAQ", "href": "/faq" },
-          { "text": "Login", "href": "/login" }
+          { "text": "OEM/ODM", "href": "/oem-odm-manufacturer" }
         ]
       }
     ],
@@ -82,69 +62,50 @@
       {
         "title": "Products",
         "links": [
-          { "text": "RIB Boats", "href": "/ribboat" },
-          { "text": "Inflatable Boats", "href": "/inflatableboat" },
-          { "text": "SUP Boards", "href": "/supboard" },
-          { "text": "Accessories", "href": "/accessory" },
-          { "text": "Compare", "href": "/products/compare" }
+          { "text": "Sun Protection Fabrics", "href": "/sun-protection-fabric" },
+          { "text": "Waterproof Fabrics", "href": "/waterproof-fabric" },
+          { "text": "Quick-Dry Fabrics", "href": "/quick-dry-fabric" },
+          { "text": "Antibacterial Fabrics", "href": "/antibacterial-fabric" },
+          { "text": "Stretch Fabrics", "href": "/stretch-fabric" },
+          { "text": "Breathable Fabrics", "href": "/breathable-fabric" },
+          { "text": "Eco-Friendly Fabrics", "href": "/eco-friendly-fabric" },
+          { "text": "All Products", "href": "/products" }
         ]
       },
       {
-        "title": "Technology & Innovation",
+        "title": "Applications",
+        "links": [
+          { "text": "Sportswear", "href": "/applications/sportswear" },
+          { "text": "Outdoor Apparel", "href": "/applications/outdoor-apparel" },
+          { "text": "Tactical & Workwear", "href": "/applications/tactical-workwear" },
+          { "text": "Fashion & Casual", "href": "/applications/fashion-casual" }
+        ]
+      },
+      {
+        "title": "Technology",
         "links": [
           { "text": "Technology Overview", "href": "/technology" },
           { "text": "R&D Center", "href": "/randdcenter" },
-          { "text": "Design & Innovation", "href": "/design-powerhouse" },
-          { "text": "Engineering Excellence", "href": "/engineering-perfection" },
+          { "text": "Quality & Testing", "href": "/quality" },
           { "text": "Materials Science", "href": "/learn/materials" }
-        ]
-      },
-      {
-        "title": "Learn",
-        "links": [
-          { "text": "Knowledge Graph", "href": "/knowledge" },
-          { "text": "Academy", "href": "/academy" },
-          { "text": "SUP Knowledge", "href": "/learn/sup" },
-          { "text": "Boat Knowledge", "href": "/learn/inflatable-boat" },
-          { "text": "Water Safety", "href": "/learn/water-safety" },
-          { "text": "Size Guide", "href": "/size-guide" }
-        ]
-      },
-      {
-        "title": "Solutions",
-        "links": [
-          { "text": "By Industry", "href": "/solutions/by-industry" },
-          { "text": "By Use Case", "href": "/solutions/by-use-case" },
-          { "text": "Commercial Workboats", "href": "/commercial-workboats" },
-          { "text": "Search & Rescue", "href": "/search-rescue-operations" },
-          { "text": "Disaster Relief", "href": "/disaster-relief-humanitarian-aid" },
-          { "text": "OEM/ODM Manufacturing", "href": "/oem-odm-manufacturer" },
-          { "text": "Custom Lab", "href": "/custom" }
         ]
       },
       {
         "title": "Company",
         "links": [
-          { "text": "About", "href": "/about" },
+          { "text": "About Us", "href": "/about" },
           { "text": "Brand", "href": "/brand" },
           { "text": "Factory", "href": "/factory" },
-          { "text": "Quality & Testing", "href": "/quality" },
-          { "text": "Safety", "href": "/safety" },
-          { "text": "Warranty", "href": "/warranty" },
-          { "text": "Community", "href": "/community" },
-          { "text": "Gallery", "href": "/gallery" },
-          { "text": "Lifestyle", "href": "/lifestyle" },
           { "text": "News", "href": "/news" },
-          { "text": "Trust", "href": "/trust" }
+          { "text": "Contact", "href": "/contact" }
         ]
       },
       {
         "title": "Support",
         "links": [
           { "text": "Contact", "href": "/contact" },
-          { "text": "Media Center", "href": "/media" },
           { "text": "FAQ", "href": "/faq" },
-          { "text": "Login", "href": "/login" }
+          { "text": "OEM/ODM", "href": "/oem-odm-manufacturer" }
         ]
       }
     ],

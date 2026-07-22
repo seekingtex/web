@@ -1,27 +1,27 @@
 hero:
   title: Size & Specs Guide
-  subtitle: Dimensions, capacities, and recommended uses for every Seekingtex product.
+  subtitle: Dimensions, weights, and recommended applications for every Seekingtex fabric.
 
 categories:
-  inflatable: high-performance SUPs and performance textiles designed for portability without sacrificing performance. Match the right size to your weight and fabric expertise style.
-  rib: Rigid-hull functional fabrics for coastal navigation, patrol, and professional marine operations. Choose by length and engine capacity.
-  accessory: Accessories and safety equipment to complement your performance textiles. Universal sizing with multiple options.
+  woven: Woven fabrics constructed on rapier or air-jet looms for durability, dimensional stability, and tailored performance. Choose by weight, weft density, and finish type.
+  knitted: Knitted fabrics produced on circular or flat-bed machines for stretch, comfort, and recovery. Match the right gauge and fiber blend to your end-use requirements.
+  functional: Coated and laminated fabrics with waterproof, breathable, UV-protective, or anti-bacterial performance. Available in multiple base fabrics with custom finish specifications.
 
 table:
   headers:
     product: Product
-    length: Length
-    width: Width
-    weight: Weight
-    max_load: Max Load
+    weight: Weight (gsm)
+    width: Width (cm)
+    composition: Composition
+    construction: Construction
     best_for: Best For
 
 how_to_choose:
-  title: How to Choose the Right Size
+  title: How to Choose the Right Fabric
   cards:
-    - title: functional fabric Boards
-      description: Choose length based on your weight and intended use. Wider boards (32"+) offer more stability. Longer boards (11-12 ft) track better for touring. Heavier paddlers need higher volume boards.
-    - title: performance textiles
-      description: Single performance textiles (9 ft) are best for solo travel and rivers. Tandem performance textiles (12 ft) accommodate two paddlers or one adult with gear. Check weight capacity for total load including gear.
-    - title: fabric products & RIBs
-      description: Choose fabric products length by passenger count and intended use. Larger RIBs (4.5 m+) are suited for offshore and rescue. Smaller fabric products (2.7 m) work as tenders and fishing platforms.
+    - title: Woven Fabrics
+      description: Choose woven fabrics for structural applications requiring dimensional stability, high tensile strength, and minimal stretch. Lighter weights (100–200 gsm) suit shirts and blouses; mid-weights (200–350 gsm) suit bottoms and outerwear; heavy weights (350+ gsm) suit workwear and industrial uses.
+    - title: Knitted Fabrics
+      description: Knitted fabrics offer stretch and recovery for activewear, sportswear, and comfort-oriented garments. Choose single jersey for lightweight tops, interlock for premium next-to-skin wear, and fleece for thermal insulation. Check stretch percentage and recovery rate specifications.
+    - title: Functional Fabrics
+      description: Performance fabrics with specialized finishes for specific environments. Waterproof fabrics specify hydrostatic head rating (mmH₂O). Breathable fabrics specify MVTR (g/m²/24h). UV-protective fabrics specify UPF rating. Anti-bacterial fabrics specify reduction rate (%) per ISO 20743 or AATCC 100.

@@ -7,6 +7,7 @@ import Pagination from '~/components/blog/Pagination.astro';
 import Timeline from '~/components/blog/Timeline.astro';
 
 import { fetchPosts, blogPostsPerPage, blogListRobots } from '~/utils/blog';
+import type { Post } from '~/types';
 import pageData from '~/data/pages/news.yaml';
 import { languages } from '~/i18n/config';
 
@@ -16,7 +17,7 @@ export const getStaticPaths = (async () => {
   const posts = await fetchPosts();
   const pageSize = blogPostsPerPage;
   const totalPages = Math.ceil(posts.length / pageSize);
-  const paths = [];
+  const paths: { params: { lang: string; page: string }; props: { paginatedPosts: Post[]; currentPage: number; totalPages: number } }[] = [];
   for (const lang of Object.keys(languages)) {
     for (let i = 0; i < totalPages - 1; i++) {
       const n = i + 2;

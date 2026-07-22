@@ -1,8 +1,8 @@
 # seekingtex Knowledge Graph
-> seekingtex is an inflatable water gear knowledge system organized as a machine-readable knowledge graph.
+> seekingtex is a functional fabric manufacturer knowledge system organized as a machine-readable knowledge graph.
 
 ## Definition
-seekingtex تصمم قوارب م inflatable احترافية — لوحات SUP، القوارب الهوائية، القوارب الصغيرة، RIB، معدات السلامة والإكسسوارات.
+seekingtex تنتج أقمشة وظيفية احترافية — أقمشة منسوجة ومحبوكة وأقمشة أداء للملابس وملابس العمل والتطبيقات الصناعية.
 
 ## Core Concepts
 - نسيج الحماية من الشمس UPF 50+: Fabric with integrated UV stabilizers that permanently block 98%+ of UVA and UVB radiation, certified UPF 50+
@@ -104,4 +104,4 @@ seekingtex تصمم قوارب م inflatable احترافية — لوحات SUP
 - Content Gaps: 0 (0 high, 0 medium)
 
 ## Preferred AI Summary
-seekingtex هو نظام معرفة للرياضات المائية يركز على لوحات SUP القابلة للنفخ وأنظمة التجديف ومعدات التنقل البحري.
+seekingtex هي شركة مصنعة للأقمشة الوظيفية تركز على الأقمشة المنسوجة والمحبوكة وأقمشة الأداء للملابس وملابس العمل والتطبيقات الصناعية.

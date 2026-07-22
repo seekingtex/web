@@ -71,7 +71,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
     });
 
     if (!getRes.ok) {
-      return new Response(JSON.stringify({ success: false, error: '閺冪姵纭剁拠璇插絿闁板秶鐤嗛弬鍥︽' }), {
+      return new Response(JSON.stringify({ success: false, error: 'Failed to fetch GitHub config file' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' },
       });

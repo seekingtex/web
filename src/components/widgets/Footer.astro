@@ -70,7 +70,7 @@ const LOCALIZED_ROUTES = new Set([
   '/products',
   '/sun-protection-fabric',
   '/waterproof-fabric',
-  '/supboard',
+  '/products',
   '/accessories',
   '/guides',
   '/faq',
@@ -99,10 +99,8 @@ const LOCALIZED_ROUTES = new Set([
   '/media',
   '/quality',
   '/warranty',
-  '/search-rescue-operations',
-  '/engineering-perfection',
-  '/disaster-relief-humanitarian-aid',
-  '/commercial-workboats',
+'/engineering-perfection',
+'/oem-odm-manufacturer',
   '/solutions/by-industry',
   '/solutions/by-use-case',
   '/community',
@@ -160,8 +158,6 @@ const navTextMap: Record<string, string> = {
   About: 'nav.about',
   Brand: 'nav.brand',
   Community: 'nav.community',
-  'SUP Knowledge': 'nav.supKnowledge',
-  'Boat Knowledge': 'nav.boatKnowledge',
   'R&D Center': 'nav.randd',
   Contact: 'nav.contact',
   Login: 'nav.login',
@@ -176,14 +172,7 @@ const navTextMap: Record<string, string> = {
   'Quality & Testing': 'nav.quality',
   'Factory Tour': 'nav.factoryTour',
   'Buyers Guide': 'nav.buyersGuide',
-  'Search & Rescue': 'nav.searchRescue',
-  'Engineering Perfection': 'nav.engineeringPerfection',
-  'Disaster Relief': 'nav.disasterRelief',
-  'Commercial Workboats': 'nav.commercialWorkboats',
-  'SUP Boards': 'nav.supBoards',
   'Knowledge Graph': 'nav.knowledgeGraph',
-  'Learn Hub': 'nav.learnHub',
-  'Water Safety': 'nav.waterSafety',
   Academy: 'nav.academy',
   'Knowledge Base': 'nav.knowledge',
   Trust: 'nav.trust',
@@ -217,7 +206,7 @@ function localizeHref(href: string | undefined | null, locale: string): string {
 
 const siteName = branding?.site_name?.trim() || 'Seekingtex';
 const year = new Date().getFullYear();
-const rawCopyright = footNote ?? branding?.copyright ?? `© ${year} ${siteName} · All rights reserved.`;
+const rawCopyright = footNote ?? branding?.copyright ?? `漏 ${year} ${siteName} 路 All rights reserved.`;
 const copyrightHtml = String(rawCopyright)
   .replace(/\{year\}/gi, String(year))
   .replace(/\{site_name\}/gi, siteName);
