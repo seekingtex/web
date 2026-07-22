@@ -33,7 +33,7 @@ featured:
       href: '/size-guide'
     - title: 'Textile Technology'
       description: 'Advanced textile engineering, coating technologies, and smart fabric innovation.'
-      icon: 'tabler:waves'
+      icon: 'tabler:settings-automation'
       href: '/v2/textile-technology'
 
 categories:
