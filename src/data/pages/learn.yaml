@@ -25,7 +25,7 @@ featured:
       href: '/learn/quality-standards'
     - title: 'Materials Guide'
       description: 'Polyester vs nylon, functional finishes, denier ratings — understand what your fabric is made of.'
-      icon: 'tabler:molecules'
+      icon: 'tabler:atom-2'
       href: '/learn/materials'
     - title: 'Size Guide'
       description: 'Find the right fabric weight, width, and specifications for your application and production needs.'

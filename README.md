@@ -1,4 +1,4 @@
-﻿# Seekingtex 鈥?Astro v6 Multilingual Platform
+# Seekingtex 鈥?Astro v6 Multilingual Platform
 
 Multilingual (22 languages) functional fabric site for **Seekingtex**, built on [Astro v6](https://astro.build) with hybrid SSG/SSR, deployed to a **single Cloudflare Worker**.
 
@@ -213,7 +213,7 @@ When a visitor hits `seekingtex.com/products` without a language prefix:
 - Geo-IP detected 鈫?redirect `/{lang}/products`
 - Default 鈫?serve English
 
-**Excluded from i18n redirect:** `/api`, `/keystatic`, `/admin`, `/login`, `/internal`, `/images`, `/assets`, `/favicon`, URLs with file extensions, and B2B pages (`/search-rescue-operations`, `/oem-odm-manufacturer`, etc. 鈥?served at root in English for all locales).
+**Excluded from i18n redirect:** `/api`, `/keystatic`, `/admin`, `/login`, `/internal`, `/images`, `/assets`, `/favicon`, URLs with file extensions, and B2B pages (`/tactical-military`, `/oem-odm-manufacturer`, etc. 鈥?served at root in English for all locales).
 
 ### 4.3 Navigation Link Localization
 
