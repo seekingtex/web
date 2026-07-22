@@ -518,7 +518,7 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 ```
 seekingtex.com                      A       (Cloudflare proxied)
 *.seekingtex.com                    CNAME   seekingtex.com (Cloudflare proxied)
-products.asset.seekingtex.com       CNAME   seekingtex-assets.r2.cloudflarestorage.com (Cloudflare proxied)
+# products.asset.seekingtex.com DNS CNAME is auto-created by `scripts/setup-r2-infra.mjs`
 ```
 
 ---
