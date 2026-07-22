@@ -15,7 +15,6 @@ import icon from 'astro-icon';
 
 import cloudflare from '@astrojs/cloudflare';
 import type { AstroIntegration } from 'astro';
-import { sessionDrivers } from 'astro/config';
 import astrowind from './vendor/integration';
 import imageOptimizer from './vendor/integration/image-optimizer';
 
@@ -122,7 +121,7 @@ export default defineConfig({
   }),
 
   session: {
-    driver: sessionDrivers.memory(),
+    driver: 'memory',
     ttl: 86400,
   },
 
