@@ -1,0 +1,109 @@
+---
+import type { InferGetStaticPropsType } from 'astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { garments, getGarment, getGarmentsByCategory } from '~/data/garments';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const paths = garments.map(g => ({
+    params: { category: g.category, slug: g.id },
+    props: { garment: g },
+  }));
+  return paths;
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { garment } = Astro.props as Props;
+const catProducts = getGarmentsByCategory(garment.category);
+const related = catProducts.filter(g => g.id !== garment.id).slice(0, 4);
+
+const metadata = {
+  title: `${garment.name} | Garments`,
+  description: garment.name,
+};
+---
+
+<Layout metadata={metadata}>
+  <WidgetWrapper containerClass="max-w-6xl mx-auto px-4 py-12">
+    <a href={`/garments/${garment.category}/`} class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-6 inline-block">
+      &larr; {garment.categoryName}
+    </a>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Image Gallery -->
+      <div>
+        {garment.images[0] ? (
+          <div class="aspect-[3/4] bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden">
+            <img src={garment.images[0]} alt={garment.name} class="w-full h-full object-cover" />
+          </div>
+        ) : null}
+        {garment.images.length > 1 ? (
+          <div class="grid grid-cols-4 gap-2 mt-2">
+            {garment.images.slice(1).map(img => (
+              <div class="aspect-square bg-gray-100 dark:bg-gray-700 rounded overflow-hidden">
+                <img src={img} alt={garment.name} class="w-full h-full object-cover" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        ) : null}
+      </div>
+
+      <!-- Product Info -->
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold mb-4">{garment.name}</h1>
+        <p class="text-gray-600 dark:text-gray-400 mb-6 capitalize">Category: {garment.categoryName}</p>
+
+        <div class="flex flex-wrap gap-3 mb-8">
+          <a href={`/garments/${garment.category}/`}>
+            <Button variant="secondary" class="text-sm">View All {garment.categoryName}</Button>
+          </a>
+        </div>
+
+        <div class="border-t border-gray-200 dark:border-gray-700 pt-6">
+          <h2 class="text-lg font-semibold mb-4">Product Details</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            {garment.name}. This product is available for OEM/ODM manufacturing with custom specifications.
+            Contact us for pricing, minimum order quantities, and customization options.
+          </p>
+        </div>
+
+        <div class="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <h3 class="font-semibold mb-2">Interested in this product?</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            We offer custom manufacturing with your branding, specifications, and packaging.
+          </p>
+          <a href="/contact/">
+            <Button>Contact Us</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    {related.length > 0 ? (
+      <section>
+        <h2 class="text-2xl font-bold mb-6">More in {garment.categoryName}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {related.map(g => (
+            <a href={`/garments/${g.category}/${g.id}/`} class="group block">
+              <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="aspect-[3/4] bg-gray-100 dark:bg-gray-700 overflow-hidden">
+                  {g.images[0] ? (
+                    <img src={g.images[0]} alt={g.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  ) : null}
+                </div>
+                <div class="p-3">
+                  <h3 class="text-sm font-medium line-clamp-2">{g.name}</h3>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ) : null}
+  </WidgetWrapper>
+</Layout>
