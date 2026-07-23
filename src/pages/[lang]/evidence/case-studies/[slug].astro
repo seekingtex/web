@@ -8,9 +8,16 @@ import { languages, defaultLang, ui } from '~/i18n/config';
 import evidenceData from '~/data/site/evidence.yaml';
 
 interface CaseStudy {
-  id: string; client: string; product: string; industry: string;
-  challenge: string; solution: string; result: string; image: string;
-  tags: string[]; outcome_metrics: { label: string; value: string }[];
+  id: string;
+  client: string;
+  product: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  image: string;
+  tags: string[];
+  outcome_metrics: { label: string; value: string }[];
 }
 
 export function getStaticPaths() {
@@ -43,27 +50,35 @@ const metadata = {
 {
   study && (
     <Layout metadata={metadata}>
-      <JsonLd data={{
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: `${study.client} — ${study.product}`,
-        description: metadata.description,
-        author: { '@type': 'Organization', name: SITE.name },
-        datePublished: '2025-01-01',
-        dateModified: '2026-06-01',
-      }} />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: `${study.client} — ${study.product}`,
+          description: metadata.description,
+          author: { '@type': 'Organization', name: SITE.name },
+          datePublished: '2025-01-01',
+          dateModified: '2026-06-01',
+        }}
+      />
 
       <div class="max-w-4xl mx-auto px-6 py-16">
         <nav class="text-sm text-gray-500 mb-8">
-          <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+          <a href={`/${lang}/`} class="hover:text-sky-600">
+            {SITE.name}
+          </a>
           <span class="mx-2">/</span>
-          <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+          <a href={`/${lang}/evidence`} class="hover:text-sky-600">
+            {t('home.evidence.title')}
+          </a>
           <span class="mx-2">/</span>
           <span class="text-gray-900">{study.client}</span>
         </nav>
 
         <div class="mb-4">
-          <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">{study.industry}</span>
+          <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">
+            {study.industry}
+          </span>
         </div>
 
         <h1 class="text-4xl font-bold text-gray-900 mb-2">{study.client}</h1>
@@ -99,14 +114,23 @@ const metadata = {
           <h2>Key Capabilities</h2>
           <ul>
             {study.tags.map((tag) => (
-              <li><strong>{tag}</strong></li>
+              <li>
+                <strong>{tag}</strong>
+              </li>
             ))}
           </ul>
         </div>
 
         <div class="mt-16 pt-8 border-t border-gray-200 flex items-center justify-between">
-          <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Evidence</a>
-          <a href={`/${lang}/contact`} class="inline-block bg-sky-600 text-white font-semibold px-6 py-2.5 rounded-xl hover:bg-sky-700 transition-colors text-sm">{t('home.evidence.ctaButton')}</a>
+          <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium">
+            &larr; Back to Evidence
+          </a>
+          <a
+            href={`/${lang}/contact`}
+            class="inline-block bg-sky-600 text-white font-semibold px-6 py-2.5 rounded-xl hover:bg-sky-700 transition-colors text-sm"
+          >
+            {t('home.evidence.ctaButton')}
+          </a>
         </div>
       </div>
     </Layout>
