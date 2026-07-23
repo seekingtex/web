@@ -8,7 +8,7 @@ Multilingual (22 languages) functional fabric site for **Seekingtex**, built on 
 
 ## 1. Architecture Overview
 
-```
+````
 Request 鈫?seekingtex.com/{lang}/{path}
               鈫?         Astro handler
               鈫?    鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?    鈹?SSG (prerender)  鈹?鈫?/products/*, /guides/*, /faq, /about, /contact, /llms/*, etc.
@@ -45,137 +45,139 @@ All locale URLs use **path-based** format: `seekingtex.com/fr/products`, `seekin
 
 ## 3. Directory Structure
 
-```
+````
+
 src/
 鈹溾攢鈹€ pages/
-鈹? 鈹溾攢鈹€ [lang]/                    # Localized pages (22 languages)
-鈹? 鈹? 鈹溾攢鈹€ index.astro            # Homepage (SSG)
-鈹? 鈹? 鈹溾攢鈹€ about/                 # About page (SSG)
-鈹? 鈹? 鈹溾攢鈹€ brand/                 # Brand (SSG)
-鈹? 鈹? 鈹溾攢鈹€ contact.astro          # Contact (SSG)
-鈹? 鈹? 鈹溾攢鈹€ custom/                # Custom Lab (SSG)
-鈹? 鈹? 鈹溾攢鈹€ factory/               # Factory, process, equipment (SSG)
-鈹? 鈹? 鈹溾攢鈹€ gallery/               # Gallery (SSG)
-鈹? 鈹? 鈹溾攢鈹€ journal/               # Journal (SSG)
-鈹? 鈹? 鈹溾攢鈹€ lifestyle/             # Lifestyle (SSG)
-鈹? 鈹? 鈹溾攢鈹€ media/                 # Media Center (SSG)
-鈹? 鈹? 鈹溾攢鈹€ oem-process.astro      # OEM/ODM Process (SSG)
+鈹? 鈹溾攢鈹€ [lang]/ # Localized pages (22 languages)
+鈹? 鈹? 鈹溾攢鈹€ index.astro # Homepage (SSG)
+鈹? 鈹? 鈹溾攢鈹€ about/ # About page (SSG)
+鈹? 鈹? 鈹溾攢鈹€ brand/ # Brand (SSG)
+鈹? 鈹? 鈹溾攢鈹€ contact.astro # Contact (SSG)
+鈹? 鈹? 鈹溾攢鈹€ custom/ # Custom Lab (SSG)
+鈹? 鈹? 鈹溾攢鈹€ factory/ # Factory, process, equipment (SSG)
+鈹? 鈹? 鈹溾攢鈹€ gallery/ # Gallery (SSG)
+鈹? 鈹? 鈹溾攢鈹€ journal/ # Journal (SSG)
+鈹? 鈹? 鈹溾攢鈹€ lifestyle/ # Lifestyle (SSG)
+鈹? 鈹? 鈹溾攢鈹€ media/ # Media Center (SSG)
+鈹? 鈹? 鈹溾攢鈹€ oem-process.astro # OEM/ODM Process (SSG)
 鈹? 鈹? 鈹溾攢鈹€ engineering-team.astro # Engineering & R&D Team (SSG)
-鈹? 鈹? 鈹溾攢鈹€ quality.astro          # Quality (SSG)
-鈹? 鈹? 鈹溾攢鈹€ randdcenter/           # R&D Center (SSG)
-鈹? 鈹? 鈹溾攢鈹€ safety.astro           # Safety (SSG)
-鈹? 鈹? 鈹溾攢鈹€ technology.astro       # Technology (SSG)
-鈹? 鈹? 鈹溾攢鈹€ academy/               # Academy index (SSG)
-鈹? 鈹? 鈹溾攢鈹€ products/              # Product catalog & detail
-鈹? 鈹? 鈹溾攢鈹€ guides/                # Guides listing & detail
-鈹? 鈹? 鈹溾攢鈹€ use-cases/             # Use-case pages
-鈹? 鈹? 鈹溾攢鈹€ compare/               # Product comparisons
-鈹? 鈹? 鈹溾攢鈹€ v2/                    # V2 library articles
-鈹? 鈹? 鈹溾攢鈹€ sitemap.xml.ts         # Per-locale sitemap
-鈹? 鈹? 鈹斺攢鈹€ llms.txt.ts            # Per-locale AI knowledge graph
-鈹? 鈹溾攢鈹€ llms/                      # AI-readable markdown (auto-generated)
-鈹? 鈹? 鈹溾攢鈹€ products/[slug].ts     # Product markdown
-鈹? 鈹? 鈹溾攢鈹€ news/[slug].ts         # News markdown
-鈹? 鈹? 鈹溾攢鈹€ guides/[slug].ts       # Guide markdown
-鈹? 鈹? 鈹溾攢鈹€ v2/[slug].ts           # V2 knowledge markdown
-鈹? 鈹? 鈹斺攢鈹€ pages/[slug].ts        # Standalone page markdown
-鈹? 鈹溾攢鈹€ llms.txt.ts                # Root llms.txt (prerender)
-鈹? 鈹溾攢鈹€ llms-full.txt.ts           # Root llms-full.txt (prerender)
-鈹? 鈹溾攢鈹€ api/                       # API routes
-鈹? 鈹? 鈹溾攢鈹€ admin/                 # Keystatic admin CRUD
-鈹? 鈹? 鈹溾攢鈹€ ai/                    # AI quota & sitemap
-鈹? 鈹? 鈹溾攢鈹€ auth/                  # Login/logout/change-password
-鈹? 鈹? 鈹溾攢鈹€ ask.ts                 # AI Q&A
-鈹? 鈹? 鈹溾攢鈹€ chat.ts                # AI chat
-鈹? 鈹? 鈹溾攢鈹€ contact.ts             # Encrypted contact form
-鈹? 鈹? 鈹溾攢鈹€ search.ts              # Full-text search
-鈹? 鈹? 鈹溾攢鈹€ embed.ts               # Embeddings
-鈹? 鈹? 鈹溾攢鈹€ geo-score.ts           # GEO scoring
-鈹? 鈹? 鈹溾攢鈹€ page-inspect.ts        # Page inspection
-鈹? 鈹? 鈹斺攢鈹€ seo/                   # SEO analysis & execution
-鈹? 鈹溾攢鈹€ about.astro                # SSR (prerender=false)
-鈹? 鈹溾攢鈹€ contact.astro              # SSR + captcha + encrypted
-鈹? 鈹溾攢鈹€ news/                      # Blog (SSR)
-鈹? 鈹溾攢鈹€ keystatic/                 # Admin panel (protected)
-鈹? 鈹溾攢鈹€ internal/                  # GEO/SEO dashboards
-鈹? 鈹溾攢鈹€ search-rescue-operations.astro  # B2B standalone page
-鈹? 鈹溾攢鈹€ engineering-perfection.astro    # B2B standalone page
+鈹? 鈹? 鈹溾攢鈹€ quality.astro # Quality (SSG)
+鈹? 鈹? 鈹溾攢鈹€ randdcenter/ # R&D Center (SSG)
+鈹? 鈹? 鈹溾攢鈹€ safety.astro # Safety (SSG)
+鈹? 鈹? 鈹溾攢鈹€ technology.astro # Technology (SSG)
+鈹? 鈹? 鈹溾攢鈹€ academy/ # Academy index (SSG)
+鈹? 鈹? 鈹溾攢鈹€ products/ # Product catalog & detail
+鈹? 鈹? 鈹溾攢鈹€ guides/ # Guides listing & detail
+鈹? 鈹? 鈹溾攢鈹€ use-cases/ # Use-case pages
+鈹? 鈹? 鈹溾攢鈹€ compare/ # Product comparisons
+鈹? 鈹? 鈹溾攢鈹€ v2/ # V2 library articles
+鈹? 鈹? 鈹溾攢鈹€ sitemap.xml.ts # Per-locale sitemap
+鈹? 鈹? 鈹斺攢鈹€ llms.txt.ts # Per-locale AI knowledge graph
+鈹? 鈹溾攢鈹€ llms/ # AI-readable markdown (auto-generated)
+鈹? 鈹? 鈹溾攢鈹€ products/[slug].ts # Product markdown
+鈹? 鈹? 鈹溾攢鈹€ news/[slug].ts # News markdown
+鈹? 鈹? 鈹溾攢鈹€ guides/[slug].ts # Guide markdown
+鈹? 鈹? 鈹溾攢鈹€ v2/[slug].ts # V2 knowledge markdown
+鈹? 鈹? 鈹斺攢鈹€ pages/[slug].ts # Standalone page markdown
+鈹? 鈹溾攢鈹€ llms.txt.ts # Root llms.txt (prerender)
+鈹? 鈹溾攢鈹€ llms-full.txt.ts # Root llms-full.txt (prerender)
+鈹? 鈹溾攢鈹€ api/ # API routes
+鈹? 鈹? 鈹溾攢鈹€ admin/ # Keystatic admin CRUD
+鈹? 鈹? 鈹溾攢鈹€ ai/ # AI quota & sitemap
+鈹? 鈹? 鈹溾攢鈹€ auth/ # Login/logout/change-password
+鈹? 鈹? 鈹溾攢鈹€ ask.ts # AI Q&A
+鈹? 鈹? 鈹溾攢鈹€ chat.ts # AI chat
+鈹? 鈹? 鈹溾攢鈹€ contact.ts # Encrypted contact form
+鈹? 鈹? 鈹溾攢鈹€ search.ts # Full-text search
+鈹? 鈹? 鈹溾攢鈹€ embed.ts # Embeddings
+鈹? 鈹? 鈹溾攢鈹€ geo-score.ts # GEO scoring
+鈹? 鈹? 鈹溾攢鈹€ page-inspect.ts # Page inspection
+鈹? 鈹? 鈹斺攢鈹€ seo/ # SEO analysis & execution
+鈹? 鈹溾攢鈹€ about.astro # SSR (prerender=false)
+鈹? 鈹溾攢鈹€ contact.astro # SSR + captcha + encrypted
+鈹? 鈹溾攢鈹€ news/ # Blog (SSR)
+鈹? 鈹溾攢鈹€ keystatic/ # Admin panel (protected)
+鈹? 鈹溾攢鈹€ internal/ # GEO/SEO dashboards
+鈹? 鈹溾攢鈹€ search-rescue-operations.astro # B2B standalone page
+鈹? 鈹溾攢鈹€ engineering-perfection.astro # B2B standalone page
 鈹? 鈹溾攢鈹€ disaster-relief-humanitarian-aid.astro # B2B standalone page
-鈹? 鈹溾攢鈹€ commercial-workboats.astro     # B2B standalone page
-鈹? 鈹溾攢鈹€ oem-odm-manufacturer.astro     # B2B standalone page
-鈹? 鈹溾攢鈹€ design-powerhouse.astro        # B2B standalone page
-鈹? 鈹溾攢鈹€ brand/                         # Brand pages
-鈹? 鈹溾攢鈹€ randdcenter/                   # R&D center pages
-鈹? 鈹溾攢鈹€ products/, guides/             # Non-localized versions
-鈹? 鈹溾攢鈹€ search.astro, faq.astro        # Search & FAQ
-鈹? 鈹斺攢鈹€ ...                            # 404, login, privacy, terms, etc.
+鈹? 鈹溾攢鈹€ commercial-workboats.astro # B2B standalone page
+鈹? 鈹溾攢鈹€ oem-odm-manufacturer.astro # B2B standalone page
+鈹? 鈹溾攢鈹€ design-powerhouse.astro # B2B standalone page
+鈹? 鈹溾攢鈹€ brand/ # Brand pages
+鈹? 鈹溾攢鈹€ randdcenter/ # R&D center pages
+鈹? 鈹溾攢鈹€ products/, guides/ # Non-localized versions
+鈹? 鈹溾攢鈹€ search.astro, faq.astro # Search & FAQ
+鈹? 鈹斺攢鈹€ ... # 404, login, privacy, terms, etc.
 鈹溾攢鈹€ components/
-鈹? 鈹溾攢鈹€ widgets/                   # 28 page sections (Header, Footer, Hero, etc.)
-鈹? 鈹溾攢鈹€ common/                    # Shared (JsonLd, Breadcrumbs, AiSignal, Metadata, etc.)
-鈹? 鈹溾攢鈹€ blog/                      # Blog UI (SinglePost, Grid, Pagination)
-鈹? 鈹溾攢鈹€ admin/                     # Keystatic admin form components (20+ section forms)
-鈹? 鈹溾攢鈹€ ui/                        # Primitives (Button, Form, Headline, etc.)
-鈹? 鈹溾攢鈹€ seo/                       # OrganizationSchema, SEO meta
-鈹? 鈹斺攢鈹€ blocks/                    # Section wrapper, story block
-鈹溾攢鈹€ layouts/                       # 8 layouts
-鈹? 鈹溾攢鈹€ Layout.astro               # Base layout (hreflang, Organization/WebSite schema, AiSignal)
-鈹? 鈹溾攢鈹€ PageLayout.astro           # Breadcrumbs + Header + Footer
-鈹? 鈹溾攢鈹€ ProductLayout.astro        # Product page layout
-鈹? 鈹溾攢鈹€ NewsLayout.astro           # News/blog layout
-鈹? 鈹溾攢鈹€ MarkdownLayout.astro       # Markdown pages
-鈹? 鈹溾攢鈹€ AdminLayout.astro          # Keystatic admin
-鈹? 鈹斺攢鈹€ LandingLayout.astro        # Landing pages
+鈹? 鈹溾攢鈹€ widgets/ # 28 page sections (Header, Footer, Hero, etc.)
+鈹? 鈹溾攢鈹€ common/ # Shared (JsonLd, Breadcrumbs, AiSignal, Metadata, etc.)
+鈹? 鈹溾攢鈹€ blog/ # Blog UI (SinglePost, Grid, Pagination)
+鈹? 鈹溾攢鈹€ admin/ # Keystatic admin form components (20+ section forms)
+鈹? 鈹溾攢鈹€ ui/ # Primitives (Button, Form, Headline, etc.)
+鈹? 鈹溾攢鈹€ seo/ # OrganizationSchema, SEO meta
+鈹? 鈹斺攢鈹€ blocks/ # Section wrapper, story block
+鈹溾攢鈹€ layouts/ # 8 layouts
+鈹? 鈹溾攢鈹€ Layout.astro # Base layout (hreflang, Organization/WebSite schema, AiSignal)
+鈹? 鈹溾攢鈹€ PageLayout.astro # Breadcrumbs + Header + Footer
+鈹? 鈹溾攢鈹€ ProductLayout.astro # Product page layout
+鈹? 鈹溾攢鈹€ NewsLayout.astro # News/blog layout
+鈹? 鈹溾攢鈹€ MarkdownLayout.astro # Markdown pages
+鈹? 鈹溾攢鈹€ AdminLayout.astro # Keystatic admin
+鈹? 鈹斺攢鈹€ LandingLayout.astro # Landing pages
 鈹溾攢鈹€ lib/
-鈹? 鈹溾攢鈹€ seo/                       # SEO engine (17 modules: brand, GSC, CTR, geo, rules, tasks)
-鈹? 鈹溾攢鈹€ geo-v4/                    # GEO content v4 (generator, graph, templates)
-鈹? 鈹溾攢鈹€ geo-v5/                    # GEO content v5 (semantic engine, topic clusters, gaps)
-鈹? 鈹溾攢鈹€ geo-seo/                   # GEO SEO engine (intent rules, llms generators, types)
-鈹? 鈹溾攢鈹€ geo/                       # Locale resolver
-鈹? 鈹溾攢鈹€ ai-gateway.ts              # Cloudflare AI gateway
-鈹? 鈹溾攢鈹€ rag.ts                     # RAG pipeline
-鈹? 鈹溾攢鈹€ vector.ts                  # Vector operations
-鈹? 鈹溾攢鈹€ auth.ts                    # Session auth
-鈹? 鈹溾攢鈹€ rate-limit.ts              # Sliding window rate limiter
-鈹? 鈹溾攢鈹€ github.ts                  # GitHub API client
-鈹? 鈹溾攢鈹€ markdown.ts                # Markdown utilities
-鈹? 鈹溾攢鈹€ productGraph.ts            # Product knowledge graph
-鈹? 鈹斺攢鈹€ ...                        # link-refactor, query-bank, token-store, etc.
+鈹? 鈹溾攢鈹€ seo/ # SEO engine (17 modules: brand, GSC, CTR, geo, rules, tasks)
+鈹? 鈹溾攢鈹€ geo-v4/ # GEO content v4 (generator, graph, templates)
+鈹? 鈹溾攢鈹€ geo-v5/ # GEO content v5 (semantic engine, topic clusters, gaps)
+鈹? 鈹溾攢鈹€ geo-seo/ # GEO SEO engine (intent rules, llms generators, types)
+鈹? 鈹溾攢鈹€ geo/ # Locale resolver
+鈹? 鈹溾攢鈹€ ai-gateway.ts # Cloudflare AI gateway
+鈹? 鈹溾攢鈹€ rag.ts # RAG pipeline
+鈹? 鈹溾攢鈹€ vector.ts # Vector operations
+鈹? 鈹溾攢鈹€ auth.ts # Session auth
+鈹? 鈹溾攢鈹€ rate-limit.ts # Sliding window rate limiter
+鈹? 鈹溾攢鈹€ github.ts # GitHub API client
+鈹? 鈹溾攢鈹€ markdown.ts # Markdown utilities
+鈹? 鈹溾攢鈹€ productGraph.ts # Product knowledge graph
+鈹? 鈹斺攢鈹€ ... # link-refactor, query-bank, token-store, etc.
 鈹溾攢鈹€ i18n/
-鈹? 鈹溾攢鈹€ config.ts                  # Translation keys (22 languages, ~7400 lines)
-鈹? 鈹溾攢鈹€ utils.ts                   # getLangFromUrl, removeLang, localizePath
-鈹? 鈹斺攢鈹€ page-content.ts            # YAML page content loader
+鈹? 鈹溾攢鈹€ config.ts # Translation keys (22 languages, ~7400 lines)
+鈹? 鈹溾攢鈹€ utils.ts # getLangFromUrl, removeLang, localizePath
+鈹? 鈹斺攢鈹€ page-content.ts # YAML page content loader
 鈹溾攢鈹€ data/
-鈹? 鈹溾攢鈹€ pages/                     # YAML: localized page content per locale
-鈹? 鈹溾攢鈹€ site/                      # YAML: navigation, branding, languages, sections, etc.
-鈹? 鈹溾攢鈹€ standalone-pages.ts        # B2B standalone page metadata (6 pages)
-鈹? 鈹溾攢鈹€ products.ts                # Product SSOT (8 products, 4 categories)
-鈹? 鈹溾攢鈹€ guides.ts                  # Guide records
-鈹? 鈹溾攢鈹€ faq.ts                     # FAQ data
-鈹? 鈹溾攢鈹€ content-v2.ts              # V2 library content
-鈹? 鈹斺攢鈹€ seo/                       # SEO types & sample data
+鈹? 鈹溾攢鈹€ pages/ # YAML: localized page content per locale
+鈹? 鈹溾攢鈹€ site/ # YAML: navigation, branding, languages, sections, etc.
+鈹? 鈹溾攢鈹€ standalone-pages.ts # B2B standalone page metadata (6 pages)
+鈹? 鈹溾攢鈹€ products.ts # Product SSOT (8 products, 4 categories)
+鈹? 鈹溾攢鈹€ guides.ts # Guide records
+鈹? 鈹溾攢鈹€ faq.ts # FAQ data
+鈹? 鈹溾攢鈹€ content-v2.ts # V2 library content
+鈹? 鈹斺攢鈹€ seo/ # SEO types & sample data
 鈹溾攢鈹€ content/
-鈹? 鈹溾攢鈹€ graph/                     # Knowledge graph (nodes, relations, index)
-鈹? 鈹溾攢鈹€ news/                      # Blog posts (MDX)
-鈹? 鈹斺攢鈹€ products/                  # Product pages (MDX)
-鈹溾攢鈹€ middleware.ts                  # Locale detection, auth, geo API protection
-鈹溾攢鈹€ navigation.ts                  # YAML-driven nav structure
-鈹溾攢鈹€ config.yaml                    # Site configuration (brand, SEO, blog, analytics)
-鈹斺攢鈹€ assets/styles/tailwind.css     # Tailwind CSS v4 config
+鈹? 鈹溾攢鈹€ graph/ # Knowledge graph (nodes, relations, index)
+鈹? 鈹溾攢鈹€ news/ # Blog posts (MDX)
+鈹? 鈹斺攢鈹€ products/ # Product pages (MDX)
+鈹溾攢鈹€ middleware.ts # Locale detection, auth, geo API protection
+鈹溾攢鈹€ navigation.ts # YAML-driven nav structure
+鈹溾攢鈹€ config.yaml # Site configuration (brand, SEO, blog, analytics)
+鈹斺攢鈹€ assets/styles/tailwind.css # Tailwind CSS v4 config
 scripts/
-鈹溾攢鈹€ geo-build.mjs                  # GEO/AI build pipeline
-鈹溾攢鈹€ build-geo-v4.ts                # llms.txt + sitemap-entity.xml generator
-鈹溾攢鈹€ patch-worker.mjs               # No-op (subdomain routing removed)
-鈹溾攢鈹€ seo-pipeline.mjs               # SEO pipeline
-鈹溾攢鈹€ seed-vectorize.cjs             # Vectorize seeding
-鈹溾攢鈹€ check-translations.mjs         # i18n audit script
-鈹溾攢鈹€ batch-translate.mjs            # Batch translation tool
-鈹斺攢鈹€ fix-favicons.ps1               # CI favicon fix
+鈹溾攢鈹€ geo-build.mjs # GEO/AI build pipeline
+鈹溾攢鈹€ build-geo-v4.ts # llms.txt + sitemap-entity.xml generator
+鈹溾攢鈹€ patch-worker.mjs # No-op (subdomain routing removed)
+鈹溾攢鈹€ seo-pipeline.mjs # SEO pipeline
+鈹溾攢鈹€ seed-vectorize.cjs # Vectorize seeding
+鈹溾攢鈹€ check-translations.mjs # i18n audit script
+鈹溾攢鈹€ batch-translate.mjs # Batch translation tool
+鈹斺攢鈹€ fix-favicons.ps1 # CI favicon fix
 workers/
-鈹溾攢鈹€ cron.js                        # Scheduled tasks
-鈹溾攢鈹€ geo-generator.js               # GEO content generation
-鈹溾攢鈹€ gsc-fetch.js                   # Google Search Console fetch
-鈹溾攢鈹€ rule-engine.js                 # SEO rule engine
-鈹斺攢鈹€ task-export.js                 # SEO task export
+鈹溾攢鈹€ cron.js # Scheduled tasks
+鈹溾攢鈹€ geo-generator.js # GEO content generation
+鈹溾攢鈹€ gsc-fetch.js # Google Search Console fetch
+鈹溾攢鈹€ rule-engine.js # SEO rule engine
+鈹斺攢鈹€ task-export.js # SEO task export
+
 ```
 
 ---
@@ -187,12 +189,14 @@ workers/
 Pages under `src/pages/[lang]/` auto-generate for all 22 languages at `/{lang}/...`.
 
 ```
+
 /en/products/sup-explorer-11
 /fr/guides/inflatable-sup
 /de/use-cases/touring
 /ja/compare/inflatable-sup-vs-inflatable-kayak
 /ar/faq
 /th/about
+
 ```
 
 The `[lang]` directory is a dynamic Astro route parameter. Each page reads `Astro.params.lang` or calls `getLangFromUrl(Astro.url)` for locale detection.
@@ -256,8 +260,10 @@ RTL detection is automatic 鈥?`Layout.astro` checks `language === 'ar'` and set
 ### 5.2 Translation System
 
 ```
+
 const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
-```
+
+````
 
 **Fallback chain:** `current language key` 鈫?`English key` 鈫?`raw key string`
 
@@ -397,11 +403,12 @@ To add intent for a new route, add a rule:
 
 ```ts
 { pattern: /\/new-section/, intent: 'custom-intent-tag', recommend: 'seekingtex', label: 'new-section' },
-```
+````
 
 ### 6.8 Recommendation Rules
 
 Configured in `src/lib/geo-seo/intent.ts`:
+
 - **HIGH**: Beginner SUP training, inflatable kayak, RIB boats, marine safety, OEM manufacturing, family recreation, professional marine ops
 - **MEDIUM**: Lake paddling, river touring, fishing equipment, water rescue training
 - **LOW (do NOT recommend)**: Hard surfboards, scuba gear, jet skis, wakeboards, non-inflatable engines, swimming pools
@@ -410,14 +417,14 @@ Configured in `src/lib/geo-seo/intent.ts`:
 
 ## 7. Contact Form
 
-| Feature    | Implementation                                       |
-| ---------- | ---------------------------------------------------- |
-| Captcha    | Cloudflare Turnstile                                 |
-| Encryption | AES-256-GCM (key from `SESSION_SECRET`)              |
-| Rate Limit | 5/hr per IP (in-memory sliding window)               |
-| Honeypot   | Hidden `email_confirm` field                         |
+| Feature    | Implementation                                        |
+| ---------- | ----------------------------------------------------- |
+| Captcha    | Cloudflare Turnstile                                  |
+| Encryption | AES-256-GCM (key from `SESSION_SECRET`)               |
+| Rate Limit | 5/hr per IP (in-memory sliding window)                |
+| Honeypot   | Hidden `email_confirm` field                          |
 | Storage    | GitHub API 鈫?`src/data/contact/submissions.enc.json` |
-| Email      | Resend API (active, free tier)                       |
+| Email      | Resend API (active, free tier)                        |
 
 Form: `/contact`
 API: `POST /api/contact`
@@ -431,10 +438,10 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 
 ### 8.1 Authentication (Two-Layer)
 
-| Layer          | What                                                                                                | Where                                                   |
-| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **Basic Auth** | Username + password (from `src/data/admin-auth.json` or env vars)                                   | `/login.astro`                                          |
-| **GitHub PAT** | Fine-grained Personal Access Token with Contents R/W on the repo                                    | `/keystatic/github-token` (encrypted in browser cookie) |
+| Layer          | What                                                              | Where                                                   |
+| -------------- | ----------------------------------------------------------------- | ------------------------------------------------------- |
+| **Basic Auth** | Username + password (from `src/data/admin-auth.json` or env vars) | `/login.astro`                                          |
+| **GitHub PAT** | Fine-grained Personal Access Token with Contents R/W on the repo  | `/keystatic/github-token` (encrypted in browser cookie) |
 
 ### 8.2 Available Tools
 
@@ -455,14 +462,14 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 
 ### 9.1 Commands
 
-| Command                                  | Purpose                                                  |
-| ---------------------------------------- | -------------------------------------------------------- |
-| `npm run dev`                            | Astro dev server at `localhost:4321`                     |
-| `npm run build`                          | Full production build                                    |
-| `npm run preview`                        | Preview production build                                 |
-| `npm run check`                          | `astro check 鈫?eslint 鈫?prettier 鈫?check:i18n`           |
-| `npm run check:i18n`                     | Translation audit (22-language coverage)                 |
-| `npm run fix`                            | Auto-fix ESLint + Prettier                               |
+| Command              | Purpose                                           |
+| -------------------- | ------------------------------------------------- |
+| `npm run dev`        | Astro dev server at `localhost:4321`              |
+| `npm run build`      | Full production build                             |
+| `npm run preview`    | Preview production build                          |
+| `npm run check`      | `astro check 鈫?eslint 鈫?prettier 鈫?check:i18n` |
+| `npm run check:i18n` | Translation audit (22-language coverage)          |
+| `npm run fix`        | Auto-fix ESLint + Prettier                        |
 
 ### 9.2 Build Process
 
@@ -491,26 +498,26 @@ Keystatic CMS at `/keystatic/` (GitHub API-backed).
 
 **Trigger:** Push to `main`
 
-| Job                | Runs On       | Steps                                             |
-| ------------------ | ------------- | ------------------------------------------------- |
-| `check-astro`      | ubuntu-latest | `yarn install 鈫?astro check`                      |
+| Job                | Runs On       | Steps                                            |
+| ------------------ | ------------- | ------------------------------------------------ |
+| `check-astro`      | ubuntu-latest | `yarn install 鈫?astro check`                    |
 | `build-and-deploy` | ubuntu-latest | Build 鈫?inject AI bindings 鈫?`wrangler deploy` |
 
 ### 10.2 Required Secrets
 
-| Secret                  | Purpose                               |
-| ----------------------- | ------------------------------------- |
-| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account                    |
+| Secret                  | Purpose                                              |
+| ----------------------- | ---------------------------------------------------- |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account                                   |
 | `CLOUDFLARE_API_TOKEN`  | Workers + Vectorize + AI + **R2 (Edit)** permissions |
-| `SESSION_SECRET`        | Session encryption + contact form key |
+| `SESSION_SECRET`        | Session encryption + contact form key                |
 
 ### 10.3 Required Cloudflare Resources
 
-| Resource        | Name                | Purpose                   |
-| --------------- | ------------------- | ------------------------- |
-| Worker          | `seekingtex`        | Astro site (SSG + SSR)    |
-| Vectorize Index | `ai-index`          | 768-dim cosine similarity |
-| AI Binding      | `AI`                | Workers AI                |
+| Resource        | Name                | Purpose                        |
+| --------------- | ------------------- | ------------------------------ |
+| Worker          | `seekingtex`        | Astro site (SSG + SSR)         |
+| Vectorize Index | `ai-index`          | 768-dim cosine similarity      |
+| AI Binding      | `AI`                | Workers AI                     |
 | R2 Bucket       | `seekingtex-assets` | Product images & static assets |
 
 ### 10.4 DNS
@@ -573,13 +580,13 @@ src/data/site/sections.ts  鈫?SSOT (28 public pages)
 | `src/components/common/JsonLd.astro`      | JSON-LD schema generator (7 types)            |
 | `src/components/common/AiSignal.astro`    | Content-Signal meta tags                      |
 | `src/components/common/Breadcrumbs.astro` | Visual breadcrumbs with RDFa                  |
-| `src/lib/geo-seo/intent.ts`              | URL-to-intent mapping (30+ rules)             |
-| `src/lib/geo-seo/llms.ts`                | llms.txt / llms-full.txt builders            |
+| `src/lib/geo-seo/intent.ts`               | URL-to-intent mapping (30+ rules)             |
+| `src/lib/geo-seo/llms.ts`                 | llms.txt / llms-full.txt builders             |
 | `src/pages/llms.txt.ts`                   | /llms.txt Astro route (prerender)             |
 | `src/pages/llms-full.txt.ts`              | /llms-full.txt Astro route (prerender)        |
 | `scripts/build-geo-v4.ts`                 | Build-time llms.txt + sitemap generator       |
-| `scripts/optimize-images-worker.mjs`       | Build-time WebP optimizer (public images)     |
-| `vendor/integration/image-optimizer.ts`    | Astro integration hook for WebP generation    |
+| `scripts/optimize-images-worker.mjs`      | Build-time WebP optimizer (public images)     |
+| `vendor/integration/image-optimizer.ts`   | Astro integration hook for WebP generation    |
 | `astro.config.ts`                         | Astro build config + Vite plugins             |
 | `wrangler.toml`                           | Cloudflare Workers config                     |
 | `keystatic.config.ts`                     | Keystatic CMS config                          |
@@ -643,7 +650,7 @@ These rules exist because real bugs hit production. Follow them without exceptio
 
 ### 9.1 Never use PowerShell `Set-Content` / `Out-File` without `-Encoding UTF8`
 
-PowerShell 5.1 defaults to **ANSI (system locale)** encoding, which destroys UTF鈥? multi鈥慴yte characters (e.g. `鈥擿 U+2014 em dash, `路` U+00B7 middle dot, CJK characters). The file will appear correct in most editors but esbuild/Cloudflare will fail with `Unterminated string literal`.
+PowerShell 5.1 defaults to **ANSI (system locale)** encoding, which destroys UTF鈥? multi鈥慴yte characters (e.g. `鈥擿 U+2014 em dash, `路`U+00B7 middle dot, CJK characters). The file will appear correct in most editors but esbuild/Cloudflare will fail with`Unterminated string literal`.
 
 **Wrong:** `Set-Content -Path file.astro -Value $newContent`
 
@@ -660,6 +667,7 @@ The ISO cleanup script replaced bare text like `ISO 9001:2015` across the entire
 If ISO/text cleanup corrupts files, restore from the **parent commit** (`git checkout <parent> -- <files>`), not from HEAD. The `git checkout HEAD` approach can restore the already鈥慶orrupted version.
 
 **Verify UTF-8 integrity with:**
+
 ```
 $bytes = [System.IO.File]::ReadAllBytes($path)
 for ($i = 0; $i -lt $bytes.Length - 2; $i++) {
@@ -672,6 +680,7 @@ for ($i = 0; $i -lt $bytes.Length - 2; $i++) {
 ### 9.4 Check for duplicate object literal keys
 
 A duplicate key in a translation config won't crash local `astro dev` but esbuild will emit a warning and Cloudflare's build treats it as a validation concern. After any bulk edit that inserts lines into objects, grep for duplicates:
+
 ```
 Get-ChildItem src -Recurse -Include *.ts,*.astro | Select-String -Pattern "Duplicate key"
 ```
@@ -681,14 +690,16 @@ Get-ChildItem src -Recurse -Include *.ts,*.astro | Select-String -Pattern "Dupli
 Product category listing pages are served by `src/pages/[lang]/[category].astro` which maps URL slugs to product categories via the `CATEGORY_SLUG_TO_URL` / `urlSlugToCategory` utilities in `src/utils/products.ts`.
 
 **Convention:**
-| Slug | Category |
-|---|---|
-| `/ribboat` | `RIB` |
+
+| Slug              | Category     |
+| ----------------- | ------------ |
+| `/ribboat`        | `RIB`        |
 | `/inflatableboat` | `INFLATABLE` |
-| `/supboard` | `SUP` |
-| `/accessory` | `ACCESSORY` |
+| `/supboard`       | `SUP`        |
+| `/accessory`      | `ACCESSORY`  |
 
 **Rules:**
+
 - All nav links to product categories MUST use the slug format (`/{lang}/ribboat`), **never** `/products?category=RIB`.
 - The `[category].astro` route already exists 鈥?do not create individual page files for each category.
 - Add any new slug to `LOCALIZED_ROUTES` in both `Header.astro` and `Footer.astro` so that `localizeHref` prepends the `/{lang}` prefix.
@@ -710,6 +721,7 @@ node scripts/convert-to-webp.mjs public/images/seekingtex/products
 The script resizes and compresses images per directory rules (products: 800px width, 80 quality).
 
 **Rules:**
+
 - Convert BEFORE pushing to GitHub 鈥?never deploy original JPG/PNG files
 - After conversion, update all source references from `.jpg`/`.png` to `.webp` across the entire `src/` directory
 - Only delete originals when no source file references the JPG/PNG path anymore
@@ -729,14 +741,15 @@ Images are organized by product category in subdirectories.
 
 The Product Catalog section on `src/pages/index.astro` displays products in four category blocks, in this order:
 
-| # | Category | Filter key | Max shown |
-|---|----------|-----------|-----------|
-| 1 | RIB Boats | `RIB` | 6 |
-| 2 | Inflatable Boats | `INFLATABLE` | 6 |
-| 3 | SUP Boards | `SUP` | 6 |
-| 4 | Accessories | `ACCESSORY` | 6 |
+| #   | Category         | Filter key   | Max shown |
+| --- | ---------------- | ------------ | --------- |
+| 1   | RIB Boats        | `RIB`        | 6         |
+| 2   | Inflatable Boats | `INFLATABLE` | 6         |
+| 3   | SUP Boards       | `SUP`        | 6         |
+| 4   | Accessories      | `ACCESSORY`  | 6         |
 
 **Rules:**
+
 - The `catalogCategories` array in `index.astro` frontmatter defines the order and labels
 - Each category is filtered by `p.category === cat.key` and sliced to 6 items
 - If a category has fewer than 6 products, show all available (do not pad)
@@ -747,13 +760,14 @@ The Product Catalog section on `src/pages/index.astro` displays products in four
 
 The `/trust` page (`src/pages/trust.astro`) renders three FAQ sections, each defined in `src/data/pages/trust.yaml`:
 
-| YAML key | Section title |
-|----------|--------------|
-| `faqs_rib` | RIB Boat FAQs |
+| YAML key          | Section title        |
+| ----------------- | -------------------- |
+| `faqs_rib`        | RIB Boat FAQs        |
 | `faqs_inflatable` | Inflatable Boat FAQs |
-| `faqs_sup` | SUP Board FAQs |
+| `faqs_sup`        | SUP Board FAQs       |
 
 **Rules:**
+
 - Each FAQ group has its own `title`, `subtitle`, and `items`
 - The `FAQs.astro` component is reused three times with spread props
 - Add new FAQ categories by adding a key in `trust.yaml` and a `<Faq>` call in `trust.astro`
@@ -766,12 +780,14 @@ Do NOT use the HTML entity `&rarr;` in source files. Use the literal Unicode arr
 **Why:** `&rarr;` requires HTML rendering context. In Astro templates, YAML locale files, or component props, it often gets double-escaped to `&amp;rarr;` and renders literally as the text `&rarr;` instead of an arrow symbol.
 
 **Rule:**
+
 - In `.astro` files: use `鈫抈 directly
 - In `.yaml`/`.yml` locale files: use `鈫抈 directly
 - In `.mdx` content: use `鈫抈 directly
 - Never use `&rarr;` or `&amp;rarr;`
 
 **To scan for violations:**
+
 ```bash
 grep -r '&rarr' src/
 grep -r '&amp;rarr' src/
@@ -792,11 +808,13 @@ fm.excerpt 鈫?fm.summary 鈫?fm.description 鈫?stripHtml(body) (truncated to 1
 **Problem:** If none of the first three fields contain a user's search keyword, and the keyword only appears in the MDX body past the first 140 characters, the product will **not** appear in search results.
 
 **Rule:**
+
 - Every product MDX frontmatter MUST have a `summary` field that contains the key descriptive words users are likely to search for (e.g. "**board**", "**kayak**", "**RIB**", "**boat**", "**paddle**").
 - The `summary` field should be a short, keyword-rich sentence (40鈥?20 chars) that accurately describes the product.
 - If a product has a dedicated `excerpt` field, it takes priority 鈥?but `summary` is preferred because it already exists on all products and is managed via the SSOT in `src/data/products.ts`.
 
 **Adding new product checklist (updated):**
+
 1. Add product data to `src/data/products.ts` (includes `name` and `desc` fields 鈫?used as `summary` in MDX)
 2. Create MDX at `src/content/products/{slug}.mdx` with `summary:` frontmatter
 3. Add translations to `src/data/product-texts.ts`
@@ -827,44 +845,44 @@ The `description` field in MDX frontmatter is often a long-form marketing paragr
 ### 17.1 Root Cause: `t()` fallback returns the raw key string
 
 ```ts
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;    // src/i18n/utils.ts
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key; // src/i18n/utils.ts
 ```
 
 The `|| key` fallback at line 263 returns the key string (truthy), so `t('missing.key') || 'English fallback'` in templates **never activates the `'English fallback'`** 鈥?the raw key name is displayed on the page. This means any missing key produces visible garbled text regardless of language.
 
 ### 17.2 Problems Found and Fixed
 
-| # | Problem | Root Cause | Fix | Scope |
-|---|---------|-----------|-----|-------|
-| 1 | **BOM in YAML files** | Editors saved UTF-8 with BOM (`EF BB BF` prefix) | `fix-bom.cjs` stripped BOMs from 106 YAML files | `src/data/*.yaml`, `src/data/pages/**/*.yaml`, `src/data/site/*.yaml` 鈥?106 files |
-| 2 | **BOM in source files** | 47 files under `src/` had BOM (`.ts`, `.astro`, `.yaml` above the data dirs) | **FIXED** 鈥?stripped BOMs from all 47 files | `src/config.*.yaml`, `src/data/*.ts`, `src/pages/**/*.astro`, `src/pages/api/*.ts`, `src/lib/*.ts` |
-| 3 | **Replacement characters U+FFFD** | 4 files contained corrupted `锟絗 from encoding round-trips (em dash `鈥擿 鈫?`E2 80 3F`) | **FIXED** 鈥?byte-level fix `E2 80 3F`鈫抈E2 80 94` (2 files) + git restore (2 files) | `src/pages/randdcenter/hull-engineering.astro`, `hydrodynamic-test-tank.astro`, `src/pages/[lang]/oem-process.astro`, `src/pages/[lang]/brand/seekingtex.astro` |
-| 4 | **Missing `home.products.*` keys** | `home.products.tagline/title/subtitle` not defined in `en` section | Added all 3 keys to `ui['en']` in `src/i18n/config.ts` | 1 language (en) |
-| 5 | **Missing `nav.*` keys in non-English** | 13 nav keys missing from all 21 non-English sections | Added translated values for all 273 missing entries | 21 languages 脳 13 keys = 273 entries |
-| 6 | **Missing `ai.*` keys in all languages** | 9 keys (`ai.quickAnswer`, `ai.fact.*`) missing from all 22 languages | Added via `fix-ai-i18n.cjs` script | 22 languages 脳 9 keys = 198 entries |
-| 7 | **Missing `ai.*` sub-keys** | 6 keys (`ai.entity`, `ai.definition`, `ai.useCase`, `ai.comparison`, `ai.constraint`, `ai.process`) missing | **FIXED** 鈥?added to `en` section (all languages fallback to English) | 22 languages via en fallback |
-| 8 | **Missing 4 B2B page groups** | `commercialWorkboats.*`, `disasterRelief.*`, `engineeringPerfection.*`, `searchRescue.*` 鈥?zero keys defined | **FIXED** 鈥?added to `en` section (all languages show English fallback) | 4 groups 脳 ~125 keys total in en |
-| 9 | **Missing 3 compare page groups** | `compare.inflatableVsHard.*`, `compare.ribVsDinghy.*`, `compare.supVsKayak.*` 鈥?zero keys defined | **FIXED** 鈥?added to `en` section | 3 groups 脳 ~106 keys total in en |
-| 10 | **Missing `home.catalog.*` keys** | 10 keys missing | **FIXED** 鈥?added to `en` section | 10 keys in en |
-| 11 | **Missing `home.technology.*` keys** | 3 keys missing | **FIXED** 鈥?added to `en` section | 3 keys in en |
-| 12 | **Missing `home.factory.*` keys** | 11 keys missing | **FIXED** 鈥?added to `en` section | 11 keys in en |
-| 13 | **Missing `home.why.*` keys** | ~20 keys missing | **FIXED** 鈥?added to `en` section | ~20 keys in en |
-| 14 | **Missing home section groups** | `home.preview.*.product*` (12), `home.problem.*` (10), `home.ask.*` (5), `home.lifestyle.*` (4), `home.gallery.*` (9), `home.social.*` (4), `home.resources.*` (~28), `home.trust.*` (5), `home.contact.*` (2), `home.learn.browse` (1) 鈥?~80 keys | **FIXED** 鈥?added to `en` section | ~80 keys in en |
-| 15 | **Singular/plural key mismatch** | Code uses singular but config had plural | **FIXED** 鈥?added 4 singular keys to `en` section | 4 keys in en |
-| 16 | **Missing `product.*` keys** | 3 keys missing | **FIXED** 鈥?added to `en` section | 3 keys in en |
-| 17 | **Missing `search.*` keys** | 4 keys missing | **FIXED** 鈥?added to `en` section | 4 keys in en |
-| 18 | **Missing `cta.*` keys** | 2 keys missing | **FIXED** 鈥?added to `en` section | 2 keys in en |
-| 19 | **Missing `compare.*` sub-keys** | `compare.supVsRib.cost`, `compare.readGuides` | **FIXED** 鈥?added to `en` section | 2 keys in en |
-| 20 | **RSS Content-Type missing charset** | `src/pages/rss.xml.ts` returned `Content-Type: application/xml` without `charset=utf-8` | **FIXED** 鈥?added `; charset=utf-8` | 1 file |
-| 21 | **4 nav keys untranslated in non-English** | `nav.searchRescue`, `nav.commercialWorkboats`, `nav.engineeringPerfection`, `nav.disasterRelief` exist in non-English sections but with English text | **NOT YET FIXED** 鈥?needs native translations | 21 languages 脳 4 keys = 84 entries |
+| #   | Problem                                    | Root Cause                                                                                                                                                                                                                                          | Fix                                                                                   | Scope                                                                                                                                                           |
+| --- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **BOM in YAML files**                      | Editors saved UTF-8 with BOM (`EF BB BF` prefix)                                                                                                                                                                                                    | `fix-bom.cjs` stripped BOMs from 106 YAML files                                       | `src/data/*.yaml`, `src/data/pages/**/*.yaml`, `src/data/site/*.yaml` 鈥?106 files                                                                              |
+| 2   | **BOM in source files**                    | 47 files under `src/` had BOM (`.ts`, `.astro`, `.yaml` above the data dirs)                                                                                                                                                                        | **FIXED** 鈥?stripped BOMs from all 47 files                                          | `src/config.*.yaml`, `src/data/*.ts`, `src/pages/**/*.astro`, `src/pages/api/*.ts`, `src/lib/*.ts`                                                              |
+| 3   | **Replacement characters U+FFFD**          | 4 files contained corrupted `锟絗 from encoding round-trips (em dash `鈥擿 鈫?`E2 80 3F`)                                                                                                                                                           | **FIXED** 鈥?byte-level fix `E2 80 3F`鈫抈E2 80 94` (2 files) + git restore (2 files) | `src/pages/randdcenter/hull-engineering.astro`, `hydrodynamic-test-tank.astro`, `src/pages/[lang]/oem-process.astro`, `src/pages/[lang]/brand/seekingtex.astro` |
+| 4   | **Missing `home.products.*` keys**         | `home.products.tagline/title/subtitle` not defined in `en` section                                                                                                                                                                                  | Added all 3 keys to `ui['en']` in `src/i18n/config.ts`                                | 1 language (en)                                                                                                                                                 |
+| 5   | **Missing `nav.*` keys in non-English**    | 13 nav keys missing from all 21 non-English sections                                                                                                                                                                                                | Added translated values for all 273 missing entries                                   | 21 languages 脳 13 keys = 273 entries                                                                                                                           |
+| 6   | **Missing `ai.*` keys in all languages**   | 9 keys (`ai.quickAnswer`, `ai.fact.*`) missing from all 22 languages                                                                                                                                                                                | Added via `fix-ai-i18n.cjs` script                                                    | 22 languages 脳 9 keys = 198 entries                                                                                                                            |
+| 7   | **Missing `ai.*` sub-keys**                | 6 keys (`ai.entity`, `ai.definition`, `ai.useCase`, `ai.comparison`, `ai.constraint`, `ai.process`) missing                                                                                                                                         | **FIXED** 鈥?added to `en` section (all languages fallback to English)                | 22 languages via en fallback                                                                                                                                    |
+| 8   | **Missing 4 B2B page groups**              | `commercialWorkboats.*`, `disasterRelief.*`, `engineeringPerfection.*`, `searchRescue.*` 鈥?zero keys defined                                                                                                                                       | **FIXED** 鈥?added to `en` section (all languages show English fallback)              | 4 groups 脳 ~125 keys total in en                                                                                                                               |
+| 9   | **Missing 3 compare page groups**          | `compare.inflatableVsHard.*`, `compare.ribVsDinghy.*`, `compare.supVsKayak.*` 鈥?zero keys defined                                                                                                                                                  | **FIXED** 鈥?added to `en` section                                                    | 3 groups 脳 ~106 keys total in en                                                                                                                               |
+| 10  | **Missing `home.catalog.*` keys**          | 10 keys missing                                                                                                                                                                                                                                     | **FIXED** 鈥?added to `en` section                                                    | 10 keys in en                                                                                                                                                   |
+| 11  | **Missing `home.technology.*` keys**       | 3 keys missing                                                                                                                                                                                                                                      | **FIXED** 鈥?added to `en` section                                                    | 3 keys in en                                                                                                                                                    |
+| 12  | **Missing `home.factory.*` keys**          | 11 keys missing                                                                                                                                                                                                                                     | **FIXED** 鈥?added to `en` section                                                    | 11 keys in en                                                                                                                                                   |
+| 13  | **Missing `home.why.*` keys**              | ~20 keys missing                                                                                                                                                                                                                                    | **FIXED** 鈥?added to `en` section                                                    | ~20 keys in en                                                                                                                                                  |
+| 14  | **Missing home section groups**            | `home.preview.*.product*` (12), `home.problem.*` (10), `home.ask.*` (5), `home.lifestyle.*` (4), `home.gallery.*` (9), `home.social.*` (4), `home.resources.*` (~28), `home.trust.*` (5), `home.contact.*` (2), `home.learn.browse` (1) 鈥?~80 keys | **FIXED** 鈥?added to `en` section                                                    | ~80 keys in en                                                                                                                                                  |
+| 15  | **Singular/plural key mismatch**           | Code uses singular but config had plural                                                                                                                                                                                                            | **FIXED** 鈥?added 4 singular keys to `en` section                                    | 4 keys in en                                                                                                                                                    |
+| 16  | **Missing `product.*` keys**               | 3 keys missing                                                                                                                                                                                                                                      | **FIXED** 鈥?added to `en` section                                                    | 3 keys in en                                                                                                                                                    |
+| 17  | **Missing `search.*` keys**                | 4 keys missing                                                                                                                                                                                                                                      | **FIXED** 鈥?added to `en` section                                                    | 4 keys in en                                                                                                                                                    |
+| 18  | **Missing `cta.*` keys**                   | 2 keys missing                                                                                                                                                                                                                                      | **FIXED** 鈥?added to `en` section                                                    | 2 keys in en                                                                                                                                                    |
+| 19  | **Missing `compare.*` sub-keys**           | `compare.supVsRib.cost`, `compare.readGuides`                                                                                                                                                                                                       | **FIXED** 鈥?added to `en` section                                                    | 2 keys in en                                                                                                                                                    |
+| 20  | **RSS Content-Type missing charset**       | `src/pages/rss.xml.ts` returned `Content-Type: application/xml` without `charset=utf-8`                                                                                                                                                             | **FIXED** 鈥?added `; charset=utf-8`                                                  | 1 file                                                                                                                                                          |
+| 21  | **4 nav keys untranslated in non-English** | `nav.searchRescue`, `nav.commercialWorkboats`, `nav.engineeringPerfection`, `nav.disasterRelief` exist in non-English sections but with English text                                                                                                | **NOT YET FIXED** 鈥?needs native translations                                        | 21 languages 脳 4 keys = 84 entries                                                                                                                             |
 
 ### 17.3 Remaining Work
 
-| # | Item | Impact | Effort |
-|---|------|--------|--------|
-| 1 | **Translate 4 nav keys to native languages** 鈥?`nav.searchRescue`, `nav.commercialWorkboats`, `nav.engineeringPerfection`, `nav.disasterRelief` exist in non-English sections but show English text | Low (English is reasonable fallback) | 21 languages 脳 4 keys = 84 translations |
-| 2 | **Translate B2B/compare/page content keys to all 22 languages** 鈥?All keys from batch 2 fix only added to `en` section; non-English visitors see English text | Medium (English is acceptable fallback for B2B) | ~330 keys 脳 21 languages = ~7,000 translations |
-| 3 | **Add `npm run check:i18n` coverage for all new key groups** 鈥?The audit script needs updating to cover the B2B, compare, and home keys added in this batch | Low (manual build verification works) | 1 script update |
+| #   | Item                                                                                                                                                                                                 | Impact                                          | Effort                                          |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| 1   | **Translate 4 nav keys to native languages** 鈥?`nav.searchRescue`, `nav.commercialWorkboats`, `nav.engineeringPerfection`, `nav.disasterRelief` exist in non-English sections but show English text | Low (English is reasonable fallback)            | 21 languages 脳 4 keys = 84 translations        |
+| 2   | **Translate B2B/compare/page content keys to all 22 languages** 鈥?All keys from batch 2 fix only added to `en` section; non-English visitors see English text                                       | Medium (English is acceptable fallback for B2B) | ~330 keys 脳 21 languages = ~7,000 translations |
+| 3   | **Add `npm run check:i18n` coverage for all new key groups** 鈥?The audit script needs updating to cover the B2B, compare, and home keys added in this batch                                         | Low (manual build verification works)           | 1 script update                                 |
 
 ### 17.4 Prevention
 
@@ -880,24 +898,24 @@ The `|| key` fallback at line 263 returns the key string (truthy), so `t('missin
 
 The i18n system was completed for 6 languages (IT, RU, TR, NO, FI, AR) using a batch translation pipeline. The methodology:
 
-| Step | Tool | Purpose |
-|------|------|---------|
-| 1 | `extract_missing_{lang}.py` | Scans `src/i18n/config.ts` and identifies all EN keys missing from the target language section |
-| 2 | `missing_{lang}.json` | Output 鈥?structured JSON of all missing keys with their EN values, grouped by category |
-| 3 | `{lang}_batchN.json` | Translation files 鈥?one per batch (7 batches total per language) |
-| 4 | `insert_lang_translations.py` | Reads batch JSON and inserts translations into the `{lang}` section of `config.ts` |
+| Step | Tool                          | Purpose                                                                                        |
+| ---- | ----------------------------- | ---------------------------------------------------------------------------------------------- |
+| 1    | `extract_missing_{lang}.py`   | Scans `src/i18n/config.ts` and identifies all EN keys missing from the target language section |
+| 2    | `missing_{lang}.json`         | Output 鈥?structured JSON of all missing keys with their EN values, grouped by category        |
+| 3    | `{lang}_batchN.json`          | Translation files 鈥?one per batch (7 batches total per language)                              |
+| 4    | `insert_lang_translations.py` | Reads batch JSON and inserts translations into the `{lang}` section of `config.ts`             |
 
 **Batch breakdown (standard 7-batch pipeline):**
 
-| Batch | Categories | Typical Count |
-|-------|-----------|---------------|
-| B1 | ai, cta, guides, hero, knowledgeGraph, product, schema, search, useCase | ~56 |
-| B2 | answerCenter, buyerCenter, faq, learn | ~113 |
-| B3 | people, techspecs | ~53 |
-| B4 | commercialWorkboats, disasterRelief | ~93 |
-| B5 | searchRescue, engineeringPerfection, solutionsByUseCase | ~135 |
-| B6 | home (nav, hero, sections, testimonials, stats) | ~166 |
-| B7 | compare (all 322 comparison specification keys) | ~322 |
+| Batch | Categories                                                              | Typical Count |
+| ----- | ----------------------------------------------------------------------- | ------------- |
+| B1    | ai, cta, guides, hero, knowledgeGraph, product, schema, search, useCase | ~56           |
+| B2    | answerCenter, buyerCenter, faq, learn                                   | ~113          |
+| B3    | people, techspecs                                                       | ~53           |
+| B4    | commercialWorkboats, disasterRelief                                     | ~93           |
+| B5    | searchRescue, engineeringPerfection, solutionsByUseCase                 | ~135          |
+| B6    | home (nav, hero, sections, testimonials, stats)                         | ~166          |
+| B7    | compare (all 322 comparison specification keys)                         | ~322          |
 
 The 7-batch pattern was established because the `compare` category contains 322 keys (the largest single group) and `home` contains ~166 keys 鈥?together they account for ~40% of all missing translations.
 
@@ -906,6 +924,7 @@ The 7-batch pattern was established because the `compare` category contains 322 
 **File:** `C:\Users\Hello\AppData\Local\Temp\opencode\insert_lang_translations.py`
 
 Operation:
+
 1. Reads `src/i18n/config.ts`
 2. Locates the `{lang}: {` section via regex
 3. For each key in the input JSON:
@@ -920,6 +939,7 @@ Operation:
 **File:** `C:\Users\Hello\AppData\Local\Temp\opencode\extract_missing_{lang}.py`
 
 Operation:
+
 1. Parses `src/i18n/config.ts` extracting all keys from the `en` section and the target `{lang}` section
 2. Compares key sets to find missing entries
 3. Groups missing keys by category prefix (before the first `.`)
@@ -939,18 +959,19 @@ The `--max-old-space-size=8192` flag is required because the i18n file has grown
 
 ### 18.5 Language Completion Summary
 
-| Lang | Initial | After | Batches | Pages | GEO |
-|------|---------|-------|---------|-------|-----|
-| it | 344 (27%) | ~1315 | 7 | 45/45 | 鉁?|
-| ru | 357 (28%) | ~1315 | 6 | 45/45 | 鉁?|
-| tr | 376 (29%) | ~1312 | 6 | 45/45 | 鉁?|
-| no | 352 (28%) | ~1315 | 7 | 45/45 | 鉁?|
-| fi | 377 (29%) | ~1364 | 7 | 45/45 | 鉁?|
-| ar | 360 (28%) | ~1357 | 7 | 45/45 | 鉁?|
+| Lang | Initial   | After | Batches | Pages | GEO |
+| ---- | --------- | ----- | ------- | ----- | --- |
+| it   | 344 (27%) | ~1315 | 7       | 45/45 | 鉁? |
+| ru   | 357 (28%) | ~1315 | 6       | 45/45 | 鉁? |
+| tr   | 376 (29%) | ~1312 | 6       | 45/45 | 鉁? |
+| no   | 352 (28%) | ~1315 | 7       | 45/45 | 鉁? |
+| fi   | 377 (29%) | ~1364 | 7       | 45/45 | 鉁? |
+| ar   | 360 (28%) | ~1357 | 7       | 45/45 | 鉁? |
 
 All 6 languages have equivalent or greater key coverage than English (1279 keys). The extra keys (~1357 vs 1279 for FI) come from compare section expanded keys that exist in the data model.
 
 ### Remaining partial languages (awaiting completion):
+
 sv (Svenska), el (螘位位畏谓喂魏维), cs (膶e拧tina), da (Dansk), ro (Rom芒n膬), th (喔犩覆喔┼覆喙勦笚喔?
 
 ### 18.6 GEO Intent Regex

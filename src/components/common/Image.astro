@@ -175,7 +175,17 @@ const cdnSrcSet =
     /* The native <Image /> typing is overly strict for our forwarding wrapper;
        we cast through `unknown` once so each call site keeps clean types. */
     resolved && (
-      <AstroImage {...(Object.assign({}, rest, { src: resolved, width: w, height: h, alt, widths, format, style: finalStyle }) as unknown as Parameters<typeof AstroImage>[0])} />
+      <AstroImage
+        {...(Object.assign({}, rest, {
+          src: resolved,
+          width: w,
+          height: h,
+          alt,
+          widths,
+          format,
+          style: finalStyle,
+        }) as unknown as Parameters<typeof AstroImage>[0])}
+      />
     )
   )
 }

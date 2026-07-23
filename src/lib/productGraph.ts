@@ -23,7 +23,8 @@ export const productGraph: Record<string, ProductGraphNode> = {
     avoid: ['highly breathable requirements without membrane'],
     userLevel: 'intermediate-advanced',
     type: 'weather protection + durability',
-    description: 'Waterproof fabrics with PU/TPU coatings and laminations tested to 5000-30000mm hydrostatic head. Windproof construction with taped seam capability.',
+    description:
+      'Waterproof fabrics with PU/TPU coatings and laminations tested to 5000-30000mm hydrostatic head. Windproof construction with taped seam capability.',
   },
   QUICK_DRY: {
     intent: 'moisture management + speed',
@@ -40,7 +41,8 @@ export const productGraph: Record<string, ProductGraphNode> = {
     avoid: ['structural rigid applications'],
     userLevel: 'all',
     type: '4-way stretch + recovery',
-    description: 'Mechanical stretch and spandex-enhanced fabrics delivering 4-way stretch with excellent shape recovery. Freedom of movement for dynamic activities.',
+    description:
+      'Mechanical stretch and spandex-enhanced fabrics delivering 4-way stretch with excellent shape recovery. Freedom of movement for dynamic activities.',
   },
   ANTIBACTERIAL: {
     intent: 'hygiene + odor control',
@@ -48,7 +50,8 @@ export const productGraph: Record<string, ProductGraphNode> = {
     avoid: ['sterile cleanroom environments'],
     userLevel: 'all',
     type: 'antimicrobial + odor resistance',
-    description: 'Antibacterial fabrics with silver ion or zinc-based treatments that inhibit bacterial growth, control odor, and maintain freshness during extended wear.',
+    description:
+      'Antibacterial fabrics with silver ion or zinc-based treatments that inhibit bacterial growth, control odor, and maintain freshness during extended wear.',
   },
   ECO_FRIENDLY: {
     intent: 'sustainability + recycled',
@@ -56,6 +59,7 @@ export const productGraph: Record<string, ProductGraphNode> = {
     avoid: ['budget-only driven sourcing'],
     userLevel: 'all',
     type: 'recycled + sustainable',
-    description: 'Eco-friendly fabrics made from recycled polyester (GRS certified) and sustainable processes. Low-impact dyes, water conservation, and reduced carbon footprint.',
+    description:
+      'Eco-friendly fabrics made from recycled polyester (GRS certified) and sustainable processes. Low-impact dyes, water conservation, and reduced carbon footprint.',
   },
 };

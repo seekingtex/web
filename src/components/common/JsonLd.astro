@@ -72,7 +72,16 @@ export interface HowToLd {
 }
 
 export interface Props {
-  type?: 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Product' | 'FAQPage' | 'Article' | 'HowTo' | 'ImageObject' | 'VideoObject';
+  type?:
+    | 'Organization'
+    | 'WebSite'
+    | 'BreadcrumbList'
+    | 'Product'
+    | 'FAQPage'
+    | 'Article'
+    | 'HowTo'
+    | 'ImageObject'
+    | 'VideoObject';
   data?: Record<string, unknown>;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: FaqItem[];

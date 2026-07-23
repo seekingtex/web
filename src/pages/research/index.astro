@@ -10,16 +10,35 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-interface ResearchTopic { slug: string; category: string; readTime: string }
+interface ResearchTopic {
+  slug: string;
+  category: string;
+  readTime: string;
+}
 
 const topics: ResearchTopic[] = (researchData as any)?.topics ?? [];
 
 const topicMeta: Record<string, { title: string; desc: string; image?: string }> = {
-  'upf-uv-protection-technology': { title: 'UPF & UV Protection Technology', desc: 'The engineering behind fiber-level UV stabilizers and fabric construction techniques that deliver UPF 50+ sun protection.' },
-  'waterproof-breathable-technology': { title: 'Waterproof Breathable Technology', desc: 'A technical comparison of PU, PTFE, and ePTFE membrane technologies for waterproof breathable fabrics.' },
-  'textile-certifications-guide': { title: 'Textile Certifications Guide', desc: 'The full guide to textile certifications: OEKO-TEX Standard 100, bluesign, GOTS, GRS, and STeP certification processes and requirements.' },
-  'fabric-weight-thickness-guide': { title: 'Fabric Weight & Thickness Guide', desc: 'Engineering analysis of how fabric weight (GSM) and thickness affect performance, warmth, durability, and application suitability.' },
-  'fabric-oem-odm-buyer-guide': { title: 'Fabric OEM/ODM Buyer Guide', desc: 'A comprehensive guide for sourcing functional fabrics from manufacturers, from factory evaluation to logistics and compliance.' },
+  'upf-uv-protection-technology': {
+    title: 'UPF & UV Protection Technology',
+    desc: 'The engineering behind fiber-level UV stabilizers and fabric construction techniques that deliver UPF 50+ sun protection.',
+  },
+  'waterproof-breathable-technology': {
+    title: 'Waterproof Breathable Technology',
+    desc: 'A technical comparison of PU, PTFE, and ePTFE membrane technologies for waterproof breathable fabrics.',
+  },
+  'textile-certifications-guide': {
+    title: 'Textile Certifications Guide',
+    desc: 'The full guide to textile certifications: OEKO-TEX Standard 100, bluesign, GOTS, GRS, and STeP certification processes and requirements.',
+  },
+  'fabric-weight-thickness-guide': {
+    title: 'Fabric Weight & Thickness Guide',
+    desc: 'Engineering analysis of how fabric weight (GSM) and thickness affect performance, warmth, durability, and application suitability.',
+  },
+  'fabric-oem-odm-buyer-guide': {
+    title: 'Fabric OEM/ODM Buyer Guide',
+    desc: 'A comprehensive guide for sourcing functional fabrics from manufacturers, from factory evaluation to logistics and compliance.',
+  },
 };
 ---
 
@@ -45,7 +64,9 @@ const topicMeta: Record<string, { title: string; desc: string; image?: string }>
       <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Latest Research</span>
       <h1 class="mt-4 text-4xl font-bold text-gray-900">Knowledge Center</h1>
       <p class="mt-4 text-lg text-gray-500">
-        In-depth technical research on functional fabric technologies, certifications, and manufacturing <span class="text-gray-800 font-semibold">—</span> written for product developers, sourcing professionals, and informed buyers.
+        In-depth technical research on functional fabric technologies, certifications, and manufacturing <span
+          class="text-gray-800 font-semibold">—</span
+        > written for product developers, sourcing professionals, and informed buyers.
       </p>
     </div>
 

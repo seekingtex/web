@@ -20,7 +20,13 @@ export const GET: APIRoute = async ({ locals: _locals }) => {
 
     // Products
     { id: 'products', url: '/products', title: 'Products Overview', section: 'products', type: 'product' },
-    { id: 'product-upf50-polyester', url: '/products/upf50-polyester', title: 'UPF 50+ Polyester', section: 'products', type: 'product' },
+    {
+      id: 'product-upf50-polyester',
+      url: '/products/upf50-polyester',
+      title: 'UPF 50+ Polyester',
+      section: 'products',
+      type: 'product',
+    },
     {
       id: 'product-waterproof-breathable',
       url: '/products/waterproof-breathable',

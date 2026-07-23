@@ -2,11 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 
-const crumbs = [
-  { name: 'Home', href: '/' },
-  { name: 'Factory', href: '/factory' },
-  { name: 'Equipment' },
-];
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Equipment' }];
 
 const metadata = {
   title: `Manufacturing Equipment — Weaving, Coating, Printing & Inspection | ${SITE.name}`,
@@ -17,49 +13,121 @@ const categories = [
   {
     title: 'Weaving & Knitting',
     items: [
-      { name: 'Rapier Loom', spec: 'CNC-controlled, up to 360 cm width, dobby/jacquard', desc: 'Computer-controlled rapier loom for precision woven fabrics. Suitable for medium to heavy-weight fabrics with complex weave patterns. Dobby and jacquard capability.' },
-      { name: 'Air-Jet Loom', spec: 'High-speed, up to 190 cm width, 800 rpm', desc: 'High-speed air-jet loom for lightweight to medium-weight fabrics. Optimised for high-volume production of plain, twill, and satin weaves.' },
-      { name: 'Circular Knitting Machine', spec: 'Up to 38" diameter, 24-36 gauge', desc: 'Circular knitting machine for tubular and open-width knit fabrics. Suitable for performance knits, sportswear, and base-layer textiles.' },
+      {
+        name: 'Rapier Loom',
+        spec: 'CNC-controlled, up to 360 cm width, dobby/jacquard',
+        desc: 'Computer-controlled rapier loom for precision woven fabrics. Suitable for medium to heavy-weight fabrics with complex weave patterns. Dobby and jacquard capability.',
+      },
+      {
+        name: 'Air-Jet Loom',
+        spec: 'High-speed, up to 190 cm width, 800 rpm',
+        desc: 'High-speed air-jet loom for lightweight to medium-weight fabrics. Optimised for high-volume production of plain, twill, and satin weaves.',
+      },
+      {
+        name: 'Circular Knitting Machine',
+        spec: 'Up to 38" diameter, 24-36 gauge',
+        desc: 'Circular knitting machine for tubular and open-width knit fabrics. Suitable for performance knits, sportswear, and base-layer textiles.',
+      },
     ],
   },
   {
     title: 'Dyeing & Finishing',
     items: [
-      { name: 'Jet Dyeing Machine', spec: 'Programmable control, 50-500 kg capacity, up to 130°C', desc: 'High-temperature jet dyeing machine for polyester, nylon, and blended fabrics. Fully programmable with automated chemical dosing.' },
-      { name: 'Padding Mangle', spec: '2-roll horizontal, pneumatic pressure control', desc: 'Chemical padding for finishing applications including DWR, antibacterial, FR, and UV-protective treatments. Consistent pick-up rate across full width.' },
-      { name: 'Heat Setting Stenter', spec: '8-chamber, up to 220°C, 180-360 cm width', desc: 'Multi-chamber stenter frame for heat setting, drying, and thermosol dyeing. Precision width control and temperature profiling.' },
+      {
+        name: 'Jet Dyeing Machine',
+        spec: 'Programmable control, 50-500 kg capacity, up to 130°C',
+        desc: 'High-temperature jet dyeing machine for polyester, nylon, and blended fabrics. Fully programmable with automated chemical dosing.',
+      },
+      {
+        name: 'Padding Mangle',
+        spec: '2-roll horizontal, pneumatic pressure control',
+        desc: 'Chemical padding for finishing applications including DWR, antibacterial, FR, and UV-protective treatments. Consistent pick-up rate across full width.',
+      },
+      {
+        name: 'Heat Setting Stenter',
+        spec: '8-chamber, up to 220°C, 180-360 cm width',
+        desc: 'Multi-chamber stenter frame for heat setting, drying, and thermosol dyeing. Precision width control and temperature profiling.',
+      },
     ],
   },
   {
     title: 'Coating & Lamination',
     items: [
-      { name: 'Knife-Over-Roll Coating Line', spec: 'Precision gap control, 0.01 mm resolution, up to 220 cm width', desc: 'Precision coating line for PU, acrylic, silicone, and solvent-based coatings. Consistent coating weight across full width with online thickness monitoring.' },
-      { name: 'Hot-Melt Lamination Machine', spec: 'Up to 220 cm width, temperature-controlled rollers', desc: 'Hot-melt lamination for bonding membranes (PU, PTFE) to face fabrics. Suitable for waterproof breathable laminates and 3-layer fabric constructions.' },
-      { name: 'Dip-Coating Line', spec: 'Immersion bath, squeeze rollers, drying oven', desc: 'Dip-coating line for uniform chemical application. Used for FR treatment, antimicrobial coating, and water-repellent finishing.' },
+      {
+        name: 'Knife-Over-Roll Coating Line',
+        spec: 'Precision gap control, 0.01 mm resolution, up to 220 cm width',
+        desc: 'Precision coating line for PU, acrylic, silicone, and solvent-based coatings. Consistent coating weight across full width with online thickness monitoring.',
+      },
+      {
+        name: 'Hot-Melt Lamination Machine',
+        spec: 'Up to 220 cm width, temperature-controlled rollers',
+        desc: 'Hot-melt lamination for bonding membranes (PU, PTFE) to face fabrics. Suitable for waterproof breathable laminates and 3-layer fabric constructions.',
+      },
+      {
+        name: 'Dip-Coating Line',
+        spec: 'Immersion bath, squeeze rollers, drying oven',
+        desc: 'Dip-coating line for uniform chemical application. Used for FR treatment, antimicrobial coating, and water-repellent finishing.',
+      },
     ],
   },
   {
     title: 'Digital Printing',
     items: [
-      { name: 'Digital Fabric Printer', spec: 'High-resolution inkjet, up to 2 m print width, 8 colors', desc: 'Direct-to-fabric digital printing for full-colour designs. Prints custom patterns, gradients, and photo-quality images with water-based eco-friendly inks.' },
-      { name: 'Screen Printing Machine', spec: 'Manual and semi-automatic, multi-colour registration', desc: 'Screen printing for logos, repeating patterns, and specialty applications. Provides durable, opaque prints with vibrant colour saturation.' },
+      {
+        name: 'Digital Fabric Printer',
+        spec: 'High-resolution inkjet, up to 2 m print width, 8 colors',
+        desc: 'Direct-to-fabric digital printing for full-colour designs. Prints custom patterns, gradients, and photo-quality images with water-based eco-friendly inks.',
+      },
+      {
+        name: 'Screen Printing Machine',
+        spec: 'Manual and semi-automatic, multi-colour registration',
+        desc: 'Screen printing for logos, repeating patterns, and specialty applications. Provides durable, opaque prints with vibrant colour saturation.',
+      },
     ],
   },
   {
     title: 'Inspection & Grading',
     items: [
-      { name: 'Automated Fabric Inspection Frame', spec: 'Up to 80 m/min, defect detection camera system', desc: 'Continuous fabric inspection with automated defect marking and grading per ASTM D5430. Width measurement, length counting, and shade assessment.' },
-      { name: 'Roll Wrapping Machine', spec: 'Automatic PE wrapping, label printer', desc: 'Automatic roll wrapping for protection during storage and shipping. Batch label printing with spec data and barcode.' },
+      {
+        name: 'Automated Fabric Inspection Frame',
+        spec: 'Up to 80 m/min, defect detection camera system',
+        desc: 'Continuous fabric inspection with automated defect marking and grading per ASTM D5430. Width measurement, length counting, and shade assessment.',
+      },
+      {
+        name: 'Roll Wrapping Machine',
+        spec: 'Automatic PE wrapping, label printer',
+        desc: 'Automatic roll wrapping for protection during storage and shipping. Batch label printing with spec data and barcode.',
+      },
     ],
   },
   {
     title: 'Testing & Quality Control',
     items: [
-      { name: 'Universal Tensile Tester', spec: '50 kN, ASTM D5034 / D2261', desc: 'Breaking force, elongation at break, and tear propagation testing for fabric samples.' },
-      { name: 'Hydrostatic Head Tester', spec: 'Programmable, up to 50,000 mm, AATCC 127', desc: 'Automated hydrostatic pressure test for waterproof fabric rating. Digital pressure monitoring and data logging.' },
-      { name: 'Color Measurement Spectrophotometer', spec: 'DE < 0.1 repeatability, AATCC 173', desc: 'Spectrophotometric color measurement for shade matching and quality control. Data color and GretagMacbeth systems.' },
-      { name: 'Xenon-Arc Weathering Chamber', spec: 'ISO 105-B02, 2000 h exposure', desc: 'UV and lightfastness testing for color change and strength retention under accelerated weathering conditions.' },
-      { name: 'UPF Testing Instrument', spec: 'In vitro, AS/NZS 4399', desc: 'Ultraviolet Protection Factor measurement for UPF-rated fabrics. In vitro method per Australian/New Zealand standard.' },
+      {
+        name: 'Universal Tensile Tester',
+        spec: '50 kN, ASTM D5034 / D2261',
+        desc: 'Breaking force, elongation at break, and tear propagation testing for fabric samples.',
+      },
+      {
+        name: 'Hydrostatic Head Tester',
+        spec: 'Programmable, up to 50,000 mm, AATCC 127',
+        desc: 'Automated hydrostatic pressure test for waterproof fabric rating. Digital pressure monitoring and data logging.',
+      },
+      {
+        name: 'Color Measurement Spectrophotometer',
+        spec: 'DE < 0.1 repeatability, AATCC 173',
+        desc: 'Spectrophotometric color measurement for shade matching and quality control. Data color and GretagMacbeth systems.',
+      },
+      {
+        name: 'Xenon-Arc Weathering Chamber',
+        spec: 'ISO 105-B02, 2000 h exposure',
+        desc: 'UV and lightfastness testing for color change and strength retention under accelerated weathering conditions.',
+      },
+      {
+        name: 'UPF Testing Instrument',
+        spec: 'In vitro, AS/NZS 4399',
+        desc: 'Ultraviolet Protection Factor measurement for UPF-rated fabrics. In vitro method per Australian/New Zealand standard.',
+      },
     ],
   },
 ];
@@ -76,31 +144,38 @@ const categories = [
   </section>
 
   <section class="px-6 sm:px-6 pb-20 mx-auto max-w-5xl space-y-16">
-    {categories.map((cat) => (
-      <div>
-        <h2 class="text-2xl font-bold mb-6">{cat.title}</h2>
-        <div class="grid gap-4">
-          {cat.items.map((eq) => (
-            <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
-              <div class="flex items-start justify-between gap-4">
-                <div class="flex-1">
-                  <h3 class="font-bold">{eq.name}</h3>
-                  <p class="text-sm text-primary font-medium mt-0.5">{eq.spec}</p>
-                  <p class="text-sm text-muted mt-2">{eq.desc}</p>
+    {
+      categories.map((cat) => (
+        <div>
+          <h2 class="text-2xl font-bold mb-6">{cat.title}</h2>
+          <div class="grid gap-4">
+            {cat.items.map((eq) => (
+              <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex-1">
+                    <h3 class="font-bold">{eq.name}</h3>
+                    <p class="text-sm text-primary font-medium mt-0.5">{eq.spec}</p>
+                    <p class="text-sm text-muted mt-2">{eq.desc}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </section>
 
   <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl text-center">
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
       <h2 class="text-xl font-bold">Interested in a factory tour?</h2>
-      <p class="mt-2 text-sm text-muted">We welcome visitors to our Suzhou facility. See our equipment and processes in person.</p>
-      <a href="/contact" class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+      <p class="mt-2 text-sm text-muted">
+        We welcome visitors to our Suzhou facility. See our equipment and processes in person.
+      </p>
+      <a
+        href="/contact"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >
         Schedule a visit →
       </a>
     </div>

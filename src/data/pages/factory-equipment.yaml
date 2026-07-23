@@ -17,7 +17,7 @@ categories:
 
   - title: Tube Welding & Bonding
     items:
-      - name: Heat Sealing Machine 
+      - name: Heat Sealing Machine
         spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
         desc: Hot-air heat sealing machine for bonding and welding PVC and Hypalon tube seams. Used for tacking, sealing, and fusing tube chambers and float joints.
       - name: Dielectric RF Press
@@ -41,10 +41,10 @@ categories:
 
   - title: functional fabric Printing & Decoration
     items:
-      - name: Digital Printer 
+      - name: Digital Printer
         spec: High-resolution inkjet, up to 2 m print width
         desc: Direct-to-fabric digital printing for full-colour functional fabric deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistantwater-based inks.
-      - name: Screen Printing Machine 
+      - name: Screen Printing Machine
         spec: Manual and semi-automatic, multi-colour registration
         desc: Screen printing for functional fabric board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
 

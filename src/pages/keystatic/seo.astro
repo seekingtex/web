@@ -13,7 +13,11 @@ if (!token) return Astro.redirect('/keystatic/github-token');
 
 const file = 'src/config.yaml';
 
-interface SocialLink { platform: string; url: string; icon: string };
+interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
 interface SiteSettingsData {
   siteName: string;
   siteTagline: string;
@@ -96,11 +100,14 @@ const PLATFORM_ICONS: Record<string, string> = {
 
 <AdminLayout title="SEO & Site Settings" active="seo" username={verified?.username}>
   <div class="mb-6">
-    <h1 class="text-2xl font-semibold">SEO & Site Settings <span class="text-base text-gray-400 font-normal">(SEO 与站点设置)</span></h1>
+    <h1 class="text-2xl font-semibold">
+      SEO & Site Settings <span class="text-base text-gray-400 font-normal">(SEO 与站点设置)</span>
+    </h1>
     <p class="mt-1 text-sm text-gray-500">
-      编辑站点 URL、谷歌验证码、分析工具、爬虫设置、社交标签、站点描述、组织信息和社交链接。
-      Edit site URL, verification codes, analytics, robots, social metadata, site tagline/description, organization info, and social links.
-      File: <code class="font-mono">{file}</code>. Changes take effect after Cloudflare rebuilds.
+      编辑站点 URL、谷歌验证码、分析工具、爬虫设置、社交标签、站点描述、组织信息和社交链接。 Edit site URL, verification
+      codes, analytics, robots, social metadata, site tagline/description, organization info, and social links. File: <code
+        class="font-mono">{file}</code
+      >. Changes take effect after Cloudflare rebuilds.
     </p>
   </div>
 
@@ -135,7 +142,9 @@ const PLATFORM_ICONS: Record<string, string> = {
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Google Services <span class="text-xs text-gray-400 font-normal">(谷歌服务)</span></h2>
+      <h2 class="text-base font-semibold">
+        Google Services <span class="text-xs text-gray-400 font-normal">(谷歌服务)</span>
+      </h2>
       <div>
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
           >Google Analytics Measurement ID</label
@@ -148,14 +157,16 @@ const PLATFORM_ICONS: Record<string, string> = {
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">
-          留空则禁用。填充后会在所有页面添加 gtag.js 跟踪脚本。
-          Leave empty to disable. Adds gtag.js script to all pages.
+          留空则禁用。填充后会在所有页面添加 gtag.js 跟踪脚本。 Leave empty to disable. Adds gtag.js script to all
+          pages.
         </p>
       </div>
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Default Keywords & Robots <span class="text-xs text-gray-400 font-normal">(默认关键词与爬虫设置)</span></h2>
+      <h2 class="text-base font-semibold">
+        Default Keywords & Robots <span class="text-xs text-gray-400 font-normal">(默认关键词与爬虫设置)</span>
+      </h2>
       <div>
         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
           >Default Keywords <span class="text-xs text-gray-400 font-normal">(默认关键词，逗号分隔)</span></label
@@ -168,8 +179,8 @@ const PLATFORM_ICONS: Record<string, string> = {
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">
-          当页面未定义自有关键词时作为后备。对搜索引擎排名影响较小，建议设置 5-10 个核心词。
-          Fallback keywords used when a page doesn't define its own. Minor SEO impact; 5-10 core terms recommended.
+          当页面未定义自有关键词时作为后备。对搜索引擎排名影响较小，建议设置 5-10 个核心词。 Fallback keywords used when
+          a page doesn't define its own. Minor SEO impact; 5-10 core terms recommended.
         </p>
       </div>
       <div class="flex gap-6">
@@ -197,9 +208,13 @@ const PLATFORM_ICONS: Record<string, string> = {
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Twitter / X Card <span class="text-xs text-gray-400 font-normal">(推特卡片设置)</span></h2>
+      <h2 class="text-base font-semibold">
+        Twitter / X Card <span class="text-xs text-gray-400 font-normal">(推特卡片设置)</span>
+      </h2>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Twitter Handle (creator) <span class="text-xs text-gray-400 font-normal">(创作者账号)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Handle (creator) <span class="text-xs text-gray-400 font-normal">(创作者账号)</span></label
+        >
         <input
           type="text"
           name="twitter_handle"
@@ -210,7 +225,9 @@ const PLATFORM_ICONS: Record<string, string> = {
         <p class="mt-1 text-xs text-gray-500">twitter:creator meta 标签。在 Twitter 卡片中显示为"由 @xxx 创作"。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Twitter Site (account) <span class="text-xs text-gray-400 font-normal">(站点账号)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Site (account) <span class="text-xs text-gray-400 font-normal">(站点账号)</span></label
+        >
         <input
           type="text"
           name="twitter_site"
@@ -221,7 +238,9 @@ const PLATFORM_ICONS: Record<string, string> = {
         <p class="mt-1 text-xs text-gray-500">twitter:site meta 标签。在 Twitter 卡片中显示网站关联账号。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Twitter Card Type <span class="text-xs text-gray-400 font-normal">(卡片类型)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Twitter Card Type <span class="text-xs text-gray-400 font-normal">(卡片类型)</span></label
+        >
         <select
           name="twitter_card_type"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
@@ -234,8 +253,9 @@ const PLATFORM_ICONS: Record<string, string> = {
           >
         </select>
         <p class="mt-1 text-xs text-gray-500">
-          summary_large_image 展示大图（推荐）。summary 仅展示小图。twitter.com 上分享链接时可见。
-          summary_large_image shows a large image (recommended). summary shows a small thumbnail. Visible when links are shared on X/Twitter.
+          summary_large_image 展示大图（推荐）。summary 仅展示小图。twitter.com 上分享链接时可见。 summary_large_image
+          shows a large image (recommended). summary shows a small thumbnail. Visible when links are shared on
+          X/Twitter.
         </p>
       </div>
     </div>
@@ -243,11 +263,13 @@ const PLATFORM_ICONS: Record<string, string> = {
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
       <h2 class="text-base font-semibold">Site Tagline & Description</h2>
       <p class="text-xs text-gray-500">
-        站点标语和描述 — 用于 JSON-LD 结构化数据 (WebSite Schema) 和全站 meta 标签。
-        Site tagline & description — used in JSON-LD structured data (WebSite Schema) and meta tags across all pages.
+        站点标语和描述 — 用于 JSON-LD 结构化数据 (WebSite Schema) 和全站 meta 标签。 Site tagline & description — used
+        in JSON-LD structured data (WebSite Schema) and meta tags across all pages.
       </p>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Site Tagline <span class="text-xs text-gray-400 font-normal">(站点标语)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Site Tagline <span class="text-xs text-gray-400 font-normal">(站点标语)</span></label
+        >
         <input
           type="text"
           name="site_tagline"
@@ -256,34 +278,45 @@ const PLATFORM_ICONS: Record<string, string> = {
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
         />
         <p class="mt-1 text-xs text-gray-500">
-          显示在 JSON-LD WebSite schema 的 alternateName 字段。搜索引擎知识面板中会展示此内容。推荐 15-20 字，突出核心业务。
-          Appears in the alternateName field of WebSite schema. Displayed in search engine knowledge panels.
+          显示在 JSON-LD WebSite schema 的 alternateName 字段。搜索引擎知识面板中会展示此内容。推荐 15-20
+          字，突出核心业务。 Appears in the alternateName field of WebSite schema. Displayed in search engine knowledge
+          panels.
         </p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Site Description <span class="text-xs text-gray-400 font-normal">(站点描述)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Site Description <span class="text-xs text-gray-400 font-normal">(站点描述)</span></label
+        >
         <textarea
           name="site_description"
           rows="3"
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
-        >{getData().siteSettings.siteDescription ?? ''}</textarea>
+          >{getData().siteSettings.siteDescription ?? ''}</textarea
+        >
         <p class="mt-1 text-xs text-gray-500">
-          用于 WebSite schema 的 description 字段，同时也是页面默认 fallback meta description。搜索引擎可能截断至 160 字符。
-          Used for WebSite schema description and fallback meta description. Search engines may truncate to ~160 chars.
+          用于 WebSite schema 的 description 字段，同时也是页面默认 fallback meta description。搜索引擎可能截断至 160
+          字符。 Used for WebSite schema description and fallback meta description. Search engines may truncate to ~160
+          chars.
         </p>
       </div>
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Organization Info <span class="text-xs text-gray-400 font-normal">(组织信息 — JSON-LD Schema)</span></h2>
+      <h2 class="text-base font-semibold">
+        Organization Info <span class="text-xs text-gray-400 font-normal">(组织信息 — JSON-LD Schema)</span>
+      </h2>
       <p class="text-xs text-gray-500">
-        用于 Organization schema 结构化数据，影响搜索引擎知识面板展示。同时也显示在 footer 和 contact 页面。
-        Used for Organization schema structured data. Affects search engine knowledge panels. Also displayed in footer and contact page.
-        <br /><strong class="text-amber-600 dark:text-amber-400">注意：</strong> 此处的联系方式仅影响 JSON-LD 结构化数据。网站的显示用联系方式请在 Branding 面板中编辑。
-        Note: These fields affect JSON-LD structured data only. For display contact info (footer/contact page), use the Branding panel.
+        用于 Organization schema 结构化数据，影响搜索引擎知识面板展示。同时也显示在 footer 和 contact 页面。 Used for
+        Organization schema structured data. Affects search engine knowledge panels. Also displayed in footer and
+        contact page.
+        <br /><strong class="text-amber-600 dark:text-amber-400">注意：</strong> 此处的联系方式仅影响 JSON-LD 结构化数据。网站的显示用联系方式请在
+        Branding 面板中编辑。 Note: These fields affect JSON-LD structured data only. For display contact info (footer/contact
+        page), use the Branding panel.
       </p>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Organization Name <span class="text-xs text-gray-400 font-normal">(组织名称)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Organization Name <span class="text-xs text-gray-400 font-normal">(组织名称)</span></label
+        >
         <input
           type="text"
           name="org_name"
@@ -294,7 +327,9 @@ const PLATFORM_ICONS: Record<string, string> = {
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.name。应与 Branding 面板中的 Site Name 保持一致。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Logo URL <span class="text-xs text-gray-400 font-normal">(Logo 链接)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Logo URL <span class="text-xs text-gray-400 font-normal">(Logo 链接)</span></label
+        >
         <input
           type="text"
           name="org_logo"
@@ -303,12 +338,14 @@ const PLATFORM_ICONS: Record<string, string> = {
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">
-          JSON-LD Organization.logo。留空则使用 favicon 作为 fallback。推荐使用 SVG 或 PNG，112x112px 以上。
-          Leave empty to use favicon as fallback. Recommended SVG or PNG, at least 112x112px.
+          JSON-LD Organization.logo。留空则使用 favicon 作为 fallback。推荐使用 SVG 或 PNG，112x112px 以上。 Leave empty
+          to use favicon as fallback. Recommended SVG or PNG, at least 112x112px.
         </p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Contact Email <span class="text-xs text-gray-400 font-normal">(联系邮箱)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Contact Email <span class="text-xs text-gray-400 font-normal">(联系邮箱)</span></label
+        >
         <input
           type="email"
           name="org_email"
@@ -319,7 +356,9 @@ const PLATFORM_ICONS: Record<string, string> = {
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.email。不影响联系表单发送。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Contact Phone <span class="text-xs text-gray-400 font-normal">(联系电话)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Contact Phone <span class="text-xs text-gray-400 font-normal">(联系电话)</span></label
+        >
         <input
           type="text"
           name="org_phone"
@@ -330,7 +369,9 @@ const PLATFORM_ICONS: Record<string, string> = {
         <p class="mt-1 text-xs text-gray-500">JSON-LD Organization.contactPoint.telephone。推荐包含国际区号。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label
+        >
         <input
           type="text"
           name="org_address"
@@ -343,10 +384,12 @@ const PLATFORM_ICONS: Record<string, string> = {
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Social Links <span class="text-xs text-gray-400 font-normal">(社交链接 — sameAs Schema)</span></h2>
+      <h2 class="text-base font-semibold">
+        Social Links <span class="text-xs text-gray-400 font-normal">(社交链接 — sameAs Schema)</span>
+      </h2>
       <p class="text-xs text-gray-500">
-        用于 JSON-LD sameAs 属性，影响搜索引擎知识面板中的社交链接展示。请填写完整的个人资料页 URL。
-        Used for JSON-LD sameAs property. These appear in search engine knowledge panels. Add full profile URLs.
+        用于 JSON-LD sameAs 属性，影响搜索引擎知识面板中的社交链接展示。请填写完整的个人资料页 URL。 Used for JSON-LD
+        sameAs property. These appear in search engine knowledge panels. Add full profile URLs.
       </p>
       <div id="social-links-list" class="space-y-3">
         {
@@ -358,12 +401,17 @@ const PLATFORM_ICONS: Record<string, string> = {
                   class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                 >
                   <option value="">— Select platform —</option>
-                  {
-                    Object.keys(PLATFORM_ICONS).map((p) => (
-                      <option value={p} selected={sl.platform === p}>{p.charAt(0).toUpperCase() + p.slice(1)}</option>
-                    ))
-                  }
-                  <option value="other" selected={!Object.keys(PLATFORM_ICONS).includes(sl.platform) && sl.platform !== ''}>Other...</option>
+                  {Object.keys(PLATFORM_ICONS).map((p) => (
+                    <option value={p} selected={sl.platform === p}>
+                      {p.charAt(0).toUpperCase() + p.slice(1)}
+                    </option>
+                  ))}
+                  <option
+                    value="other"
+                    selected={!Object.keys(PLATFORM_ICONS).includes(sl.platform) && sl.platform !== ''}
+                  >
+                    Other...
+                  </option>
                 </select>
                 <input
                   type="text"
@@ -373,29 +421,53 @@ const PLATFORM_ICONS: Record<string, string> = {
                   class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
                 />
               </div>
-              <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap">Delete</button>
+              <button
+                type="button"
+                data-remove-social
+                class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap"
+              >
+                Delete
+              </button>
             </div>
           ))
         }
       </div>
       <p class="mt-1 text-xs text-gray-500">
-        添加后保存，社交链接将出现在搜索引擎的知识面板中。footer 中社交图标展示请使用 Navigation 面板。
-        After saving, social links will appear in search engine knowledge panels. For footer social icons, use the Navigation panel.
+        添加后保存，社交链接将出现在搜索引擎的知识面板中。footer 中社交图标展示请使用 Navigation 面板。 After saving,
+        social links will appear in search engine knowledge panels. For footer social icons, use the Navigation panel.
       </p>
-      <button type="button" id="add-social-btn" class="text-sm text-blue-600 dark:text-blue-400 hover:underline">+ Add Social Link</button>
+      <button type="button" id="add-social-btn" class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+        >+ Add Social Link</button
+      >
       <template id="social-row-template">
-        <div class="social-row flex items-start gap-2 rounded-lg border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-gray-900/50">
+        <div
+          class="social-row flex items-start gap-2 rounded-lg border border-gray-200 dark:border-gray-800 p-3 bg-gray-50 dark:bg-gray-900/50"
+        >
           <div class="flex-1 space-y-2">
-            <select name="social_platform" class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
+            <select
+              name="social_platform"
+              class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+            >
               <option value="">— Select platform —</option>
-              {Object.keys(PLATFORM_ICONS).map((p) => (
-                <option value={p}>{p.charAt(0).toUpperCase() + p.slice(1)}</option>
-              ))}
+              {
+                Object.keys(PLATFORM_ICONS).map((p) => (
+                  <option value={p}>{p.charAt(0).toUpperCase() + p.slice(1)}</option>
+                ))
+              }
               <option value="other">Other...</option>
             </select>
-            <input type="text" name="social_url" placeholder="https://..." class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono" />
+            <input
+              type="text"
+              name="social_url"
+              placeholder="https://..."
+              class="w-full px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
+            />
           </div>
-          <button type="button" data-remove-social class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap">Delete</button>
+          <button
+            type="button"
+            data-remove-social
+            class="text-xs text-red-600 dark:text-red-400 hover:underline mt-1 whitespace-nowrap">Delete</button
+          >
         </div>
       </template>
     </div>
@@ -511,7 +583,7 @@ const PLATFORM_ICONS: Record<string, string> = {
             socialLinks.push({
               platform: platform,
               url: url,
-              icon: platformIcons[platform] || ('tabler:brand-' + platform.toLowerCase()),
+              icon: platformIcons[platform] || 'tabler:brand-' + platform.toLowerCase(),
             });
           }
         });

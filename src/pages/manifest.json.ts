@@ -8,7 +8,8 @@ export const GET: APIRoute = async () => {
   const manifest = {
     name: 'Seekingtex',
     short_name: 'Seekingtex',
-    description: 'Professional functional fabric manufacturer — UPF 50+ sun protection, waterproof breathable, quick-dry moisture wicking, antibacterial, stretch, and eco-friendly recycled textiles. OEKO-TEX certified. Factory-direct pricing.',
+    description:
+      'Professional functional fabric manufacturer — UPF 50+ sun protection, waterproof breathable, quick-dry moisture wicking, antibacterial, stretch, and eco-friendly recycled textiles. OEKO-TEX certified. Factory-direct pricing.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

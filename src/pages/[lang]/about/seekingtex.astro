@@ -25,7 +25,7 @@ const certifications = page.certifications || [];
 const certificationsSection = page.certifications_section || {};
 const cta = page.cta || {};
 
-const t = (s) => typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s;
+const t = (s) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
 
 const metadata = {
   title: `About ${SITE.name} 鈥?Brand & Manufacturer`,
@@ -43,19 +43,19 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
   </section>
 
   <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
-    {intro.map((p) => (
-      <p class="text-muted leading-relaxed mt-6 first:mt-0">{p}</p>
-    ))}
+    {intro.map((p) => <p class="text-muted leading-relaxed mt-6 first:mt-0">{p}</p>)}
   </section>
 
   <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-      {stats.map((s) => (
-        <div class="text-center p-5 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-          <span class="block text-3xl font-bold text-primary">{s.value}</span>
-          <span class="text-sm text-muted mt-1">{s.label}</span>
-        </div>
-      ))}
+      {
+        stats.map((s) => (
+          <div class="text-center p-5 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary">{s.value}</span>
+            <span class="text-sm text-muted mt-1">{s.label}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -65,12 +65,14 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
       <h2 class="mt-4 text-3xl font-semibold text-gray-900">{factorySection.title}</h2>
     </div>
     <div class="divide-y divide-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
-      {factoryDetails.map((d) => (
-        <div class="flex items-start gap-4 px-6 py-4 bg-white hover:bg-gray-50 transition-colors">
-          <span class="font-semibold text-gray-900 w-40 shrink-0 text-sm">{d.label}</span>
-          <span class="text-gray-600 text-sm">{d.value}</span>
-        </div>
-      ))}
+      {
+        factoryDetails.map((d) => (
+          <div class="flex items-start gap-4 px-6 py-4 bg-white hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-gray-900 w-40 shrink-0 text-sm">{d.label}</span>
+            <span class="text-gray-600 text-sm">{d.value}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -80,12 +82,14 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
       <h2 class="mt-4 text-3xl font-semibold text-gray-900">{valuesSection.title}</h2>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
-      {values.map((v) => (
-        <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition-shadow">
-          <h3 class="text-lg font-semibold text-gray-900">{v.title}</h3>
-          <p class="mt-3 text-sm text-gray-500">{v.desc}</p>
-        </div>
-      ))}
+      {
+        values.map((v) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900">{v.title}</h3>
+            <p class="mt-3 text-sm text-gray-500">{v.desc}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -97,12 +101,14 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
         <p class="mt-4 text-lg text-gray-500">{servicesSection.subtitle}</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((svc) => (
-          <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
-            <h3 class="font-semibold text-gray-900">{svc.title}</h3>
-            <p class="mt-2 text-sm text-gray-500">{svc.desc}</p>
-          </div>
-        ))}
+        {
+          services.map((svc) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-gray-900">{svc.title}</h3>
+              <p class="mt-2 text-sm text-gray-500">{svc.desc}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -114,13 +120,17 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
       <p class="mt-4 text-lg text-gray-500">{certificationsSection.subtitle}</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
-      {certifications.map((cert) => (
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
-          <h3 class="font-semibold text-gray-900">{cert.name}</h3>
-          <p class="mt-2 text-sm text-gray-500">{cert.desc}</p>
-          <span class="mt-3 inline-block text-xs font-medium text-sky-600 bg-sky-50 px-2 py-1 rounded">{cert.scope}</span>
-        </div>
-      ))}
+      {
+        certifications.map((cert) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+            <h3 class="font-semibold text-gray-900">{cert.name}</h3>
+            <p class="mt-2 text-sm text-gray-500">{cert.desc}</p>
+            <span class="mt-3 inline-block text-xs font-medium text-sky-600 bg-sky-50 px-2 py-1 rounded">
+              {cert.scope}
+            </span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -128,30 +138,46 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: `About ${SITE.name}
     <div class="rounded-xl border border-gray-200 bg-gray-50 p-8">
       <h2 class="text-xl font-bold text-gray-900">{cta.title}</h2>
       <p class="mt-2 text-sm text-muted">{cta.desc}</p>
-      <a href={`/${lang}${cta.link}`} class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+      <a
+        href={`/${lang}${cta.link}`}
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >
         {cta.label}
       </a>
     </div>
   </section>
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE.name,
-    url: 'https://seekingtex.com',
-    foundingDate: '2012',
-    description: 'Vertically integrated functional fabric manufacturer. OEM, ODM, and private label services for performance textiles, uniform fabrics, and technical materials.',
-    areaServed: ['US', 'EU', 'ASIA', 'GLOBAL'],
-    knowsAbout: ['Textile manufacturing', 'Functional fabrics', 'Performance textiles', 'OEM manufacturing', 'ODM services', 'Private label', 'OEKO-TEX certification'],
-    manufacturing: {
-      '@type': 'Product',
-      name: 'Manufacturing Services',
-      description: 'OEM, ODM, private label, and custom branding for functional textiles.',
-    },
-    hasCertification: certifications.map((c) => ({
-      '@type': 'Certification',
-      name: c.name,
-      description: c.desc,
-    })),
-  })} />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: SITE.name,
+      url: 'https://seekingtex.com',
+      foundingDate: '2012',
+      description:
+        'Vertically integrated functional fabric manufacturer. OEM, ODM, and private label services for performance textiles, uniform fabrics, and technical materials.',
+      areaServed: ['US', 'EU', 'ASIA', 'GLOBAL'],
+      knowsAbout: [
+        'Textile manufacturing',
+        'Functional fabrics',
+        'Performance textiles',
+        'OEM manufacturing',
+        'ODM services',
+        'Private label',
+        'OEKO-TEX certification',
+      ],
+      manufacturing: {
+        '@type': 'Product',
+        name: 'Manufacturing Services',
+        description: 'OEM, ODM, private label, and custom branding for functional textiles.',
+      },
+      hasCertification: certifications.map((c) => ({
+        '@type': 'Certification',
+        name: c.name,
+        description: c.desc,
+      })),
+    })}
+  />
 </Layout>

@@ -13,7 +13,10 @@ export const prerender = true;
 export const getStaticPaths = async () => {
   const posts = await fetchPosts();
   const pageSize = blogPostsPerPage;
-  const paths: { params: { lang: string; tag: string; page: string[] | undefined }; props: { paginatedPosts: Post[]; currentPage: number; totalPages: number; tagTitle: string } }[] = [];
+  const paths: {
+    params: { lang: string; tag: string; page: string[] | undefined };
+    props: { paginatedPosts: Post[]; currentPage: number; totalPages: number; tagTitle: string };
+  }[] = [];
   for (const lang of Object.keys(languages)) {
     const tags = new Map<string, { slug: string; title: string; posts: Post[] }>();
     for (const post of posts) {

@@ -5,44 +5,87 @@ import { SITE } from 'astrowind:config';
 
 const metadata = {
   title: `Fabric Care & Chemical Safety — Textile Maintenance & Safety Guides — ${SITE.name}`,
-  description: 'Essential knowledge for fabric care and chemical safety — washing guidelines, chemical handling, flame retardancy, and environmental compliance.',
+  description:
+    'Essential knowledge for fabric care and chemical safety — washing guidelines, chemical handling, flame retardancy, and environmental compliance.',
 };
 const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn' }, { name: 'Fabric Care & Safety' }];
 
 const topics = [
-  { title: 'Fabric Care Guide', desc: 'Washing, drying, stain removal, and storage best practices for performance and everyday fabrics.', href: '/learn/fabric-care' },
-  { title: 'Chemical Safety in Textiles', desc: 'Understanding textile chemicals — PFC-free DWR, OEKO-TEX certification, and safe handling guidelines.', href: '/learn/textile-chemical-safety' },
-  { title: 'Flame Retardancy Guide', desc: 'How flame retardant treatments work, regulations, and standards for protective and home textiles.', href: '/learn/flame-retardancy' },
-  { title: 'Environmental Compliance', desc: 'REACH, OEKO-TEX, Bluesign, and other environmental certifications for sustainable textile manufacturing.', href: '/learn/environmental-compliance' },
-  { title: 'DWR & Water Repellency Care', desc: 'How to maintain DWR finishes, reapplication techniques, and restoring water repellency after washing.', href: '/learn/dwr-care' },
-  { title: 'Textile Waste & Recycling', desc: 'Textile recycling processes, circular economy principles, and responsible end-of-life disposal.', href: '/learn/textile-recycling' },
-  { title: 'Fabric Storage Guide', desc: 'Proper storage conditions for different fabric types — humidity, temperature, and pest prevention.', href: '/learn/fabric-storage' },
-  { title: 'Safety Equipment for Textile Handling', desc: 'PPE requirements, ventilation, and safe handling practices for textile production and finishing.', href: '/safety' },
+  {
+    title: 'Fabric Care Guide',
+    desc: 'Washing, drying, stain removal, and storage best practices for performance and everyday fabrics.',
+    href: '/learn/fabric-care',
+  },
+  {
+    title: 'Chemical Safety in Textiles',
+    desc: 'Understanding textile chemicals — PFC-free DWR, OEKO-TEX certification, and safe handling guidelines.',
+    href: '/learn/textile-chemical-safety',
+  },
+  {
+    title: 'Flame Retardancy Guide',
+    desc: 'How flame retardant treatments work, regulations, and standards for protective and home textiles.',
+    href: '/learn/flame-retardancy',
+  },
+  {
+    title: 'Environmental Compliance',
+    desc: 'REACH, OEKO-TEX, Bluesign, and other environmental certifications for sustainable textile manufacturing.',
+    href: '/learn/environmental-compliance',
+  },
+  {
+    title: 'DWR & Water Repellency Care',
+    desc: 'How to maintain DWR finishes, reapplication techniques, and restoring water repellency after washing.',
+    href: '/learn/dwr-care',
+  },
+  {
+    title: 'Textile Waste & Recycling',
+    desc: 'Textile recycling processes, circular economy principles, and responsible end-of-life disposal.',
+    href: '/learn/textile-recycling',
+  },
+  {
+    title: 'Fabric Storage Guide',
+    desc: 'Proper storage conditions for different fabric types — humidity, temperature, and pest prevention.',
+    href: '/learn/fabric-storage',
+  },
+  {
+    title: 'Safety Equipment for Textile Handling',
+    desc: 'PPE requirements, ventilation, and safe handling practices for textile production and finishing.',
+    href: '/safety',
+  },
 ];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <JsonLd type="Article" article={{
-    headline: metadata.title,
-    description: metadata.description,
-    datePublished: '2024-10-15',
-    dateModified: '2025-05-30',
-  }} />
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2024-10-15',
+      dateModified: '2025-05-30',
+    }}
+  />
   <section class="px-6 py-16 max-w-5xl mx-auto text-center">
     <p class="text-sm font-semibold text-primary uppercase tracking-wider">Fabric Care & Safety</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">Fabric Care & Chemical Safety Guides</h1>
-    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">Essential knowledge for fabric care and chemical safety — from washing to environmental compliance.</p>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      Essential knowledge for fabric care and chemical safety — from washing to environmental compliance.
+    </p>
   </section>
 
   <section class="px-6 pb-20 max-w-6xl mx-auto">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {topics.map((t) => (
-        <a href={t.href} class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5">
-          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
-        </a>
-      ))}
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
     </div>
   </section>
 </Layout>

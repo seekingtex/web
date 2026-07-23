@@ -31,15 +31,19 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Community' }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle}  />
+  <Hero tagline={hero.tagline} image={hero.image} title={hero.title} subtitle={hero.subtitle} />
 
   <Stats title={stats.title} stats={stats.stats} />
 
   <!-- Explorer Stories -->
   <section class="max-w-6xl mx-auto py-20 px-6">
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{stories.tagline || 'Community Stories'}</span>
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{stories.title || 'Real stories from real people'}</h2>
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{stories.tagline || 'Community Stories'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {stories.title || 'Real stories from real people'}
+      </h2>
       <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{stories.subtitle || ''}</p>
     </div>
     <div class="space-y-12">
@@ -73,8 +77,12 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Community' }];
   <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{locations.tagline || 'Global Community'}</span>
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{locations.title || 'Where Seekingtex connects'}</h2>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{locations.tagline || 'Global Community'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          {locations.title || 'Where Seekingtex connects'}
+        </h2>
         <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{locations.subtitle || ''}</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -93,26 +101,47 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Community' }];
   <!-- Share Your Adventure CTA -->
   <section class="py-20 px-6 text-center">
     <div class="max-w-2xl mx-auto">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{adventures_cta.tagline || 'Share Your Story'}</span>
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{adventures_cta.title || 'Your story could be here'}</h2>
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{adventures_cta.tagline || 'Share Your Story'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {adventures_cta.title || 'Your story could be here'}
+      </h2>
       <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{adventures_cta.subtitle || ''}</p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        {adventures_cta.instagram && (
-          <a href="https://www.instagram.com/seekingtex/" class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">{adventures_cta.instagram}</a>
-        )}
-        {adventures_cta.youtube && (
-          <a href="https://www.youtube.com/@Seekingtex" class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition">{adventures_cta.youtube}</a>
-        )}
-        {adventures_cta.facebook && (
-          <a href="https://www.facebook.com/profile.php?id=61572404318679" class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition">{adventures_cta.facebook}</a>
-        )}
+        {
+          adventures_cta.instagram && (
+            <a
+              href="https://www.instagram.com/seekingtex/"
+              class="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+            >
+              {adventures_cta.instagram}
+            </a>
+          )
+        }
+        {
+          adventures_cta.youtube && (
+            <a
+              href="https://www.youtube.com/@Seekingtex"
+              class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition"
+            >
+              {adventures_cta.youtube}
+            </a>
+          )
+        }
+        {
+          adventures_cta.facebook && (
+            <a
+              href="https://www.facebook.com/profile.php?id=61572404318679"
+              class="px-8 py-4 border-2 border-gray-200 text-gray-700 dark:text-slate-300 rounded-full font-semibold hover:border-gray-400 transition"
+            >
+              {adventures_cta.facebook}
+            </a>
+          )
+        }
       </div>
     </div>
   </section>
 
-  <CallToAction
-    title={cta.title}
-    subtitle={cta.subtitle}
-    actions={cta.actions}
-  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
 </Layout>

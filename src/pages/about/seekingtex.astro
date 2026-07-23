@@ -22,31 +22,80 @@ const stats = [
 
 const factoryDetails = [
   { label: 'Facility size', value: '12,000 m² (130,000 ft²) integrated campus in Suzhou Industrial Zone' },
-  { label: 'Annual capacity', value: '10M+ yards of functional fabric including UPF 50+, waterproof, quick-dry, antibacterial, and stretch textiles' },
+  {
+    label: 'Annual capacity',
+    value:
+      '10M+ yards of functional fabric including UPF 50+, waterproof, quick-dry, antibacterial, and stretch textiles',
+  },
   { label: 'R&D team', value: '25+ engineers across textile science, coating technology, and quality engineering' },
-  { label: 'Key equipment', value: 'Rapier looms, air-jet looms, coating lines, lamination lines, digital printing machines, tensile testers' },
-  { label: 'Production lines', value: '6 dedicated lines: weaving, dyeing, coating, lamination, digital printing, final QC' },
-  { label: 'Annual export volume', value: 'USD $8M+ exported to 50+ countries across Europe, Americas, Asia-Pacific, and Middle East' },
+  {
+    label: 'Key equipment',
+    value: 'Rapier looms, air-jet looms, coating lines, lamination lines, digital printing machines, tensile testers',
+  },
+  {
+    label: 'Production lines',
+    value: '6 dedicated lines: weaving, dyeing, coating, lamination, digital printing, final QC',
+  },
+  {
+    label: 'Annual export volume',
+    value: 'USD $8M+ exported to 50+ countries across Europe, Americas, Asia-Pacific, and Middle East',
+  },
 ];
 
 const values = [
-  { title: 'Quality First', desc: 'Every fabric roll that leaves our facility passes mandatory tensile, colorfastness, and shrinkage testing before shipping.' },
-  { title: 'Vertical Integration', desc: 'We control every stage — from yarn selection to finished fabric — eliminating contractor inefficiencies and ensuring consistent quality.' },
-  { title: 'Safety as Standard', desc: 'OEKO-TEX certification is not optional. Every fabric meets international safety standards for chemical and ecological safety.' },
-  { title: 'Partner-Centric', desc: 'We build long-term relationships with OEM, ODM, and private-label partners through transparency, reliability, and shared growth.' },
+  {
+    title: 'Quality First',
+    desc: 'Every fabric roll that leaves our facility passes mandatory tensile, colorfastness, and shrinkage testing before shipping.',
+  },
+  {
+    title: 'Vertical Integration',
+    desc: 'We control every stage — from yarn selection to finished fabric — eliminating contractor inefficiencies and ensuring consistent quality.',
+  },
+  {
+    title: 'Safety as Standard',
+    desc: 'OEKO-TEX certification is not optional. Every fabric meets international safety standards for chemical and ecological safety.',
+  },
+  {
+    title: 'Partner-Centric',
+    desc: 'We build long-term relationships with OEM, ODM, and private-label partners through transparency, reliability, and shared growth.',
+  },
 ];
 
 const services = [
-  { title: 'OEM Manufacturing', desc: 'We produce to your specifications. Share your technical data sheet, and our engineering team handles development, sampling, and production.' },
-  { title: 'ODM Solutions', desc: 'Start from our proven fabric platforms. Customize weight, width, finish, color, and packaging to create your unique product line.' },
-  { title: 'Private Label', desc: 'Your brand name, your labels, your packaging. Fabrics arrive retail-ready with full brand integration.' },
-  { title: 'Custom Development', desc: 'Fabric formulation, coating development, custom finishes, and sample yardage — consistent quality across every roll.' },
+  {
+    title: 'OEM Manufacturing',
+    desc: 'We produce to your specifications. Share your technical data sheet, and our engineering team handles development, sampling, and production.',
+  },
+  {
+    title: 'ODM Solutions',
+    desc: 'Start from our proven fabric platforms. Customize weight, width, finish, color, and packaging to create your unique product line.',
+  },
+  {
+    title: 'Private Label',
+    desc: 'Your brand name, your labels, your packaging. Fabrics arrive retail-ready with full brand integration.',
+  },
+  {
+    title: 'Custom Development',
+    desc: 'Fabric formulation, coating development, custom finishes, and sample yardage — consistent quality across every roll.',
+  },
 ];
 
 const certifications = [
-  { name: 'OEKO-TEX Standard 100', desc: 'All fabrics certified for harmful substances according to OEKO-TEX criteria catalog.', scope: 'All consumer fabrics' },
-  { name: 'ISO 9001', desc: 'Quality management system certified for design, manufacturing, and distribution of functional textiles.', scope: 'Entire facility' },
-  { name: 'ISO 14001', desc: 'Environmental management system for sustainable textile production and waste reduction.', scope: 'Full production scope' },
+  {
+    name: 'OEKO-TEX Standard 100',
+    desc: 'All fabrics certified for harmful substances according to OEKO-TEX criteria catalog.',
+    scope: 'All consumer fabrics',
+  },
+  {
+    name: 'ISO 9001',
+    desc: 'Quality management system certified for design, manufacturing, and distribution of functional textiles.',
+    scope: 'Entire facility',
+  },
+  {
+    name: 'ISO 14001',
+    desc: 'Environmental management system for sustainable textile production and waste reduction.',
+    scope: 'Full production scope',
+  },
 ];
 ---
 
@@ -54,29 +103,41 @@ const certifications = [
   <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
     <p class="text-sm font-semibold text-primary uppercase tracking-wider">{SITE.name}</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">About {SITE.name}</h1>
-    <p class="mt-3 text-lg text-muted">A vertically integrated functional fabric manufacturer — from raw yarn to finished textile</p>
+    <p class="mt-3 text-lg text-muted">
+      A vertically integrated functional fabric manufacturer — from raw yarn to finished textile
+    </p>
   </section>
 
   <section class="px-6 sm:px-6 pb-16 mx-auto max-w-4xl">
     <p class="text-muted leading-relaxed">
-      {SITE.name} was founded in 2012 with a single mission: design and manufacture functional fabrics that perform as well in the field as they do in the quality report. What began as a focused textile development workshop has grown into a 12,000-square-metre integrated manufacturing facility in the Suzhou Industrial Zone, producing UPF 50+, waterproof, quick-dry, antibacterial, stretch, and eco-friendly fabrics for customers in 50+ countries.
+      {SITE.name} was founded in 2012 with a single mission: design and manufacture functional fabrics that perform as well
+      in the field as they do in the quality report. What began as a focused textile development workshop has grown into a
+      12,000-square-metre integrated manufacturing facility in the Suzhou Industrial Zone, producing UPF 50+, waterproof,
+      quick-dry, antibacterial, stretch, and eco-friendly fabrics for customers in 50+ countries.
     </p>
     <p class="text-muted leading-relaxed mt-6">
-      Today, {SITE.name} operates as a factory brand — we design, engineer, prototype, manufacture, and test everything under one roof. This vertical integration gives us direct control over yarn selection, fabric construction, finish application, and delivery timelines. Every roll is produced by our people, on our equipment, to our standards.
+      Today, {SITE.name} operates as a factory brand — we design, engineer, prototype, manufacture, and test everything under
+      one roof. This vertical integration gives us direct control over yarn selection, fabric construction, finish application,
+      and delivery timelines. Every roll is produced by our people, on our equipment, to our standards.
     </p>
     <p class="text-muted leading-relaxed mt-6">
-      We serve apparel brands, outdoor gear manufacturers, uniform producers, government agencies, and brand partners worldwide. Our OEM and ODM programmes help businesses launch their own fabric lines without investing in mill infrastructure. Whether you need a single sample yardage or a full production run, our team guides you from concept to delivered textile.
+      We serve apparel brands, outdoor gear manufacturers, uniform producers, government agencies, and brand partners
+      worldwide. Our OEM and ODM programmes help businesses launch their own fabric lines without investing in mill
+      infrastructure. Whether you need a single sample yardage or a full production run, our team guides you from
+      concept to delivered textile.
     </p>
   </section>
 
   <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-      {stats.map((s) => (
-        <div class="text-center p-5 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-          <span class="block text-3xl font-bold text-primary">{s.value}</span>
-          <span class="text-sm text-muted mt-1">{s.label}</span>
-        </div>
-      ))}
+      {
+        stats.map((s) => (
+          <div class="text-center p-5 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary">{s.value}</span>
+            <span class="text-sm text-muted mt-1">{s.label}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -86,12 +147,14 @@ const certifications = [
       <h2 class="mt-4 text-3xl font-semibold text-gray-900">Manufacturing & Export Capabilities</h2>
     </div>
     <div class="divide-y divide-gray-200 border border-gray-200 rounded-2xl overflow-hidden">
-      {factoryDetails.map((d) => (
-        <div class="flex items-start gap-4 px-6 py-4 bg-white hover:bg-gray-50 transition-colors">
-          <span class="font-semibold text-gray-900 w-40 shrink-0 text-sm">{d.label}</span>
-          <span class="text-gray-600 text-sm">{d.value}</span>
-        </div>
-      ))}
+      {
+        factoryDetails.map((d) => (
+          <div class="flex items-start gap-4 px-6 py-4 bg-white hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-gray-900 w-40 shrink-0 text-sm">{d.label}</span>
+            <span class="text-gray-600 text-sm">{d.value}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -101,12 +164,14 @@ const certifications = [
       <h2 class="mt-4 text-3xl font-semibold text-gray-900">What drives us</h2>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
-      {values.map((v) => (
-        <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition-shadow">
-          <h3 class="text-lg font-semibold text-gray-900">{v.title}</h3>
-          <p class="mt-3 text-sm text-gray-500">{v.desc}</p>
-        </div>
-      ))}
+      {
+        values.map((v) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-900">{v.title}</h3>
+            <p class="mt-3 text-sm text-gray-500">{v.desc}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -118,12 +183,14 @@ const certifications = [
         <p class="mt-4 text-lg text-gray-500">Flexible manufacturing partnerships for businesses of every size.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((svc) => (
-          <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
-            <h3 class="font-semibold text-gray-900">{svc.title}</h3>
-            <p class="mt-2 text-sm text-gray-500">{svc.desc}</p>
-          </div>
-        ))}
+        {
+          services.map((svc) => (
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-gray-900">{svc.title}</h3>
+              <p class="mt-2 text-sm text-gray-500">{svc.desc}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -135,44 +202,65 @@ const certifications = [
       <p class="mt-4 text-lg text-gray-500">Every fabric meets international safety and quality standards.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
-      {certifications.map((cert) => (
-        <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
-          <h3 class="font-semibold text-gray-900">{cert.name}</h3>
-          <p class="mt-2 text-sm text-gray-500">{cert.desc}</p>
-          <span class="mt-3 inline-block text-xs font-medium text-sky-600 bg-sky-50 px-2 py-1 rounded">{cert.scope}</span>
-        </div>
-      ))}
+      {
+        certifications.map((cert) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+            <h3 class="font-semibold text-gray-900">{cert.name}</h3>
+            <p class="mt-2 text-sm text-gray-500">{cert.desc}</p>
+            <span class="mt-3 inline-block text-xs font-medium text-sky-600 bg-sky-50 px-2 py-1 rounded">
+              {cert.scope}
+            </span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
   <section class="max-w-4xl mx-auto py-20 px-6 text-center">
     <div class="rounded-xl border border-gray-200 bg-gray-50 p-8">
       <h2 class="text-xl font-bold text-gray-900">Want to see how we manufacture?</h2>
-      <p class="mt-2 text-sm text-muted">Visit our factory page for a detailed walkthrough of every production workshop and quality control process.</p>
-      <a href="/factory" class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+      <p class="mt-2 text-sm text-muted">
+        Visit our factory page for a detailed walkthrough of every production workshop and quality control process.
+      </p>
+      <a
+        href="/factory"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >
         Explore the factory →
       </a>
     </div>
   </section>
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE.name,
-    url: 'https://seekingtex.com',
-    foundingDate: '2012',
-    description: 'Vertically integrated functional fabric manufacturer. OEM, ODM, and private label services for UPF 50+, waterproof, quick-dry, antibacterial, stretch, and eco-friendly textiles.',
-    areaServed: ['US', 'EU', 'ASIA', 'GLOBAL'],
-    knowsAbout: ['Functional textiles', 'Fabric manufacturing', 'OEM manufacturing', 'ODM services', 'Private label', 'Textile safety'],
-    manufacturing: {
-      '@type': 'Product',
-      name: 'Manufacturing Services',
-      description: 'OEM, ODM, private label, and custom development for functional fabrics.',
-    },
-    hasCertification: certifications.map((c) => ({
-      '@type': 'Certification',
-      name: c.name,
-      description: c.desc,
-    })),
-  })} />
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: SITE.name,
+      url: 'https://seekingtex.com',
+      foundingDate: '2012',
+      description:
+        'Vertically integrated functional fabric manufacturer. OEM, ODM, and private label services for UPF 50+, waterproof, quick-dry, antibacterial, stretch, and eco-friendly textiles.',
+      areaServed: ['US', 'EU', 'ASIA', 'GLOBAL'],
+      knowsAbout: [
+        'Functional textiles',
+        'Fabric manufacturing',
+        'OEM manufacturing',
+        'ODM services',
+        'Private label',
+        'Textile safety',
+      ],
+      manufacturing: {
+        '@type': 'Product',
+        name: 'Manufacturing Services',
+        description: 'OEM, ODM, private label, and custom development for functional fabrics.',
+      },
+      hasCertification: certifications.map((c) => ({
+        '@type': 'Certification',
+        name: c.name,
+        description: c.desc,
+      })),
+    })}
+  />
 </Layout>

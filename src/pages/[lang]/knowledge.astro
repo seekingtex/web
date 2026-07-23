@@ -22,7 +22,7 @@ const featured = page.featured_guides ?? {};
 const cta = page.cta ?? {};
 
 const metadata = {
-  title: `Fabric Knowledge — ${SITE.name}`,
+  title: `Fabric Knowledge - ${SITE.name}`,
   description: `Structured knowledge base on functional fabric technology, textile safety, fabric engineering, and material planning. Guides, comparisons, and deep dives.`,
 };
 const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Knowledge', href: `/${lang}/knowledge` }];
@@ -90,7 +90,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Knowledge', href: 
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": "Seekingtex Fabric Knowledge",
-      "description": "Structured knowledge base on functional fabric, textile technology, and material science topics.",
+      "description": "Structured knowledge base on functional fabric technology, textile safety, fabric engineering, and material planning.",
       "about": {
         "@type": "Thing",
         "name": "Functional Fabric Knowledge",
@@ -175,7 +175,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Knowledge', href: 
             { "@id": "st:product-sun-protection" },
             { "@id": "st:product-waterproof" },
             { "@id": "st:product-quick-dry" },
-            { "@id": "st:product-breathable" }
+            "@id": "st:product-breathable" }
           ]
         },
         {

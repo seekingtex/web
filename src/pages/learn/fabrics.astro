@@ -5,44 +5,91 @@ import { SITE } from 'astrowind:config';
 
 const metadata = {
   title: `Performance Fabric Knowledge — Functional Textile Guides & Tips — ${SITE.name}`,
-  description: 'Everything about performance fabrics — UPF protection, waterproofness, breathability, antimicrobial properties, stretch, and sustainability.',
+  description:
+    'Everything about performance fabrics — UPF protection, waterproofness, breathability, antimicrobial properties, stretch, and sustainability.',
 };
-const crumbs = [{ name: 'Home', href: '/' }, { name: 'Learn', href: '/learn/fabrics' }, { name: 'Performance Fabrics' }];
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Learn', href: '/learn/fabrics' },
+  { name: 'Performance Fabrics' },
+];
 
 const topics = [
-  { title: 'Fabric Performance Basics', desc: 'Fiber types, fabric constructions, finishes, and how they affect performance characteristics.', href: '/textile-industry' },
-  { title: 'UPF & Sun Protection Guide', desc: 'How UPF ratings work, what UPF 50+ means, and how fabric construction affects sun protection.', href: '/size-guide' },
-  { title: 'Waterproof & Breathable Fabrics', desc: 'How coatings and membranes achieve waterproofness while allowing moisture vapor to escape.', href: '/textile-industry' },
-  { title: 'Synthetic vs Natural Fibers', desc: 'Performance, comfort, sustainability, and cost compared side by side.', href: '/compare/polyester-vs-cotton' },
-  { title: 'Fabric Safety & Chemical Guide', desc: 'Chemical safety in textiles — PFC-free DWR, OEKO-TEX, and safe manufacturing practices.', href: '/learn/quality-standards' },
-  { title: 'Sustainable Textile Essentials', desc: 'Recycled fibers, organic materials, closed-loop production, and environmental certifications.', href: '/textile-industry' },
-  { title: 'Fabric Care & Maintenance', desc: 'Washing, drying, stain treatment, and storage tips to extend the life of performance fabrics.', href: '/textile-industry' },
-  { title: 'Advanced Performance Textiles', desc: 'Antimicrobial, moisture-wicking, stretch fabrics — technology behind high-performance textiles.', href: '/v2/intermediate-techniques' },
+  {
+    title: 'Fabric Performance Basics',
+    desc: 'Fiber types, fabric constructions, finishes, and how they affect performance characteristics.',
+    href: '/textile-industry',
+  },
+  {
+    title: 'UPF & Sun Protection Guide',
+    desc: 'How UPF ratings work, what UPF 50+ means, and how fabric construction affects sun protection.',
+    href: '/size-guide',
+  },
+  {
+    title: 'Waterproof & Breathable Fabrics',
+    desc: 'How coatings and membranes achieve waterproofness while allowing moisture vapor to escape.',
+    href: '/textile-industry',
+  },
+  {
+    title: 'Synthetic vs Natural Fibers',
+    desc: 'Performance, comfort, sustainability, and cost compared side by side.',
+    href: '/compare/polyester-vs-cotton',
+  },
+  {
+    title: 'Fabric Safety & Chemical Guide',
+    desc: 'Chemical safety in textiles — PFC-free DWR, OEKO-TEX, and safe manufacturing practices.',
+    href: '/learn/quality-standards',
+  },
+  {
+    title: 'Sustainable Textile Essentials',
+    desc: 'Recycled fibers, organic materials, closed-loop production, and environmental certifications.',
+    href: '/textile-industry',
+  },
+  {
+    title: 'Fabric Care & Maintenance',
+    desc: 'Washing, drying, stain treatment, and storage tips to extend the life of performance fabrics.',
+    href: '/textile-industry',
+  },
+  {
+    title: 'Advanced Performance Textiles',
+    desc: 'Antimicrobial, moisture-wicking, stretch fabrics — technology behind high-performance textiles.',
+    href: '/v2/intermediate-techniques',
+  },
 ];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
-  <JsonLd type="Article" article={{
-    headline: metadata.title,
-    description: metadata.description,
-    datePublished: '2024-11-05',
-    dateModified: '2025-05-20',
-  }} />
+  <JsonLd
+    type="Article"
+    article={{
+      headline: metadata.title,
+      description: metadata.description,
+      datePublished: '2024-11-05',
+      dateModified: '2025-05-20',
+    }}
+  />
   <section class="px-6 py-16 max-w-5xl mx-auto text-center">
     <p class="text-sm font-semibold text-primary uppercase tracking-wider">Performance Fabrics</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">Performance Fabric Guides</h1>
-    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">From fiber selection to advanced finishes — everything about performance textiles.</p>
+    <p class="mt-3 text-lg text-muted max-w-2xl mx-auto">
+      From fiber selection to advanced finishes — everything about performance textiles.
+    </p>
   </section>
 
   <section class="px-6 pb-20 max-w-6xl mx-auto">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {topics.map((t) => (
-        <a href={t.href} class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5">
-          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
-          <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
-          <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
-        </a>
-      ))}
+      {
+        topics.map((t) => (
+          <a
+            href={t.href}
+            class="group block bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all hover:-translate-y-0.5"
+          >
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{t.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 leading-relaxed">{t.desc}</p>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Read guide →</span>
+          </a>
+        ))
+      }
     </div>
   </section>
 </Layout>

@@ -11,7 +11,7 @@ metadata:
   title:
     default: Seekingtex | Fabricant de tissus fonctionnels — Protection solaire, imperméable & textiles performants
     template: '%s — Seekingtex'
-  description: 'Seekingtex est un fabricant leader de tissus fonctionnels, spécialisé dans la protection solaire (UPF 50+), les tissus imperméables, à séchage rapide, antibactériens et performants pour les vêtements de sport, les vêtements d\'extérieur et les équipements tactiles. Services OEM/ODM disponibles.'
+  description: "Seekingtex est un fabricant leader de tissus fonctionnels, spécialisé dans la protection solaire (UPF 50+), les tissus imperméables, à séchage rapide, antibactériens et performants pour les vêtements de sport, les vêtements d'extérieur et les équipements tactiles. Services OEM/ODM disponibles."
   keywords:
     - Seekingtex
     - fabricant de tissus fonctionnels
@@ -105,7 +105,7 @@ ui:
 siteSettings:
   siteName: 'Seekingtex'
   siteTagline: 'Fabricant de tissus fonctionnels — Protection solaire, imperméable & textiles performants'
-  siteDescription: 'Seekingtex est un fabricant leader de tissus fonctionnels haute performance, spécialisé dans la protection solaire UPF 50+, les tissus imperméables/respirants, à séchage rapide, antibactériens et extensibles pour les vêtements de sport, les équipements d\'extérieur et les applications industrielles. OEM/ODM avec expédition mondiale.'
+  siteDescription: "Seekingtex est un fabricant leader de tissus fonctionnels haute performance, spécialisé dans la protection solaire UPF 50+, les tissus imperméables/respirants, à séchage rapide, antibactériens et extensibles pour les vêtements de sport, les équipements d'extérieur et les applications industrielles. OEM/ODM avec expédition mondiale."
   organization:
     name: 'Seekingtex'
     logo: ''

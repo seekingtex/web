@@ -80,7 +80,19 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <JsonLd type="Organization" data={{ name: SITE.name, url: 'https://seekingtex.com', contactPoint: { '@type': 'ContactPoint', telephone: '+1-213-557-7888', contactType: 'sales', availableLanguage: ['English', 'Chinese', 'Spanish', 'French', 'German', 'Arabic'] } }} />
+  <JsonLd
+    type="Organization"
+    data={{
+      name: SITE.name,
+      url: 'https://seekingtex.com',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-213-557-7888',
+        contactType: 'sales',
+        availableLanguage: ['English', 'Chinese', 'Spanish', 'French', 'German', 'Arabic'],
+      },
+    }}
+  />
   <section class="bg-gradient-to-br from-sky-600 via-sky-700 to-blue-800 text-white py-20 px-6">
     <div class="max-w-6xl mx-auto text-center">
       <span class="text-sm font-semibold tracking-widest uppercase text-sky-200">{ht.tagline || 'Contact'}</span>
@@ -92,20 +104,20 @@ const metadata = {
   <section class="max-w-6xl mx-auto py-16 px-6">
     <div class="grid md:grid-cols-5 gap-10">
       <div class="md:col-span-3">
-          <ContactUs
-            id={form.id ?? 'form'}
-            title={form.title}
-            subtitle={form.subtitle}
-            emailTo={resolvedEmailTo}
-            submitButton={submitButton}
-            successMessage={successMessage}
-            errorMessage={errorMessage}
-            fields={fields}
-            consent={consent}
-            defaultCountryCode={form.default_country_code ?? '+1'}
-            countryCodes={countryCodes}
-            countries={countries}
-          />
+        <ContactUs
+          id={form.id ?? 'form'}
+          title={form.title}
+          subtitle={form.subtitle}
+          emailTo={resolvedEmailTo}
+          submitButton={submitButton}
+          successMessage={successMessage}
+          errorMessage={errorMessage}
+          fields={fields}
+          consent={consent}
+          defaultCountryCode={form.default_country_code ?? '+1'}
+          countryCodes={countryCodes}
+          countries={countries}
+        />
       </div>
       <div class="md:col-span-2 space-y-8">
         <div class="bg-white rounded-2xl border border-gray-200 p-6 space-y-6">

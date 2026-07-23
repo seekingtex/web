@@ -71,8 +71,7 @@ const staticPages: { url: string; title: string; excerpt: string; tags: string[]
   {
     url: '/products/bundles',
     title: 'Bundle Deals',
-    excerpt:
-      'Save on Seekingtex fabric sample kits and bulk order packages. Starter packs, full yardage, and more.',
+    excerpt: 'Save on Seekingtex fabric sample kits and bulk order packages. Starter packs, full yardage, and more.',
     tags: ['samples', 'bulk', 'ordering', 'save'],
   },
   {

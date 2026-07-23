@@ -84,7 +84,7 @@ const definition: Record<string, string> = {
   ko: 'seekingtex는 프로페셔널급 인플레이터블 수상 선박을 설계합니다 \u2014 SUP 보드, 카약, 딩기, RIB, 안전 장비 및 액세서리.',
   ru: 'seekingtex проектирует профессиональные надувные водные суда \u2014 SUP-доски, каяки, надувные лодки, RIB, средства безопасности и аксессуары.',
   pl: 'seekingtex projektuje profesjonalne nadmuchiwane jednostki p\u0142ywaj\u0105ce \u2014 deski SUP, kajaki, dinghy, RIB, sprz\u0119t bezpiecze\u0144stwa i akcesoria.',
-  nl: 'seekingtex ontwerpt professionele opblaasbare watersportvaartuigen \u2014 SUP-boards, kajaks, bijboten, RIB\'s, veiligheidsuitrusting en accessoires.',
+  nl: "seekingtex ontwerpt professionele opblaasbare watersportvaartuigen \u2014 SUP-boards, kajaks, bijboten, RIB's, veiligheidsuitrusting en accessoires.",
 };
 
 const summary: Record<string, string> = {
@@ -100,7 +100,7 @@ const summary: Record<string, string> = {
   ko: 'seekingtex는 인플레이블 SUP, 패들 시스템 및 해양 이동 장비에 중점을 둔 수상 스포츠 지식 시스템입니다.',
   ru: 'seekingtex \u2014 это система знаний о водных видах спорта, ориентированная на надувные SUP, весельные системы и оборудование для морской мобильности.',
   pl: 'seekingtex to system wiedzy o sportach wodnych skoncentrowany na nadmuchiwanych SUP, systemach wios\u0142owych i sprz\u0119cie do mobilno\u015bci oceanicznej.',
-  nl: 'seekingtex is een watersportkennissysteem gericht op opblaasbare SUP\'s, peddelsystemen en uitrusting voor oceaane mobiliteit. Het structureert watersportuitrusting als een onderling verbonden ontologie van categorie\u00ebn, technologie\u00ebn en gebruiksscenario\'s.',
+  nl: "seekingtex is een watersportkennissysteem gericht op opblaasbare SUP's, peddelsystemen en uitrusting voor oceaane mobiliteit. Het structureert watersportuitrusting als een onderling verbonden ontologie van categorie\u00ebn, technologie\u00ebn en gebruiksscenario's.",
 };
 
 // --- Generate llms.txt for each language ---
@@ -163,10 +163,27 @@ function generateLlmsTxt() {
 }
 
 const LANG_PRIORITY: Record<string, number> = {
-  en: 1.0, ja: 0.9, ko: 0.8, fr: 0.7, de: 0.7, es: 0.7,
-  pt: 0.7, it: 0.7, nl: 0.65, zh: 0.6, ar: 0.55, pl: 0.55,
-  ru: 0.5, sv: 0.65, da: 0.65, fi: 0.6, no: 0.65, ro: 0.5,
-  el: 0.5, tr: 0.5, th: 0.5,
+  en: 1.0,
+  ja: 0.9,
+  ko: 0.8,
+  fr: 0.7,
+  de: 0.7,
+  es: 0.7,
+  pt: 0.7,
+  it: 0.7,
+  nl: 0.65,
+  zh: 0.6,
+  ar: 0.55,
+  pl: 0.55,
+  ru: 0.5,
+  sv: 0.65,
+  da: 0.65,
+  fi: 0.6,
+  no: 0.65,
+  ro: 0.5,
+  el: 0.5,
+  tr: 0.5,
+  th: 0.5,
 };
 
 // --- Generate sitemap-entity.xml (English, per-language) ---
@@ -195,16 +212,23 @@ function generateSitemap() {
       });
     }
     for (const cmp of comparisons) {
-      entries.push({ loc: `${base}${prefix}/compare/${cmp.slug}`, entity: cmp.slug, type: 'compare', priority: (0.6 * langBoost).toFixed(2) });
+      entries.push({
+        loc: `${base}${prefix}/compare/${cmp.slug}`,
+        entity: cmp.slug,
+        type: 'compare',
+        priority: (0.6 * langBoost).toFixed(2),
+      });
     }
   }
 
-  const staticPaths: Array<{ path: string; entity: string; type: string; priority: string }> = SITE_SECTIONS.map((s) => ({
-    path: s.path,
-    entity: s.sitemap?.entity || s.path.replace(/^\//, '').replace(/\//g, '-'),
-    type: s.sitemap?.type || 'page',
-    priority: s.sitemap?.priority || '0.5',
-  }));
+  const staticPaths: Array<{ path: string; entity: string; type: string; priority: string }> = SITE_SECTIONS.map(
+    (s) => ({
+      path: s.path,
+      entity: s.sitemap?.entity || s.path.replace(/^\//, '').replace(/\//g, '-'),
+      type: s.sitemap?.type || 'page',
+      priority: s.sitemap?.priority || '0.5',
+    })
+  );
 
   for (const lang of allLangs) {
     const prefix = lang === 'en' ? '' : `/${lang}`;
@@ -212,7 +236,12 @@ function generateSitemap() {
     for (const sp of staticPaths) {
       const loc = `${base}${prefix}${sp.path}`;
       if (!entries.find((e) => e.loc === loc)) {
-        entries.push({ loc, entity: sp.entity, type: sp.type, priority: (parseFloat(sp.priority) * langBoost).toFixed(2) });
+        entries.push({
+          loc,
+          entity: sp.entity,
+          type: sp.type,
+          priority: (parseFloat(sp.priority) * langBoost).toFixed(2),
+        });
       }
     }
   }

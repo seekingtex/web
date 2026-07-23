@@ -22,7 +22,9 @@ const graphJsonLd = node
       '@graph': [
         articleSchema({
           headline: page.seo?.headline || 'Outdoor & Adventure Gear Fabrics 鈥?OEM Manufacturing',
-          description: page.seo?.description || 'Seekingtex manufactures functional fabrics for outdoor and adventure gear: waterproof breathable shells, moisture-wicking base layers, durable shell fabrics.',
+          description:
+            page.seo?.description ||
+            'Seekingtex manufactures functional fabrics for outdoor and adventure gear: waterproof breathable shells, moisture-wicking base layers, durable shell fabrics.',
           datePublished: page.seo?.datePublished || '2024-06-01',
           dateModified: page.seo?.dateModified || '2026-06-01',
           author: 'Seekingtex',
@@ -31,7 +33,9 @@ const graphJsonLd = node
         {
           '@type': 'Product',
           name: node?.name?.en || 'Outdoor & Adventure Gear Fabrics',
-          description: node?.description?.en || 'Functional fabrics engineered for outdoor apparel, adventure gear, and weather protection.',
+          description:
+            node?.description?.en ||
+            'Functional fabrics engineered for outdoor apparel, adventure gear, and weather protection.',
           brand: { '@type': 'Brand', name: 'Seekingtex' },
           category: 'Outdoor & Adventure Fabrics',
         },
@@ -54,7 +58,10 @@ const graphJsonLd = node
       {page.headline || 'Engineering Excellence for Outdoor & Adventure Gear Fabrics'}
     </h1>
     <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
-      {page.subtitle || 'Seekingtex delivers uncompromising quality for outdoor apparel 鈥?waterproof breathable shells, insulated mid-layers, and performance base layers.'}
+      {
+        page.subtitle ||
+          'Seekingtex delivers uncompromising quality for outdoor apparel 鈥?waterproof breathable shells, insulated mid-layers, and performance base layers.'
+      }
     </p>
 
     <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />

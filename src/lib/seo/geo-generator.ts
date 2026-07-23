@@ -16,7 +16,7 @@ const DEFINITIONS: Record<string, string> = {
   'fabric-manufacturing-process':
     'Functional fabric manufacturing is the process of weaving, dyeing, finishing, and coating textile materials to achieve specific performance properties. Key stages: yarn preparation, weaving or knitting, scouring and dyeing, chemical finishing (water-repellent, antimicrobial), mechanical finishing (calendering, sanforizing), coating application, and quality testing.',
   'oem-odm-guide-fabric':
-    'OEM (Original Equipment Manufacturing) means producing fabric to a buyer\'s custom specifications including yarn count, construction, color, and finish. ODM (Original Design Manufacturing) means adapting the factory\'s existing fabric platforms with custom colors, finishes, and branding.',
+    "OEM (Original Equipment Manufacturing) means producing fabric to a buyer's custom specifications including yarn count, construction, color, and finish. ODM (Original Design Manufacturing) means adapting the factory's existing fabric platforms with custom colors, finishes, and branding.",
   'fabric-quality-certifications':
     'OEKO-TEX Standard 100 certifies that fabrics are free from harmful substances. GRS (Global Recycled Standard) verifies recycled content. REACH compliance ensures chemical safety for EU markets. UPF 50+ certification confirms UV protection performance.',
   'how-to-choose-performance-fabric':
@@ -65,7 +65,10 @@ const QUESTIONS: Record<string, { q: string; a: string }[]> = {
       q: 'Is OEKO-TEX certification important for fabrics?',
       a: 'Yes — OEKO-TEX Standard 100 certification ensures fabrics meet global safety standards and are free from harmful substances. Essential for apparel and childrenswear.',
     },
-    { q: 'What is UPF 50+ protection?', a: 'UPF 50+ means the fabric blocks at least 97.5% of UV radiation, providing excellent sun protection for outdoor apparel.' },
+    {
+      q: 'What is UPF 50+ protection?',
+      a: 'UPF 50+ means the fabric blocks at least 97.5% of UV radiation, providing excellent sun protection for outdoor apparel.',
+    },
   ],
   'fabric-manufacturing-process': [
     {
@@ -173,7 +176,9 @@ export function generateGeoForSlug(slug: string): GeoOutput {
       },
       {
         type: 'Definition',
-        content: DEFINITIONS[slug] || `${slug.replace(/-/g, ' ')} is a key topic in functional textile manufacturing and performance fabrics.`,
+        content:
+          DEFINITIONS[slug] ||
+          `${slug.replace(/-/g, ' ')} is a key topic in functional textile manufacturing and performance fabrics.`,
       },
       {
         type: 'Steps',
@@ -188,7 +193,10 @@ export function generateGeoForSlug(slug: string): GeoOutput {
       {
         type: 'FAQ',
         content: QUESTIONS[slug] || [
-          { q: 'Why is this important?', a: 'Understanding this helps you make better decisions in fabric procurement and textile selection.' },
+          {
+            q: 'Why is this important?',
+            a: 'Understanding this helps you make better decisions in fabric procurement and textile selection.',
+          },
         ],
       },
     ],

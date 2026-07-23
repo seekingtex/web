@@ -8,7 +8,13 @@ import { Icon } from 'astro-icon/components';
 import merge from 'lodash.merge';
 
 import { SITE } from 'astrowind:config';
-import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 import { languages, defaultLang, ui } from '~/i18n/config';
@@ -24,10 +30,17 @@ const products = await getProducts();
 const categories = await getProductCategories();
 const rawCategory = (Astro.url?.searchParams?.get('category') ?? '') as
   'SUN_PROTECTION' | 'WATERPROOF' | 'QUICK_DRY' | 'ANTIBACTERIAL' | 'STRETCH' | 'BREATHABLE' | 'ECO_FRIENDLY' | '';
-const activeCategory =
-  ['SUN_PROTECTION','WATERPROOF','QUICK_DRY','ANTIBACTERIAL','STRETCH','BREATHABLE','ECO_FRIENDLY'].includes(rawCategory)
-    ? rawCategory
-    : null;
+const activeCategory = [
+  'SUN_PROTECTION',
+  'WATERPROOF',
+  'QUICK_DRY',
+  'ANTIBACTERIAL',
+  'STRETCH',
+  'BREATHABLE',
+  'ECO_FRIENDLY',
+].includes(rawCategory)
+  ? rawCategory
+  : null;
 const filteredProducts = activeCategory ? products.filter((p) => p.category === (activeCategory as any)) : products;
 const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
@@ -47,8 +60,12 @@ const metadata = merge(
 <Layout metadata={metadata}>
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
     <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">{t('product.catalog')}</p>
-      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">{t('product.pageTitle')}</h1>
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        {t('product.catalog')}
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        {t('product.pageTitle')}
+      </h1>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">{t('product.pageDesc')}</p>
     </header>
 
@@ -91,10 +108,7 @@ const metadata = merge(
         <div class="text-center py-16 text-muted dark:text-slate-400">
           <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
           <p class="text-lg">{t('product.noResults')}</p>
-          <a
-            class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block"
-            href={`/${lang}/products`}
-          >
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href={`/${lang}/products`}>
             {t('product.viewAll')}
           </a>
         </div>

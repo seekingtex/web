@@ -18,7 +18,7 @@ case_studies:
       - label: Quantity
         value: 12,000m
       - label: Colors
-        value: "3"
+        value: '3'
 
   - id: workwear-uniform-program
     client: ASEAN Uniform Manufacturer

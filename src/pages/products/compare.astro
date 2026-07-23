@@ -25,7 +25,12 @@ const comparisonRows = [
     label: 'Waterproof Rating',
     key: 'waterproof' as const,
     getter: (p: (typeof products)[number]) => {
-      const s = p.specs?.find((s) => s.label.toLowerCase().includes('waterproof') || s.label.toLowerCase().includes('hydrostatic') || s.label.toLowerCase().includes('water column'));
+      const s = p.specs?.find(
+        (s) =>
+          s.label.toLowerCase().includes('waterproof') ||
+          s.label.toLowerCase().includes('hydrostatic') ||
+          s.label.toLowerCase().includes('water column')
+      );
       return s?.value || '-';
     },
   },
@@ -41,7 +46,12 @@ const comparisonRows = [
     label: 'Composition',
     key: 'composition' as const,
     getter: (p: (typeof products)[number]) => {
-      const s = p.specs?.find((s) => s.label.toLowerCase().includes('composition') || s.label.toLowerCase().includes('content') || s.label.toLowerCase().includes('material'));
+      const s = p.specs?.find(
+        (s) =>
+          s.label.toLowerCase().includes('composition') ||
+          s.label.toLowerCase().includes('content') ||
+          s.label.toLowerCase().includes('material')
+      );
       return s?.value || '-';
     },
   },
@@ -57,7 +67,9 @@ const comparisonRows = [
     label: 'Breathability',
     key: 'breathability' as const,
     getter: (p: (typeof products)[number]) => {
-      const s = p.specs?.find((s) => s.label.toLowerCase().includes('breathability') || s.label.toLowerCase().includes('mvtr'));
+      const s = p.specs?.find(
+        (s) => s.label.toLowerCase().includes('breathability') || s.label.toLowerCase().includes('mvtr')
+      );
       return s?.value || '-';
     },
   },
@@ -139,7 +151,15 @@ const comparisonRows = [
     <section class="sr-only" data-ai-block="definition" aria-hidden="true">
       <p>
         Seekingtex product comparison table covering {products.length} products across {
-          ['sun-protection', 'waterproof', 'quick-dry', 'antibacterial', 'stretch', 'breathable', 'eco-friendly'].filter((c) => products.some((p) => p.category === c)).length
+          [
+            'sun-protection',
+            'waterproof',
+            'quick-dry',
+            'antibacterial',
+            'stretch',
+            'breathable',
+            'eco-friendly',
+          ].filter((c) => products.some((p) => p.category === c)).length
         } categories. Compare UPF rating, waterproof rating, fabric weight, composition, width, breathability, and price.
       </p>
     </section>

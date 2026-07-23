@@ -17,9 +17,15 @@ if (!activeCategory) {
 
 const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
 const categoryKey = (cat: string) =>
-  ({ SUN_PROTECTION: 'sun-protection', WATERPROOF: 'waterproof', QUICK_DRY: 'quick-dry', ANTIBACTERIAL: 'antibacterial', STRETCH: 'stretch', BREATHABLE: 'breathable', ECO_FRIENDLY: 'eco-friendly' })[
-    cat
-  ] || cat.toLowerCase();
+  ({
+    SUN_PROTECTION: 'sun-protection',
+    WATERPROOF: 'waterproof',
+    QUICK_DRY: 'quick-dry',
+    ANTIBACTERIAL: 'antibacterial',
+    STRETCH: 'stretch',
+    BREATHABLE: 'breathable',
+    ECO_FRIENDLY: 'eco-friendly',
+  })[cat] || cat.toLowerCase();
 
 const localizedProducts = getLocalizedProducts(lang!);
 const filteredProducts = localizedProducts.filter((p) => p.category.toLowerCase() === activeCategory);
@@ -78,8 +84,8 @@ const metadata: MetaData = {
                     : 'bg-white border-gray-200 text-gray-600 hover:bg-gray-50',
                 ]}
               >
-                {t('home.category.' + categoryKey(cat)) || cat}
-                ({localizedProducts.filter((p) => p.category === cat).length})
+                {t('home.category.' + categoryKey(cat)) || cat}(
+                {localizedProducts.filter((p) => p.category === cat).length})
               </a>
             );
           })}
@@ -91,7 +97,9 @@ const metadata: MetaData = {
       filteredProducts.length === 0 ? (
         <div class="text-center py-16 text-gray-400">
           <p class="text-lg">{t('product.noResults') || 'No products in this category.'}</p>
-          <a href={`/${lang}/products`} class="text-sky-600 hover:underline mt-2 inline-block">{t('product.viewAll') || 'View all products'}</a>
+          <a href={`/${lang}/products`} class="text-sky-600 hover:underline mt-2 inline-block">
+            {t('product.viewAll') || 'View all products'}
+          </a>
         </div>
       ) : (
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,8 +142,8 @@ const metadata: MetaData = {
               </div>
             </div>
           ))}
-          </div>
-        )
+        </div>
+      )
     }
   </section>
 </Layout>

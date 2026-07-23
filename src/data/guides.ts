@@ -27,7 +27,8 @@ export const guides: GuideRecord[] = [
       'Most buyers choose fabric based on price or appearance rather than how it will perform in the intended application. This leads to poor durability, inadequate protection, and product failure.',
     solution:
       'Match fabric type, weight, weave, and finish to your end-use requirements. Consider UPF rating for sun protection, hydrostatic head for waterproofing, MVTR for breathability, and fiber composition for durability and comfort.',
-    audience: 'Garment manufacturers, product designers, procurement specialists, and anyone sourcing functional fabrics.',
+    audience:
+      'Garment manufacturers, product designers, procurement specialists, and anyone sourcing functional fabrics.',
     steps: [
       'Identify your end-use application — sportswear, outdoor apparel, tactical gear, or fashion',
       'Determine required performance properties — UPF rating, waterproofness, breathability, stretch, antibacteria',
@@ -59,8 +60,7 @@ export const guides: GuideRecord[] = [
     slug: 'beginner-guide-functional-fabrics',
     category: 'tutorial',
     title: "Beginner's Guide to Functional Fabrics",
-    description:
-      'Everything you need to know about functional fabrics — from fiber types to finishing technologies.',
+    description: 'Everything you need to know about functional fabrics — from fiber types to finishing technologies.',
     tldr: 'Functional fabrics are engineered textiles with specific performance properties: UV protection, waterproofing, breathability, quick-dry, antibacterial, stretch, and eco-friendly features. Start with understanding fiber types, then learn about fabric construction and finishing treatments.',
     problem:
       'New buyers are overwhelmed by technical terms — denier, gsm, hydrostatic head, MVTR, UPF — without understanding what they mean for product performance.',
@@ -145,7 +145,8 @@ export const guides: GuideRecord[] = [
       'Spec sheets list numbers without context, leaving buyers unsure which specifications actually matter for their application.',
     solution:
       'Translate each specification into real-world performance: GSM for warmth and durability, composition for care and feel, denier for strength, weave for breathability vs. protection.',
-    audience: 'Product developers, sourcing professionals, and technical buyers who want to make data-driven fabric decisions.',
+    audience:
+      'Product developers, sourcing professionals, and technical buyers who want to make data-driven fabric decisions.',
     steps: [
       'Check GSM (grams per square meter) — lighter fabrics (80-150 gsm) for base layers and sportswear, mid-weight (150-250 gsm) for outwear, heavy (250-400+ gsm) for workwear',
       'Check fabric width — standard widths are 57/58" (145/150 cm); wider widths reduce waste but may limit options',
@@ -223,7 +224,8 @@ export const guides: GuideRecord[] = [
       'Most buyers do not understand how manufacturing choices affect fabric quality, performance, and cost — leading to mismatched expectations and supplier communication issues.',
     solution:
       'Understand the key manufacturing stages and how each affects the final product. Learn the difference between woven and knit construction, piece dyeing vs. yarn dyeing, and the various finishing technologies available.',
-    audience: 'Product developers, sourcing managers, and quality control professionals working with textile manufacturers.',
+    audience:
+      'Product developers, sourcing managers, and quality control professionals working with textile manufacturers.',
     steps: [
       'Fiber production — synthetic fibers (polyester, nylon) are extruded through spinnerets; natural fibers are harvested and processed',
       'Yarn formation — fibers are twisted into yarns; filament yarns are smooth, spun yarns are fuzzy',
@@ -379,7 +381,8 @@ export const guides: GuideRecord[] = [
       'Workwear and tactical gear fails prematurely when made from standard consumer fabrics that cannot withstand field conditions, abrasion, and repeated washing.',
     solution:
       'Use military-spec ripstop fabrics with reinforced tear resistance. Cotton-nylon blends offer comfort with durability. Add Teflon or fluorocarbon-free DWR for stain and water resistance. Reinforce high-wear areas with extra layers.',
-    audience: 'Tactical gear manufacturers, workwear brands, military and law enforcement procurement, industrial uniform suppliers.',
+    audience:
+      'Tactical gear manufacturers, workwear brands, military and law enforcement procurement, industrial uniform suppliers.',
     steps: [
       'Choose fiber blend — nylon/cotton (NYCO) for durability and comfort, or 100% nylon for maximum strength',
       'Select weave — ripstop with 1.5-2 cm grid spacing for tear resistance, or plain weave for base uniforms',
@@ -410,15 +413,16 @@ export const guides: GuideRecord[] = [
   {
     slug: 'fabrics-for-childrens-apparel',
     category: 'lifestyle',
-    title: 'Fabrics for Children\'s & Baby Apparel',
+    title: "Fabrics for Children's & Baby Apparel",
     description:
-      'Safe, comfortable, and durable fabric choices for children\'s clothing — skin-friendly materials, safety certifications, easy care, and functional properties.',
-    tldr: 'Children\'s fabrics must prioritize safety (OEKO-TEX certified, non-toxic), comfort (soft, breathable), durability (withstands frequent washing and active play), and easy care. Organic cotton, cotton-polyester blends, and functional knits are popular choices.',
+      "Safe, comfortable, and durable fabric choices for children's clothing — skin-friendly materials, safety certifications, easy care, and functional properties.",
+    tldr: "Children's fabrics must prioritize safety (OEKO-TEX certified, non-toxic), comfort (soft, breathable), durability (withstands frequent washing and active play), and easy care. Organic cotton, cotton-polyester blends, and functional knits are popular choices.",
     problem:
-      'Children\'s skin is more sensitive than adults\', yet many children\'s garments use standard fabrics with harsh chemicals, rough textures, or inadequate breathability.',
+      "Children's skin is more sensitive than adults', yet many children's garments use standard fabrics with harsh chemicals, rough textures, or inadequate breathability.",
     solution:
-      'Use OEKO-TEX Standard 100 certified fabrics with no harmful chemicals. Choose soft, breathable cotton or cotton-blend knits for daily wear. Add functional properties (UPF 50+, moisture-wicking) for outdoor and active children\'s wear.',
-    audience: 'Children\'s apparel brands, baby product manufacturers, school uniform suppliers, and parents seeking quality fabrics.',
+      "Use OEKO-TEX Standard 100 certified fabrics with no harmful chemicals. Choose soft, breathable cotton or cotton-blend knits for daily wear. Add functional properties (UPF 50+, moisture-wicking) for outdoor and active children's wear.",
+    audience:
+      "Children's apparel brands, baby product manufacturers, school uniform suppliers, and parents seeking quality fabrics.",
     steps: [
       'Prioritize safety certification — all fabrics must be OEKO-TEX Standard 100 Class 1 certified',
       'Choose soft fibers — organic cotton for gentleness, bamboo/tencel for eco-friendly softness, polyester blends for durability',
@@ -429,8 +433,8 @@ export const guides: GuideRecord[] = [
     ],
     faq: [
       {
-        q: 'What certifications should children\'s fabric have?',
-        a: 'OEKO-TEX Standard 100 Class 1 is the minimum requirement for baby and children\'s fabrics. GOTS certification is needed for organic claims. Additional certifications may include bluesign and Made in Green by OEKO-TEX.',
+        q: "What certifications should children's fabric have?",
+        a: "OEKO-TEX Standard 100 Class 1 is the minimum requirement for baby and children's fabrics. GOTS certification is needed for organic claims. Additional certifications may include bluesign and Made in Green by OEKO-TEX.",
       },
       {
         q: 'Is polyester safe for children?',
@@ -457,7 +461,8 @@ export const guides: GuideRecord[] = [
       'Fabric defects discovered during cutting or sewing cause production delays, material waste, and compromised product quality if not properly addressed.',
     solution:
       'Implement pre-production fabric inspection to identify defects before cutting. Classify defects as repairable (minor) or reject (major). Use patching, re-weaving, or adhesive repair techniques for salvageable defects.',
-    audience: 'Garment factory QC teams, fabric warehouse managers, and production supervisors handling fabric roll defects.',
+    audience:
+      'Garment factory QC teams, fabric warehouse managers, and production supervisors handling fabric roll defects.',
     steps: [
       'Inspect fabric under proper lighting — use a fabric inspection machine for thorough coverage',
       'Categorize defects — minor (pulled thread, small slub) vs major (hole, tear, shading, coating defect)',
@@ -535,7 +540,8 @@ export const guides: GuideRecord[] = [
       'Bulk fabric orders fail due to miscalculated quantities, unrealistic lead times, poor supplier communication, and inadequate quality assurance — leading to production delays and financial losses.',
     solution:
       'Use a systematic ordering process: demand forecasting, yardage calculation, supplier qualification, sample approval, production monitoring, inspection, and logistics coordination. Build buffer time at every stage.',
-    audience: 'Sourcing managers, production planners, procurement teams, and apparel brand owners managing fabric supply chains.',
+    audience:
+      'Sourcing managers, production planners, procurement teams, and apparel brand owners managing fabric supply chains.',
     steps: [
       'Calculate required quantity — multiply garment quantity by yards per garment, add 10% waste and shade-banding allowance',
       'Determine MOQ — typical fabric mill MOQs are 500-3000 yards per color; negotiate for smaller runs on repeat orders',
@@ -613,7 +619,8 @@ export const guides: GuideRecord[] = [
       'The proliferation of textile certifications causes confusion — brands struggle to identify which certifications are meaningful and which are marketing claims.',
     solution:
       'Focus on certifiations that provide third-party verification: OEKO-TEX for safety, bluesign for environmental manufacturing, GOTS for organic claims, and GRS for recycled content. Require certificates from your suppliers.',
-    audience: 'Sustainability managers, sourcing professionals, product developers, and compliance teams in apparel and textile industries.',
+    audience:
+      'Sustainability managers, sourcing professionals, product developers, and compliance teams in apparel and textile industries.',
     steps: [
       'OEKO-TEX Standard 100 — tests for harmful substances; choose Class 1 for baby/children products, Class 2 for skin contact',
       'bluesign — certified products meet strict environmental, health, and safety criteria across the manufacturing process',
@@ -632,8 +639,8 @@ export const guides: GuideRecord[] = [
         a: 'No. OEKO-TEX Standard 100 tests for harmful substances but does not verify organic fiber content. Organic claims require GOTS certification. A fabric can be OEKO-TEX certified without being organic.',
       },
       {
-        q: 'How do I verify my supplier\'s certifications?',
-        a: 'Request a copy of the valid certification certificate, verify the certificate number on the certifying body\'s website, and check the scope and expiration date. Do not accept claims without a verifiable certificate.',
+        q: "How do I verify my supplier's certifications?",
+        a: "Request a copy of the valid certification certificate, verify the certificate number on the certifying body's website, and check the scope and expiration date. Do not accept claims without a verifiable certificate.",
       },
     ],
     relatedProducts: [],
@@ -691,7 +698,8 @@ export const guides: GuideRecord[] = [
       'Brands face growing pressure to reduce environmental impact but struggle to understand sustainable fabric options, certification requirements, and the trade-offs between different eco-friendly materials.',
     solution:
       'Choose recycled synthetics (rPET, recycled nylon) for performance applications, organic cotton for comfort basics, and next-gen cellulosics (Tencel, hemp) for sustainable natural alternatives. Verify certifications and request eco-transparency data from suppliers.',
-    audience: 'Sourcing managers, sustainability officers, product developers, and brand owners seeking eco-friendly fabric alternatives.',
+    audience:
+      'Sourcing managers, sustainability officers, product developers, and brand owners seeking eco-friendly fabric alternatives.',
     steps: [
       'Assess your sustainability goals — reduce virgin plastic use, lower water footprint, eliminate hazardous chemicals, or achieve end-of-life biodegradability',
       'Choose recycled fibers — rPET uses 50% less energy and 20% less water than virgin polyester; recycled nylon from fishing nets and pre-consumer waste',

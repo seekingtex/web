@@ -22,7 +22,9 @@ const graphJsonLd = node
       '@graph': [
         articleSchema({
           headline: page.seo?.headline || 'Industrial & Technical Textiles 鈥?OEM Manufacturing',
-          description: page.seo?.description || 'Seekingtex manufactures high-performance fabrics for industrial and technical applications: heavy-duty workwear, protective clothing, specialized performance textiles.',
+          description:
+            page.seo?.description ||
+            'Seekingtex manufactures high-performance fabrics for industrial and technical applications: heavy-duty workwear, protective clothing, specialized performance textiles.',
           datePublished: page.seo?.datePublished || '2024-06-01',
           dateModified: page.seo?.dateModified || '2026-06-01',
           author: 'Seekingtex',
@@ -31,7 +33,9 @@ const graphJsonLd = node
         {
           '@type': 'Product',
           name: node?.name?.en || 'Industrial & Technical Textiles',
-          description: node?.description?.en || 'High-performance fabrics for industrial workwear, protective clothing, and specialized technical applications.',
+          description:
+            node?.description?.en ||
+            'High-performance fabrics for industrial workwear, protective clothing, and specialized technical applications.',
           brand: { '@type': 'Brand', name: 'Seekingtex' },
           category: 'Industrial & Technical Textiles',
         },
@@ -54,7 +58,10 @@ const graphJsonLd = node
       {page.headline || 'Industrial & Technical Textile Solutions'}
     </h1>
     <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
-      {page.subtitle || 'Seekingtex high-performance fabrics for industrial applications, technical textiles, and specialized performance requirements.'}
+      {
+        page.subtitle ||
+          'Seekingtex high-performance fabrics for industrial applications, technical textiles, and specialized performance requirements.'
+      }
     </p>
 
     <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />

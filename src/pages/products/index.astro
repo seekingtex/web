@@ -7,7 +7,13 @@ import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 
 import { SITE } from 'astrowind:config';
-import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
@@ -16,7 +22,13 @@ const categories = await getProductCategories();
 const rawCategory = (Astro.url?.searchParams?.get('category') ?? '') as
   'sun-protection' | 'waterproof' | 'quick-dry' | 'antibacterial' | 'stretch' | 'breathable' | 'eco-friendly' | '';
 const activeCategory =
-  rawCategory === 'sun-protection' || rawCategory === 'waterproof' || rawCategory === 'quick-dry' || rawCategory === 'antibacterial' || rawCategory === 'stretch' || rawCategory === 'breathable' || rawCategory === 'eco-friendly'
+  rawCategory === 'sun-protection' ||
+  rawCategory === 'waterproof' ||
+  rawCategory === 'quick-dry' ||
+  rawCategory === 'antibacterial' ||
+  rawCategory === 'stretch' ||
+  rawCategory === 'breathable' ||
+  rawCategory === 'eco-friendly'
     ? rawCategory
     : null;
 const filteredProducts = activeCategory ? products.filter((p) => p.category === activeCategory) : products;
@@ -41,7 +53,8 @@ const metadata = merge(
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Catalog</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Seekingtex products</h1>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
-        Premium functional fabrics for sportswear, outdoor apparel, tactical gear, and fashion — engineered for performance.
+        Premium functional fabrics for sportswear, outdoor apparel, tactical gear, and fashion — engineered for
+        performance.
       </p>
     </header>
 
@@ -104,6 +117,15 @@ const metadata = merge(
   {filteredProducts.map((p) => <QuickViewModal productId={p.slug} />)}
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex product catalog: functional performance fabrics — UPF 50+ sun protection fabrics (woven and knitted options for outdoor apparel and uniforms), waterproof breathable fabrics (laminated and coated membranes for outerwear and medical gear), quick-dry moisture wicking fabrics (hydrophilic and capillary-action finishes for activewear), 7A antibacterial fabrics (silver-ion and zinc-based antimicrobial treatments for healthcare and hygiene), 4-way stretch fabrics (elastane-blended knits for fitness and yoga wear), breathable mesh fabrics (engineered ventilation panels for sportswear and workwear), and eco-friendly recycled fabrics (GRS-certified post-consumer PET and pre-consumer waste). All fabrics OEKO-TEX Standard 100 certified, third-party tested by SGS and Intertek. OEM/ODM custom development available. MOQ 500-1000 m woven, 200-500 kg knits.</p>
+    <p>
+      Seekingtex product catalog: functional performance fabrics — UPF 50+ sun protection fabrics (woven and knitted
+      options for outdoor apparel and uniforms), waterproof breathable fabrics (laminated and coated membranes for
+      outerwear and medical gear), quick-dry moisture wicking fabrics (hydrophilic and capillary-action finishes for
+      activewear), 7A antibacterial fabrics (silver-ion and zinc-based antimicrobial treatments for healthcare and
+      hygiene), 4-way stretch fabrics (elastane-blended knits for fitness and yoga wear), breathable mesh fabrics
+      (engineered ventilation panels for sportswear and workwear), and eco-friendly recycled fabrics (GRS-certified
+      post-consumer PET and pre-consumer waste). All fabrics OEKO-TEX Standard 100 certified, third-party tested by SGS
+      and Intertek. OEM/ODM custom development available. MOQ 500-1000 m woven, 200-500 kg knits.
+    </p>
   </section>
 </Layout>

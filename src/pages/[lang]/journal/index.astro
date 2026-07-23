@@ -31,7 +31,10 @@ const recentGuides = contentV2Records.filter((c) => c.type === 'guide' || c.type
   <section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-24 px-6 text-center">
     <h1 class="text-4xl md:text-5xl font-bold">{hero.title || 'Journal'}</h1>
     <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-      {hero.subtitle || 'Fabric guides, material comparisons, and textile industry stories — written for real applications.'}
+      {
+        hero.subtitle ||
+          'Fabric guides, material comparisons, and textile industry stories — written for real applications.'
+      }
     </p>
   </section>
 
@@ -41,9 +44,7 @@ const recentGuides = contentV2Records.filter((c) => c.type === 'guide' || c.type
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{latest.tagline || 'Latest'}</span>
         <h2 class="mt-2 text-3xl font-semibold text-gray-900">{latest.title || 'Guides & Comparisons'}</h2>
       </div>
-      <a href={`/${lang}/v2`} class="text-sm text-sky-600 hover:underline"
-        >{latest.browse_all || 'Browse all 20 →'}</a
-      >
+      <a href={`/${lang}/v2`} class="text-sm text-sky-600 hover:underline">{latest.browse_all || 'Browse all 20 →'}</a>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       {

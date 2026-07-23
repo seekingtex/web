@@ -34,8 +34,12 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
   <!-- Featured Topics -->
   <section class="max-w-6xl mx-auto py-20 px-6">
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{featured.tagline || 'Featured Topics'}</span>
-      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{featured.title || 'Start your learning journey'}</h2>
+      <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+        >{featured.tagline || 'Featured Topics'}</span
+      >
+      <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {featured.title || 'Start your learning journey'}
+      </h2>
       <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{featured.subtitle || ''}</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -48,7 +52,9 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
             <div class="w-10 h-10 bg-sky-50 dark:bg-sky-900/30 rounded-lg flex items-center justify-center text-sky-600">
               {item.icon && <Icon name={item.icon} class="w-5 h-5" />}
             </div>
-            <h3 class="mt-4 font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">{item.title || ''}</h3>
+            <h3 class="mt-4 font-semibold text-gray-900 dark:text-slate-100 group-hover:text-sky-600 transition-colors">
+              {item.title || ''}
+            </h3>
             <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{item.description || ''}</p>
           </a>
         ))
@@ -60,8 +66,12 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
   <section class="bg-gray-50 dark:bg-slate-900/50 py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-14">
-        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{categories.tagline || 'Categories'}</span>
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">{categories.title || 'Explore by topic'}</h2>
+        <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
+          >{categories.tagline || 'Categories'}</span
+        >
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+          {categories.title || 'Explore by topic'}
+        </h2>
         <p class="mt-4 text-lg text-gray-500 dark:text-slate-400">{categories.subtitle || ''}</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
@@ -84,9 +94,5 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
     </div>
   </section>
 
-  <CallToAction
-    title={cta.title}
-    subtitle={cta.subtitle}
-    actions={cta.actions}
-  />
+  <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
 </Layout>

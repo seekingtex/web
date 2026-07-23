@@ -2,7 +2,11 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 
-const crumbs = [{ name: 'Home', href: '/' }, { name: 'R&D Center', href: '/randdcenter' }, { name: 'Advanced Materials Lab' }];
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'R&D Center', href: '/randdcenter' },
+  { name: 'Advanced Materials Lab' },
+];
 
 const metadata = {
   title: `Advanced Materials Lab — Performance Fiber & Coating Research | ${SITE.name}`,
@@ -32,20 +36,23 @@ const metadata = {
   <section class="px-6 sm:px-6 pb-12 mx-auto max-w-4xl prose prose-gray dark:prose-invert">
     <h2>The foundation of every functional fabric</h2>
     <p>
-      The fiber and coating are the most critical elements in a functional textile. They must deliver specific performance
-      characteristics — UPF protection, waterproofness, breathability, antimicrobial activity, stretch recovery, and
-      abrasion resistance — all while maintaining comfort and durability over the product's lifetime. At {SITE.name}, our
-      Advanced Materials Lab is dedicated exclusively to the research, characterization, validation, and continuous
-      improvement of the fibers, coatings, and sustainable materials we use in every fabric we produce.
+      The fiber and coating are the most critical elements in a functional textile. They must deliver specific
+      performance characteristics — UPF protection, waterproofness, breathability, antimicrobial activity, stretch
+      recovery, and abrasion resistance — all while maintaining comfort and durability over the product's lifetime. At {
+        SITE.name
+      }, our Advanced Materials Lab is dedicated exclusively to the research, characterization, validation, and
+      continuous improvement of the fibers, coatings, and sustainable materials we use in every fabric we produce.
     </p>
     <p>
-      We do not rely solely on supplier data sheets. Every batch of fiber, yarn, coating chemical, and laminate film that
-      enters our facility is independently tested and characterized in-house. This guarantees that the material
+      We do not rely solely on supplier data sheets. Every batch of fiber, yarn, coating chemical, and laminate film
+      that enters our facility is independently tested and characterized in-house. This guarantees that the material
       specification we publish is the material performance you receive — lot after lot, year after year.
     </p>
 
     <h2>Standardized testing equipment</h2>
-    <p>Our materials lab is equipped with industrial-grade instruments that conform to AATCC, ASTM, and ISO test methods:</p>
+    <p>
+      Our materials lab is equipped with industrial-grade instruments that conform to AATCC, ASTM, and ISO test methods:
+    </p>
     <table>
       <thead><tr><th>Equipment</th><th>Parameters Measured</th><th>Standard</th></tr></thead>
       <tbody>
@@ -69,9 +76,9 @@ const metadata = {
           ></tr
         >
         <tr
-          ><td>FTIR spectrometer</td><td>Chemical composition analysis, coating uniformity, contaminant identification</td><td
-            >ASTM E1252</td
-          ></tr
+          ><td>FTIR spectrometer</td><td
+            >Chemical composition analysis, coating uniformity, contaminant identification</td
+          ><td>ASTM E1252</td></tr
         >
         <tr><td>Hydrostatic head tester</td><td>Water penetration resistance</td><td>ISO 811 / AATCC TM127</td></tr>
       </tbody>
@@ -79,16 +86,21 @@ const metadata = {
     <p class="text-sm text-gray-500">* All equipment is calibrated annually by third-party accredited laboratories.</p>
 
     <h2>From data to decision: a typical test workflow</h2>
-    <p>When a new fiber, coating, or sustainable material candidate arrives, it follows a standardized seven-step qualification process:</p>
+    <p>
+      When a new fiber, coating, or sustainable material candidate arrives, it follows a standardized seven-step
+      qualification process:
+    </p>
     <ol>
       <li>
         <strong>Receipt inspection</strong> — visual check for surface defects, contamination, and dimensional compliance.
       </li>
       <li>
-        <strong>Chemical characterization</strong> — FTIR analysis to verify chemical composition and identify any unexpected additives.
+        <strong>Chemical characterization</strong> — FTIR analysis to verify chemical composition and identify any unexpected
+        additives.
       </li>
       <li>
-        <strong>Tensile testing</strong> — 5 specimens in warp and weft directions. Minimum specification must be met for acceptance.
+        <strong>Tensile testing</strong> — 5 specimens in warp and weft directions. Minimum specification must be met for
+        acceptance.
       </li>
       <li>
         <strong>UV conditioning</strong> — 1000 h exposure in xenon-arc chamber; minimum 80 % strength retention required.
@@ -98,7 +110,8 @@ const metadata = {
       </li>
       <li><strong>Abrasion resistance</strong> — Martindale testing, minimum 20 000 cycles to breakthrough.</li>
       <li>
-        <strong>Approval sign-off</strong> — only after all seven gates are passed is the material released for production sampling.
+        <strong>Approval sign-off</strong> — only after all seven gates are passed is the material released for production
+        sampling.
       </li>
     </ol>
 
@@ -134,8 +147,8 @@ const metadata = {
         </div>
       </div>
       <p class="text-xs text-gray-400 mt-2">
-        Our polyester 150D fabric retains &gt; 80 % tensile strength after 2000 h xenon-arc exposure, compared to typical
-        industry grades that drop below 70 %.
+        Our polyester 150D fabric retains &gt; 80 % tensile strength after 2000 h xenon-arc exposure, compared to
+        typical industry grades that drop below 70 %.
       </p>
     </div>
 
@@ -149,23 +162,23 @@ const metadata = {
 
     <h2>Solving your toughest material challenges</h2>
     <p>
-      Every application is different. An outdoor performance fabric for tropical environments faces vastly different UV and
-      humidity conditions than a medical textile in a controlled indoor setting. Our Advanced Materials Lab helps you
-      select — or develop — a material specification that is optimized for your application.
+      Every application is different. An outdoor performance fabric for tropical environments faces vastly different UV
+      and humidity conditions than a medical textile in a controlled indoor setting. Our Advanced Materials Lab helps
+      you select — or develop — a material specification that is optimized for your application.
     </p>
     <p>Recent custom solutions include:</p>
     <ul>
       <li>
-        A high-durability nylon 6,6 formulation for military uniforms, with enhanced UV resistance and abrasion life (+40 %
-        abrasion life).
+        A high-durability nylon 6,6 formulation for military uniforms, with enhanced UV resistance and abrasion life
+        (+40 % abrasion life).
       </li>
       <li>
-        A sustainable polyester blend using 100 % post-consumer recycled fiber, with PFC-free DWR finish, tested to maintain
-        performance after 50 industrial launderings.
+        A sustainable polyester blend using 100 % post-consumer recycled fiber, with PFC-free DWR finish, tested to
+        maintain performance after 50 industrial launderings.
       </li>
       <li>
-        An antimicrobial polyester fabric for healthcare applications, with silver-ion treatment maintaining &gt;99 % bacterial reduction
-        after 100 wash cycles.
+        An antimicrobial polyester fabric for healthcare applications, with silver-ion treatment maintaining &gt;99 %
+        bacterial reduction after 100 wash cycles.
       </li>
     </ul>
     <p>
@@ -190,8 +203,8 @@ const metadata = {
       </li>
     </ol>
     <p>
-      Our goal is not simply to supply you with fabric. It is to ensure that the fabric you receive performs reliably in the
-      conditions you operate in — and that starts with the materials.
+      Our goal is not simply to supply you with fabric. It is to ensure that the fabric you receive performs reliably in
+      the conditions you operate in — and that starts with the materials.
     </p>
   </section>
 

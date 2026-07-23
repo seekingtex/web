@@ -15,7 +15,8 @@ const { lang } = Astro.params;
 
 const metadata = {
   title: 'Seekingtex — Functional Fabric Manufacturer & OEM/ODM Factory',
-  description: 'China-based manufacturer of OEKO-TEX certified functional fabrics, performance textiles, and custom fabric solutions. OEM/ODM services, 12,000 m² factory, ISO certified. Serving B2B clients in 50+ countries since 2012.',
+  description:
+    'China-based manufacturer of OEKO-TEX certified functional fabrics, performance textiles, and custom fabric solutions. OEM/ODM services, 12,000 m² factory, ISO certified. Serving B2B clients in 50+ countries since 2012.',
   ignoreTitleTemplate: true,
 };
 
@@ -60,14 +61,14 @@ const guideLinks = [
       <p class="mt-4 text-base text-white/70 max-w-2xl mx-auto">{BRAND.description}</p>
       <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
         <a
-          href={`/${lang}/factory`} 
+          href={`/${lang}/factory`}
           class="group px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl"
         >
           Our Manufacturing Facility
           <span class="inline-block ml-2 transition-transform group-hover:translate-x-1">→</span>
         </a>
         <a
-          href={`/${lang}/custom`} 
+          href={`/${lang}/custom`}
           class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-all backdrop-blur-sm"
         >
           OEM/ODM Services
@@ -106,8 +107,12 @@ const guideLinks = [
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Core Products</span>
-        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900">Performance · Functional · Technical · Uniform</h2>
-        <p class="mt-4 text-lg text-gray-500">OEKO-TEX certified fabric lines manufactured in-house for global B2B partners.</p>
+        <h2 class="mt-4 text-3xl md:text-4xl font-semibold text-gray-900">
+          Performance · Functional · Technical · Uniform
+        </h2>
+        <p class="mt-4 text-lg text-gray-500">
+          OEKO-TEX certified fabric lines manufactured in-house for global B2B partners.
+        </p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
@@ -131,7 +136,7 @@ const guideLinks = [
           ))
         }
         <a
-          href={`/${lang}/products`} 
+          href={`/${lang}/products`}
           class="group block bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow"
         >
           <span class="text-3xl text-sky-400">+</span>
@@ -167,7 +172,9 @@ const guideLinks = [
       }
     </div>
     <div class="mt-8 text-center">
-      <a href={`/${lang}/oem-process`} class="text-sm font-medium text-sky-600 hover:text-sky-700">View production process →</a>
+      <a href={`/${lang}/oem-process`} class="text-sm font-medium text-sky-600 hover:text-sky-700"
+        >View production process →</a
+      >
     </div>
   </section>
 
@@ -177,7 +184,8 @@ const guideLinks = [
       <span class="text-xs font-medium tracking-[0.2em] uppercase text-white/50">Global Reach</span>
       <h2 class="mt-4 text-3xl md:text-4xl font-semibold">Trusted by B2B Partners Worldwide</h2>
       <p class="mt-4 text-lg text-white/70 max-w-2xl mx-auto">
-        OEKO-TEX certified fabrics supplied to apparel brands, healthcare institutions, uniform programs, and industrial partners across {BRAND.regions.length} regions globally.
+        OEKO-TEX certified fabrics supplied to apparel brands, healthcare institutions, uniform programs, and industrial
+        partners across {BRAND.regions.length} regions globally.
       </p>
       <div class="mt-12 flex flex-wrap items-center justify-center gap-6">
         {
@@ -202,13 +210,13 @@ const guideLinks = [
       </p>
       <div class="mt-10 flex items-center justify-center gap-4 flex-wrap">
         <a
-          href={`/${lang}/contact`} 
+          href={`/${lang}/contact`}
           class="px-10 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
         >
           Request a Quote →
         </a>
         <a
-          href={`/${lang}/custom`} 
+          href={`/${lang}/custom`}
           class="px-10 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition-all"
         >
           Custom Development

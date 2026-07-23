@@ -161,7 +161,7 @@ export const nodes: GraphNode[] = [
       ko: '속건 흡한속건 원단',
       ja: '速乾吸水速乾生地',
       zh: '速干吸湿排汗面料',
-      fr: 'Tissu à séchage rapide et évacuation de l\'humidité',
+      fr: "Tissu à séchage rapide et évacuation de l'humidité",
       de: 'Schnelltrocknender feuchtigkeitstransportierender Stoff',
       es: 'Tejido de secado rápido y absorción de humedad',
       pt: 'Tecido de secagem rápida e absorção de umidade',
@@ -274,11 +274,16 @@ export const nodes: GraphNode[] = [
         },
         {
           q: 'How long does the antibacterial effect last?',
-          a: 'Our antibacterial treatments are designed to last 50+ home launderings, maintaining effective microbial inhibition throughout the garment\'s usable life.',
+          a: "Our antibacterial treatments are designed to last 50+ home launderings, maintaining effective microbial inhibition throughout the garment's usable life.",
         },
       ],
     },
-    related: ['antibacterial-treatment-technology', 'moisture-wicking-technology', 'sportswear-athletic', 'medical-protective'],
+    related: [
+      'antibacterial-treatment-technology',
+      'moisture-wicking-technology',
+      'sportswear-athletic',
+      'medical-protective',
+    ],
     slug: {
       en: 'antibacterial-fabric',
       zh: 'antibacterial-fabric',
@@ -479,7 +484,7 @@ export const nodes: GraphNode[] = [
       en: [
         {
           q: 'What makes a fabric breathable?',
-          a: 'Breathability is determined by the fabric\'s air permeability and moisture vapor transmission rate (MVTR). Open weaves, lightweight constructions, and hydrophilic coatings all contribute to breathability.',
+          a: "Breathability is determined by the fabric's air permeability and moisture vapor transmission rate (MVTR). Open weaves, lightweight constructions, and hydrophilic coatings all contribute to breathability.",
         },
         {
           q: 'Can breathable fabric also be waterproof?',
@@ -637,11 +642,11 @@ export const nodes: GraphNode[] = [
       ko: '흡한속건 기술',
       ja: '吸水速乾技術',
       zh: '吸湿排汗技术',
-      fr: 'Technologie d\'évacuation de l\'humidité',
+      fr: "Technologie d'évacuation de l'humidité",
       de: 'Feuchtigkeitstransporttechnologie',
       es: 'Tecnología de absorción de humedad',
       pt: 'Tecnologia de absorção de umidade',
-      it: 'Tecnologia di assorbimento dell\'umidità',
+      it: "Tecnologia di assorbimento dell'umidità",
       ru: 'Технология влагоотведения',
       pl: 'Technologia odprowadzania wilgoci',
       ar: 'تقنية امتصاص الرطوبة',
@@ -723,12 +728,7 @@ export const nodes: GraphNode[] = [
       ],
     },
     useCases: {
-      en: [
-        'Sportswear odor control',
-        'Medical textile hygiene',
-        'Workwear freshness',
-        'Underwear and base layers',
-      ],
+      en: ['Sportswear odor control', 'Medical textile hygiene', 'Workwear freshness', 'Underwear and base layers'],
     },
     faq: {
       en: [
@@ -767,7 +767,7 @@ export const nodes: GraphNode[] = [
       ko: '기계적 신축 기술',
       ja: 'メカニカルストレッチ技術',
       zh: '机械弹力技术',
-      fr: 'Technologie d\'élasticité mécanique',
+      fr: "Technologie d'élasticité mécanique",
       de: 'Mechanische Stretch-Technologie',
       es: 'Tecnología de estiramiento mecánico',
       pt: 'Tecnologia de alongamento mecânico',
@@ -1027,7 +1027,7 @@ export const nodes: GraphNode[] = [
       ko: '아웃도어 및 어드벤처',
       ja: 'アウトドア＆アドベンチャー',
       zh: '户外与探险服装',
-      fr: 'Vêtements d\'extérieur et d\'aventure',
+      fr: "Vêtements d'extérieur et d'aventure",
       de: 'Outdoor- und Abenteuerbekleidung',
       es: 'Ropa de exterior y aventura',
       pt: 'Vestuário ao ar livre e aventura',

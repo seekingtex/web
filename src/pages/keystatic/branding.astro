@@ -57,18 +57,19 @@ const year = new Date().getFullYear();
 
 <AdminLayout title="Branding & Logo" active="branding" username={verified?.username}>
   <div class="mb-6">
-    <h1 class="text-2xl font-semibold">Branding & Logo <span class="text-base text-gray-400 font-normal">(品牌与 Logo)</span></h1>
+    <h1 class="text-2xl font-semibold">
+      Branding & Logo <span class="text-base text-gray-400 font-normal">(品牌与 Logo)</span>
+    </h1>
     <p class="mt-1 text-sm text-gray-500">
-      编辑站点名称、Logo、版权信息、联系方式、WhatsApp、邮件配置和谷歌地图。
-      Edit site name, logo, copyright, contact info, WhatsApp, email config, and Google Maps.
-      File: <code class="font-mono">{file}</code>. You can use <code
+      编辑站点名称、Logo、版权信息、联系方式、WhatsApp、邮件配置和谷歌地图。 Edit site name, logo, copyright, contact
+      info, WhatsApp, email config, and Google Maps. File: <code class="font-mono">{file}</code>. You can use <code
         class="font-mono">{'{year}'}</code
       > and <code class="font-mono">{'{site_name}'}</code> placeholders in the copyright text, which will be auto-replaced
       (current year {year}, current site_name "{data.site_name}").
     </p>
     <p class="mt-1 text-xs text-amber-600 dark:text-amber-400">
-      <strong>提示：</strong> 此面板编辑的是显示用信息。JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。
-      Tip: This panel edits display info. For JSON-LD organization info and social links, use the SEO panel.
+      <strong>提示：</strong> 此面板编辑的是显示用信息。JSON-LD 结构化数据中的组织信息和社交链接请在 SEO 面板中编辑。 Tip:
+      This panel edits display info. For JSON-LD organization info and social links, use the SEO panel.
     </p>
   </div>
 
@@ -141,13 +142,17 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-5">
-      <h2 class="text-base font-semibold">Contact Information <span class="text-xs text-gray-400 font-normal">(联系方式 — 页面显示用)</span></h2>
+      <h2 class="text-base font-semibold">
+        Contact Information <span class="text-xs text-gray-400 font-normal">(联系方式 — 页面显示用)</span>
+      </h2>
       <p class="text-xs text-gray-500">
-        显示在 footer 和 contact 页面。如需同步更新 JSON-LD 结构化数据中的组织信息，请前往 SEO 面板。
-        Displayed in footer and contact page. To update JSON-LD organization info, use the SEO panel.
+        显示在 footer 和 contact 页面。如需同步更新 JSON-LD 结构化数据中的组织信息，请前往 SEO 面板。 Displayed in
+        footer and contact page. To update JSON-LD organization info, use the SEO panel.
       </p>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number <span class="text-xs text-gray-400 font-normal">(电话)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Phone Number <span class="text-xs text-gray-400 font-normal">(电话)</span></label
+        >
         <input
           type="text"
           name="phone"
@@ -158,7 +163,9 @@ const year = new Date().getFullYear();
         <p class="mt-1 text-xs text-gray-500">显示在 footer 和 contact 页面。不会影响 JSON-LD schema。</p>
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Address <span class="text-xs text-gray-400 font-normal">(地址)</span></label
+        >
         <input
           type="text"
           name="address"
@@ -168,7 +175,9 @@ const year = new Date().getFullYear();
         />
       </div>
       <div>
-        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email <span class="text-xs text-gray-400 font-normal">(邮箱)</span></label>
+        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+          >Email <span class="text-xs text-gray-400 font-normal">(邮箱)</span></label
+        >
         <input
           type="email"
           name="email"
@@ -304,8 +313,11 @@ const year = new Date().getFullYear();
           class="w-full px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm font-mono"
         />
         <p class="mt-1 text-xs text-gray-500">
-          用于发送联系表单邮件。创建地址：<a class="underline" href="https://resend.com/api-keys" target="_blank" rel="noopener"
-            >resend.com/api-keys</a
+          用于发送联系表单邮件。创建地址：<a
+            class="underline"
+            href="https://resend.com/api-keys"
+            target="_blank"
+            rel="noopener">resend.com/api-keys</a
           >，Full access 权限即可。
           <strong class="text-amber-600">注意：此密钥明文存储在 git 仓库中，请使用专用密钥。</strong>
         </p>
@@ -325,8 +337,8 @@ const year = new Date().getFullYear();
         />
         <p class="mt-1 text-xs text-amber-800 dark:text-amber-300">
           用于将加密的联系表单提交写入 GitHub 仓库。
-          <strong>必须使用 Fine-grained PAT</strong>（创建路径：GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens），
-          仅勾选对应仓库的 <strong>Contents: Read and write</strong> 权限。Classic PAT 拥有完整仓库权限，泄露风险更高。
+          <strong>必须使用 Fine-grained PAT</strong>（创建路径：GitHub Settings → Developer settings → Personal access
+          tokens → Fine-grained tokens）， 仅勾选对应仓库的 <strong>Contents: Read and write</strong> 权限。Classic PAT 拥有完整仓库权限，泄露风险更高。
         </p>
       </div>
     </div>

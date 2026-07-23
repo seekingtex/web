@@ -14,10 +14,30 @@ const { lang } = Astro.params;
 const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
 
 const comparisons = [
-  { slug: 'polyester-vs-nylon', title: t('compare.polyesterVsNylon'), desc: t('compare.polyesterVsNylon.desc'), image: '/images/seekingtex/fabrics/polyester-vs-nylon.webp' },
-  { slug: 'polyester-vs-cotton', title: t('compare.polyesterVsCotton'), desc: t('compare.polyesterVsCotton.desc'), image: '/images/seekingtex/fabrics/polyester-vs-cotton.webp' },
-  { slug: 'woven-vs-knit', title: t('compare.wovenVsKnit'), desc: t('compare.wovenVsKnit.desc'), image: '/images/seekingtex/fabrics/woven-vs-knit.webp' },
-  { slug: 'natural-vs-synthetic', title: t('compare.naturalVsSynthetic'), desc: t('compare.naturalVsSynthetic.desc'), image: '/images/seekingtex/fabrics/natural-vs-synthetic.webp' },
+  {
+    slug: 'polyester-vs-nylon',
+    title: t('compare.polyesterVsNylon'),
+    desc: t('compare.polyesterVsNylon.desc'),
+    image: '/images/seekingtex/fabrics/polyester-vs-nylon.webp',
+  },
+  {
+    slug: 'polyester-vs-cotton',
+    title: t('compare.polyesterVsCotton'),
+    desc: t('compare.polyesterVsCotton.desc'),
+    image: '/images/seekingtex/fabrics/polyester-vs-cotton.webp',
+  },
+  {
+    slug: 'woven-vs-knit',
+    title: t('compare.wovenVsKnit'),
+    desc: t('compare.wovenVsKnit.desc'),
+    image: '/images/seekingtex/fabrics/woven-vs-knit.webp',
+  },
+  {
+    slug: 'natural-vs-synthetic',
+    title: t('compare.naturalVsSynthetic'),
+    desc: t('compare.naturalVsSynthetic.desc'),
+    image: '/images/seekingtex/fabrics/natural-vs-synthetic.webp',
+  },
 ];
 
 const metadata = {
@@ -28,13 +48,15 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <JsonLd data={{
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    headline: 'Comparisons & Buying Guides',
-    description: metadata.description,
-    author: { '@type': 'Organization', name: SITE.name },
-  }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'Comparisons & Buying Guides',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
 
   <div class="max-w-6xl mx-auto px-6 py-16">
     <nav class="text-sm text-gray-500 mb-8">
@@ -51,34 +73,50 @@ const metadata = {
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Product Comparison Table -->
-      <a href={`/${lang}/products/compare`}
+      <a
+        href={`/${lang}/products/compare`}
         class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
       >
         <div class="h-44 bg-gradient-to-br from-sky-100 to-blue-50 flex items-center justify-center">
           <span class="text-5xl">&#128202;</span>
         </div>
         <div class="p-6 flex flex-col flex-1">
-          <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">{t('compare.productCompare')}</h2>
+          <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+            {t('compare.productCompare')}
+          </h2>
           <p class="text-sm text-gray-500 line-clamp-3 flex-1">{t('compare.productCompare.desc')}</p>
-          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">{t('compare.view')}</span>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700"
+            >{t('compare.view')}</span
+          >
         </div>
       </a>
 
-      {comparisons.map((c) => (
-        <a
-          href={`/${lang}/compare/${c.slug}`}
-          class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
-        >
-          <div class="h-44 bg-gray-100 overflow-hidden">
-            <img src={c.image} alt={c.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-          </div>
-          <div class="p-6 flex flex-col flex-1">
-            <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">{c.title}</h2>
-            <p class="text-sm text-gray-500 line-clamp-3 flex-1">{c.desc}</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">{t('compare.view')}</span>
-          </div>
-        </a>
-      ))}
+      {
+        comparisons.map((c) => (
+          <a
+            href={`/${lang}/compare/${c.slug}`}
+            class="group bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 flex flex-col"
+          >
+            <div class="h-44 bg-gray-100 overflow-hidden">
+              <img
+                src={c.image}
+                alt={c.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h2 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors mb-2">
+                {c.title}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 flex-1">{c.desc}</p>
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:text-sky-700">
+                {t('compare.view')}
+              </span>
+            </div>
+          </a>
+        ))
+      }
     </div>
   </div>
 </Layout>

@@ -53,7 +53,8 @@ export function suggestPositionImprovements(entries: ContentV2Record[]): Optimiz
       entry.relatedGuides.filter((s) => TIER_A_SLUGS.includes(s)).length === 0
     ) {
       issue = issue ? `${issue}; no link to core guide` : 'No link to core guide (Tier A)';
-      suggestion = 'Add internal link to one of the 3 core guides (performance fabric, fabric for beginners, fabric selection guide)';
+      suggestion =
+        'Add internal link to one of the 3 core guides (performance fabric, fabric for beginners, fabric selection guide)';
     }
     if (issue) {
       suggestions.push({

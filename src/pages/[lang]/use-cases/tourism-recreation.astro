@@ -33,7 +33,9 @@ const graphJsonLd = tourismNode
         {
           '@type': 'Product',
           name: tourismNode?.name?.en || 'Sportswear & Athletic Fabrics',
-          description: tourismNode?.description?.en || 'Premium functional fabrics for sportswear and athletic apparel applications.',
+          description:
+            tourismNode?.description?.en ||
+            'Premium functional fabrics for sportswear and athletic apparel applications.',
           brand: { '@type': 'Brand', name: 'Seekingtex' },
           category: 'Sportswear & Athletic Fabrics',
         },
@@ -56,7 +58,10 @@ const graphJsonLd = tourismNode
       {page.headline || 'Functional Fabrics for Sportswear & Athletic Apparel'}
     </h1>
     <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
-      {page.subtitle || 'From running shirts to team uniforms — Seekingtex performance fabrics deliver moisture management, stretch, and durability for every sport.'}
+      {
+        page.subtitle ||
+          'From running shirts to team uniforms — Seekingtex performance fabrics deliver moisture management, stretch, and durability for every sport.'
+      }
     </p>
 
     <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />

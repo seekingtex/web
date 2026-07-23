@@ -30,7 +30,10 @@ export function buildLlmsTxt(sections: LlmsSection[], extra: { description: stri
   return lines.join('\n');
 }
 
-export function buildLlmsFullTxt(sections: LlmsSection[], extra: { about: string; facts: string[]; summary: string }): string {
+export function buildLlmsFullTxt(
+  sections: LlmsSection[],
+  extra: { about: string; facts: string[]; summary: string }
+): string {
   const lines: string[] = [];
   lines.push('# Seekingtex — Complete Site Knowledge (LLMs-Full)');
   lines.push(`> Site: ${SITE_URL}`);
@@ -64,7 +67,9 @@ export function buildLlmsFullTxt(sections: LlmsSection[], extra: { about: string
   return lines.join('\n');
 }
 
-export function formatProductLines(products: { title: string; description: string; sku?: string; url?: string }[]): string[] {
+export function formatProductLines(
+  products: { title: string; description: string; sku?: string; url?: string }[]
+): string[] {
   return products.map((p) => {
     let line = `- **${p.title}**`;
     if (p.sku) line += ` (SKU: ${p.sku})`;

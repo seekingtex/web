@@ -11,11 +11,12 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key) => (ui)[lang]?.[key] || (ui)[defaultLang]?.[key] || key;
+const t = (key) => ui[lang]?.[key] || ui[defaultLang]?.[key] || key;
 
 const metadata = {
   title: t('compare.title') || `Product Comparison —${SITE.name}`,
-  description: t('compare.desc') || 'Compare Seekingtex functional fabrics, performance textiles, and materials side by side.',
+  description:
+    t('compare.desc') || 'Compare Seekingtex functional fabrics, performance textiles, and materials side by side.',
 };
 
 const products = await getProducts();

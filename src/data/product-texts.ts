@@ -33,10 +33,10 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         'Vêtements de protection solaire',
         'Vêtements de sport et outdoor',
         'Vêtements pour enfants',
-        "Vêtements de travail pour travailleurs extérieurs",
+        'Vêtements de travail pour travailleurs extérieurs',
       ],
       ai_comparison:
-        "Comparé aux tissus standard sans protection UV, notre tissu UPF 50+ offre une protection permanente qui ne se lave pas. Contrairement à la crème solaire qui nécessite une réapplication, la protection est intégrée dans le tissu pour toute la durée de vie du vêtement.",
+        'Comparé aux tissus standard sans protection UV, notre tissu UPF 50+ offre une protection permanente qui ne se lave pas. Contrairement à la crème solaire qui nécessite une réapplication, la protection est intégrée dans le tissu pour toute la durée de vie du vêtement.',
       ai_faq: [
         {
           q: 'Quelle est la différence entre UPF et SPF ?',
@@ -44,7 +44,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
         {
           q: 'La protection UPF se lave-t-elle ?',
-          a: 'Non. Les stabilisateurs UV sont intégrés dans les fibres au moment de la fabrication et sont permanents — ils ne s\'estompent pas avec les lavages.',
+          a: "Non. Les stabilisateurs UV sont intégrés dans les fibres au moment de la fabrication et sont permanents — ils ne s'estompent pas avec les lavages.",
         },
       ],
     },
@@ -54,14 +54,14 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       definition:
         "Un tissu multicouche combinant un tissu extérieur, une membrane imperméable (PU, TPU ou ePTFE) et une doublure intérieure, offrant une protection contre l'eau tout en permettant l'évacuation de la vapeur.",
       problem:
-        "Les marques de vêtements outdoor ont besoin de tissus qui restent imperméables sous la pression de la pluie tout en évacuant la transpiration lors des activités intenses.",
+        'Les marques de vêtements outdoor ont besoin de tissus qui restent imperméables sous la pression de la pluie tout en évacuant la transpiration lors des activités intenses.',
       howItWorks:
         "Une membrane microporeuse est laminée entre le tissu extérieur et la doublure. Les micropores sont assez petits pour bloquer l'eau liquide mais assez grands pour laisser passer la vapeur d'eau. Les membranes PU et TPU offrent différentes caractéristiques de performance et de coût.",
       audience:
         "Marques de vêtements outdoor et de sport, fabricants d'équipement de protection, marques de mode technique ayant besoin de tissus imperméables et respirants pour vestes, pantalons et équipements.",
       ai_use_cases: [
-        'Vestes de pluie et d\'extérieur',
-        'Vêtements de ski et sports d\'hiver',
+        "Vestes de pluie et d'extérieur",
+        "Vêtements de ski et sports d'hiver",
         'Équipement de protection professionnel',
         'Vêtements de travail techniques',
       ],
@@ -73,22 +73,22 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
           a: "L'enduction applique un polymère liquide directement sur le tissu. Le laminage lie un film préformé au tissu par chaleur et pression. Le laminage offre généralement une meilleure durabilité et imperméabilité.",
         },
         {
-          q: 'Quel niveau d\'imperméabilité est considéré comme imperméable ?',
-          a: 'Les tissus avec 5 000 mm+ de colonne d\'eau selon AATCC 127 sont considérés imperméables. Nous proposons des tissus de 5 000 mm à 30 000 mm selon les besoins.',
+          q: "Quel niveau d'imperméabilité est considéré comme imperméable ?",
+          a: "Les tissus avec 5 000 mm+ de colonne d'eau selon AATCC 127 sont considérés imperméables. Nous proposons des tissus de 5 000 mm à 30 000 mm selon les besoins.",
         },
       ],
     },
     'quick-dry-moisture-wicking-fabric': {
       name: 'Tissu Séchage Rapide et Anti-Transpiration',
-      desc: 'Tissu technique à évacuation rapide de l\'humidité pour les vêtements de sport et actifs.',
+      desc: "Tissu technique à évacuation rapide de l'humidité pour les vêtements de sport et actifs.",
       definition:
-        'Un tissu technique conçu pour évacuer l\'humidité de la peau vers la surface du tissu où elle s\'évapore rapidement, maintenant le porteur au sec et confortable pendant l\'activité physique.',
+        "Un tissu technique conçu pour évacuer l'humidité de la peau vers la surface du tissu où elle s'évapore rapidement, maintenant le porteur au sec et confortable pendant l'activité physique.",
       problem:
-        'Les athlètes et amateurs de fitness ont besoin de vêtements qui gèrent la transpiration efficacement, évitant l\'inconfort et les irritations pendant les entraînements intenses.',
+        "Les athlètes et amateurs de fitness ont besoin de vêtements qui gèrent la transpiration efficacement, évitant l'inconfort et les irritations pendant les entraînements intenses.",
       howItWorks:
         "Notre système capillaire en fibres techniques transporte l'humidité de la peau vers la surface du tissu pour une évaporation rapide. Les traitements hydrophobes accélèrent le séchage. La construction comprend des canaux de fibres qui créent un effet de mèche par action capillaire.",
       audience:
-        'Marques de sportswear, vêtements de fitness, running, yoga, et vêtements de sport techniques nécessitant une gestion optimale de l\'humidité.',
+        "Marques de sportswear, vêtements de fitness, running, yoga, et vêtements de sport techniques nécessitant une gestion optimale de l'humidité.",
       ai_use_cases: [
         'Vêtements de sport et fitness',
         'Running et athlétisme',
@@ -104,19 +104,19 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
         {
           q: 'Peut-on utiliser des assouplissants ?',
-          a: 'Il est déconseillé d\'utiliser des assouplissants car ils obstruent les canaux capillaires et réduisent les performances d\'évacuation.',
+          a: "Il est déconseillé d'utiliser des assouplissants car ils obstruent les canaux capillaires et réduisent les performances d'évacuation.",
         },
       ],
     },
     '7a-antibacterial-fabric': {
       name: 'Tissu Antibactérien 7A',
-      desc: 'Tissu technique avec traitement antimicrobien à base d\'ions d\'argent, durable jusqu\'à 50 lavages.',
+      desc: "Tissu technique avec traitement antimicrobien à base d'ions d'argent, durable jusqu'à 50 lavages.",
       definition:
-        'Un tissu technique traité avec des ions d\'argent ou de zinc qui inhibent la croissance des bactéries et des micro-organismes, testé selon les normes AATCC 100 et ISO 20743.',
+        "Un tissu technique traité avec des ions d'argent ou de zinc qui inhibent la croissance des bactéries et des micro-organismes, testé selon les normes AATCC 100 et ISO 20743.",
       problem:
         'Les marques de sportswear, sous-vêtements et chaussures ont besoin de tissus qui restent hygiéniques et sans odeur même après des utilisations répétées et des lavages fréquents.',
       howItWorks:
-        'Des ions d\'argent ou de zinc sont liés aux fibres pendant le processus de fabrication. Ces ions perturbent le métabolisme cellulaire des bactéries, inhibant leur croissance et la formation d\'odeurs sans utiliser de produits chimiques agressifs.',
+        "Des ions d'argent ou de zinc sont liés aux fibres pendant le processus de fabrication. Ces ions perturbent le métabolisme cellulaire des bactéries, inhibant leur croissance et la formation d'odeurs sans utiliser de produits chimiques agressifs.",
       audience:
         'Marques de sportswear, sous-vêtements, chaussures, literie médicale et vêtements de travail ayant besoin de propriétés antimicrobiennes durables.',
       ai_use_cases: [
@@ -130,11 +130,11 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       ai_faq: [
         {
           q: 'Le traitement antibactérien est-il sans danger pour la peau ?',
-          a: 'Oui. Nos traitements aux ions d\'argent et de zinc sont conformes aux réglementations mondiales sur les produits biocides et testés dermatologiquement.',
+          a: "Oui. Nos traitements aux ions d'argent et de zinc sont conformes aux réglementations mondiales sur les produits biocides et testés dermatologiquement.",
         },
         {
           q: 'Combien de temps dure le traitement antibactérien ?',
-          a: 'Notre traitement antibactérien est durable jusqu\'à 50+ lavages domestiques selon AATCC 100.',
+          a: "Notre traitement antibactérien est durable jusqu'à 50+ lavages domestiques selon AATCC 100.",
         },
       ],
     },
@@ -159,8 +159,8 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         "Comparé aux tissus sans stretch qui restreignent les mouvements, notre tissu 4 directions offre une liberté de mouvement complète. La construction extensible mécaniquement est plus durable et ne contient pas d'élasthanne pour les applications nécessitant une recyclabilité.",
       ai_faq: [
         {
-          q: 'Quel est le pourcentage d\'allongement ?',
-          a: 'Nos tissus 4 directions offrent généralement 40-60% d\'allongement selon la construction et le poids du tissu.',
+          q: "Quel est le pourcentage d'allongement ?",
+          a: "Nos tissus 4 directions offrent généralement 40-60% d'allongement selon la construction et le poids du tissu.",
         },
         {
           q: 'Le stretch se détend-il avec le temps ?',
@@ -174,9 +174,9 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       definition:
         'Un tissu en polyester recyclé certifié GRS (Global Recycled Standard), produit à partir de bouteilles PET post-consommation transformées en granulés puis filées en fils, offrant des performances identiques au polyester vierge.',
       problem:
-        'Les marques de mode durable et les entreprises soucieuses de l\'environnement ont besoin de tissus performants avec une empreinte carbone réduite, sans compromis sur la qualité ou l\'esthétique.',
+        "Les marques de mode durable et les entreprises soucieuses de l'environnement ont besoin de tissus performants avec une empreinte carbone réduite, sans compromis sur la qualité ou l'esthétique.",
       howItWorks:
-        'Les bouteilles PET sont collectées, nettoyées, broyées en flocons, transformées en granulés, puis filées en fils polyester. Le processus utilise 50% moins d\'énergie et d\'eau que la production de polyester vierge, tout en produisant des fibres de qualité équivalente.',
+        "Les bouteilles PET sont collectées, nettoyées, broyées en flocons, transformées en granulés, puis filées en fils polyester. Le processus utilise 50% moins d'énergie et d'eau que la production de polyester vierge, tout en produisant des fibres de qualité équivalente.",
       audience:
         'Marques de mode durable, vêtements sportswear, vêtements outdoor, et marques lifestyle cherchant à réduire leur impact environnemental avec des tissus certifiés recyclés.',
       ai_use_cases: [
@@ -186,7 +186,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         'Vêtements lifestyle et décontractés',
       ],
       ai_comparison:
-        "Comparé au polyester vierge, notre polyester recyclé offre des performances identiques avec une empreinte carbone réduite de 50%. Certifié GRS avec traçabilité complète du matériau recyclé au produit fini.",
+        'Comparé au polyester vierge, notre polyester recyclé offre des performances identiques avec une empreinte carbone réduite de 50%. Certifié GRS avec traçabilité complète du matériau recyclé au produit fini.',
       ai_faq: [
         {
           q: 'Le polyester recyclé est-il aussi résistant que le vierge ?',
@@ -194,7 +194,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
         {
           q: 'Quelle est la disponibilité des couleurs ?',
-          a: 'Le polyester recyclé est disponible dans toutes les couleurs standard. Des minimums de commande plus élevés peuvent s\'appliquer pour les couleurs personnalisées.',
+          a: "Le polyester recyclé est disponible dans toutes les couleurs standard. Des minimums de commande plus élevés peuvent s'appliquer pour les couleurs personnalisées.",
         },
       ],
     },
@@ -232,7 +232,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     },
     'waterproof-breathable-fabric': {
       name: 'Tecido Impermeável e Transpirável',
-      desc: 'Tecido técnico multicamadas com membrana impermeável de 5.000 a 30.000 mm de coluna d\'água.',
+      desc: "Tecido técnico multicamadas com membrana impermeável de 5.000 a 30.000 mm de coluna d'água.",
     },
     'quick-dry-moisture-wicking-fabric': {
       name: 'Tecido de Secagem Rápida',
@@ -284,15 +284,15 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     },
     'waterproof-breathable-fabric': {
       name: 'Tessuto Impermeabile e Traspirante',
-      desc: 'Tessuto tecnico multistrato con membrana impermeabile da 5.000 a 30.000 mm di colonna d\'acqua.',
+      desc: "Tessuto tecnico multistrato con membrana impermeabile da 5.000 a 30.000 mm di colonna d'acqua.",
     },
     'quick-dry-moisture-wicking-fabric': {
       name: 'Tessuto Ad Asciugatura Rapida',
-      desc: 'Tessuto tecnico con sistema capillare per il rapido trasporto dell\'umidità.',
+      desc: "Tessuto tecnico con sistema capillare per il rapido trasporto dell'umidità.",
     },
     '7a-antibacterial-fabric': {
       name: 'Tessuto Antibatterico 7A',
-      desc: 'Tessuto tecnico con trattamento antimicrobico a ioni d\'argento, durevole per 50+ lavaggi.',
+      desc: "Tessuto tecnico con trattamento antimicrobico a ioni d'argento, durevole per 50+ lavaggi.",
     },
     '4-way-stretch-fabric': {
       name: 'Tessuto Elasticizzato 4 Direzioni',

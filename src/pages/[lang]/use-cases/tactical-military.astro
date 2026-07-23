@@ -22,7 +22,9 @@ const graphJsonLd = node
       '@graph': [
         articleSchema({
           headline: page.seo?.headline || 'Tactical & Workwear Fabrics 鈥?OEM Manufacturing for Duty Professionals',
-          description: page.seo?.description || 'Seekingtex manufactures professional-grade functional fabrics for tactical and workwear applications. Ripstop nylon/cotton, DWR coating, antibacterial treatment.',
+          description:
+            page.seo?.description ||
+            'Seekingtex manufactures professional-grade functional fabrics for tactical and workwear applications. Ripstop nylon/cotton, DWR coating, antibacterial treatment.',
           datePublished: page.seo?.datePublished || '2024-06-01',
           dateModified: page.seo?.dateModified || '2026-06-01',
           author: 'Seekingtex',
@@ -31,7 +33,9 @@ const graphJsonLd = node
         {
           '@type': 'Product',
           name: node?.name?.en || 'Tactical & Workwear Fabrics',
-          description: node?.description?.en || 'Professional-grade functional fabrics designed for tactical and workwear applications.',
+          description:
+            node?.description?.en ||
+            'Professional-grade functional fabrics designed for tactical and workwear applications.',
           brand: { '@type': 'Brand', name: 'Seekingtex' },
           category: 'Tactical & Workwear Fabrics',
         },
@@ -54,7 +58,10 @@ const graphJsonLd = node
       {page.headline || 'High-Performance Fabrics for Tactical & Workwear Applications'}
     </h1>
     <p class="text-lg text-gray-500 dark:text-gray-400 mt-3">
-      {page.subtitle || 'Seekingtex sets the standard for tactical fabrics 鈥?engineered for the uncompromising reliability, durability, and performance that duty professionals demand.'}
+      {
+        page.subtitle ||
+          'Seekingtex sets the standard for tactical fabrics 鈥?engineered for the uncompromising reliability, durability, and performance that duty professionals demand.'
+      }
     </p>
 
     <div class="mt-12 prose prose-gray dark:prose-invert max-w-none" set:html={page.body || ''} />

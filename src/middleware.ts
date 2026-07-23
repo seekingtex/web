@@ -9,7 +9,18 @@ const publicPaths = ['/login', '/api/auth/login', '/api/auth/logout', '/api/auth
 const geoApiPaths = ['/api/geo-score', '/api/site-audit', '/api/page-inspect'];
 const geoInternalPrefixes = ['/internal'];
 
-const i18nExcludedPrefixes = ['/api', '/keystatic', '/admin', '/login', '/internal', '/images', '/assets', '/favicon', '/solutions', '/llms'];
+const i18nExcludedPrefixes = [
+  '/api',
+  '/keystatic',
+  '/admin',
+  '/login',
+  '/internal',
+  '/images',
+  '/assets',
+  '/favicon',
+  '/solutions',
+  '/llms',
+];
 
 function shouldSkipI18n(url: string): boolean {
   const hasExtension = /\.[a-z0-9]+(\?.*)?$/i.test(url);

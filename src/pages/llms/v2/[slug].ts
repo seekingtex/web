@@ -94,7 +94,9 @@ export const GET: APIRoute = async ({ params }) => {
   }
 
   lines.push('---');
-  lines.push(`Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://seekingtex.com'}/v2/${entry.slug}`);
+  lines.push(
+    `Difficulty: ${entry.difficulty} | Type: ${entry.type} | Source: ${SITE?.site || 'https://seekingtex.com'}/v2/${entry.slug}`
+  );
 
   return new Response(lines.join('\n'), {
     headers: { 'Content-Type': 'text/markdown; charset=utf-8' },

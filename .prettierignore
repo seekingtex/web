@@ -3,3 +3,9 @@ node_modules
 .github
 .changeset
 src/pages/search.astro
+src/pages/**/search.astro
+src/pages/**/products/**/[slug].astro
+src/pages/**/knowledge.astro
+src/pages/**/products/**/*.astro
+src/pages/[lang]/evidence/case-studies/[slug].astro
+src/pages/evidence/case-studies/[slug].astro

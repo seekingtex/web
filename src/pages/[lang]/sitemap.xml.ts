@@ -39,10 +39,7 @@ function buildXml(lang: string): string {
   urls.push(...staticPages.map((p) => `${base}${langPrefix}/${p}`));
 
   // Pages that exist only at root level (no [lang]/ variant)
-  const rootPages = [
-    'media',
-    'compare/tactical-military',
-  ];
+  const rootPages = ['media', 'compare/tactical-military'];
   if (lang === 'en') {
     urls.push(...rootPages.map((p) => `${base}/${p}`));
   }

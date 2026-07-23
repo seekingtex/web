@@ -17,7 +17,10 @@ export const getStaticPaths = (async () => {
   const posts = await fetchPosts();
   const pageSize = blogPostsPerPage;
   const totalPages = Math.ceil(posts.length / pageSize);
-  const paths: { params: { lang: string; page: string }; props: { paginatedPosts: Post[]; currentPage: number; totalPages: number } }[] = [];
+  const paths: {
+    params: { lang: string; page: string };
+    props: { paginatedPosts: Post[]; currentPage: number; totalPages: number };
+  }[] = [];
   for (const lang of Object.keys(languages)) {
     for (let i = 0; i < totalPages - 1; i++) {
       const n = i + 2;
@@ -59,7 +62,11 @@ const metadata = {
 
 <Layout
   metadata={metadata}
-  breadcrumbs={[{ name: 'Home', href: `/${lang}/` }, { name: 'News', href: `/${lang}/news` }, { name: `Page ${currentPage}` }]}
+  breadcrumbs={[
+    { name: 'Home', href: `/${lang}/` },
+    { name: 'News', href: `/${lang}/news` },
+    { name: `Page ${currentPage}` },
+  ]}
 >
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline subtitle={pageSubtitle}>

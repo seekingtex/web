@@ -8,8 +8,8 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const paths = garmentCategories
-    .filter(cat => getGarmentsByCategory(cat.slug).length > 0)
-    .map(cat => ({
+    .filter((cat) => getGarmentsByCategory(cat.slug).length > 0)
+    .map((cat) => ({
       params: { category: cat.slug },
       props: { category: cat, products: getGarmentsByCategory(cat.slug) },
     }));
@@ -28,17 +28,21 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <WidgetWrapper id="garment-category" containerClass="max-w-6xl mx-auto px-4 py-12">
-    <a href="/garments/" class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block">&larr; All Garments</a>
+    <a
+      href="/garments/"
+      class="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mb-4 inline-block"
+      >&larr; All Garments</a
+    >
     <h1 class="text-4xl font-bold mb-2 capitalize">{category.name}</h1>
     <p class="text-gray-600 dark:text-gray-400 mb-8">{products.length} products</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {products.map(g => (
-        <a href={`/garments/${g.category}/${g.id}/`} class="group block">
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="aspect-[3/4] bg-gray-100 dark:bg-gray-700 relative overflow-hidden">
-              {
-                g.images[0] ? (
+      {
+        products.map((g) => (
+          <a href={`/garments/${g.category}/${g.id}/`} class="group block">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div class="aspect-[3/4] bg-gray-100 dark:bg-gray-700 relative overflow-hidden">
+                {g.images[0] ? (
                   <img
                     src={g.images[0]}
                     alt={g.name}
@@ -47,17 +51,24 @@ const metadata = {
                   />
                 ) : (
                   <div class="flex items-center justify-center h-full text-gray-400">
-                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
                   </div>
-                )
-              }
+                )}
+              </div>
+              <div class="p-4">
+                <h3 class="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-2">{g.name}</h3>
+              </div>
             </div>
-            <div class="p-4">
-              <h3 class="text-sm font-medium text-gray-900 dark:text-gray-100 line-clamp-2">{g.name}</h3>
-            </div>
-          </div>
-        </a>
-      ))}
+          </a>
+        ))
+      }
     </div>
   </WidgetWrapper>
 </Layout>

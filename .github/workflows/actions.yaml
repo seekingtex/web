@@ -47,10 +47,12 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-  build-and-deploy:
+  build:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: [check-astro]
     runs-on: ubuntu-latest
+    outputs:
+      build_dir: ${{ steps.build.outputs.build_dir }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -60,7 +62,10 @@ jobs:
       - run: yarn install --immutable
 
       - name: Build
-        run: yarn run build
+        id: build
+        run: |
+          yarn run build
+          echo "build_dir=dist/server" >> $GITHUB_OUTPUT
 
       - name: Sync product images to R2
         run: |
@@ -74,27 +79,97 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-      - name: Inject bindings into wrangler.ci.json
+      - name: Prepare worker configs
         run: |
           cd dist/server
+          # Create individual wrangler configs for each worker
           node -e "
-            const c = require('./wrangler.json');
-            delete c.configPath; delete c.userConfigPath;
-            c.ai = { binding: 'AI' };
-            // VECTORIZE binding removed: index ai-index needs to be created first
-            // Uncomment below once the index exists:
-            // c.vectorize = [{ binding: 'VECTORIZE', index_name: 'ai-index' }];
-            require('fs').writeFileSync('wrangler.ci.json', JSON.stringify(c, null, 2));
-            console.log('✅ Injected VECTORIZE + AI bindings');
+            const fs = require('fs');
+            const base = JSON.parse(fs.readFileSync('wrangler.json', 'utf8'));
+            delete base.configPath; delete base.userConfigPath;
+            
+            // Common bindings for all workers
+            base.ai = { binding: 'AI' };
+            base.vars = base.vars || {};
+            base.vars.NODE_VERSION = '22';
+            base.vars.NODE_ENV = 'production';
+            
+            // R2 bucket binding
+            base.r2_buckets = base.r2_buckets || [];
+            if (!base.r2_buckets.find(b => b.bucket_name === 'seekingtex-assets')) {
+              base.r2_buckets.push({ binding: 'ASSETS_BUCKET', bucket_name: 'seekingtex-assets' });
+            }
+            
+            // Worker configs
+            const workers = [
+              { name: 'seekingtex', role: 'site', config: { ...base } },
+              { name: 'seekingtex-ai', role: 'ai', config: { ...base, vars: { ...base.vars, WORKER_ROLE: 'ai' } } },
+              { name: 'seekingtex-seo', role: 'seo', config: { ...base, vars: { ...base.vars, WORKER_ROLE: 'seo' } } },
+              { name: 'seekingtex-admin', role: 'admin', config: { ...base, vars: { ...base.vars, WORKER_ROLE: 'admin' } } },
+              { name: 'seekingtex-contact', role: 'contact', config: { ...base, vars: { ...base.vars, WORKER_ROLE: 'contact' } } },
+            ];
+            
+            workers.forEach(w => {
+              fs.writeFileSync(\`wrangler-\${w.name}.json\`, JSON.stringify(w.config, null, 2));
+              console.log(\`✅ Created wrangler-\${w.name}.json\`);
+            });
           "
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-      - name: Ensure Vectorize index exists (skipped - add back when index ready)
-        run: echo "Vectorize creation skipped. Uncomment when index exists."
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-server
+          path: dist/server/
+          retention-days: 1
 
-      - name: Deploy to Cloudflare Workers
+  deploy-workers:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist-server
+          path: dist/server
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: Deploy all workers
         run: |
           cd dist/server
-          yarn wrangler deploy --config wrangler.ci.json --name seekingtex 2>&1 | tee /tmp/deploy.log; exit ${PIPESTATUS[0]}
+          
+          WORKERS="seekingtex seekingtex-ai seekingtex-seo seekingtex-admin seekingtex-contact"
+          
+          for w in $WORKERS; do
+            echo "🚀 Deploying $w..."
+            yarn wrangler deploy --config wrangler-$w.json --name $w 2>&1 | tee /tmp/deploy-$w.log
+            if [ ${PIPESTATUS[0]} -ne 0 ]; then
+              echo "❌ Failed to deploy $w"
+              exit 1
+            fi
+            echo "✅ $w deployed successfully"
+          done
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Set SESSION_SECRET on all workers
+        run: |
+          cd dist/server
+          WORKERS="seekingtex seekingtex-ai seekingtex-seo seekingtex-admin seekingtex-contact"
+          
+          for w in $WORKERS; do
+            echo "🔐 Setting SESSION_SECRET on $w..."
+            echo "${{ secrets.SESSION_SECRET }}" | \
+              yarn wrangler secret put SESSION_SECRET \
+                --config wrangler-$w.json \
+                --name $w 2>&1
+          done
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -121,24 +196,3 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-
-      - name: Upload deploy log
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: deploy-log
-          path: /tmp/deploy.log
-
-      - name: Set SESSION_SECRET on Worker
-        run: |
-          cd dist/server && \
-          echo "${{ secrets.SESSION_SECRET }}" | \
-            yarn wrangler secret put SESSION_SECRET \
-              --config wrangler.ci.json \
-              --name seekingtex 2>&1
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-
-      # Note: All locale URLs use path-based format: /de/, /fr/, etc.
-      # No subdomain routing is needed.

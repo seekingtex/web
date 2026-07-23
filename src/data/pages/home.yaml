@@ -147,51 +147,51 @@ faqs:
   columns: 2
   items:
     - title: What is the minimum order quantity (MOQ) for Seekingtex fabrics?
-      description: "Our standard MOQ is 1000 meters per color per specification. For first-time customers and sample orders, we offer lower quantities at competitive rates. Contact us for specific requirements."
+      description: 'Our standard MOQ is 1000 meters per color per specification. For first-time customers and sample orders, we offer lower quantities at competitive rates. Contact us for specific requirements.'
       icon: tabler:truck-delivery
       category: all
     - title: How long does sample development take?
-      description: "Standard sample development takes 3-5 business days. Custom development may require 7-10 days depending on complexity. We prioritize fast turnaround for all sample requests."
+      description: 'Standard sample development takes 3-5 business days. Custom development may require 7-10 days depending on complexity. We prioritize fast turnaround for all sample requests.'
       icon: tabler:clock
       category: all
     - title: What certifications do Seekingtex fabrics hold?
-      description: "Our fabrics are OEKO-TEX Standard 100 certified, REACH compliant, and many styles carry BLUESIGN, GRS, and UV Standard 801 certifications. Specific certifications vary by product."
+      description: 'Our fabrics are OEKO-TEX Standard 100 certified, REACH compliant, and many styles carry BLUESIGN, GRS, and UV Standard 801 certifications. Specific certifications vary by product.'
       icon: tabler:shield-check
       category: all
     - title: Do you offer custom fabric development?
-      description: "Yes, we offer full OEM/ODM fabric development services — custom compositions, weights, finishes, colors, and performance properties. Our R&D team works closely with your specification requirements."
+      description: 'Yes, we offer full OEM/ODM fabric development services — custom compositions, weights, finishes, colors, and performance properties. Our R&D team works closely with your specification requirements.'
       icon: tabler:settings
       category: all
     - title: What is the typical lead time for bulk production?
-      description: "Standard bulk production lead time is 25-35 days from sample approval and deposit confirmation. Rush orders may be accommodated depending on production capacity."
+      description: 'Standard bulk production lead time is 25-35 days from sample approval and deposit confirmation. Rush orders may be accommodated depending on production capacity.'
       icon: tabler:calendar-clock
       category: all
     - title: What payment terms do you accept?
-      description: "We accept T/T (wire transfer), L/C at sight, and other mutually agreed payment methods. Standard terms are 30% deposit, 70% before shipment for new customers."
+      description: 'We accept T/T (wire transfer), L/C at sight, and other mutually agreed payment methods. Standard terms are 30% deposit, 70% before shipment for new customers.'
       icon: tabler:currency-dollar
       category: all
     - title: Do you provide fabric testing reports?
-      description: "Yes, all shipments include complete quality test reports covering physical properties, colorfastness, dimensional stability, and performance specifications. Third-party testing is available upon request."
+      description: 'Yes, all shipments include complete quality test reports covering physical properties, colorfastness, dimensional stability, and performance specifications. Third-party testing is available upon request.'
       icon: tabler:file-text
       category: all
     - title: Can you match specific Pantone colors?
-      description: "Yes, we can match any Pantone color. Our color laboratory uses advanced spectrophotometry for precise color matching. Minimum color-matching charge may apply for custom colors."
+      description: 'Yes, we can match any Pantone color. Our color laboratory uses advanced spectrophotometry for precise color matching. Minimum color-matching charge may apply for custom colors.'
       icon: tabler:palette
       category: all
     - title: What fabric widths are available?
-      description: "Our standard fabric width is 58/60 inches (147/152 cm). Custom widths are available for bulk orders subject to production feasibility."
+      description: 'Our standard fabric width is 58/60 inches (147/152 cm). Custom widths are available for bulk orders subject to production feasibility.'
       icon: tabler:layout-list
       category: all
     - title: Do you ship internationally?
-      description: "Yes, we ship worldwide via sea freight, air freight, and express courier (DHL, FedEx, UPS). We handle all export documentation and customs clearance support."
+      description: 'Yes, we ship worldwide via sea freight, air freight, and express courier (DHL, FedEx, UPS). We handle all export documentation and customs clearance support.'
       icon: tabler:world
       category: all
     - title: What is the difference between UPF 50+ and standard fabrics?
-      description: "UPF 50+ fabrics block 98% of harmful UV radiation, offering excellent sun protection. Standard fabrics typically provide UPF 5-15. Our sun protection fabrics are independently tested and certified to UV Standard 801."
+      description: 'UPF 50+ fabrics block 98% of harmful UV radiation, offering excellent sun protection. Standard fabrics typically provide UPF 5-15. Our sun protection fabrics are independently tested and certified to UV Standard 801.'
       icon: tabler:sun
       category: all
     - title: Are your waterproof fabrics eco-friendly?
-      description: "We offer both standard and eco-friendly options. Our PFAS-free waterproof fabrics use environmentally sustainable DWR treatments without compromising performance. Check individual product specifications."
+      description: 'We offer both standard and eco-friendly options. Our PFAS-free waterproof fabrics use environmentally sustainable DWR treatments without compromising performance. Check individual product specifications.'
       icon: tabler:leaf
       category: all
 

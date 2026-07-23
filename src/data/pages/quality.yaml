@@ -8,7 +8,7 @@ stats:
     label: Batches tested before shipping
   - value: '12'
     label: Testing protocols
-  - value: 
+  - value:
     label: Certifications held
   - value: OEKO-TEX
     label: Standard 100 certified

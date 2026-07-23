@@ -81,9 +81,7 @@ function pageContentPlugin(): Plugin {
       let pageNames: string[];
       try {
         const entries = await fs.readdir(pagesDir);
-        pageNames = entries
-          .filter((e) => e.endsWith('.yaml'))
-          .map((e) => e.replace(/\.yaml$/, ''));
+        pageNames = entries.filter((e) => e.endsWith('.yaml')).map((e) => e.replace(/\.yaml$/, ''));
       } catch {
         pageNames = [];
       }

@@ -12,13 +12,15 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <JsonLd data={{
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    headline: 'AI Answer Center',
-    description: metadata.description,
-    author: { '@type': 'Organization', name: SITE.name },
-  }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      headline: 'AI Answer Center',
+      description: metadata.description,
+      author: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
 
   <div class="max-w-6xl mx-auto px-4 py-10">
     <AnswerCenter lang="en" />

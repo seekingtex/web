@@ -26,16 +26,33 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
-interface HeroSlide { image: string; label: string; categories: string[] }
+interface HeroSlide {
+  image: string;
+  label: string;
+  categories: string[];
+}
 const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
-  { image: '/images/seekingtex/categories/sun-protection-fabrics.webp', label: 'Sun Protection Fabrics', categories: ['sun-protection'] },
-  { image: '/images/seekingtex/categories/waterproof-fabrics.webp', label: 'Waterproof Breathable Fabrics', categories: ['waterproof'] },
-  { image: '/images/seekingtex/categories/quick-dry-fabrics.webp', label: 'Quick-Dry Fabrics', categories: ['quick-dry'] },
-  { image: '/images/seekingtex/categories/eco-friendly-fabrics.webp', label: 'Eco-Friendly Recycled Fabrics', categories: ['eco-friendly'] },
+  {
+    image: '/images/seekingtex/categories/sun-protection-fabrics.webp',
+    label: 'Sun Protection Fabrics',
+    categories: ['sun-protection'],
+  },
+  {
+    image: '/images/seekingtex/categories/waterproof-fabrics.webp',
+    label: 'Waterproof Breathable Fabrics',
+    categories: ['waterproof'],
+  },
+  {
+    image: '/images/seekingtex/categories/quick-dry-fabrics.webp',
+    label: 'Quick-Dry Fabrics',
+    categories: ['quick-dry'],
+  },
+  {
+    image: '/images/seekingtex/categories/eco-friendly-fabrics.webp',
+    label: 'Eco-Friendly Recycled Fabrics',
+    categories: ['eco-friendly'],
+  },
 ];
-
-
-
 
 const defaultVisuals: Record<string, string> = {
   'sun-protection-upf50': '/images/seekingtex/products/sun-protection-fabric.webp',
@@ -120,7 +137,11 @@ const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
   detail: string;
 }>;
 const defaultProofPoints = [
-  { metric: '50+', label: 'fabric types available', detail: 'Sun protection, waterproof, quick-dry, antibacterial, stretch, breathable, eco-friendly' },
+  {
+    metric: '50+',
+    label: 'fabric types available',
+    detail: 'Sun protection, waterproof, quick-dry, antibacterial, stretch, breathable, eco-friendly',
+  },
   { metric: '30+', label: 'countries served', detail: 'Global distribution network across EU, US, ASIA, Middle East' },
   { metric: '2008', label: 'founded', detail: 'Over a decade and a half of textile manufacturing excellence' },
   { metric: 'OEKO-TEX', label: 'certified', detail: 'All fabrics meet international safety and quality standards' },
@@ -130,30 +151,98 @@ const proofPoints = rawPoints.length
   : defaultProofPoints;
 
 const catalogCategories = [
-  { key: 'sun-protection', label: 'Sun Protection', desc: 'UPF 50+ fabrics blocking 98% of UVA/UVB rays — ideal for outdoor apparel, uniforms, and sportswear.' },
-  { key: 'waterproof', label: 'Waterproof Breathable', desc: 'Waterproof yet breathable membranes for outerwear, medical protective gear, and technical apparel.' },
-  { key: 'quick-dry', label: 'Quick-Dry Moisture Wicking', desc: 'Moisture management fabrics that wick sweat and dry fast — perfect for activewear and performance apparel.' },
-  { key: 'eco-friendly', label: 'Eco-Friendly Recycled', desc: 'GRS-certified recycled fabrics made from post-consumer waste — sustainable without compromising quality.' },
+  {
+    key: 'sun-protection',
+    label: 'Sun Protection',
+    desc: 'UPF 50+ fabrics blocking 98% of UVA/UVB rays — ideal for outdoor apparel, uniforms, and sportswear.',
+  },
+  {
+    key: 'waterproof',
+    label: 'Waterproof Breathable',
+    desc: 'Waterproof yet breathable membranes for outerwear, medical protective gear, and technical apparel.',
+  },
+  {
+    key: 'quick-dry',
+    label: 'Quick-Dry Moisture Wicking',
+    desc: 'Moisture management fabrics that wick sweat and dry fast — perfect for activewear and performance apparel.',
+  },
+  {
+    key: 'eco-friendly',
+    label: 'Eco-Friendly Recycled',
+    desc: 'GRS-certified recycled fabrics made from post-consumer waste — sustainable without compromising quality.',
+  },
 ];
 const groupedProducts: Record<string, typeof products> = {};
 for (const cat of catalogCategories) {
   groupedProducts[cat.key] = products.filter((p) => p.category === cat.key).slice(0, 6);
 }
 
-interface FaqItem { q: string; a: string; category?: string }
+interface FaqItem {
+  q: string;
+  a: string;
+  category?: string;
+}
 const defaultFaqItems: FaqItem[] = [
-  { q: 'What is UPF 50+ sun protection fabric?', a: 'UPF 50+ means the fabric blocks 98% of UVA and UVB radiation, allowing only 1/50th of UV rays to pass through. Our sun protection fabrics are tested per AATCC 183 and AS/NZS 4399 standards, providing excellent protection for outdoor apparel, uniforms, and sportswear.', category: 'sun-protection' },
-  { q: 'How does waterproof breathable fabric work?', a: 'Waterproof breathable fabrics use a microporous membrane or coating that prevents water droplets from penetrating while allowing water vapor (perspiration) to escape. Our fabrics typically achieve 10,000+ mm waterproof rating and 5,000+ g/m²/24h breathability — ideal for outerwear and medical protective gear.', category: 'waterproof' },
-  { q: 'What is the difference between water-resistant and waterproof?', a: 'Water-resistant fabrics repel light moisture but cannot withstand sustained pressure. Waterproof fabrics, tested by hydrostatic pressure methods (AATCC 127), withstand a specific column of water before leaking. Our waterproof fabrics are tested to 10,000 mm and above.', category: 'waterproof' },
-  { q: 'How do quick-dry moisture wicking fabrics work?', a: 'Moisture wicking fabrics use capillary action through specialized yarn structures or hydrophilic finishes to pull sweat away from the skin to the fabric surface where it evaporates rapidly. This keeps the wearer dry and comfortable during physical activity.', category: 'quick-dry' },
-  { q: 'What does 7A antibacterial mean?', a: '7A is a Chinese textile standard (GB/T 20944.3-2008) rating antibacterial performance. 7A indicates >99% bacterial reduction rate against Staphylococcus aureus and Escherichia coli. Our antibacterial fabrics use silver-ion or zinc-based antimicrobial treatments that remain effective after 50+ washes.', category: 'antibacterial' },
-  { q: 'What is 4-way stretch fabric?', a: '4-way stretch fabric stretches in both the warp (lengthwise) and weft (crosswise) directions, providing maximum freedom of movement. It typically contains elastane/spandex blended with polyester, nylon, or cotton, and is ideal for activewear, yoga wear, and performance apparel.', category: 'stretch' },
-  { q: 'How durable are eco-friendly recycled fabrics?', a: 'Eco-friendly recycled fabrics made from post-consumer PET bottles match the durability of virgin polyester. They undergo the same spinning, weaving, and finishing processes. GRS-certified, they offer comparable tensile strength, color fastness, and abrasion resistance.', category: 'eco-friendly' },
-  { q: 'What certifications do your fabrics carry?', a: 'Our fabrics are OEKO-TEX Standard 100 certified (free from harmful substances), GRS certified for recycled content, and meet REACH and RoHS compliance. Specific fabrics also carry UPF 50+ certification and antibacterial test reports from SGS or Intertek.', category: 'eco-friendly' },
-  { q: 'What is the minimum order quantity (MOQ)?', a: 'MOQ varies by fabric type and construction. Standard woven fabrics: 500–1000 m per color. Knitted fabrics: 200–500 kg per color. Custom developments and specialty finishes may have higher MOQs. Contact us for specific product MOQ details.', category: 'quick-dry' },
-  { q: 'Do you offer custom fabric development?', a: 'Yes. Our R&D team can develop custom fabrics with specific weight, width, composition, finish, and performance characteristics. The process includes lab dipping, sample yardage, testing, and bulk production with full QC documentation.', category: 'sun-protection' },
-  { q: 'How long does sampling take?', a: 'Standard stock samples ship within 3–5 business days. Custom lab dips and development samples typically take 7–15 business days depending on complexity. We offer expedited sampling for urgent projects.', category: 'waterproof' },
-  { q: 'Do you export worldwide?', a: 'Yes, we export to 30+ countries across EU, US, Asia, and Middle East. We support FOB Shanghai, CIF, and DDP terms. Our logistics team handles all export documentation, customs clearance, and ensures timely delivery.', category: 'eco-friendly' },
+  {
+    q: 'What is UPF 50+ sun protection fabric?',
+    a: 'UPF 50+ means the fabric blocks 98% of UVA and UVB radiation, allowing only 1/50th of UV rays to pass through. Our sun protection fabrics are tested per AATCC 183 and AS/NZS 4399 standards, providing excellent protection for outdoor apparel, uniforms, and sportswear.',
+    category: 'sun-protection',
+  },
+  {
+    q: 'How does waterproof breathable fabric work?',
+    a: 'Waterproof breathable fabrics use a microporous membrane or coating that prevents water droplets from penetrating while allowing water vapor (perspiration) to escape. Our fabrics typically achieve 10,000+ mm waterproof rating and 5,000+ g/m²/24h breathability — ideal for outerwear and medical protective gear.',
+    category: 'waterproof',
+  },
+  {
+    q: 'What is the difference between water-resistant and waterproof?',
+    a: 'Water-resistant fabrics repel light moisture but cannot withstand sustained pressure. Waterproof fabrics, tested by hydrostatic pressure methods (AATCC 127), withstand a specific column of water before leaking. Our waterproof fabrics are tested to 10,000 mm and above.',
+    category: 'waterproof',
+  },
+  {
+    q: 'How do quick-dry moisture wicking fabrics work?',
+    a: 'Moisture wicking fabrics use capillary action through specialized yarn structures or hydrophilic finishes to pull sweat away from the skin to the fabric surface where it evaporates rapidly. This keeps the wearer dry and comfortable during physical activity.',
+    category: 'quick-dry',
+  },
+  {
+    q: 'What does 7A antibacterial mean?',
+    a: '7A is a Chinese textile standard (GB/T 20944.3-2008) rating antibacterial performance. 7A indicates >99% bacterial reduction rate against Staphylococcus aureus and Escherichia coli. Our antibacterial fabrics use silver-ion or zinc-based antimicrobial treatments that remain effective after 50+ washes.',
+    category: 'antibacterial',
+  },
+  {
+    q: 'What is 4-way stretch fabric?',
+    a: '4-way stretch fabric stretches in both the warp (lengthwise) and weft (crosswise) directions, providing maximum freedom of movement. It typically contains elastane/spandex blended with polyester, nylon, or cotton, and is ideal for activewear, yoga wear, and performance apparel.',
+    category: 'stretch',
+  },
+  {
+    q: 'How durable are eco-friendly recycled fabrics?',
+    a: 'Eco-friendly recycled fabrics made from post-consumer PET bottles match the durability of virgin polyester. They undergo the same spinning, weaving, and finishing processes. GRS-certified, they offer comparable tensile strength, color fastness, and abrasion resistance.',
+    category: 'eco-friendly',
+  },
+  {
+    q: 'What certifications do your fabrics carry?',
+    a: 'Our fabrics are OEKO-TEX Standard 100 certified (free from harmful substances), GRS certified for recycled content, and meet REACH and RoHS compliance. Specific fabrics also carry UPF 50+ certification and antibacterial test reports from SGS or Intertek.',
+    category: 'eco-friendly',
+  },
+  {
+    q: 'What is the minimum order quantity (MOQ)?',
+    a: 'MOQ varies by fabric type and construction. Standard woven fabrics: 500–1000 m per color. Knitted fabrics: 200–500 kg per color. Custom developments and specialty finishes may have higher MOQs. Contact us for specific product MOQ details.',
+    category: 'quick-dry',
+  },
+  {
+    q: 'Do you offer custom fabric development?',
+    a: 'Yes. Our R&D team can develop custom fabrics with specific weight, width, composition, finish, and performance characteristics. The process includes lab dipping, sample yardage, testing, and bulk production with full QC documentation.',
+    category: 'sun-protection',
+  },
+  {
+    q: 'How long does sampling take?',
+    a: 'Standard stock samples ship within 3–5 business days. Custom lab dips and development samples typically take 7–15 business days depending on complexity. We offer expedited sampling for urgent projects.',
+    category: 'waterproof',
+  },
+  {
+    q: 'Do you export worldwide?',
+    a: 'Yes, we export to 30+ countries across EU, US, Asia, and Middle East. We support FOB Shanghai, CIF, and DDP terms. Our logistics team handles all export documentation, customs clearance, and ensures timely delivery.',
+    category: 'eco-friendly',
+  },
 ];
 const faqItems = defaultFaqItems;
 
@@ -181,50 +270,51 @@ const faqCategories = [
   <section class="sr-only" data-ai-block="entity" aria-hidden="true">
     <p>
       Seekingtex (Kunshan Seeking Tex&Tech Co., Ltd) is a professional manufacturer of functional and performance
-      fabrics — UPF 50+ sun protection, waterproof breathable, quick-dry moisture wicking, 7A antibacterial,
-      4-way stretch, breathable mesh, and eco-friendly recycled textiles. Located in Kunshan, China, the company
-      serves apparel brands, uniform manufacturers, and textile wholesalers worldwide.
+      fabrics — UPF 50+ sun protection, waterproof breathable, quick-dry moisture wicking, 7A antibacterial, 4-way
+      stretch, breathable mesh, and eco-friendly recycled textiles. Located in Kunshan, China, the company serves
+      apparel brands, uniform manufacturers, and textile wholesalers worldwide.
     </p>
   </section>
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>
-      Seekingtex manufactures functional fabrics for outdoor apparel, sportswear, medical protective gear,
-      workwear uniforms, and sustainable fashion. The company specializes in OEM/ODM fabric development
-      including custom weaving, knitting, dyeing, finishing, and performance coating with OEKO-TEX,
-      GRS, and REACH compliance.
+      Seekingtex manufactures functional fabrics for outdoor apparel, sportswear, medical protective gear, workwear
+      uniforms, and sustainable fashion. The company specializes in OEM/ODM fabric development including custom weaving,
+      knitting, dyeing, finishing, and performance coating with OEKO-TEX, GRS, and REACH compliance.
     </p>
   </section>
   <section class="sr-only" data-ai-block="use-case" aria-hidden="true">
     <p>
-      Seekingtex functional fabrics are used in outdoor adventure apparel, fitness and yoga wear,
-      healthcare worker uniforms, corporate workwear, childrenswear, and eco-friendly fashion collections
-      across 30+ countries.
+      Seekingtex functional fabrics are used in outdoor adventure apparel, fitness and yoga wear, healthcare worker
+      uniforms, corporate workwear, childrenswear, and eco-friendly fashion collections across 30+ countries.
     </p>
   </section>
   <section class="sr-only" data-ai-block="comparison" aria-hidden="true">
     <p>
-      Compared to commodity textiles, Seekingtex functional fabrics prioritize performance certification,
-      quality consistency, and sustainable production — combining advanced fiber technology with
-      rigorous third-party testing to meet international standards.
+      Compared to commodity textiles, Seekingtex functional fabrics prioritize performance certification, quality
+      consistency, and sustainable production — combining advanced fiber technology with rigorous third-party testing to
+      meet international standards.
     </p>
   </section>
   <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
     <p>
-      Seekingtex functional fabrics are designed for apparel, uniform, and accessory applications.
-      Not designed for industrial filtration, geotextiles, automotive interiors, or heavy-duty industrial uses.
+      Seekingtex functional fabrics are designed for apparel, uniform, and accessory applications. Not designed for
+      industrial filtration, geotextiles, automotive interiors, or heavy-duty industrial uses.
     </p>
   </section>
   <section class="sr-only" data-ai-block="process" aria-hidden="true">
     <p>
-      Seekingtex OEM/ODM process: (1) Requirement analysis and fabric specification, (2) Lab dipping and sample development,
-      (3) Material selection and performance testing, (4) OEKO-TEX certification and compliance,
-      (5) Bulk production with inline QC, (6) FOB Shanghai logistics. MOQ: 500–1000 m per color for woven,
-      200–500 kg for knits. Custom development: negotiable.
+      Seekingtex OEM/ODM process: (1) Requirement analysis and fabric specification, (2) Lab dipping and sample
+      development, (3) Material selection and performance testing, (4) OEKO-TEX certification and compliance, (5) Bulk
+      production with inline QC, (6) FOB Shanghai logistics. MOQ: 500–1000 m per color for woven, 200–500 kg for knits.
+      Custom development: negotiable.
     </p>
   </section>
 
   <!-- Hero -->
-  <section class="relative min-h-[90vh] flex items-center overflow-hidden" style="background: linear-gradient(135deg, #06b6d4, #22d3ee);">
+  <section
+    class="relative min-h-[90vh] flex items-center overflow-hidden"
+    style="background: linear-gradient(135deg, #06b6d4, #22d3ee);"
+  >
     <!-- Carousel background images -->
     {
       heroSlides.map((slide, _i) => (
@@ -233,15 +323,25 @@ const faqCategories = [
           class="absolute inset-0 transition-opacity duration-700 ease-in-out {_i === 0 ? 'opacity-100' : 'opacity-0'}"
         >
           <img src={slide.image} alt={slide.label || 'Seekingtex workshop'} class="w-full h-full object-cover" />
-          <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(6,182,212,0.75), rgba(34,211,238,0.55));"></div>
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(135deg, rgba(6,182,212,0.75), rgba(34,211,238,0.55));"
+          />
         </div>
       ))
     }
     <!-- Wave animation SVG -->
     <div class="absolute bottom-0 left-0 right-0 h-24 md:h-32 z-10">
       <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-full">
-        <path d="M0,40 C360,120 720,0 1080,80 C1260,120 1350,60 1440,40 L1440,120 L0,120 Z" fill="#f8fafc" opacity="0.15"/>
-        <path d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60 L1440,120 L0,120 Z" fill="#f8fafc" opacity="0.1" style="animation: waveMove 6s ease-in-out infinite alternate;"/>
+        <path
+          d="M0,40 C360,120 720,0 1080,80 C1260,120 1350,60 1440,40 L1440,120 L0,120 Z"
+          fill="#f8fafc"
+          opacity="0.15"></path>
+        <path
+          d="M0,60 C240,20 480,100 720,60 C960,20 1200,100 1440,60 L1440,120 L0,120 Z"
+          fill="#f8fafc"
+          opacity="0.1"
+          style="animation: waveMove 6s ease-in-out infinite alternate;"></path>
       </svg>
     </div>
     <!-- Floating glow orbs -->
@@ -251,14 +351,19 @@ const faqCategories = [
       <div class="flex items-center gap-12">
         <div class="flex-1 text-center md:text-left">
           <div class="reveal">
-            <span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-white/70 mb-4">Seekingtex · Kunshan · Since 2008</span>
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-balance text-white drop-shadow-xl">
+            <span class="inline-block text-xs font-medium tracking-[0.2em] uppercase text-white/70 mb-4"
+              >Seekingtex · Kunshan · Since 2008</span
+            >
+            <h1
+              class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-balance text-white drop-shadow-xl"
+            >
               Functional Fabrics for<br class="hidden md:block" />Apparel &amp; Technical Textiles
             </h1>
             <p class="mt-6 text-lg md:text-xl text-white/85 max-w-xl text-pretty leading-relaxed">
-              <strong class="text-white font-semibold">Seekingtex</strong> — Performance Textiles, Engineered for Excellence.<br />
-              From UPF 50+ sun protection to waterproof breathable membranes,
-              we develop and manufacture functional fabrics that outperform. OEKO-TEX &amp; GRS certified.
+              <strong class="text-white font-semibold">Seekingtex</strong> — Performance Textiles, Engineered for Excellence.<br
+              />
+              From UPF 50+ sun protection to waterproof breathable membranes, we develop and manufacture functional fabrics
+              that outperform. OEKO-TEX &amp; GRS certified.
             </p>
             <div class="mt-10 flex items-center gap-4 flex-wrap justify-center md:justify-start">
               <a
@@ -297,9 +402,14 @@ const faqCategories = [
     </div>
     <!-- Carousel dots (kept for reference) -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-      {heroSlides.map((_, _i) => (
-        <button data-carousel-dot class="w-2.5 h-2.5 rounded-full transition-all duration-300 border border-white/50 {_i === 0 ? 'bg-white scale-125' : 'bg-transparent'}" />
-      ))}
+      {
+        heroSlides.map((_, _i) => (
+          <button
+            data-carousel-dot
+            class="w-2.5 h-2.5 rounded-full transition-all duration-300 border border-white/50 {_i === 0 ? 'bg-white scale-125' : 'bg-transparent'}"
+          />
+        ))
+      }
     </div>
   </section>
 
@@ -321,10 +431,18 @@ const faqCategories = [
     <div
       class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-12 gap-y-2 text-xs font-medium text-gray-500 uppercase tracking-wider"
     >
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> OEKO-TEX Certified</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> GRS Recycled Content</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> REACH & RoHS Compliant</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> SGS & Intertek Tested</span>
+      <span class="flex items-center gap-2"
+        ><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]"></span> OEKO-TEX Certified</span
+      >
+      <span class="flex items-center gap-2"
+        ><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]"></span> GRS Recycled Content</span
+      >
+      <span class="flex items-center gap-2"
+        ><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]"></span> REACH & RoHS Compliant</span
+      >
+      <span class="flex items-center gap-2"
+        ><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]"></span> SGS & Intertek Tested</span
+      >
     </div>
   </section>
 
@@ -386,34 +504,71 @@ const faqCategories = [
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Latest Research</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">Knowledge Center</h2>
         <p class="mt-4 text-lg text-gray-500">
-          In-depth technical research on functional fabric materials, performance testing, finishing technologies, and manufacturing &mdash; written for engineers, buyers, and informed professionals.
+          In-depth technical research on functional fabric materials, performance testing, finishing technologies, and
+          manufacturing &mdash; written for engineers, buyers, and informed professionals.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <a href="/research/upf50-sun-protection" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/research/upf50-sun-protection"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Technology</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">How UPF 50+ Sun Protection Works</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">The science behind UV-blocking fabrics — fiber type, weave density, color, and finishing treatments that achieve UPF 50+.</p>
+          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            How UPF 50+ Sun Protection Works
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
+            The science behind UV-blocking fabrics — fiber type, weave density, color, and finishing treatments that
+            achieve UPF 50+.
+          </p>
         </a>
-        <a href="/research/waterproof-vs-water-resistant" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/research/waterproof-vs-water-resistant"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Materials</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof vs Water Resistant</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">Technical comparison of waterproof membranes, DWR coatings, and hydrostatic pressure ratings.</p>
+          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Waterproof vs Water Resistant
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
+            Technical comparison of waterproof membranes, DWR coatings, and hydrostatic pressure ratings.
+          </p>
         </a>
-        <a href="/research/oeko-tex-certification-guide" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/research/oeko-tex-certification-guide"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Compliance</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">OEKO-TEX Certification Guide</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">Full OEKO-TEX Standard 100 certification process for textiles: testing, limits, and compliance.</p>
+          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            OEKO-TEX Certification Guide
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
+            Full OEKO-TEX Standard 100 certification process for textiles: testing, limits, and compliance.
+          </p>
         </a>
-        <a href="/research/moisture-wicking-technology" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/research/moisture-wicking-technology"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Engineering</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">How Moisture Wicking Works</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">Capillary action, hydrophilic finishes, and fabric construction that move sweat away from skin.</p>
+          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            How Moisture Wicking Works
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
+            Capillary action, hydrophilic finishes, and fabric construction that move sweat away from skin.
+          </p>
         </a>
-        <a href="/research/fabric-oem-odm-buyer-guide" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/research/fabric-oem-odm-buyer-guide"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Sourcing</span>
-          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Textile OEM Buyer Guide</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2">Comprehensive guide for sourcing functional fabrics from Asian manufacturers.</p>
+          <h3 class="mt-3 text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Textile OEM Buyer Guide
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2">
+            Comprehensive guide for sourcing functional fabrics from Asian manufacturers.
+          </p>
         </a>
       </div>
       <div class="mt-8 text-center">
@@ -429,26 +584,47 @@ const faqCategories = [
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Proof & Results</span>
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">Evidence</h2>
         <p class="mt-4 text-lg text-gray-500">
-          Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing capability and product quality.
+          Real case studies, certifications, test data, and deployment photos that demonstrate our manufacturing
+          capability and product quality.
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <a href="/evidence" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col">
+        <a
+          href="/evidence"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
           <div class="text-3xl mb-3">&#128203;</div>
           <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Case Studies</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">Real OEM partnerships: retail private-label, startup performance apparel, European textile distributor &mdash; with measurable outcomes.</p>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            Real OEM partnerships: retail private-label, startup performance apparel, European textile distributor
+            &mdash; with measurable outcomes.
+          </p>
           <span class="mt-3 text-xs font-medium text-sky-600">View case studies &rarr;</span>
         </a>
-        <a href="/evidence" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col">
+        <a
+          href="/evidence"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
           <div class="text-3xl mb-3">&#9989;</div>
-          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Certifications</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">CE, ISO 9001, BSCI, REACH, RoHS, AS 1799 &mdash; every product certified for safety and compliance across global markets.</p>
+          <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Certifications
+          </h3>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            CE, ISO 9001, BSCI, REACH, RoHS, AS 1799 &mdash; every product certified for safety and compliance across
+            global markets.
+          </p>
           <span class="mt-3 text-xs font-medium text-sky-600">View certifications &rarr;</span>
         </a>
-        <a href="/evidence" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col">
+        <a
+          href="/evidence"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col"
+        >
           <div class="text-3xl mb-3">&#128202;</div>
           <h3 class="text-base font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Test Results</h3>
-          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">100% batch tested. AQL 2.5. UPF, hydrostatic pressure, antibacterial, and tensile strength validated by SGS and Intertek.</p>
+          <p class="mt-1 text-xs text-gray-500 line-clamp-2 flex-1">
+            100% batch tested. AQL 2.5. UPF, hydrostatic pressure, antibacterial, and tensile strength validated by SGS
+            and Intertek.
+          </p>
           <span class="mt-3 text-xs font-medium text-sky-600">View test data &rarr;</span>
         </a>
       </div>
@@ -470,32 +646,44 @@ const faqCategories = [
     />
     <div class="mt-16 grid md:grid-cols-3 gap-8">
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/hero/seekingtex-hero-design-concept.webp')">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('/images/seekingtex/hero/seekingtex-hero-design-concept.webp')"
+        >
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">Performance-First Design</h3>
           <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            Every fabric is engineered for specific performance requirements —UPF rating, waterproof level, breathability, or antibacterial efficacy —with clear, test-verified specifications.
+            Every fabric is engineered for specific performance requirements —UPF rating, waterproof level,
+            breathability, or antibacterial efficacy —with clear, test-verified specifications.
           </p>
         </div>
       </div>
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/products/quick-dry-fabric.webp')">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('/images/seekingtex/products/quick-dry-fabric.webp')"
+        >
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">Application-Matched Selection</h3>
           <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            Fabrics organized by end-use —outdoor, sportswear, medical, workwear, fashion —so every buyer finds the right performance textile for their specific application.
+            Fabrics organized by end-use —outdoor, sportswear, medical, workwear, fashion —so every buyer finds the
+            right performance textile for their specific application.
           </p>
         </div>
       </div>
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
-        <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/categories/seekingtex-rescue-operations.webp')">
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('/images/seekingtex/categories/seekingtex-rescue-operations.webp')"
+        >
         </div>
         <div class="p-6">
           <h3 class="text-lg font-semibold text-gray-900">Certification-as-Standard</h3>
           <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-            OEKO-TEX certification is not optional. Every fabric undergoes UPF, hydrostatic pressure, antibacterial, and tensile strength testing. Compliance is embedded in every product spec.
+            OEKO-TEX certification is not optional. Every fabric undergoes UPF, hydrostatic pressure, antibacterial, and
+            tensile strength testing. Compliance is embedded in every product spec.
           </p>
         </div>
       </div>
@@ -507,21 +695,27 @@ const faqCategories = [
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">The challenge</span>
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">Performance fabrics are rarely matched to the application</h2>
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          Performance fabrics are rarely matched to the application
+        </h2>
         <p class="mt-4 text-lg text-gray-500">
           Most textiles are built for either commodity pricing or high-end fashion. Little exists for the middle ground
-          —functional, certified performance fabrics where the specification matches both the end-use environment and the
-          buyer's quality requirements.
+          —functional, certified performance fabrics where the specification matches both the end-use environment and
+          the buyer's quality requirements.
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/hero/factory-gate.webp')"></div>
+          <div
+            class="h-36 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/hero/factory-gate.webp')"
+          >
+          </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">Wrong fabric for the use</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              A lightweight fashion fabric used for outdoor workwear. A non-breathable membrane in activewear. Fabric pushed beyond its
-              design envelope leads to poor performance and user discomfort.
+              A lightweight fashion fabric used for outdoor workwear. A non-breathable membrane in activewear. Fabric
+              pushed beyond its design envelope leads to poor performance and user discomfort.
             </p>
           </div>
         </div>
@@ -534,17 +728,22 @@ const faqCategories = [
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">One-spec-fits-none claims</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Many brands label everything "high performance." Without clear certified specifications and third-party test reports, buyers cannot make informed decisions.
+              Many brands label everything "high performance." Without clear certified specifications and third-party
+              test reports, buyers cannot make informed decisions.
             </p>
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div class="h-36 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-quality-test.webp')">
+          <div
+            class="h-36 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/why/seekingtex-quality-test.webp')"
+          >
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">How Seekingtex solves this</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
-              Every fabric specifies UPF rating, waterproof level, breathability, antibacterial efficacy —all OEKO-TEX certified and third-party verified. The right textile for the right application, every time.
+              Every fabric specifies UPF rating, waterproof level, breathability, antibacterial efficacy —all OEKO-TEX
+              certified and third-party verified. The right textile for the right application, every time.
             </p>
           </div>
         </div>
@@ -578,7 +777,8 @@ const faqCategories = [
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">Outdoor</span>
           <h3 class="mt-2 text-xl font-semibold text-gray-900">Sun protection for outdoor professionals</h3>
           <p class="mt-2 text-sm text-gray-500">
-            You need UPF 50+ fabrics for uniforms worn by outdoor workers. You require certified UV protection, breathability, and durability through repeated wash cycles.
+            You need UPF 50+ fabrics for uniforms worn by outdoor workers. You require certified UV protection,
+            breathability, and durability through repeated wash cycles.
           </p>
           <div class="mt-5 space-y-3">
             <a
@@ -620,7 +820,8 @@ const faqCategories = [
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">Medical</span>
           <h3 class="mt-2 text-xl font-semibold text-gray-900">Protective apparel for healthcare</h3>
           <p class="mt-2 text-sm text-gray-500">
-            Hospitals need antibacterial, fluid-resistant fabrics for staff uniforms that are comfortable for 12-hour shifts and withstand industrial laundering.
+            Hospitals need antibacterial, fluid-resistant fabrics for staff uniforms that are comfortable for 12-hour
+            shifts and withstand industrial laundering.
           </p>
           <div class="mt-5 space-y-3">
             <a
@@ -662,7 +863,8 @@ const faqCategories = [
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">Sustainable</span>
           <h3 class="mt-2 text-xl font-semibold text-gray-900">Eco-friendly fashion collection</h3>
           <p class="mt-2 text-sm text-gray-500">
-            Fashion brands need GRS-certified recycled fabrics that deliver the same quality as virgin materials while meeting sustainability commitments.
+            Fashion brands need GRS-certified recycled fabrics that deliver the same quality as virgin materials while
+            meeting sustainability commitments.
           </p>
           <div class="mt-5 space-y-3">
             <a
@@ -694,7 +896,12 @@ const faqCategories = [
   <!-- Trust Layer + CTA -->
   <section class="relative py-12 px-6 text-white overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/seekingtex/news/seekingtex-quality-news.webp" alt="Seekingtex quality testing process" class="w-full h-full object-cover" loading="lazy" />
+      <img
+        src="/images/seekingtex/news/seekingtex-quality-news.webp"
+        alt="Seekingtex quality testing process"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
       <div class="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/70 to-gray-800/85"></div>
     </div>
     <div class="relative max-w-6xl mx-auto">
@@ -759,10 +966,17 @@ const faqCategories = [
         </div>
       </div>
       <div class="flex flex-wrap justify-center gap-4 mt-6 text-xs font-medium text-muted uppercase tracking-wider">
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"></span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">OEKO-TEX </span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">GRS Certified</span>
-        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700">OEM/ODM</span>
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+        ></span>
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >OEKO-TEX
+        </span>
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >GRS Certified</span
+        >
+        <span class="px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-700"
+          >OEM/ODM</span
+        >
       </div>
       <div class="text-center mt-6">
         <a href="/factory" class="text-sm font-semibold text-sky-600 hover:text-sky-700 hover:underline">
@@ -778,38 +992,95 @@ const faqCategories = [
       <span class="text-sm font-semibold text-sky-600 tracking-[0.15em] uppercase">Buyers Center</span>
       <h2 class="mt-4 text-4xl font-bold text-gray-900">Resources for B2B Partners</h2>
       <p class="mt-4 text-lg text-gray-500">
-        Download product catalogs, quality reports, and compliance documentation to evaluate Seekingtex as your textile OEM/ODM partner.
+        Download product catalogs, quality reports, and compliance documentation to evaluate Seekingtex as your textile
+        OEM/ODM partner.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
-      <a href="/media" class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5">
+      <a
+        href="/media"
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
         <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-5 text-sky-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path></svg
+          >
         </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">2026 Product Catalog</h3>
-        <p class="mt-2 text-sm text-gray-500">Complete fabric lineup with specifications, MOQ (500-1000 m woven, 200-500 kg knits), pricing tiers, and customization options. PDF format.</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all">Download PDF →</span>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-sky-700 transition-colors">
+          2026 Product Catalog
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          Complete fabric lineup with specifications, MOQ (500-1000 m woven, 200-500 kg knits), pricing tiers, and
+          customization options. PDF format.
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-600 group-hover:gap-2 transition-all"
+          >Download PDF →</span
+        >
       </a>
-      <a href="/quality" class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5">
+      <a
+        href="/quality"
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
         <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-5 text-emerald-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            ></path></svg
+          >
         </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors">QC &amp; Testing Standards Report</h3>
-        <p class="mt-2 text-sm text-gray-500">UPF testing per AATCC 183, hydrostatic pressure per AATCC 127, antibacterial per GB/T 20944.3. Full methodology disclosed.</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all">View Report →</span>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-emerald-700 transition-colors">
+          QC &amp; Testing Standards Report
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          UPF testing per AATCC 183, hydrostatic pressure per AATCC 127, antibacterial per GB/T 20944.3. Full
+          methodology disclosed.
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:gap-2 transition-all"
+          >View Report →</span
+        >
       </a>
-      <a href="/factory" class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5">
+      <a
+        href="/factory"
+        class="group bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-lg transition-all hover:-translate-y-0.5"
+      >
         <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-5 text-amber-600">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+            ></path></svg
+          >
         </div>
-        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">Factory Audit &amp; Virtual Tour</h3>
-        <p class="mt-2 text-sm text-gray-500">15,000 m² facility, OEKO-TEX and GRS certified lines. Schedule a live video walkthrough.</p>
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all">Tour Factory →</span>
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-700 transition-colors">
+          Factory Audit &amp; Virtual Tour
+        </h3>
+        <p class="mt-2 text-sm text-gray-500">
+          15,000 m² facility, OEKO-TEX and GRS certified lines. Schedule a live video walkthrough.
+        </p>
+        <span
+          class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600 group-hover:gap-2 transition-all"
+          >Tour Factory →</span
+        >
       </a>
     </div>
     <div class="mt-10 text-center">
       <p class="text-sm text-gray-400">All resources available for registered B2B partners.</p>
-      <a href="/contact" class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700">
+      <a
+        href="/contact"
+        class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
+      >
         Request access to gated resources →
       </a>
     </div>
@@ -827,13 +1098,13 @@ const faqCategories = [
       <div class="space-y-1.5 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
         <p>
           <strong>Seekingtex</strong> develops and manufactures functional performance textiles —UPF 50+ sun protection fabrics,
-          waterproof breathable membranes, quick-dry moisture wicking fabrics, 7A antibacterial textiles,
-          4-way stretch fabrics, breathable mesh, and eco-friendly recycled fabrics.
+          waterproof breathable membranes, quick-dry moisture wicking fabrics, 7A antibacterial textiles, 4-way stretch fabrics,
+          breathable mesh, and eco-friendly recycled fabrics.
         </p>
         <p>
           Every fabric is OEKO-TEX Standard 100 certified, third-party tested by SGS and Intertek. The product line
-          covers seven performance categories for sportswear, medical apparel, workwear uniforms, outdoor gear,
-          and sustainable fashion collections.
+          covers seven performance categories for sportswear, medical apparel, workwear uniforms, outdoor gear, and
+          sustainable fashion collections.
         </p>
       </div>
     </div>
@@ -846,40 +1117,85 @@ const faqCategories = [
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Our Fabrics</span>
       <h2 class="mt-4 text-4xl font-bold text-gray-900">Performance Meets Versatility</h2>
-      <p class="mt-4 text-lg text-gray-500">Every Seekingtex fabric is engineered for specific performance requirements —built to perform, designed to protect.</p>
+      <p class="mt-4 text-lg text-gray-500">
+        Every Seekingtex fabric is engineered for specific performance requirements —built to perform, designed to
+        protect.
+      </p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {[
-        { id: 'sun-protection', label: 'Sun Protection', desc: 'UPF 50+ blocks 98% of UV radiation for outdoor apparel.', img: '/images/seekingtex/products/sun-protection-fabric.webp' },
-        { id: 'waterproof', label: 'Waterproof Breathable', desc: '10,000mm+ waterproof rating for outerwear and medical gear.', img: '/images/seekingtex/products/waterproof-breathable-fabric.webp' },
-        { id: 'quick-dry', label: 'Quick-Dry Moisture Wicking', desc: 'Capillary-action moisture management for activewear.', img: '/images/seekingtex/products/quick-dry-fabric.webp' },
-        { id: 'antibacterial', label: '7A Antibacterial', desc: '>99% bacterial reduction rate for healthcare uniforms.', img: '/images/seekingtex/products/antibacterial-fabric.webp' },
-        { id: 'stretch', label: '4-Way Stretch', desc: 'Warp and weft elasticity for fitness and yoga apparel.', img: '/images/seekingtex/products/4way-stretch-fabric.webp' },
-        { id: 'breathable', label: 'Breathable Mesh', desc: 'Engineered ventilation for sportswear and workwear.', img: '/images/seekingtex/products/breathable-mesh-fabric.webp' },
-        { id: 'eco-friendly', label: 'Eco-Friendly Recycled', desc: 'GRS-certified recycled fabrics from post-consumer waste.', img: '/images/seekingtex/products/eco-friendly-fabric.webp' },
-        { id: 'flame-retardant', label: 'Flame Retardant', desc: 'FR-treated fabrics meeting international safety standards.', img: '/images/seekingtex/products/flame-retardant-fabric.webp' },
-      ].map((fabric) => (
-        <a
-          href="/fabrics/"
-          class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
-        >
-          <div class="aspect-[4/3] overflow-hidden">
-            <img
-              src={fabric.img}
-              alt={fabric.label}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-gray-900">{fabric.label}</h3>
-            <p class="text-sm text-gray-400 mt-0.5">{fabric.desc}</p>
-            <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
-              View <span>→</span>
-            </span>
-          </div>
-        </a>
-      ))}
+      {
+        [
+          {
+            id: 'sun-protection',
+            label: 'Sun Protection',
+            desc: 'UPF 50+ blocks 98% of UV radiation for outdoor apparel.',
+            img: '/images/seekingtex/products/sun-protection-fabric.webp',
+          },
+          {
+            id: 'waterproof',
+            label: 'Waterproof Breathable',
+            desc: '10,000mm+ waterproof rating for outerwear and medical gear.',
+            img: '/images/seekingtex/products/waterproof-breathable-fabric.webp',
+          },
+          {
+            id: 'quick-dry',
+            label: 'Quick-Dry Moisture Wicking',
+            desc: 'Capillary-action moisture management for activewear.',
+            img: '/images/seekingtex/products/quick-dry-fabric.webp',
+          },
+          {
+            id: 'antibacterial',
+            label: '7A Antibacterial',
+            desc: '>99% bacterial reduction rate for healthcare uniforms.',
+            img: '/images/seekingtex/products/antibacterial-fabric.webp',
+          },
+          {
+            id: 'stretch',
+            label: '4-Way Stretch',
+            desc: 'Warp and weft elasticity for fitness and yoga apparel.',
+            img: '/images/seekingtex/products/4way-stretch-fabric.webp',
+          },
+          {
+            id: 'breathable',
+            label: 'Breathable Mesh',
+            desc: 'Engineered ventilation for sportswear and workwear.',
+            img: '/images/seekingtex/products/breathable-mesh-fabric.webp',
+          },
+          {
+            id: 'eco-friendly',
+            label: 'Eco-Friendly Recycled',
+            desc: 'GRS-certified recycled fabrics from post-consumer waste.',
+            img: '/images/seekingtex/products/eco-friendly-fabric.webp',
+          },
+          {
+            id: 'flame-retardant',
+            label: 'Flame Retardant',
+            desc: 'FR-treated fabrics meeting international safety standards.',
+            img: '/images/seekingtex/products/flame-retardant-fabric.webp',
+          },
+        ].map((fabric) => (
+          <a
+            href="/fabrics/"
+            class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src={fabric.img}
+                alt={fabric.label}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-lg font-bold text-gray-900">{fabric.label}</h3>
+              <p class="text-sm text-gray-400 mt-0.5">{fabric.desc}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
+                View <span>→</span>
+              </span>
+            </div>
+          </a>
+        ))
+      }
     </div>
   </section>
 
@@ -991,56 +1307,128 @@ const faqCategories = [
         <p class="mt-4 text-lg text-gray-500">Produced with precision. Tested relentlessly. Backed by certification.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
-          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-quality-test.webp')">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/why/seekingtex-quality-test.webp')"
+          >
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">Quality You Can Trust</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Superior — produced with premium fibers and precision finishing for consistent quality.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Precision-engineered — uniform dyeing, consistent weight, flawless construction.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Relentlessly tested — proven to outperform, outlast, and outshine.</li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Superior — produced with premium fibers and precision
+                finishing for consistent quality.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Precision-engineered — uniform dyeing, consistent weight,
+                flawless construction.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Relentlessly tested — proven to outperform, outlast, and
+                outshine.
+              </li>
             </ul>
-            <a href="/about" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">View More →</a>
+            <a
+              href="/about"
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >View More →</a
+            >
           </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
-          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-fair-price.webp')">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/why/seekingtex-fair-price.webp')"
+          >
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">Availability and Lead Times</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Ready when you are — Stock You Can See: Real-time updates so you know what's ready to ship.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Fast-Tracked: In-stock orders ship in 3-5 days; urgent needs get priority treatment.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> No Surprises: Clear timelines, delay alerts, and instant solutions if plans change.</li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Ready when you are — Stock You Can See: Real-time updates
+                so you know what's ready to ship.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Fast-Tracked: In-stock orders ship in 3-5 days; urgent
+                needs get priority treatment.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> No Surprises: Clear timelines, delay alerts, and instant
+                solutions if plans change.
+              </li>
             </ul>
-            <a href="/about" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">View More →</a>
+            <a
+              href="/about"
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >View More →</a
+            >
           </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
-          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-fair-price.webp')">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/why/seekingtex-fair-price.webp')"
+          >
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">Premium Quality, Fair Price</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Transparent Cost Breakdown: See exactly what you're paying for — certified quality and compliance.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Competitive Pricing: Factory-direct pricing without compromising on materials or testing.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> Built to Last, Designed to Save: Consistent quality that reduces returns and reorders.</li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Transparent Cost Breakdown: See exactly what you're paying
+                for — certified quality and compliance.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Competitive Pricing: Factory-direct pricing without compromising
+                on materials or testing.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> Built to Last, Designed to Save: Consistent quality that
+                reduces returns and reorders.
+              </li>
             </ul>
-            <a href="/about" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">View More →</a>
+            <a
+              href="/about"
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >View More →</a
+            >
           </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row">
-          <div class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center" style="background-image: url('/images/seekingtex/why/seekingtex-warranties.webp')">
+        <div
+          class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="h-48 md:h-auto md:w-48 shrink-0 bg-cover bg-center"
+            style="background-image: url('/images/seekingtex/why/seekingtex-warranties.webp')"
+          >
           </div>
           <div class="p-6">
             <h3 class="text-lg font-semibold text-gray-900">Certifications and Compliance</h3>
             <ul class="mt-3 text-sm text-gray-500 space-y-2">
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> OEKO-TEX Standard 100: All fabrics certified free from harmful substances.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> GRS Certified: Full chain of custody for recycled material content.</li>
-              <li class="flex gap-2"><span class="text-[#06b6d4] mt-0.5">&#10003;</span> REACH & RoHS Compliant: Meeting EU chemical safety and environmental standards.</li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> OEKO-TEX Standard 100: All fabrics certified free from
+                harmful substances.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> GRS Certified: Full chain of custody for recycled material
+                content.
+              </li>
+              <li class="flex gap-2">
+                <span class="text-[#06b6d4] mt-0.5">&#10003;</span> REACH & RoHS Compliant: Meeting EU chemical safety and
+                environmental standards.
+              </li>
             </ul>
-            <a href="/about" class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline">View More →</a>
+            <a
+              href="/about"
+              class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] hover:underline"
+              >View More →</a
+            >
           </div>
         </div>
       </div>
@@ -1122,8 +1510,17 @@ const faqCategories = [
   <!-- Lifestyle -->
   <section class="relative py-16 px-6 overflow-hidden">
     <div class="absolute inset-0">
-      <img src="/images/seekingtex/hero/seekingtex-hero-design-concept.webp" alt="Textile manufacturing" class="w-full h-full object-cover" loading="lazy" />
-      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(6,182,212,0.7), rgba(34,211,238,0.5));"></div>
+      <img
+        src="/images/seekingtex/hero/seekingtex-hero-design-concept.webp"
+        alt="Textile manufacturing"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div
+        class="absolute inset-0"
+        style="background: linear-gradient(135deg, rgba(6,182,212,0.7), rgba(34,211,238,0.5));"
+      >
+      </div>
     </div>
     <div class="relative text-center max-w-3xl mx-auto">
       <span class="text-sm font-semibold text-white/80 tracking-[0.15em] uppercase">Philosophy</span>
@@ -1131,12 +1528,28 @@ const faqCategories = [
         "We don't just make fabric.<br />We engineer performance."
       </h2>
       <p class="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
-        Every Seekingtex fabric is your solution for performance —from UV-protected outdoor gear to breathable medical apparel.
+        Every Seekingtex fabric is your solution for performance —from UV-protected outdoor gear to breathable medical
+        apparel.
       </p>
       <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-lg mx-auto">
-        <img src="/images/seekingtex/products/sun-protection-fabric.webp" alt="Sun Protection Fabric" class="rounded-xl aspect-square object-cover" loading="lazy" />
-        <img src="/images/seekingtex/products/waterproof-breathable-fabric.webp" alt="Waterproof Breathable Fabric" class="rounded-xl aspect-square object-cover" loading="lazy" />
-        <img src="/images/seekingtex/products/eco-friendly-fabric.webp" alt="Eco-Friendly Fabric" class="rounded-xl aspect-square object-cover" loading="lazy" />
+        <img
+          src="/images/seekingtex/products/sun-protection-fabric.webp"
+          alt="Sun Protection Fabric"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
+        <img
+          src="/images/seekingtex/products/waterproof-breathable-fabric.webp"
+          alt="Waterproof Breathable Fabric"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
+        <img
+          src="/images/seekingtex/products/eco-friendly-fabric.webp"
+          alt="Eco-Friendly Fabric"
+          class="rounded-xl aspect-square object-cover"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -1146,17 +1559,34 @@ const faqCategories = [
     <div class="text-center max-w-3xl mx-auto mb-16">
       <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Community</span>
       <h2 class="mt-4 text-4xl font-bold text-gray-900">Global Partners. Real Results.</h2>
-      <p class="mt-4 text-lg text-gray-500">Join hundreds of apparel brands and uniform manufacturers using Seekingtex fabrics worldwide.</p>
+      <p class="mt-4 text-lg text-gray-500">
+        Join hundreds of apparel brands and uniform manufacturers using Seekingtex fabrics worldwide.
+      </p>
     </div>
-      <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-6">
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/products/sun-protection-fabric.webp" alt="Sun Protection Fabric" class="w-full h-full object-cover" loading="lazy" />
+        <img
+          src="/images/seekingtex/products/sun-protection-fabric.webp"
+          alt="Sun Protection Fabric"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/products/waterproof-breathable-fabric.webp" alt="Waterproof Breathable Fabric" class="w-full h-full object-cover" loading="lazy" />
+        <img
+          src="/images/seekingtex/products/waterproof-breathable-fabric.webp"
+          alt="Waterproof Breathable Fabric"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
       <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="/images/seekingtex/products/quick-dry-fabric.webp" alt="Quick-Dry Fabric" class="w-full h-full object-cover" loading="lazy" />
+        <img
+          src="/images/seekingtex/products/quick-dry-fabric.webp"
+          alt="Quick-Dry Fabric"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
       </div>
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
@@ -1171,7 +1601,9 @@ const faqCategories = [
       }
     </div>
     <div class="text-center mt-10">
-      <p class="text-gray-500">Tag <span class="font-semibold text-gray-700">@seekingtex</span> on Instagram to share your projects.</p>
+      <p class="text-gray-500">
+        Tag <span class="font-semibold text-gray-700">@seekingtex</span> on Instagram to share your projects.
+      </p>
       <div class="mt-4 flex justify-center gap-4">
         <a
           href="https://www.instagram.com/seekingtex"
@@ -1191,51 +1623,106 @@ const faqCategories = [
       </div>
       <div class="mb-12">
         <h4 class="text-lg font-bold text-gray-900 mb-1">Sun Protection & Performance</h4>
-        <p class="text-sm text-gray-500 mb-4">Customers using Seekingtex sun protection and quick-dry fabrics for outdoor apparel and activewear.</p>
+        <p class="text-sm text-gray-500 mb-4">
+          Customers using Seekingtex sun protection and quick-dry fabrics for outdoor apparel and activewear.
+        </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/sun-protection-fabric.webp" alt="Sun Protection Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/sun-protection-fabric.webp"
+              alt="Sun Protection Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/quick-dry-fabric.webp" alt="Quick-Dry Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/quick-dry-fabric.webp"
+              alt="Quick-Dry Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/breathable-mesh-fabric.webp" alt="Breathable Mesh" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/breathable-mesh-fabric.webp"
+              alt="Breathable Mesh"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
       <div class="mb-12">
         <h4 class="text-lg font-bold text-gray-900 mb-1">Waterproof & Medical Textiles</h4>
-        <p class="text-sm text-gray-500 mb-4">Waterproof breathable and antibacterial fabrics for medical and protective applications.</p>
+        <p class="text-sm text-gray-500 mb-4">
+          Waterproof breathable and antibacterial fabrics for medical and protective applications.
+        </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/waterproof-breathable-fabric.webp" alt="Waterproof Breathable" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/waterproof-breathable-fabric.webp"
+              alt="Waterproof Breathable"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/antibacterial-fabric.webp" alt="Antibacterial Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/antibacterial-fabric.webp"
+              alt="Antibacterial Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/flame-retardant-fabric.webp" alt="Flame Retardant Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/flame-retardant-fabric.webp"
+              alt="Flame Retardant Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
       <div class="mb-12">
         <h4 class="text-lg font-bold text-gray-900 mb-1">Sustainable & Eco-Friendly</h4>
-        <p class="text-sm text-gray-500 mb-4">Eco-friendly recycled fabrics and sustainable textiles for fashion and apparel.</p>
+        <p class="text-sm text-gray-500 mb-4">
+          Eco-friendly recycled fabrics and sustainable textiles for fashion and apparel.
+        </p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/eco-friendly-fabric.webp" alt="Eco-Friendly Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/eco-friendly-fabric.webp"
+              alt="Eco-Friendly Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/4way-stretch-fabric.webp" alt="4-Way Stretch Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/4way-stretch-fabric.webp"
+              alt="4-Way Stretch Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
           <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
-            <img src="/images/seekingtex/products/eco-friendly-fabric.webp" alt="Recycled Fabric" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <img
+              src="/images/seekingtex/products/eco-friendly-fabric.webp"
+              alt="Recycled Fabric"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
       <div class="text-center">
-        <a href="/gallery" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm">View Full Gallery →</a>
+        <a
+          href="/gallery"
+          class="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors text-sm"
+          >View Full Gallery →</a
+        >
       </div>
     </div>
   </section>
@@ -1271,7 +1758,9 @@ const faqCategories = [
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
           >{(learnData as any)?.tagline || 'Learn'}</span
         >
-        <h2 class="mt-4 text-4xl font-semibold text-gray-900">{(learnData as any)?.title || 'New to Performance Fabrics?'}</h2>
+        <h2 class="mt-4 text-4xl font-semibold text-gray-900">
+          {(learnData as any)?.title || 'New to Performance Fabrics?'}
+        </h2>
         <p class="mt-4 text-lg text-gray-500">
           {(learnData as any)?.subtitle || 'Everything you need to know before you source functional textiles.'}
         </p>
@@ -1303,33 +1792,78 @@ const faqCategories = [
         <p class="mt-2 text-gray-500">Manufacturing insights, engineering expertise, and product comparisons.</p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <a href="/oem-process" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/oem-process"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Manufacturing</span>
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">OEM Manufacturing Process</h3>
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            OEM Manufacturing Process
+          </h3>
           <p class="mt-1 text-sm text-gray-500">From inquiry to FOB shipping — the complete 8-step OEM journey.</p>
         </a>
-        <a href="/engineering-team" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/engineering-team"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Team</span>
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Engineering &amp; R&amp;D Team</h3>
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Engineering &amp; R&amp;D Team
+          </h3>
           <p class="mt-1 text-sm text-gray-500">Meet the R&D team behind every Seekingtex fabric innovation.</p>
         </a>
-        <a href="/compare/sun-protection-vs-antibacterial" class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all">
+        <a
+          href="/compare/sun-protection-vs-antibacterial"
+          class="group bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all"
+        >
           <span class="text-xs font-semibold text-sky-600 uppercase tracking-wide">Compare</span>
-          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Sun Protection vs Antibacterial</h3>
+          <h3 class="mt-2 font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Sun Protection vs Antibacterial
+          </h3>
           <p class="mt-1 text-sm text-gray-500">Which performance fabric is right for you? Side-by-side comparison.</p>
         </a>
       </div>
       <div class="mt-16 flex flex-wrap items-center justify-center gap-x-16 gap-y-4 py-12 border-t border-gray-200">
         <span class="text-base text-gray-400 tracking-wider uppercase font-semibold">Certifications</span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"><span class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0">&#x2713;</span> CE </span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"><span class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0">&#x2713;</span> BSCI Certified</span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"><span class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0">&#x2713;</span> REACH Compliant</span>
-        <span class="inline-flex items-center gap-3 text-lg text-gray-600"><span class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0">&#x2713;</span> OEM/ODM</span>
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          > CE
+        </span>
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          > BSCI Certified</span
+        >
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          > REACH Compliant</span
+        >
+        <span class="inline-flex items-center gap-3 text-lg text-gray-600"
+          ><span
+            class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-xl font-bold text-white shrink-0"
+            >&#x2713;</span
+          > OEM/ODM</span
+        >
       </div>
       <div class="flex flex-wrap items-center justify-center gap-10 py-10 border-t border-gray-200">
         <span class="text-base text-gray-400 tracking-wider uppercase font-semibold">Brand Partners</span>
-        <img src="/images/seekingtex/brands/seekingtex-wavefella-logo.webp" alt="Wavefella" class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition" loading="lazy" />
-        <img src="/images/seekingtex/brands/seekingtex-foida-logo.webp" alt="Foida" class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition" loading="lazy" />
+        <img
+          src="/images/seekingtex/brands/seekingtex-wavefella-logo.webp"
+          alt="Wavefella"
+          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
+          loading="lazy"
+        />
+        <img
+          src="/images/seekingtex/brands/seekingtex-foida-logo.webp"
+          alt="Foida"
+          class="h-16 opacity-50 grayscale hover:opacity-80 hover:grayscale-0 transition"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -1342,25 +1876,40 @@ const faqCategories = [
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">Frequently asked questions</h2>
       </div>
       <div class="flex flex-wrap justify-center gap-2 mb-10" data-faq-tabs>
-        {faqCategories.map((cat) => (
-          <button
-            data-faq-tab={cat.id}
-            class:list={['px-4 py-2 text-sm font-medium rounded-full border transition', cat.id === 'sun-protection' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400']}
-          >{cat.label}</button>
-        ))}
+        {
+          faqCategories.map((cat) => (
+            <button
+              data-faq-tab={cat.id}
+              class:list={[
+                'px-4 py-2 text-sm font-medium rounded-full border transition',
+                cat.id === 'sun-protection'
+                  ? 'bg-gray-900 text-white border-gray-900'
+                  : 'bg-white text-gray-600 border-gray-300 hover:border-gray-400',
+              ]}
+            >
+              {cat.label}
+            </button>
+          ))
+        }
       </div>
       <div class="space-y-4" data-faq-list>
-        {faqItems.map((item) => (
-          <details data-faq-item data-category={item.category || 'sun-protection'} class="bg-white border border-gray-200 rounded-xl overflow-hidden group">
-            <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
-              <span>{item.q}</span>
-              <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
-            </summary>
-            <div class="px-6 pb-4">
-              <p class="text-gray-600 leading-relaxed">{item.a}</p>
-            </div>
-          </details>
-        ))}
+        {
+          faqItems.map((item) => (
+            <details
+              data-faq-item
+              data-category={item.category || 'sun-protection'}
+              class="bg-white border border-gray-200 rounded-xl overflow-hidden group"
+            >
+              <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition-colors list-none flex items-center justify-between">
+                <span>{item.q}</span>
+                <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="px-6 pb-4">
+                <p class="text-gray-600 leading-relaxed">{item.a}</p>
+              </div>
+            </details>
+          ))
+        }
       </div>
     </div>
   </section>
@@ -1412,7 +1961,8 @@ const faqCategories = [
         itemOffered: {
           '@type': 'Service',
           name: 'OEM/ODM Functional Fabric Manufacturing',
-          description: 'Full-spectrum OEM and ODM services including custom fabric development, private labeling, performance finishing, and OEKO-TEX/GRS compliance documentation.',
+          description:
+            'Full-spectrum OEM and ODM services including custom fabric development, private labeling, performance finishing, and OEKO-TEX/GRS compliance documentation.',
         },
       },
       knowsAbout: [
@@ -1464,7 +2014,8 @@ const faqCategories = [
       name: 'Seekingtex',
       alternateName: 'Kunshan Seeking Tex&Tech Co., Ltd',
       url: 'https://seekingtex.com',
-      description: 'Professional functional fabric manufacturer specializing in performance textiles for apparel, sportswear, medical, workwear, and fashion applications.',
+      description:
+        'Professional functional fabric manufacturer specializing in performance textiles for apparel, sportswear, medical, workwear, and fashion applications.',
       slogan: 'Performance Textiles, Engineered for Excellence',
       brandCategory: 'Textile Manufacturing',
       industry: ['Textile Manufacturing', 'Functional Fabrics', 'Performance Textiles'],
@@ -1479,11 +2030,7 @@ const faqCategories = [
       ],
     })}
   />
-  <script
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify(getEntityGraphJsonLd())}
-  />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(getEntityGraphJsonLd())} />
   <!-- Contact -->
   <section class="bg-gray-50 py-12 px-6" id="contact">
     <div class="max-w-6xl mx-auto">
@@ -1499,10 +2046,11 @@ const faqCategories = [
               class="w-full h-full object-cover"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="Map of Seekingtex location"
-            ></iframe>
+              title="Map of Seekingtex location"></iframe>
             <svg class="absolute w-8 h-8 text-red-500 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
             </svg>
           </div>
           <div class="p-6">
@@ -1585,8 +2133,13 @@ const faqCategories = [
       function filterFaq(cat) {
         faqTabs.querySelectorAll('[data-faq-tab]').forEach(function (btn) {
           const isActive = btn.getAttribute('data-faq-tab') === cat;
-          if (isActive) { btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900'); btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300'); }
-          else { btn.classList.remove('bg-gray-900', 'text-white', 'border-gray-900'); btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300'); }
+          if (isActive) {
+            btn.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+            btn.classList.remove('bg-white', 'text-gray-600', 'border-gray-300');
+          } else {
+            btn.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+            btn.classList.add('bg-white', 'text-gray-600', 'border-gray-300');
+          }
         });
         faqAllItems.forEach(function (item) {
           item.style.display = item.getAttribute('data-category') === cat ? '' : 'none';

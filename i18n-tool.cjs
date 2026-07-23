@@ -5,18 +5,48 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const CONFIG = path.resolve(__dirname, 'src/i18n/config.ts');
-const LANGS = ['en','zh','fr','de','es','pt','ar','it','ja','ko','ru','pl','nl','sv','no','el','tr','fi','cs','da','ro','th'];
+const LANGS = [
+  'en',
+  'zh',
+  'fr',
+  'de',
+  'es',
+  'pt',
+  'ar',
+  'it',
+  'ja',
+  'ko',
+  'ru',
+  'pl',
+  'nl',
+  'sv',
+  'no',
+  'el',
+  'tr',
+  'fi',
+  'cs',
+  'da',
+  'ro',
+  'th',
+];
 
-function readFile() { return fs.readFileSync(CONFIG, 'utf8').replace(/\r\n/g, '\n'); }
-function writeFile(c) { fs.writeFileSync(CONFIG, c.replace(/\r\n/g, '\n'), 'utf8'); }
+function readFile() {
+  return fs.readFileSync(CONFIG, 'utf8').replace(/\r\n/g, '\n');
+}
+function writeFile(c) {
+  fs.writeFileSync(CONFIG, c.replace(/\r\n/g, '\n'), 'utf8');
+}
 
 function findSection(lines, lang) {
-  const pat = new RegExp("^\\s+" + lang + ": \\{");
+  const pat = new RegExp('^\\s+' + lang + ': \\{');
   const start = lines.findIndex((l, i) => i > 10 && pat.test(l));
   if (start === -1) return null;
   let d = 0;
   for (let i = start; i < lines.length; i++) {
-    for (const c of lines[i]) { if (c === '{') d++; if (c === '}') d--; }
+    for (const c of lines[i]) {
+      if (c === '{') d++;
+      if (c === '}') d--;
+    }
     if (d === 0) return { start, end: i };
   }
   return null;
@@ -32,8 +62,12 @@ function getKeys(lines, start, end) {
 }
 
 function syntaxCheck() {
-  try { execSync(`node -c "${CONFIG}"`, { stdio: 'pipe' }); return true; }
-  catch { return false; }
+  try {
+    execSync(`node -c "${CONFIG}"`, { stdio: 'pipe' });
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 // 鈹€鈹€鈹€ COMMANDS 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€
@@ -48,7 +82,10 @@ const commands = {
     console.log('---');
     for (const lang of LANGS) {
       const sec = findSection(lines, lang);
-      if (!sec) { console.log(`${lang}: NOT FOUND`); continue; }
+      if (!sec) {
+        console.log(`${lang}: NOT FOUND`);
+        continue;
+      }
       const keys = getKeys(lines, sec.start, sec.end);
       const pct = ((keys.size / enKeys.size) * 100).toFixed(1);
       console.log(`${lang}: ${keys.size} (${pct}%)`);
@@ -61,10 +98,13 @@ const commands = {
     const en = findSection(lines, 'en');
     const enKeys = getKeys(lines, en.start, en.end);
     const sec = findSection(lines, lang);
-    if (!sec) { console.log(`${lang}: section not found`); return; }
+    if (!sec) {
+      console.log(`${lang}: section not found`);
+      return;
+    }
     const langKeys = getKeys(lines, sec.start, sec.end);
 
-    const missing = [...enKeys.keys()].filter(k => !langKeys.has(k));
+    const missing = [...enKeys.keys()].filter((k) => !langKeys.has(k));
     const untranslated = [];
     for (const [k, v] of langKeys) {
       const enVal = enKeys.get(k);
@@ -79,12 +119,12 @@ const commands = {
 
     if (missing.length > 0) {
       console.log(`\nMissing keys (${missing.length}):`);
-      missing.slice(0, 50).forEach(k => console.log(`  ${k}`));
+      missing.slice(0, 50).forEach((k) => console.log(`  ${k}`));
       if (missing.length > 50) console.log(`  ... and ${missing.length - 50} more`);
     }
     if (untranslated.length > 0) {
       console.log(`\nUntranslated keys (${untranslated.length}):`);
-      untranslated.slice(0, 50).forEach(k => console.log(`  ${k}`));
+      untranslated.slice(0, 50).forEach((k) => console.log(`  ${k}`));
       if (untranslated.length > 50) console.log(`  ... and ${untranslated.length - 50} more`);
     }
   },
@@ -97,9 +137,12 @@ const commands = {
     for (const lang of LANGS) {
       if (lang === 'en') continue;
       const sec = findSection(lines, lang);
-      if (!sec) { console.log(`${lang}: NOT FOUND`); continue; }
+      if (!sec) {
+        console.log(`${lang}: NOT FOUND`);
+        continue;
+      }
       const langKeys = getKeys(lines, sec.start, sec.end);
-      const diff = [...enKeys.keys()].filter(k => !langKeys.has(k));
+      const diff = [...enKeys.keys()].filter((k) => !langKeys.has(k));
       if (diff.length > 0) console.log(`${lang}: missing ${diff.length}`);
     }
   },
@@ -109,7 +152,10 @@ const commands = {
     const trans = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     const lines = readFile().split('\n');
     const sec = findSection(lines, lang);
-    if (!sec) { console.log(`${lang}: section not found`); return; }
+    if (!sec) {
+      console.log(`${lang}: section not found`);
+      return;
+    }
 
     const existing = getKeys(lines, sec.start, sec.end);
     const insertLines = [];
@@ -119,7 +165,10 @@ const commands = {
       insertLines.push(`    '${key}': '${escaped}',`);
     }
 
-    if (insertLines.length === 0) { console.log(`${lang}: all keys present`); return; }
+    if (insertLines.length === 0) {
+      console.log(`${lang}: all keys present`);
+      return;
+    }
     lines.splice(sec.end, 0, ...insertLines);
     writeFile(lines.join('\n'));
     console.log(`${lang}: inserted ${insertLines.length} keys`);
@@ -131,7 +180,10 @@ const commands = {
     const trans = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
     const lines = readFile().split('\n');
     const sec = findSection(lines, lang);
-    if (!sec) { console.log(`${lang}: section not found`); return; }
+    if (!sec) {
+      console.log(`${lang}: section not found`);
+      return;
+    }
 
     let updated = 0;
 
@@ -159,7 +211,10 @@ const commands = {
     const en = findSection(lines, 'en');
     const enMap = getKeys(lines, en.start, en.end);
     const sec = findSection(lines, lang);
-    if (!sec) { console.log(`${lang}: section not found`); return; }
+    if (!sec) {
+      console.log(`${lang}: section not found`);
+      return;
+    }
     const langKeys = getKeys(lines, sec.start, sec.end);
     const result = {};
     for (const [k, v] of enMap) {
@@ -184,12 +239,21 @@ const commands = {
   verify(lang) {
     const lines = readFile().split('\n');
     const sec = findSection(lines, lang);
-    if (!sec) { console.log(`${lang}: section not found`); return; }
+    if (!sec) {
+      console.log(`${lang}: section not found`);
+      return;
+    }
     const block = lines.slice(sec.start, sec.end + 1).join('\n');
-    let open = 0, close = 0;
-    for (const ch of block) { if (ch === '{') open++; if (ch === '}') close++; }
+    let open = 0,
+      close = 0;
+    for (const ch of block) {
+      if (ch === '{') open++;
+      if (ch === '}') close++;
+    }
     const keys = getKeys(lines, sec.start, sec.end);
-    console.log(`${lang}: lines ${sec.start + 1}-${sec.end + 1}, ${keys.size} keys, braces: ${open}/${close} ${open === close ? 'OK' : 'MISMATCH'}`);
+    console.log(
+      `${lang}: lines ${sec.start + 1}-${sec.end + 1}, ${keys.size} keys, braces: ${open}/${close} ${open === close ? 'OK' : 'MISMATCH'}`
+    );
   },
 
   // Pre-commit validation: checks what esbuild checks
@@ -200,7 +264,10 @@ const commands = {
 
     // 1. Node syntax check
     const nodeOK = syntaxCheck();
-    if (!nodeOK) { console.log('FAIL: node -c syntax error'); errors++; }
+    if (!nodeOK) {
+      console.log('FAIL: node -c syntax error');
+      errors++;
+    }
 
     // 2. U+FFFD corruption check
     const fffdLines = [];
@@ -209,7 +276,7 @@ const commands = {
     }
     if (fffdLines.length > 0) {
       console.log(`FAIL: ${fffdLines.length} lines with U+FFFD corruption`);
-      fffdLines.slice(0, 5).forEach(l => console.log(`  line ${l}: ${lines[l-1].trim().slice(0, 80)}`));
+      fffdLines.slice(0, 5).forEach((l) => console.log(`  line ${l}: ${lines[l - 1].trim().slice(0, 80)}`));
       if (fffdLines.length > 5) console.log(`  ... and ${fffdLines.length - 5} more`);
       errors++;
     }
@@ -226,7 +293,10 @@ const commands = {
       // Find matching close quote
       let closeIdx = -1;
       for (let j = 1; j < valuePart.length; j++) {
-        if (valuePart[j] === '\\') { j++; continue; }
+        if (valuePart[j] === '\\') {
+          j++;
+          continue;
+        }
         if (valuePart[j] === "'") {
           const after = valuePart.slice(j + 1).trim();
           if (after === '' || after.startsWith(',') || after.startsWith('}') || after.startsWith(']')) {
@@ -245,7 +315,7 @@ const commands = {
     }
     if (badQuotes.length > 0) {
       console.log(`FAIL: ${badQuotes.length} lines with broken quotes in values`);
-      badQuotes.slice(0, 5).forEach(l => console.log(`  line ${l}: ${lines[l-1].trim().slice(0, 80)}`));
+      badQuotes.slice(0, 5).forEach((l) => console.log(`  line ${l}: ${lines[l - 1].trim().slice(0, 80)}`));
       if (badQuotes.length > 5) console.log(`  ... and ${badQuotes.length - 5} more`);
       errors++;
     }
@@ -255,8 +325,12 @@ const commands = {
       const sec = findSection(lines, lang);
       if (!sec) continue;
       const block = lines.slice(sec.start, sec.end + 1).join('\n');
-      let open = 0, close = 0;
-      for (const ch of block) { if (ch === '{') open++; if (ch === '}') close++; }
+      let open = 0,
+        close = 0;
+      for (const ch of block) {
+        if (ch === '{') open++;
+        if (ch === '}') close++;
+      }
       if (open !== close) {
         console.log(`FAIL: ${lang} braces mismatch ({ = ${open}, } = ${close})`);
         errors++;
@@ -326,9 +400,12 @@ Examples:
   node i18n-tool.cjs fix
   node i18n-tool.cjs verify en
 `);
-  }
+  },
 };
 
 const [cmd, ...args] = process.argv.slice(2);
-if (!cmd || !commands[cmd]) { commands.help(); process.exit(cmd ? 1 : 0); }
+if (!cmd || !commands[cmd]) {
+  commands.help();
+  process.exit(cmd ? 1 : 0);
+}
 commands[cmd](...args);

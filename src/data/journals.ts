@@ -42,7 +42,7 @@ export const journals: JournalRecord[] = [
     slug: 'oeko-tex-renewal-2026',
     title: 'Seekingtex Renews OEKO-TEX Standard 100 Certification for 2026',
     description:
-      'Continued commitment to OEKO-TEX Standard 100 — the world\'s leading certification for textiles tested for harmful substances.',
+      "Continued commitment to OEKO-TEX Standard 100 — the world's leading certification for textiles tested for harmful substances.",
     tldr: 'Seekingtex has successfully renewed OEKO-TEX Standard 100 certification for 2026. The certification covers all production stages — from yarn to finished fabric — and confirms our fabrics are free from harmful substances. Annual audit passed with zero non-conformances.',
     category: 'environment',
     publishedDate: '2026-04-10',
@@ -66,7 +66,8 @@ export const journals: JournalRecord[] = [
   {
     slug: 'textile-show-2026',
     title: 'Seekingtex at the 2026 Shanghai International Textile Show',
-    description: 'Our biggest textile showcase yet — new fabric collections, live demonstrations, and special show pricing.',
+    description:
+      'Our biggest textile showcase yet — new fabric collections, live demonstrations, and special show pricing.',
     tldr: 'Seekingtex will exhibit at the 2026 Shanghai International Textile Show with 50+ performance fabrics on display, live demonstrations of our UPF testing and waterproof testing, and show-exclusive pricing. March 15-17 at Shanghai National Exhibition Center.',
     category: 'community',
     publishedDate: '2026-02-05',
@@ -78,12 +79,13 @@ export const journals: JournalRecord[] = [
   {
     slug: 'graphene-thermal-fabric-tech',
     title: 'Graphene-Enhanced Thermal Fabric: The Next Generation of Insulation',
-    description: "Seekingtex's new graphene-infused thermal lining delivers 30% better heat retention at half the weight of traditional fleece.",
+    description:
+      "Seekingtex's new graphene-infused thermal lining delivers 30% better heat retention at half the weight of traditional fleece.",
     tldr: 'Our graphene-enhanced thermal fabric uses graphene nanoparticles embedded in the fiber matrix to reflect body heat. The result is a lightweight thermal lining that outperforms traditional fleece in warmth-to-weight ratio, with added antibacterial and antistatic properties.',
     category: 'technology',
     publishedDate: '2026-02-15',
     author: 'Seekingtex Team',
-    body: 'Our R&D team has spent 12 months developing graphene-enhanced thermal fabric, a significant advancement in textile insulation technology. Graphene nanoparticles are embedded into polyester fibers during extrusion, creating permanent thermal properties that won\'t wash out...',
+    body: "Our R&D team has spent 12 months developing graphene-enhanced thermal fabric, a significant advancement in textile insulation technology. Graphene nanoparticles are embedded into polyester fibers during extrusion, creating permanent thermal properties that won't wash out...",
     relatedGuides: ['fabric-types-guide', 'performance-finishing'],
     relatedProducts: [],
   },
@@ -103,7 +105,8 @@ export const journals: JournalRecord[] = [
   {
     slug: 'waterless-dyeing-technology',
     title: 'Seekingtex Adopts Waterless Dyeing Technology',
-    description: 'Our new dope-dyeing (mass pigmentation) line eliminates water usage in the dyeing process for colored performance fabrics.',
+    description:
+      'Our new dope-dyeing (mass pigmentation) line eliminates water usage in the dyeing process for colored performance fabrics.',
     tldr: 'Seekingtex has installed a new dope-dyeing production line that eliminates water usage in the dyeing process. Pigments are integrated into the polymer melt before fiber extrusion. This saves 50,000+ liters of water per production run and eliminates wastewater treatment needs.',
     category: 'technology',
     publishedDate: '2025-12-10',
@@ -115,7 +118,8 @@ export const journals: JournalRecord[] = [
   {
     slug: 'preparing-performance-fabrics-for-2026',
     title: 'Preparing Your Textile Line for 2026: Sourcing and Development Guide',
-    description: 'Get your performance fabric sourcing ready for the new season with this comprehensive development guide.',
+    description:
+      'Get your performance fabric sourcing ready for the new season with this comprehensive development guide.',
     tldr: 'Before ordering: define your performance requirements (UPF, waterproof, breathability, stretch), request lab dips (3-5 days), approve strike-offs (7-10 days), confirm QC standards, and plan production timelines (30-45 days).',
     category: 'community',
     publishedDate: '2026-04-01',
@@ -152,7 +156,8 @@ export const journals: JournalRecord[] = [
   {
     slug: '4-way-stretch-fabric-launch',
     title: 'Introducing Our New 4-Way Stretch Performance Fabric Collection',
-    description: "Seekingtex's most advanced stretch fabric collection, engineered for high-performance activewear and sportswear.",
+    description:
+      "Seekingtex's most advanced stretch fabric collection, engineered for high-performance activewear and sportswear.",
     tldr: 'New 4-way stretch fabric collection with mechanical and elastane stretch options. Available in wovens and knits from 120-280 GSM. Features quick-dry, UPF 50+, and antibacterial finishes. Ideal for yoga, running, fitness, and lifestyle apparel.',
     category: 'company',
     publishedDate: '2025-10-20',

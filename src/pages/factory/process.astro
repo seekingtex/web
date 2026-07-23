@@ -2,11 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 
-const crumbs = [
-  { name: 'Home', href: '/' },
-  { name: 'Factory', href: '/factory' },
-  { name: 'Production Process' },
-];
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Factory', href: '/factory' }, { name: 'Production Process' }];
 
 const metadata = {
   title: `Manufacturing Process — From Raw Yarn to Finished Fabric | ${SITE.name}`,
@@ -85,27 +81,28 @@ const steps = [
 
   <section class="px-6 sm:px-6 pb-20 mx-auto max-w-4xl">
     <p class="text-muted leading-relaxed mb-12">
-      Unlike brands that outsource production to third-party mills, {SITE.name} owns and operates its entire
-      manufacturing chain. This vertical integration allows us to maintain strict quality control at every stage, respond
-      quickly to custom requirements, and deliver consistent fabric quality batch after batch. Here is how fabric is
-      produced in our facility.
+      Unlike brands that outsource production to third-party mills, {SITE.name} owns and operates its entire manufacturing
+      chain. This vertical integration allows us to maintain strict quality control at every stage, respond quickly to custom
+      requirements, and deliver consistent fabric quality batch after batch. Here is how fabric is produced in our facility.
     </p>
 
     <div class="space-y-10">
-      {steps.map((s) => (
-        <div class="relative pl-16">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
-            {s.step}
-          </div>
-          <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-8 pb-2">
-            <div class="flex items-start justify-between gap-4">
-              <h2 class="text-xl font-bold">{s.title}</h2>
-              <span class="text-xs text-muted whitespace-nowrap shrink-0 mt-1">{s.duration}</span>
+      {
+        steps.map((s) => (
+          <div class="relative pl-16">
+            <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+              {s.step}
             </div>
-            <p class="mt-2 text-muted leading-relaxed">{s.description}</p>
+            <div class="border-l-2 border-gray-200 dark:border-gray-700 pl-8 pb-2">
+              <div class="flex items-start justify-between gap-4">
+                <h2 class="text-xl font-bold">{s.title}</h2>
+                <span class="text-xs text-muted whitespace-nowrap shrink-0 mt-1">{s.duration}</span>
+              </div>
+              <p class="mt-2 text-muted leading-relaxed">{s.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
@@ -113,7 +110,10 @@ const steps = [
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-8">
       <h2 class="text-xl font-bold">See our equipment and machinery</h2>
       <p class="mt-2 text-sm text-muted">Explore the industrial-grade equipment behind every Seekingtex fabric.</p>
-      <a href="/factory/equipment" class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+      <a
+        href="/factory/equipment"
+        class="mt-4 inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+      >
         View equipment →
       </a>
     </div>

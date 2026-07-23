@@ -12,42 +12,50 @@ const crumbs = [{ name: 'Home', href: '/' }, { name: 'Quality Testing' }];
 const tests = [
   {
     title: 'Tensile Strength Testing',
-    description: 'Fabric samples are subjected to controlled tensile force until breaking point. This verifies the structural integrity of the weave and yarns, ensuring the fabric can withstand intended use and stress without failure or tearing.',
+    description:
+      'Fabric samples are subjected to controlled tensile force until breaking point. This verifies the structural integrity of the weave and yarns, ensuring the fabric can withstand intended use and stress without failure or tearing.',
     image: '/images/seekingtex/factory/fabric-tensile-testing.webp',
   },
   {
     title: 'Hydrostatic Head Testing',
-    description: 'Fabrics are subjected to controlled water pressure to measure resistance to water penetration. This assesses the effectiveness of waterproof coatings and laminates, demonstrating resistance to rain and pressure.',
+    description:
+      'Fabrics are subjected to controlled water pressure to measure resistance to water penetration. This assesses the effectiveness of waterproof coatings and laminates, demonstrating resistance to rain and pressure.',
     image: '/images/seekingtex/factory/fabric-production-department.webp',
   },
   {
     title: 'UV Protection (UPF) Testing',
-    description: 'Fabric samples are tested for ultraviolet radiation transmission to determine the UPF rating. Critical for fabrics used in outdoor apparel, sun protection clothing, and high-exposure environments.',
+    description:
+      'Fabric samples are tested for ultraviolet radiation transmission to determine the UPF rating. Critical for fabrics used in outdoor apparel, sun protection clothing, and high-exposure environments.',
     image: '/images/seekingtex/factory/fabric-uv-resistance-testing.webp',
   },
   {
     title: 'Abrasion Resistance Testing',
-    description: 'Fabric samples are rubbed against abrasive surfaces for a specified number of cycles under controlled pressure. This measures the fabric\'s ability to withstand wear from repeated use, contact with rough surfaces, ensuring long-term durability.',
+    description:
+      "Fabric samples are rubbed against abrasive surfaces for a specified number of cycles under controlled pressure. This measures the fabric's ability to withstand wear from repeated use, contact with rough surfaces, ensuring long-term durability.",
     image: '/images/seekingtex/factory/fabric-pvc-material-testing.webp',
   },
   {
     title: 'Colorfastness Testing',
-    description: 'Fabrics are tested for color retention against washing, light, perspiration, and crocking. Essential for apparel and textile products that require consistent appearance through their service life.',
+    description:
+      'Fabrics are tested for color retention against washing, light, perspiration, and crocking. Essential for apparel and textile products that require consistent appearance through their service life.',
     image: '/images/seekingtex/factory/fabric-factory-exterior.webp',
   },
   {
     title: 'Dimensional Stability (Shrinkage) Testing',
-    description: 'Fabric samples are measured before and after controlled washing and drying cycles to determine shrinkage percentage. Every fabric\'s dimensional stability is verified before bulk production release.',
+    description:
+      "Fabric samples are measured before and after controlled washing and drying cycles to determine shrinkage percentage. Every fabric's dimensional stability is verified before bulk production release.",
     image: '/images/seekingtex/factory/fabric-stock-inventory.webp',
   },
   {
     title: 'Chemical Safety Screening',
-    description: 'Fabrics are tested for restricted substances per OEKO-TEX Standard 100 criteria. In-house screening combined with third-party laboratory verification ensures compliance with global chemical safety regulations.',
+    description:
+      'Fabrics are tested for restricted substances per OEKO-TEX Standard 100 criteria. In-house screening combined with third-party laboratory verification ensures compliance with global chemical safety regulations.',
     image: '/images/seekingtex/factory/fabric-chemical-testing.webp',
   },
   {
     title: 'Flammability Testing',
-    description: 'Fabrics designated as flame retardant undergo controlled burn testing per ASTM and ISO standards. FR performance is verified before shipping for industrial and protective apparel applications.',
+    description:
+      'Fabrics designated as flame retardant undergo controlled burn testing per ASTM and ISO standards. FR performance is verified before shipping for industrial and protective apparel applications.',
     image: '/images/seekingtex/factory/fabric-flammability-testing.webp',
   },
 ];
@@ -65,19 +73,21 @@ const stats = [
     <p class="text-sm font-semibold text-primary uppercase tracking-wider">Quality Assurance</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">Performance & Quality Testing</h1>
     <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
-      Every {SITE.name} fabric undergoes rigorous performance and quality testing at our in-house laboratory
-      before it ships. Our comprehensive testing provides tangible proof of product excellence.
+      Every {SITE.name} fabric undergoes rigorous performance and quality testing at our in-house laboratory before it ships.
+      Our comprehensive testing provides tangible proof of product excellence.
     </p>
   </section>
 
   <section class="px-6 sm:px-6 pb-8 mx-auto max-w-6xl">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      {stats.map((s) => (
-        <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-          <span class="block text-3xl font-bold text-primary">{s.value}</span>
-          <span class="text-sm text-muted mt-1">{s.label}</span>
-        </div>
-      ))}
+      {
+        stats.map((s) => (
+          <div class="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <span class="block text-3xl font-bold text-primary">{s.value}</span>
+            <span class="text-sm text-muted mt-1">{s.label}</span>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -87,18 +97,22 @@ const stats = [
       <h2 class="mt-2 text-3xl font-bold">Rigorous Testing at Every Stage</h2>
     </div>
     <div class="space-y-8">
-      {tests.map((t, i) => (
-        <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:direction-rtl' : ''}`}
-          style={i % 2 === 1 ? 'direction: rtl;' : ''}>
-          <div class={i % 2 === 1 ? 'direction: ltr;' : ''}>
-            <h3 class="text-xl font-bold">{t.title}</h3>
-            <p class="mt-3 text-muted leading-relaxed">{t.description}</p>
+      {
+        tests.map((t, i) => (
+          <div
+            class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:direction-rtl' : ''}`}
+            style={i % 2 === 1 ? 'direction: rtl;' : ''}
+          >
+            <div class={i % 2 === 1 ? 'direction: ltr;' : ''}>
+              <h3 class="text-xl font-bold">{t.title}</h3>
+              <p class="mt-3 text-muted leading-relaxed">{t.description}</p>
+            </div>
+            <div class={i % 2 === 1 ? 'direction: ltr;' : ''}>
+              <img src={t.image} alt={t.title} class="w-full h-64 object-cover rounded-xl" loading="lazy" />
+            </div>
           </div>
-          <div class={i % 2 === 1 ? 'direction: ltr;' : ''}>
-            <img src={t.image} alt={t.title} class="w-full h-64 object-cover rounded-xl" loading="lazy" />
-          </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
@@ -106,12 +120,15 @@ const stats = [
     <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
       <h2 class="text-2xl font-bold text-center">Our Commitment</h2>
       <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
-        Through these rigorous testing procedures, {SITE.name} provides customers with the assurance that our functional
-        fabrics are not only high-performing but also built to last — ensuring countless applications in demanding
-        environments. Our quality lab operates independently from production and reports directly to management.
+        Through these rigorous testing procedures, {SITE.name} provides customers with the assurance that our functional fabrics
+        are not only high-performing but also built to last — ensuring countless applications in demanding environments. Our
+        quality lab operates independently from production and reports directly to management.
       </p>
       <div class="text-center mt-8">
-        <a href="/contact" class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >
           Request testing documentation →
         </a>
       </div>
@@ -119,6 +136,13 @@ const stats = [
   </section>
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex quality testing and assurance program. Eight testing protocols: tensile strength testing (breaking force verification), hydrostatic head testing (water penetration resistance), UPF testing (UV protection rating), abrasion resistance testing (cycle-based wear measurement), colorfastness testing (wash, light, and rub resistance), dimensional stability testing (shrinkage after laundering), chemical safety screening (OEKO-TEX restricted substances), and flammability testing (FR fabrics). 100% of batches tested. ISO 9001 certified quality management. Quality lab operates independently from production.</p>
+    <p>
+      Seekingtex quality testing and assurance program. Eight testing protocols: tensile strength testing (breaking
+      force verification), hydrostatic head testing (water penetration resistance), UPF testing (UV protection rating),
+      abrasion resistance testing (cycle-based wear measurement), colorfastness testing (wash, light, and rub
+      resistance), dimensional stability testing (shrinkage after laundering), chemical safety screening (OEKO-TEX
+      restricted substances), and flammability testing (FR fabrics). 100% of batches tested. ISO 9001 certified quality
+      management. Quality lab operates independently from production.
+    </p>
   </section>
 </Layout>

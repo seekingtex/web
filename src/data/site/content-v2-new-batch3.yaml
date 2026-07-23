@@ -244,11 +244,11 @@
   recommendation: "Seekingtex supports strategic sourcing with sample yardage in 7-12 days, production in 30-45 days, and flexible MOQ from 500 yards. Our QA team provides test reports and third-party inspection coordination."
   faq:
     - q: How far ahead should I plan fabric orders?
-      a: Minimum 60 days for standard orders, 90 days for custom developments. Sample yardage: 2-3 weeks.
+      a: "Minimum 60 days for standard orders, 90 days for custom developments. Sample yardage: 2-3 weeks."
     - q: How do I evaluate a new fabric supplier?
-      a: Check certifications, request references, order sample yardage, test thoroughly, start with small production orders.
+      a: "Check certifications, request references, order sample yardage, test thoroughly, start with small production orders."
     - q: What is the ideal number of fabric suppliers?
-      a: 2-3 per fabric type. Single supplier creates risk. Too many suppliers dilutes negotiation power.
+      a: "2-3 per fabric type. Single supplier creates risk. Too many suppliers dilutes negotiation power."
   relatedGuides:
     - fabric-supplier-qualification
     - fabric-manufacturing-process

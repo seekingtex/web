@@ -14,7 +14,14 @@ if (!token) return Astro.redirect('/keystatic/github-token');
 const file = 'src/data/site/countries.yaml';
 
 const locales = ['en', 'zh', 'fr', 'de', 'es', 'pt'] as const;
-const localeLabels: Record<string, string> = { en: 'English', zh: '中文', fr: 'Français', de: 'Deutsch', es: 'Español', pt: 'Português' };
+const localeLabels: Record<string, string> = {
+  en: 'English',
+  zh: '中文',
+  fr: 'Français',
+  de: 'Deutsch',
+  es: 'Español',
+  pt: 'Português',
+};
 
 let countries: any[] = [];
 let sha = '';
@@ -38,23 +45,35 @@ try {
   <div class="mb-6">
     <h1 class="text-2xl font-semibold">Countries</h1>
     <p class="mt-1 text-sm text-gray-500">
-      Country list with localized names and dialing codes for the contact form dropdown. File: <code class="font-mono">{file}</code> ({countries.length} countries)
+      Country list with localized names and dialing codes for the contact form dropdown. File: <code class="font-mono"
+        >{file}</code
+      > ({countries.length} countries)
     </p>
   </div>
 
-  {loadError && (
-    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-      Failed to read: {loadError}
-    </div>
-  )}
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Failed to read: {loadError}
+      </div>
+    )
+  }
 
   <form id="form" class="pb-32" data-file={file} data-sha={sha}>
     <div class="mb-4 flex items-center gap-3">
-      <input id="filter" type="text" placeholder="Search countries..."
-        class="w-full max-w-xs px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm" />
+      <input
+        id="filter"
+        type="text"
+        placeholder="Search countries..."
+        class="w-full max-w-xs px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+      />
       <span class="text-xs text-gray-400"><span id="count">{countries.length}</span> countries</span>
-      <button id="add-btn" type="button"
-        class="ml-auto px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md">+ Add</button>
+      <button
+        id="add-btn"
+        type="button"
+        class="ml-auto px-4 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md"
+        >+ Add</button
+      >
     </div>
 
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden">
@@ -62,47 +81,72 @@ try {
         <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
           <tr>
             <th class="text-left px-4 py-2 font-medium text-gray-500 w-48">Value</th>
-            {locales.map((l) => (
-              <th class="text-left px-2 py-2 font-medium text-gray-500 text-xs">{localeLabels[l]}</th>
-            ))}
+            {
+              locales.map((l) => (
+                <th class="text-left px-2 py-2 font-medium text-gray-500 text-xs">{localeLabels[l]}</th>
+              ))
+            }
             <th class="text-left px-4 py-2 font-medium text-gray-500 w-24">Tel Code</th>
             <th class="w-10"></th>
           </tr>
         </thead>
         <tbody id="tbody">
-          {countries.map((c, i) => (
-            <tr class="country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50">
-              <td class="px-4 py-2">
-                <input type="text" name={'c' + i + '.value'} value={c.value}
-                  class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm font-medium" />
-              </td>
-              {locales.map((locale) => (
-                <td class="px-2 py-1">
-                  <input type="text" name={'c' + i + '.label.' + locale}
-                    value={(c.label || {})[locale] || ''}
-                    class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" />
+          {
+            countries.map((c, i) => (
+              <tr class="country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50">
+                <td class="px-4 py-2">
+                  <input
+                    type="text"
+                    name={'c' + i + '.value'}
+                    value={c.value}
+                    class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm font-medium"
+                  />
                 </td>
-              ))}
-              <td class="px-4 py-2">
-                <input type="text" name={'c' + i + '.tel'} value={c.tel || ''}
-                  class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm" />
-              </td>
-              <td class="px-2 py-2">
-                <button type="button" class="remove-btn text-red-500 hover:text-red-700 text-lg leading-none">&times;</button>
-              </td>
-            </tr>
-          ))}
+                {locales.map((locale) => (
+                  <td class="px-2 py-1">
+                    <input
+                      type="text"
+                      name={'c' + i + '.label.' + locale}
+                      value={(c.label || {})[locale] || ''}
+                      class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm"
+                    />
+                  </td>
+                ))}
+                <td class="px-4 py-2">
+                  <input
+                    type="text"
+                    name={'c' + i + '.tel'}
+                    value={c.tel || ''}
+                    class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm"
+                  />
+                </td>
+                <td class="px-2 py-2">
+                  <button type="button" class="remove-btn text-red-500 hover:text-red-700 text-lg leading-none">
+                    &times;
+                  </button>
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
     </div>
 
-    <div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40">
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 z-40"
+    >
       <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
         <div class="text-xs text-gray-500">File: <code class="font-mono">{file}</code></div>
         <div class="flex gap-2">
-          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline">Cancel</a>
-          <button id="submit-btn" type="submit"
-            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md">Save & Push</button>
+          <a href="/keystatic" class="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:underline"
+            >Cancel</a
+          >
+          <button
+            id="submit-btn"
+            type="submit"
+            class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md"
+            >Save & Push</button
+          >
         </div>
       </div>
     </div>
@@ -127,9 +171,7 @@ try {
           const rows = tbody.querySelectorAll('tr');
           let visible = 0;
           rows.forEach((row) => {
-            const match = Array.from(row.querySelectorAll('input')).some((inp) =>
-              inp.value.toLowerCase().includes(q)
-            );
+            const match = Array.from(row.querySelectorAll('input')).some((inp) => inp.value.toLowerCase().includes(q));
             row.style.display = match ? '' : 'none';
             if (match) visible++;
           });
@@ -154,7 +196,8 @@ try {
       // Add row
       document.getElementById('add-btn')?.addEventListener('click', () => {
         const tr = document.createElement('tr');
-        tr.className = 'country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50';
+        tr.className =
+          'country-row border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900/50';
         const idx = tbody?.querySelectorAll('tr').length || 0;
         let html = `<td class="px-4 py-2"><input type="text" name="c${idx}.value" value="" class="w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-900 text-sm font-medium" placeholder="Country name" /></td>`;
         locales.forEach((l) => {
@@ -186,7 +229,10 @@ try {
       // Submit
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Pushing...'; }
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Pushing...';
+        }
         const fd = new FormData(form);
 
         // Build structured country list
@@ -228,14 +274,22 @@ try {
           const result = await res.json();
           if (!res.ok || !result.success) {
             window.__adminToast?.(result.error || 'Save failed', 'error');
-            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Save & Push'; }
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Save & Push';
+            }
             return;
           }
           window.__adminToast?.('Saved, Cloudflare is redeploying...', 'success');
-          setTimeout(() => { window.location.reload(); }, 800);
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
         } catch {
           window.__adminToast?.('Network error', 'error');
-          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Save & Push'; }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Save & Push';
+          }
         }
       });
     })();

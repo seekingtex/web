@@ -53,9 +53,7 @@
         ]
       }
     ],
-    "actions": [
-      { "text": "Request a Quote", "href": "/contact", "variant": "primary" }
-    ]
+    "actions": [{ "text": "Request a Quote", "href": "/contact", "variant": "primary" }]
   },
   "footer": {
     "links": [

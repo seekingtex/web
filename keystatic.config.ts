@@ -649,7 +649,8 @@ export default config({
         }),
         contact_submissions_pat: fields.text({
           label: 'GitHub PAT for Submissions',
-          description: 'Optional. Scoped GitHub token for encrypted contact form storage. Or set as Cloudflare secret: CONTACT_SUBMISSIONS_PAT',
+          description:
+            'Optional. Scoped GitHub token for encrypted contact form storage. Or set as Cloudflare secret: CONTACT_SUBMISSIONS_PAT',
         }),
         gmap_api_key: fields.text({
           label: 'Google Maps API Key',

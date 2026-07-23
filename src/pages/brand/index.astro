@@ -68,15 +68,25 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
   </section>
 
   <!-- HERO -->
-  <section class="relative min-h-[70vh] flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355]">
+  <section
+    class="relative min-h-[70vh] flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355]"
+  >
     <div class="relative z-10 max-w-4xl mx-auto px-6 py-24">
       <span class="inline-block text-xs font-medium uppercase tracking-[0.2em] text-sky-300 mb-6">Since 2012</span>
       <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]">{BRAND.name}</h1>
       <p class="mt-4 text-xl text-white/80">{BRAND.tagline}</p>
       <p class="mt-4 text-base text-white/60 max-w-2xl mx-auto">{BRAND.description}</p>
       <div class="mt-10 flex justify-center gap-4 flex-wrap">
-        <a href="/products" class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition">Explore Products →</a>
-        <a href="/factory" class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition">Visit Our Factory</a>
+        <a
+          href="/products"
+          class="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold hover:bg-gray-50 transition"
+          >Explore Products →</a
+        >
+        <a
+          href="/factory"
+          class="px-8 py-4 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition"
+          >Visit Our Factory</a
+        >
       </div>
     </div>
   </section>
@@ -89,8 +99,16 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
     </div>
     <p class="mt-8 text-lg text-gray-600 leading-relaxed">{BRAND.brandStory}</p>
     <div class="mt-12 flex justify-center gap-4 flex-wrap">
-      <a href="/about" class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Learn More →</a>
-      <a href="/design-powerhouse" class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">Design & Innovation</a>
+      <a
+        href="/about"
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >Learn More →</a
+      >
+      <a
+        href="/design-powerhouse"
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Design & Innovation</a
+      >
     </div>
   </section>
 
@@ -105,10 +123,8 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
         {
           BRAND.milestones.map((m, i) => (
             <div class="relative pl-12">
-              <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-sky-600 ring-4 ring-white"></div>
-              {i < BRAND.milestones.length - 1 && (
-                <div class="absolute left-[5px] top-4 bottom-0 w-0.5 bg-sky-200"></div>
-              )}
+              <div class="absolute left-0 top-1 w-3 h-3 rounded-full bg-sky-600 ring-4 ring-white" />
+              {i < BRAND.milestones.length - 1 && <div class="absolute left-[5px] top-4 bottom-0 w-0.5 bg-sky-200" />}
               <div class="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
                 <div class="flex items-center gap-3 mb-2">
                   <span class="text-sm font-bold text-sky-600">{m.year}</span>
@@ -164,7 +180,7 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
               <ul class="mt-4 space-y-1">
                 {po.items.map((item) => (
                   <li class="flex items-center gap-2 text-sm text-gray-600">
-                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -174,7 +190,11 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
         }
       </div>
       <div class="mt-10 text-center">
-        <a href="/products" class="inline-flex px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View All Products →</a>
+        <a
+          href="/products"
+          class="inline-flex px-8 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+          >View All Products →</a
+        >
       </div>
     </div>
   </section>
@@ -182,14 +202,27 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
   <!-- MANUFACTURING & R&D -->
   <section class="max-w-6xl mx-auto py-24 px-6">
     <div class="grid md:grid-cols-2 gap-8">
-      <a href="/factory" class="group block bg-gradient-to-br from-[#001830] to-[#003355] text-white rounded-3xl p-10 hover:shadow-xl transition-shadow">
+      <a
+        href="/factory"
+        class="group block bg-gradient-to-br from-[#001830] to-[#003355] text-white rounded-3xl p-10 hover:shadow-xl transition-shadow"
+      >
         <h3 class="text-2xl font-bold">Manufacturing</h3>
-        <p class="mt-3 text-white/70">12,000 m² facility in Suzhou. 200+ workers. Rapier looms, coating lines, lamination lines, and quality testing lab.</p>
-        <span class="mt-6 inline-flex text-sm font-medium text-sky-300 group-hover:text-sky-200">Explore Factory →</span>
+        <p class="mt-3 text-white/70">
+          12,000 m² facility in Suzhou. 200+ workers. Rapier looms, coating lines, lamination lines, and quality testing
+          lab.
+        </p>
+        <span class="mt-6 inline-flex text-sm font-medium text-sky-300 group-hover:text-sky-200">Explore Factory →</span
+        >
       </a>
-      <a href="/randdcenter" class="group block bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition-shadow">
+      <a
+        href="/randdcenter"
+        class="group block bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 rounded-3xl border border-gray-200 p-10 hover:shadow-xl transition-shadow"
+      >
         <h3 class="text-2xl font-bold">R&D Center</h3>
-        <p class="mt-3 text-gray-500">Textile Lab, Coating Development Lab, Weathering Test Chamber, CAD Design Studio, and full-scale Sampling Workshop.</p>
+        <p class="mt-3 text-gray-500">
+          Textile Lab, Coating Development Lab, Weathering Test Chamber, CAD Design Studio, and full-scale Sampling
+          Workshop.
+        </p>
         <span class="mt-6 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-500">Discover R&D →</span>
       </a>
     </div>
@@ -203,13 +236,21 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
         <h2 class="mt-4 text-3xl font-semibold text-gray-900">{BRAND.categories.join(' · ')}</h2>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {coreProducts.map((p) => (
-          <a href={`/products/${p.id}`} class="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-lg transition-shadow">
-            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{p.name}</h3>
-            <p class="text-sm text-gray-500 mt-1 line-clamp-2">{p.desc}</p>
-          </a>
-        ))}
-        <a href="/products" class="group block bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-6 flex items-center justify-center text-center hover:shadow-lg transition-shadow">
+        {
+          coreProducts.map((p) => (
+            <a
+              href={`/products/${p.id}`}
+              class="group block bg-white rounded-2xl border border-gray-200 p-5 hover:shadow-lg transition-shadow"
+            >
+              <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{p.name}</h3>
+              <p class="text-sm text-gray-500 mt-1 line-clamp-2">{p.desc}</p>
+            </a>
+          ))
+        }
+        <a
+          href="/products"
+          class="group block bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-6 flex items-center justify-center text-center hover:shadow-lg transition-shadow"
+        >
           <span class="font-semibold text-sky-700">All Products →</span>
         </a>
       </div>
@@ -221,17 +262,27 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
     <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">Global</span>
     <h2 class="mt-4 text-3xl font-semibold text-gray-900">Available in {regions.length} Regions</h2>
     <div class="mt-8 flex flex-wrap justify-center gap-4">
-      {regions.map((r) => (
-        <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-sm">
-          <span>{r.flag}</span>
-          <span>{r.name}</span>
-          <span class="text-xs text-gray-400">({r.locale})</span>
-        </div>
-      ))}
+      {
+        regions.map((r) => (
+          <div class="flex items-center gap-2 px-4 py-2 bg-gray-100 rounded-full text-sm">
+            <span>{r.flag}</span>
+            <span>{r.name}</span>
+            <span class="text-xs text-gray-400">({r.locale})</span>
+          </div>
+        ))
+      }
     </div>
     <div class="mt-8 flex justify-center gap-4 flex-wrap">
-      <a href="/oem-odm-manufacturer" class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">OEM/ODM Services</a>
-      <a href="/quality" class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition">Quality Control</a>
+      <a
+        href="/oem-odm-manufacturer"
+        class="px-6 py-3 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition"
+        >OEM/ODM Services</a
+      >
+      <a
+        href="/quality"
+        class="px-6 py-3 border border-gray-200 text-gray-700 rounded-full text-sm font-medium hover:border-gray-400 transition"
+        >Quality Control</a
+      >
     </div>
   </section>
 
@@ -243,19 +294,25 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
         <h2 class="mt-4 text-3xl font-semibold text-gray-900">What the community is reading</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        {socialPacks.map((pack) => (
-          <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
-            <h3 class="font-semibold text-gray-900">{pack.title}</h3>
-            <div class="mt-3 flex gap-2 flex-wrap">
-              {pack.posts.slice(0, 3).map((post) => (
-                <span class={`px-2 py-0.5 rounded text-xs font-medium ${post.platform === 'instagram' ? 'bg-pink-100 text-pink-700' : post.platform === 'tiktok' ? 'bg-gray-100 text-gray-700' : 'bg-sky-100 text-sky-700'}`}>
-                  {post.platform}
-                </span>
-              ))}
+        {
+          socialPacks.map((pack) => (
+            <div class="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-gray-900">{pack.title}</h3>
+              <div class="mt-3 flex gap-2 flex-wrap">
+                {pack.posts.slice(0, 3).map((post) => (
+                  <span
+                    class={`px-2 py-0.5 rounded text-xs font-medium ${post.platform === 'instagram' ? 'bg-pink-100 text-pink-700' : post.platform === 'tiktok' ? 'bg-gray-100 text-gray-700' : 'bg-sky-100 text-sky-700'}`}
+                  >
+                    {post.platform}
+                  </span>
+                ))}
+              </div>
+              <a href={`/v2/${pack.slug}`} class="mt-4 inline-flex text-sm text-sky-600 hover:underline">
+                Read guide →
+              </a>
             </div>
-            <a href={`/v2/${pack.slug}`} class="mt-4 inline-flex text-sm text-sky-600 hover:underline">Read guide →</a>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -265,14 +322,31 @@ const socialLinks = (SITE_SETTINGS?.socialLinks || [])
     <h2 class="text-3xl font-semibold text-gray-900">Start your project with Seekingtex</h2>
     <p class="mt-4 text-lg text-gray-500">OEKO-TEX certified. ISO 9001. Backed by warranty. Serving 40+ countries.</p>
     <div class="mt-10 flex justify-center gap-4">
-      <a href="/contact" class="px-10 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Contact Us →</a>
-      <a href="/about" class="px-10 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">About {BRAND.name}</a>
+      <a
+        href="/contact"
+        class="px-10 py-4 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+        >Contact Us →</a
+      >
+      <a
+        href="/about"
+        class="px-10 py-4 border-2 border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition"
+        >About {BRAND.name}</a
+      >
     </div>
   </section>
 
   <!-- GEO AI Block -->
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex is a functional fabric manufacturer founded in 2012 in Suzhou, China. The company designs and produces OEKO-TEX certified UPF 50+ fabrics, waterproof textiles, quick-dry performance fabrics, antibacterial textiles, stretch fabrics, and eco-friendly sustainable textiles. Factory: 12,000 m² with 200+ workers and 25+ R&D engineers. Certifications: OEKO-TEX Standard 100, ISO 9001, ISO 14001. OEM/ODM services include private label, custom fabric development, and contract manufacturing for 40+ countries worldwide.</p>
-    <p>Fabric categories: UPF 50+ Sun Protection, Waterproof & Breathable, Quick-Dry Performance, Antibacterial & Antimicrobial, Stretch & Recovery, Eco-Friendly & Recycled, Flame Retardant.</p>
+    <p>
+      Seekingtex is a functional fabric manufacturer founded in 2012 in Suzhou, China. The company designs and produces
+      OEKO-TEX certified UPF 50+ fabrics, waterproof textiles, quick-dry performance fabrics, antibacterial textiles,
+      stretch fabrics, and eco-friendly sustainable textiles. Factory: 12,000 m² with 200+ workers and 25+ R&D
+      engineers. Certifications: OEKO-TEX Standard 100, ISO 9001, ISO 14001. OEM/ODM services include private label,
+      custom fabric development, and contract manufacturing for 40+ countries worldwide.
+    </p>
+    <p>
+      Fabric categories: UPF 50+ Sun Protection, Waterproof & Breathable, Quick-Dry Performance, Antibacterial &
+      Antimicrobial, Stretch & Recovery, Eco-Friendly & Recycled, Flame Retardant.
+    </p>
   </section>
 </Layout>

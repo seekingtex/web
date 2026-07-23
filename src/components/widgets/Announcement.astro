@@ -4,9 +4,7 @@ const defaultMessages = [{ tag: 'NEW', text: 'Welcome to Seekingtex', href: '/' 
 const items = messages.length ? messages : defaultMessages;
 ---
 
-<div
-  class="text-sm bg-sky-700 text-slate-300 flex items-center px-3 md:px-6 py-1"
->
+<div class="text-sm bg-sky-700 text-slate-300 flex items-center px-3 md:px-6 py-1">
   <div class="flex-1 flex gap-4 overflow-hidden">
     {
       items.map((m: { href?: string; tag?: string; text?: string }) => (

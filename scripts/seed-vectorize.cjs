@@ -13,9 +13,8 @@
  * (OAuth token from `npx wrangler login` works as API_TOKEN.)
  */
 
- 
 const fs = require('fs');
- 
+
 const path = require('path');
 
 const DIST = path.resolve(__dirname, '..', 'dist', 'client');

@@ -28,8 +28,7 @@ const CTA_RULES: Array<{
   keywords: string[];
 }> = [
   {
-    match: (s) =>
-      ['fabric-for-beginners', 'beginner-guide', 'how-to-choose-fabric'].some((k) => s.includes(k)),
+    match: (s) => ['fabric-for-beginners', 'beginner-guide', 'how-to-choose-fabric'].some((k) => s.includes(k)),
     cta: {
       text: 'Browse beginner fabrics',
       link: '/products/sun-protection-fabric',
@@ -40,12 +39,9 @@ const CTA_RULES: Array<{
   },
   {
     match: (s) =>
-      [
-        'fabric-guide',
-        'what-fabric-to-wear',
-        'fabric-selection-guide',
-        'cotton-vs-polyester',
-      ].some((k) => s.includes(k)),
+      ['fabric-guide', 'what-fabric-to-wear', 'fabric-selection-guide', 'cotton-vs-polyester'].some((k) =>
+        s.includes(k)
+      ),
     cta: { text: 'Shop performance fabrics', link: '/products', reason: 'Gear guide →product category' },
     products: ['sun-protection-fabric', 'waterproof-fabric', 'quick-dry-fabric'],
     keywords: ['fabric', 'material', 'performance', 'textile'],
@@ -65,12 +61,9 @@ const CTA_RULES: Array<{
   },
   {
     match: (s) =>
-      [
-        'fabric-safety-tips',
-        'textile-safety-basics',
-        'oeko-tex-certification',
-        'fabric-care-and-safety',
-      ].some((k) => s.includes(k)),
+      ['fabric-safety-tips', 'textile-safety-basics', 'oeko-tex-certification', 'fabric-care-and-safety'].some((k) =>
+        s.includes(k)
+      ),
     cta: {
       text: 'View certified fabrics',
       link: '/products/sun-protection-fabric',
@@ -89,7 +82,13 @@ const CTA_RULES: Array<{
         'why-seekingtex-exists',
       ].some((k) => s.includes(k)),
     cta: { text: 'Explore Seekingtex', link: '/', reason: 'Brand content →brand homepage' },
-    products: ['sun-protection-fabric', 'waterproof-fabric', 'quick-dry-fabric', 'antibacterial-fabric', 'eco-friendly-fabric'],
+    products: [
+      'sun-protection-fabric',
+      'waterproof-fabric',
+      'quick-dry-fabric',
+      'antibacterial-fabric',
+      'eco-friendly-fabric',
+    ],
     keywords: ['seekingtex', 'brand', 'about', 'manufacturer'],
   },
 ];
@@ -151,7 +150,13 @@ export const BRAND_SUMMARY = {
   tagline: 'Functional Fabric Manufacturer — Sun Protection, Waterproof, Quick-Dry & Performance Textiles',
   description: 'Built for real performance conditions, not laboratory assumptions.',
   foundingYear: 2012,
-  categories: ['Sun Protection Fabrics', 'Waterproof Fabrics', 'Quick-Dry Fabrics', 'Antibacterial Fabrics', 'Stretch Fabrics'],
+  categories: [
+    'Sun Protection Fabrics',
+    'Waterproof Fabrics',
+    'Quick-Dry Fabrics',
+    'Antibacterial Fabrics',
+    'Stretch Fabrics',
+  ],
   ethos: ['Factory-direct manufacturing', 'OEM/ODM services', 'Global shipping'],
   cta: { text: 'Request a quote', link: '/contact' },
 };

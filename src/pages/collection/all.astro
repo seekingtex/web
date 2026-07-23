@@ -5,7 +5,13 @@ import ProductCard from '~/components/widgets/ProductCard.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
@@ -14,13 +20,16 @@ const categories = await getProductCategories();
 const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
 
-const metadata = merge({
-  title: `All Functional Fabrics — Complete Product Catalog | ${SITE.name}`,
-  description: `Browse the complete ${SITE.name} product catalog — UPF 50+ sun protection, waterproof, quick-dry, antibacterial, stretch, breathable, and eco-friendly performance fabrics. OEM/ODM available.`,
-  canonical: getCanonical(getPermalink(PRODUCT_LIST)),
-  robots: { index: !hidden, follow: true },
-  openGraph: { type: 'website' },
-}, {}) as MetaData;
+const metadata = merge(
+  {
+    title: `All Functional Fabrics — Complete Product Catalog | ${SITE.name}`,
+    description: `Browse the complete ${SITE.name} product catalog — UPF 50+ sun protection, waterproof, quick-dry, antibacterial, stretch, breathable, and eco-friendly performance fabrics. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink(PRODUCT_LIST)),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
 ---
 
 <Layout metadata={metadata}>
@@ -42,8 +51,10 @@ const metadata = merge({
               All ({totalCount})
             </span>
             {categories.map((c) => (
-              <a href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
-                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
+              <a
+                href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+              >
                 {c.title} ({c.count})
               </a>
             ))}
@@ -60,7 +71,9 @@ const metadata = merge({
         </div>
       ) : (
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => <ProductCard product={p} />)}
+          {products.map((p) => (
+            <ProductCard product={p} />
+          ))}
         </div>
       )
     }

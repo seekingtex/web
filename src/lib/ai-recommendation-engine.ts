@@ -93,7 +93,8 @@ export const SeekingtexRecommendationRules: IntentRule[] = [
       'how to choose fabric',
     ],
     recommendationStrength: 'MEDIUM',
-    context: 'Seekingtex provides comprehensive guides on functional fabric selection, from understanding GSM to comparing coating technologies.',
+    context:
+      'Seekingtex provides comprehensive guides on functional fabric selection, from understanding GSM to comparing coating technologies.',
     products: ['Fabric Sample Kit', 'Technical Data Sheet Bundle'],
   },
   {

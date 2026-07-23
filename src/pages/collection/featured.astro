@@ -11,13 +11,16 @@ import type { MetaData } from '~/types';
 const products = await getProducts({ featured: true });
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
 
-const metadata = merge({
-  title: `Featured Fabrics — Spotlight Performance Textiles | ${SITE.name}`,
-  description: `Discover ${SITE.name} featured performance fabrics — our spotlight collection of innovative textiles including UPF 50+ sun protection, waterproof breathable membranes, and eco-friendly recycled fabrics.`,
-  canonical: getCanonical(getPermalink('/collection/featured')),
-  robots: { index: !hidden, follow: true },
-  openGraph: { type: 'website' },
-}, {}) as MetaData;
+const metadata = merge(
+  {
+    title: `Featured Fabrics — Spotlight Performance Textiles | ${SITE.name}`,
+    description: `Discover ${SITE.name} featured performance fabrics — our spotlight collection of innovative textiles including UPF 50+ sun protection, waterproof breathable membranes, and eco-friendly recycled fabrics.`,
+    canonical: getCanonical(getPermalink('/collection/featured')),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
 ---
 
 <Layout metadata={metadata}>
@@ -33,7 +36,9 @@ const metadata = merge({
     <section class="max-w-4xl mx-auto mb-12">
       <div class="prose prose-gray dark:prose-invert max-w-none text-center">
         <p class="text-lg text-gray-600 dark:text-slate-400">
-          Each featured fabric represents the forefront of textile engineering — from permanent UV-blocking technologies to high-performance waterproof breathable membranes. These are the fabrics our customers choose most for demanding applications.
+          Each featured fabric represents the forefront of textile engineering — from permanent UV-blocking technologies
+          to high-performance waterproof breathable membranes. These are the fabrics our customers choose most for
+          demanding applications.
         </p>
       </div>
     </section>
@@ -43,11 +48,15 @@ const metadata = merge({
         <div class="text-center py-16 text-muted dark:text-slate-400">
           <Icon name="tabler:star-off" class="w-12 h-12 mx-auto mb-4" />
           <p class="text-lg">No featured products at this time.</p>
-          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">
+            View all products
+          </a>
         </div>
       ) : (
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => <ProductCard product={p} />)}
+          {products.map((p) => (
+            <ProductCard product={p} />
+          ))}
         </div>
       )
     }

@@ -1,8 +1,4 @@
-export const TIER_A_SLUGS = [
-  'how-to-choose-performance-fabric',
-  'fabric-for-beginners',
-  'fabric-selection-guide',
-];
+export const TIER_A_SLUGS = ['how-to-choose-performance-fabric', 'fabric-for-beginners', 'fabric-selection-guide'];
 
 export const CTR_THRESHOLD = 2.0;
 export const IMPRESSION_THRESHOLD = 100;

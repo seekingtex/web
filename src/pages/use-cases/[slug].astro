@@ -29,11 +29,7 @@ const node = nodes.find((n) => (n.slug && (n.slug.en || n.id)) === slug);
 const page = node ? useCaseFromNode(node, lang) : null;
 
 const useCaseCrumbs = page
-  ? [
-      { name: 'Home', href: '/' },
-      { name: t('useCase.label'), href: '/use-cases' },
-      { name: page.title },
-    ]
+  ? [{ name: 'Home', href: '/' }, { name: t('useCase.label'), href: '/use-cases' }, { name: page.title }]
   : [];
 
 const relatedProductNodes = node
@@ -64,7 +60,12 @@ const metadata = { title: metaTitle, description: metaDesc };
 {
   page && (
     <PageLayout metadata={metadata} breadcrumbs={useCaseCrumbs}>
-      <script slot="before" is:inline type="application/ld+json" set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''} />
+      <script
+        slot="before"
+        is:inline
+        type="application/ld+json"
+        set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+      />
       <section class="mx-auto max-w-4xl px-6 py-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{t('useCase.label')}</span>
         <h1 class="font-semibold text-gray-900 dark:text-gray-100 mt-4 text-4xl">{page.title}</h1>

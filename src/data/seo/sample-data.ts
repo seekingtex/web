@@ -27,7 +27,14 @@ export const sampleLowCtrPages: GscPage[] = [
     position: 12.3,
     category: 'mid-rank',
   },
-  { path: '/en/v2/polyester-vs-nylon-fabric', impressions: 310, clicks: 3, ctr: 0.97, position: 14.1, category: 'mid-rank' },
+  {
+    path: '/en/v2/polyester-vs-nylon-fabric',
+    impressions: 310,
+    clicks: 3,
+    ctr: 0.97,
+    position: 14.1,
+    category: 'mid-rank',
+  },
   {
     path: '/en/v2/antibacterial-fabric-for-activewear',
     impressions: 250,
@@ -69,7 +76,14 @@ export const sampleLowCtrPages: GscPage[] = [
     position: 8.9,
     category: 'high-impression-low-ctr',
   },
-  { path: '/en/v2/textile-sourcing-tips', impressions: 110, clicks: 1, ctr: 0.91, position: 10.7, category: 'mid-rank' },
+  {
+    path: '/en/v2/textile-sourcing-tips',
+    impressions: 110,
+    clicks: 1,
+    ctr: 0.91,
+    position: 10.7,
+    category: 'mid-rank',
+  },
   {
     path: '/en/v2/sustainable-textile-production',
     impressions: 90,

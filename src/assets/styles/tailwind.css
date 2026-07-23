@@ -209,11 +209,20 @@
 }
 
 @keyframes waveMove {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-20px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
 }
 
 @keyframes floatBoard {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-16px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
 }

@@ -6,7 +6,13 @@ import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
@@ -14,13 +20,16 @@ const products = await getProducts({ category: 'waterproof' });
 const categories = await getProductCategories();
 const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
-const metadata = merge({
-  title: `Waterproof Fabrics — Breathable & Coated Performance Textiles | ${SITE.name}`,
-  description: `Browse ${SITE.name} waterproof fabrics — PU coated, TPU laminated, PVC coated, ePTFE membrane, and seam-sealed options. OEM/ODM available. Factory-direct pricing.`,
-  canonical: getCanonical(getPermalink('/waterproof-fabric')),
-  robots: { index: !hidden, follow: true },
-  openGraph: { type: 'website' },
-}, {}) as MetaData;
+const metadata = merge(
+  {
+    title: `Waterproof Fabrics — Breathable & Coated Performance Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} waterproof fabrics — PU coated, TPU laminated, PVC coated, ePTFE membrane, and seam-sealed options. OEM/ODM available. Factory-direct pricing.`,
+    canonical: getCanonical(getPermalink('/waterproof-fabric')),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
 ---
 
 <Layout metadata={metadata}>
@@ -36,7 +45,10 @@ const metadata = merge({
     <section class="max-w-4xl mx-auto mb-12">
       <div class="prose prose-gray dark:prose-invert max-w-none text-center">
         <p class="text-lg text-gray-600 dark:text-slate-400">
-          From cost-effective PU-coated fabrics to premium ePTFE membrane laminates, our waterproof fabric range covers every performance level and budget. Each fabric is engineered for its specific application — whether you need maximum breathability for high-exertion outerwear, chemical resistance for industrial protective clothing, or complete waterproofness for heavy-duty covers and tarpaulins.
+          From cost-effective PU-coated fabrics to premium ePTFE membrane laminates, our waterproof fabric range covers
+          every performance level and budget. Each fabric is engineered for its specific application — whether you need
+          maximum breathability for high-exertion outerwear, chemical resistance for industrial protective clothing, or
+          complete waterproofness for heavy-duty covers and tarpaulins.
         </p>
       </div>
     </section>
@@ -44,19 +56,31 @@ const metadata = merge({
     <section class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">PU Coated Fabrics</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Cost-effective microporous PU coating. 10,000mm hydrostatic head with 5,000 MVTR breathability. Ideal for rainwear and outdoor shells.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Cost-effective microporous PU coating. 10,000mm hydrostatic head with 5,000 MVTR breathability. Ideal for
+          rainwear and outdoor shells.
+        </p>
       </div>
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">TPU Laminated Fabrics</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Heavy-duty nylon with TPU film. 20,000mm waterproofness, chemical resistance, and flexibility to -30°C. For protective and marine applications.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Heavy-duty nylon with TPU film. 20,000mm waterproofness, chemical resistance, and flexibility to -30°C. For
+          protective and marine applications.
+        </p>
       </div>
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">ePTFE Membranes</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Premium 3-layer laminate. 30,000mm hydrostatic head with 15,000 MVTR breathability. For professional mountaineering and military gear.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Premium 3-layer laminate. 30,000mm hydrostatic head with 15,000 MVTR breathability. For professional
+          mountaineering and military gear.
+        </p>
       </div>
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">PVC Coated Fabrics</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">High-tenacity polyester scrim with double-sided PVC. 30,000mm+ waterproofness. For tarpaulins, truck covers, and industrial uses.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          High-tenacity polyester scrim with double-sided PVC. 30,000mm+ waterproofness. For tarpaulins, truck covers,
+          and industrial uses.
+        </p>
       </div>
     </section>
 
@@ -64,18 +88,23 @@ const metadata = merge({
       categories.length > 0 && (
         <WidgetWrapper containerClass="mb-10">
           <div class="flex flex-wrap items-center justify-center gap-2">
-            <a href="/products" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
+            <a
+              href="/products"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+            >
               <Icon name="tabler:layout-grid" class="w-4 h-4" />
               All Products
             </a>
             {categories.map((c) => (
-              <a href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
+              <a
+                href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
                 class:list={[
                   'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors',
                   c.slug === 'waterproof'
                     ? 'bg-primary text-white border-primary dark:bg-blue-500 dark:border-blue-500'
                     : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700',
-                ]}>
+                ]}
+              >
                 {c.title} ({c.count})
               </a>
             ))}
@@ -89,11 +118,15 @@ const metadata = merge({
         <div class="text-center py-16 text-muted dark:text-slate-400">
           <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
           <p class="text-lg">No products in this category yet.</p>
-          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">
+            View all products
+          </a>
         </div>
       ) : (
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => <ProductCard product={p} />)}
+          {products.map((p) => (
+            <ProductCard product={p} />
+          ))}
         </div>
       )
     }
@@ -102,6 +135,10 @@ const metadata = merge({
   {products.map((p) => <QuickViewModal productId={p.slug} />)}
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex waterproof fabric collection: PU coated polyester (10K/5K), TPU laminated nylon 66 (20K), ePTFE 3-layer membrane (30K/15K), PVC coated polyester scrim (30K+), and seam-sealed waterproof fabrics. OEKO-TEX Standard 100 certified.</p>
+    <p>
+      Seekingtex waterproof fabric collection: PU coated polyester (10K/5K), TPU laminated nylon 66 (20K), ePTFE 3-layer
+      membrane (30K/15K), PVC coated polyester scrim (30K+), and seam-sealed waterproof fabrics. OEKO-TEX Standard 100
+      certified.
+    </p>
   </section>
 </Layout>

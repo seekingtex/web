@@ -10,7 +10,7 @@
 const CF_API = 'https://api.cloudflare.com/client/v4';
 
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID || process.env.CF_ACCOUNT_ID;
-const API_TOKEN  = process.env.CLOUDFLARE_API_TOKEN || process.env.CF_API_TOKEN;
+const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN || process.env.CF_API_TOKEN;
 
 const BUCKET_NAME = 'seekingtex-assets';
 const CUSTOM_DOMAIN = 'products.asset.seekingtex.com';
@@ -25,7 +25,7 @@ async function cf(method, path, body) {
   const res = await fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined });
   const data = await res.json();
   if (!data.success) {
-    const msgs = (data.errors || []).map(e => e.message).join('; ');
+    const msgs = (data.errors || []).map((e) => e.message).join('; ');
     throw new Error(`CF API error (${method} ${path}): ${msgs || JSON.stringify(data)}`);
   }
   return data.result;
@@ -85,12 +85,14 @@ async function main() {
 
   // 3. Check if custom domain is already attached
   const domains = await listCustomDomains();
-  const existing = domains.find(d => d.domain === CUSTOM_DOMAIN);
+  const existing = domains.find((d) => d.domain === CUSTOM_DOMAIN);
 
   if (existing) {
     console.log(`  [ok] Custom domain "${CUSTOM_DOMAIN}" is already attached — enabling if needed`);
     if (!existing.enabled) {
-      await cf('PUT', `/accounts/${ACCOUNT_ID}/r2/buckets/${BUCKET_NAME}/domains/custom/${CUSTOM_DOMAIN}`, { enabled: true });
+      await cf('PUT', `/accounts/${ACCOUNT_ID}/r2/buckets/${BUCKET_NAME}/domains/custom/${CUSTOM_DOMAIN}`, {
+        enabled: true,
+      });
       console.log(`  [ok] Custom domain "${CUSTOM_DOMAIN}" enabled`);
     }
   } else {
@@ -114,7 +116,7 @@ async function main() {
   console.log(`    curl -I https://${CUSTOM_DOMAIN}/images/<any-filename>`);
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error(`\nFAILED: ${err.message}`);
   process.exit(1);
 });

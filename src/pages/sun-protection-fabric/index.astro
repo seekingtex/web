@@ -6,7 +6,13 @@ import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getProducts, getProductCategories, isProductsEnabled, isProductsListEnabled, CATEGORY_SLUG_TO_URL } from '~/utils/products';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
 
@@ -14,20 +20,25 @@ const products = await getProducts({ category: 'sun-protection' });
 const categories = await getProductCategories();
 const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
-const metadata = merge({
-  title: `Sun Protection Fabrics — UPF 50+ Performance Textiles | ${SITE.name}`,
-  description: `Browse ${SITE.name} UPF 50+ sun protection fabrics — UV-blocking polyester, nylon, cotton blends, and knitted options. OEM/ODM available for bulk orders. Factory-direct pricing.`,
-  canonical: getCanonical(getPermalink('/sun-protection-fabric')),
-  robots: { index: !hidden, follow: true },
-  openGraph: { type: 'website' },
-}, {}) as MetaData;
+const metadata = merge(
+  {
+    title: `Sun Protection Fabrics — UPF 50+ Performance Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} UPF 50+ sun protection fabrics — UV-blocking polyester, nylon, cotton blends, and knitted options. OEM/ODM available for bulk orders. Factory-direct pricing.`,
+    canonical: getCanonical(getPermalink('/sun-protection-fabric')),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
 ---
 
 <Layout metadata={metadata}>
   <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
     <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
       <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Category</p>
-      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">Sun Protection Fabrics</h1>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Sun Protection Fabrics
+      </h1>
       <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
         UPF 50+ UV-blocking performance textiles — permanent sun protection that will not wash out.
       </p>
@@ -36,7 +47,10 @@ const metadata = merge({
     <section class="max-w-4xl mx-auto mb-12">
       <div class="prose prose-gray dark:prose-invert max-w-none text-center">
         <p class="text-lg text-gray-600 dark:text-slate-400">
-          Our sun protection fabric collection delivers certified UPF 50+ protection through advanced UV-blocking technologies. Whether you need UV-absorbing ceramic masterbatch integrated polyester, UV-stabilized nylon 6.6, or tight-weave cotton-synthetic blends, each fabric is engineered for permanent sun protection that will not wash out or degrade. Ideal for outdoor apparel, sportswear, swimwear, workwear, and uniform applications.
+          Our sun protection fabric collection delivers certified UPF 50+ protection through advanced UV-blocking
+          technologies. Whether you need UV-absorbing ceramic masterbatch integrated polyester, UV-stabilized nylon 6.6,
+          or tight-weave cotton-synthetic blends, each fabric is engineered for permanent sun protection that will not
+          wash out or degrade. Ideal for outdoor apparel, sportswear, swimwear, workwear, and uniform applications.
         </p>
       </div>
     </section>
@@ -44,15 +58,24 @@ const metadata = merge({
     <section class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">UPF 50+ Woven Fabrics</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Ceramic-infused polyester, UV-stabilized nylon 6.6, and tight-weave cotton-synthetic blends. Permanent UV protection embedded at the fiber level.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Ceramic-infused polyester, UV-stabilized nylon 6.6, and tight-weave cotton-synthetic blends. Permanent UV
+          protection embedded at the fiber level.
+        </p>
       </div>
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">UV-Blocking Knits</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">4-way stretch circular knits with UV-blocking yarn technology. Superior comfort for high-movement athletic apparel with certified sun protection.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          4-way stretch circular knits with UV-blocking yarn technology. Superior comfort for high-movement athletic
+          apparel with certified sun protection.
+        </p>
       </div>
       <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
         <h3 class="font-semibold text-gray-900 dark:text-slate-200">Sun Protection Mesh</h3>
-        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">Open-weave UV-stabilized polyester mesh for shade structures, protective covers, and industrial screening. HALS stabilized for 5-7 year outdoor lifespan.</p>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Open-weave UV-stabilized polyester mesh for shade structures, protective covers, and industrial screening.
+          HALS stabilized for 5-7 year outdoor lifespan.
+        </p>
       </div>
     </section>
 
@@ -60,18 +83,23 @@ const metadata = merge({
       categories.length > 0 && (
         <WidgetWrapper containerClass="mb-10">
           <div class="flex flex-wrap items-center justify-center gap-2">
-            <a href="/products" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors">
+            <a
+              href="/products"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+            >
               <Icon name="tabler:layout-grid" class="w-4 h-4" />
               All Products
             </a>
             {categories.map((c) => (
-              <a href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
+              <a
+                href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
                 class:list={[
                   'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors',
                   c.slug === 'sun-protection'
                     ? 'bg-primary text-white border-primary dark:bg-blue-500 dark:border-blue-500'
                     : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700',
-                ]}>
+                ]}
+              >
                 {c.title} ({c.count})
               </a>
             ))}
@@ -85,11 +113,15 @@ const metadata = merge({
         <div class="text-center py-16 text-muted dark:text-slate-400">
           <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
           <p class="text-lg">No products in this category yet.</p>
-          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">View all products</a>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">
+            View all products
+          </a>
         </div>
       ) : (
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((p) => <ProductCard product={p} />)}
+          {products.map((p) => (
+            <ProductCard product={p} />
+          ))}
         </div>
       )
     }
@@ -98,6 +130,10 @@ const metadata = merge({
   {products.map((p) => <QuickViewModal productId={p.slug} />)}
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex sun protection fabric collection: UPF 50+ woven polyester with UV-ceramic masterbatch, UV-stabilized nylon 6.6 swimwear fabrics, cotton-synthetic blend UPF fabrics, UV-blocking stretch knits, and sun protection mesh. All UV STANDARD 801 and OEKO-TEX certified.</p>
+    <p>
+      Seekingtex sun protection fabric collection: UPF 50+ woven polyester with UV-ceramic masterbatch, UV-stabilized
+      nylon 6.6 swimwear fabrics, cotton-synthetic blend UPF fabrics, UV-blocking stretch knits, and sun protection
+      mesh. All UV STANDARD 801 and OEKO-TEX certified.
+    </p>
   </section>
 </Layout>

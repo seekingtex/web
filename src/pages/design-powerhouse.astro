@@ -9,10 +9,7 @@ const metadata = {
   description: `${SITE.name} is more than a factory — we are a design-driven manufacturer. In-house R&D, textile simulation, custom ODM solutions, and advanced material engineering for global B2B partners.`,
 };
 
-const crumbs = [
-  { name: 'Home', href: '/' },
-  { name: 'Design & Innovation' },
-];
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Design & Innovation' }];
 
 const stats = [
   { value: '25+', label: 'In-House Engineers' },
@@ -22,30 +19,59 @@ const stats = [
 ];
 
 const capabilities = [
-  { title: 'Fabric Structure Simulation', desc: 'Advanced CAD and weave simulation for optimizing tensile strength, drape, weight, and dimensional stability before production.' },
-  { title: 'Coating & Laminate Engineering', desc: 'Precision coating formulation for waterproof, FR, antibacterial, and UV-protective finishes with consistent performance across batches.' },
-  { title: 'Advanced Material Science', desc: 'High-tenacity yarns, recycled fibers, functional additives, and performance coatings tested for extreme conditions and long-term durability.' },
-  { title: 'Custom Weave & Knit Development', desc: 'Custom loom setups, specialized weave patterns, and knit constructions for unique texture, strength, and performance characteristics.' },
-  { title: 'Trend-Driven Color & Finish Design', desc: 'Localized color development, brand identity integration, and bespoke finish application for global consumer markets.' },
-  { title: 'Bespoke Accessory & Trim Development', desc: 'Complete OEM accessory packages — zippers, webbing, hook-and-loop, labels — engineered to match your fabric line.' },
+  {
+    title: 'Fabric Structure Simulation',
+    desc: 'Advanced CAD and weave simulation for optimizing tensile strength, drape, weight, and dimensional stability before production.',
+  },
+  {
+    title: 'Coating & Laminate Engineering',
+    desc: 'Precision coating formulation for waterproof, FR, antibacterial, and UV-protective finishes with consistent performance across batches.',
+  },
+  {
+    title: 'Advanced Material Science',
+    desc: 'High-tenacity yarns, recycled fibers, functional additives, and performance coatings tested for extreme conditions and long-term durability.',
+  },
+  {
+    title: 'Custom Weave & Knit Development',
+    desc: 'Custom loom setups, specialized weave patterns, and knit constructions for unique texture, strength, and performance characteristics.',
+  },
+  {
+    title: 'Trend-Driven Color & Finish Design',
+    desc: 'Localized color development, brand identity integration, and bespoke finish application for global consumer markets.',
+  },
+  {
+    title: 'Bespoke Accessory & Trim Development',
+    desc: 'Complete OEM accessory packages — zippers, webbing, hook-and-loop, labels — engineered to match your fabric line.',
+  },
 ];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
   <!-- Hero -->
-  <section class="relative px-6 sm:px-6 py-20 sm:py-28 lg:py-32 mx-auto max-w-6xl text-center" style="background: linear-gradient(135deg, #0c4a6e, #0891b2);">
+  <section
+    class="relative px-6 sm:px-6 py-20 sm:py-28 lg:py-32 mx-auto max-w-6xl text-center"
+    style="background: linear-gradient(135deg, #0c4a6e, #0891b2);"
+  >
     <div class="relative z-10 max-w-4xl mx-auto">
       <p class="text-sm font-semibold text-cyan-200 uppercase tracking-wider">R&D & Design Powerhouse</p>
-      <h1 class="mt-4 text-4xl md:text-6xl font-bold text-white">Beyond Manufacturing:<br />Your Strategic Textile Design Partner</h1>
+      <h1 class="mt-4 text-4xl md:text-6xl font-bold text-white">
+        Beyond Manufacturing:<br />Your Strategic Textile Design Partner
+      </h1>
       <p class="mt-6 text-lg md:text-xl text-cyan-100 max-w-3xl mx-auto">
         We don't just produce fabrics — we engineer textile solutions. Partner with Seekingtex for proprietary R&D,
         advanced textile engineering, and turnkey ODM solutions that set your brand apart.
       </p>
       <div class="mt-10 flex items-center gap-4 flex-wrap justify-center">
-        <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+        >
           Start Your ODM Project
         </a>
-        <a href="/oem-odm-manufacturer" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-medium rounded-full hover:bg-white/10 transition-all">
+        <a
+          href="/oem-odm-manufacturer"
+          class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-medium rounded-full hover:bg-white/10 transition-all"
+        >
           Explore OEM Capabilities
         </a>
       </div>
@@ -55,12 +81,14 @@ const capabilities = [
   <!-- Stats -->
   <section class="border-y border-gray-100 bg-white">
     <div class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-      {stats.map((s) => (
-        <div class="text-center">
-          <div class="text-3xl md:text-4xl font-bold text-cyan-700">{s.value}</div>
-          <div class="mt-1 text-sm text-gray-500">{s.label}</div>
-        </div>
-      ))}
+      {
+        stats.map((s) => (
+          <div class="text-center">
+            <div class="text-3xl md:text-4xl font-bold text-cyan-700">{s.value}</div>
+            <div class="mt-1 text-sm text-gray-500">{s.label}</div>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -71,19 +99,23 @@ const capabilities = [
         <p class="text-sm font-semibold text-primary uppercase tracking-wider">Proprietary R&D & Engineering</p>
         <h2 class="mt-3 text-3xl md:text-4xl font-bold">Engineered by Experts,<br />Proven by Performance</h2>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          At Seekingtex, we don't just produce fabrics; we engineer textile solutions. Our in-house R&D team consists
-          of veteran textile engineers, polymer scientists, and performance fabric specialists. We leverage advanced
-          <strong>fabric structure simulation</strong> and computer-aided design to optimize weave patterns,
-          ensuring every functional textile delivers consistent tensile strength, dimensional stability, and performance
-          that matches customer specifications.
+          At Seekingtex, we don't just produce fabrics; we engineer textile solutions. Our in-house R&D team consists of
+          veteran textile engineers, polymer scientists, and performance fabric specialists. We leverage advanced
+          <strong>fabric structure simulation</strong> and computer-aided design to optimize weave patterns, ensuring every
+          functional textile delivers consistent tensile strength, dimensional stability, and performance that matches customer
+          specifications.
         </p>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          Every yarn, coating, and finish is meticulously planned and tested before a single yard is produced.
-          Our digital prototyping workflow reduces development time by 40% while improving first-pass yield rates.
+          Every yarn, coating, and finish is meticulously planned and tested before a single yard is produced. Our
+          digital prototyping workflow reduces development time by 40% while improving first-pass yield rates.
         </p>
       </div>
       <div class="bg-gradient-to-br from-cyan-50 to-sky-100 rounded-2xl p-8">
-        <img src="/images/seekingtex/hero/tech-meeting-small.webp" alt="Textile engineering design session" class="w-full rounded-xl shadow-lg" />
+        <img
+          src="/images/seekingtex/hero/tech-meeting-small.webp"
+          alt="Textile engineering design session"
+          class="w-full rounded-xl shadow-lg"
+        />
       </div>
     </div>
   </section>
@@ -92,20 +124,26 @@ const capabilities = [
   <section class="px-6 sm:px-6 py-20 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="order-2 md:order-1 bg-gradient-to-br from-cyan-50 to-sky-100 rounded-2xl p-8">
-        <img src="/images/seekingtex/factory/fabric-design-development.webp" alt="Performance fabric development" class="w-full rounded-xl shadow-lg" />
+        <img
+          src="/images/seekingtex/factory/fabric-design-development.webp"
+          alt="Performance fabric development"
+          class="w-full rounded-xl shadow-lg"
+        />
       </div>
       <div class="order-1 md:order-2">
         <p class="text-sm font-semibold text-primary uppercase tracking-wider">Coating & Material Integration</p>
         <h2 class="mt-3 text-3xl md:text-4xl font-bold">Textiles That<br />Perform</h2>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          Design is nothing without performance. Our textile engineering philosophy centers around <strong>functional integration</strong> —
-          from precise coating application to engineered laminate construction. We continuously
-          innovate with high-tenacity yarns, recycled fibers, and advanced performance coatings
-          to push the boundaries of what functional fabrics can achieve.
+          Design is nothing without performance. Our textile engineering philosophy centers around <strong
+            >functional integration</strong
+          > — from precise coating application to engineered laminate construction. We continuously innovate with high-tenacity
+          yarns, recycled fibers, and advanced performance coatings to push the boundaries of what functional fabrics can
+          achieve.
         </p>
         <p class="mt-4 text-gray-600 leading-relaxed">
-          Our material science team works alongside designers to select the optimal fiber, weave, coating,
-          and finish combination for every product category — whether outdoor apparel, workwear, medical textiles, or industrial fabrics.
+          Our material science team works alongside designers to select the optimal fiber, weave, coating, and finish
+          combination for every product category — whether outdoor apparel, workwear, medical textiles, or industrial
+          fabrics.
         </p>
       </div>
     </div>
@@ -118,12 +156,14 @@ const capabilities = [
       <h2 class="mt-3 text-3xl md:text-4xl font-bold">What We Engineer</h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {capabilities.map((c) => (
-        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
-          <h3 class="text-lg font-bold">{c.title}</h3>
-          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{c.desc}</p>
-        </div>
-      ))}
+      {
+        capabilities.map((c) => (
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+            <h3 class="text-lg font-bold">{c.title}</h3>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{c.desc}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -133,16 +173,18 @@ const capabilities = [
       <p class="text-sm font-semibold text-cyan-300 uppercase tracking-wider">Turnkey ODM & White-Label Solutions</p>
       <h2 class="mt-3 text-3xl md:text-4xl font-bold text-white">From Concept to Roll</h2>
       <p class="mt-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-        Whether you come with a technical data sheet or a fully-fledged brand concept, our textile engineering team brings it to life.
-        We offer comprehensive ODM services, including custom weave development, localized trend-driven color design,
-        branding integration, and <strong>bespoke finish ecosystems</strong>. We empower global brands to stand out in a
-        crowded market with signature performance textiles.
+        Whether you come with a technical data sheet or a fully-fledged brand concept, our textile engineering team
+        brings it to life. We offer comprehensive ODM services, including custom weave development, localized
+        trend-driven color design, branding integration, and <strong>bespoke finish ecosystems</strong>. We empower
+        global brands to stand out in a crowded market with signature performance textiles.
       </p>
       <div class="mt-8 grid sm:grid-cols-3 gap-4 text-left">
         <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
           <div class="text-cyan-300 text-xl font-bold">01</div>
           <h3 class="mt-2 text-white font-semibold">Concept & Design</h3>
-          <p class="mt-1 text-sm text-gray-400">From specification to prototype — we refine your vision with engineering rigor.</p>
+          <p class="mt-1 text-sm text-gray-400">
+            From specification to prototype — we refine your vision with engineering rigor.
+          </p>
         </div>
         <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
           <div class="text-cyan-300 text-xl font-bold">02</div>
@@ -152,11 +194,16 @@ const capabilities = [
         <div class="bg-white/10 rounded-xl p-5 backdrop-blur-sm">
           <div class="text-cyan-300 text-xl font-bold">03</div>
           <h3 class="mt-2 text-white font-semibold">Brand & Scale</h3>
-          <p class="mt-1 text-sm text-gray-400">Your branding, your labels — manufactured at scale with OEKO-TEX compliance.</p>
+          <p class="mt-1 text-sm text-gray-400">
+            Your branding, your labels — manufactured at scale with OEKO-TEX compliance.
+          </p>
         </div>
       </div>
       <div class="mt-10">
-        <a href="/oem-odm-manufacturer" class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all">
+        <a
+          href="/oem-odm-manufacturer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all"
+        >
           Explore Our ODM Process
         </a>
       </div>
@@ -170,10 +217,16 @@ const capabilities = [
       Partner with Seekingtex's design and R&D team. From concept to container, we deliver innovation at scale.
     </p>
     <div class="mt-8 flex items-center gap-4 flex-wrap justify-center">
-      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all">
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-[#fb923c] hover:bg-orange-600 text-white font-semibold rounded-full shadow-lg transition-all"
+      >
         Contact Our Design Team
-        </a>
-      <a href="/randdcenter" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all">
+      </a>
+      <a
+        href="/randdcenter"
+        class="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-all"
+      >
         Visit R&D Center
       </a>
     </div>
@@ -183,16 +236,20 @@ const capabilities = [
     subtitle="How our design team turns concepts into production-ready functional fabrics."
     stories={[
       {
-        quote: "The client wanted a fabric with UPF 50+ that could also breathe — beyond what anyone in the industry thought was possible for a coated textile. Our team spent 6 months on coating formulation and developed a new microporous application that made it work.",
-        narrative: "A premium outdoor brand requested a high-UPF fabric with breathability for tropical climate apparel. Seekingtex's R&D team tested 14 coating formulations, developed a new microporous PU coating technology, and created a custom weave that exceeded the client's performance targets.",
-        context: "High-UPF breathable fabric development, 2024",
-        source: "Lead R&D Engineer"
+        quote:
+          'The client wanted a fabric with UPF 50+ that could also breathe — beyond what anyone in the industry thought was possible for a coated textile. Our team spent 6 months on coating formulation and developed a new microporous application that made it work.',
+        narrative:
+          "A premium outdoor brand requested a high-UPF fabric with breathability for tropical climate apparel. Seekingtex's R&D team tested 14 coating formulations, developed a new microporous PU coating technology, and created a custom weave that exceeded the client's performance targets.",
+        context: 'High-UPF breathable fabric development, 2024',
+        source: 'Lead R&D Engineer',
       },
       {
-        quote: "We reduced the client's material waste by 40% simply by optimizing the weave pattern and finish application. Small changes in the design phase create massive savings in production.",
-        narrative: "An existing OEM client wanted to reduce production costs without changing the fabric's performance characteristics. Seekingtex's design team analyzed the entire manufacturing workflow and identified opportunities: optimizing the weave structure for better yield, adjusting the coating application method, and standardizing color recipes. The cumulative changes reduced per-yard production time by 40% while maintaining the same performance specifications.",
-        context: "Manufacturing optimization project, 2024",
-        source: "Senior Textile Designer"
+        quote:
+          "We reduced the client's material waste by 40% simply by optimizing the weave pattern and finish application. Small changes in the design phase create massive savings in production.",
+        narrative:
+          "An existing OEM client wanted to reduce production costs without changing the fabric's performance characteristics. Seekingtex's design team analyzed the entire manufacturing workflow and identified opportunities: optimizing the weave structure for better yield, adjusting the coating application method, and standardizing color recipes. The cumulative changes reduced per-yard production time by 40% while maintaining the same performance specifications.",
+        context: 'Manufacturing optimization project, 2024',
+        source: 'Senior Textile Designer',
       },
     ]}
   />
@@ -200,10 +257,30 @@ const capabilities = [
     title="Explore Design & Engineering"
     subtitle="More resources from Seekingtex's innovation ecosystem"
     links={[
-      { title: 'R&D Center', description: 'Six specialized labs including Textile Lab, Coating Development Lab, and Sampling Workshop.', href: '/randdcenter', label: 'R&D' },
-      { title: 'OEM/ODM Manufacturing', description: 'Full-service OEM/ODM: private label, custom design, and contract manufacturing.', href: '/oem-odm-manufacturer', label: 'Service' },
-      { title: 'Engineering Perfection', description: 'Our engineering philosophy covering material selection, design, and quality control.', href: '/engineering-perfection', label: 'Philosophy' },
-      { title: 'Technology Overview', description: 'Deep dive into functional textile technology and materials.', href: '/learn/fabric-technology', label: 'Technology' },
+      {
+        title: 'R&D Center',
+        description: 'Six specialized labs including Textile Lab, Coating Development Lab, and Sampling Workshop.',
+        href: '/randdcenter',
+        label: 'R&D',
+      },
+      {
+        title: 'OEM/ODM Manufacturing',
+        description: 'Full-service OEM/ODM: private label, custom design, and contract manufacturing.',
+        href: '/oem-odm-manufacturer',
+        label: 'Service',
+      },
+      {
+        title: 'Engineering Perfection',
+        description: 'Our engineering philosophy covering material selection, design, and quality control.',
+        href: '/engineering-perfection',
+        label: 'Philosophy',
+      },
+      {
+        title: 'Technology Overview',
+        description: 'Deep dive into functional textile technology and materials.',
+        href: '/learn/fabric-technology',
+        label: 'Technology',
+      },
     ]}
   />
 </Layout>

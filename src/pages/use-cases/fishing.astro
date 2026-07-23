@@ -35,12 +35,19 @@ const graphJsonLd = fishingNode
 
 const metadata = {
   title: page.seo?.headline || 'Functional Fabrics for Fashion & Casual Wear: Complete Guide',
-  description: page.seo?.description || 'Learn why functional fabrics are transforming fashion and casual wear — UV protection, quick-dry, cooling, and eco-friendly options for lifestyle apparel.',
+  description:
+    page.seo?.description ||
+    'Learn why functional fabrics are transforming fashion and casual wear — UV protection, quick-dry, cooling, and eco-friendly options for lifestyle apparel.',
 };
 ---
 
 <PageLayout metadata={metadata}>
-  <script slot="before" is:inline type="application/ld+json" set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''} />
+  <script
+    slot="before"
+    is:inline
+    type="application/ld+json"
+    set:html={graphJsonLd ? JSON.stringify(graphJsonLd) : ''}
+  />
 
   <section class="mx-auto max-w-4xl px-6 py-16">
     <span class="text-sm font-medium text-sky-600 tracking-wide uppercase">{page.label || 'Use Case'}</span>

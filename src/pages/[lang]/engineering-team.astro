@@ -15,7 +15,9 @@ const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?
 
 const metadata = {
   title: `${t('engineeringTeam.title') || 'Engineering & R&D Team — Textile Design & Manufacturing'} | ${SITE.name}`,
-  description: t('engineeringTeam.desc') || `${SITE.name}'s 25+ R&D engineers and production specialists. Expertise in fabric engineering, weaving technology, textile finishing, and ISO compliance engineering. Based in Qingdao, China.`,
+  description:
+    t('engineeringTeam.desc') ||
+    `${SITE.name}'s 25+ R&D engineers and production specialists. Expertise in fabric engineering, weaving technology, textile finishing, and ISO compliance engineering. Based in Qingdao, China.`,
   ignoreTitleTemplate: true,
 };
 
@@ -31,7 +33,11 @@ const teamMembers = [
     name: 'Lina Chen',
     role: 'Senior Materials Engineer',
     experience: '12 years specializing in textile material science, finish technology, and accelerated aging testing.',
-    expertise: ['Performance fabric characterization', 'Coating & finish optimization', 'ASTM tensile & tear strength testing'],
+    expertise: [
+      'Performance fabric characterization',
+      'Coating & finish optimization',
+      'ASTM tensile & tear strength testing',
+    ],
     area: 'Materials Science Lab',
   },
   {
@@ -52,23 +58,43 @@ const teamMembers = [
     name: 'Mei Wang',
     role: 'Textile Finishing Specialist',
     experience: '14 years in commercial textile finishing, including protective and performance fabric production.',
-    expertise: ['Coating application & finish engineering', 'Dyeing & color matching', 'Commercial-grade quality control'],
+    expertise: [
+      'Coating application & finish engineering',
+      'Dyeing & color matching',
+      'Commercial-grade quality control',
+    ],
     area: 'Finishing Production Line',
   },
   {
     name: 'Dong Li',
     role: 'OEM/ODM Project Engineer',
     experience: '9 years managing custom manufacturing programs for European, North American, and Asian brands.',
-    expertise: ['Technical proposal & BOM engineering', 'Custom development through production ramp', 'Multi-language specification management'],
+    expertise: [
+      'Technical proposal & BOM engineering',
+      'Custom development through production ramp',
+      'Multi-language specification management',
+    ],
     area: 'OEM Programs',
   },
 ];
 
 const researchAreas = [
-  { title: 'Weave Density & Performance Optimization', desc: 'Investigating thread density vs. tensile strength curves for performance fabrics from lightweight to heavy-duty, targeting weight reduction without strength loss.' },
-  { title: 'Sustainable Fiber Development', desc: 'Developing eco-friendly fiber compounds that meet evolving EU REACH and OEKO-TEX requirements while maintaining fabric performance.' },
-  { title: 'Coating Adhesion Reliability', desc: 'Long-duration cyclic testing for coating-to-fabric attachment systems across -20°C to +60°C temperature range.' },
-  { title: 'Automated QC Vision System', desc: 'Machine vision integration for real-time weave consistency, defect detection, and color uniformity on continuous production lines.' },
+  {
+    title: 'Weave Density & Performance Optimization',
+    desc: 'Investigating thread density vs. tensile strength curves for performance fabrics from lightweight to heavy-duty, targeting weight reduction without strength loss.',
+  },
+  {
+    title: 'Sustainable Fiber Development',
+    desc: 'Developing eco-friendly fiber compounds that meet evolving EU REACH and OEKO-TEX requirements while maintaining fabric performance.',
+  },
+  {
+    title: 'Coating Adhesion Reliability',
+    desc: 'Long-duration cyclic testing for coating-to-fabric attachment systems across -20°C to +60°C temperature range.',
+  },
+  {
+    title: 'Automated QC Vision System',
+    desc: 'Machine vision integration for real-time weave consistency, defect detection, and color uniformity on continuous production lines.',
+  },
 ];
 ---
 
@@ -77,22 +103,42 @@ const researchAreas = [
     type="Article"
     article={{
       headline: t('engineeringTeam.heading') || 'Engineering & R&D Team — Fabric Design & Manufacturing',
-      description: t('engineeringTeam.desc') || 'Meet the 25+ R&D engineers and production specialists behind Seekingtex\'s functional fabric manufacturing.',
+      description:
+        t('engineeringTeam.desc') ||
+        "Meet the 25+ R&D engineers and production specialists behind Seekingtex's functional fabric manufacturing.",
       datePublished: '2026-07-07',
     }}
     data={{ url: `https://seekingtex.com/${lang}/engineering-team` }}
   />
-  <JsonLd type="BreadcrumbList" breadcrumbs={[{ name: 'Home', href: `/${lang}/` }, { name: 'About', href: `/${lang}/about` }, { name: t('engineeringTeam.heading') || 'Engineering Team' }]} />
+  <JsonLd
+    type="BreadcrumbList"
+    breadcrumbs={[
+      { name: 'Home', href: `/${lang}/` },
+      { name: 'About', href: `/${lang}/about` },
+      { name: t('engineeringTeam.heading') || 'Engineering Team' },
+    ]}
+  />
 
   <section class="bg-gradient-to-br from-[#001830] via-[#002d4a] to-[#003355] text-white py-24 px-6">
     <div class="max-w-4xl mx-auto text-center">
-      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300">{t('engineeringTeam.badge') || 'R&D & Engineering'}</span>
-      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{t('engineeringTeam.heading') || 'The People Behind the Product'}</h1>
-      <p class="mt-4 text-lg text-white/70">{t('engineeringTeam.subtitle') || '25+ engineers and specialists across materials science, product design, quality engineering, and production management.'}</p>
+      <span class="text-xs font-medium uppercase tracking-[0.2em] text-sky-300"
+        >{t('engineeringTeam.badge') || 'R&D & Engineering'}</span
+      >
+      <h1 class="mt-4 text-4xl md:text-5xl font-bold tracking-tight">
+        {t('engineeringTeam.heading') || 'The People Behind the Product'}
+      </h1>
+      <p class="mt-4 text-lg text-white/70">
+        {
+          t('engineeringTeam.subtitle') ||
+            '25+ engineers and specialists across materials science, product design, quality engineering, and production management.'
+        }
+      </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
-        {['Materials Science', 'Product Design', 'Quality Engineering', 'OEM Programs', 'Fabric Production'].map((tag) => (
-          <span class="px-4 py-2 border border-white/20 text-white/80 text-sm rounded-full">{tag}</span>
-        ))}
+        {
+          ['Materials Science', 'Product Design', 'Quality Engineering', 'OEM Programs', 'Fabric Production'].map(
+            (tag) => <span class="px-4 py-2 border border-white/20 text-white/80 text-sm rounded-full">{tag}</span>
+          )
+        }
       </div>
     </div>
   </section>
@@ -100,27 +146,33 @@ const researchAreas = [
   <section class="max-w-6xl mx-auto py-24 px-6">
     <div class="text-center mb-16">
       <h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-100">Engineering Leadership</h2>
-      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">Key members of our R&D and production engineering team.</p>
+      <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+        Key members of our R&D and production engineering team.
+      </p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {teamMembers.map((m) => (
-        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-          <div class="w-14 h-14 rounded-full bg-sky-100 dark:bg-sky-900 flex items-center justify-center mb-4">
-            <span class="text-2xl font-bold text-sky-600 dark:text-sky-400">{m.name.charAt(0)}</span>
+      {
+        teamMembers.map((m) => (
+          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+            <div class="w-14 h-14 rounded-full bg-sky-100 dark:bg-sky-900 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-sky-600 dark:text-sky-400">{m.name.charAt(0)}</span>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{m.name}</h3>
+            <p class="text-sm text-sky-600 dark:text-sky-400 font-medium">{m.role}</p>
+            <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">{m.experience}</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {m.expertise.map((e) => (
+                <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
+                  {e}
+                </span>
+              ))}
+            </div>
+            <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
+              <span class="text-xs font-medium text-gray-400 uppercase tracking-wide">{m.area}</span>
+            </div>
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{m.name}</h3>
-          <p class="text-sm text-sky-600 dark:text-sky-400 font-medium">{m.role}</p>
-          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">{m.experience}</p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            {m.expertise.map((e) => (
-              <span class="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">{e}</span>
-            ))}
-          </div>
-          <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
-            <span class="text-xs font-medium text-gray-400 uppercase tracking-wide">{m.area}</span>
-          </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
@@ -128,32 +180,53 @@ const researchAreas = [
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-100">Active Research & Development</h2>
-        <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">Current engineering projects focused on material performance, manufacturing quality, and product innovation.</p>
+        <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+          Current engineering projects focused on material performance, manufacturing quality, and product innovation.
+        </p>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
-        {researchAreas.map((r) => (
-          <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-md transition-shadow">
-            <div class="flex items-center gap-2 mb-2">
-              <div class="w-2 h-2 rounded-full bg-sky-500"></div>
-              <h3 class="font-semibold text-gray-900 dark:text-gray-100">{r.title}</h3>
+        {
+          researchAreas.map((r) => (
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 hover:shadow-md transition-shadow">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-2 h-2 rounded-full bg-sky-500" />
+                <h3 class="font-semibold text-gray-900 dark:text-gray-100">{r.title}</h3>
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">{r.desc}</p>
             </div>
-            <p class="text-sm text-gray-500 dark:text-gray-400">{r.desc}</p>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
 
   <section class="max-w-4xl mx-auto py-24 px-6 text-center">
     <h2 class="text-3xl font-semibold text-gray-900 dark:text-gray-100">Join the Engineering Team</h2>
-    <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">We are always looking for talented engineers in materials science, product design, and quality engineering.</p>
+    <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+      We are always looking for talented engineers in materials science, product design, and quality engineering.
+    </p>
     <div class="mt-10 flex justify-center gap-4">
-      <a href={`/${lang}/contact`} class="px-10 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition">{t('engineeringTeam.cta') || 'Contact Us'}</a>
-      <a href={`/${lang}/about`} class="px-10 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full font-semibold hover:border-gray-400 transition">About Seekingtex</a>
+      <a
+        href={`/${lang}/contact`}
+        class="px-10 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full font-semibold hover:bg-gray-800 dark:hover:bg-gray-100 transition"
+        >{t('engineeringTeam.cta') || 'Contact Us'}</a
+      >
+      <a
+        href={`/${lang}/about`}
+        class="px-10 py-4 border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full font-semibold hover:border-gray-400 transition"
+        >About Seekingtex</a
+      >
     </div>
   </section>
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
-    <p>Seekingtex R&D and engineering team: 25+ engineers across materials science, product design, quality assurance, and production engineering. Key personnel include Peng Zhang (Director of Engineering, 18 years), Lina Chen (Senior Materials Engineer, textile specialist), Wei Liu (Product Design Lead, 40+ fabric platforms), James Huang (Quality Systems Manager,  lead auditor), Mei Wang (Textile finishing specialist, 14 years), and Dong Li (OEM/ODM Project Engineer, 9 years). Active research areas: weave density optimization, sustainable fiber development, coating adhesion reliability, and automated QC vision systems. Based in Qingdao, China. ISO  certified facility.</p>
+    <p>
+      Seekingtex R&D and engineering team: 25+ engineers across materials science, product design, quality assurance,
+      and production engineering. Key personnel include Peng Zhang (Director of Engineering, 18 years), Lina Chen
+      (Senior Materials Engineer, textile specialist), Wei Liu (Product Design Lead, 40+ fabric platforms), James Huang
+      (Quality Systems Manager, lead auditor), Mei Wang (Textile finishing specialist, 14 years), and Dong Li (OEM/ODM
+      Project Engineer, 9 years). Active research areas: weave density optimization, sustainable fiber development,
+      coating adhesion reliability, and automated QC vision systems. Based in Qingdao, China. ISO certified facility.
+    </p>
   </section>
 </Layout>

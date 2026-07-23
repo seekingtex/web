@@ -320,7 +320,9 @@ const productCollection = defineCollection({
     description: z.string().optional(),
     image: z.string().optional(),
     gallery: z.array(productImageSchema).optional(),
-    category: z.enum(['sun-protection', 'waterproof', 'quick-dry', 'antibacterial', 'stretch', 'breathable', 'eco-friendly']).optional(),
+    category: z
+      .enum(['sun-protection', 'waterproof', 'quick-dry', 'antibacterial', 'stretch', 'breathable', 'eco-friendly'])
+      .optional(),
     tags: z.array(z.string()).optional(),
     specs: z.array(productSpecSchema).optional(),
     price: productPriceSchema,

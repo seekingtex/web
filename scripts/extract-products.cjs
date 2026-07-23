@@ -9,10 +9,10 @@ fs.mkdirSync(path.join(outputDir, 'images'), { recursive: true });
 
 const categorySlugs = {
   'Beach shorts': 'beach-shorts',
-  'Coats': 'coats',
+  Coats: 'coats',
   'Down styles': 'down-styles',
-  'Jackets': 'jackets',
-  'Shirt': 'shirt',
+  Jackets: 'jackets',
+  Shirt: 'shirt',
 };
 
 function slugify(text) {
@@ -24,16 +24,16 @@ function slugify(text) {
     .slice(0, 80);
 }
 
-const categories = fs.readdirSync(productsDir, { withFileTypes: true })
-  .filter(d => d.isDirectory() && categorySlugs[d.name]);
+const categories = fs
+  .readdirSync(productsDir, { withFileTypes: true })
+  .filter((d) => d.isDirectory() && categorySlugs[d.name]);
 
 const allProducts = [];
 
 for (const cat of categories) {
   const catPath = path.join(productsDir, cat.name);
   const catSlug = categorySlugs[cat.name];
-  const products = fs.readdirSync(catPath, { withFileTypes: true })
-    .filter(d => d.isDirectory());
+  const products = fs.readdirSync(catPath, { withFileTypes: true }).filter((d) => d.isDirectory());
 
   console.log(`\nCategory: ${cat.name} (${products.length} products)`);
 
@@ -42,11 +42,7 @@ for (const cat of categories) {
     const files = fs.readdirSync(prodPath);
 
     // Find main product images - exclude thumbnails, html-associated files
-    const images = files.filter(f =>
-      /\.(jpg|jpeg|png)$/i.test(f) &&
-      !f.includes('_files') &&
-      !f.includes('.html')
-    );
+    const images = files.filter((f) => /\.(jpg|jpeg|png)$/i.test(f) && !f.includes('_files') && !f.includes('.html'));
 
     const savedImages = [];
     const slug = slugify(prod.name);
@@ -76,10 +72,6 @@ for (const cat of categories) {
 }
 
 // Write JSON
-fs.writeFileSync(
-  path.join(outputDir, 'garments.json'),
-  JSON.stringify(allProducts, null, 2),
-  'utf-8'
-);
+fs.writeFileSync(path.join(outputDir, 'garments.json'), JSON.stringify(allProducts, null, 2), 'utf-8');
 
 console.log(`\nDone! Extracted ${allProducts.length} products to public/products/`);

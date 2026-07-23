@@ -16,8 +16,18 @@ const isDefault = locale === 'en';
 const file = isDefault ? 'src/data/site/navigation.yaml' : `src/data/site/navigation.${locale}.yaml`;
 
 const localeLabels: Record<string, string> = {
-  en: 'English', zh: '中文', fr: 'Français', de: 'Deutsch', es: 'Español', pt: 'Português',
-  ar: 'العربية', it: 'Italiano', ja: '日本語', ko: '한국어', ru: 'Русский', pl: 'Polski',
+  en: 'English',
+  zh: '中文',
+  fr: 'Français',
+  de: 'Deutsch',
+  es: 'Español',
+  pt: 'Português',
+  ar: 'العربية',
+  it: 'Italiano',
+  ja: '日本語',
+  ko: '한국어',
+  ru: 'Русский',
+  pl: 'Polski',
 };
 const locales = Object.keys(localeLabels);
 
@@ -54,22 +64,31 @@ const footer = data?.footer ?? {};
     <div class="flex items-center justify-between gap-4 flex-wrap">
       <div>
         <h1 class="text-2xl font-semibold">Navigation & Footer</h1>
-        <p class="mt-1 text-sm text-gray-500">
-          Edit header menu, footer link groups, social icons.
-        </p>
+        <p class="mt-1 text-sm text-gray-500">Edit header menu, footer link groups, social icons.</p>
       </div>
       <div class="flex items-center gap-2">
         <label class="text-xs text-gray-500">Locale:</label>
-        <select id="locale-select" class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm">
-          {locales.map((l) => (
-            <option value={l} selected={l === locale}>{localeLabels[l]}</option>
-          ))}
+        <select
+          id="locale-select"
+          class="px-3 py-1.5 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
+        >
+          {
+            locales.map((l) => (
+              <option value={l} selected={l === locale}>
+                {localeLabels[l]}
+              </option>
+            ))
+          }
         </select>
       </div>
     </div>
     <p class="mt-2 text-xs text-gray-500">
       File: <code class="font-mono">{file}</code>
-      {!isDefault && <span class="text-amber-600 dark:text-amber-400"> — locale override (inherits English nav as baseline)</span>}
+      {
+        !isDefault && (
+          <span class="text-amber-600 dark:text-amber-400"> — locale override (inherits English nav as baseline)</span>
+        )
+      }
     </p>
     <p class="mt-2 text-xs text-amber-700 dark:text-amber-400">
       ⚠️ If you rename a menu item or change a link, page content may still reference the old URL. Use the
@@ -78,11 +97,13 @@ const footer = data?.footer ?? {};
     </p>
   </div>
 
-  {loadError && (
-    <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
-      Load failed: {loadError}
-    </div>
-  )}
+  {
+    loadError && (
+      <div class="mb-4 rounded-md border border-red-200 bg-red-50 dark:bg-red-950/40 dark:border-red-900 p-3 text-sm text-red-700 dark:text-red-300">
+        Load failed: {loadError}
+      </div>
+    )
+  }
 
   <form id="nav-form" class="space-y-6 pb-40" data-file={file} data-sha={sha} data-locale={locale}>
     <details

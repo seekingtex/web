@@ -19,9 +19,9 @@ export const garmentCategories: { slug: string; name: string }[] = [
 ];
 
 export function getGarmentsByCategory(category: string): GarmentRecord[] {
-  return garments.filter(g => g.category === category);
+  return garments.filter((g) => g.category === category);
 }
 
 export function getGarment(id: string): GarmentRecord | undefined {
-  return garments.find(g => g.id === id);
+  return garments.find((g) => g.id === id);
 }

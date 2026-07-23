@@ -9,37 +9,56 @@ const metadata = {
   description: `${SITE.name} industrial-grade technical textiles engineered for extreme durability. High-tenacity constructions, reinforced finishes, customizable for workwear, protective apparel, and industrial applications.`,
 };
 
-const crumbs = [
-  { name: 'Home', href: '/' },
-  { name: 'Industrial & Technical Textiles' },
-];
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Industrial & Technical Textiles' }];
 
 const features = [
   {
     title: 'SeekingtexTEX Fabric System',
-    content: 'Our proprietary multi-layered fabric composite features high-tenacity polyester or nylon bases with advanced functional coatings. Engineered for superior abrasion resistance, UV stabilization, chemical resistance, and extreme temperature tolerance — far exceeding standard textile specifications.',
+    content:
+      'Our proprietary multi-layered fabric composite features high-tenacity polyester or nylon bases with advanced functional coatings. Engineered for superior abrasion resistance, UV stabilization, chemical resistance, and extreme temperature tolerance — far exceeding standard textile specifications.',
   },
   {
     title: 'Advanced Coating & Laminate Integrity',
-    content: 'Precision coating creates molecular-level bonds between fabric and performance layers. For demanding applications, we use advanced PU and acrylic formulations in climate-controlled environments. Multi-pass coating provides maximum performance at every layer.',
+    content:
+      'Precision coating creates molecular-level bonds between fabric and performance layers. For demanding applications, we use advanced PU and acrylic formulations in climate-controlled environments. Multi-pass coating provides maximum performance at every layer.',
   },
   {
     title: 'Reinforced Construction',
-    content: 'High-tenacity yarns, reinforced weave patterns, heavy-duty finishing treatments, and multiple performance layers for damage redundancy. Every construction feature uses engineered reinforcement for maximum durability.',
+    content:
+      'High-tenacity yarns, reinforced weave patterns, heavy-duty finishing treatments, and multiple performance layers for damage redundancy. Every construction feature uses engineered reinforcement for maximum durability.',
   },
   {
     title: 'Multi-Stage Quality Control',
-    content: 'Every fabric batch undergoes tensile testing, hydrostatic head verification, abrasion testing, UV exposure testing, and dimensional stability checks. Raw materials are batch-tested before production. Each roll is fully traceable with detailed QC records.',
+    content:
+      'Every fabric batch undergoes tensile testing, hydrostatic head verification, abrasion testing, UV exposure testing, and dimensional stability checks. Raw materials are batch-tested before production. Each roll is fully traceable with detailed QC records.',
   },
 ];
 
 const applications = [
-  { title: 'Workwear & Uniforms', desc: 'Durable, comfortable fabrics with FR, antibacterial, and stain-resistant finishes for professional work environments.' },
-  { title: 'Protective Apparel', desc: 'High-performance fabrics with chemical resistance, cut resistance, and flame retardant properties for industrial safety.' },
-  { title: 'Outdoor & Extreme Weather', desc: 'Waterproof, windproof, breathable fabrics with UPF 50+ protection for outdoor workers and emergency responders.' },
-  { title: 'Industrial Covers & Tarpaulins', desc: 'Heavy-duty coated fabrics for industrial covers, truck tarps, and equipment protection in harsh environments.' },
-  { title: 'Geotextiles & Construction', desc: 'Technical woven and non-woven fabrics for soil stabilization, drainage, erosion control, and construction applications.' },
-  { title: 'Transportation & Automotive', desc: 'Performance textiles for automotive interiors, seat covers, cargo restraint, and vehicle component applications.' },
+  {
+    title: 'Workwear & Uniforms',
+    desc: 'Durable, comfortable fabrics with FR, antibacterial, and stain-resistant finishes for professional work environments.',
+  },
+  {
+    title: 'Protective Apparel',
+    desc: 'High-performance fabrics with chemical resistance, cut resistance, and flame retardant properties for industrial safety.',
+  },
+  {
+    title: 'Outdoor & Extreme Weather',
+    desc: 'Waterproof, windproof, breathable fabrics with UPF 50+ protection for outdoor workers and emergency responders.',
+  },
+  {
+    title: 'Industrial Covers & Tarpaulins',
+    desc: 'Heavy-duty coated fabrics for industrial covers, truck tarps, and equipment protection in harsh environments.',
+  },
+  {
+    title: 'Geotextiles & Construction',
+    desc: 'Technical woven and non-woven fabrics for soil stabilization, drainage, erosion control, and construction applications.',
+  },
+  {
+    title: 'Transportation & Automotive',
+    desc: 'Performance textiles for automotive interiors, seat covers, cargo restraint, and vehicle component applications.',
+  },
 ];
 ---
 
@@ -48,24 +67,28 @@ const applications = [
     <p class="text-sm font-semibold text-primary uppercase tracking-wider">Industrial Textiles</p>
     <h1 class="mt-3 text-4xl md:text-5xl font-bold">Industrial & Technical Textiles</h1>
     <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
-      Seekingtex technical textiles are engineered for the unforgiving industrial environment.
-      From workwear and protective apparel to construction and transportation, our fabrics deliver
-      unparalleled reliability, durability, and performance — day in and day out.
+      Seekingtex technical textiles are engineered for the unforgiving industrial environment. From workwear and
+      protective apparel to construction and transportation, our fabrics deliver unparalleled reliability, durability,
+      and performance — day in and day out.
     </p>
   </section>
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl space-y-12">
-    {features.map((f, i) => (
-      <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? '' : ''}`}>
-        <div class={i % 2 === 1 ? 'md:order-2' : ''}>
-          <h2 class="text-xl font-bold">{f.title}</h2>
-          <p class="mt-3 text-muted leading-relaxed">{f.content}</p>
+    {
+      features.map((f, i) => (
+        <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? '' : ''}`}>
+          <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+            <h2 class="text-xl font-bold">{f.title}</h2>
+            <p class="mt-3 text-muted leading-relaxed">{f.content}</p>
+          </div>
+          <div
+            class={`rounded-xl p-6 border border-gray-200 dark:border-gray-800 ${i % 2 === 1 ? 'md:order-1' : ''} ${i === 0 ? 'bg-blue-50 dark:bg-blue-900/20' : i === 1 ? 'bg-green-50 dark:bg-green-900/20' : i === 2 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-purple-50 dark:bg-purple-900/20'}`}
+          >
+            <span class="text-5xl font-bold text-primary/30">0{i + 1}</span>
+          </div>
         </div>
-        <div class={`rounded-xl p-6 border border-gray-200 dark:border-gray-800 ${i % 2 === 1 ? 'md:order-1' : ''} ${i === 0 ? 'bg-blue-50 dark:bg-blue-900/20' : i === 1 ? 'bg-green-50 dark:bg-green-900/20' : i === 2 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-purple-50 dark:bg-purple-900/20'}`}>
-          <span class="text-5xl font-bold text-primary/30">0{i + 1}</span>
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </section>
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
@@ -74,12 +97,14 @@ const applications = [
       <h2 class="mt-2 text-3xl font-bold">Built for Your Application</h2>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {applications.map((a) => (
-        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-          <h3 class="text-lg font-bold">{a.title}</h3>
-          <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
-        </div>
-      ))}
+      {
+        applications.map((a) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-bold">{a.title}</h3>
+            <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -87,15 +112,21 @@ const applications = [
     <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
       <h2 class="text-2xl font-bold text-center">Lower Lifetime Ownership Costs</h2>
       <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
-        Premium materials, advanced coating technology, and robust construction translate into fewer replacements,
-        less downtime, and a longer operational lifespan. Seekingtex fabrics deliver exceptional value
-        over their entire service life — not just at the point of purchase.
+        Premium materials, advanced coating technology, and robust construction translate into fewer replacements, less
+        downtime, and a longer operational lifespan. Seekingtex fabrics deliver exceptional value over their entire
+        service life — not just at the point of purchase.
       </p>
       <div class="flex justify-center gap-4 mt-8 flex-wrap">
-        <a href="/contact" class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+        <a
+          href="/contact"
+          class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >
           Request industrial quote →
         </a>
-        <a href="/quality" class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-semibold rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+        <a
+          href="/quality"
+          class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-semibold rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
           View quality testing →
         </a>
       </div>
@@ -106,16 +137,20 @@ const applications = [
     subtitle="How industrial operators use Seekingtex fabrics in daily operations around the world."
     stories={[
       {
-        quote: "Our workwear fabric runs 6 days a week, 50 weeks a year. After two years, the fabric still looks new. We've replaced the zippers but the fabric is going strong.",
-        narrative: "A European industrial laundry service processes Seekingtex workwear fabrics for a major manufacturing client. The garments are washed industrially 2-3 times per week. After 600+ wash cycles, the fabric shows no significant color fading, no seam failure, and the FR properties remain within specification. The client reports that the fabric's durability has reduced their replacement rate by 60% compared to the previous supplier.",
-        context: "Industrial workwear, Europe, 2022-2025",
-        source: "Laundry Services Director"
+        quote:
+          "Our workwear fabric runs 6 days a week, 50 weeks a year. After two years, the fabric still looks new. We've replaced the zippers but the fabric is going strong.",
+        narrative:
+          "A European industrial laundry service processes Seekingtex workwear fabrics for a major manufacturing client. The garments are washed industrially 2-3 times per week. After 600+ wash cycles, the fabric shows no significant color fading, no seam failure, and the FR properties remain within specification. The client reports that the fabric's durability has reduced their replacement rate by 60% compared to the previous supplier.",
+        context: 'Industrial workwear, Europe, 2022-2025',
+        source: 'Laundry Services Director',
       },
       {
-        quote: "We use Seekingtex technical fabric for everything — covers, containment, and even temporary shelters. It's the most versatile textile in our inventory.",
-        narrative: "A construction and industrial supply company uses Seekingtex coated fabrics for equipment covers, containment sheeting, and temporary shelter structures. The fabric handles extreme weather conditions, resists UV degradation, and maintains flexibility in cold temperatures. After two harsh winters, the fabric shows no cracking or delamination and continues to perform reliably.",
-        context: "Industrial supply operations, Norway, 2023-2025",
-        source: "Operations Manager"
+        quote:
+          "We use Seekingtex technical fabric for everything — covers, containment, and even temporary shelters. It's the most versatile textile in our inventory.",
+        narrative:
+          'A construction and industrial supply company uses Seekingtex coated fabrics for equipment covers, containment sheeting, and temporary shelter structures. The fabric handles extreme weather conditions, resists UV degradation, and maintains flexibility in cold temperatures. After two harsh winters, the fabric shows no cracking or delamination and continues to perform reliably.',
+        context: 'Industrial supply operations, Norway, 2023-2025',
+        source: 'Operations Manager',
       },
     ]}
   />
@@ -123,10 +158,30 @@ const applications = [
     title="Related Resources"
     subtitle="Explore industrial and technical textile solutions"
     links={[
-      { title: 'Engineering Perfection', description: 'Precision manufacturing and rigorous quality control for industrial-grade durability.', href: '/engineering-perfection', label: 'Philosophy' },
-      { title: 'Solutions by Industry', description: 'Find the right technical textile for your industrial sector.', href: '/solutions/by-industry', label: 'Overview' },
-      { title: 'TEchnical Textile Guide', description: 'Deep dive into technical textile construction and performance characteristics.', href: '/learn/technical-textiles', label: 'Technology' },
-      { title: 'Factory Overview', description: 'See how industrial-grade fabrics are manufactured at our 12,000 m² facility.', href: '/factory', label: 'Facility' },
+      {
+        title: 'Engineering Perfection',
+        description: 'Precision manufacturing and rigorous quality control for industrial-grade durability.',
+        href: '/engineering-perfection',
+        label: 'Philosophy',
+      },
+      {
+        title: 'Solutions by Industry',
+        description: 'Find the right technical textile for your industrial sector.',
+        href: '/solutions/by-industry',
+        label: 'Overview',
+      },
+      {
+        title: 'TEchnical Textile Guide',
+        description: 'Deep dive into technical textile construction and performance characteristics.',
+        href: '/learn/technical-textiles',
+        label: 'Technology',
+      },
+      {
+        title: 'Factory Overview',
+        description: 'See how industrial-grade fabrics are manufactured at our 12,000 m² facility.',
+        href: '/factory',
+        label: 'Facility',
+      },
     ]}
   />
 </Layout>

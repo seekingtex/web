@@ -8,31 +8,17 @@ directory = "./dist/client"
 binding = "ASSETS"
 
 # ----------------------------------------------------------------
-# Single Worker Deployment —?Astro Site
+# Main Site Worker - serves the Astro site (all locale paths /{lang}/...)
 # ----------------------------------------------------------------
-# All locale URLs use path-based format: /de/, /fr/, /ja/, etc.
-# Language switcher navigates to seekingtex.com/{locale}/...
-#
-# Manual deploy:
-#   npx wrangler deploy
-# ----------------------------------------------------------------
-
-# --- AI Infrastructure ---
-# Workers AI + Vectorize bindings
-#   npx wrangler vectorize create ai-index --dimensions=768 --metric=cosine
 
 [ai]
 binding = "AI"
 
-# --- R2 Asset Storage ---
 [[r2_buckets]]
 binding = "ASSETS_BUCKET"
 bucket_name = "seekingtex-assets"
 
-# --- Environment Variables ---
-
 [vars]
 NODE_VERSION = "22"
 NODE_ENV = "production"
-# SESSION_SECRET - required, set via: wrangler secret put SESSION_SECRET
-# KEYSTATIC_SECRET - optional, set via: wrangler secret put KEYSTATIC_SECRET
+WORKER_ROLE = "site"

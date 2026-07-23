@@ -195,14 +195,17 @@ const jsonOutput = exportTasksJson(tasks);
           ta.value = text;
           document.body.appendChild(ta);
           ta.select();
-          navigator.clipboard.writeText(text).then(() => {
-            document.body.removeChild(ta);
-            showToast('Copied to clipboard');
-          }).catch(() => {
-            document.execCommand('copy');
-            document.body.removeChild(ta);
-            showToast('Copied to clipboard');
-          });
+          navigator.clipboard
+            .writeText(text)
+            .then(() => {
+              document.body.removeChild(ta);
+              showToast('Copied to clipboard');
+            })
+            .catch(() => {
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+              showToast('Copied to clipboard');
+            });
         }
       });
     });

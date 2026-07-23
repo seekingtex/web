@@ -16,7 +16,9 @@ const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?
 
 const metadata = {
   title: `${t('commercialWorkboats.title') || 'Industrial & Technical Textiles — Heavy-Duty Performance Fabrics'} | ${SITE.name}`,
-  description: t('commercialWorkboats.desc') || `${SITE.name} industrial-grade technical textiles engineered for extreme durability. Proprietary Seekingtex fabric technology, reinforced construction, customizable for industrial, protective, and commercial applications.`,
+  description:
+    t('commercialWorkboats.desc') ||
+    `${SITE.name} industrial-grade technical textiles engineered for extreme durability. Proprietary Seekingtex fabric technology, reinforced construction, customizable for industrial, protective, and commercial applications.`,
 };
 
 const crumbs = [
@@ -25,57 +27,122 @@ const crumbs = [
 ];
 
 const features = [
-  { title: t('commercialWorkboats.f1') || 'Advanced Fabric Technology', content: t('commercialWorkboats.f1desc') || 'Our proprietary fabric construction features high-tenacity polyester or nylon yarns with specialized finishes. Engineered for superior tensile strength, abrasion resistance, UV stabilization, chemical resistance, and extreme temperature tolerance — meeting rigorous industry standards.' },
-  { title: t('commercialWorkboats.f2') || 'Precision Manufacturing', content: t('commercialWorkboats.f2desc') || 'Advanced weaving technology creates uniform fabric structures with consistent properties. For specialized applications, we apply high-performance coatings in climate-controlled environments. Multi-layer construction provides maximum durability at every point.' },
-  { title: t('commercialWorkboats.f3') || 'Reinforced Construction', content: t('commercialWorkboats.f3desc') || 'Heavy-duty thread construction, reinforced seam techniques, and substantial fabric overlaps for maximum structural integrity. Every attachment point uses reinforcement for industrial-grade durability.' },
-  { title: t('commercialWorkboats.f4') || 'Multi-Stage Quality Control', content: t('commercialWorkboats.f4desc') || 'Every batch undergoes comprehensive testing: tensile strength verification, GSM uniformity, color fastness, dimensional stability, and visual inspection. Raw materials are batch-tested before production. Each roll is fully traceable with detailed QC records.' },
+  {
+    title: t('commercialWorkboats.f1') || 'Advanced Fabric Technology',
+    content:
+      t('commercialWorkboats.f1desc') ||
+      'Our proprietary fabric construction features high-tenacity polyester or nylon yarns with specialized finishes. Engineered for superior tensile strength, abrasion resistance, UV stabilization, chemical resistance, and extreme temperature tolerance — meeting rigorous industry standards.',
+  },
+  {
+    title: t('commercialWorkboats.f2') || 'Precision Manufacturing',
+    content:
+      t('commercialWorkboats.f2desc') ||
+      'Advanced weaving technology creates uniform fabric structures with consistent properties. For specialized applications, we apply high-performance coatings in climate-controlled environments. Multi-layer construction provides maximum durability at every point.',
+  },
+  {
+    title: t('commercialWorkboats.f3') || 'Reinforced Construction',
+    content:
+      t('commercialWorkboats.f3desc') ||
+      'Heavy-duty thread construction, reinforced seam techniques, and substantial fabric overlaps for maximum structural integrity. Every attachment point uses reinforcement for industrial-grade durability.',
+  },
+  {
+    title: t('commercialWorkboats.f4') || 'Multi-Stage Quality Control',
+    content:
+      t('commercialWorkboats.f4desc') ||
+      'Every batch undergoes comprehensive testing: tensile strength verification, GSM uniformity, color fastness, dimensional stability, and visual inspection. Raw materials are batch-tested before production. Each roll is fully traceable with detailed QC records.',
+  },
 ];
 
 const applications = [
-  { title: t('commercialWorkboats.a1') || 'Protective Workwear', desc: t('commercialWorkboats.a1desc') || 'High-durability fabrics for industrial protective clothing with abrasion and chemical resistance.' },
-  { title: t('commercialWorkboats.a2') || 'Safety & High-Visibility', desc: t('commercialWorkboats.a2desc') || 'Bright, durable fabrics for safety apparel with reflective properties for worker visibility.' },
-  { title: t('commercialWorkboats.a3') || 'Technical & Specialty', desc: t('commercialWorkboats.a3desc') || 'Specialized fabrics with flame retardant, antimicrobial, or fluid-repellent properties for industrial use.' },
-  { title: t('commercialWorkboats.a4') || 'Outdoor & Performance', desc: t('commercialWorkboats.a4desc') || 'Weather-resistant, breathable fabrics for outdoor gear, uniforms, and performance apparel.' },
-  { title: t('commercialWorkboats.a5') || 'Corporate & Hospitality', desc: t('commercialWorkboats.a5desc') || 'Durable, easy-care fabrics for staff uniforms, hospitality linens, and corporate apparel programs.' },
-  { title: t('commercialWorkboats.a6') || 'Healthcare & Medical', desc: t('commercialWorkboats.a6desc') || 'Antimicrobial, fluid-resistant fabrics for medical uniforms, scrubs, and healthcare textiles.' },
+  {
+    title: t('commercialWorkboats.a1') || 'Protective Workwear',
+    desc:
+      t('commercialWorkboats.a1desc') ||
+      'High-durability fabrics for industrial protective clothing with abrasion and chemical resistance.',
+  },
+  {
+    title: t('commercialWorkboats.a2') || 'Safety & High-Visibility',
+    desc:
+      t('commercialWorkboats.a2desc') ||
+      'Bright, durable fabrics for safety apparel with reflective properties for worker visibility.',
+  },
+  {
+    title: t('commercialWorkboats.a3') || 'Technical & Specialty',
+    desc:
+      t('commercialWorkboats.a3desc') ||
+      'Specialized fabrics with flame retardant, antimicrobial, or fluid-repellent properties for industrial use.',
+  },
+  {
+    title: t('commercialWorkboats.a4') || 'Outdoor & Performance',
+    desc:
+      t('commercialWorkboats.a4desc') ||
+      'Weather-resistant, breathable fabrics for outdoor gear, uniforms, and performance apparel.',
+  },
+  {
+    title: t('commercialWorkboats.a5') || 'Corporate & Hospitality',
+    desc:
+      t('commercialWorkboats.a5desc') ||
+      'Durable, easy-care fabrics for staff uniforms, hospitality linens, and corporate apparel programs.',
+  },
+  {
+    title: t('commercialWorkboats.a6') || 'Healthcare & Medical',
+    desc:
+      t('commercialWorkboats.a6desc') ||
+      'Antimicrobial, fluid-resistant fabrics for medical uniforms, scrubs, and healthcare textiles.',
+  },
 ];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
   <section class="px-6 sm:px-6 py-16 sm:py-20 lg:py-24 mx-auto max-w-5xl text-center">
-    <p class="text-sm font-semibold text-primary uppercase tracking-wider">{t('commercialWorkboats.badge') || 'Industrial Textiles'}</p>
-    <h1 class="mt-3 text-4xl md:text-5xl font-bold">{t('commercialWorkboats.heading') || 'Industrial & Technical Textiles'}</h1>
+    <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+      {t('commercialWorkboats.badge') || 'Industrial Textiles'}
+    </p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">
+      {t('commercialWorkboats.heading') || 'Industrial & Technical Textiles'}
+    </h1>
     <p class="mt-3 text-lg text-muted max-w-3xl mx-auto">
-      {t('commercialWorkboats.subtitle') || 'Seekingtex technical fabrics are engineered for the unforgiving industrial environment. From protective apparel and workwear to specialized technical applications, our textiles deliver unparalleled reliability, durability, and performance — day in and day out.'}
+      {
+        t('commercialWorkboats.subtitle') ||
+          'Seekingtex technical fabrics are engineered for the unforgiving industrial environment. From protective apparel and workwear to specialized technical applications, our textiles deliver unparalleled reliability, durability, and performance — day in and day out.'
+      }
     </p>
   </section>
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-4xl space-y-12">
-    {features.map((f, i) => (
-      <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? '' : ''}`}>
-        <div class={i % 2 === 1 ? 'md:order-2' : ''}>
-          <h2 class="text-xl font-bold">{f.title}</h2>
-          <p class="mt-3 text-muted leading-relaxed">{f.content}</p>
+    {
+      features.map((f, i) => (
+        <div class={`grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? '' : ''}`}>
+          <div class={i % 2 === 1 ? 'md:order-2' : ''}>
+            <h2 class="text-xl font-bold">{f.title}</h2>
+            <p class="mt-3 text-muted leading-relaxed">{f.content}</p>
+          </div>
+          <div
+            class={`rounded-xl p-6 border border-gray-200 dark:border-gray-800 ${i % 2 === 1 ? 'md:order-1' : ''} ${i === 0 ? 'bg-blue-50 dark:bg-blue-900/20' : i === 1 ? 'bg-green-50 dark:bg-green-900/20' : i === 2 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-purple-50 dark:bg-purple-900/20'}`}
+          >
+            <span class="text-5xl font-bold text-primary/30">0{i + 1}</span>
+          </div>
         </div>
-        <div class={`rounded-xl p-6 border border-gray-200 dark:border-gray-800 ${i % 2 === 1 ? 'md:order-1' : ''} ${i === 0 ? 'bg-blue-50 dark:bg-blue-900/20' : i === 1 ? 'bg-green-50 dark:bg-green-900/20' : i === 2 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-purple-50 dark:bg-purple-900/20'}`}>
-          <span class="text-5xl font-bold text-primary/30">0{i + 1}</span>
-        </div>
-      </div>
-    ))}
+      ))
+    }
   </section>
 
   <section class="px-6 sm:px-6 py-16 mx-auto max-w-6xl bg-gray-50 dark:bg-gray-900">
     <div class="text-center mb-12">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider">{t('commercialWorkboats.appBadge') || 'Industry Applications'}</p>
+      <p class="text-sm font-semibold text-primary uppercase tracking-wider">
+        {t('commercialWorkboats.appBadge') || 'Industry Applications'}
+      </p>
       <h2 class="mt-2 text-3xl font-bold">{t('commercialWorkboats.appTitle') || 'Built for Your Mission'}</h2>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {applications.map((a) => (
-        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-          <h3 class="text-lg font-bold">{a.title}</h3>
-          <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
-        </div>
-      ))}
+      {
+        applications.map((a) => (
+          <div class="p-6 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <h3 class="text-lg font-bold">{a.title}</h3>
+            <p class="mt-2 text-muted text-sm leading-relaxed">{a.desc}</p>
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -83,13 +150,22 @@ const applications = [
     <div class="rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8">
       <h2 class="text-2xl font-bold text-center">{t('commercialWorkboats.ctaTitle') || 'Superior Value Over Time'}</h2>
       <p class="mt-4 text-muted leading-relaxed text-center max-w-3xl mx-auto">
-        {t('commercialWorkboats.ctaSub') || 'Premium materials, advanced construction, and robust quality control translate into fewer replacements, less downtime, and a longer operational lifespan. Seekingtex fabrics deliver exceptional value over their entire service life — not just at the point of purchase.'}
+        {
+          t('commercialWorkboats.ctaSub') ||
+            'Premium materials, advanced construction, and robust quality control translate into fewer replacements, less downtime, and a longer operational lifespan. Seekingtex fabrics deliver exceptional value over their entire service life — not just at the point of purchase.'
+        }
       </p>
       <div class="flex justify-center gap-4 mt-8 flex-wrap">
-        <a href={`/${lang}/contact`} class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90">
+        <a
+          href={`/${lang}/contact`}
+          class="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary/90"
+        >
           {t('commercialWorkboats.ctaBtn') || 'Request industrial fabric quote'} →
         </a>
-        <a href={`/${lang}/quality`} class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-semibold rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+        <a
+          href={`/${lang}/quality`}
+          class="inline-block px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-semibold rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
           {t('commercialWorkboats.ctaBtn2') || 'View quality testing'} →
         </a>
       </div>
@@ -97,19 +173,24 @@ const applications = [
   </section>
   <ExperienceLayer
     title={t('commercialWorkboats.expTitle') || 'Industrial Textiles, Real Results'}
-    subtitle={t('commercialWorkboats.expSub') || 'How industrial clients use Seekingtex technical fabrics in daily operations around the world.'}
+    subtitle={t('commercialWorkboats.expSub') ||
+      'How industrial clients use Seekingtex technical fabrics in daily operations around the world.'}
     stories={[
       {
-        quote: "Our uniform program runs 6 days a week, 50 weeks a year. After two years, the fabric still looks new. We've laundered them hundreds of times but the color and integrity are going strong.",
-        narrative: "A large industrial operation switched to Seekingtex fabrics for their 2000+ employee uniform program. The uniforms are worn daily, exposed to harsh conditions, and laundered industrially. After 600+ wash cycles, the fabric shows no significant fading, no seam separation, and the fabric holds its shape perfectly.",
-        context: "Industrial uniform program, Middle East, 2022-2025",
-        source: "Procurement Director"
+        quote:
+          "Our uniform program runs 6 days a week, 50 weeks a year. After two years, the fabric still looks new. We've laundered them hundreds of times but the color and integrity are going strong.",
+        narrative:
+          'A large industrial operation switched to Seekingtex fabrics for their 2000+ employee uniform program. The uniforms are worn daily, exposed to harsh conditions, and laundered industrially. After 600+ wash cycles, the fabric shows no significant fading, no seam separation, and the fabric holds its shape perfectly.',
+        context: 'Industrial uniform program, Middle East, 2022-2025',
+        source: 'Procurement Director',
       },
       {
-        quote: "We use Seekingtex for everything — work shirts, safety vests, and even specialized protective gear. It's the most versatile fabric in our supply chain.",
-        narrative: "A large manufacturing conglomerate in Germany uses Seekingtex fabrics for their entire workforce. The fabrics handle demanding industrial conditions, provide worker comfort, and maintain professional appearance through repeated industrial laundering.",
-        context: "Manufacturing operations, Germany, 2023-2025",
-        source: "Supply Chain Manager"
+        quote:
+          "We use Seekingtex for everything — work shirts, safety vests, and even specialized protective gear. It's the most versatile fabric in our supply chain.",
+        narrative:
+          'A large manufacturing conglomerate in Germany uses Seekingtex fabrics for their entire workforce. The fabrics handle demanding industrial conditions, provide worker comfort, and maintain professional appearance through repeated industrial laundering.',
+        context: 'Manufacturing operations, Germany, 2023-2025',
+        source: 'Supply Chain Manager',
       },
     ]}
   />
@@ -117,10 +198,36 @@ const applications = [
     title={t('commercialWorkboats.relatedTitle') || 'Related Resources'}
     subtitle={t('commercialWorkboats.relatedSub') || 'Explore industrial and commercial textile solutions'}
     links={[
-      { title: t('commercialWorkboats.rel1') || 'Engineering Perfection', description: t('commercialWorkboats.rel1desc') || 'Precision manufacturing and rigorous quality control for industrial-grade durability.', href: `/${lang}/engineering-perfection`, label: 'Philosophy' },
-      { title: t('commercialWorkboats.rel2') || 'Solutions by Industry', description: t('commercialWorkboats.rel2desc') || 'Find the right functional fabric for your industrial sector.', href: `/${lang}/solutions/by-industry`, label: 'Overview' },
-      { title: t('commercialWorkboats.rel3') || 'Solutions by Use Case', description: t('commercialWorkboats.rel3desc') || 'Match your specific use case to the right Seekingtex solution.', href: `/${lang}/solutions/by-use-case`, label: 'Decision Tool' },
-      { title: t('commercialWorkboats.rel4') || 'Factory Overview', description: t('commercialWorkboats.rel4desc') || 'See how industrial-grade fabrics are manufactured at our 12,000 m² facility.', href: `/${lang}/factory`, label: 'Facility' },
+      {
+        title: t('commercialWorkboats.rel1') || 'Engineering Perfection',
+        description:
+          t('commercialWorkboats.rel1desc') ||
+          'Precision manufacturing and rigorous quality control for industrial-grade durability.',
+        href: `/${lang}/engineering-perfection`,
+        label: 'Philosophy',
+      },
+      {
+        title: t('commercialWorkboats.rel2') || 'Solutions by Industry',
+        description:
+          t('commercialWorkboats.rel2desc') || 'Find the right functional fabric for your industrial sector.',
+        href: `/${lang}/solutions/by-industry`,
+        label: 'Overview',
+      },
+      {
+        title: t('commercialWorkboats.rel3') || 'Solutions by Use Case',
+        description:
+          t('commercialWorkboats.rel3desc') || 'Match your specific use case to the right Seekingtex solution.',
+        href: `/${lang}/solutions/by-use-case`,
+        label: 'Decision Tool',
+      },
+      {
+        title: t('commercialWorkboats.rel4') || 'Factory Overview',
+        description:
+          t('commercialWorkboats.rel4desc') ||
+          'See how industrial-grade fabrics are manufactured at our 12,000 m² facility.',
+        href: `/${lang}/factory`,
+        label: 'Facility',
+      },
     ]}
   />
 </Layout>

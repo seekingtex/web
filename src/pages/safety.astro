@@ -44,7 +44,9 @@ const safetyStandards = [
   <meta name="ai-intent" content="fabric-safety-standards,oeko-tex-certified-textiles,chemical-safety-compliance" />
 
   <section class="max-w-4xl mx-auto py-24 px-6" data-ai-block="definition">
-    <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">{hero.tagline || 'Safety & Compliance'}</span>
+    <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase"
+      >{hero.tagline || 'Safety & Compliance'}</span
+    >
     <h1 class="mt-4 text-4xl font-bold text-gray-900">{hero.title || 'Chemical Safety & Compliance Standards'}</h1>
     <p class="mt-4 text-lg text-gray-500">
       {
@@ -62,7 +64,19 @@ const safetyStandards = [
           <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <svg
+                  class="w-5 h-5 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
               </div>
               <h2 class="text-lg font-bold text-gray-900">{cert.title}</h2>
             </div>
@@ -80,7 +94,9 @@ const safetyStandards = [
         <div class="text-center mb-10">
           <span class="text-sm font-semibold text-[#06b6d4] tracking-[0.15em] uppercase">Safety Products</span>
           <h2 class="mt-2 text-3xl font-bold text-gray-900">Our Safety Products</h2>
-          <p class="mt-3 text-gray-500">From protected environments to industrial applications — certified protection for every use case.</p>
+          <p class="mt-3 text-gray-500">
+            From protected environments to industrial applications — certified protection for every use case.
+          </p>
         </div>
         <div class="grid md:grid-cols-2 gap-6">
           {safetyProducts.map((s) => (
@@ -109,11 +125,15 @@ const safetyStandards = [
       <div class="grid md:grid-cols-3 gap-8 text-center">
         <div>
           <div class="text-3xl font-bold text-[#06b6d4]">100%</div>
-          <p class="mt-2 text-sm text-gray-600">of raw materials screened for restricted substances before production release</p>
+          <p class="mt-2 text-sm text-gray-600">
+            of raw materials screened for restricted substances before production release
+          </p>
         </div>
         <div>
           <div class="text-3xl font-bold text-[#06b6d4]">OEKO-TEX</div>
-          <p class="mt-2 text-sm text-gray-600">Standard 100 certified — every fabric batch tested against 300+ regulated chemicals</p>
+          <p class="mt-2 text-sm text-gray-600">
+            Standard 100 certified — every fabric batch tested against 300+ regulated chemicals
+          </p>
         </div>
         <div>
           <div class="text-3xl font-bold text-[#06b6d4]">3rd Party</div>
@@ -152,9 +172,9 @@ const safetyStandards = [
 
   <section class="sr-only" data-ai-block="constraint" aria-hidden="true">
     <p>
-      Seekingtex safety and compliance covers OEKO-TEX Standard 100, REACH, ISO 14001, and bluesign system.
-      Fabrics are designed for controlled apparel, outdoor gear, uniform, and industrial applications.
-      Not designed for applications requiring specific certification beyond OEKO-TEX scope without prior validation.
+      Seekingtex safety and compliance covers OEKO-TEX Standard 100, REACH, ISO 14001, and bluesign system. Fabrics are
+      designed for controlled apparel, outdoor gear, uniform, and industrial applications. Not designed for applications
+      requiring specific certification beyond OEKO-TEX scope without prior validation.
     </p>
   </section>
 </Layout>
