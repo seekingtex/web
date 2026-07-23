@@ -139,8 +139,6 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       
-      - run: corepack enable
-      
       - name: Deploy all workers
         run: |
           cd dist/server
@@ -149,7 +147,7 @@ jobs:
           
           for w in $WORKERS; do
             echo "🚀 Deploying $w..."
-            yarn wrangler deploy --config wrangler-$w.json --name $w 2>&1 | tee /tmp/deploy-$w.log
+            npx wrangler deploy --config wrangler-$w.json --name $w 2>&1 | tee /tmp/deploy-$w.log
             if [ ${PIPESTATUS[0]} -ne 0 ]; then
               echo "❌ Failed to deploy $w"
               exit 1
@@ -168,7 +166,7 @@ jobs:
           for w in $WORKERS; do
             echo "🔐 Setting SESSION_SECRET on $w..."
             echo "${{ secrets.SESSION_SECRET }}" | \
-              yarn wrangler secret put SESSION_SECRET \
+              npx wrangler secret put SESSION_SECRET \
                 --config wrangler-$w.json \
                 --name $w 2>&1
           done
