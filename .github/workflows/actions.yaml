@@ -139,6 +139,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       
+      - run: corepack enable
+      
       - name: Deploy all workers
         run: |
           cd dist/server
