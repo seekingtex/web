@@ -118,11 +118,18 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
-      - name: Upload build artifacts
+      - name: Upload server artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist-server
           path: dist/server/
+          retention-days: 1
+
+      - name: Upload client artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-client
+          path: dist/client/
           retention-days: 1
 
   deploy-workers:
@@ -134,6 +141,10 @@ jobs:
         with:
           name: dist-server
           path: dist/server
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist-client
+          path: dist/client
       
       - uses: actions/setup-node@v4
         with:
