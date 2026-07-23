@@ -86,7 +86,7 @@ jobs:
           node -e "
             const fs = require('fs');
             const base = JSON.parse(fs.readFileSync('wrangler.json', 'utf8'));
-            delete base.configPath; delete base.userConfigPath;
+            delete base.configPath; delete base.userConfigPath; delete base.legacy_env;
             
             // Common bindings for all workers
             base.ai = { binding: 'AI' };
