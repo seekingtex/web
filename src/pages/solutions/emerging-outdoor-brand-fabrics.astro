@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Functional Fabrics for Emerging Outdoor Brands — Startup Apparel Solutions | ${SITE.name}`,
+  description: 'Functional fabric solutions for emerging outdoor brands and startups. Lightweight, waterproof, breathable, and stretch performance textiles with low MOQ and expert development support.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Emerging Brand Solutions', href: '/solutions/emerging-brands' }, { name: 'Outdoor Brand Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Functional Fabrics for Emerging Outdoor Brands by Seekingtex', description: 'Lightweight, waterproof, breathable, stretch fabrics for outdoor apparel startups with low MOQ and expert support.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Functional Fabrics for Emerging Outdoor Brands</h1>
+    <p class="mt-4 text-xl text-gray-500">Launch your outdoor apparel collection with professional fabric solutions. Lightweight, waterproof breathable, and stretch performance textiles designed for startup brands.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Performance Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Nylon and polyester blends optimized for outdoor jackets, vests, and shells. Water-resistant, breathable, and packable.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Weather Protection</h2>
+        <p class="mt-2 text-sm text-gray-600">Water-resistant and waterproof breathable fabrics for outdoor protection. DWR finishes and membrane laminations.</p>
+        <a href="/waterproof-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse waterproof fabrics →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Emerging Outdoor Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Low MOQ</h3><p class="mt-1 text-sm text-gray-500">Startup-friendly minimum order quantities for sample development and small-batch production.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Expert Guidance</h3><p class="mt-1 text-sm text-gray-500">Textile engineers help you select the right fabric construction, weight, and finishing for your product.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Rapid Development</h3><p class="mt-1 text-sm text-gray-500">Fast sample turnaround and streamlined development process for time-sensitive product launches.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom Solutions</h3><p class="mt-1 text-sm text-gray-500">Custom fabric development tailored to your brand positioning, target consumer, and application requirements.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/emerging-outdoor-brand-first-performance-jacket" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Start Your Project</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Functional fabrics for emerging outdoor brands by Seekingtex. Lightweight performance nylon, waterproof breathable fabrics, stretch textiles for outdoor jackets and apparel. Low MOQ, expert fabric selection guidance, rapid sample development. OEKO-TEX certified. Supporting outdoor apparel startups from concept to production.</p></section>
+</Layout>

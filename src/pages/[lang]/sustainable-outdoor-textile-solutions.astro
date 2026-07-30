@@ -1,0 +1,38 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Sustainable Outdoor Textile Solutions — GRS Recycled Eco Fabrics | ${SITE.name}`,
+    description: 'Sustainable outdoor textile solutions — GRS-certified recycled polyester and nylon, C0 PFC-free DWR, eco-friendly laminates. Performance fabrics for brands pursuing sustainability.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Sustainable Outdoor Textile Solutions', description: 'GRS-certified recycled fabrics, C0 DWR, eco-friendly laminates for sustainable outdoor apparel.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Sustainable Outdoor Textile Solutions</h1>
+    <p class="mt-4 text-xl text-gray-500">Performance fabrics for outdoor brands pursuing sustainability — GRS-certified recycled content, C0 PFC-free DWR, eco-friendly lamination, and full chain-of-custody documentation.</p>
+    <div class="mt-12 grid md:grid-cols-4 gap-6">
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center"><div class="text-3xl font-bold text-sky-600">100%</div><div class="text-sm text-gray-500 mt-1">rPET content</div></div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center"><div class="text-3xl font-bold text-sky-600">C0</div><div class="text-sm text-gray-500 mt-1">PFC-free DWR</div></div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center"><div class="text-3xl font-bold text-sky-600">GRS</div><div class="text-sm text-gray-500 mt-1">certified</div></div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center"><div class="text-3xl font-bold text-sky-600">2027</div><div class="text-sm text-gray-500 mt-1">PFAS ban ready</div></div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/contact`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Request Sustainable Samples</a>
+      <a href={`${prefix}/evidence/case-studies/sustainable-jacket-fabric-development`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View PFC-Free Case Study</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Sustainable outdoor textile solutions. GRS-certified rPET 100% recycled content. Recycled nylon from waste and fishing nets. C0 PFC-free DWR dendrimer chemistry. EU PFAS ban compliant. Solvent-free PU coatings. OEKO-TEX, GRS, REACH certified. OEM/ODM development.</p></section>
+</Layout>

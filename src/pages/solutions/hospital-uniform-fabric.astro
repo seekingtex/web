@@ -1,0 +1,50 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Hospital Uniform Fabric — Durable Medical Textiles for Healthcare Institutions | ${SITE.name}`,
+  description: 'Industrial-grade hospital uniform fabrics designed for 200+ laundering cycles. Cost-effective, durable, easy-care textiles for hospital procurement and healthcare uniform suppliers.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Hospital Uniform Fabric' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Hospital Uniform Fabric Solutions by Seekingtex', description: 'Durable, easy-care hospital uniform fabrics engineered for 200+ industrial launderings. Color fastness, dimensional stability, and long-term performance.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Hospital Uniform Fabric</h1>
+    <p class="mt-4 text-xl text-gray-500">Industrial-grade hospital uniform fabrics designed for 200+ laundering cycles. Cost-effective, durable, easy-care textiles for hospital procurement, healthcare institutions, and medical uniform suppliers.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Industrial Laundry Durability</h2>
+        <p class="mt-2 text-sm text-gray-600">Engineered for 200+ industrial washes with dimensional stability and color fastness. Reduces total cost of ownership for hospital uniform programs.</p>
+        <a href="/products" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">View fabric products →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Easy Care Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">Wrinkle resistant, quick dry, and stain release properties. Reduces laundering costs and keeps uniforms looking professional shift after shift.</p>
+        <a href="/products/quick-dry-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse quick-dry fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Comfort for Long Shifts</h2>
+        <p class="mt-2 text-sm text-gray-600">Breathable construction with soft feel and moisture management. Healthcare staff stay comfortable during 8-12 hour shifts in demanding hospital environments.</p>
+        <a href="/solutions/medical-scrubs-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Explore medical scrubs fabric →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Hospital Procurement Teams Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Cost Per Wear</h3><p class="mt-1 text-sm text-gray-500">Extended fabric lifespan reduces uniform replacement frequency and total procurement costs for healthcare institutions.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Consistent Quality</h3><p class="mt-1 text-sm text-gray-500">Stable manufacturing processes ensure consistent fabric performance across bulk orders and reorders.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Easy Maintenance</h3><p class="mt-1 text-sm text-gray-500">Engineered for industrial laundry processes — reduced water and energy consumption during washing.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Bulk Supply</h3><p class="mt-1 text-sm text-gray-500">Reliable production capacity for hospital chains and large healthcare institutions requiring consistent uniform fabric supply.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/healthcare-scrub-fabric-development" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Bulk Pricing</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Hospital uniform fabric by Seekingtex. Industrial laundry durability: 200+ wash cycles, dimensional stability, color fastness. Easy care: wrinkle resistant, quick dry, stain release. Comfort: breathable, soft feel, moisture management. Cost-effective solutions for hospital procurement and healthcare uniform suppliers. OEKO-TEX certified.</p></section>
+</Layout>

@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Corporate Uniform Fabrics — Easy Care, Wrinkle Resistant & Soft Touch Hospitality Textiles | ${SITE.name}`,
+  description: 'Corporate uniform fabrics by Seekingtex: easy care, wrinkle resistant, soft touch, color stable textiles for hospitality, hotel, restaurant, and business corporate wear. Machine washable with professional appearance retention. Custom OEM development.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Workwear Fabric Solutions', href: '/solutions/workwear-fabric-solutions' }, { name: 'Corporate Uniform Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Corporate Uniform Fabrics by Seekingtex', description: 'Easy care, wrinkle resistant, soft touch, color stable uniform fabrics for hospitality, hotel, restaurant, and corporate apparel.', provider: { '@type': 'Organization', name: SITE.name }, breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://seekingtex.com/' }, { '@type': 'ListItem', position: 2, name: 'Workwear Fabric Solutions', item: 'https://seekingtex.com/solutions/workwear-fabric-solutions' }, { '@type': 'ListItem', position: 3, name: 'Corporate Uniform Fabrics' }] } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, description: 'Seekingtex is a functional fabric manufacturer providing easy care, wrinkle resistant, and soft touch textile solutions for hospitality, hotel, restaurant, and corporate uniform programs.', url: 'https://seekingtex.com' }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What fabric is best for hospitality uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'The best hospitality uniform fabrics combine easy care performance (wrinkle resistant, machine washable), soft touch comfort for guest-facing roles, color stability through frequent washing, and breathability for long shifts. Polyester-cotton blends with easy-care finishing are commonly preferred for their balanced performance and professional appearance.' } },
+    { '@type': 'Question', name: 'How do I choose fabric for hotel staff uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Choose hotel uniform fabric based on staff role: front-of-house requires wrinkle-resistant and soft-touch fabrics for professional appearance; housekeeping needs durable, easy-wash fabrics; kitchen staff requires stain-resistant, breathable options. Color consistency across production runs is also critical for brand identity.' } },
+    { '@type': 'Question', name: 'What does easy care fabric mean for uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Easy care fabric for uniforms means wrinkle resistance (reduces ironing), machine washability, quick drying, and color/dimensional stability through repeated washing. This simplifies laundry operations for hospitality businesses and ensures staff always present a professional appearance.' } },
+    { '@type': 'Question', name: 'Can Seekingtex develop custom corporate uniform fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex provides custom fabric development for corporate uniform programs including hospitality, hotel, restaurant, resort, and corporate business wear. Services include custom color matching, performance specification tuning, and production scaling for uniform programs of any size.' } },
+  ] }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <div class="mb-4">
+      <a href="/solutions/workwear-fabric-solutions" class="text-sm text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Workwear Fabric Solutions</a>
+    </div>
+    <h1 class="text-4xl font-bold text-gray-900">Corporate Uniform Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Professional uniform fabrics for hospitality, hotel, restaurant, and corporate business wear. Easy care, wrinkle resistant, soft touch, and color stable textiles engineered for polished appearance throughout long service shifts and frequent washing.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Easy Care Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Wrinkle-resistant and machine-washable fabrics designed for hospitality and corporate uniform programs. Maintains a professional appearance with minimal ironing, reducing laundry costs and simplifying uniform management for busy hotel and restaurant operations.</p>
+        <a href="/products/quick-dry-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse easy care fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Soft Touch Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Premium soft hand feel fabrics for hospitality roles where staff interact directly with guests. Comfortable for all-day wear without sacrificing durability or professional appearance. Ideal for front desk, concierge, and fine dining uniforms.</p>
+        <a href="/products/stretch-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Explore soft fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Color Stable Materials</h2>
+        <p class="mt-2 text-sm text-gray-600">Color fastness engineered for hospitality uniforms requiring frequent commercial washing. Consistent color retention across production runs ensures brand-consistent appearance for hotel chains, restaurant groups, and corporate uniform programs.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">View color options →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Breathable Comfort</h2>
+        <p class="mt-2 text-sm text-gray-600">Lightweight breathable fabrics for hospitality staff working long shifts in busy service environments. Moisture management keeps uniforms fresh and presentable throughout service hours, improving staff comfort and professional presentation.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-amber-50 rounded-2xl border border-amber-200 p-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Explore Our Workwear Solutions</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/solutions/workwear-fabric-solutions" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">All Workwear Fabrics</a>
+        <a href="/solutions/construction-workwear-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Construction Fabrics</a>
+        <a href="/solutions/industrial-uniform-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Industrial Uniform Fabrics</a>
+        <a href="/solutions/safety-workwear-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Safety Workwear Fabrics</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Corporate Uniform Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Professional Appearance</h3><p class="mt-1 text-sm text-gray-500">Wrinkle-resistant, color-stable, and easy-care fabrics that maintain a polished, brand-consistent look throughout long service shifts and repeated commercial washing cycles.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Staff Comfort Focus</h3><p class="mt-1 text-sm text-gray-500">Soft, breathable, and lightweight fabrics for hospitality staff who need comfort during long hours of guest interaction, serving, and service work in demanding environments.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Operational Efficiency</h3><p class="mt-1 text-sm text-gray-500">Machine-washable, quick-dry, and wrinkle-resistant fabrics reduce laundry costs, ironing time, and simplify uniform management for hotels, restaurants, and corporate operations.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom Brand Solutions</h3><p class="mt-1 text-sm text-gray-500">Tailored fabric solutions for hotel chains, restaurant groups, resort brands, and corporate uniform programs with custom color matching and performance specification development.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/workwear-industrial-uniform-fabric-development" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Workwear Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Seekingtex is a functional fabric manufacturer providing easy care, wrinkle resistant, soft touch, and color stable textile solutions for hospitality, hotel, restaurant, and corporate uniform programs. Our corporate uniform fabrics include: easy care fabrics (wrinkle resistant, machine washable, quick dry for simplified uniform management), soft touch textiles (premium hand feel for front-of-house and guest-facing hospitality roles), color stable materials (consistent color retention through commercial washing for brand identity), and breathable comfort fabrics (lightweight, moisture management for long service shifts). Seekingtex works with hotel chains, restaurant groups, resort brands, and corporate uniform programs. Custom OEM fabric development with custom color matching and performance specification tuning. OEKO-TEX certified.</p></section>
+</Layout>

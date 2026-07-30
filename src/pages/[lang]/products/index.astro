@@ -2,7 +2,7 @@
 export const prerender = true;
 
 import Layout from '~/layouts/PageLayout.astro';
-import ProductCard from '~/components/widgets/ProductCard.astro';
+import ProductGridFilter from '~/components/widgets/ProductGridFilter.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 import merge from 'lodash.merge';
@@ -17,6 +17,7 @@ import {
 } from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
+import JsonLd from '~/components/common/JsonLd.astro';
 import { languages, defaultLang, ui } from '~/i18n/config';
 
 export async function getStaticPaths() {
@@ -113,12 +114,19 @@ const metadata = merge(
           </a>
         </div>
       ) : (
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProducts.map((p) => (
-            <ProductCard product={p} />
-          ))}
-        </div>
+        <ProductGridFilter products={filteredProducts} />
       )
     }
   </section>
+
+  <JsonLd
+    type="ItemList"
+    items={filteredProducts.map((p) => ({
+      name: p.title,
+      url: `/${lang}/products/${p.slug}`,
+      image: p.image || undefined,
+      description: p.summary || '',
+    }))}
+    data={{ numberOfItems: filteredProducts.length }}
+  />
 </Layout>

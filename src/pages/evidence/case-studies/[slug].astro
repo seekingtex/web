@@ -22,7 +22,7 @@ interface CaseStudy {
 export function getStaticPaths() {
   const d = evidenceData as any;
   const studies: CaseStudy[] = d.case_studies ?? [];
-  return studies.map((cs) => ({ params: { slug: cs.id } }));
+  return studies.filter((cs) => !(cs as any).fullArticle).map((cs) => ({ params: { slug: cs.id } }));
 }
 
 const d = evidenceData as any;

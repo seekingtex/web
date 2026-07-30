@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: 'Fabrics for Hiking Pants — Stretch Durable Outdoor Pant Fabrics | Seekingtex',
+  description: 'Durable stretch fabrics and softshell materials for hiking pants and outdoor trousers. 4-way stretch, DWR finish, 40K+ Martindale abrasion resistance. Custom development for outdoor apparel brands.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Outdoor Brand Solutions', href: '/solutions/outdoor-brands' },
+  { name: 'Fabrics for Hiking Pants' },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Fabrics for Hiking Pants — Durable Stretch Fabric Solutions',
+      description: 'Guide to selecting durable stretch fabrics for hiking pants. Softshell, stretch woven, and DWR finished materials for outdoor performance.',
+      author: { '@type': 'Organization', name: SITE.name },
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <section class="max-w-4xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Fabrics for Hiking Pants</h1>
+    <p class="mt-4 text-lg text-gray-500">Durable stretch wovens, softshell fabrics with DWR finish, and lightweight trekking pants materials engineered for trail performance.</p>
+
+    <div class="mt-12 prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600">
+      <h2>Why Pant Fabric is Different</h2>
+      <p>Hiking pants face different demands than jackets. They must resist abrasion from rocks and brush, provide stretch for scrambling and climbing moves, dry quickly after stream crossings, and remain comfortable during all-day wear. The fabric must balance durability with comfort — a challenge that outdoor brands consistently face.</p>
+
+      <h2>Key Fabric Types for Hiking Pants</h2>
+
+      <h3>Stretch Woven Fabrics</h3>
+      <p>Mechanical stretch woven from high-tenacity nylon or polyester with elastane. Provides 15-25% stretch in both warp and weft. Used for alpine pants, trekking trousers, and softshell pants. Typical weight: 150-250 g/m². Abrasion resistance: 30K-50K Martindale.</p>
+
+      <h3>Softshell with DWR</h3>
+      <p>Woven face / knit back construction combining durability with comfort. DWR finish adds weather resistance. Ideal for cold-weather hiking and approach pants. 4-way stretch with mechanical or elastane-based elasticity.</p>
+
+      <h3>Lightweight Trekking Fabric</h3>
+      <p>Ultralight woven nylon or polyester for summer hiking pants and travel trousers. Quick-drying and packable. Typically 80-130 g/m² with ripstop reinforcement for durability.</p>
+
+      <h2>Seekingtex Pant Fabric Solutions</h2>
+      <p>We develop custom pant fabrics with 4-way mechanical stretch, C6 or C0 DWR finishes, and abrasion resistance exceeding 40,000 Martindale cycles. Our softshell construction uses high-tenacity polyester face with moisture-wicking knit back, achieving 25% stretch at 240 g/m².</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">25%</div>
+        <div class="text-xs text-gray-500 mt-1">Stretch (Warp & Weft)</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">40K+</div>
+        <div class="text-xs text-gray-500 mt-1">Martindale Cycles</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">130-250</div>
+        <div class="text-xs text-gray-500 mt-1">g/m² Weight Range</div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/products?category=stretch" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Browse Pant Fabrics</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Custom Development</a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl border border-emerald-200 p-8">
+      <h2 class="text-xl font-semibold text-gray-900">Related Resources</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <a href="/solutions/outdoor-brands" class="text-sm text-sky-600 hover:underline">Outdoor Brand Solutions →</a>
+        <a href="/evidence/case-studies/durable-softshell-outdoor-pants" class="text-sm text-sky-600 hover:underline">Softshell Pants Case Study →</a>
+        <a href="/products/stretch-fabric" class="text-sm text-sky-600 hover:underline">Stretch Fabric →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Fabrics for hiking pants by Seekingtex. Stretch woven fabrics with 15-25% mechanical stretch. Softshell construction with woven face and knit back. DWR finish available in C6 and C0. Abrasion resistance 30K-50K Martindale cycles. Fabric weight 130-250 g/m². Lightweight trekking fabric options at 80-130 g/m² with ripstop. OEM custom development for outdoor pant manufacturers. OEKO-TEX certified.</p>
+  </section>
+</Layout>

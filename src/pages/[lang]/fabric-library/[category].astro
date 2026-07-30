@@ -1,0 +1,139 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+import { getPageContent } from '~/i18n/page-content';
+import { getProducts } from '~/utils/products';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+
+const CATEGORY_MAP: Record<string, string[]> = {
+  'sports-fabric': ['sun-protection', 'quick-dry', 'stretch', 'breathable', 'eco-friendly'],
+  'outdoor-fabric': ['waterproof', 'sun-protection', 'breathable', 'stretch', 'eco-friendly'],
+  'workwear-fabric': ['sun-protection', 'quick-dry', 'stretch', 'eco-friendly'],
+  'medical-fabric': ['antibacterial', 'quick-dry', 'breathable', 'eco-friendly'],
+  'fashion-functional-fabric': ['stretch', 'quick-dry', 'breathable', 'eco-friendly'],
+};
+
+const CATEGORY_INFO: Record<string, { title: string; description: string }> = {
+  'sports-fabric': {
+    title: 'Sports & Activewear Fabrics',
+    description:
+      'High-performance textiles engineered for athletic apparel — moisture-wicking, 4-way stretch, quick-dry, and lightweight performance fabrics.',
+  },
+  'outdoor-fabric': {
+    title: 'Outdoor & Adventure Fabrics',
+    description:
+      'Performance textiles engineered for the elements — waterproof, windproof, breathable, and thermally efficient fabrics for outdoor gear.',
+  },
+  'workwear-fabric': {
+    title: 'Workwear & Industrial Fabrics',
+    description:
+      'Protective performance textiles engineered for professional work environments — safety, durability, and comfort in demanding conditions.',
+  },
+  'medical-fabric': {
+    title: 'Medical & Healthcare Fabrics',
+    description:
+      'Performance textiles engineered for healthcare environments — antimicrobial protection, fluid resistance, and all-day comfort for medical professionals.',
+  },
+  'fashion-functional-fabric': {
+    title: 'Fashion Functional Fabrics',
+    description:
+      'Performance-enhanced textiles for everyday fashion — where style meets function in business, casual, and smart casual wear.',
+  },
+};
+
+export async function getStaticPaths() {
+  const paths: Array<{ params: { lang: string; category: string } }> = [];
+  const catKeys = ['sports-fabric', 'outdoor-fabric', 'workwear-fabric', 'medical-fabric', 'fashion-functional-fabric'];
+  for (const lang of Object.keys(languages)) {
+    for (const cat of catKeys) {
+      paths.push({ params: { lang, category: cat } });
+    }
+  }
+  return paths;
+}
+
+const { lang, category } = Astro.params;
+const catKey = category || '';
+const page = getPageContent(lang, 'fabric-library');
+const info = CATEGORY_INFO[catKey] || { title: catKey, description: '' };
+const allowedCategories = CATEGORY_MAP[catKey] || [];
+
+const allProducts = await getProducts();
+const filteredProducts = allProducts.filter((p) => p.category && allowedCategories.includes(p.category));
+
+const metadata = {
+  title: `${info.title} — ${SITE.name}`,
+  description: info.description,
+};
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: page.hero?.title || 'Fabric Library', href: `/${lang}/fabric-library` },
+  { name: info.title },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        {page.hero?.tagline || 'Fabric Library'}
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">{info.title}</h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">{info.description}</p>
+      <div class="mt-6">
+        <a
+          href={`/${lang}/fabric-library`}
+          class="inline-flex items-center gap-1 text-sm text-primary dark:text-blue-400 hover:underline"
+        >
+          <Icon name="tabler:arrow-left" class="w-4 h-4" />
+          {page.hero?.back_label || 'Back to Fabric Library'}
+        </a>
+      </div>
+    </header>
+
+    {
+      filteredProducts.length === 0 ? (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
+          <p class="text-lg">No products in this category yet.</p>
+          <a href={`/${lang}/fabric-library`} class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block">
+            Browse all categories
+          </a>
+        </div>
+      ) : (
+        <>
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-8">Recommended Fabrics</h2>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {filteredProducts.slice(0, 6).map((p) => (
+                <ProductCard product={p} />
+              ))}
+            </div>
+          </section>
+
+          <section class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+              {allowedCategories.map((c) => {
+                const catSlug = c.replace(/-/g, '-');
+                return (
+                  <a
+                    href={`/${lang}/${catSlug}-fabric`}
+                    class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+                  >
+                    {c.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())} Fabrics
+                    <Icon name="tabler:arrow-right" class="w-4 h-4" />
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        </>
+      )
+    }
+  </section>
+</Layout>

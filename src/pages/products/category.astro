@@ -10,6 +10,5 @@ export function getStaticPaths() {
 }
 
 const { urlSlug } = Astro.props;
-const redirectUrl = `/${urlSlug}`;
-return Astro.redirect(redirectUrl, 301);
+return Astro.redirect(`/${urlSlug}`, 301);
 ---

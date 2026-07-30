@@ -1,0 +1,182 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+---
+
+<Layout
+  metadata={{
+    title: `Sustainable Fabric Solution for Eco-conscious Outdoor Brand | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed GRS-certified recycled performance fabric for a Scandinavian eco-conscious outdoor apparel brand.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Sustainable Fabric Solution for an Eco-conscious Outdoor Brand',
+      description:
+        'Seekingtex developed GRS-certified recycled performance fabric for a Scandinavian eco-conscious outdoor apparel brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/eco-friendly-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Sustainable Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Sustainable Fabric Solution for an Eco-conscious Outdoor Brand
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      How Seekingtex helped a Scandinavian brand achieve sustainability goals without compromising outdoor performance.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">GRS</div>
+        <div class="text-xs text-gray-500 mt-1">Certified Recycled</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">100%</div>
+        <div class="text-xs text-gray-500 mt-1">rPET Content</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">5K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/eco-friendly-fabric.webp"
+        alt="GRS-certified recycled eco-friendly outdoor fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">GRS-Certified Recycled Outdoor Fabric</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a Scandinavian outdoor apparel brand with a strong commitment to environmental sustainability.
+        The brand wanted to launch a "Sustainable Performance" collection — outerwear and mid-layer pieces made entirely
+        from recycled materials without compromising on waterproofing, breathability, or durability.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <p>
+        The brand had tested recycled fabrics from several suppliers but encountered problems: lower tensile strength,
+        inconsistent dye uptake, higher weight compared to virgin alternatives, and limited finishing options. They
+        needed a fabric that could match virgin material performance while carrying full GRS chain-of-custody
+        certification.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>
+        Seekingtex sourced GRS-certified post-consumer recycled polyester (rPET) yarn from an approved supplier. A
+        plain-weave construction was selected at 120 g/m². A solvent-free PU coating was applied for waterproof
+        performance (5,000 mm hydrostatic head) with a C0 DWR finish (fluorocarbon-free). Full GRS transaction
+        certificates and OEKO-TEX Standard 100 certification were provided.
+      </p>
+
+      <h2>Development Process</h2>
+      <p>
+        Multiple rPET yarn sources were evaluated for consistency. Three fabric constructions were developed and tested.
+        GRS chain-of-custody documentation was prepared and verified through third-party testing. Bulk production was
+        completed across 4 colorways.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>100% rPET content</strong> — fully recycled polyester construction</li>
+        <li><strong>5,000 mm hydrostatic head</strong> — reliable waterproof protection</li>
+        <li><strong>GRS + OEKO-TEX certified</strong> — full traceability and safety</li>
+        <li><strong>Fluorocarbon-free DWR</strong> — environmentally responsible finishing</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={`/${lang}/products/eco-friendly-recycled-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Eco-Friendly Recycled Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">GRS-certified recycled materials</p>
+        </a>
+        <a
+          href={`/${lang}/products/waterproof-breathable`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Weather protection with eco-friendly finishing</p>
+        </a>
+        <a
+          href={`/${lang}/products/quick-dry-moisture-wicking`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Quick-Dry Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Performance moisture management</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <a
+        href={`/${lang}/contact`}
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >{t('home.evidence.ctaButton')}</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.evidence.title')}</a
+      >
+    </div>
+  </div>
+</Layout>

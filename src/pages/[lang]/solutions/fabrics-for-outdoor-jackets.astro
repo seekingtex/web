@@ -1,0 +1,99 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Fabrics for Outdoor Jackets — Waterproof Breathable Shell Fabrics | ${SITE.name}`,
+    description: 'Waterproof breathable fabrics, lightweight shells, and insulated constructions for outdoor jackets. 2L, 2.5L, and 3L laminate systems with 20K mm hydrostatic head. Custom development for outdoor apparel brands.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Fabrics for Outdoor Jackets — Waterproof Breathable Shell Solutions',
+      description: 'Guide to selecting waterproof breathable fabrics for outdoor jackets. 2L, 2.5L, 3L laminate systems explained.',
+      author: { '@type': 'Organization', name: SITE.name },
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <section class="max-w-4xl mx-auto px-6 py-24">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/solutions/outdoor-brands`} class="hover:text-sky-600">Outdoor Brand Solutions</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Fabrics for Outdoor Jackets</span>
+    </nav>
+
+    <h1 class="text-4xl font-bold text-gray-900">Fabrics for Outdoor Jackets</h1>
+    <p class="mt-4 text-lg text-gray-500">Waterproof breathable membranes, lightweight shells, and insulated constructions for outdoor jackets that perform in all conditions.</p>
+
+    <div class="mt-12 prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600">
+      <h2>Why Jacket Fabric Matters</h2>
+      <p>The outdoor jacket is the most visible piece in any outdoor brand's lineup. It is where consumers judge quality, where weather protection is non-negotiable, and where fabric choice directly impacts brand perception.</p>
+
+      <h2>Key Fabric Technologies for Outdoor Jackets</h2>
+
+      <h3>2-Layer Laminate (2L)</h3>
+      <p>Face fabric bonded to a waterproof membrane, with a separate loose lining. Best for casual hiking and moderate conditions. Typical spec: 5,000-10,000 mm hydrostatic head.</p>
+
+      <h3>2.5-Layer Laminate (2.5L)</h3>
+      <p>Face fabric + membrane + protective printed layer. Lighter than 3L, no separate lining. Ideal for lightweight hiking shells. Typical spec: 8,000-15,000 mm.</p>
+
+      <h3>3-Layer Laminate (3L)</h3>
+      <p>Face fabric + membrane + knit backer bonded as one. Maximum durability. Used for alpine and expedition gear. Typical spec: 15,000-30,000 mm.</p>
+
+      <h2>Seekingtex Jacket Fabric Solutions</h2>
+      <p>We develop custom jacket fabrics across all three laminate types. Our 75D nylon 6.6 face fabrics with C6/C0 DWR options achieve 20K mm / 15K g/m² in 3L construction. For lightweight shells, our 20D-40D woven fabrics with PU coating provide 5K-10K mm at under 100 g/m².</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">5K-30K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head Range</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">60-280 g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Fabric Weight Range</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">20D-75D</div>
+        <div class="text-xs text-gray-500 mt-1">Yarn Denier Options</div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/products?category=waterproof`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Browse Jacket Fabrics</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Develop Custom Laminate</a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <div class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-8">
+      <h2 class="text-xl font-semibold text-gray-900">Related Resources</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <a href={`${prefix}/solutions/outdoor-brands`} class="text-sm text-sky-600 hover:underline">Outdoor Brand Solutions →</a>
+        <a href={`${prefix}/evidence/case-studies/lightweight-waterproof-hiking-jacket`} class="text-sm text-sky-600 hover:underline">Hiking Jacket Case Study →</a>
+        <a href={`${prefix}/evidence/case-studies/ski-wear-fabric-development`} class="text-sm text-sky-600 hover:underline">Ski Shell Case Study →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Fabrics for outdoor jackets by Seekingtex. 2-layer, 2.5-layer, and 3-layer waterproof breathable laminate systems. Hydrostatic head range 5,000-30,000 mm. Fabric weight range 60-280 g/m². Yarn denier options 20D to 75D Nylon 6.6. C6 and C0 DWR finishes available. Custom laminate development for outdoor apparel brands. OEKO-TEX certified.</p>
+  </section>
+</Layout>

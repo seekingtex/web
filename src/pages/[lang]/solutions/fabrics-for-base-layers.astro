@@ -1,0 +1,99 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Fabrics for Base Layers — Moisture Wicking Performance Knits | ${SITE.name}`,
+    description: 'Performance knit fabrics for outdoor base layers. Moisture-wicking, antimicrobial, next-to-skin comfort for hiking, skiing, and trail running. Custom knit development.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Fabrics for Base Layers — Moisture Wicking and Antimicrobial Performance Knits',
+      description: 'Guide to selecting performance knit fabrics for outdoor base layers. Moisture management, odor control, and next-to-skin comfort for active outdoor use.',
+      author: { '@type': 'Organization', name: SITE.name },
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <section class="max-w-4xl mx-auto px-6 py-24">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/solutions/outdoor-brands`} class="hover:text-sky-600">Outdoor Brand Solutions</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Fabrics for Base Layers</span>
+    </nav>
+
+    <h1 class="text-4xl font-bold text-gray-900">Fabrics for Base Layers</h1>
+    <p class="mt-4 text-lg text-gray-500">Performance knits with moisture-wicking, odor control, and next-to-skin comfort engineered for all-season outdoor activity.</p>
+
+    <div class="mt-12 prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600">
+      <h2>The Foundation Layer</h2>
+      <p>Base layers are the most intimate piece of outdoor apparel. They sit directly against the skin and are responsible for moisture management — the single most important factor in thermal comfort. A good base layer fabric wicks sweat away, dries quickly, resists odor, and feels comfortable during continuous movement.</p>
+
+      <h2>Key Performance Requirements</h2>
+
+      <h3>Moisture Wicking</h3>
+      <p>Hydrophilic fibers or finishes draw moisture from the skin to the fabric surface where it evaporates. Seekingtex base layer fabrics achieve 120+ mm wicking rate.</p>
+
+      <h3>Antimicrobial / Odor Control</h3>
+      <p>Silver-based or zinc-based antimicrobial treatments prevent bacterial growth that causes odor. Seekingtex 7A antibacterial fabric maintains 99%+ bacterial reduction after 50 washes.</p>
+
+      <h3>Thermal Regulation</h3>
+      <p>Lightweight (95-120 g/m²) for summer trail running, mid-weight (140-180 g/m²) for three-season hiking, heavy-weight (200+ g/m²) for cold-weather insulation layering.</p>
+
+      <h2>Seekingtex Base Layer Solutions</h2>
+      <p>We develop single-jersey and rib-knit performance base layer fabrics using micro-denier polyester, nylon blends, and functional finishes. Our 95 g/m² ultralight knit achieves 25-minute drying time with silver-based antimicrobial protection.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-4">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">95-220 g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Weight Range</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">99.9%</div>
+        <div class="text-xs text-gray-500 mt-1">Bacterial Reduction</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">25 min</div>
+        <div class="text-xs text-gray-500 mt-1">Drying Time</div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/products?category=quick-dry`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Browse Base Layer Fabrics</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Custom Knit</a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-16">
+    <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-200 p-8">
+      <h2 class="text-xl font-semibold text-gray-900">Related Resources</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <a href={`${prefix}/solutions/outdoor-brands`} class="text-sm text-sky-600 hover:underline">Outdoor Brand Solutions →</a>
+        <a href={`${prefix}/evidence/case-studies/trail-running-apparel-fabric`} class="text-sm text-sky-600 hover:underline">Trail Running Case Study →</a>
+        <a href={`${prefix}/products/antibacterial-7a`} class="text-sm text-sky-600 hover:underline">Antimicrobial Fabric →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Fabrics for base layers by Seekingtex. Performance knit fabrics with 120+ mm wicking rate. Antimicrobial 99%+ reduction after 50 washes. Three weight categories: lightweight 95-120 g/m², mid-weight 140-180 g/m², heavy-weight 200+ g/m². Single-jersey and rib-knit. Micro-denier polyester and nylon. Brushed-back knit for thermal retention. OEM/ODM development. OEKO-TEX certified.</p>
+  </section>
+</Layout>

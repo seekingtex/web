@@ -1,0 +1,36 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+<Layout metadata={{ title: `Smart Seasonal Fashion Fabrics — Cooling, UV, Thermal | ${SITE.name}`, description: 'Smart seasonal fabrics for fashion brands. Cooling and UV protection for summer, thermal and wind-resistant for winter collections.', ignoreTitleTemplate: true }}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Smart Seasonal Fashion Fabrics by Seekingtex', description: 'Seasonal adaptive fabrics for fashion collections.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Smart Seasonal Fashion Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Adaptive textiles for seasonal collections — cooling and UV protection for summer; thermal and wind-resistant for autumn and winter.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Summer Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">Cooling, UPF 50+, and breathable fabrics for resort wear and warm-weather collections.</p>
+        <a href={`${prefix}/sun-protection-fabric`} class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Browse sun protection →</a>
+      </div>
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Cold Weather</h2>
+        <p class="mt-2 text-sm text-gray-600">Thermal, wind-resistant fabrics for autumn/winter. Warmth without bulk.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/uv-protection-fashion-womens-collection`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sample Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Smart seasonal fashion fabrics. Summer: cooling, UPF 50+, breathable. Winter: thermal, wind-resistant. OEKO-TEX.</p></section>
+</Layout>

@@ -1,0 +1,88 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Waterproof Breathable Fabric Solutions — 2L / 2.5L / 3L Laminate Systems | ${SITE.name}`,
+  description:
+    'Waterproof breathable fabric solutions from Seekingtex — 2-layer, 2.5-layer, and 3-layer laminate systems. 5K-30K mm hydrostatic head. PU coated, TPU laminated, ePTFE membrane. Custom development for outdoor apparel brands.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Waterproof Breathable Fabric Solutions' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Waterproof Breathable Fabric Solutions',
+      description: 'Complete range of waterproof breathable fabric solutions from PU coating to ePTFE membrane laminates for outdoor apparel.',
+      provider: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Waterproof Breathable Fabric Solutions</h1>
+    <p class="mt-4 text-xl text-gray-500">Complete waterproof breathable fabric solutions for outdoor apparel — from cost-effective PU coatings to premium ePTFE 3-layer laminates. Custom construction, finishing, and certification support.</p>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+        <h2 class="text-lg font-semibold text-gray-900">2-Layer Laminate (2L)</h2>
+        <p class="mt-2 text-sm text-gray-500">Face fabric + waterproof membrane with separate loose lining. Best for casual hiking, urban outdoor. 5K-10K mm hydrostatic head.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-600">
+          <li>• Flexible and soft hand feel</li>
+          <li>• Cost-effective performance</li>
+          <li>• Ideal for casual to moderate use</li>
+        </ul>
+        <a href="/waterproof-fabric" class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse 2L fabrics →</a>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+        <h2 class="text-lg font-semibold text-gray-900">2.5-Layer Laminate (2.5L)</h2>
+        <p class="mt-2 text-sm text-gray-500">Face fabric + membrane + protective printed layer. Lighter than 3L, no separate lining needed. 8K-15K mm. Ideal for packable rain shells.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-600">
+          <li>• Lightweight and packable</li>
+          <li>• Good breathability</li>
+          <li>• Perfect for travel and hiking</li>
+        </ul>
+        <a href="/waterproof-fabric" class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse 2.5L fabrics →</a>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+        <h2 class="text-lg font-semibold text-gray-900">3-Layer Laminate (3L)</h2>
+        <p class="mt-2 text-sm text-gray-500">Face + membrane + knit backer bonded as one. Maximum durability. 15K-30K mm hydrostatic head. For alpine and professional use.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-600">
+          <li>• Maximum durability 50K+ cycles</li>
+          <li>• Premium weather protection</li>
+          <li>• For extreme conditions</li>
+        </ul>
+        <a href="/waterproof-fabric" class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse 3L fabrics →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Technical Specifications</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full text-sm text-gray-600">
+          <thead><tr class="border-b border-gray-200 text-left"><th class="pb-3 font-semibold text-gray-900">Technology</th><th class="pb-3 font-semibold text-gray-900">Hydrostatic Head</th><th class="pb-3 font-semibold text-gray-900">MVTR</th><th class="pb-3 font-semibold text-gray-900">Weight Range</th><th class="pb-3 font-semibold text-gray-900">Applications</th></tr></thead>
+          <tbody>
+            <tr class="border-b border-gray-100"><td class="py-3">PU Coated</td><td>5K-10K mm</td><td>3K-5K g/m²</td><td>100-180 g/m²</td><td>Rainwear, casual shells</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-3">TPU Laminated</td><td>15K-20K mm</td><td>5K-8K g/m²</td><td>180-280 g/m²</td><td>Protective, marine, workwear</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-3">ePTFE Membrane 3L</td><td>20K-30K mm</td><td>10K-15K g/m²</td><td>200-280 g/m²</td><td>Alpine, ski, military</td></tr>
+            <tr><td class="py-3">Hydrophilic PU 2.5L</td><td>10K-15K mm</td><td>8K-12K g/m²</td><td>90-140 g/m²</td><td>Packable hiking shells</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/contact" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Request Custom Laminate Development</a>
+      <a href="/solutions/outdoor-brands" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View Outdoor Solutions</a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Waterproof breathable fabric solutions by Seekingtex. Three laminate types: 2-layer (5K-10K mm, woven face + membrane + loose lining), 2.5-layer (8K-15K mm, face + membrane + printed protective layer), 3-layer (15K-30K mm, face + membrane + knit backer bonded as one). Four waterproof technologies: PU coated (microporous polyurethane), TPU laminated (thermoplastic polyurethane film), ePTFE membrane (expanded polytetrafluoroethylene), hydrophilic PU. Applications: outdoor jackets, ski shells, rainwear, hiking shells, protective workwear, military gear. All fabrics OEKO-TEX Standard 100 certified. Custom laminate development for outdoor apparel brands.</p>
+  </section>
+</Layout>

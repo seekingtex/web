@@ -1,0 +1,187 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+---
+
+<Layout
+  metadata={{
+    title: `How Seekingtex Developed Durable Softshell Fabric for Outdoor Pants | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed a customized durable softshell fabric with 4-way stretch and DWR finish for a European outdoor pants brand.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Developing Durable Softshell Fabric for Outdoor Pants',
+      description:
+        'Seekingtex developed a customized durable softshell fabric with 4-way stretch and DWR finish for a European outdoor pants brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/stretch-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Durable Softshell Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      How Seekingtex Developed a Durable Softshell Fabric for Outdoor Pants
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Custom stretch fabric solution for a European outdoor brand requiring mobility, weather resistance, and extended
+      durability.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">45 days</div>
+        <div class="text-xs text-gray-500 mt-1">Sample to Approval</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">40K+</div>
+        <div class="text-xs text-gray-500 mt-1">Abrasion Cycles</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">3 styles</div>
+        <div class="text-xs text-gray-500 mt-1">Pants Collection</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/stretch-fabric.webp"
+        alt="Durable softshell stretch fabric for outdoor pants"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Durable Softshell Fabric for Outdoor Pants</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a European outdoor apparel brand with a strong presence in hiking and trekking categories. The
+        brand was preparing to launch a dedicated outdoor pants collection and needed a fabric partner who understood
+        the specific demands of lower-body outdoor apparel: mobility, abrasion resistance, and weather protection.
+      </p>
+      <p>
+        The brand's existing products used standard woven fabrics that lacked stretch and comfort. Their product team
+        identified softshell fabric as the ideal material platform but needed guidance on construction, weight, and
+        finishing for their specific price point and performance targets.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Finding the Balance Between Stretch, Durability, and Weather Resistance</h3>
+      <p>
+        The brand required a fabric that could deliver 4-way stretch, abrasion resistance (minimum 30,000 Martindale
+        cycles), DWR water repellency, breathability, and lightweight feel for all-day wear. Many softshell fabrics in
+        the market prioritized stretch but compromised on durability, or offered durability but felt stiff and
+        uncomfortable.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>
+        Seekingtex developed a woven face / knit back softshell construction using high-tenacity polyester face yarns
+        for abrasion resistance and a fine-denier knit back for comfort and stretch. Mechanical stretch was incorporated
+        through the weave structure, achieving 25% stretch in both warp and weft directions. A C6 DWR finish was applied
+        and optimized for 20+ wash durability.
+      </p>
+
+      <h2>Development Process</h2>
+      <p>
+        Seekingtex reviewed the brand's existing product line and target price points. Three construction variations
+        were developed and evaluated. The selected fabric underwent finishing trials to optimize DWR performance without
+        affecting hand feel. After final approval, bulk production was scheduled across 3 colorways.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>Durability:</strong> 40,000+ Martindale cycles — exceeded expectations</li>
+        <li><strong>Stretch:</strong> 25% warp and weft — enabled full range of motion</li>
+        <li><strong>Weather resistance:</strong> DWR finish provided reliable light rain protection</li>
+        <li><strong>Weight:</strong> 240 g/m² — balanced durability with comfort</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={`/${lang}/products/stretch-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">4-Way Stretch Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">High-performance stretch fabrics for active outdoor wear</p>
+        </a>
+        <a
+          href={`/${lang}/products/waterproof-breathable`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Weather protection for outdoor apparel</p>
+        </a>
+        <a
+          href={`/${lang}/products/quick-dry-moisture-wicking`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Quick-Dry Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Moisture management for active outdoor performance</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <a
+        href={`/${lang}/contact`}
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >{t('home.evidence.ctaButton')}</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.evidence.title')}</a
+      >
+    </div>
+  </div>
+</Layout>

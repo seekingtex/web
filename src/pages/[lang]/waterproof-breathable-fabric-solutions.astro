@@ -1,0 +1,37 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Waterproof Breathable Fabric Solutions — 2L/2.5L/3L Laminates | ${SITE.name}`,
+    description: 'Waterproof breathable fabric solutions — 2-layer, 2.5-layer, 3-layer laminate systems. 5K-30K mm hydrostatic head. PU coated, TPU laminated, ePTFE membrane. Custom development.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Waterproof Breathable Fabric Solutions', description: 'Waterproof breathable fabric solutions for outdoor apparel.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Waterproof Breathable Fabric Solutions</h1>
+    <p class="mt-4 text-xl text-gray-500">Complete waterproof breathable fabric range — PU coated, TPU laminated, and ePTFE membrane. 2L, 2.5L, and 3L constructions. Custom development for outdoor apparel.</p>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="bg-white border border-gray-200 rounded-2xl p-6"><h2 class="text-lg font-semibold text-gray-900">2-Layer (2L)</h2><p class="mt-2 text-sm text-gray-500">Face + membrane + loose lining. 5K-10K mm. Casual hiking and urban outdoor.</p><a href={`${prefix}/waterproof-fabric`} class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse →</a></div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6"><h2 class="text-lg font-semibold text-gray-900">2.5-Layer (2.5L)</h2><p class="mt-2 text-sm text-gray-500">Face + membrane + printed layer. 8K-15K mm. Lightweight packable shells.</p><a href={`${prefix}/waterproof-fabric`} class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse →</a></div>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6"><h2 class="text-lg font-semibold text-gray-900">3-Layer (3L)</h2><p class="mt-2 text-sm text-gray-500">Face + membrane + backer bonded. 15K-30K mm. Alpine and professional use.</p><a href={`${prefix}/waterproof-fabric`} class="mt-4 inline-flex text-sm font-medium text-sky-600 hover:underline">Browse →</a></div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/contact`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Request Custom Laminate Development</a>
+      <a href={`${prefix}/solutions/outdoor-brands`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View Outdoor Solutions</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Waterproof breathable fabric solutions. 2L, 2.5L, 3L laminates. PU coated, TPU laminated, ePTFE membrane. 5K-30K mm hydrostatic head. OEKO-TEX certified. Applications: outdoor jackets, ski shells, rainwear, hiking shells.</p></section>
+</Layout>

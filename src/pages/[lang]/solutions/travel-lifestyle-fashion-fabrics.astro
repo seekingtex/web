@@ -1,0 +1,45 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+<Layout metadata={{ title: `Travel & Lifestyle Fashion Fabrics — Easy Care Textiles | ${SITE.name}`, description: 'Travel-friendly fashion fabrics with wrinkle resistance, quick-dry performance, and lightweight comfort for lifestyle brands.', ignoreTitleTemplate: true }}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Travel & Lifestyle Fashion Fabrics by Seekingtex', description: 'Wrinkle-resistant, quick-dry, lightweight stretch fabrics for travel wear.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Travel & Lifestyle Fashion Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Clothing should adapt to your lifestyle, not the other way around. Wrinkle-resistant, quick-dry, lightweight fabrics for modern travel and daily life.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Wrinkle-Resistant Wovens</h2>
+        <p class="mt-2 text-sm text-gray-600">Easy care fabrics that stay crisp through packing, flights, and full workdays. Machine washable.</p>
+        <a href={`${prefix}/products/quick-dry-fabric`} class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Browse quick-dry fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Stretch</h2>
+        <p class="mt-2 text-sm text-gray-600">Packable, quick-drying stretch fabrics for versatile travel wardrobes.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Features for Modern Travelers</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Wrinkle Resistant</h3><p class="mt-1 text-sm text-gray-500">Engineered finishing that resists creasing during wear, packing, and travel.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Quick Dry</h3><p class="mt-1 text-sm text-gray-500">Dries 3x faster than cotton. Wash in hotel sink, wear the next morning.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Lightweight</h3><p class="mt-1 text-sm text-gray-500">More outfits, less luggage weight with ultra-light fabrics.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Easy Wash</h3><p class="mt-1 text-sm text-gray-500">Machine washable. No dry cleaning needed. Maintains appearance wash after wash.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/easy-care-business-casual-collection`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sample Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Travel and lifestyle fashion fabrics by Seekingtex. Wrinkle resistant, quick dry, lightweight stretch woven fabrics for travel wear, commuting, lifestyle brands. OEKO-TEX. OEM/ODM.</p></section>
+</Layout>

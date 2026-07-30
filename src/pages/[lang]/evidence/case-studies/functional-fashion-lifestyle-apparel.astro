@@ -1,0 +1,98 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Functional Fashion Lifestyle Apparel — Case Study | ${SITE.name}`,
+    description: 'How Seekingtex helped a European fashion brand upgrade its collection with functional fabrics — wrinkle-resistant, stretch, breathable materials that maintained premium design aesthetics.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'How Seekingtex Helped a Fashion Brand Upgrade Its Collection with Functional Fabrics', description: 'A European fashion brand transformed from basic apparel to premium functional lifestyle products with Seekingtex performance fabrics.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/knit-stretch-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'How can fashion brands add functionality to clothing products?', acceptedAnswer: { '@type': 'Answer', text: 'Fashion brands can upgrade products by selecting functional fabrics with features such as stretch, breathability, wrinkle resistance, moisture management, and easy-care performance.' } },
+        { '@type': 'Question', name: 'Can functional fabrics maintain a premium fashion appearance?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Modern functional textiles can provide performance benefits while maintaining soft hand feel, elegant appearance, and fashion-oriented design.' } },
+        { '@type': 'Question', name: 'What types of fashion products can use functional fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Functional fabrics can be applied to shirts, dresses, jackets, trousers, lifestyle apparel, and travel clothing.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Functional Fashion Apparel</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-violet-700 bg-violet-50 px-3 py-1 rounded-full">Fashion Brand Innovation</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">From Traditional Fashion to Functional Lifestyle Apparel</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped a European contemporary fashion brand create a new generation of functional everyday wear.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Stretch</div><div class="text-xs text-gray-500 mt-1">Comfort Mobility</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Wrinkle-</div><div class="text-xs text-gray-500 mt-1">Resistant</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Breathable</div><div class="text-xs text-gray-500 mt-1">All-Day Comfort</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European contemporary fashion brand with over 10 years of history, specializing in modern lifestyle apparel for women aged 25-45. The brand had built a strong reputation for minimalist design, premium appearance, and comfortable everyday clothing in categories including shirts, dresses, jackets, trousers, and seasonal collections.</p>
+
+      <h2>The Challenge — Beautiful Design Was No Longer Enough</h2>
+      <p>As the fashion market became increasingly crowded, the brand faced a critical challenge: consumers were no longer satisfied with clothing that only looked good. They wanted apparel that could keep up with their active, multi-scenario lifestyles — commuting, office, travel, social, and weekend activities. Many competitors offered similar designs, colors, and materials, making it difficult for consumers to perceive meaningful differences between brands.</p>
+
+      <h2>Customer Requirements</h2>
+      <p>The brand identified three key goals for a new lifestyle collection. First, improve wearing comfort with soft touch, breathability, and lightweight feel. Second, create travel-friendly apparel with wrinkle resistance, quick drying, and easy maintenance. Third, maintain premium fashion appearance — the fabric must not look like sportswear, but rather maintain elegant appearance, premium hand feel, and good drape.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex worked closely with the brand team to understand product positioning, target consumers, garment categories, and expected performance. We developed a three-part solution:</p>
+      <p><strong>Premium Comfort:</strong> Fabrics combining soft hand feel, stretch comfort, and breathability while allowing designers to maintain original fashion silhouettes.</p>
+      <p><strong>Easy-Care Upgrade:</strong> Wrinkle-resistant technology, quick-dry performance, and durable finishing solutions for travel and lifestyle products.</p>
+      <p><strong>Fashion-Oriented Functional Materials:</strong> Fabrics balancing functionality with smooth texture, premium appearance, and comfortable drape.</p>
+
+      <h2>Development Process</h2>
+      <p>The project followed a structured four-step process. First, product requirement analysis examining garment application, consumer lifestyle, and performance expectations. Second, fabric recommendation evaluating options based on comfort, movement, travel, summer wear, and daily use requirements. Third, sample testing for appearance, hand feel, garment construction, and performance. Fourth, final fabric selection after thorough evaluation.</p>
+
+      <h2>Business Results</h2>
+      <ul>
+        <li>Product positioning shifted from traditional fashion to modern lifestyle brand</li>
+        <li>Brand marketing message evolved from "Beautiful Design" to "Designed for Modern Life"</li>
+        <li>New product lines launched: Travel Wear, Everyday Comfort, Functional Lifestyle</li>
+        <li>Consumers perceived higher product value through meaningful functional benefits</li>
+      </ul>
+
+      <h2>Customer Feedback</h2>
+      <blockquote><p>"Seekingtex helped us understand that functional fabrics are not only for sportswear. The right fabric technology can enhance fashion products while keeping the design philosophy of our brand."</p></blockquote>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-violet-700 to-purple-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Upgrading Your Fashion Collection?</h2>
+      <p class="text-violet-100 max-w-xl mx-auto mb-6">Partner with Seekingtex to add meaningful functional value to your fashion products.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-violet-700 font-semibold px-8 py-3 rounded-xl hover:bg-violet-50 transition-colors">Request Development Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-violet-700 hover:text-violet-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

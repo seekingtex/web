@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Performance Casual Fashion Fabrics — Athleisure & Urban Lifestyle Textiles | ${SITE.name}`,
+  description: 'Performance casual fabrics bridging active comfort with everyday style. Moisture-wicking, stretch, breathable textiles for athleisure, commuting wear, and urban lifestyle fashion brands.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Fashion Solutions', href: '/solutions/fashion-brands' }, { name: 'Performance Casual Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Performance Casual Fashion Fabrics by Seekingtex', description: 'Athleisure and urban lifestyle performance fabrics combining activewear function with casual fashion style.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Performance Casual Fashion Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Performance meets everyday style. Moisture-wicking, stretch, and breathable fabrics for athleisure, commuting, and modern urban lifestyle wear.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Athleisure Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Moisture-wicking knits with 4-way stretch and antibacterial finish. Comfort for gym-to-street versatility.</p>
+        <a href="/products/stretch-fabric" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Browse stretch fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Urban Commute Wear</h2>
+        <p class="mt-2 text-sm text-gray-600">Breathable stretch wovens and knits for commuting, weekend wear, and urban exploration. Style meets function.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Performance Features</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Moisture Wicking</h3><p class="mt-1 text-sm text-gray-500">Advanced moisture transport keeps you dry during active commuting and everyday movement.</p></div>
+        <div><h3 class="font-semibold text-gray-900">4-Way Stretch</h3><p class="mt-1 text-sm text-gray-500">Maximum freedom of movement for cycling, walking, and dynamic urban lifestyles.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Odor Control</h3><p class="mt-1 text-sm text-gray-500">Antibacterial finishing for all-day freshness in active city living.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Quick Dry</h3><p class="mt-1 text-sm text-gray-500">Fast-drying performance for unpredictable weather and active commutes.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/functional-fashion-lifestyle-apparel" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sample Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Performance casual fashion fabrics by Seekingtex. Athleisure fabrics with moisture wicking, 4-way stretch, antibacterial finish. Urban commute wear with breathable stretch wovens. OEKO-TEX certified. For lifestyle fashion brands combining active performance with everyday style.</p></section>
+</Layout>

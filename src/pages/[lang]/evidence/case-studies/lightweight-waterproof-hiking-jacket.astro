@@ -1,0 +1,403 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+---
+
+<Layout
+  metadata={{
+    title: `How Seekingtex Helped an Outdoor Brand Develop a Lightweight Waterproof Hiking Jacket | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed a customized lightweight waterproof breathable fabric for an emerging European outdoor apparel brand hiking jacket collection balancing protection comfort and weight.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline:
+        'How Seekingtex Helped an Emerging Outdoor Brand Develop a Lightweight Waterproof Hiking Jacket Collection',
+      description:
+        'Case study: Seekingtex developed a customized lightweight waterproof breathable fabric for an emerging European outdoor apparel brand hiking jacket collection.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/waterproof-fabric.webp',
+      datePublished: '2026-07-28',
+      dateModified: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Lightweight Waterproof Hiking Jacket</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+      >
+        Outdoor Apparel
+      </span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      How Seekingtex Helped an Emerging Outdoor Brand Develop a Lightweight Waterproof Hiking Jacket Collection
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      From functional fabric supplier to technical development partner — a case study in outdoor apparel innovation
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">52 days</div>
+        <div class="text-xs text-gray-500 mt-1">{t('home.evidence.ctaTitle')}</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">100%</div>
+        <div class="text-xs text-gray-500 mt-1">Performance Targets Met</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">Collection</div>
+        <div class="text-xs text-gray-500 mt-1">Full Jacket Line Launched</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/waterproof-fabric.webp"
+        alt="Waterproof breathable fabric for outdoor hiking jacket"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Lightweight Waterproof Fabric for Outdoor Hiking Jacket</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <h3>About the Customer</h3>
+      <p>
+        Our customer is an emerging outdoor apparel brand based in Europe, focusing on hiking, trekking and outdoor
+        lifestyle products. The brand had built a growing customer base through functional outdoor clothing and was
+        preparing to expand its product range with a new generation of lightweight hiking jackets.
+      </p>
+      <p>
+        Unlike traditional outdoor products that focus only on basic protection, the brand wanted to create apparel that
+        could meet the expectations of modern outdoor consumers:
+      </p>
+      <ul>
+        <li>Lightweight wearing experience</li>
+        <li>Reliable weather protection</li>
+        <li>Better breathability</li>
+        <li>Comfortable performance during long outdoor activities</li>
+      </ul>
+      <p>
+        However, the brand faced challenges in selecting the right fabric partner who could understand both technical
+        requirements and commercial product positioning.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Developing a Lightweight Jacket Without Compromising Performance</h3>
+      <p>
+        Before contacting Seekingtex, the brand had already evaluated several fabric options. However, they found that
+        many available materials involved compromises.
+      </p>
+      <p><strong>Option 1:</strong> Higher waterproof performance</p>
+      <ul>
+        <li>Fabric weight was relatively high</li>
+        <li>Wearing experience was less comfortable during active movement</li>
+      </ul>
+      <p><strong>Option 2:</strong> Lightweight construction</p>
+      <ul>
+        <li>Durability was insufficient</li>
+        <li>Protection performance did not fully meet outdoor requirements</li>
+      </ul>
+      <p>
+        The brand needed a fabric solution that could achieve a better balance between:
+        <strong>Protection + Comfort + Lightweight Performance</strong>
+      </p>
+
+      <hr />
+
+      <h2>Understanding the Product Requirements</h2>
+      <p>Before recommending materials, Seekingtex worked with the brand to understand the complete product context.</p>
+      <h3>Product Positioning</h3>
+      <p>The jacket was designed for:</p>
+      <ul>
+        <li>Hiking</li>
+        <li>Outdoor travel</li>
+        <li>Weekend adventures</li>
+        <li>Lightweight trekking</li>
+      </ul>
+      <h3>Target Users</h3>
+      <p>The target consumers expected:</p>
+      <ul>
+        <li>Protection from changing weather</li>
+        <li>Comfortable movement</li>
+        <li>Easy packing and carrying</li>
+        <li>Long-lasting product performance</li>
+      </ul>
+      <h3>Key Fabric Requirements</h3>
+      <p>
+        <strong>1. Waterproof Protection:</strong> The jacket needed to handle light rain, outdoor moisture, and changing
+        weather conditions.
+      </p>
+      <p>
+        <strong>2. Breathability:</strong> Because hiking involves continuous physical activity, users generate heat and moisture.
+        The fabric needed to help manage sweat vapor, internal humidity, and wearing comfort.
+      </p>
+      <p>
+        <strong>3. Lightweight Performance:</strong> The brand wanted to position the jacket as a versatile outdoor product.
+        Reducing unnecessary fabric weight was important.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <h3>Customized Functional Fabric Development</h3>
+      <p>
+        Instead of recommending a standard fabric directly, Seekingtex analyzed the complete product requirements and
+        developed a suitable fabric solution. The development focused on three areas:
+      </p>
+
+      <h3>1. Optimizing Fabric Structure</h3>
+      <p>
+        Seekingtex selected a lightweight woven fabric structure designed for outdoor applications. The fabric
+        construction provided:
+      </p>
+      <ul>
+        <li>Good strength-to-weight ratio</li>
+        <li>Comfortable hand feel</li>
+        <li>Suitable durability for outdoor use</li>
+      </ul>
+      <p>This helped the brand achieve a lighter jacket design while maintaining reliable performance.</p>
+
+      <h3>2. Improving Weather Protection</h3>
+      <p>For outdoor conditions, Seekingtex provided a functional finishing solution. The fabric was optimized for:</p>
+      <ul>
+        <li>Water resistance</li>
+        <li>Wind protection</li>
+        <li>Outdoor durability</li>
+      </ul>
+      <p>This allowed the final garment to provide better protection during outdoor activities.</p>
+
+      <h3>3. Balancing Breathability and Comfort</h3>
+      <p>
+        One of the most important development goals was improving wearing comfort. Seekingtex worked with the brand to
+        balance:
+      </p>
+      <ul>
+        <li>Weather protection</li>
+        <li>Moisture management</li>
+        <li>User comfort</li>
+      </ul>
+      <p>The final fabric solution was designed for active outdoor users who require performance during movement.</p>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <h3>Step 1: Requirement Analysis</h3>
+      <p>
+        Seekingtex discussed product application, target market, expected performance, and garment design. The goal was
+        to understand not only the fabric requirement but also the brand's product strategy.
+      </p>
+      <h3>Step 2: Fabric Recommendation</h3>
+      <p>
+        Based on the requirements, Seekingtex provided suitable fabric options, technical specifications, and
+        performance recommendations. The brand evaluated different solutions according to weight, functionality, cost
+        efficiency, and product positioning.
+      </p>
+      <h3>Step 3: Sample Development</h3>
+      <p>
+        After selecting the preferred direction, Seekingtex developed samples for evaluation. The samples were tested
+        for appearance, hand feel, functional performance, and garment suitability.
+      </p>
+      <h3>Step 4: Final Adjustment</h3>
+      <p>
+        Based on customer feedback, Seekingtex adjusted fabric structure, finishing performance, and product details.
+        The final solution achieved a better balance between performance and commercial requirements.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <p>
+        The developed fabric was successfully applied to the customer's lightweight hiking jacket collection. The
+        product achieved:
+      </p>
+
+      <h3>Improved Outdoor Performance</h3>
+      <ul>
+        <li>Reliable weather protection</li>
+        <li>Better comfort during outdoor activities</li>
+        <li>Lightweight wearing experience</li>
+      </ul>
+
+      <h3>Stronger Product Differentiation</h3>
+      <p>
+        Through functional fabric innovation, the brand was able to create a product with clearer market positioning.
+      </p>
+      <p>From:</p>
+      <blockquote><p>"Another outdoor jacket"</p></blockquote>
+      <p>To:</p>
+      <blockquote><p>"A lightweight performance jacket designed for modern outdoor lifestyles."</p></blockquote>
+
+      <h3>Better Product Development Efficiency</h3>
+      <ul>
+        <li>Reduced material selection difficulty</li>
+        <li>Improved development efficiency</li>
+        <li>Accessed professional fabric knowledge</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Customer Chose Seekingtex</h2>
+      <p>The customer was not only looking for a fabric supplier. They needed a partner who could support:</p>
+
+      <h3>Technical Understanding</h3>
+      <p>Understanding the relationship between fabric structure, garment performance, and outdoor application.</p>
+
+      <h3>Product-Oriented Thinking</h3>
+      <p>
+        Seekingtex focused on "What does the final garment need to achieve?" rather than simply "What fabric can we
+        sell?"
+      </p>
+
+      <h3>Flexible Development Support</h3>
+      <p>For growing outdoor brands, flexibility is important. Seekingtex supported:</p>
+      <ul>
+        <li>Product discussion</li>
+        <li>Fabric recommendation</li>
+        <li>Sample improvement</li>
+        <li>Production preparation</li>
+      </ul>
+
+      <hr />
+
+      <h2>Customer Feedback</h2>
+      <blockquote>
+        <p>
+          "Seekingtex helped us understand how fabric selection influences the final outdoor product. Their technical
+          support allowed us to develop a jacket that better matches our brand positioning and customer expectations."
+        </p>
+      </blockquote>
+
+      <hr />
+
+      <h2>Project Summary</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Customer Type</td><td>Emerging Outdoor Apparel Brand</td></tr>
+          <tr><td>Market</td><td>European Outdoor Market</td></tr>
+          <tr><td>Product</td><td>Lightweight Hiking Jacket</td></tr>
+          <tr><td>Application</td><td>Hiking / Trekking / Outdoor Lifestyle</td></tr>
+          <tr
+            ><td>Main Challenge</td><td
+              >Balance between waterproof protection, breathability and lightweight performance</td
+            ></tr
+          >
+          <tr><td>Seekingtex Solution</td><td>Customized functional outdoor fabric</td></tr>
+          <tr><td>Result</td><td>Improved product performance and market positioning</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Seekingtex: Your Functional Fabric Innovation Partner</h2>
+      <p>
+        Outdoor apparel brands need more than fabric suppliers. They need partners who understand product requirements,
+        consumer expectations, performance challenges, and market trends.
+      </p>
+      <p><strong>Seekingtex provides functional textile solutions for:</strong></p>
+      <ul>
+        <li>Outdoor Jackets</li>
+        <li>Hiking Apparel</li>
+        <li>Softshell Clothing</li>
+        <li>Performance Outdoor Wear</li>
+        <li>Sustainable Outdoor Products</li>
+      </ul>
+      <p>
+        <strong
+          >From fabric innovation to finished product success, Seekingtex helps outdoor brands create better-performing
+          apparel.</strong
+        >
+      </p>
+    </article>
+
+    <!-- Related Products -->
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">{t('v2.solution')}</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={`/${lang}/products/waterproof-breathable`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Waterproof Breathable Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">High-performance waterproof fabrics for outdoor apparel</p>
+        </a>
+        <a
+          href={`/${lang}/products/breathable-mesh-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Breathable Mesh Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Moisture management solutions for active outdoor wear</p>
+        </a>
+        <a
+          href={`/${lang}/products/eco-friendly-recycled-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Sustainable Performance Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">Eco-friendly materials for sustainable outdoor products</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <a
+        href={`/${lang}/contact`}
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+      >
+        {t('home.evidence.ctaButton')}
+      </a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium">
+        &larr; {t('home.evidence.title')}
+      </a>
+    </div>
+  </div>
+</Layout>

@@ -3,6 +3,276 @@ heading: Evidence
 description: Real case studies, certifications, test data, and deployment photos that demonstrate our fabric manufacturing capability and product quality.
 
 case_studies:
+  - id: running-apparel-lightweight-performance
+    client: European Running Apparel Brand
+    product: Lightweight Performance Knit Fabric System
+    industry: Sportswear
+    challenge: "European emerging running brand faced market homogenization with standard polyester fabrics. Needed lightweight, moisture-wicking performance fabric to differentiate its running collection and support premium product positioning."
+    solution: "Seekingtex analyzed running apparel requirements and developed a lightweight performance knit fabric with moisture management technology, breathable construction, and soft touch finish. Custom development through application analysis, fabric engineering, and athlete testing."
+    result: "New lightweight running collection launched successfully with improved comfort, better moisture control, and stronger product story. Brand shifted from price/design competition to performance innovation. Established long-term development partnership with Seekingtex."
+    image: /images/seekingtex/products/compression-texture.webp
+    tags: [Sportswear, Running, Activewear, Performance]
+    fullArticle: true
+    outcome_metrics:
+      - label: Weight
+        value: Lightweight
+      - label: Technology
+        value: Moisture Wicking
+      - label: Finish
+        value: Soft Touch
+
+  - id: healthcare-scrub-fabric-development
+    client: European Healthcare Apparel Brand
+    product: High-Performance Medical Scrub Fabric System
+    industry: Medical Apparel
+    challenge: "European healthcare apparel brand needed to upgrade traditional scrub fabrics for 8-12 hour wear comfort, mobility, and durability through 200+ industrial launderings. Existing polyester blends lacked breathability, stretch, and long-term appearance retention."
+    solution: "Seekingtex developed a polyester-spandex stretch woven fabric (92/8 blend, 160-200 GSM) with 4-way stretch, moisture wicking, soft touch finish, and easy care durability engineering. Custom development through requirements analysis, fabric engineering, and healthcare professional testing."
+    result: "Premium medical scrub collection launched successfully with improved comfort, mobility, and extended garment lifespan. Brand positioning strengthened from traditional workwear to performance healthcare uniforms. Established long-term development partnership with Seekingtex."
+    image: /images/seekingtex/products/stretch-texture.webp
+    tags: [Medical, Healthcare, Scrubs, Uniform]
+    fullArticle: true
+    outcome_metrics:
+      - label: Blend
+        value: "92/8 P/S"
+      - label: Wash Durability
+        value: "200+ Cycles"
+      - label: Stretch
+        value: 4-Way
+
+  - id: emerging-outdoor-brand-first-performance-jacket
+    client: European Emerging Outdoor Lifestyle Brand
+    product: Lightweight Performance Jacket Fabric System
+    industry: Outdoor Apparel
+    challenge: "European emerging outdoor lifestyle brand wanted to launch its first technical garment — a multi-purpose jacket for commuting, outdoor activities, and travel. The brand lacked textile development experience and needed professional fabric selection and product development support."
+    solution: "Seekingtex analyzed the brand vision, target users, and application scenarios. Recommended lightweight nylon fabric with balanced performance: water-resistant finishing, mechanical stretch, optimized weave for breathability and abrasion resistance. Guided the brand through sample development, testing, and performance validation."
+    result: "First performance jacket collection launched successfully — Urban Outdoor Performance Jacket. Brand differentiation strengthened from lifestyle brand to functional apparel innovator. Established long-term textile development partnership with Seekingtex."
+    image: /images/seekingtex/products/compression-texture.webp
+    tags: [Emerging Brand, Outdoor, Jacket, Startup]
+    fullArticle: true
+    outcome_metrics:
+      - label: Collection
+        value: "1st Launch"
+      - label: Product Type
+        value: Performance Jacket
+      - label: Partnership
+        value: Long-Term
+
+  - id: functional-fashion-lifestyle-apparel
+    client: European Contemporary Fashion Brand
+    product: Functional Lifestyle Apparel Fabric System
+    industry: Fashion Apparel
+    challenge: "European contemporary fashion brand needed to transform basic apparel collection into differentiated functional lifestyle products. Consumers increasingly expected comfort, easy care, and multi-scenario performance from everyday clothing."
+    solution: "Seekingtex developed a three-part fabric system: premium comfort fabrics with soft touch and stretch, easy-care fabrics with wrinkle-resistant and quick-dry performance, and fashion-oriented functional materials balancing performance with premium appearance and drape."
+    result: "New lifestyle collection launched with three product lines — Travel Wear, Everyday Comfort, Functional Lifestyle. Brand positioning shifted from 'Beautiful Design' to 'Designed for Modern Life' with measurable product differentiation."
+    image: /images/seekingtex/products/knit-stretch-texture.webp
+    tags: [Fashion, Lifestyle, Comfort, Easy-Care]
+    fullArticle: true
+    outcome_metrics:
+      - label: Product Lines
+        value: "3"
+      - label: Brand Shift
+        value: Lifestyle
+      - label: Differentiation
+        value: High
+
+  - id: uv-protection-fashion-womens-collection
+    client: European Women's Fashion Brand
+    product: UV Protective Summer Collection Fabric
+    industry: Fashion Apparel
+    challenge: "European women's fashion brand wanted a summer collection offering meaningful sun protection without sacrificing the soft drape, lightweight feel, and elegant aesthetic of premium women's wear."
+    solution: "Seekingtex engineered lightweight polyester fabrics with fiber-level UV stabilizers for permanent UPF 50+. Developed in soft jersey for dresses and lightweight woven for blouses and skirts, with moisture-wicking properties and precise color matching to seasonal palette."
+    result: "Summer collection launched with integrated UV protection as key differentiator. UPF 50+ third-party certified with no visible difference from regular fashion fabrics. Positive customer feedback on resort wear and daily use."
+    image: /images/seekingtex/products/knit-stretch-texture.webp
+    tags: [Fashion, UV Protection, Women's Wear, Summer]
+    fullArticle: true
+    outcome_metrics:
+      - label: UPF Rating
+        value: "50+"
+      - label: Collection
+        value: Summer
+      - label: Aesthetics
+        value: Unchanged
+
+  - id: easy-care-business-casual-collection
+    client: North American Premium Casual Brand
+    product: Easy Care Business Casual Fabric Collection
+    industry: Fashion Apparel
+    challenge: "North American premium casual brand needed wrinkle-resistant, quick-dry fabrics for a new business casual collection targeting frequent travelers and busy urban professionals."
+    solution: "Seekingtex developed easy-care stretch woven fabrics using high-performance polyester blends with wrinkle-resistant finishing, machine washability, quick-dry performance (3x faster than cotton), and mechanical stretch for comfort with premium hand feel."
+    result: "'Travel Ready' business casual line launched. 90% reduction in wrinkling complaints vs previous cotton line. Machine washable proposition attracted target customers. Repeat orders for seasonal color updates."
+    image: /images/seekingtex/products/knit-stretch-texture.webp
+    tags: [Fashion, Easy-Care, Business Casual, Travel]
+    fullArticle: true
+    outcome_metrics:
+      - label: Wrinkle Reduction
+        value: 90%
+      - label: Dry Speed
+        value: 3x Faster
+      - label: Care
+        value: Machine Wash
+
+  - id: lightweight-fr-fabric-firefighter
+    client: European Firefighter Protective Clothing Manufacturer
+    product: Lightweight Flame Resistant Protective Fabric System
+    industry: Protective Apparel
+    challenge: European firefighter protective clothing manufacturer needed to develop a lighter, more breathable flame resistant fabric system. Traditional multi-layer construction was too heavy, trapped heat and sweat during prolonged operations, and restricted mobility for rescue activities.
+    solution: Seekingtex analyzed the firefighter application environment and optimized fiber blend, weave density, and fabric construction. Engineered FR fiber system with reliable self-extinguishing, moisture wicking channels for sweat transport, and high-tenacity yarns for abrasion resistance. Achieved 30% weight reduction versus traditional materials.
+    result: New-generation turnout gear series with improved mobility and comfort. Firefighters reported reduced fatigue during prolonged operations. FR and mechanical properties maintained after 50+ industrial launderings.
+    image: /images/seekingtex/products/fr-workwear-texture.webp
+    tags: [Protective, FR, Firefighter, Lightweight]
+    fullArticle: true
+    outcome_metrics:
+      - label: Weight Reduction
+        value: 30%
+      - label: Wash Stability
+        value: 50+ cycles
+      - label: Protection
+        value: FR Certified
+
+  - id: lightweight-fr-combat-fabric-military
+    client: European Military Apparel Manufacturer (NATO Supplier)
+    product: Lightweight Flame Resistant Combat Uniform Fabric
+    industry: Defense & Tactical
+    challenge: European military apparel manufacturer supplying NATO forces needed a lighter, FR-protective combat uniform fabric. Existing fabric was durable but heavy with poor moisture management causing heat stress in hot-climate operations. Required inherently FR fiber system, not topical treatment.
+    solution: Seekingtex evaluated inherently FR fiber blends and selected FR polyester + high-tenacity nylon + moisture management fibers. Ripstop weave at 200-240 g/m² achieved 40K+ Martindale abrasion resistance at 25% lighter weight than previous spec. Moisture management finish for rapid drying.
+    result: Qualified for next-generation combat uniform program. Soldiers experienced reduced heat stress in hot climates. Consistent FR and mechanical performance maintained after 50+ field launderings.
+    image: /images/seekingtex/products/fr-workwear-texture.webp
+    tags: [Protective, FR, Military, Tactical]
+    fullArticle: true
+    outcome_metrics:
+      - label: Weight Reduction
+        value: 25%
+      - label: Abrasion
+        value: 40K+ cycles
+      - label: Wash Stability
+        value: 50+ cycles
+
+  - id: police-tactical-uniform-fabric
+    client: North American Law Enforcement Uniform Manufacturer
+    product: Multi-Season Police Tactical Uniform Fabric
+    industry: Law Enforcement
+    challenge: North American law enforcement uniform manufacturer needed a multi-season tactical fabric balancing professional appearance with durability, mobility, and comfort for 12-hour patrol shifts across varied weather conditions.
+    solution: Seekingtex engineered ripstop woven fabric with high-tenacity polyester and 15-20% mechanical stretch. Moisture management finish for sweat wicking and rapid drying. Wrinkle-resistant treatment for professional appearance. Dye process optimized for color consistency across production runs with 50+ laundry fade resistance.
+    result: Fabric adopted across patrol uniforms, tactical pants, and outerwear. Multiple law enforcement agencies approved for duty use. Single fabric specification across styles simplified inventory management.
+    image: /images/seekingtex/products/fr-workwear-texture.webp
+    tags: [Protective, Tactical, Police, Uniform]
+    fullArticle: true
+    outcome_metrics:
+      - label: Stretch
+        value: 15-20%
+      - label: Laundry Durability
+        value: 50+ cycles
+      - label: Agencies
+        value: Multiple
+
+  - id: sustainable-jacket-fabric-development
+    client: Leading US Premium Outdoor Brand (Anonymous)
+    product: PFC-Free Waterproof Jacket Fabric — C0 DWR 3L/2.5L Laminate
+    industry: Outdoor Apparel
+    challenge: Leading US premium outdoor brand needed to transition flagship waterproof jacket collection from C6 DWR to PFC-free C0 DWR ahead of the 2027 EU PFAS ban while maintaining 20K mm hydrostatic head and breathability performance.
+    solution: Seekingtex developed dendrimer-based C0 DWR across 3-layer (50D nylon 6.6 with PTFE membrane, 21,500 mm) and 2.5-layer (40D recycled nylon with PU membrane, 16,200 mm) constructions. Comprehensive 12-week wash-testing validated spray rating of 95 initial / 85 after 20 washes.
+    result: Approved for full 2027 spring/summer jacket collection across 8 models in 3 categories. Transition completed 14 months ahead of EU PFAS ban deadline with verified performance parity.
+    image: /images/seekingtex/products/eco-friendly-fabric.webp
+    tags: [Outdoor, Sustainable, Waterproof, PFC-Free, Regulatory]
+    fullArticle: true
+    outcome_metrics:
+      - label: Hydrostatic Head
+        value: 20K+ mm
+      - label: DWR after 20 washes
+        value: '85'
+      - label: Completion
+        value: 14 months ahead
+
+  - id: lightweight-waterproof-hiking-jacket
+    client: Emerging European Outdoor Brand
+    product: Lightweight Waterproof Hiking Jacket Fabric
+    industry: Outdoor Apparel
+    challenge: Emerging European outdoor brand needed to develop a new generation hiking jacket collection that balanced waterproof protection, breathability and lightweight performance for modern outdoor consumers.
+    solution: Seekingtex developed a customized lightweight woven fabric structure with functional finishing optimized for water resistance wind protection and comfort during active use. The development process included requirement analysis fabric recommendation sample development and final adjustment.
+    result: Fabric successfully applied to customer lightweight hiking jacket collection. Brand achieved improved outdoor performance stronger product differentiation and better development efficiency.
+    image: /images/seekingtex/products/waterproof-fabric.webp
+    tags: [Outdoor, Waterproof, Lightweight, OEM]
+    fullArticle: true
+    outcome_metrics:
+      - label: Project Timeline
+        value: 52 days
+      - label: Application
+        value: Hiking Jacket
+      - label: Key Feature
+        value: Light + WP
+
+  - id: durable-softshell-outdoor-pants
+    client: European Outdoor Pants Brand
+    product: Durable Softshell Fabric with DWR Finish
+    industry: Outdoor Apparel
+    challenge: European outdoor brand needed a durable stretch fabric for a new outdoor pants collection. Required 4-way stretch, 30K+ abrasion resistance, DWR water repellency, and lightweight comfort for all-day hiking wear.
+    solution: Seekingtex developed a woven face / knit back softshell using high-tenacity polyester with mechanical stretch achieving 25% warp and weft elasticity. C6 DWR finish applied. Final fabric exceeded 40,000 Martindale cycles at 240 g/m².
+    result: Applied across 3-style pants collection. Launch achieved strong sell-through. Brand gained competitive differentiation through superior mobility and durability.
+    image: /images/seekingtex/products/stretch-fabric.webp
+    tags: [Outdoor, Stretch, DWR, OEM]
+    fullArticle: true
+    outcome_metrics:
+      - label: Abrasion
+        value: 40K+ cycles
+      - label: Stretch
+        value: 25% both ways
+      - label: Styles
+        value: '3'
+
+  - id: sustainable-fabric-eco-outdoor-brand
+    client: Scandinavian Eco-conscious Outdoor Brand
+    product: GRS-Certified Recycled Performance Fabric
+    industry: Outdoor Apparel
+    challenge: Scandinavian eco-conscious outdoor brand needed GRS-certified recycled fabric for a sustainable performance collection. Previous recycled fabric trials showed lower strength, inconsistent dyeing, and higher weight versus virgin materials.
+    solution: Seekingtex sourced GRS-certified rPET yarn and developed a 120 g/m² plain-weave fabric with solvent-free PU coating achieving 5,000 mm hydrostatic head plus C0 fluorocarbon-free DWR. Full GRS chain-of-custody documentation provided.
+    result: Fabric used across 4-style sustainable collection. Brand achieved full eco-positioning with certified 100% rPET content and verified performance parity with virgin materials.
+    image: /images/seekingtex/products/eco-friendly-fabric.webp
+    tags: [Outdoor, Sustainable, GRS, Recycled]
+    fullArticle: true
+    outcome_metrics:
+      - label: rPET Content
+        value: 100%
+      - label: Waterproof
+        value: 5K mm
+      - label: Styles
+        value: '4'
+
+  - id: ski-wear-fabric-development
+    client: Alpine Ski Wear Brand
+    product: 3-Layer Waterproof Breathable Laminate
+    industry: Outdoor Apparel
+    challenge: 'Alpine ski wear brand needed a premium 3-layer laminate system for ski jacket and bib pant collection targeting 20K mm hydrostatic head, 15K g/m² breathability, 50K Martindale durability under 280 g/m².'
+    solution: 'Seekingtex engineered a complete 3-layer system: 75D nylon 6.6 face fabric with C6 DWR, PTFE-based membrane laminated via dot-adhesive process, lightweight tricot knit backer. Achieved 20K mm / 15K g/m² with 50K+ abrasion resistance.'
+    result: Laminate system verified through third-party testing and field trials with skiers. Brand launched premium ski collection meeting all performance targets within 60-day development cycle.
+    image: /images/seekingtex/products/waterproof-fabric.webp
+    tags: [Outdoor, Waterproof, Laminate, Ski]
+    fullArticle: true
+    outcome_metrics:
+      - label: Waterproof
+        value: 20K mm
+      - label: Breathability
+        value: 15K g/m²
+      - label: Timeline
+        value: 60 days
+
+  - id: trail-running-apparel-fabric
+    client: US Trail Running Apparel Startup
+    product: Ultralight Quick-Dry Performance Knit
+    industry: Sportswear
+    challenge: US trail running startup needed ultralight sub-100 g/m² fabric with rapid drying under 30 minutes, moisture wicking, antimicrobial odor control, and durability for 100+ trail miles.
+    solution: Seekingtex developed 95 g/m² single-jersey knit using dual-yarn construction with micro-channel wicking fibers and silver-based antimicrobial finish. Achieved 25-minute drying time and 99.9% bacterial reduction after 50 washes.
+    result: Fabric launched across running vests, shorts, and T-shirts. Brand achieved 30+ retail doors and 95% first-year sell-through. Featured in trail running media for fabric innovation.
+    image: /images/seekingtex/products/quick-dry-fabric.webp
+    tags: [Sportswear, Lightweight, Antimicrobial, Quick-Dry]
+    fullArticle: true
+    outcome_metrics:
+      - label: Weight
+        value: 95 g/m²
+      - label: Drying Time
+        value: 25 min
+      - label: Retailers
+        value: 30+
+
   - id: european-outdoor-brand
     client: European Outdoor Brand
     product: Custom UPF 50+ Woven Fabric
@@ -53,6 +323,24 @@ case_studies:
         value: 15,000 units
       - label: Sell-Through
         value: 95%
+
+  - id: workwear-industrial-uniform-fabric-development
+    client: European Professional Workwear Brand
+    product: Lightweight Stretch Ripstop Workwear Fabric System
+    industry: Workwear
+    challenge: "European professional workwear brand needed to upgrade traditional workwear fabrics for construction and industrial workers. Conventional polyester-cotton fabrics provided strength but lacked abrasion resistance in high-stress areas (knees, elbows), flexibility for movement, and breathability for 8-10 hour daily wear in demanding environments."
+    solution: "Seekingtex analyzed worker activity patterns, garment requirements, and washing conditions. Developed a lightweight stretch ripstop fabric solution (220-260gsm nylon-polyester blend) combining high abrasion resistance, tear strength, mechanical stretch for mobility, breathable construction, and easy-care performance. Multiple sample iterations tested for abrasion, tear, color fastness, dimensional stability, and wash performance."
+    result: "New industrial uniform collection launched with improved durability (longer garment life), better worker mobility (bending, climbing, squatting without restriction), enhanced all-day comfort, and stronger brand positioning beyond price competition. Established long-term development partnership with Seekingtex for future categories."
+    image: /images/seekingtex/products/fr-workwear-texture.webp
+    tags: [Workwear, Industrial, Uniform, Durability]
+    fullArticle: true
+    outcome_metrics:
+      - label: Fabric Weight
+        value: 220-260gsm
+      - label: Features
+        value: Stretch Ripstop
+      - label: Applications
+        value: Work Pants & Jackets
 
 certifications:
   - name: OEKO-TEX Standard 100

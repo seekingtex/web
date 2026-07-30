@@ -1,0 +1,293 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `High Performance Ski Wear Fabric Development — Seekingtex Case Study | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed a 3-layer waterproof breathable fabric system for an Alpine ski wear brand requiring extreme weather protection and thermal comfort.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'High Performance Ski Wear Fabric Development — A Seekingtex Case Study',
+      description: 'Seekingtex developed a 3-layer waterproof breathable fabric system for an Alpine ski wear brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/waterproof-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What fabric is best for ski jackets?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The best ski jacket fabrics are 2-layer or 3-layer laminated constructions that provide waterproofing minimum 10,000 mm hydrostatic head, breathability, wind resistance, and durability. Face fabrics are typically nylon or polyester with a DWR finish. Seekingtex specializes in developing customized ski wear fabric systems for alpine conditions.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is a 3-layer fabric for ski wear?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A 3-layer fabric consists of a woven face fabric, a waterproof breathable membrane in the middle, and a knit or mesh inner liner bonded directly to the membrane. This construction eliminates the need for a separate lining layer, reducing weight and improving moisture management for high-exertion winter sports.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How waterproof should ski jacket fabric be?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ski jacket fabric should have a minimum waterproof rating of 10,000 mm hydrostatic head for resort skiing and 20,000 mm or higher for backcountry skiing. Breathability is equally important — look for fabrics with at least 10,000 g/m²/24h MVTR moisture vapor transmission rate for active winter sports.',
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Ski Wear Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      High Performance Ski Wear Fabric Development for an Alpine Brand
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Developing a 3-layer waterproof breathable fabric system for extreme winter conditions.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">20K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">15K g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Breathability (MVTR)</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">60 days</div>
+        <div class="text-xs text-gray-500 mt-1">Development Cycle</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/waterproof-fabric.webp"
+        alt="3-layer waterproof breathable ski wear fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">3-Layer Waterproof Fabric for Ski Wear</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is an Alpine-region ski wear brand with a dedicated following among resort skiers and backcountry
+        enthusiasts. The brand was planning to launch a premium ski jacket and bib pant collection positioned at the
+        upper mid-range price point, competing with established technical outerwear brands.
+      </p>
+      <p>
+        The brand needed a fabric partner who could deliver a complete 3-layer laminate system with verified performance
+        data, reliable supply, and competitive pricing for a seasonal product launch with fixed deadlines.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Building a 3-Layer Fabric System for Extreme Conditions</h3>
+      <p>The brand specified demanding performance targets for their ski wear collection:</p>
+      <ul>
+        <li><strong>Waterproof rating:</strong> minimum 15,000 mm hydrostatic head — ideal target 20,000 mm</li>
+        <li><strong>Breathability:</strong> minimum 10,000 g/m²/24h MVTR — target 15,000 g/m²</li>
+        <li><strong>Durability:</strong> 50,000+ Martindale cycles on face fabric</li>
+        <li><strong>Weight:</strong> below 280 g/m² for jacket fabric</li>
+        <li><strong>Flexibility:</strong> good drape and quiet hand feel — no excessive rustling</li>
+      </ul>
+      <p>
+        These specifications required a carefully engineered 3-layer laminate with a robust face fabric,
+        high-performance membrane, and lightweight inner liner. Several laminate suppliers were evaluated before
+        selecting the membrane technology.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <h3>Complete 3-Layer Laminate System Development</h3>
+
+      <h3>1. Face Fabric</h3>
+      <p>
+        We selected a 75D x 75D nylon 6.6 woven face fabric with a tight weave construction for abrasion resistance and
+        clean appearance. The fabric was treated with a C6 DWR finish for initial water beading and ice shedding.
+      </p>
+
+      <h3>2. Membrane Lamination</h3>
+      <p>
+        A PTFE-based waterproof breathable membrane was selected and laminated to the face fabric using a dot-adhesive
+        process that maintained breathability. The membrane specification was adjusted to achieve the target 20,000 mm /
+        15,000 g/m² performance.
+      </p>
+
+      <h3>3. Inner Liner</h3>
+      <p>
+        A lightweight tricot knit backer was selected for the inner layer, providing comfort against skin and protecting
+        the membrane from abrasion. The liner was chosen for its smooth hand feel and moisture transport properties.
+      </p>
+
+      <h3>4. Performance Verification</h3>
+      <p>
+        All laminated samples underwent hydrostatic head testing, MVTR breathability measurement, cold flex testing at
+        -20°C, and delamination strength verification. Third-party test reports were provided for each performance
+        metric.
+      </p>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <h3>Step 1: Specification Review</h3>
+      <p>
+        Seekingtex reviewed the brand's technical specifications and compared them against available membrane and face
+        fabric options. Three construction combinations were proposed.
+      </p>
+      <h3>Step 2: Laminate Sampling</h3>
+      <p>
+        Small-scale laminate samples were produced and tested. One combination was selected based on balance of
+        waterproofing, breathability, and hand feel.
+      </p>
+      <h3>Step 3: Garment Testing</h3>
+      <p>
+        The selected laminate was provided for the brand to produce prototype garments. Field testing by skiers
+        confirmed performance in real winter conditions.
+      </p>
+      <h3>Step 4: Production Scaling</h3>
+      <p>
+        Bulk production was scheduled with inline testing for laminate adhesion and waterproof integrity. Consistent
+        quality was maintained across the production run.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>Waterproof:</strong> 20,000 mm hydrostatic head — exceeded target</li>
+        <li><strong>Breathable:</strong> 15,000 g/m²/24h MVTR — optimal for high-exertion skiing</li>
+        <li><strong>Durable:</strong> 50,000+ Martindale cycles on face fabric</li>
+        <li><strong>Complete system:</strong> Face fabric + membrane + liner verified as integrated solution</li>
+      </ul>
+
+      <hr />
+
+      <h2>Project Summary</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Customer Type</td><td>Alpine Ski Wear Brand</td></tr>
+          <tr><td>Product</td><td>Ski Jacket & Bib Pant Collection</td></tr>
+          <tr><td>Fabric Type</td><td>3-Layer PTFE Laminate System</td></tr>
+          <tr><td>Waterproof</td><td>20,000 mm Hydrostatic Head</td></tr>
+          <tr><td>Breathability</td><td>15,000 g/m²/24h MVTR</td></tr>
+          <tr><td>Development Time</td><td>60 Days</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>What fabric is best for ski jackets?</h3>
+      <p>
+        The best ski jacket fabrics are 2-layer or 3-layer laminated constructions that provide waterproofing,
+        breathability, wind resistance, and durability. Seekingtex specializes in developing customized ski wear fabric
+        systems for alpine conditions.
+      </p>
+      <h3>What is a 3-layer fabric for ski wear?</h3>
+      <p>
+        A 3-layer fabric consists of a woven face fabric, a waterproof breathable membrane in the middle, and a knit or
+        mesh inner liner bonded directly to the membrane. This eliminates the need for a separate lining layer, reducing
+        weight and improving moisture management.
+      </p>
+      <h3>How waterproof should ski jacket fabric be?</h3>
+      <p>
+        Ski jacket fabric should have a minimum waterproof rating of 10,000 mm for resort skiing and 20,000 mm or higher
+        for backcountry skiing. Breathability should be at least 10,000 g/m²/24h MVTR for active winter sports.
+      </p>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href="/products/waterproof-breathable"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Waterproof Breathable Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">High-performance laminated fabrics for extreme conditions</p>
+        </a>
+        <a
+          href="/products/breathable-mesh-fabric"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Breathable Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Moisture management for high-exertion winter sports</p>
+        </a>
+        <a
+          href="/products/stretch-fabric"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Stretch Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Flexibility and mobility for ski wear</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Develop Your Ski Wear Fabric Solution</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        Contact Seekingtex to discuss your winter sports fabric requirements. We develop complete laminate systems for
+        ski, snowboard, and cold-weather apparel.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >Discuss Your Project</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to All Case Studies</a>
+    </div>
+  </div>
+</Layout>

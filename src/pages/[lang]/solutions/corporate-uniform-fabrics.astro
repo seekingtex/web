@@ -1,0 +1,64 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Corporate Uniform Fabrics — Easy Care & Soft Touch Hospitality Textiles | ${SITE.name}`,
+    description: 'Corporate uniform fabrics: easy care, wrinkle resistant, soft touch, color stable for hospitality and business uniforms. Custom OEM development.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Corporate Uniform Fabrics by Seekingtex', description: 'Easy care, wrinkle resistant, soft touch, color stable uniform fabrics for hospitality and corporate apparel.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, description: 'Seekingtex is a functional fabric manufacturer providing easy care textile solutions for hospitality and corporate uniform programs.', url: 'https://seekingtex.com' }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What fabric is best for hospitality uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'The best hospitality uniform fabrics combine easy care (wrinkle resistant, machine washable), soft touch comfort, color stability, and breathability for long service shifts.' } },
+    { '@type': 'Question', name: 'What does easy care fabric mean for uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Easy care means wrinkle resistant, machine washable, quick drying, and color-stable through repeated washing — simplifying laundry operations and maintaining professional appearance.' } },
+    { '@type': 'Question', name: 'Can Seekingtex develop custom corporate uniform fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex provides custom fabric development for hospitality, hotel, restaurant, and corporate uniform programs with custom color matching and performance tuning.' } },
+  ] }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <div class="mb-4"><a href={`${prefix}/solutions/workwear-fabric-solutions`} class="text-sm text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Workwear Solutions</a></div>
+    <h1 class="text-4xl font-bold text-gray-900">Corporate Uniform Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Professional uniform fabrics for hospitality, hotel, restaurant, and business wear. Easy care, wrinkle resistant, soft touch, color stable for polished appearance.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Easy Care</h2><p class="mt-2 text-sm text-gray-600">Wrinkle-resistant, machine-washable for hospitality uniforms. Minimal ironing needed.</p><a href={`${prefix}/products/quick-dry-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Soft Touch</h2><p class="mt-2 text-sm text-gray-600">Premium hand feel for guest-facing roles. Comfortable all-day wear.</p><a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Explore →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Color Stable</h2><p class="mt-2 text-sm text-gray-600">Color fastness for frequently washed uniforms. Consistent across production runs.</p><a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">View →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Breathable</h2><p class="mt-2 text-sm text-gray-600">Lightweight, moisture management for long service shifts. Fresh throughout the day.</p><a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse →</a></div>
+    </div>
+    <div class="mt-16 bg-amber-50 rounded-2xl border border-amber-200 p-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Workwear Solutions</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href={`${prefix}/solutions/workwear-fabric-solutions`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">All Workwear</a>
+        <a href={`${prefix}/solutions/construction-workwear-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Construction</a>
+        <a href={`${prefix}/solutions/industrial-uniform-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Industrial</a>
+        <a href={`${prefix}/solutions/safety-workwear-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Safety</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Corporate Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Professional</h3><p class="mt-1 text-sm text-gray-500">Wrinkle-resistant, color-stable for polished look through long shifts.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Comfort</h3><p class="mt-1 text-sm text-gray-500">Soft, breathable, lightweight for guest-facing service roles.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Efficiency</h3><p class="mt-1 text-sm text-gray-500">Machine-washable, quick-dry reduces laundry costs.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom</h3><p class="mt-1 text-sm text-gray-500">Custom colors and specs for hotel, restaurant, corporate programs.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/workwear-industrial-uniform-fabric-development`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Seekingtex corporate uniform fabrics: easy care, soft touch, color stable, breathable for hospitality and corporate uniforms. Custom OEM. OEKO-TEX certified.</p></section>
+</Layout>

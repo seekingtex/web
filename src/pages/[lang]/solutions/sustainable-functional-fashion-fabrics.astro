@@ -1,0 +1,45 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+<Layout metadata={{ title: `Sustainable Functional Fashion Fabrics | ${SITE.name}`, description: 'Sustainable functional fashion fabrics: recycled polyester, bio-based fibers, low-impact finishing for eco-conscious brands.', ignoreTitleTemplate: true }}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Sustainable Functional Fashion Fabrics by Seekingtex', description: 'Eco-friendly performance fabrics combining sustainability with fashion aesthetics.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Sustainable Functional Fashion Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Sustainability meets performance. Eco-friendly fabrics that help fashion brands reduce environmental impact without compromising style.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl border border-emerald-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Recycled Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">GRS-certified rPET and recycled nylon. Identical performance to virgin materials.</p>
+        <a href={`${prefix}/eco-friendly-fabric`} class="mt-3 inline-flex text-sm font-medium text-emerald-700 hover:underline">Browse eco-friendly fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl border border-emerald-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Bio-Based & Natural</h2>
+        <p class="mt-2 text-sm text-gray-600">Tencel, modal, hemp blends, and bio-based synthetics for renewable material sourcing.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-emerald-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Sustainable Fashion Features</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">GRS Certified</h3><p class="mt-1 text-sm text-gray-500">Global Recycled Standard certified with full chain of custody traceability.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Low Impact</h3><p class="mt-1 text-sm text-gray-500">PFC-free DWR, solvent-free laminates, water-based finishing.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Bio-Based</h3><p class="mt-1 text-sm text-gray-500">Plant-derived fibers reducing dependence on fossil fuel feedstocks.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Circular Ready</h3><p class="mt-1 text-sm text-gray-500">Mono-material constructions designed for end-of-life recyclability.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/functional-fashion-lifestyle-apparel`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sample Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Sustainable functional fashion fabrics by Seekingtex. GRS-certified rPET, recycled nylon, Tencel, modal, hemp. PFC-free DWR. OEKO-TEX. OEM/ODM.</p></section>
+</Layout>

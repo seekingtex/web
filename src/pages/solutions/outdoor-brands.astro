@@ -1,0 +1,288 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import ExperienceLayer from '~/components/content/ExperienceLayer.astro';
+import RelatedPages from '~/components/content/RelatedPages.astro';
+
+const metadata = {
+  title: 'Outdoor Brand Fabric Solutions — Technical Innovation for Outdoor Apparel | Seekingtex',
+  description:
+    'Functional fabric solutions for outdoor apparel brands. Waterproof breathable, lightweight, sustainable, and custom-developed performance textiles for hiking, skiing, trail running, and adventure gear.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Outdoor Brand Solutions' }];
+
+const categories = [
+  {
+    name: 'Hiking & Trekking Fabrics',
+    color: 'from-emerald-50 to-green-50',
+    border: 'border-emerald-200',
+    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 12.5V17a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h3.5a2 2 0 012 2v.5',
+    description: 'Lightweight, durable fabrics for hiking jackets, outdoor pants, and trekking apparel. Abrasion resistance meets breathability for all-day comfort on the trail.',
+    functions: ['Abrasion Resistance', 'Breathability', 'Lightweight', 'DWR Water Repellency'],
+    applications: ['Hiking Jacket', 'Outdoor Pants', 'Trekking Shell'],
+    products: ['waterproof-fabric', 'breathable-mesh-fabric', 'stretch-fabric'],
+    link: '/products?category=waterproof',
+  },
+  {
+    name: 'Mountaineering & Expedition Fabrics',
+    color: 'from-sky-50 to-blue-50',
+    border: 'border-sky-200',
+    icon: 'M12 2l9 4.5v9L12 20l-9-4.5v-9L12 2zm0 3.5v13m7-8.5l-7 4.5m0-9L5 11',
+    description: 'Extreme weather protection fabrics designed for alpine conditions, high-altitude expeditions, and serious mountaineering gear.',
+    functions: ['Extreme Weather Protection', 'Waterproof', 'Windproof', 'Thermal Insulation'],
+    applications: ['Alpine Jacket', 'Expedition Gear', 'High-Altitude Shell'],
+    products: ['waterproof-fabric', 'eco-friendly-fabric'],
+    link: '/products?category=waterproof',
+  },
+  {
+    name: 'Ski & Snowsports Fabrics',
+    color: 'from-indigo-50 to-violet-50',
+    border: 'border-indigo-200',
+    icon: 'M14.5 6.5l4-4m-4 4l-4-4m4 4l4 4m-4-4l4 4m-4 4h8m-8-8L8 14m4 4h8m-8 0l-4 4m4-8h-8m4 0l-4-4',
+    description: 'Winter sport performance fabrics with superior waterproofing, thermal retention, and durable construction for ski jackets, bib pants, and snowsports apparel.',
+    functions: ['Waterproof (20K mm+)', 'Thermal Retention', 'Durable Laminate', 'Snow Shedding'],
+    applications: ['Ski Jacket', 'Bib Pants', 'Snowsports Shell'],
+    products: ['waterproof-fabric', 'stretch-fabric'],
+    link: '/products?category=waterproof',
+  },
+  {
+    name: 'Trail Running & Fast Hike Fabrics',
+    color: 'from-orange-50 to-amber-50',
+    border: 'border-orange-200',
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+    description: 'Ultralight, quick-dry performance knits designed for high-exertion trail running, fast hiking, and adventure racing. Minimal weight with maximum moisture management.',
+    functions: ['Moisture Management', 'Stretch', 'Quick Dry', 'Antimicrobial'],
+    applications: ['Running Vest', 'Performance T-Shirt', 'Lightweight Shorts'],
+    products: ['quick-dry-fabric', 'breathable-mesh-fabric', 'antibacterial-fabric'],
+    link: '/products?category=quick-dry',
+  },
+];
+
+const whyChoose = [
+  {
+    title: 'Performance Driven',
+    desc: 'Engineered fabrics designed for extreme outdoor environments — from alpine peaks to rainforest trails.',
+    image: '/images/seekingtex/factory.jpg',
+  },
+  {
+    title: 'Functional Innovation',
+    desc: 'Waterproof, breathable, stretch, thermal, UV protection — multiple functions engineered into every textile.',
+    image: '/images/seekingtex/factory.jpg',
+  },
+  {
+    title: 'Custom Development',
+    desc: 'Weight, structure, coating, color, and finish — every parameter adjustable to your brand\'s product vision.',
+    image: '/images/seekingtex/factory.jpg',
+  },
+  {
+    title: 'Reliable Manufacturing',
+    desc: '15,000 m² facility, OEKO-TEX certified, quality-controlled production with consistent global supply.',
+    image: '/images/seekingtex/factory.jpg',
+  },
+];
+
+const applications = [
+  {
+    name: 'Fabrics for Outdoor Jackets',
+    href: '/solutions/fabrics-for-outdoor-jackets',
+    problems: ['Rain Protection', 'Wind Resistance', 'Thermal Comfort'],
+    description: 'Waterproof breathable membranes, lightweight shells, and insulated constructions for outdoor jackets that perform in all conditions.',
+  },
+  {
+    name: 'Fabrics for Hiking Pants',
+    href: '/solutions/fabrics-for-hiking-pants',
+    problems: ['Abrasion Resistance', 'Stretch & Mobility', 'Quick Dry'],
+    description: 'Durable stretch wovens, softshell fabrics with DWR finish, and lightweight trekking pants materials for trail performance.',
+  },
+  {
+    name: 'Fabrics for Base Layers',
+    href: '/solutions/fabrics-for-base-layers',
+    problems: ['Moisture Management', 'Antimicrobial', 'Comfort Fit'],
+    description: 'Performance knits with moisture-wicking, odor control, and next-to-skin comfort for all-season outdoor activity.',
+  },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Outdoor Brand Fabric Solutions',
+      description: 'Functional fabric solutions for outdoor apparel brands — waterproof breathable, lightweight, sustainable performance textiles.',
+      provider: { '@type': 'Organization', name: SITE.name },
+      url: 'https://seekingtex.com/solutions/outdoor-brands',
+    }}
+  />
+
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Outdoor Apparel Fabric Solutions</h1>
+    <p class="mt-4 text-xl text-gray-500 leading-relaxed max-w-3xl">
+      Your Technical Fabric Innovation Partner for Outdoor Apparel Brands. Helping outdoor brands create lightweight, durable, and high-performance products through innovative textile solutions.
+    </p>
+
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="#solutions" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Explore Outdoor Fabric Solutions</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Fabric Development Support</a>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-2xl font-bold text-gray-900">Why Outdoor Brands Choose Seekingtex</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        {whyChoose.map((w) => (
+          <div class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-100 to-blue-100 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900">{w.title}</h3>
+            <p class="text-sm text-gray-500 mt-2">{w.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div id="solutions" class="mt-24">
+      <h2 class="text-2xl font-bold text-gray-900">Fabric Solutions by Outdoor Category</h2>
+      <p class="mt-2 text-gray-500">Specialized performance textiles engineered for every outdoor discipline.</p>
+
+      <div class="mt-10 space-y-6">
+        {categories.map((cat) => (
+          <div class={`bg-gradient-to-br ${cat.color} rounded-2xl border ${cat.border} p-8 hover:shadow-md transition-shadow`}>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white/80 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d={cat.icon} />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900">{cat.name}</h3>
+                <p class="mt-2 text-sm text-gray-600">{cat.description}</p>
+                <div class="mt-4 grid md:grid-cols-3 gap-4">
+                  <div>
+                    <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Key Functions</span>
+                    <ul class="mt-2 space-y-1">
+                      {cat.functions.map((f) => (
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                          <span class="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Applications</span>
+                    <ul class="mt-2 space-y-1">
+                      {cat.applications.map((a) => (
+                        <li class="flex items-center gap-2 text-sm text-gray-600">
+                          <span class="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0" />
+                          {a}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div class="flex items-end">
+                    <a href={cat.link} class="text-sm font-medium text-sky-600 hover:text-sky-700 hover:underline">
+                      Browse fabrics for this category →
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-24">
+      <h2 class="text-2xl font-bold text-gray-900">Solutions by Product Type</h2>
+      <p class="mt-2 text-gray-500">Find the right fabric for your specific garment — organized the way outdoor brands think.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        {applications.map((app) => (
+          <a href={app.href} class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all block">
+            <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">{app.name}</h3>
+            <p class="text-sm text-gray-500 mt-2">{app.description}</p>
+            <div class="mt-4">
+              <span class="text-xs text-gray-400 uppercase tracking-wide">Solves:</span>
+              <div class="mt-2 flex flex-wrap gap-2">
+                {app.problems.map((p) => (
+                  <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{p}</span>
+                ))}
+              </div>
+            </div>
+            <span class="mt-4 inline-flex text-sm font-medium text-sky-600 group-hover:text-sky-700">Learn more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="mt-24 bg-gradient-to-br from-sky-600 to-blue-700 rounded-2xl p-10 text-white">
+      <h2 class="text-2xl font-bold">Partner with Seekingtex for Your Next Outdoor Collection</h2>
+      <p class="mt-4 text-sky-100 max-w-2xl">From fabric selection to custom development, our team helps outdoor brands transform product concepts into high-performance apparel. Start your project today.</p>
+      <div class="mt-8 flex gap-4">
+        <a href="/contact" class="px-8 py-3 bg-white text-sky-700 rounded-full font-semibold hover:bg-sky-50 transition">Request Development Support</a>
+        <a href="/evidence" class="px-8 py-3 border border-white/30 text-white rounded-full font-semibold hover:bg-white/10 transition">View Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <ExperienceLayer
+    title="Outdoor Brand Partnerships in Action"
+    subtitle="Real examples of how Seekingtex partners with outdoor brands to develop high-performance apparel fabrics."
+    stories={[
+      {
+        quote: 'Seekingtex helped us develop a lightweight waterproof hiking jacket that became our best-selling product. The fabric development process was collaborative and efficient.',
+        narrative: 'An emerging European outdoor brand needed to develop a new generation hiking jacket that balanced waterproof protection, breathability, and lightweight performance. Seekingtex analyzed the product requirements and developed a customized woven fabric structure with functional finishing. The project completed in 52 days from initial brief to production-ready fabric.',
+        context: 'Outdoor Apparel OEM, Europe, 2025-2026',
+        source: 'Product Manager, European Outdoor Brand',
+      },
+      {
+        quote: 'The sustainable recycled fabric Seekingtex developed for our eco-collection exceeded our performance expectations. GRS-certified and fully traceable.',
+        narrative: 'A Scandinavian eco-focused outdoor brand needed GRS-certified recycled fabric for their sustainable performance collection. Previous recycled fabric trials had shown lower strength and inconsistent dyeing. Seekingtex sourced certified rPET yarn and developed a 120 g/m² fabric with C0 DWR finish. The fabric was used across a 4-style collection that won sustainability awards.',
+        context: 'Sustainable Fabric Development, Scandinavia, 2025-2026',
+        source: 'Sustainability Director, Eco Outdoor Brand',
+      },
+    ]}
+  />
+
+  <RelatedPages
+    title="Explore More Outdoor Solutions"
+    subtitle="Related resources for outdoor apparel brands"
+    links={[
+      {
+        title: 'Waterproof Breathable Fabrics',
+        description: 'Performance waterproofing technology for outdoor apparel.',
+        href: '/waterproof-fabric',
+        label: 'Products',
+      },
+      {
+        title: 'Lightweight Performance Fabrics',
+        description: 'Ultralight textiles for modern outdoor gear.',
+        href: '/quick-dry-fabric',
+        label: 'Products',
+      },
+      {
+        title: 'Outdoor Apparel Case Studies',
+        description: 'Real partnership stories with outdoor brands.',
+        href: '/evidence',
+        label: 'Case Studies',
+      },
+      {
+        title: 'OEM/ODM Fabric Development',
+        description: 'Custom fabric development services for brands.',
+        href: '/contact',
+        label: 'OEM',
+      },
+    ]}
+  />
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Outdoor apparel fabric solutions by Seekingtex, a functional fabric manufacturer and technical innovation partner for outdoor brands. Four outdoor categories: Hiking & Trekking (abrasion-resistant breathable lightweight fabrics), Mountaineering & Expedition (extreme weather protection, waterproof, windproof), Ski & Snowsports (20K mm+ waterproof, thermal retention, durable laminate), Trail Running & Fast Hike (ultralight quick-dry, moisture-wicking, antimicrobial). Application-based solutions: Fabrics for Outdoor Jackets (rain, wind, thermal protection), Fabrics for Hiking Pants (abrasion, stretch, quick dry), Fabrics for Base Layers (moisture management, antimicrobial, comfort). All fabrics OEKO-TEX Standard 100 certified. Custom OEM/ODM development available for outdoor apparel brands worldwide.
+    </p>
+  </section>
+</Layout>

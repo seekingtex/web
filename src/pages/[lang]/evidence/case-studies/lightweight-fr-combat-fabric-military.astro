@@ -1,0 +1,85 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Lightweight FR Combat Fabric — Military Apparel Case Study | ${SITE.name}`,
+    description: 'Case study: Seekingtex developed a lightweight FR combat fabric for a European military apparel manufacturer combining flame resistance, moisture management, and extreme durability.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'Lightweight FR Combat Fabric for Extreme Military Operations', description: 'Seekingtex developed a lightweight FR combat fabric for a European military apparel manufacturer.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/fr-workwear-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What fabric is commonly used for military combat uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Military combat uniforms typically use FR or inherently flame resistant fabrics with ripstop construction. Key properties include abrasion resistance, moisture management, lightweight construction, and environmental adaptability.' } },
+        { '@type': 'Question', name: 'How do military uniforms choose functional fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Military uniform fabrics must balance abrasion resistance, lightweight construction, moisture management, and environmental adaptability based on operational environment and performance standards.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Military Combat Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-green-700 bg-green-50 px-3 py-1 rounded-full">Defense & Tactical</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Lightweight Flame Resistant Combat Fabric for Extreme Military Operations</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex partnered with a European military apparel manufacturer to engineer a combat uniform fabric balancing FR protection, moisture management, and durability.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-green-700">FR</div><div class="text-xs text-gray-500 mt-1">Inherently FR Blend</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-green-700">40K+</div><div class="text-xs text-gray-500 mt-1">Martindale Abrasion</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-green-700">25%</div><div class="text-xs text-gray-500 mt-1">Weight Reduction</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European military apparel manufacturer supplying combat uniforms to defense forces across multiple NATO countries. With contracts requiring higher performance standards and soldiers demanding lighter gear, the manufacturer needed to upgrade fabric specifications.</p>
+
+      <h2>The Mission Challenge</h2>
+      <p>Modern military operations span desert, jungle, mountain, and urban environments — each placing different demands on combat fabrics. The customer's existing fabric was durable but heavy with poor moisture management causing heat stress in hot climates.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex evaluated multiple inherently FR fiber blends and selected a combination of FR polyester for self-extinguishing, high-tenacity nylon for durability, and moisture management fibers for comfort. A ripstop weave at 200-240 g/m² achieved 40K+ Martindale abrasion resistance — 25% lighter than the previous specification.</p>
+
+      <h2>Customer Results</h2>
+      <ul>
+        <li>25% weight reduction versus previous uniform specification</li>
+        <li>Reduced heat stress in hot-climate operations</li>
+        <li>Consistent FR and mechanical performance after 50+ field launderings</li>
+        <li>Qualified for next-generation combat uniform program</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-green-700 to-emerald-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Military Textile Solutions?</h2>
+      <p class="text-green-100 max-w-xl mx-auto mb-6">Our R&D team develops FR, abrasion-resistant fabrics for defense and tactical apparel manufacturers.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-green-700 font-semibold px-8 py-3 rounded-xl hover:bg-green-50 transition-colors">Request Technical Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-green-700 hover:text-green-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

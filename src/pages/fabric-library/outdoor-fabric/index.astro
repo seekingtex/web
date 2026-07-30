@@ -1,0 +1,179 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+
+const products = await getProducts();
+const outdoorProducts = products.filter((p) =>
+  ['waterproof', 'sun-protection', 'breathable', 'stretch', 'eco-friendly'].includes(p.category!)
+);
+
+const metadata = merge(
+  {
+    title: `Outdoor & Adventure Fabrics — Waterproof, Breathable Performance Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} outdoor fabric collection — waterproof breathable membranes, windproof shell fabrics, softshell, and insulated performance textiles for hiking, camping, and alpine sports. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink('/fabric-library/outdoor-fabric')),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Fabric Library — Outdoor
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Outdoor & Adventure Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Performance textiles engineered for the elements — waterproof, windproof, breathable, and thermally efficient.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Our outdoor fabric collection delivers certified protection against rain, wind, and cold while maintaining
+          breathability for high-output activities. From 3-layer hardshell laminates to lightweight softshells, each
+          fabric is engineered for the specific demands of mountain environments — durability that withstands abrasion,
+          waterproofing that performs in sustained rain, and comfort during active pursuit.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:droplet-filled" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Waterproof Breathable</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          PU coated, TPU laminated, and ePTFE membrane technologies. 10,000-20,000mm hydrostatic head with MVTR
+          breathability ratings from 5,000-15,000 g/m²/24h.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:wind" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Windproof Shell Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Tight-weave nylon and polyester shells with DWR finish. Lightweight packable options for alpine and trail
+          running, plus rugged options for hiking and climbing.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:snowflake" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Insulated & Thermal</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Fleece backer, microfleece lining, and insulated softshell options for cold-weather protection. Grid fleece
+          and brushed backer technologies for warmth without weight.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Recommended Outdoor Fabrics</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {outdoorProducts.slice(0, 6).map((p) => <ProductCard product={p} />)}
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/waterproof-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Waterproof Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/breathable-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Breathable Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/sun-protection-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Sun Protection Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/stretch-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Stretch Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What is the best waterproof fabric for hiking jackets?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            For hiking jackets, we recommend a 2-layer or 2.5-layer waterproof fabric with 10,000mm+ hydrostatic head
+            and 8,000 g/m²/24h breathability. PU-coated polyester or TPU-laminated nylon in the 120-160gsm range offers
+            the best balance of protection, weight, and cost. For alpine conditions, 3-layer laminates provide superior
+            durability.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            How does your waterproof fabric compare to Gore-Tex?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Our TPU-laminated and ePTFE membrane fabrics offer comparable waterproof performance (10,000-20,000mm
+            hydrostatic head) at a more accessible price point. While Gore-Tex uses proprietary ePTFE technology, our
+            solutions provide excellent waterproof-breathable performance for most outdoor applications, with the
+            advantage of flexible MOQ and custom development options.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What is softshell fabric and when should I use it?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Softshell is a stretchy, breathable fabric with a fleece or brushed backer and a DWR-treated face. It offers
+            wind resistance, light water repellency, and excellent breathability — ideal for high-output activities like
+            hiking, climbing, and ski touring where a hardshell would be too restrictive. Use softshell for active
+            layering, and hardshell for sustained wet weather.
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} outdoor and adventure fabric collection: waterproof breathable membranes, windproof shell fabrics, softshell
+      performance textiles, insulated thermal fabrics, and sun protection materials for hiking, camping, skiing, climbing,
+      and alpine sports apparel. OEM/ODM fabric development available worldwide.
+    </p>
+  </section>
+</Layout>

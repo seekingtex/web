@@ -1,0 +1,130 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getPageContent } from '~/i18n/page-content';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const page = getPageContent(lang, 'fabric-library');
+
+const metadata = {
+  title: `Fabric Library - ${SITE.name}`,
+  description: `Browse ${SITE.name} comprehensive fabric library of functional performance textiles for sportswear, outdoor apparel, workwear, medical, and fashion industries.`,
+};
+const crumbs = [
+  { name: 'Home', href: `/${lang}/` },
+  { name: 'Fabric Library', href: `/${lang}/fabric-library` },
+];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-12 md:mb-16 text-center max-w-4xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        {page.hero?.tagline || 'Fabric Library'}
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading mb-4">
+        {page.hero?.title || 'Functional Fabric Library'}
+      </h1>
+      <p class="mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium max-w-3xl">
+        {page.hero?.subtitle || 'Browse performance fabrics by application, function, or industry.'}
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a
+          href={`/${lang}/ai-fabric-finder`}
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
+        >
+          <Icon name="tabler:sparkles" class="w-5 h-5" />
+          AI Find My Fabric
+        </a>
+        <a
+          href="#categories"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-100 dark:bg-slate-800 text-gray-900 dark:text-slate-200 font-semibold hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
+        >
+          <Icon name="tabler:layout-grid" class="w-5 h-5" />
+          Browse All Categories
+        </a>
+      </div>
+    </header>
+
+    <div id="categories" class="space-y-16">
+      {
+        (page.sections || []).map((section: any) => (
+          <section>
+            {section.title && (
+              <header class="mb-8 text-center max-w-2xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold">{section.title}</h2>
+                {section.subtitle && <p class="mt-2 text-gray-500 dark:text-slate-400">{section.subtitle}</p>}
+              </header>
+            )}
+
+            {section.categories && (
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {section.categories.map((cat: any) => (
+                  <a
+                    href={`/${lang}${cat.href}`}
+                    class="group block p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary/30 hover:shadow-lg transition-all"
+                  >
+                    <div class="flex items-start gap-4">
+                      {cat.icon && (
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 dark:bg-blue-500/10 flex items-center justify-center">
+                          <Icon name={cat.icon} class="w-6 h-6 text-primary dark:text-blue-400" />
+                        </div>
+                      )}
+                      <div class="flex-1 min-w-0">
+                        <h3 class="font-semibold text-lg text-gray-900 dark:text-slate-200 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                          {cat.title}
+                        </h3>
+                        {cat.description && (
+                          <p class="mt-1 text-sm text-gray-500 dark:text-slate-400 line-clamp-2">{cat.description}</p>
+                        )}
+                        {cat.subcategories && (
+                          <div class="mt-3 flex flex-wrap gap-1.5">
+                            {cat.subcategories.map((sub: string) => (
+                              <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300">
+                                {sub}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <Icon
+                        name="tabler:chevron-right"
+                        class="w-5 h-5 text-gray-300 dark:text-slate-600 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors flex-shrink-0 mt-1"
+                      />
+                    </div>
+                  </a>
+                ))}
+              </div>
+            )}
+
+            {section.items && (
+              <div class="grid md:grid-cols-3 gap-6">
+                {section.items.map((item: any) => (
+                  <a
+                    href={`/${lang}${item.href}`}
+                    class="group block p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary/30 hover:shadow-lg transition-all text-center"
+                  >
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-slate-200 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    {item.description && (
+                      <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">{item.description}</p>
+                    )}
+                  </a>
+                ))}
+              </div>
+            )}
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

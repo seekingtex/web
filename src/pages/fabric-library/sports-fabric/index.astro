@@ -1,0 +1,184 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+
+const products = await getProducts();
+const sportsProducts = products.filter((p) =>
+  ['sun-protection', 'quick-dry', 'stretch', 'breathable', 'eco-friendly'].includes(p.category!)
+);
+
+const metadata = merge(
+  {
+    title: `Sports & Activewear Fabrics — Performance Textiles for Athletic Apparel | ${SITE.name}`,
+    description: `Browse ${SITE.name} sports and activewear fabric collection — moisture-wicking, 4-way stretch, quick-dry performance textiles for running, yoga, gym, and team sports apparel. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink('/fabric-library/sports-fabric')),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Fabric Library — Sports
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Sports & Activewear Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        High-performance textiles engineered for athletic apparel — moisture-wicking, 4-way stretch, quick-dry, and
+        lightweight.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          From elite running gear to everyday gym wear, our sports fabric collection delivers certified performance
+          across moisture management, stretch recovery, breathability, and UPF protection. Each fabric is engineered for
+          the specific demands of activewear — durability that lasts through hundreds of washes, comfort that moves with
+          the athlete, and technology that enhances performance.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:droplet" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Moisture-Wicking Performance</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Advanced hydrophilic and hydrophobic yarn technologies that pull sweat away from skin, enabling rapid
+          evaporation and keeping athletes dry during intense activity.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:arrows-maximize" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">4-Way Stretch & Recovery</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Nylon-spandex and polyester-spandex blends engineered for multi-directional stretch with excellent shape
+          retention, compression fit, and freedom of movement.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:sun" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">UPF 50+ Sun Protection</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Permanent UV-blocking technology embedded at the fiber level. Certified UPF 50+ protection that will not wash
+          out or degrade, ideal for outdoor sports and running.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Recommended Sports Fabrics</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {sportsProducts.slice(0, 6).map((p) => <ProductCard product={p} />)}
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/quick-dry-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Quick-Dry Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/stretch-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Stretch Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/breathable-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Breathable Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/sun-protection-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Sun Protection Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/eco-friendly-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Eco-Friendly Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What fabric is best for running shirts?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Running shirts require lightweight, moisture-wicking fabrics with good breathability and stretch.
+            Polyester-spandex blends (160-180gsm) with moisture-wicking finish are ideal. Look for quick-dry properties
+            and flatlock seam construction to prevent chafing. Our FT-SPORT series running fabrics are engineered
+            specifically for this application.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What is the best fabric for yoga leggings?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Yoga leggings need 4-way stretch, high recovery, and a soft hand feel. Nylon-spandex blends (80/20 or 85/15
+            composition, 180-220gsm) offer the best balance of compression, stretch, and durability. Look for fabrics
+            with anti-pilling and moisture-wicking properties.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What MOQ do you offer for sports fabric?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Our standard MOQ is 500 meters per color for stock fabrics, with 3000 meters for custom developments. For
+            startup brands and small collections, we offer our Low MOQ program starting from 50 meters for sample
+            development and 500 meters for production. Contact our team for specific requirements.
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} sports and activewear fabric collection: moisture-wicking performance knits, 4-way stretch nylon-spandex
+      blends, quick-dry polyester fabrics, UPF 50+ sun protection textiles, and breathable mesh for athletic apparel. Serving
+      running, yoga, gym, team sports, and training apparel brands worldwide. OEM/ODM fabric development available.
+    </p>
+  </section>
+</Layout>

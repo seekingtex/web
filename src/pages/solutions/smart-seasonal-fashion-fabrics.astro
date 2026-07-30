@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Smart Seasonal Fashion Fabrics — Cooling, UV, Thermal Textiles | ${SITE.name}`,
+  description: 'Smart seasonal fabrics for fashion brands — cooling and UV protection for summer, thermal and wind-resistant for winter. Adaptive textiles for seasonal collections.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Fashion Solutions', href: '/solutions/fashion-brands' }, { name: 'Smart Seasonal Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Smart Seasonal Fashion Fabrics by Seekingtex', description: 'Seasonal adaptive fabrics for fashion collections — cooling, UV protection, thermal, and wind-resistant textiles.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Smart Seasonal Fashion Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Adaptive textiles for seasonal collections — cooling and UV protection for resort and summer wear, thermal and wind-resistant for autumn and winter lines.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Summer Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">Cooling, UV protection (UPF 50+), and breathable fabrics for resort wear, summer dresses, and warm-weather collections.</p>
+        <a href="/sun-protection-fabric" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Browse sun protection fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Cold Weather</h2>
+        <p class="mt-2 text-sm text-gray-600">Thermal, wind-resistant, and insulated fabrics for autumn/winter fashion. Warmth without bulk, style without compromise.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Seasonal Features</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Cooling Tech</h3><p class="mt-1 text-sm text-gray-500">Contact cooling and moisture-wicking fabrics that keep skin cool in hot weather conditions.</p></div>
+        <div><h3 class="font-semibold text-gray-900">UV Protection</h3><p class="mt-1 text-sm text-gray-500">Permanent UPF 50+ at the fiber level. No visible difference from regular fashion fabrics.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Thermal</h3><p class="mt-1 text-sm text-gray-500">Lightweight thermal insulation for cold-weather fashion without compromising silhouette or drape.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Wind Resistant</h3><p class="mt-1 text-sm text-gray-500">Dense weaves and finishing for wind protection while maintaining breathability and comfort.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/uv-protection-fashion-womens-collection" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sample Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Smart seasonal fashion fabrics by Seekingtex. Summer: cooling fabrics, UPF 50+ sun protection, breathable knits and wovens for resort wear. Winter: thermal insulation, wind-resistant, lightweight warm fabrics. OEKO-TEX certified. For fashion brands creating seasonal collections with intelligent textile performance.</p></section>
+</Layout>

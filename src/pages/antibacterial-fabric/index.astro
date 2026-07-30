@@ -1,0 +1,145 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import ProductGridFilter from '~/components/widgets/ProductGridFilter.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import {
+  getProducts,
+  getProductCategories,
+  isProductsEnabled,
+  isProductsListEnabled,
+  CATEGORY_SLUG_TO_URL,
+} from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import JsonLd from '~/components/common/JsonLd.astro';
+
+const products = await getProducts({ category: 'antibacterial' });
+const categories = await getProductCategories();
+const totalCount = products.length;
+const hidden = !isProductsEnabled() || !isProductsListEnabled();
+const metadata = merge(
+  {
+    title: `Antibacterial Fabrics �?7A Antimicrobial Performance Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} 7A antibacterial fabrics �?silver-ion, zinc-oxide, chitosan, and photocatalytic antimicrobial treatments. OEM/ODM available. Factory-direct pricing.`,
+    canonical: getCanonical(getPermalink('/antibacterial-fabric')),
+    robots: { index: !hidden, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">Category</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Antibacterial Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        7A antimicrobial performance textiles engineered for hygiene, healthcare, and wellness applications.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Our antibacterial fabric collection delivers certified 7A antimicrobial performance through advanced
+          technologies including silver-ion masterbatch, zinc-oxide nanoparticle treatments, chitosan bio-polymer
+          coatings, and photocatalytic TiO�?formulations. Each fabric is tested to AATCC 100, ISO 20743, and JIS L 1902
+          standards, providing &gt;99.9% reduction against S. aureus, E. coli, and MRSA. Ideal for healthcare uniforms,
+          wellness apparel, sportswear, and hygiene products.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Silver-Ion Technology</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Silver-ion masterbatch embedded at the fiber extrusion stage. Permanent antimicrobial protection that will not
+          wash out. &gt;99.9% bacterial reduction, 50+ wash durability.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Zinc-Oxide Treatment</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Zinc-oxide nanoparticle finish applied via pad-dry-cure process. Broad-spectrum antimicrobial with added
+          UV-blocking properties. Cost-effective for high-volume production.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Chitosan Bio-Polymer</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Natural chitosan coating derived from shellfish shells. Renewable, biodegradable antimicrobial with excellent
+          skin compatibility. Ideal for sensitive-skin and eco-conscious products.
+        </p>
+      </div>
+    </section>
+
+    {
+      categories.length > 0 && (
+        <WidgetWrapper containerClass="mb-10">
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <a
+              href="/products"
+              class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+            >
+              <Icon name="tabler:layout-grid" class="w-4 h-4" />
+              All Products
+            </a>
+            {categories.map((c) => (
+              <a
+                href={`/${CATEGORY_SLUG_TO_URL[c.slug]}`}
+                class:list={[
+                  'inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border transition-colors',
+                  c.slug === 'antibacterial'
+                    ? 'bg-primary text-white border-primary dark:bg-blue-500 dark:border-blue-500'
+                    : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700',
+                ]}
+              >
+                {c.title} ({c.count})
+              </a>
+            ))}
+          </div>
+        </WidgetWrapper>
+      )
+    }
+
+    {
+      totalCount === 0 ? (
+        <div class="text-center py-16 text-muted dark:text-slate-400">
+          <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
+          <p class="text-lg">No products in this category yet.</p>
+          <a class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block" href="/products">
+            View all products
+          </a>
+        </div>
+      ) : (
+        <ProductGridFilter products={products} />
+      )
+    }
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      Seekingtex antibacterial fabric collection: 7A silver-ion masterbatch antimicrobial polyester, zinc-oxide
+      nanoparticle treated fabrics, chitosan bio-polymer coated textiles, and photocatalytic TiO�?finishes. Tested to
+      AATCC 100, ISO 20743, JIS L 1902 standards. OEKO-TEX Standard 100 certified.
+    </p>
+  </section>
+
+  <JsonLd
+    type="ItemList"
+    items={products.map((p) => ({
+      name: p.title,
+      url: `/products/${p.slug}`,
+      image: p.image || undefined,
+      description: p.summary || '',
+    }))}
+    data={{ numberOfItems: products.length }}
+  />
+</Layout>

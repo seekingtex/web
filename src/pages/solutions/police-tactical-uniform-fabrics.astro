@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Police Tactical Uniform Fabrics — Law Enforcement Textile Solutions | ${SITE.name}`,
+  description: 'Police tactical uniform fabrics for patrol uniforms, tactical pants, and law enforcement apparel. Stretch ripstop, moisture-wicking, wrinkle-resistant textiles. OEM custom development for police uniform manufacturers.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Police Tactical Uniform Fabrics' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Police Tactical Uniform Fabrics by Seekingtex', description: 'Stretch ripstop, moisture-wicking fabrics for law enforcement uniforms, tactical pants, and duty apparel.', provider: { '@type': 'Organization', name: SITE.name } }} />
+
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Police Tactical Uniform Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Durable, comfortable textile solutions for patrol uniforms, tactical pants, and law enforcement apparel — engineered for 12-hour shifts, physical engagements, and professional appearance.</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Patrol Uniform Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Ripstop woven fabrics with mechanical stretch, moisture management, and wrinkle resistance. Professional appearance with tactical durability for daily patrol duty.</p>
+        <a href="/products/flame-retardant-fabric" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse uniform fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Tactical Pants Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">High-tenacity stretch fabrics for tactical pants. Abrasion resistance for equipment belt wear, gusseted mobility, and quick-dry performance.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Request technical consultation →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Law Enforcement Manufacturers Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Stretch Durability</h3><p class="mt-1 text-sm text-gray-500">15-20% mechanical stretch for pursuit and physical engagement mobility.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Moisture Management</h3><p class="mt-1 text-sm text-gray-500">Sweat wicking and rapid drying for comfort during extended shifts.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Professional Look</h3><p class="mt-1 text-sm text-gray-500">Wrinkle-resistant treatment maintains crisp appearance even after repeated washing.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Color Consistency</h3><p class="mt-1 text-sm text-gray-500">Engineered dye processes for uniform color across production runs with fade resistance.</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/police-tactical-uniform-fabric" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Police Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Police tactical uniform fabrics by Seekingtex. Patrol uniform fabrics: ripstop stretch with moisture management, wrinkle resistance. Tactical pants: high-tenacity stretch, abrasion resistant. OEM/ODM development for law enforcement uniform manufacturers. 15-20% mechanical stretch, 50+ laundry durability. OEKO-TEX certified. Multi-season uniform textile systems.</p></section>
+</Layout>

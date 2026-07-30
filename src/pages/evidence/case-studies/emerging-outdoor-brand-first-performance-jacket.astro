@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Emerging Outdoor Brand First Performance Jacket — Case Study | ${SITE.name}`,
+  description: 'How Seekingtex helped an emerging outdoor lifestyle brand develop its first performance jacket collection — from product concept to market-ready functional apparel through fabric innovation and technical support.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Evidence', href: '/evidence' }, { name: 'Emerging Outdoor Brand Jacket' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'How Seekingtex Helped an Emerging Outdoor Brand Develop Its First Performance Jacket Collection', description: 'An emerging outdoor lifestyle brand transformed a product concept into a market-ready functional jacket collection with Seekingtex fabric innovation and technical support.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/compression-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can startup clothing brands develop functional apparel without an in-house textile team?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Startup clothing brands can work with functional fabric partners like Seekingtex to access fabric selection expertise, product development guidance, and customized textile solutions without requiring their own textile research team.' } },
+        { '@type': 'Question', name: 'What does an apparel development partner do for emerging brands?', acceptedAnswer: { '@type': 'Answer', text: 'An apparel development partner helps emerging brands select suitable materials, optimize product performance, solve technical challenges, accelerate product development timelines, and create market-ready functional apparel.' } },
+        { '@type': 'Question', name: 'What fabrics are suitable for startup outdoor brands?', acceptedAnswer: { '@type': 'Answer', text: 'Outdoor startups typically need lightweight waterproof breathable fabrics, stretch materials for mobility, abrasion-resistant textiles for durability, and weather protection solutions suited to urban and outdoor lifestyle applications.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Emerging Outdoor Brand Jacket</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">Emerging Brand Success</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">From Product Concept to Market-Ready Performance Jacket</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped an emerging outdoor lifestyle brand develop its first functional apparel collection through expert fabric guidance and technical partnership.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-teal-700">Lightweight</div><div class="text-xs text-gray-500 mt-1">Performance Build</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-teal-700">Weather</div><div class="text-xs text-gray-500 mt-1">Protection</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-teal-700">Stretch</div><div class="text-xs text-gray-500 mt-1">Comfort Mobility</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>An emerging outdoor lifestyle brand based in Europe had built a following through minimalist design and urban-inspired lifestyle products. As consumer demand for functional apparel grew, the brand decided to launch its first technical garment — a multi-purpose jacket designed for daily commuting, weekend outdoor activities, and travel. The brand had strong product design and marketing capabilities but lacked textile development experience and did not have an in-house fabric team.</p>
+
+      <h2>The Challenge</h2>
+      <p>The brand faced three key challenges. First, finding the right balance between performance and comfort — the jacket needed to be lightweight, water-resistant, breathable, stretchable, and durable, but these properties often conflict. Second, limited experience with functional textiles meant the team could not confidently evaluate fabric options. Third, the brand needed to develop a competitive product within a startup budget, without the R&D resources of established outdoor brands.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex began by understanding the brand vision, target users, and product application scenarios — urban commuting, light trail activities, and travel. Based on this analysis, we recommended a lightweight nylon fabric with balanced performance: water-resistant finishing for daily weather protection, mechanical stretch for freedom of movement, and optimized weave construction for breathability and abrasion resistance.</p>
+      <p>During sample development, Seekingtex guided the brand through fabric testing, garment construction optimization, and performance validation. The goal was to find the optimal balance between functionality, cost, and market positioning.</p>
+
+      <h2>Results</h2>
+      <ul>
+        <li>Successfully launched first performance jacket collection — the "Urban Outdoor Performance Jacket"</li>
+        <li>Brand differentiation strengthened from "lifestyle brand" to "functional apparel innovator"</li>
+        <li>Established long-term textile development partnership with Seekingtex</li>
+        <li>Ongoing development of additional product categories including outdoor vests and travel apparel</li>
+      </ul>
+
+      <h2>Customer Feedback</h2>
+      <blockquote><p>"At the beginning, we had a clear product idea but limited knowledge about functional fabrics. Seekingtex helped us understand how fabric performance affects the final product. Their technical support allowed us to create a product that matched our brand vision."</p></blockquote>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-teal-700 to-cyan-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Your First Performance Collection?</h2>
+      <p class="text-teal-100 max-w-xl mx-auto mb-6">Partner with Seekingtex to transform your product concept into market-ready functional apparel.</p>
+      <a href="/contact" class="inline-block bg-white text-teal-700 font-semibold px-8 py-3 rounded-xl hover:bg-teal-50 transition-colors">Request Development Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-teal-700 hover:text-teal-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

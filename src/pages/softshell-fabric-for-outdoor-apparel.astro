@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Softshell Fabric for Outdoor Apparel — Stretch Durable Performance Textiles | ${SITE.name}`,
+  description:
+    'Softshell fabric supplier for outdoor apparel — 4-way mechanical stretch, DWR finish, 40K+ Martindale abrasion resistance. Woven face / knit back construction for hiking, ski, and outdoor pants. OEM custom development.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Softshell Fabric for Outdoor Apparel' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Softshell Fabric for Outdoor Apparel by Seekingtex',
+      description: '4-way stretch softshell fabric with DWR finish, woven face / knit back construction, 40K+ Martindale cycles abrasion resistance for hiking pants, ski wear, and outdoor apparel.',
+      brand: { '@type': 'Organization', name: SITE.name },
+      category: 'Softshell Textiles',
+    }}
+  />
+
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Softshell Fabric for Outdoor Apparel</h1>
+    <p class="mt-4 text-xl text-gray-500">Performance softshell fabric supplier — woven face / knit back construction with 4-way mechanical stretch, DWR water repellency, and exceptional abrasion resistance for hiking pants, ski wear, and outdoor performance apparel.</p>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-sky-600">25%</div>
+        <div class="text-sm text-gray-500 mt-1">Stretch (warp & weft)</div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-sky-600">40K+</div>
+        <div class="text-sm text-gray-500 mt-1">Martindale cycles</div>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-6 text-center">
+        <div class="text-3xl font-bold text-sky-600">180-280</div>
+        <div class="text-sm text-gray-500 mt-1">g/m² weight range</div>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-2xl font-bold text-gray-900">Key Features</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-200 p-6">
+          <h3 class="font-semibold text-gray-900">4-Way Mechanical Stretch</h3>
+          <p class="mt-2 text-sm text-gray-500">Engineered stretch without elastane — 25% elasticity in both warp and weft directions using high-tenacity textured polyester. Provides unrestricted movement for climbing, hiking, and active outdoor use.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-200 p-6">
+          <h3 class="font-semibold text-gray-900">DWR Water Repellency</h3>
+          <p class="mt-2 text-sm text-gray-500">C6 or C0 fluorocarbon-free DWR finish available. Spray rating 90+ initial, 80+ after 20 washes. Sheds light rain and snow while maintaining breathability for high-exertion activities.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-200 p-6">
+          <h3 class="font-semibold text-gray-900">Woven Face / Knit Back</h3>
+          <p class="mt-2 text-sm text-gray-500">Durable woven face resists abrasion and snagging. Brushed knit back provides next-to-skin comfort and thermal insulation. The two-layer construction balances durability with comfort.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl border border-gray-200 p-6">
+          <h3 class="font-semibold text-gray-900">Abrasion Resistance</h3>
+          <p class="mt-2 text-sm text-gray-500">40,000+ Martindale cycles — suitable for rugged outdoor use including scrambling, bushwhacking, and alpine approaches. High-tenacity face yarns provide long-term durability.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-8">
+      <h2 class="text-xl font-bold text-gray-900">Applications</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div><h3 class="font-semibold text-gray-900">Hiking Pants</h3><p class="mt-1 text-sm text-gray-500">All-day comfort with stretch mobility and weather resistance</p></div>
+        <div><h3 class="font-semibold text-gray-900">Softshell Jackets</h3><p class="mt-1 text-sm text-gray-500">Breathable outer layer for cold-weather activities</p></div>
+        <div><h3 class="font-semibold text-gray-900">Ski Pants</h3><p class="mt-1 text-sm text-gray-500">Stretch fit with DWR snow shedding and thermal comfort</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/products/stretch-fabric" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Browse Stretch Fabrics</a>
+      <a href="/solutions/fabrics-for-hiking-pants" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Hiking Pants Solutions</a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Softshell fabric for outdoor apparel by Seekingtex. 4-way mechanical stretch woven face / knit back construction. Key specs: 25% stretch warp and weft, 40K+ Martindale cycles abrasion resistance, 180-280 g/m² weight range, C6 or C0 DWR finish. Applications: hiking pants, softshell jackets, ski pants, outdoor trousers. High-tenacity textured polyester face with brushed knit back for comfort. OEKO-TEX Standard 100 certified. Custom OEM/ODM softshell development available. 15,000 m² manufacturing facility in Kunshan, China. FOB Shanghai global shipping.</p>
+  </section>
+</Layout>

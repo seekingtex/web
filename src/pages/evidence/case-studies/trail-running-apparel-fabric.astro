@@ -1,0 +1,302 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `Trail Running Apparel Fabric Innovation — Seekingtex Case Study | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed an ultralight quick-dry moisture-wicking fabric for a US trail running apparel startup requiring high-performance lightweight fabrics.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Trail Running Apparel Fabric Innovation — A Seekingtex Case Study',
+      description:
+        'Seekingtex developed an ultralight quick-dry moisture-wicking fabric for a US trail running apparel startup.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/quick-dry-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What fabric is best for trail running apparel?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The best trail running apparel fabrics are lightweight typically 80-140 g/m², moisture-wicking to pull sweat away from skin, quick-drying, and breathable. Common choices include polyester knit, nylon-spandex blends, and recycled performance knits. Seekingtex develops custom performance knit fabrics specifically optimized for trail running and high-exertion outdoor activities.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does moisture-wicking fabric work?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Moisture-wicking fabrics use engineered fiber cross-sections such as channeled polyester or hydrophilic finishes to pull liquid sweat away from the skin through capillary action. The moisture spreads across a larger surface area on the fabric exterior where it can evaporate quickly, keeping the wearer dry and comfortable during physical activity.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the ideal weight for trail running fabric?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ideal trail running fabric weight ranges from 80 to 140 g/m² depending on the garment type. Lightweight single-jersey knits at 80-110 g/m² work well for summer running tops, while 120-140 g/m² provides better durability for shorts and cold-weather base layers without significantly increasing weight.',
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Trail Running Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Sportswear</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Trail Running Apparel Fabric Innovation for a US Startup</h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Ultralight quick-dry moisture-wicking fabric developed for high-exertion trail running performance.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">95 g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Fabric Weight</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">30+</div>
+        <div class="text-xs text-gray-500 mt-1">Retailers Stocked</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">95%</div>
+        <div class="text-xs text-gray-500 mt-1">First-Year Sell-Through</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/quick-dry-fabric.webp"
+        alt="Ultralight moisture-wicking quick-dry trail running fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Ultralight Quick-Dry Fabric for Trail Running</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a US-based trail running apparel startup founded by competitive trail runners. The founders
+        identified a gap in the market for truly lightweight performance apparel that could handle the demands of
+        ultramarathon distances and technical trail terrain.
+      </p>
+      <p>
+        The brand was launching with a focused product line: running vests, lightweight shorts, and performance
+        T-shirts. They needed a fabric partner who understood the specific needs of trail runners — minimal weight,
+        rapid drying, odor resistance, and durability against backpack straps and vegetation.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Developing the Lightest Possible Fabric Without Sacrificing Performance</h3>
+      <p>The brand set ambitious targets for their first product line:</p>
+      <ul>
+        <li><strong>Weight:</strong> under 100 g/m² for the base fabric</li>
+        <li><strong>Drying time:</strong> less than 30 minutes at room temperature</li>
+        <li><strong>Moisture management:</strong> superior wicking with rapid evaporation</li>
+        <li><strong>Odor control:</strong> antimicrobial treatment for multi-day use</li>
+        <li><strong>Durability:</strong> sufficient for 100+ miles of trail wear</li>
+      </ul>
+      <p>
+        Existing performance knit fabrics in the market either met the weight target but compromised on durability, or
+        offered durability at significantly higher weights. The brand needed a fabric that didn't force them to choose.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <h3>Custom Ultralight Performance Knit Development</h3>
+
+      <h3>1. Yarn Selection</h3>
+      <p>
+        We selected a 40-denier textured polyester yarn for the face and a fine-denier moisture-wicking yarn for the
+        inner surface. The dual-yarn construction allowed us to optimize both next-to-skin comfort and exterior
+        durability.
+      </p>
+
+      <h3>2. Knit Structure</h3>
+      <p>
+        A single-jersey knit with micro-channel cross-section fibers was developed to maximize capillary wicking action.
+        The structure was engineered to pull moisture from the skin side to the fabric surface where it could evaporate
+        rapidly.
+      </p>
+
+      <h3>3. Antimicrobial Treatment</h3>
+      <p>
+        A silver-based antimicrobial finish was applied for odor control, tested to 99.9% bacterial reduction after 50
+        washes. The treatment was selected for its durability and compliance with OEKO-TEX requirements.
+      </p>
+
+      <h3>4. Quick-Dry Optimization</h3>
+      <p>
+        The fabric construction and finish were optimized for rapid drying. Independent testing confirmed 25-minute
+        drying time at room temperature from fully saturated condition.
+      </p>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <h3>Step 1: Requirement Analysis</h3>
+      <p>
+        Seekingtex worked with the brand founders to understand the specific demands of trail running: pack friction
+        points, sweat zones, weather exposure, and garment fit requirements.
+      </p>
+      <h3>Step 2: Sample Development</h3>
+      <p>
+        Five knit variations were produced with different yarn combinations and stitch densities. Each was tested for
+        weight, wicking rate, drying time, and abrasion resistance.
+      </p>
+      <h3>Step 3: Field Testing</h3>
+      <p>
+        Two lead fabrics were provided for the brand's athlete testing program. Feedback from 20 trail runners over 3
+        months guided the final selection.
+      </p>
+      <h3>Step 4: Production</h3>
+      <p>
+        The final fabric — 95 g/m² single-jersey with moisture-wicking and antimicrobial finish — was put into bulk
+        production. Inline quality checks ensured consistent weight and performance across all production lots.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>Fabric weight:</strong> 95 g/m² — among the lightest in its class</li>
+        <li><strong>Drying time:</strong> 25 minutes room temperature — exceeded target</li>
+        <li><strong>Odor control:</strong> 99.9% bacterial reduction after 50 washes</li>
+        <li><strong>Market success:</strong> 30+ retailers stocked the brand in first year</li>
+        <li><strong>Sell-through:</strong> 95% first-year sell-through rate</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Customer Chose Seekingtex</h2>
+      <p>
+        The brand chose Seekingtex because we demonstrated the ability to develop a true ultralight fabric that met all
+        performance targets, provided multiple development options, offered antimicrobial treatment integration, and
+        delivered competitive pricing for a startup brand with initial volumes.
+      </p>
+
+      <hr />
+
+      <h2>Project Summary</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Customer Type</td><td>US Trail Running Apparel Startup</td></tr>
+          <tr><td>Product</td><td>Running Vests / Shorts / T-Shirts</td></tr>
+          <tr><td>Fabric Type</td><td>95 g/m² Performance Knit</td></tr>
+          <tr><td>Key Features</td><td>Moisture-Wicking / Quick-Dry / Antimicrobial</td></tr>
+          <tr><td>Drying Time</td><td>25 Minutes (Room Temperature)</td></tr>
+          <tr><td>Result</td><td>30+ Retailers / 95% Sell-Through</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>What fabric is best for trail running apparel?</h3>
+      <p>
+        The best trail running apparel fabrics are lightweight (80-140 g/m²), moisture-wicking, quick-drying, and
+        breathable. Seekingtex develops custom performance knit fabrics optimized for trail running and high-exertion
+        outdoor activities.
+      </p>
+      <h3>How does moisture-wicking fabric work?</h3>
+      <p>
+        Moisture-wicking fabrics use engineered fiber cross-sections or hydrophilic finishes to pull liquid sweat away
+        from the skin through capillary action, spreading it across the fabric exterior for rapid evaporation.
+      </p>
+      <h3>What is the ideal weight for trail running fabric?</h3>
+      <p>
+        Ideal trail running fabric weight ranges from 80 to 140 g/m² depending on the garment type. Lightweight
+        single-jersey knits at 80-110 g/m² work well for summer running tops while 120-140 g/m² provides better
+        durability for shorts.
+      </p>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href="/products/quick-dry-moisture-wicking"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Quick-Dry Moisture-Wicking Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">Performance moisture management for activewear</p>
+        </a>
+        <a
+          href="/products/breathable-mesh-fabric"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Breathable Mesh Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Ventilation and airflow for high-exertion apparel</p>
+        </a>
+        <a
+          href="/products/antibacterial-7a"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Antibacterial Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Odor control for multi-day trail use</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Develop Your Performance Apparel Fabric</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        Contact Seekingtex to discuss your activewear or sportswear fabric requirements. We develop custom performance
+        knits for brands of all sizes.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >Discuss Your Project</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to All Case Studies</a>
+    </div>
+  </div>
+</Layout>

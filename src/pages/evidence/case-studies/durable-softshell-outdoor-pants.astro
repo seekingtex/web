@@ -1,0 +1,326 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `How Seekingtex Developed Durable Softshell Fabric for Outdoor Pants | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed a customized durable softshell fabric with 4-way stretch and DWR finish for a European outdoor pants brand portfolio.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Developing Durable Softshell Fabric for Outdoor Pants — A Seekingtex Case Study',
+      description:
+        'Seekingtex developed a customized durable softshell fabric with 4-way stretch and DWR finish for a European outdoor pants brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/stretch-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is softshell fabric used for?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Softshell fabric is commonly used for outdoor pants, jackets, and activewear. It provides stretch, weather resistance, breathability, and comfort for hiking, climbing, skiing, and everyday outdoor activities.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you make outdoor pants fabric more durable?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Outdoor pants fabric durability is improved through tight woven constructions, abrasion-resistant yarns such as nylon or high-tenacity polyester, reinforced thread counts in high-wear areas, and durable water repellent DWR finishes that also protect the fabric from moisture-related degradation.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can Seekingtex develop custom stretch fabric for outdoor apparel?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Seekingtex develops custom stretch fabrics for outdoor apparel brands, including 4-way stretch softshell materials with specific weight stretch ratio DWR performance and color requirements through a structured development process.',
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Durable Softshell Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      How Seekingtex Developed a Durable Softshell Fabric for Outdoor Pants
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Custom stretch fabric solution for a European outdoor brand requiring mobility, weather resistance, and extended
+      durability.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">45 days</div>
+        <div class="text-xs text-gray-500 mt-1">Sample to Approval</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">40K+</div>
+        <div class="text-xs text-gray-500 mt-1">Abrasion Cycles</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">3 styles</div>
+        <div class="text-xs text-gray-500 mt-1">Pants Collection</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/stretch-fabric.webp"
+        alt="Durable softshell stretch fabric for outdoor pants"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Durable Softshell Fabric for Outdoor Pants</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a European outdoor apparel brand with a strong presence in hiking and trekking categories. The
+        brand was preparing to launch a dedicated outdoor pants collection and needed a fabric partner who understood
+        the specific demands of lower-body outdoor apparel: mobility, abrasion resistance, and weather protection.
+      </p>
+      <p>
+        The brand's existing products used standard woven fabrics that lacked stretch and comfort. Their product team
+        identified softshell fabric as the ideal material platform but needed guidance on construction, weight, and
+        finishing for their specific price point and performance targets.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Finding the Balance Between Stretch, Durability, and Weather Resistance</h3>
+      <p>
+        Developing outdoor pants presents unique challenges compared to jackets. The fabric must withstand continuous
+        friction from backpack hip belts, rock contact, and sitting on rough surfaces while maintaining freedom of
+        movement.
+      </p>
+      <p>The brand required a fabric that could deliver:</p>
+      <ul>
+        <li><strong>4-way stretch</strong> — for climbing steps, crouching, and dynamic movement</li>
+        <li><strong>Abrasion resistance</strong> — minimum 30,000 Martindale cycles</li>
+        <li><strong>DWR water repellency</strong> — protection against light rain and morning dew</li>
+        <li><strong>Breathability</strong> — comfort during sustained hiking effort</li>
+        <li><strong>Lightweight feel</strong> — packable and comfortable for all-day wear</li>
+      </ul>
+      <p>
+        Many softshell fabrics in the market prioritized stretch but compromised on durability, or offered durability
+        but felt stiff and uncomfortable. The brand needed a customized solution.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <h3>Custom Softshell Fabric Development</h3>
+      <p>
+        Seekingtex approached the project through a structured fabric development process, starting with a thorough
+        analysis of the brand's product requirements, target price point, and application environment.
+      </p>
+
+      <h3>1. Fabric Construction</h3>
+      <p>
+        We selected a woven face / knit back softshell construction using high-tenacity polyester face yarns for
+        abrasion resistance and a fine-denier knit back for comfort and stretch. The face fabric was engineered with a
+        textured weave pattern that provided stain hiding and visual depth.
+      </p>
+
+      <h3>2. Stretch Performance</h3>
+      <p>
+        Mechanical stretch was incorporated through the weave structure rather than relying solely on spandex content,
+        providing consistent stretch recovery over the garment's lifespan. The final fabric achieved 25% stretch in both
+        warp and weft directions.
+      </p>
+
+      <h3>3. DWR Finishing</h3>
+      <p>
+        A C6 DWR (durable water repellent) finish was selected for environmental compliance while maintaining effective
+        water beading performance. The finish was optimized to withstand 20+ home launderings before reapplication was
+        needed.
+      </p>
+
+      <h3>4. Testing and Validation</h3>
+      <p>
+        All samples underwent Martindale abrasion testing, hydrostatic head measurement, colorfastness verification, and
+        dimensional stability checks. The final fabric exceeded 40,000 Martindale cycles — well above the brand's
+        minimum requirement.
+      </p>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <h3>Step 1: Requirement Analysis</h3>
+      <p>
+        Seekingtex reviewed the brand's existing product line, target price points, and performance requirements. We
+        discussed specific use scenarios: alpine hiking, forest treks, and everyday outdoor wear.
+      </p>
+      <h3>Step 2: Sample Development</h3>
+      <p>
+        Three construction variations were developed and submitted for evaluation. Each sample varied in face yarn
+        denier, stretch percentage, and fabric weight. The brand selected the mid-weight option.
+      </p>
+      <h3>Step 3: Finishing Optimization</h3>
+      <p>
+        The selected fabric underwent finishing trials to optimize DWR application temperature and curing time for
+        maximum wash durability without affecting hand feel.
+      </p>
+      <h3>Step 4: Bulk Production</h3>
+      <p>
+        After final approval, bulk production was scheduled across 3 colorways. Consistent shade matching and finishing
+        quality were maintained through inline inspection.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <p>
+        The developed softshell fabric was applied to the brand's outdoor pants collection across three styles: a
+        classic hiking pant, a tapered trekking pant, and a women-specific fit. The collection launched successfully
+        with strong initial sell-through.
+      </p>
+      <ul>
+        <li><strong>Durability:</strong> 40,000+ Martindale cycles — exceeded expectations</li>
+        <li><strong>Stretch:</strong> 25% warp and weft — enabled full range of motion</li>
+        <li><strong>Weather resistance:</strong> DWR finish provided reliable light rain protection</li>
+        <li><strong>Weight:</strong> 240 g/m² — balanced durability with comfort</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Customer Chose Seekingtex</h2>
+      <p>
+        The brand had approached multiple fabric suppliers but chose Seekingtex because we demonstrated deep
+        understanding of softshell construction, provided multiple development options rather than a single
+        recommendation, completed samples in 45 days, and offered competitive pricing for the specified quality level.
+      </p>
+
+      <blockquote>
+        <p>
+          "Seekingtex understood that outdoor pants have different performance requirements than jackets. Their
+          softshell fabric gave our collection exactly the balance of stretch, durability, and weather resistance we
+          were looking for."
+        </p>
+      </blockquote>
+
+      <hr />
+
+      <h2>Project Summary</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Customer Type</td><td>European Outdoor Apparel Brand</td></tr>
+          <tr><td>Product</td><td>Outdoor Pants Collection</td></tr>
+          <tr><td>Fabric Type</td><td>Softshell with DWR Finish</td></tr>
+          <tr><td>Key Features</td><td>4-Way Stretch / 40K Abrasion / DWR</td></tr>
+          <tr><td>Development Time</td><td>45 Days Sample to Approval</td></tr>
+          <tr><td>Result</td><td>3-Style Pants Collection Launched</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is softshell fabric used for?</h3>
+      <p>
+        Softshell fabric is commonly used for outdoor pants, jackets, and activewear. It provides stretch, weather
+        resistance, breathability, and comfort for hiking, climbing, skiing, and everyday outdoor activities.
+      </p>
+      <h3>How do you make outdoor pants fabric more durable?</h3>
+      <p>
+        Outdoor pants fabric durability is improved through tight woven constructions, abrasion-resistant yarns such as
+        nylon or high-tenacity polyester, reinforced thread counts in high-wear areas, and durable water repellent DWR
+        finishes.
+      </p>
+      <h3>Can Seekingtex develop custom stretch fabric for outdoor apparel?</h3>
+      <p>
+        Yes. Seekingtex develops custom stretch fabrics for outdoor apparel brands, including 4-way stretch softshell
+        materials with specific weight, stretch ratio, DWR performance, and color requirements.
+      </p>
+    </article>
+
+    <!-- Related Products -->
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href="/products/stretch-fabric"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">4-Way Stretch Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">High-performance stretch fabrics for active outdoor wear</p>
+        </a>
+        <a
+          href="/products/waterproof-breathable"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Weather protection for outdoor apparel</p>
+        </a>
+        <a
+          href="/products/quick-dry-moisture-wicking"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Quick-Dry Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Moisture management for active outdoor performance</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Develop Your Outdoor Fabric Solution</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        Contact Seekingtex to discuss your outdoor apparel project. Our team provides customized functional fabric
+        development for brands of all sizes.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >Discuss Your Project</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to All Case Studies</a>
+    </div>
+  </div>
+</Layout>

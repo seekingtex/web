@@ -1,0 +1,66 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Construction Workwear Fabrics — Abrasion Resistant Uniform Textiles | ${SITE.name}`,
+    description: 'Construction workwear fabrics: abrasion resistant, tear resistant ripstop, stretch, and breathable textiles for construction uniforms and work pants. Custom OEM development.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Construction Workwear Fabrics by Seekingtex', description: 'Abrasion resistant, tear resistant, stretch, breathable workwear fabrics for construction uniforms.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, description: 'Seekingtex is a functional fabric manufacturer for construction workwear brands and uniform manufacturers.', url: 'https://seekingtex.com' }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What is the best fabric for construction work pants?', acceptedAnswer: { '@type': 'Answer', text: 'Stretch ripstop fabrics in 220-260gsm with nylon-polyester blends offer the best balance of abrasion resistance, tear strength, stretch mobility, and breathability for construction work pants.' } },
+    { '@type': 'Question', name: 'What does stretch workwear fabric mean for construction?', acceptedAnswer: { '@type': 'Answer', text: 'Stretch workwear fabric incorporates mechanical stretch (15-25%) allowing construction workers to bend, squat, and climb freely without restriction, improving comfort and productivity during long shifts.' } },
+    { '@type': 'Question', name: 'Can Seekingtex develop custom construction uniform fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex provides custom fabric development for construction workwear brands from application analysis through sample development, testing, and production scaling.' } },
+  ] }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <div class="mb-4">
+      <a href={`${prefix}/solutions/workwear-fabric-solutions`} class="text-sm text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Workwear Solutions</a>
+    </div>
+    <h1 class="text-4xl font-bold text-gray-900">Construction Workwear Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Abrasion resistant, tear resistant, stretchable, breathable fabrics engineered for construction uniforms, work pants, and protective clothing. High-performance textiles for demanding job site environments.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Abrasion Resistant</h2><p class="mt-2 text-sm text-gray-600">High-tenacity woven fabrics with superior abrasion resistance for work pants and uniforms. Reinforced construction extends garment life.</p><a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Explore durable fabrics →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Stretch Workwear</h2><p class="mt-2 text-sm text-gray-600">Mechanical and 4-way stretch for improved mobility on job sites. Bend, squat, climb without restriction.</p><a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Explore stretch →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Breathable Textiles</h2><p class="mt-2 text-sm text-gray-600">Lightweight breathable fabrics with moisture management for warm climate construction work. Reduces heat stress.</p><a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse breathable →</a></div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Ripstop & Tear</h2><p class="mt-2 text-sm text-gray-600">Ripstop construction prevents tear propagation from snags. Ideal for long-term durability in harsh environments.</p><a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">View technical →</a></div>
+    </div>
+    <div class="mt-16 bg-amber-50 rounded-2xl border border-amber-200 p-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Workwear Solutions</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href={`${prefix}/solutions/workwear-fabric-solutions`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">All Workwear</a>
+        <a href={`${prefix}/solutions/industrial-uniform-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Industrial</a>
+        <a href={`${prefix}/solutions/safety-workwear-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Safety</a>
+        <a href={`${prefix}/solutions/corporate-uniform-fabrics`} class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Corporate</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Construction Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Application-Focused</h3><p class="mt-1 text-sm text-gray-500">Fabrics for construction environments: kneeling, climbing, all-weather outdoor conditions.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Durability</h3><p class="mt-1 text-sm text-gray-500">High-tenacity yarns, ripstop weaves, reinforced construction for extended garment life.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Comfort Balance</h3><p class="mt-1 text-sm text-gray-500">Breathable, stretchable, lightweight — balancing protection with all-day wear.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom</h3><p class="mt-1 text-sm text-gray-500">From fabric selection to production scaling for workwear brands.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/workwear-industrial-uniform-fabric-development`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Seekingtex construction workwear fabrics: abrasion resistant, stretch, breathable, ripstop for construction uniforms and work pants. Custom OEM for workwear brands. OEKO-TEX certified.</p></section>
+</Layout>

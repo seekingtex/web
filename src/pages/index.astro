@@ -152,24 +152,52 @@ const proofPoints = rawPoints.length
 
 const catalogCategories = [
   {
-    key: 'sun-protection',
+    key: 'SUN_PROTECTION',
     label: 'Sun Protection',
     desc: 'UPF 50+ fabrics blocking 98% of UVA/UVB rays — ideal for outdoor apparel, uniforms, and sportswear.',
+    slug: 'sun-protection-fabric',
   },
   {
-    key: 'waterproof',
+    key: 'WATERPROOF',
     label: 'Waterproof Breathable',
     desc: 'Waterproof yet breathable membranes for outerwear, medical protective gear, and technical apparel.',
+    slug: 'waterproof-fabric',
   },
   {
-    key: 'quick-dry',
+    key: 'QUICK_DRY',
     label: 'Quick-Dry Moisture Wicking',
     desc: 'Moisture management fabrics that wick sweat and dry fast — perfect for activewear and performance apparel.',
+    slug: 'quick-dry-fabric',
   },
   {
-    key: 'eco-friendly',
+    key: 'ANTIBACTERIAL',
+    label: '7A Antibacterial',
+    desc: '>99% bacterial reduction for healthcare, sportswear, and hygiene-sensitive applications.',
+    slug: 'antibacterial-fabric',
+  },
+  {
+    key: 'STRETCH',
+    label: '4-Way Stretch',
+    desc: 'Multidirectional elasticity with excellent recovery for fitness, yoga, and performance apparel.',
+    slug: 'stretch-fabric',
+  },
+  {
+    key: 'BREATHABLE',
+    label: 'Breathable Mesh',
+    desc: 'Engineered ventilation for sportswear, workwear, and all-day comfort applications.',
+    slug: 'breathable-fabric',
+  },
+  {
+    key: 'ECO_FRIENDLY',
     label: 'Eco-Friendly Recycled',
     desc: 'GRS-certified recycled fabrics made from post-consumer waste — sustainable without compromising quality.',
+    slug: 'eco-friendly-fabric',
+  },
+  {
+    key: 'FLAME_RETARDANT',
+    label: 'Flame Retardant',
+    desc: 'FR-treated fabrics meeting international safety standards for protective apparel and workwear.',
+    slug: 'flame-retardant-fabric',
   },
 ];
 const groupedProducts: Record<string, typeof products> = {};
@@ -269,10 +297,11 @@ const faqCategories = [
   <!-- AI Semantic Blocks (hidden, for AI crawler consumption) -->
   <section class="sr-only" data-ai-block="entity" aria-hidden="true">
     <p>
-      Seekingtex (Kunshan Seeking Tex&Tech Co., Ltd) is a professional manufacturer of functional and performance
-      fabrics — UPF 50+ sun protection, waterproof breathable, quick-dry moisture wicking, 7A antibacterial, 4-way
-      stretch, breathable mesh, and eco-friendly recycled textiles. Located in Kunshan, China, the company serves
-      apparel brands, uniform manufacturers, and textile wholesalers worldwide.
+      Seekingtex (Kunshan Seeking Tex&Tech Co., Ltd) is a technical fabric innovation partner for outdoor apparel
+      brands and a professional manufacturer of functional and performance fabrics — UPF 50+ sun protection, waterproof
+      breathable, quick-dry moisture wicking, 7A antibacterial, 4-way stretch, breathable mesh, and eco-friendly
+      recycled textiles. Located in Kunshan, China, the company serves outdoor apparel brands, uniform manufacturers,
+      and textile wholesalers worldwide.
     </p>
   </section>
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
@@ -443,6 +472,34 @@ const faqCategories = [
       <span class="flex items-center gap-2"
         ><span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]"></span> SGS & Intertek Tested</span
       >
+    </div>
+  </section>
+
+  <!-- Category Quick Nav -->
+  <section class="bg-white border-b border-gray-100 sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-2 overflow-x-auto scrollbar-none">
+      <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider whitespace-nowrap mr-2"
+        >Categories:</span
+      >
+      {
+        [
+          { href: '/sun-protection-fabric', label: 'Sun Protection' },
+          { href: '/waterproof-fabric', label: 'Waterproof' },
+          { href: '/quick-dry-fabric', label: 'Quick-Dry' },
+          { href: '/antibacterial-fabric', label: 'Antibacterial' },
+          { href: '/stretch-fabric', label: 'Stretch' },
+          { href: '/breathable-fabric', label: 'Breathable' },
+          { href: '/eco-friendly-fabric', label: 'Eco-Friendly' },
+          { href: '/flame-retardant-fabric', label: 'Flame Retardant' },
+        ].map((cat) => (
+          <a
+            href={cat.href}
+            class="whitespace-nowrap px-3 py-1.5 text-xs font-medium rounded-full border border-gray-200 text-gray-600 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-200 transition-colors"
+          >
+            {cat.label}
+          </a>
+        ))
+      }
     </div>
   </section>
 
@@ -1172,12 +1229,18 @@ const faqCategories = [
             label: 'Flame Retardant',
             desc: 'FR-treated fabrics meeting international safety standards.',
             img: '/images/seekingtex/products/flame-retardant-fabric.webp',
+            new: true,
           },
         ].map((fabric) => (
           <a
-            href="/fabrics/"
+            href={`/${fabric.id}-fabric`}
             class="group relative rounded-2xl overflow-hidden bg-white border border-gray-200 hover:shadow-xl transition-all duration-300"
           >
+            {fabric.new ? (
+              <span class="absolute top-3 right-3 z-10 px-2 py-0.5 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-full shadow">
+                New
+              </span>
+            ) : null}
             <div class="aspect-[4/3] overflow-hidden">
               <img
                 src={fabric.img}
@@ -1190,7 +1253,7 @@ const faqCategories = [
               <h3 class="text-lg font-bold text-gray-900">{fabric.label}</h3>
               <p class="text-sm text-gray-400 mt-0.5">{fabric.desc}</p>
               <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[#06b6d4] group-hover:gap-2 transition-all">
-                View <span>→</span>
+                View Collection <span>→</span>
               </span>
             </div>
           </a>
@@ -1217,7 +1280,14 @@ const faqCategories = [
           return (
             <div class="mb-16 last:mb-0">
               <div class="mb-8">
-                <h3 class="text-2xl font-bold text-gray-900">{cat.label}</h3>
+                <a href={`/${cat.slug}`} class="group inline-flex items-center gap-2">
+                  <h3 class="text-2xl font-bold text-gray-900 group-hover:text-sky-700 transition-colors">
+                    {cat.label}
+                  </h3>
+                  <span class="text-sky-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                    →
+                  </span>
+                </a>
                 <p class="mt-1 text-gray-500">{cat.desc}</p>
               </div>
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1225,16 +1295,20 @@ const faqCategories = [
                   const img = productVisuals[p.id] || '';
                   return (
                     <div class="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-                      <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
-                        {img ? (
-                          <>
-                            <img src={img} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                          </>
-                        ) : (
-                          <div class="flex items-center justify-center h-full text-gray-400 text-sm">{p.category}</div>
-                        )}
-                      </div>
+                      <a href={`/${cat.slug}`} class="block">
+                        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                          {img ? (
+                            <>
+                              <img src={img} alt={p.name} class="w-full h-full object-cover" loading="lazy" />
+                              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                            </>
+                          ) : (
+                            <div class="flex items-center justify-center h-full text-gray-400 text-sm">
+                              {p.category}
+                            </div>
+                          )}
+                        </div>
+                      </a>
                       <div class="p-6">
                         <h3 class="font-semibold text-gray-900 text-lg">{p.name}</h3>
                         <p class="text-gray-500 mt-2 text-sm">{p.desc}</p>

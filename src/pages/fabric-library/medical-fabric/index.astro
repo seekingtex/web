@@ -1,0 +1,157 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+
+const products = await getProducts();
+const medicalProducts = products.filter((p) =>
+  ['antibacterial', 'quick-dry', 'breathable', 'eco-friendly'].includes(p.category!)
+);
+
+const metadata = merge(
+  {
+    title: `Medical & Healthcare Fabrics — Antimicrobial, Fluid-Repellent Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} medical and healthcare fabric collection — antimicrobial, fluid-repellent, comfortable performance textiles for hospital uniforms, surgical gowns, and healthcare apparel. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink('/fabric-library/medical-fabric')),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Fabric Library — Medical
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Medical & Healthcare Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Performance textiles engineered for healthcare environments — antimicrobial protection, fluid resistance, and
+        all-day comfort.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Our medical fabric collection delivers certified antimicrobial protection, fluid repellency, and comfort for
+          healthcare professionals. From silver-ion antibacterial uniforms to fluid-resistant surgical gown materials,
+          each fabric is engineered to meet the rigorous demands of medical environments while providing the comfort
+          needed for long shifts. All fabrics are tested to relevant ISO and AATCC standards.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:microscope" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Antimicrobial Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Silver-ion, zinc-oxide, and chitosan-based antimicrobial technologies. AATCC 100 tested with 99.9% bacterial
+          reduction. Permanent protection that lasts 50+ industrial washes.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:drop" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Fluid-Repellent Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          DWR-treated and barrier-coated fabrics offering resistance to bodily fluids and liquid penetration. Suitable
+          for surgical gowns, patient drapes, and laboratory coats.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:heart" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Comfort Stretch Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Stretch cotton-polyester and nylon-spandex blends designed for all-day wear in healthcare settings.
+          Moisture-wicking, breathable, and easy-care properties for frequent industrial laundering.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Recommended Medical Fabrics</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {medicalProducts.slice(0, 6).map((p) => <ProductCard product={p} />)}
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/antibacterial-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Antibacterial Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/quick-dry-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Quick-Dry Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/breathable-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Breathable Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What fabric is best for medical uniforms?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Medical uniforms require antimicrobial protection, fluid resistance, and all-day comfort. A polyester-cotton
+            blend (65/35 or 80/20) with antimicrobial finish offers the best balance of durability, comfort, and easy
+            care. For premium options, look for fabrics with silver-ion antimicrobial technology, moisture-wicking
+            properties, and 4-way stretch for mobility.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            How durable is your antibacterial fabric after repeated washing?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Our silver-ion based antimicrobial fabrics maintain 99.9% bacterial reduction after 50 industrial wash
+            cycles (AATCC 100 tested). The antimicrobial agent is embedded at the fiber level during manufacturing, not
+            applied as a topical finish, ensuring permanent protection that will not wash out or degrade over time.
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} medical and healthcare fabric collection: antimicrobial performance textiles with silver-ion, zinc-oxide,
+      and chitosan technologies; fluid-repellent barrier fabrics; comfortable stretch uniform materials; and easy-care blends
+      for hospital, clinical, and healthcare apparel applications. AATCC and ISO certified.
+    </p>
+  </section>
+</Layout>

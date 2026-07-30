@@ -1,0 +1,189 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `Lightweight Running Apparel Fabric — Sportswear Case Study | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex helped a European running apparel brand develop a lightweight, moisture-wicking performance fabric system for a differentiated running collection.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'How Seekingtex Helped a European Running Brand Develop a Lightweight Performance Fabric Collection',
+      description: 'Seekingtex developed a lightweight moisture-wicking performance fabric for a European running brand, enabling product differentiation and premium market positioning.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/compression-texture.webp',
+      datePublished: '2026-07-30',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What type of fabric is best for running apparel?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The best running apparel fabrics are lightweight performance knits with moisture-wicking technology, breathable construction, and soft hand feel. They should move sweat away from the skin and dry quickly during extended exercise.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How can sportswear brands differentiate their products through fabric?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sportswear brands can differentiate through application-specific fabric engineering: moisture management for running, stretch recovery for yoga, durability for training, and sustainable materials for eco-conscious consumers. Custom fabric development creates unique product stories.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the difference between standard polyester and performance fabric?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Standard polyester fabric offers basic durability and quick-dry properties. Performance fabrics are engineered with optimized fiber blends, knit structures, and functional finishes to achieve specific targets for moisture wicking speed, stretch recovery, breathability, and comfort.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can Seekingtex develop custom fabrics for sportswear startups?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Seekingtex provides custom fabric development for sportswear brands of all sizes, from emerging startups to established labels. Services include application analysis, fabric selection, sample development, testing, and production scaling.',
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Running Apparel Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Sportswear</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">How Seekingtex Helped a European Running Brand Develop a Lightweight Performance Fabric Collection</h1>
+    <p class="text-xl text-gray-500 mb-8">From basic sportswear fabric to differentiated performance apparel — engineering a lightweight, moisture-wicking knit collection for a European running brand.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-blue-600">Light</div>
+        <div class="text-xs text-gray-500 mt-1">Lightweight Knit Construction</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-blue-600">Wick</div>
+        <div class="text-xs text-gray-500 mt-1">Advanced Moisture Management</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-blue-600">Soft</div>
+        <div class="text-xs text-gray-500 mt-1">Premium Soft Touch Finish</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img src="/images/seekingtex/products/compression-texture.webp" alt="Lightweight moisture-wicking performance knit fabric for running apparel" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Lightweight Performance Knit Fabric for Running Apparel</span>
+      </div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European emerging sportswear brand specializing in running and active lifestyle apparel. The brand had built a loyal customer base through modern design and competitive pricing, but faced increasing market competition as many competitors offered similar products with similar performance claims.</p>
+      <p>The brand realized that design alone was no longer enough. They wanted to develop a new generation of running apparel with stronger functional performance and a clearer product story — a lightweight running collection delivering better comfort, improved moisture management, and a more premium consumer experience.</p>
+
+      <hr />
+
+      <h2>The Challenge</h2>
+      <p>Before working with Seekingtex, the brand faced several product development challenges using conventional polyester knit fabrics:</p>
+      <ul>
+        <li><strong>Weight and Comfort:</strong> The original fabric became heavy after absorbing sweat, causing discomfort during long-distance running</li>
+        <li><strong>Limited Differentiation:</strong> Standard polyester fabrics could not support premium product positioning or a compelling marketing story</li>
+        <li><strong>Technical Gap:</strong> The brand had strong design capabilities but lacked expertise in fiber selection, fabric construction, and performance optimization</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Brand Chose Seekingtex</h2>
+      <p>The customer evaluated several fabric suppliers. Many could supply polyester knit fabric, but the brand needed more than material — they needed a technical development partner. Seekingtex demonstrated deep understanding of sportswear applications and the relationship between fabric structure, garment performance, and consumer experience.</p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex analyzed the customer's product requirements — application, target user, climate conditions, and performance goals — before recommending a customized lightweight performance knit fabric solution.</p>
+      <ul>
+        <li><strong>Lightweight Knit Construction:</strong> Reduced fabric weight for improved comfort during extended running activity</li>
+        <li><strong>Moisture Management Technology:</strong> Optimized yarn selection and knit structure for faster sweat transfer and evaporation</li>
+        <li><strong>Breathable Structure:</strong> Enhanced air circulation for thermal comfort during high-exertion exercise</li>
+        <li><strong>Soft Touch Finish:</strong> Premium hand feel for improved skin comfort and wearing experience</li>
+      </ul>
+
+      <hr />
+
+      <h2>Product Result</h2>
+      <p>After several rounds of fabric evaluation and testing with athletes, the customer successfully launched a new lightweight running apparel collection including running T-shirts, training tops, and lightweight performance layers.</p>
+      <ul>
+        <li><strong>Improved Comfort:</strong> Runners reported better comfort during long training sessions</li>
+        <li><strong>Better Moisture Control:</strong> Faster drying and improved sweat handling compared to the previous fabric</li>
+        <li><strong>Stronger Product Story:</strong> The brand could communicate performance technology rather than just design features</li>
+      </ul>
+
+      <blockquote>
+        "Seekingtex helped us understand how fabric technology could improve our product positioning. Their technical support allowed us to move beyond standard sportswear materials and develop a more competitive running collection."<br />
+        <em>— Product Development Manager, European Running Apparel Brand</em>
+      </blockquote>
+
+      <hr />
+
+      <h2>Business Impact</h2>
+      <p>The new running collection shifted the brand's competition from price and design to performance and innovation. The brand established stronger market differentiation through fabric innovation and built a long-term development partnership with Seekingtex for future categories including training apparel, lightweight outdoor fabrics, and sustainable performance materials.</p>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/solutions/running-apparel-fabrics" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Running Apparel Fabrics</h3>
+          <p class="text-sm text-gray-500 mt-2">Lightweight performance knit textiles</p>
+        </a>
+        <a href="/solutions/sportswear-performance-fabrics" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Sportswear Performance Fabrics</h3>
+          <p class="text-sm text-gray-500 mt-2">Performance solutions for activewear brands</p>
+        </a>
+        <a href="/solutions/yoga-activewear-fabrics" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">Yoga & Activewear Fabrics</h3>
+          <p class="text-sm text-gray-500 mt-2">Stretch and recovery textile solutions</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Performance Sportswear?</h2>
+      <p class="text-blue-100 max-w-xl mx-auto mb-6">Our R&D team specializes in lightweight, moisture-wicking, and performance fabric systems for running, training, and activewear brands.</p>
+      <a href="/contact" class="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors">Request Fabric Development Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-blue-600 hover:text-blue-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

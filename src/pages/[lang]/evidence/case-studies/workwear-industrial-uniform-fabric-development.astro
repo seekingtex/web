@@ -1,0 +1,97 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Workwear Industrial Uniform Fabric Development — Case Study | ${SITE.name}`,
+    description: 'Case study: Seekingtex helped a European workwear brand develop durable, comfortable stretch ripstop fabric for industrial uniforms and work pants.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'How Seekingtex Helped a European Workwear Brand Develop a More Durable and Comfortable Industrial Uniform Collection', description: 'Seekingtex developed a lightweight stretch ripstop fabric for a European workwear brand, improving durability, mobility, and comfort.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/fr-workwear-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What fabric is best for industrial workwear?', acceptedAnswer: { '@type': 'Answer', text: 'The best industrial workwear fabrics combine abrasion resistance, tear strength, stretch for mobility, breathability, and easy-care performance. Stretch ripstop fabrics with nylon-polyester blends are commonly preferred for work pants and uniforms.' } },
+    { '@type': 'Question', name: 'What is stretch ripstop fabric for workwear?', acceptedAnswer: { '@type': 'Answer', text: 'Stretch ripstop fabric combines ripstop reinforcement preventing tear propagation with mechanical or spandex stretch for mobility. It is designed for workwear requiring both high durability and freedom of movement.' } },
+    { '@type': 'Question', name: 'Can Seekingtex develop custom workwear fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex provides custom fabric development for workwear and uniform brands from application analysis through sample development, testing, and production scaling.' } },
+  ] }} />
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-amber-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-amber-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Workwear Uniform Fabric</span>
+    </nav>
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">Workwear</span>
+    </div>
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">How Seekingtex Helped a European Workwear Brand Develop a More Durable and Comfortable Industrial Uniform Collection</h1>
+    <p class="text-xl text-gray-500 mb-8">From traditional workwear fabric challenges to a high-performance solution — engineering durable, stretchable, and comfortable industrial uniform fabrics.</p>
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">Durable</div><div class="text-xs text-gray-500 mt-1">High Abrasion Resistance</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">Flexible</div><div class="text-xs text-gray-500 mt-1">Stretch for Mobility</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">Comfortable</div><div class="text-xs text-gray-500 mt-1">Breathable & Lightweight</div></div>
+    </div>
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img src="/images/seekingtex/products/fr-workwear-texture.webp" alt="Durable stretch ripstop workwear fabric" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Stretch Ripstop Fabric for Industrial Uniforms</span>
+      </div>
+    </div>
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European professional workwear brand supplying industrial uniforms for construction, maintenance, and manufacturing workers. The company wanted to upgrade its product range from traditional durable workwear to high-performance uniforms with better comfort, mobility, and durability.</p>
+      <hr />
+      <h2>The Challenge</h2>
+      <ul>
+        <li><strong>Limited Durability:</strong> Traditional fabrics showed wear at knees and elbows during intensive use</li>
+        <li><strong>Poor Mobility:</strong> Workers reported restricted movement during bending, climbing, and squatting</li>
+        <li><strong>Comfort Issues:</strong> Long working hours created heat and moisture discomfort in warmer conditions</li>
+      </ul>
+      <hr />
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex analyzed the application requirements and developed a customized lightweight stretch ripstop fabric solution combining high abrasion resistance, tear strength, mechanical stretch, breathability, and easy-care performance.</p>
+      <hr />
+      <h2>Product Result</h2>
+      <p>The new fabric system was applied to industrial work pants and work jackets. The customer successfully launched an upgraded workwear collection with better durability, improved flexibility, and enhanced all-day comfort.</p>
+      <blockquote>
+        "Seekingtex understood that our requirement was not simply finding a fabric supplier. We needed a partner who could help us create a better workwear product."<br />
+        <em>— Product Development Manager</em>
+      </blockquote>
+      <hr />
+      <h2>Business Impact</h2>
+      <p>The brand shifted competition from price and basic durability to performance and comfort. Established a long-term development partnership with Seekingtex for future uniform categories across construction, industrial, and safety applications.</p>
+    </article>
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Explore Workwear Fabric Solutions</h2>
+      <p class="text-gray-500 mb-6">View our complete range of professional workwear fabrics.</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <a href={`${prefix}/solutions/workwear-fabric-solutions`} class="group bg-amber-50 border border-amber-200 rounded-2xl p-5 hover:shadow-md transition-all text-center"><h3 class="font-semibold text-gray-900 group-hover:text-amber-600">All Workwear Solutions</h3><p class="text-sm text-gray-500 mt-1">Complete workwear textile hub</p></a>
+        <a href={`${prefix}/solutions/construction-workwear-fabrics`} class="group bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-all"><h3 class="font-semibold text-gray-900 group-hover:text-amber-600">Construction</h3><p class="text-sm text-gray-500 mt-1">Abrasion resistant, stretch</p></a>
+        <a href={`${prefix}/solutions/industrial-uniform-fabrics`} class="group bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-all"><h3 class="font-semibold text-gray-900 group-hover:text-amber-600">Industrial</h3><p class="text-sm text-gray-500 mt-1">Anti-shrink, color fast</p></a>
+        <a href={`${prefix}/solutions/safety-workwear-fabrics`} class="group bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-all"><h3 class="font-semibold text-gray-900 group-hover:text-amber-600">Safety</h3><p class="text-sm text-gray-500 mt-1">FR, anti-static, hi-vis</p></a>
+        <a href={`${prefix}/solutions/corporate-uniform-fabrics`} class="group bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-md transition-all"><h3 class="font-semibold text-gray-900 group-hover:text-amber-600">Corporate</h3><p class="text-sm text-gray-500 mt-1">Easy care, soft touch</p></a>
+      </div>
+    </section>
+    <section class="mt-16 bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Workwear Products?</h2>
+      <p class="text-amber-100 max-w-xl mx-auto mb-6">Our R&D team specializes in durable, stretchable fabric systems for industrial workwear, safety uniforms, and corporate apparel brands.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-amber-700 font-semibold px-8 py-3 rounded-xl hover:bg-amber-50 transition-colors">Request Fabric Development Consultation</a>
+    </section>
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

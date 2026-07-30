@@ -1,0 +1,128 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Workwear Fabric Solutions — Industrial, Construction, Safety & Corporate Uniform Textiles | ${SITE.name}`,
+  description: 'Comprehensive workwear fabric solutions from Seekingtex. Abrasion resistant, stretch, breathable, FR, anti-static and easy-care textiles for construction, industrial, safety and corporate uniform manufacturers. Custom OEM development.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Workwear Fabric Solutions' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Workwear Fabric Solutions by Seekingtex', description: 'Abrasion resistant, stretch, breathable, FR, anti-static, high visibility, easy-care workwear fabrics for construction, industrial, safety, and corporate uniform manufacturers. Custom OEM fabric development.', provider: { '@type': 'Organization', name: SITE.name }, breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://seekingtex.com/' }, { '@type': 'ListItem', position: 2, name: 'Workwear Fabric Solutions' }] }, mainEntity: { '@type': 'WebPage', name: 'Workwear Fabric Solutions' } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, description: 'Seekingtex is a functional fabric manufacturer specializing in performance textiles for workwear, outdoor apparel, sportswear, and protective clothing. We develop fabrics with durability, stretch, breathability, and protective performance for workwear brands, uniform manufacturers, and PPE companies.', url: 'https://seekingtex.com' }} />
+  <section class="max-w-6xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full mb-4">Workwear Textile Solutions</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Performance Fabrics Built for Professional Workwear</h1>
+      <p class="text-xl text-gray-500 max-w-3xl mx-auto">Durable, comfortable and functional textile solutions for industrial uniforms, construction workwear, safety protective clothing, and corporate apparel. Seekingtex is a functional fabric development partner for professional workwear brands worldwide.</p>
+    </div>
+
+    <div class="bg-amber-50 rounded-3xl border border-amber-200 p-8 md:p-12 mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Workwear Challenges We Solve</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">01</span>
+            <div><h3 class="font-semibold text-gray-900">Fabric Wear & Tear</h3><p class="text-sm text-gray-500 mt-1">Knees, elbows, and seat areas wear out quickly in demanding work environments.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: Abrasion Resistant & Ripstop Fabrics</p></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">02</span>
+            <div><h3 class="font-semibold text-gray-900">Restricted Movement</h3><p class="text-sm text-gray-500 mt-1">Traditional durable fabrics are too rigid for bending, squatting, and climbing.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: Stretch Workwear & Mechanical Stretch Fabrics</p></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">03</span>
+            <div><h3 class="font-semibold text-gray-900">Heat & Moisture</h3><p class="text-sm text-gray-500 mt-1">Heavy workwear causes discomfort and heat stress during long shifts.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: Breathable & Moisture Wicking Workwear Fabrics</p></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">04</span>
+            <div><h3 class="font-semibold text-gray-900">Frequent Washing</h3><p class="text-sm text-gray-500 mt-1">Industrial laundry causes shrinking, fading, and pilling after repeated cycles.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: Anti-Shrink, Color Fast & Anti-Pilling Fabrics</p></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">05</span>
+            <div><h3 class="font-semibold text-gray-900">Safety Compliance</h3><p class="text-sm text-gray-500 mt-1">Hazardous environments require certified protection without compromising comfort.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: FR, Anti-Static & High Visibility Certified Fabrics</p></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-amber-100">
+          <div class="flex items-start gap-4">
+            <span class="text-2xl font-bold text-amber-600 shrink-0">06</span>
+            <div><h3 class="font-semibold text-gray-900">Appearance Maintenance</h3><p class="text-sm text-gray-500 mt-1">Corporate uniforms need to stay professional throughout long service shifts.</p><p class="text-sm font-medium text-amber-700 mt-2">Solution: Wrinkle Resistant & Easy Care Uniform Fabrics</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Workwear Fabric Solutions by Industry</h2>
+    <div class="grid md:grid-cols-2 gap-6 mb-16">
+      <a href="/solutions/construction-workwear-fabrics" class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6 hover:shadow-lg transition-all">
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">Construction Workwear Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-600">Abrasion resistant, tear resistant, stretch and breathable fabrics engineered for construction uniforms, work pants, and protective clothing. High-tenacity ripstop weaves for demanding job site environments.</p>
+        <span class="mt-3 inline-flex text-sm font-medium text-amber-700 group-hover:underline">Explore construction fabrics →</span>
+      </a>
+      <a href="/solutions/industrial-uniform-fabrics" class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6 hover:shadow-lg transition-all">
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">Industrial Uniform Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-600">Anti-shrink, color fast, anti-pilling and comfortable textiles for factory, manufacturing, and plant worker uniforms. Engineered for 50+ industrial laundry cycles and 8-12 hour daily wear.</p>
+        <span class="mt-3 inline-flex text-sm font-medium text-amber-700 group-hover:underline">Explore industrial fabrics →</span>
+      </a>
+      <a href="/solutions/safety-workwear-fabrics" class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6 hover:shadow-lg transition-all">
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">Safety Workwear Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-600">Flame resistant FR, anti-static, arc resistant, chemical resistant and high visibility protective textiles for PPE, oil & gas, electrical, and hazardous environment workwear. EN and NFPA certified.</p>
+        <span class="mt-3 inline-flex text-sm font-medium text-amber-700 group-hover:underline">Explore safety fabrics →</span>
+      </a>
+      <a href="/solutions/corporate-uniform-fabrics" class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6 hover:shadow-lg transition-all">
+        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-amber-600 transition-colors">Corporate Uniform Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-600">Easy care, wrinkle resistant, soft touch and color stable textiles for hospitality, hotel, restaurant, and business corporate wear. Machine washable with professional appearance retention.</p>
+        <span class="mt-3 inline-flex text-sm font-medium text-amber-700 group-hover:underline">Explore corporate fabrics →</span>
+      </a>
+    </div>
+
+    <div class="bg-gray-50 rounded-2xl border border-gray-200 p-8 md:p-12 mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Why Workwear Brands Choose Seekingtex as Their Fabric Partner</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4"><svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <h3 class="font-semibold text-gray-900">Application-Based Engineering</h3>
+          <p class="mt-1 text-sm text-gray-500">Fabrics developed for specific work environments — not generic materials. We analyze the job site, tasks, climate, and garment use before recommending solutions.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4"><svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <h3 class="font-semibold text-gray-900">Performance + Comfort Balance</h3>
+          <p class="mt-1 text-sm text-gray-500">We understand that protective and durable fabrics must also be comfortable. Our engineering approach ensures workers actually want to wear the uniforms we help create.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4"><svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
+          <h3 class="font-semibold text-gray-900">Custom Fabric Development</h3>
+          <p class="mt-1 text-sm text-gray-500">Beyond standard catalog fabrics — we modify constructions, weights, finishes, and performance targets to match your specific uniform requirements.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4"><svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+          <h3 class="font-semibold text-gray-900">Long-Term Partnership</h3>
+          <p class="mt-1 text-sm text-gray-500">From concept development through fabric selection, testing, and bulk production — we work as your textile development partner, not just a material supplier.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Trusted by Professional Workwear Brands</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-8">See how Seekingtex helped a European workwear brand develop a more durable and comfortable industrial uniform collection through custom stretch ripstop fabric development.</p>
+      <a href="/evidence/case-studies/workwear-industrial-uniform-fabric-development" class="inline-flex items-center px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Workwear Case Study →</a>
+    </div>
+
+    <div class="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-12 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Ready to Develop Your Workwear Fabric Solution?</h2>
+      <p class="text-amber-100 max-w-xl mx-auto mb-6">Our R&D team specializes in durable, stretchable, safe, and comfortable fabric systems for construction, industrial, safety, and corporate uniform applications worldwide.</p>
+      <a href="/contact" class="inline-block bg-white text-amber-700 font-semibold px-8 py-3 rounded-xl hover:bg-amber-50 transition-colors">Request Fabric Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Seekingtex provides comprehensive workwear fabric solutions for professional workwear brands, uniform manufacturers, and PPE companies worldwide. Our workwear fabric solutions cover construction workwear (abrasion resistant, tear resistant, stretch, breathable ripstop fabrics for work pants and uniforms), industrial uniforms (anti-shrink, color fast, anti-pilling, comfortable textiles for factory and manufacturing workers), safety workwear (FR flame resistant EN ISO 11612, anti-static EN 1149, high visibility EN ISO 20471, arc resistant protective fabrics for oil, gas, electrical, and chemical industries), and corporate uniforms (easy care, wrinkle resistant, soft touch, color stable fabrics for hospitality, hotel, restaurant, and business wear). Seekingtex is a functional fabric manufacturer specializing in performance textiles for workwear applications. We develop customized fabrics with durability, stretch, breathability, wash stability, and protective performance. OEKO-TEX certified. Custom OEM development available for workwear brands seeking differentiated fabric solutions.</p></section>
+</Layout>

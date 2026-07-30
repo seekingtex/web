@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Sustainable Sports Fabrics — Eco-Friendly Performance Textiles | ${SITE.name}`,
+    description: 'Sustainable performance fabrics: recycled polyester, bio-based fibers, PFAS-free finishing for eco-conscious sportswear brands.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Sustainable Sports Fabrics by Seekingtex', description: 'Recycled polyester, bio-based fiber, PFAS-free sustainable performance fabrics for sportswear brands.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Sustainable Sports Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Sustainable performance fabrics for sportswear brands: recycled polyester, bio-based fibers, and PFAS-free finishing for eco-friendly athletic apparel.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Recycled Polyester</h2>
+        <p class="mt-2 text-sm text-gray-600">Performance fabrics from recycled PET bottles. Moisture wicking, lightweight, durable — matching virgin polyester with lower environmental impact.</p>
+        <a href={`${prefix}/eco-friendly-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse eco-friendly fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Bio-Based Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Plant-derived fiber options for renewable material sourcing. Sustainable performance without petroleum-based inputs.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Request consultation →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">PFAS-Free Finishing</h2>
+        <p class="mt-2 text-sm text-gray-600">Eco-friendly water-resistant finishes without PFAS chemicals. Meets regulatory requirements and consumer demand for safer materials.</p>
+        <a href={`${prefix}/products/waterproof-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse waterproof fabrics →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Sustainable Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Proven Performance</h3><p class="mt-1 text-sm text-gray-500">Sustainable fabrics matching conventional materials in moisture management, durability, and comfort.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Certified Materials</h3><p class="mt-1 text-sm text-gray-500">OEKO-TEX certified recycled fabrics with traceable supply chain documentation.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Brand Story</h3><p class="mt-1 text-sm text-gray-500">Sustainability narratives that resonate with eco-conscious consumers.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Regulatory Ready</h3><p class="mt-1 text-sm text-gray-500">PFAS-free finishes meeting evolving global environmental regulations.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/running-apparel-lightweight-performance`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Performance Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Sustainable Fabric Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Sustainable sports fabrics by Seekingtex. Recycled polyester, bio-based fibers, PFAS-free finishing. Custom development for sustainable sportswear brands. OEKO-TEX certified.</p></section>
+</Layout>

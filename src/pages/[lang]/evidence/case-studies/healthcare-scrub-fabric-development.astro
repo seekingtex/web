@@ -1,0 +1,149 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `High-Performance Medical Scrubs Fabric Development — Healthcare Case Study | ${SITE.name}`,
+    description: 'Case study: Seekingtex helped a European healthcare apparel brand develop functional medical scrub fabric with stretch, moisture management, and durable laundering performance.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'How Seekingtex Helped a European Healthcare Apparel Brand Develop High-Performance Medical Scrubs Fabric', description: 'Seekingtex developed a functional medical scrub fabric with stretch, moisture management, and durability for a European healthcare apparel brand.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/stretch-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What fabric technologies improve medical scrubs?', acceptedAnswer: { '@type': 'Answer', text: 'Medical scrubs benefit from functional fabrics with moisture wicking, stretch recovery, breathability, antimicrobial performance, and durable laundering resistance for 200+ industrial washes.' } },
+        { '@type': 'Question', name: 'Why is stretch fabric important for medical uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Healthcare professionals perform bending, stretching, and patient care movements throughout 8-12 hour shifts. Four-way stretch fabrics improve mobility, reduce fatigue, and enhance overall wearing comfort.' } },
+        { '@type': 'Question', name: 'What is the best fabric composition for medical scrubs?', acceptedAnswer: { '@type': 'Answer', text: 'Polyester-spandex blends (92% polyester / 8% spandex) are preferred for medical scrubs because they combine durability, stretch, moisture management, and easy care properties for demanding healthcare environments.' } },
+        { '@type': 'Question', name: 'How does Seekingtex develop custom medical fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Seekingtex follows a structured development process: application requirement analysis, fabric engineering with fiber selection and construction optimization, sample testing with end users, and production scaling with quality control.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Medical Scrub Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-full">Medical Apparel</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">How Seekingtex Helped a European Healthcare Apparel Brand Develop High-Performance Medical Scrubs Fabric</h1>
+    <p class="text-xl text-gray-500 mb-8">Engineering a functional medical scrub fabric with stretch, moisture management, and durable laundering performance for modern healthcare uniforms.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-teal-600">92/8</div>
+        <div class="text-xs text-gray-500 mt-1">Polyester/Spandex Blend</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-teal-600">200+</div>
+        <div class="text-xs text-gray-500 mt-1">Wash Cycles Stable</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-teal-600">4-Way</div>
+        <div class="text-xs text-gray-500 mt-1">Stretch Performance</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img src="/images/seekingtex/products/stretch-texture.webp" alt="Functional medical scrub fabric with stretch and moisture management for healthcare uniforms" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">High-Performance Medical Scrub Fabric for Healthcare Apparel</span>
+      </div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European healthcare apparel company specializing in professional medical uniforms for hospitals, private clinics, and healthcare institutions. For more than 10 years, the company had been supplying medical scrubs, nurse uniforms, doctor jackets, and healthcare workwear.</p>
+      <p>With increasing competition in the European medical apparel market, the customer noticed an important shift: healthcare professionals were no longer satisfied with traditional uniforms. Doctors and nurses wanted uniforms that were more comfortable during long shifts, easier to move in, more breathable, and more durable after repeated washing.</p>
+
+      <hr />
+
+      <h2>The Challenge</h2>
+      <p>Before working with Seekingtex, the customer mainly used conventional polyester-based fabrics. While durable and cost-effective, these fabrics created several problems:</p>
+      <ul>
+        <li><strong>Comfort Issues:</strong> Limited breathability caused heat accumulation and sweating during 8-12 hour shifts</li>
+        <li><strong>Restricted Mobility:</strong> Lack of elasticity made bending, stretching, and patient care movements difficult</li>
+        <li><strong>Wash Degradation:</strong> Color fading, shape loss, and reduced softness after repeated industrial laundering</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Customer Chose Seekingtex</h2>
+      <p>Many suppliers could provide polyester fabric or basic uniform materials. However, the customer needed more than fabric supply — they needed a technical development partner. Seekingtex demonstrated expertise in fiber selection, fabric construction, and functional finishing specific to medical apparel applications.</p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex developed a polyester-spandex stretch woven fabric (92% Polyester / 8% Spandex, 160-200 GSM) incorporating four key functional technologies:</p>
+      <ul>
+        <li><strong>Four-Way Stretch:</strong> Improved mobility and garment fitting for active healthcare professionals</li>
+        <li><strong>Moisture Management:</strong> Advanced wicking technology for faster sweat transfer and drying</li>
+        <li><strong>Soft Touch Finish:</strong> Premium hand feel for all-day skin contact comfort</li>
+        <li><strong>Easy Care Durability:</strong> Maintained shape, appearance, and performance after 200+ industrial washes</li>
+      </ul>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <p>The development followed a structured approach. Seekingtex engineers analyzed application requirements, evaluated multiple fabric structures through stretch recovery and moisture management testing, provided samples for garment testing by healthcare professionals, and refined the specification based on feedback.</p>
+
+      <hr />
+
+      <h2>Results</h2>
+      <p>The customer successfully launched a premium medical scrub collection positioned as "Performance Healthcare Uniforms." Benefits included improved comfort and mobility for healthcare workers, extended garment lifespan through better wash durability, and stronger market differentiation competing on comfort and functionality rather than price.</p>
+
+      <blockquote>
+        "Seekingtex did not simply provide fabric. They helped us develop a better medical apparel solution by understanding the real needs of healthcare professionals."<br />
+        <em>— Product Development Director, European Healthcare Apparel Brand</em>
+      </blockquote>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href={`${prefix}/products/stretch-fabric`} class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">Stretch Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Performance stretch textiles for medical apparel</p>
+        </a>
+        <a href={`${prefix}/solutions/medical-scrubs-fabric`} class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">Medical Scrubs Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Functional medical uniform textiles</p>
+        </a>
+        <a href={`${prefix}/solutions/hospital-uniform-fabric`} class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">Hospital Uniform Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Durable healthcare apparel solutions</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-teal-600 to-cyan-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Medical Textile Solutions?</h2>
+      <p class="text-teal-100 max-w-xl mx-auto mb-6">Our R&D team specializes in stretch, moisture wicking, and durable fabric systems for medical apparel and healthcare uniform manufacturers.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-teal-700 font-semibold px-8 py-3 rounded-xl hover:bg-teal-50 transition-colors">Request Technical Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-teal-600 hover:text-teal-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

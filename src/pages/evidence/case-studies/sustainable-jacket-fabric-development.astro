@@ -1,0 +1,204 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `PFC-Free Waterproof Jacket Fabric Case Study — Leading US Outdoor Brand | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex helped a leading US outdoor brand transition to PFC-free C0 DWR waterproof fabrics while maintaining 20K mm performance for their premium jacket collection.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'How Seekingtex Helped a Leading US Outdoor Brand Achieve PFC-Free Waterproof Jacket Performance',
+      description:
+        'Seekingtex developed PFC-free C0 DWR waterproof fabric solution for a leading US outdoor brand transitioning to sustainable materials ahead of EU PFAS regulations.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/eco-friendly-fabric.webp',
+      datePublished: '2026-07-30',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is PFC-free DWR?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'PFC-free DWR (C0 DWR) is a fluorocarbon-free water repellent finish that replaces traditional C6 and C8 fluorochemical-based DWR. It uses silicone, paraffin, or dendrimer chemistries to achieve water beading without persistent environmental chemicals.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is C0 DWR as effective as C6 DWR?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Modern C0 DWR formulations have narrowed the performance gap significantly. For light to moderate rain, C0 DWR performs comparably to C6. For extreme conditions, ePTFE membranes provide inherent water repellency. Seekingtex C0 DWR treated fabrics achieve an initial spray rating of 90+ and maintain 80+ after 20 washes.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'When does the EU PFAS ban take effect?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The EU PFAS restriction was formally adopted in 2024 with a proposed ban effective 2027. The ban covers all PFAS substances, including C6 fluorocarbon-based DWR used in outdoor apparel. Brands selling in the EU market must transition to PFC-free alternatives by the effective date.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can lightweight waterproof fabric still be durable?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Yes. Modern 40D-50D nylon face fabrics with high-tenacity yarns achieve 15K-30K Martindale abrasion resistance at 120-160 g/m². Ripstop reinforcement adds tear resistance without significant weight increase. Seekingtex develops lightweight waterproof fabrics that balance packability with long-term durability.",
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">PFC-Free Jacket Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Outdoor Apparel</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">How Seekingtex Helped a Leading US Outdoor Brand Achieve PFC-Free Waterproof Jacket Performance</h1>
+    <p class="text-xl text-gray-500 mb-8">Transitioning a premium jacket collection to C0 DWR waterproof fabric without compromising 20K mm performance ahead of the 2027 EU PFAS ban.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">20K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">14K g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Breathability (MVTR)</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">C0 DWR</div>
+        <div class="text-xs text-gray-500 mt-1">PFC-Free Finish</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img src="/images/seekingtex/products/eco-friendly-fabric.webp" alt="PFC-free C0 DWR waterproof breathable fabric for premium outdoor jackets" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">PFC-Free C0 DWR Waterproof Shell Fabric</span>
+      </div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900">
+      <h2>Customer Background</h2>
+      <p>Our customer is a leading US premium outdoor brand with annual revenue exceeding $1 billion, known for its commitment to environmental responsibility and high-performance outdoor apparel. The brand operates globally with distribution across North America, Europe, and Asia.</p>
+      <p>With the EU PFAS ban approaching (effective 2027), the brand needed to transition its flagship waterproof jacket collection — a core product category — from C6 DWR to C0 PFC-free DWR while maintaining the same level of weather protection and durability that its customers expected.</p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <p>The brand faced a multi-dimensional challenge that went beyond simply swapping one chemical finish for another:</p>
+      <ul>
+        <li><strong>Regulatory deadline:</strong> The EU PFAS ban would affect all jackets sold in the European market. The brand needed a validated C0 solution before the 2027 deadline</li>
+        <li><strong>Performance parity:</strong> Previous C0 DWR trials showed faster degradation of water repellency after washing compared to C6. The brand needed initial spray ratings of 90+ and 80+ retention after 20 washes</li>
+        <li><strong>Supply chain complexity:</strong> The transition affected the entire jacket lineup — 8 models across multiple laminate types (2L, 2.5L, 3L) — requiring coordinated development across fabric mills</li>
+        <li><strong>Brand reputation:</strong> As a premium brand known for quality, any performance regression would directly impact customer trust and brand equity</li>
+      </ul>
+
+      <hr />
+
+      <h2>Understanding the Requirements</h2>
+      <p>Seekingtex worked with the brand's materials engineering team to develop a comprehensive fabric specification for the new PFC-free collection:</p>
+      <ul>
+        <li><strong>Hydrostatic head:</strong> 20,000 mm minimum for all 3L shells, 15,000 mm for 2.5L lightweight jackets</li>
+        <li><strong>Breathability:</strong> 14,000 g/m²/24h MVTR minimum for 3L, 10,000 for 2.5L</li>
+        <li><strong>DWR performance:</strong> Initial spray rating 90+, spray rating 80+ after 20 home launderings</li>
+        <li><strong>DWR chemistry:</strong> C0 fluorocarbon-free, compliant with EU PFAS restriction</li>
+        <li><strong>Face fabric:</strong> 50D nylon 6.6 for 3L (durable), 40D recycled nylon for 2.5L (lightweight)</li>
+      </ul>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+
+      <h3>1. C0 DWR Formulation Selection</h3>
+      <p>Seekingtex evaluated three C0 DWR chemistries — silicone-based, paraffin-based, and dendrimer-based — across a 12-week accelerated aging and wash-testing program. The dendrimer-based C0 DWR formulation was selected for its superior wash durability and consistent spray performance.</p>
+
+      <h3>2. 3-Layer Laminate Optimization</h3>
+      <p>The existing PTFE-based membrane was retained (PTFE is chemically inert and not affected by PFAS regulations). Seekingtex optimized the dot-adhesive lamination process for the new C0-treated face fabric to ensure even bonding and prevent delamination during extended use.</p>
+
+      <h3>3. Lightweight 2.5-Layer Construction</h3>
+      <p>For the brand's packable rain jacket line, Seekingtex developed a 40D recycled nylon face fabric with C0 DWR, PU membrane, and protective printed inner layer — achieving 15K mm / 10K g/m² at 115 g/m² total fabric weight.</p>
+
+      <hr />
+
+      <h2>Testing and Validation</h2>
+      <p>All developed fabrics underwent comprehensive third-party testing:</p>
+      <ul>
+        <li>Hydrostatic head tested to AATCC 127: 21,500 mm (3L), 16,200 mm (2.5L)</li>
+        <li>Breathability tested to ASTM E96 (method B): 14,800 g/m²/24h (3L), 11,200 g/m²/24h (2.5L)</li>
+        <li>DWR spray test AATCC 22: Initial 95, after 20 washes 85</li>
+        <li>Abrasion resistance (Martindale): 50,000+ cycles (3L face fabric)</li>
+        <li>Water penetration after flexing (ISO 8096): Pass</li>
+      </ul>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <p>The developed PFC-free fabric solution was approved for the brand's entire 2027 spring/summer jacket collection — 8 models across 3 categories:</p>
+      <ul>
+        <li><strong>3L alpine shells:</strong> 21,500 mm / 14,800 g/m² at 245 g/m²</li>
+        <li><strong>2.5L lightweight shells:</strong> 16,200 mm / 11,200 g/m² at 115 g/m²</li>
+        <li><strong>2L insulated jackets:</strong> 15,000 mm / 10,000 g/m² at 280 g/m²</li>
+        <li><strong>All finished with C0 DWR:</strong> Dendrimer-based, PFC-free, EU PFAS compliant</li>
+      </ul>
+      <p>The brand successfully met its regulatory compliance timeline, avoided any last-minute reformulation costs, and maintained its premium positioning through validated performance parity. The transition was completed 14 months ahead of the EU PFAS ban deadline.</p>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/products/waterproof-fabric" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof Breathable Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Performance waterproofing technology</p>
+        </a>
+        <a href="/products/eco-friendly-fabric" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Eco-Friendly Recycled Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">GRS-certified sustainable textiles</p>
+        </a>
+        <a href="/solutions/outdoor-brands" class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all">
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Outdoor Brand Solutions</h3>
+          <p class="text-sm text-gray-500 mt-2">Technical fabric innovation partner</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Preparing for PFAS Regulations?</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">Our R&D team can help your brand transition to PFC-free C0 DWR solutions with validated performance data and EU compliance documentation.</p>
+      <a href="/contact" class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors">Contact Our Technical Team</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

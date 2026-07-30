@@ -1,0 +1,86 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `UV Protection Fashion Fabrics for Women's Brand — Case Study | ${SITE.name}`,
+    description: 'How Seekingtex helped a European women\'s fashion brand develop a UV-protective summer collection combining sun protection with soft comfort, breathability, and premium aesthetics.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'UV Protection Summer Collection for a European Women\'s Fashion Brand', description: 'Seekingtex developed UV-protective fashion fabrics for a women\'s summer collection, combining UPF 50+ with soft touch, breathability, and elegant drape.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/knit-stretch-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Can UV protection fabric look like regular fashion fabric?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Modern UV-protective textiles achieve UPF 50+ through fiber engineering and finishing without altering the fabric appearance, hand feel, or drape.' } },
+        { '@type': 'Question', name: 'What UPF rating is recommended for summer fashion?', acceptedAnswer: { '@type': 'Answer', text: 'UPF 50+ is recommended for summer fashion collections, blocking 98%+ of UV radiation. This provides meaningful sun protection while maintaining lightweight comfort.' } },
+        { '@type': 'Question', name: 'Is UV protection in fabric permanent?', acceptedAnswer: { '@type': 'Answer', text: 'UV protection integrated at the fiber level (using UV stabilizers or ceramic particles) lasts the lifetime of the garment, unlike topical coatings that degrade with washing.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">UV Protection Fashion</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-violet-700 bg-violet-50 px-3 py-1 rounded-full">Women's Fashion</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">UV Protection Summer Collection for European Women's Fashion Brand</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped a women's fashion brand create a sun-protective collection that didn't compromise on style.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">UPF 50+</div><div class="text-xs text-gray-500 mt-1">Sun Protection</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Breathable</div><div class="text-xs text-gray-500 mt-1">Summer Comfort</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Soft Touch</div><div class="text-xs text-gray-500 mt-1">Luxury Feel</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>A European women's fashion brand known for feminine, sophisticated seasonal collections wanted to launch a summer line that offered more than just style. Their customers increasingly sought clothing that could protect against sun exposure during outdoor activities, resort travel, and daily commuting — without sacrificing the elegant look the brand was known for.</p>
+
+      <h2>The Challenge</h2>
+      <p>Traditional sun-protective fabrics often look and feel like sportswear or outdoor gear — heavy, stiff, with a technical appearance. The brand needed fabrics that could provide UPF 50+ protection while maintaining the soft drape, lightweight feel, and elegant aesthetic their customers expected from a premium women's fashion label.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex engineered a custom fabric solution using lightweight polyester with fiber-level UV stabilizers achieving permanent UPF 50+. The fabric was developed in a soft jersey construction for dresses and a lightweight woven for blouses and skirts — both with moisture-wicking properties for summer comfort. The fabrics were color-matched precisely to the brand's seasonal palette.</p>
+
+      <h2>Results</h2>
+      <ul>
+        <li>Summer collection launched with integrated UV protection as a key differentiator</li>
+        <li>UPF 50+ certified by third-party testing, no visible difference from regular fashion fabrics</li>
+        <li>Positive customer feedback on comfort and sun protection during resort wear and daily use</li>
+        <li>Brand positioned as a thoughtful, health-conscious fashion label</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-violet-700 to-purple-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Creating a Functional Fashion Collection?</h2>
+      <p class="text-violet-100 max-w-xl mx-auto mb-6">Let Seekingtex help you add performance value to your seasonal designs.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-violet-700 font-semibold px-8 py-3 rounded-xl hover:bg-violet-50 transition-colors">Request Development Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-violet-700 hover:text-violet-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

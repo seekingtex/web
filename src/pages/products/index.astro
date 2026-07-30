@@ -1,8 +1,7 @@
 ---
 import merge from 'lodash.merge';
 import Layout from '~/layouts/PageLayout.astro';
-import ProductCard from '~/components/widgets/ProductCard.astro';
-import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
+import ProductGridFilter from '~/components/widgets/ProductGridFilter.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import { Icon } from 'astro-icon/components';
 
@@ -16,6 +15,7 @@ import {
 } from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
+import JsonLd from '~/components/common/JsonLd.astro';
 
 const products = await getProducts();
 const categories = await getProductCategories();
@@ -96,7 +96,7 @@ const metadata = merge(
       filteredProducts.length === 0 ? (
         <div class="text-center py-16 text-muted dark:text-slate-400">
           <Icon name="tabler:package-off" class="w-12 h-12 mx-auto mb-4" />
-          <p class="text-lg">No products in this category yet.</p>
+          <p class="text-lg">No products found.</p>
           <a
             class="text-primary dark:text-blue-400 hover:underline mt-2 inline-block"
             href={getPermalink(PRODUCT_LIST)}
@@ -105,16 +105,10 @@ const metadata = merge(
           </a>
         </div>
       ) : (
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProducts.map((p) => (
-            <ProductCard product={p} />
-          ))}
-        </div>
+        <ProductGridFilter products={filteredProducts} />
       )
     }
   </section>
-
-  {filteredProducts.map((p) => <QuickViewModal productId={p.slug} />)}
 
   <section class="sr-only" data-ai-block="definition" aria-hidden="true">
     <p>
@@ -128,4 +122,15 @@ const metadata = merge(
       and Intertek. OEM/ODM custom development available. MOQ 500-1000 m woven, 200-500 kg knits.
     </p>
   </section>
+
+  <JsonLd
+    type="ItemList"
+    items={products.map((p) => ({
+      name: p.title,
+      url: `/products/${p.slug}`,
+      image: p.image || undefined,
+      description: p.summary || '',
+    }))}
+    data={{ numberOfItems: products.length }}
+  />
 </Layout>

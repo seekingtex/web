@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Sustainable Fabrics for Emerging Eco-Friendly Brands | ${SITE.name}`,
+  description: 'Sustainable fabric solutions for emerging eco-conscious apparel brands. Recycled polyester, organic cotton, Tencel, and low-impact finishing with startup-friendly MOQ and development support.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Emerging Brand Solutions', href: '/solutions/emerging-brands' }, { name: 'Sustainable Brand Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Sustainable Fabrics for Emerging Eco-Friendly Brands by Seekingtex', description: 'Recycled, organic, bio-based eco-friendly fabrics for sustainable apparel startups.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Sustainable Fabrics for Emerging Eco-Friendly Brands</h1>
+    <p class="mt-4 text-xl text-gray-500">Build your sustainable fashion brand with certified eco-friendly fabrics. Recycled polyester, organic cotton, Tencel, and low-impact finishing solutions for environmentally conscious startups.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Recycled Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">GRS-certified recycled polyester (rPET) and recycled nylon. Same performance as virgin materials, lower environmental impact.</p>
+        <a href="/eco-friendly-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse eco-friendly fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Natural & Bio-Based</h2>
+        <p class="mt-2 text-sm text-gray-600">Organic cotton, Tencel, modal, hemp, and bio-based synthetics for brands prioritizing renewable materials.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Sustainable Startups Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Certified Materials</h3><p class="mt-1 text-sm text-gray-500">GRS, OEKO-TEX, and GOTS certified fabrics with full traceability documentation.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Low MOQ</h3><p class="mt-1 text-sm text-gray-500">Startup-friendly minimum order quantities for sampling and small-batch sustainable production.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Eco Finishing</h3><p class="mt-1 text-sm text-gray-500">PFC-free DWR, solvent-free laminates, and water-based finishing for reduced environmental footprint.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Impact Data</h3><p class="mt-1 text-sm text-gray-500">Detailed environmental data including recycled content percentage and certification numbers for transparent communication.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/contact" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Start Your Sustainable Project</a>
+      <a href="/evidence" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View Case Studies</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Sustainable fabrics for emerging eco-friendly brands by Seekingtex. GRS-certified rPET and recycled nylon, organic cotton, Tencel, modal, hemp. PFC-free DWR, low-impact finishing. Low MOQ for sustainable apparel startups. OEKO-TEX and GRS certified.</p></section>
+</Layout>

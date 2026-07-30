@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Luxury Fashion Fabric Innovation — Technology Meets Craftsmanship | ${SITE.name}`,
+  description: 'Luxury fashion fabric innovation combining advanced textile technology with artisanal craftsmanship. Premium performance fabrics for high-end designer brands seeking product differentiation.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Fashion Solutions', href: '/solutions/fashion-brands' }, { name: 'Luxury Fabric Innovation' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Luxury Fashion Fabric Innovation by Seekingtex', description: 'Advanced textile technology combined with premium craftsmanship for high-end fashion and designer brands.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Luxury Fashion Fabric Innovation</h1>
+    <p class="mt-4 text-xl text-gray-500">Where technology meets craftsmanship. Advanced performance textiles engineered for luxury fashion houses and designer brands seeking genuine product differentiation.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Designer Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">Custom-developed fabrics that add invisible performance benefits — stretch, comfort, easy care — while maintaining premium hand feel and drape.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Browse performance fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-2xl border border-violet-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Exclusive Developments</h2>
+        <p class="mt-2 text-sm text-gray-600">Proprietary fabric development for brands seeking exclusive materials not available to competitors. Your signature fabric, your competitive advantage.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-violet-700 hover:underline">Request exclusive development →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Luxury Innovation Features</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Premium Hand Feel</h3><p class="mt-1 text-sm text-gray-500">Microfiber and specialty blend fabrics with a luxurious, silk-like touch that meets luxury brand expectations.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Invisible Tech</h3><p class="mt-1 text-sm text-gray-500">Performance properties engineered at the fiber level — invisible to the eye, obvious in the wearing experience.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Exclusive Access</h3><p class="mt-1 text-sm text-gray-500">Custom weave, finish, and color development with exclusive rights for your brand. Your competitors cannot copy.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Artisan Quality</h3><p class="mt-1 text-sm text-gray-500">Rigorous quality control and meticulous finishing for the exacting standards of luxury fashion production.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/functional-fashion-lifestyle-apparel" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Exclusive Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Luxury fashion fabric innovation by Seekingtex. Custom fabric development for designer brands: premium hand feel, invisible textile technology, exclusive weave and finish development. Microfiber blends, specialty yarns, custom quality standards. For high-end fashion houses seeking genuine product differentiation through textile innovation.</p></section>
+</Layout>

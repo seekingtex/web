@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Yoga & Activewear Fabrics — Stretch Performance Textiles | ${SITE.name}`,
+    description: 'Yoga and activewear fabrics with four-way stretch, soft touch, and excellent recovery. Performance textiles for leggings, sports bras, and studio apparel.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Yoga and Activewear Fabrics by Seekingtex', description: 'Four-way stretch, soft touch, recovery fabrics for yoga leggings, sports bras, and studio apparel.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Yoga & Activewear Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Yoga and activewear fabrics with four-way stretch, soft touch, and excellent recovery for leggings, sports bras, and studio apparel brands.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Legging & Compression</h2>
+        <p class="mt-2 text-sm text-gray-600">Nylon-spandex blends, four-way stretch, shape retention, and soft matte finish for yoga leggings and compression tights.</p>
+        <a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse stretch fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Sports Bra Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Moisture-wicking, breathable knits with support stretch for sports bras. Soft, quick-dry performance for studio workouts.</p>
+        <a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Studio Top Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Lightweight, breathable knits for studio tops and tanks. Moisture management and soft drape for yoga flow.</p>
+        <a href={`${prefix}/solutions/running-apparel-fabrics`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Explore lightweight knits →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Yoga Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Four-Way Stretch</h3><p class="mt-1 text-sm text-gray-500">Maximum flexibility for yoga poses, stretching, and studio workouts.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Recovery</h3><p class="mt-1 text-sm text-gray-500">Shape retention after repeated stretching — leggings maintain fit wear after wear.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Soft Feel</h3><p class="mt-1 text-sm text-gray-500">Premium tactile experience against skin for all-day studio comfort.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Moisture Management</h3><p class="mt-1 text-sm text-gray-500">Wicking and breathable performance for hot yoga and high-intensity classes.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/running-apparel-lightweight-performance`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Performance Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Fabric Development</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Yoga and activewear fabrics by Seekingtex. Legging and compression fabrics, sports bra fabrics, studio top fabrics. Custom development for yoga and activewear brands. OEKO-TEX certified.</p></section>
+</Layout>

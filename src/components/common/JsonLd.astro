@@ -71,6 +71,13 @@ export interface HowToLd {
   estimatedCost?: string;
 }
 
+export interface ItemListEntry {
+  name: string;
+  url: string;
+  image?: string;
+  description?: string;
+}
+
 export interface Props {
   type?:
     | 'Organization'
@@ -81,7 +88,8 @@ export interface Props {
     | 'Article'
     | 'HowTo'
     | 'ImageObject'
-    | 'VideoObject';
+    | 'VideoObject'
+    | 'ItemList';
   data?: Record<string, unknown>;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: FaqItem[];
@@ -90,9 +98,10 @@ export interface Props {
   howto?: HowToLd;
   image?: ImageObjectLd;
   video?: VideoObjectLd;
+  items?: ItemListEntry[];
 }
 
-const { type, data, breadcrumbs, faqs, product, article, howto, image, video } = Astro.props;
+const { type, data, breadcrumbs, faqs, product, article, howto, image, video, items } = Astro.props;
 const siteUrl = String(SITE.site).replace(/\/+$/, '');
 const name = SITE_SETTINGS?.siteName || SITE?.name || 'Seekingtex';
 const authorName = 'Seekingtex Team';
@@ -131,6 +140,13 @@ if (!type) {
     ...(product.url ? { url: product.url } : {}),
     ...(product.category ? { category: product.category } : {}),
     brand: { '@type': 'Brand', name: product.brandName || name },
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: product.price?.currency || 'USD',
+      price: product.price?.amount || '0',
+      availability: product.inStock ? 'https://schema.org/InStock' : 'https://schema.org/LimitedAvailability',
+      url: product.url || siteUrl,
+    },
   };
 } else if (type === 'FAQPage' && faqs && faqs.length > 0) {
   schema = {
@@ -185,6 +201,20 @@ if (!type) {
     ...(video.embedUrl ? { embedUrl: video.embedUrl } : {}),
     uploadDate: video.uploadDate,
     ...(video.duration ? { duration: video.duration } : {}),
+  };
+} else if (type === 'ItemList' && items && items.length > 0) {
+  schema = {
+    ...schema,
+    '@type': 'ItemList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      url: item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`,
+      ...(item.image ? { image: item.image } : {}),
+      ...(item.description ? { description: item.description } : {}),
+    })),
+    ...(data || {}),
   };
 } else if (type === 'HowTo' && howto) {
   schema = {

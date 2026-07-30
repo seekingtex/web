@@ -1,0 +1,394 @@
+---
+import ProductCard from '~/components/widgets/ProductCard.astro';
+import QuickViewModal from '~/components/widgets/QuickViewModal.astro';
+import type { Product } from '~/types';
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  products: Product[];
+  title?: string;
+  subtitle?: string;
+}
+
+const { products, title, subtitle } = Astro.props;
+
+interface FilterItem {
+  label: string;
+  value: string;
+}
+
+const allCompositions = new Map<string, FilterItem>();
+const allCertifications = new Map<string, FilterItem>();
+const allFeatures = new Map<string, FilterItem>();
+let globalMinWeight = Infinity;
+let globalMaxWeight = 0;
+
+for (const p of products) {
+  for (const spec of p.specs ?? []) {
+    const label = spec.label.toLowerCase();
+    if (label.startsWith('composition') || label.startsWith('material')) {
+      spec.value
+        .split('/')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .forEach((v) => {
+          allCompositions.set(v, { label: v, value: v });
+        });
+    }
+    if (label.startsWith('certification') || label.startsWith('cert')) {
+      spec.value
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .forEach((v) => {
+          allCertifications.set(v, { label: v, value: v });
+        });
+    }
+    if (label.startsWith('feature') || label.startsWith('features')) {
+      spec.value
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean)
+        .forEach((v) => {
+          allFeatures.set(v, { label: v, value: v });
+        });
+    }
+    if (label.startsWith('weight')) {
+      const nums = spec.value.match(/\d+/g);
+      if (nums) {
+        const vals = nums.map(Number);
+        const min = Math.min(...vals);
+        const max = Math.max(...vals);
+        if (min < globalMinWeight) globalMinWeight = min;
+        if (max > globalMaxWeight) globalMaxWeight = max;
+      }
+    }
+  }
+  for (const tag of p.tags ?? []) {
+    allFeatures.set(tag.slug, { label: tag.title, value: tag.slug });
+  }
+}
+
+if (globalMinWeight === Infinity) globalMinWeight = 0;
+if (globalMaxWeight === 0) globalMaxWeight = 500;
+
+const weightStep = Math.max(10, Math.round((globalMaxWeight - globalMinWeight) / 5 / 10) * 10);
+
+function getWeightRange(p: Product): [number, number] {
+  for (const spec of p.specs ?? []) {
+    if (spec.label.toLowerCase().startsWith('weight')) {
+      const nums = spec.value.match(/\d+/g);
+      if (nums) {
+        const vals = nums.map(Number);
+        return [Math.min(...vals), Math.max(...vals)];
+      }
+    }
+  }
+  return [0, 0];
+}
+---
+
+<div class="product-filter-root" data-products-count={products.length}>
+  <script>
+    (() => {
+      const root = document.currentScript?.closest('.product-filter-root');
+      if (!root) return;
+      const cards = Array.from(root.querySelectorAll('[data-filter-card]')) as HTMLElement[];
+      const filterState: Record<string, Set<string>> = {
+        composition: new Set(),
+        certification: new Set(),
+        features: new Set(),
+      };
+      let sortBy = 'default';
+
+      function updateFilter() {
+        let visibleCount = 0;
+        cards.forEach((card) => {
+          const cardData = {
+            composition: (card.dataset.filterComposition || '')
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+            certification: (card.dataset.filterCertification || '')
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+            features: (card.dataset.filterFeatures || '')
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+            weightMin: parseInt(card.dataset.filterWeightMin || '0'),
+            weightMax: parseInt(card.dataset.filterWeightMax || '0'),
+            title: card.dataset.filterTitle || '',
+          };
+
+          let show = true;
+          if (filterState.composition.size > 0) {
+            show = cardData.composition.some((v) => filterState.composition.has(v));
+          }
+          if (show && filterState.certification.size > 0) {
+            show = cardData.certification.some((v) => filterState.certification.has(v));
+          }
+          if (show && filterState.features.size > 0) {
+            show = cardData.features.some((v) => filterState.features.has(v));
+          }
+          if (show) {
+            const weightSlider = root!.querySelector<HTMLInputElement>('[data-filter-weight-max]');
+            if (weightSlider) {
+              const maxW = parseInt(weightSlider.value);
+              if (cardData.weightMin > maxW) show = false;
+            }
+          }
+
+          card.style.display = show ? '' : 'none';
+          if (show) visibleCount++;
+        });
+
+        const countEl = root!.querySelector('[data-filter-count]');
+        if (countEl) countEl.textContent = `${visibleCount} product${visibleCount !== 1 ? 's' : ''}`;
+      }
+
+      root.addEventListener('change', (e) => {
+        const target = e.target as HTMLElement;
+        if (target.matches('[data-filter-checkbox]')) {
+          const group = target.dataset.filterGroup || '';
+          const value = target.dataset.filterValue || '';
+          if (target instanceof HTMLInputElement) {
+            if (target.checked) {
+              filterState[group].add(value);
+            } else {
+              filterState[group].delete(value);
+            }
+            updateFilter();
+          }
+        }
+        if (target.matches('[data-filter-weight-max]') && target instanceof HTMLInputElement) {
+          const valEl = root.querySelector('[data-filter-weight-label]');
+          if (valEl) valEl.textContent = `${target.value} GSM`;
+          updateFilter();
+        }
+        if (target.matches('[data-filter-sort]') && target instanceof HTMLSelectElement) {
+          sortBy = target.value;
+          applySort();
+        }
+      });
+
+      root.addEventListener('click', (e) => {
+        const btn = (e.target as HTMLElement).closest('[data-filter-clear]');
+        if (btn) {
+          root
+            .querySelectorAll<HTMLInputElement>('[data-filter-checkbox]:checked')
+            .forEach((el) => (el.checked = false));
+          Object.values(filterState).forEach((s) => s.clear());
+          updateFilter();
+        }
+        const toggle = (e.target as HTMLElement).closest('[data-filter-toggle]');
+        if (toggle) {
+          const panel = toggle.nextElementSibling as HTMLElement;
+          if (panel) {
+            panel.classList.toggle('hidden');
+            toggle.querySelector('[data-filter-chevron]')?.classList.toggle('rotate-180');
+          }
+        }
+      });
+
+      function applySort() {
+        const container = root!.querySelector('[data-filter-grid]');
+        if (!container) return;
+        const items = Array.from(container.children) as HTMLElement[];
+        items.sort((a, b) => {
+          const aTitle = a.dataset.filterTitle || '';
+          const bTitle = b.dataset.filterTitle || '';
+          const aWeight = parseInt(a.dataset.filterWeightMin || '0');
+          const bWeight = parseInt(b.dataset.filterWeightMin || '0');
+          switch (sortBy) {
+            case 'name-asc':
+              return aTitle.localeCompare(bTitle);
+            case 'name-desc':
+              return bTitle.localeCompare(aTitle);
+            case 'weight-asc':
+              return aWeight - bWeight;
+            case 'weight-desc':
+              return bWeight - aWeight;
+            default:
+              return 0;
+          }
+        });
+        items.forEach((el) => container.appendChild(el));
+      }
+
+      updateFilter();
+    })();
+  </script>
+
+  <div class="mb-8">
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+      <div>
+        {title && <h2 class="text-2xl font-bold">{title}</h2>}
+        {subtitle && <p class="text-gray-500 dark:text-slate-400 mt-1">{subtitle}</p>}
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-sm text-gray-500 dark:text-slate-400" data-filter-count>{products.length} products</span>
+        <select
+          data-filter-sort
+          class="text-sm border border-gray-200 dark:border-slate-700 rounded-lg px-3 py-2 bg-white dark:bg-slate-800 text-gray-700 dark:text-slate-300"
+        >
+          <option value="default">Default order</option>
+          <option value="name-asc">Name A-Z</option>
+          <option value="name-desc">Name Z-A</option>
+          <option value="weight-asc">Weight (low-high)</option>
+          <option value="weight-desc">Weight (high-low)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-4 text-sm">
+      <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+        <button
+          data-filter-toggle
+          class="flex items-center gap-2 px-4 py-2.5 font-medium text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 w-full text-left transition-colors"
+        >
+          <Icon name="tabler:adjustments-horizontal" class="w-4 h-4" />
+          Composition
+          <Icon name="tabler:chevron-down" class="w-4 h-4 ml-auto transition-transform" data-filter-chevron />
+        </button>
+        <div class="hidden border-t border-gray-100 dark:border-slate-700 p-3 space-y-1.5 max-h-48 overflow-y-auto">
+          {
+            [...allCompositions.values()].map((item) => (
+              <label class="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-700 px-2 py-1 rounded">
+                <input
+                  type="checkbox"
+                  data-filter-checkbox
+                  data-filter-group="composition"
+                  data-filter-value={item.value}
+                  class="rounded border-gray-300"
+                />
+                <span class="text-gray-600 dark:text-slate-400">{item.label}</span>
+              </label>
+            ))
+          }
+          {allCompositions.size === 0 && <span class="text-gray-400 px-2">No options</span>}
+        </div>
+      </div>
+
+      <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+        <button
+          data-filter-toggle
+          class="flex items-center gap-2 px-4 py-2.5 font-medium text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 w-full text-left transition-colors"
+        >
+          <Icon name="tabler:shield-check" class="w-4 h-4" />
+          Certification
+          <Icon name="tabler:chevron-down" class="w-4 h-4 ml-auto transition-transform" data-filter-chevron />
+        </button>
+        <div class="hidden border-t border-gray-100 dark:border-slate-700 p-3 space-y-1.5 max-h-48 overflow-y-auto">
+          {
+            [...allCertifications.values()].map((item) => (
+              <label class="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-700 px-2 py-1 rounded">
+                <input
+                  type="checkbox"
+                  data-filter-checkbox
+                  data-filter-group="certification"
+                  data-filter-value={item.value}
+                  class="rounded border-gray-300"
+                />
+                <span class="text-gray-600 dark:text-slate-400">{item.label}</span>
+              </label>
+            ))
+          }
+          {allCertifications.size === 0 && <span class="text-gray-400 px-2">No options</span>}
+        </div>
+      </div>
+
+      <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+        <button
+          data-filter-toggle
+          class="flex items-center gap-2 px-4 py-2.5 font-medium text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 w-full text-left transition-colors"
+        >
+          <Icon name="tabler:tag" class="w-4 h-4" />
+          Features
+          <Icon name="tabler:chevron-down" class="w-4 h-4 ml-auto transition-transform" data-filter-chevron />
+        </button>
+        <div class="hidden border-t border-gray-100 dark:border-slate-700 p-3 space-y-1.5 max-h-48 overflow-y-auto">
+          {
+            [...allFeatures.values()].map((item) => (
+              <label class="flex items-center gap-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-700 px-2 py-1 rounded">
+                <input
+                  type="checkbox"
+                  data-filter-checkbox
+                  data-filter-group="features"
+                  data-filter-value={item.value}
+                  class="rounded border-gray-300"
+                />
+                <span class="text-gray-600 dark:text-slate-400">{item.label}</span>
+              </label>
+            ))
+          }
+          {allFeatures.size === 0 && <span class="text-gray-400 px-2">No options</span>}
+        </div>
+      </div>
+
+      <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+        <button
+          data-filter-toggle
+          class="flex items-center gap-2 px-4 py-2.5 font-medium text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 w-full text-left transition-colors"
+        >
+          <Icon name="tabler:ruler" class="w-4 h-4" />
+          Max Weight
+          <Icon name="tabler:chevron-down" class="w-4 h-4 ml-auto transition-transform" data-filter-chevron />
+        </button>
+        <div class="hidden border-t border-gray-100 dark:border-slate-700 p-3 space-y-2">
+          <div class="flex items-center justify-between text-xs text-gray-500">
+            <span>{globalMinWeight} GSM</span>
+            <span data-filter-weight-label>{globalMaxWeight} GSM</span>
+          </div>
+          <input
+            type="range"
+            data-filter-weight-max
+            min={globalMinWeight}
+            max={globalMaxWeight}
+            value={globalMaxWeight}
+            step={weightStep}
+            class="w-full accent-primary"
+          />
+        </div>
+      </div>
+
+      <button
+        data-filter-clear
+        class="px-4 py-2 text-sm text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 border border-dashed border-gray-300 dark:border-slate-600 rounded-xl hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
+      >
+        Clear all
+      </button>
+    </div>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-filter-grid>
+    {
+      products.map((p) => {
+        const [wMin, wMax] = getWeightRange(p);
+        const compLabels = (p.specs ?? [])
+          .filter((s) => s.label.toLowerCase().startsWith('composition'))
+          .flatMap((s) => s.value.split('/').map((x) => x.trim()));
+        const certLabels = (p.specs ?? [])
+          .filter((s) => s.label.toLowerCase().startsWith('certification'))
+          .flatMap((s) => s.value.split(',').map((x) => x.trim()));
+        const featureLabels = (p.tags ?? []).map((t) => t.slug);
+        return (
+          <div
+            data-filter-card
+            data-filter-composition={compLabels.join(',')}
+            data-filter-certification={certLabels.join(',')}
+            data-filter-features={featureLabels.join(',')}
+            data-filter-weight-min={wMin}
+            data-filter-weight-max={wMax}
+            data-filter-title={p.title}
+            style="display: block"
+          >
+            <ProductCard product={p} />
+            <QuickViewModal productId={p.slug} />
+          </div>
+        );
+      })
+    }
+  </div>
+</div>

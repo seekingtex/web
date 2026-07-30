@@ -1,0 +1,106 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `PFC-Free Waterproof Jacket Fabric Case Study | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex helped a leading US outdoor brand transition to PFC-free C0 DWR waterproof fabrics while maintaining 20K mm performance for their premium jacket collection.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'PFC-Free Waterproof Jacket Fabric Development for a Leading US Outdoor Brand',
+      description: 'Seekingtex developed PFC-free C0 DWR waterproof fabric solution for a leading US outdoor brand transitioning to sustainable materials ahead of EU PFAS regulations.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/eco-friendly-fabric.webp',
+      datePublished: '2026-07-30',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">PFC-Free Jacket Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full">Outdoor Apparel</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">PFC-Free Waterproof Jacket Fabric Development for a Leading US Outdoor Brand</h1>
+    <p class="text-xl text-gray-500 mb-8">Transitioning a premium jacket collection to C0 DWR waterproof fabric without compromising 20K mm performance ahead of the 2027 EU PFAS ban.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">20K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">14K g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Breathability (MVTR)</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">C0 DWR</div>
+        <div class="text-xs text-gray-500 mt-1">PFC-Free Finish</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img src="/images/seekingtex/products/eco-friendly-fabric.webp" alt="PFC-free C0 DWR waterproof breathable fabric" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">PFC-Free C0 DWR Waterproof Shell Fabric</span>
+      </div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900">
+      <h2>Customer Background</h2>
+      <p>Our customer is a leading US premium outdoor brand with annual revenue exceeding $1 billion, known for its commitment to environmental responsibility and high-performance outdoor apparel. With the EU PFAS ban approaching (effective 2027), the brand needed to transition its flagship waterproof jacket collection from C6 DWR to C0 PFC-free DWR while maintaining the same level of weather protection.</p>
+
+      <h2>Project Challenge</h2>
+      <p>The brand faced a multi-dimensional challenge: the EU PFAS ban deadline, previous C0 DWR trials showing faster degradation after washing, the need to transition 8 jacket models across multiple laminate types, and the risk of any performance regression damaging brand reputation.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex evaluated three C0 DWR chemistries — silicone, paraffin, and dendrimer-based — across a 12-week wash-testing program. The dendrimer-based formulation was selected for superior wash durability. For the 3-layer alpine shells, a 50D nylon 6.6 face fabric with PTFE membrane and dot-adhesive lamination achieved 21,500 mm / 14,800 g/m². For the packable rain jackets, a 40D recycled nylon with PU membrane achieved 16,200 mm / 11,200 g/m² at 115 g/m².</p>
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>3L alpine shells:</strong> 21,500 mm / 14,800 g/m² at 245 g/m²</li>
+        <li><strong>2.5L lightweight shells:</strong> 16,200 mm / 11,200 g/m² at 115 g/m²</li>
+        <li><strong>2L insulated jackets:</strong> 15,000 mm / 10,000 g/m² at 280 g/m²</li>
+        <li><strong>C0 DWR performance:</strong> Initial spray 95, 85 after 20 washes</li>
+        <li><strong>Timeline:</strong> Transition completed 14 months ahead of EU PFAS ban deadline</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Preparing for PFAS Regulations?</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">Contact our technical team for C0 DWR development support and EU compliance documentation.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors">Contact Us</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

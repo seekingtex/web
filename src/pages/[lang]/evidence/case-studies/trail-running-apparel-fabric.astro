@@ -1,0 +1,180 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+---
+
+<Layout
+  metadata={{
+    title: `Trail Running Apparel Fabric Innovation | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed an ultralight quick-dry moisture-wicking fabric for a US trail running apparel startup.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Trail Running Apparel Fabric Innovation',
+      description:
+        'Seekingtex developed an ultralight quick-dry moisture-wicking fabric for a US trail running apparel startup.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/quick-dry-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Trail Running Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Sportswear</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Trail Running Apparel Fabric Innovation for a US Startup</h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Ultralight quick-dry moisture-wicking fabric developed for high-exertion trail running performance.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">95 g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Fabric Weight</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">30+</div>
+        <div class="text-xs text-gray-500 mt-1">Retailers</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">95%</div>
+        <div class="text-xs text-gray-500 mt-1">Sell-Through</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/quick-dry-fabric.webp"
+        alt="Ultralight moisture-wicking quick-dry trail running fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">Ultralight Quick-Dry Fabric for Trail Running</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a US-based trail running apparel startup founded by competitive trail runners. The brand was
+        launching with a focused product line: running vests, lightweight shorts, and performance T-shirts. They needed
+        a fabric partner who understood the specific needs of trail runners — minimal weight, rapid drying, and odor
+        resistance.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <p>
+        The brand set ambitious targets: under 100 g/m² fabric weight, less than 30-minute drying time, superior
+        moisture wicking, antimicrobial odor control for multi-day use, and sufficient durability for 100+ miles.
+        Existing fabrics either met the weight target or durability but not both.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>
+        Seekingtex developed a 95 g/m² single-jersey performance knit using dual-yarn construction: 40-denier textured
+        polyester for the face and a fine-denier moisture-wicking yarn for the inner surface. A silver-based
+        antimicrobial finish provided 99.9% bacterial reduction after 50 washes. Independent testing confirmed 25-minute
+        drying time from fully saturated condition.
+      </p>
+
+      <h2>Development Process</h2>
+      <p>
+        Five knit variations were produced with different yarn combinations. Two lead fabrics entered a 3-month athlete
+        testing program with 20 trail runners. The final fabric was selected based on runner feedback and put into bulk
+        production with inline quality checks.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>Fabric weight:</strong> 95 g/m² — among the lightest in its class</li>
+        <li><strong>Drying time:</strong> 25 minutes — exceeded target</li>
+        <li><strong>Odor control:</strong> 99.9% bacterial reduction after 50 washes</li>
+        <li><strong>Market success:</strong> 30+ retailers, 95% sell-through in first year</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={`/${lang}/products/quick-dry-moisture-wicking`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Quick-Dry Moisture-Wicking Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">Performance moisture management</p>
+        </a>
+        <a
+          href={`/${lang}/products/breathable-mesh-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Breathable Mesh Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Ventilation for high-exertion apparel</p>
+        </a>
+        <a
+          href={`/${lang}/products/antibacterial-7a`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Antibacterial Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Odor control for multi-day use</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <a
+        href={`/${lang}/contact`}
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >{t('home.evidence.ctaButton')}</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.evidence.title')}</a
+      >
+    </div>
+  </div>
+</Layout>

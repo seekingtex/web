@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Military Protective Fabrics — Combat & Tactical Textile Solutions | ${SITE.name}`,
+  description: 'Military protective fabrics for combat uniforms, tactical apparel, and defense clothing. FR flame resistant, ripstop, moisture-wicking, and abrasion-resistant textiles for military manufacturers. OEM custom development.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Military Protective Fabrics' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Military Protective Fabrics by Seekingtex', description: 'Flame resistant, ripstop, and moisture-wicking combat fabrics for military and defense apparel manufacturers.', provider: { '@type': 'Organization', name: SITE.name } }} />
+
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Military Protective Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Advanced textile solutions for combat uniforms, tactical apparel, and defense clothing — flame resistant, abrasion-resistant, moisture-wicking, and engineered for extreme environment operations.</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Combat Uniform Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">FR flame resistant ripstop weaves with 40K+ Martindale abrasion resistance. 200-240 g/m². Inherently FR fiber blends for reliable protection.</p>
+        <a href="/products/flame-retardant-fabric" class="mt-3 inline-flex text-sm font-medium text-green-700 hover:underline">Browse FR fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Tactical Gear Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">High-tenacity nylon and polyester blends for tactical vests, load-bearing equipment, and mission-specific gear. Abrasion and tear-resistant constructions.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-green-700 hover:underline">Request technical consultation →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Military Manufacturers Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">FR Expertise</h3><p class="mt-1 text-sm text-gray-500">Inherently flame resistant fiber systems with stable self-extinguishing properties and thermal protection.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Ripstop Engineering</h3><p class="mt-1 text-sm text-gray-500">Reinforced weave structures that prevent tear propagation in field conditions.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Multi-Climate</h3><p class="mt-1 text-sm text-gray-500">Fabrics engineered for desert heat, jungle humidity, and cold-weather operations.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Defense Compliance</h3><p class="mt-1 text-sm text-gray-500">Meeting applicable military standards for FR, durability, and environmental resistance.</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/lightweight-fr-combat-fabric-military" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Military Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Military protective fabrics by Seekingtex. Combat uniform fabrics with FR flame resistance, ripstop weave, 40K+ Martindale abrasion resistance, 200-240 g/m². Inherently FR polyester/nylon blends. Moisture management for multi-climate operations. Tactical gear textiles with high-tenacity nylon and polyester. OEKO-TEX certified. Custom OEM/ODM development for defense and military apparel manufacturers.</p></section>
+</Layout>

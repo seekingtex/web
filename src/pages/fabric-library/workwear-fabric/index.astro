@@ -1,0 +1,142 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+
+const metadata = merge(
+  {
+    title: `Workwear & Industrial Fabrics — FR, Anti-Static, Abrasion-Resistant Textiles | ${SITE.name}`,
+    description: `Browse ${SITE.name} workwear and industrial fabric collection — flame-resistant, anti-static, abrasion-resistant, and high-visibility performance textiles for professional work environments. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink('/fabric-library/workwear-fabric')),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Fabric Library — Workwear
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Workwear & Industrial Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Protective performance textiles engineered for professional work environments — safety, durability, and comfort.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          Our workwear fabric collection delivers certified protection for industrial and professional environments.
+          From flame-resistant materials for oil and gas workers to anti-static fabrics for electronics manufacturing,
+          each textile is engineered to meet specific safety standards while providing all-day comfort for the wearer.
+          All fabrics are tested to relevant EN ISO and ASTM standards.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:flame" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Flame-Resistant Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Inherent FR and FR-treated fabrics meeting EN ISO 11612 and NFPA 2112 standards. Suitable for oil and gas,
+          electrical, welding, and firefighting applications.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:bolt" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Anti-Static Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Carbon-fiber blended and conductive thread fabrics meeting EN 1149 standards. Designed for electronics
+          manufacturing, chemical processing, and explosive environments.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:shield" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Abrasion-Resistant Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          High-tenacity nylon and polyester fabrics with reinforced weaves for extreme durability. Ideal for
+          construction, mining, logistics, and manufacturing environments.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/sun-protection-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Sun Protection Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/quick-dry-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Quick-Dry Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/stretch-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Stretch Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            What safety standards do your workwear fabrics meet?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Our workwear fabrics are tested to relevant international standards including EN ISO 11612 (flame
+            protection), EN 1149 (anti-static), EN 471 (high visibility), and ASTM F1506 (electrical arc protection). We
+            provide full test reports and certification documentation with every order. Custom testing to
+            client-specific standards is also available.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            Can you develop custom FR fabrics for our brand?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Yes, we offer full custom fabric development for workwear brands. Our R&D team can develop bespoke FR,
+            anti-static, or multi-protection fabrics tailored to your specific requirements, including custom colors,
+            weights, and finishes. Minimum development quantity starts from 3,000 meters per color.
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} workwear and industrial fabric collection: flame-resistant protection, anti-static performance, abrasion-resistant
+      textiles, high-visibility fabrics, and durable workwear materials for construction, oil and gas, manufacturing, logistics,
+      and safety apparel industries. EN ISO and ASTM certified. OEM/ODM available.
+    </p>
+  </section>
+</Layout>

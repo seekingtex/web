@@ -1,0 +1,169 @@
+---
+import merge from 'lodash.merge';
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+import { SITE } from 'astrowind:config';
+import { getProducts } from '~/utils/products';
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import type { MetaData } from '~/types';
+import ProductCard from '~/components/widgets/ProductCard.astro';
+
+const products = await getProducts();
+const fashionProducts = products.filter((p) =>
+  ['stretch', 'quick-dry', 'breathable', 'eco-friendly'].includes(p.category!)
+);
+
+const metadata = merge(
+  {
+    title: `Fashion Functional Fabrics — Performance-Enhanced Textiles for Everyday Apparel | ${SITE.name}`,
+    description: `Browse ${SITE.name} fashion functional fabric collection — wrinkle-free, cooling, stretch comfort, and antimicrobial performance textiles for business wear, casual wear, and everyday fashion. OEM/ODM available.`,
+    canonical: getCanonical(getPermalink('/fabric-library/fashion-functional-fabric')),
+    robots: { index: true, follow: true },
+    openGraph: { type: 'website' },
+  },
+  {}
+) as MetaData;
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-6xl">
+    <header class="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-blue-400 mb-2">
+        Fabric Library — Fashion
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter font-heading">
+        Fashion Functional Fabrics
+      </h1>
+      <p class="mt-3 md:mt-4 mx-auto text-xl text-gray-500 dark:text-slate-400 font-medium">
+        Performance-enhanced textiles for everyday fashion — where style meets function in business, casual, and smart
+        casual wear.
+      </p>
+    </header>
+
+    <section class="max-w-4xl mx-auto mb-12">
+      <div class="prose prose-gray dark:prose-invert max-w-none text-center">
+        <p class="text-lg text-gray-600 dark:text-slate-400">
+          The line between performance and fashion is disappearing. Modern consumers expect their everyday clothing to
+          perform — business shirts that resist wrinkles and keep you cool, jeans with stretch comfort, casual wear with
+          antimicrobial freshness. Our fashion functional fabric collection brings performance technology to everyday
+          apparel, helping brands differentiate in a competitive market.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:arrows-cross" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Stretch Comfort Fabrics</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Mechanical stretch and spandex-blended fabrics for business wear, denim, and casual pants. Freedom of movement
+          without compromising the tailored look and feel.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:snowflake" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Cooling & Quick-Dry</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Ice-silk and cooling technology fabrics for summer clothing. Moisture-wicking and quick-dry properties for
+          comfort in warm conditions without sacrificing style.
+        </p>
+      </div>
+      <div class="p-6 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
+        <Icon name="tabler:brush" class="w-8 h-8 text-primary dark:text-blue-400 mb-3" />
+        <h3 class="font-semibold text-gray-900 dark:text-slate-200">Easy-Care Finishes</h3>
+        <p class="mt-2 text-sm text-gray-500 dark:text-slate-400">
+          Wrinkle-free, stain-resistant, and easy-iron finishes for shirts, trousers, and dresses. Reduced maintenance
+          for the modern consumer who values convenience.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Recommended Fashion Fabrics</h2>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {fashionProducts.slice(0, 6).map((p) => <ProductCard product={p} />)}
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Browse by Fabric Function</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="/stretch-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Stretch Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/quick-dry-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Quick-Dry Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/antibacterial-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Antibacterial Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/breathable-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Breathable Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+        <a
+          href="/eco-friendly-fabric"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-default dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
+        >
+          Eco-Friendly Fabrics <Icon name="tabler:arrow-right" class="w-4 h-4" />
+        </a>
+      </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            How can I add performance features to my fashion clothing line?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Adding performance features to fashion apparel is easier than ever. Start by identifying the key benefits
+            your target customers value most — wrinkle resistance for business shirts, stretch for denim, cooling for
+            summer dresses. We offer fabric in two ways: standard performance fabrics ready for immediate sampling, and
+            custom development where we add specific finishes to your existing fabric specifications.
+          </p>
+        </details>
+        <details
+          class="group rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 p-4"
+        >
+          <summary
+            class="flex items-center justify-between cursor-pointer font-medium text-gray-900 dark:text-slate-200"
+          >
+            Can you add stretch to my existing shirting fabric?
+            <Icon name="tabler:chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" />
+          </summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">
+            Yes, we can develop stretch versions of traditional shirting fabrics by incorporating mechanical stretch
+            technology or adding spandex corespun yarns. Our mechanical stretch shirting offers 15-20% stretch with a
+            natural cotton hand feel and appearance. Minimum development quantity starts from 3,000 meters.
+          </p>
+        </details>
+      </div>
+    </section>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>
+      {SITE.name} fashion functional fabric collection: stretch comfort fabrics for business and casual wear, cooling and
+      moisture-wicking performance textiles, wrinkle-free and easy-care finishes, antimicrobial freshness technology, and
+      eco-friendly sustainable materials for everyday fashion apparel. OEM/ODM available.
+    </p>
+  </section>
+</Layout>

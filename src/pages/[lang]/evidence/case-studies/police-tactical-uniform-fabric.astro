@@ -1,0 +1,86 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Police Tactical Uniform Fabric — Duty Apparel Case Study | ${SITE.name}`,
+    description: 'Case study: Seekingtex developed a multi-season police tactical uniform fabric combining abrasion resistance, stretch mobility, moisture management, and professional appearance.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'Police Tactical Uniform Fabric for All-Weather Duty Performance', description: 'Seekingtex developed a multi-season police tactical uniform fabric for a North American law enforcement uniform manufacturer.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/fr-workwear-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What fabric features are important for police uniforms?', acceptedAnswer: { '@type': 'Answer', text: 'Police uniform fabrics require durability, professional appearance, moisture management, and stretch for mobility during physical engagements.' } },
+        { '@type': 'Question', name: 'What is ripstop fabric?', acceptedAnswer: { '@type': 'Answer', text: 'Ripstop is a weaving technique with reinforced yarns at regular intervals preventing tear propagation. Used in tactical uniforms for lightweight construction with exceptional tear resistance.' } },
+        { '@type': 'Question', name: 'Can police uniform fabric be both durable and comfortable?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Modern fabric technology combines durable materials with moisture-wicking finishes, mechanical stretch, and breathable constructions for all-day shift comfort.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Police Tactical Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Law Enforcement</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Police Tactical Uniform Fabric for All-Weather Duty Performance</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped a North American law enforcement uniform manufacturer develop a multi-season tactical fabric system.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-blue-700">Ripstop</div><div class="text-xs text-gray-500 mt-1">Tear Resistant</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-blue-700">Stretch</div><div class="text-xs text-gray-500 mt-1">4-Way Mechanical</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-blue-700">Multi-</div><div class="text-xs text-gray-500 mt-1">Season Versatility</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>Our customer is a North American uniform manufacturer supplying law enforcement agencies across the US and Canada. They needed a fabric system providing durability for physical engagements, mobility for pursuit, and comfort for 12-hour shifts in varied climates.</p>
+
+      <h2>The Duty Challenge</h2>
+      <p>Police uniforms must maintain professional appearance while withstanding daily wear, vehicle duty, equipment belt abrasion, and physical confrontations — across all seasons and weather conditions.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex engineered a ripstop woven fabric using high-tenacity polyester with 15-20% mechanical stretch. A moisture management finish provides sweat wicking and rapid drying. Wrinkle-resistant treatment maintains professional appearance through extended shifts and repeated washing. Abrasion resistance validated for equipment belt and vehicle wear.</p>
+
+      <h2>Customer Results</h2>
+      <ul>
+        <li>Applied to patrol uniforms, tactical pants, and outerwear</li>
+        <li>Improved officer mobility and comfort during field evaluations</li>
+        <li>Multiple agencies approved the fabric for duty use</li>
+        <li>Single fabric specification across uniform styles simplified inventory management</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-blue-700 to-indigo-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Law Enforcement Uniform Solutions?</h2>
+      <p class="text-blue-100 max-w-xl mx-auto mb-6">Our team develops durable, stretch fabrics for police and tactical uniform manufacturers.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-blue-700 font-semibold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors">Request Technical Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-blue-700 hover:text-blue-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

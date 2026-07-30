@@ -1,0 +1,38 @@
+---
+export const prerender = true;
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Outdoor Functional Fabric Manufacturer — Performance Textiles | ${SITE.name}`,
+    description: 'Outdoor functional fabric manufacturer specializing in waterproof breathable, UV protection, quick-dry, and eco-friendly performance textiles. OEM/ODM custom development. OEKO-TEX certified.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Product', name: 'Outdoor Functional Fabrics by Seekingtex', description: 'Waterproof breathable, UV protection, quick-dry, and eco-friendly performance textiles for outdoor apparel brands.', brand: { '@type': 'Organization', name: SITE.name }, category: 'Functional Textiles' }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Outdoor Functional Fabric Manufacturer</h1>
+    <p class="mt-4 text-xl text-gray-500">Seekingtex manufactures functional performance fabrics for outdoor apparel brands — waterproof breathable, UV protection, quick-dry, antimicrobial, stretch, and eco-friendly recycled textiles. OEKO-TEX certified.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Waterproof Breathable</h2><p class="mt-2 text-sm text-gray-600">PU coated, TPU laminated, ePTFE membrane. 5K-30K mm. 2L, 2.5L, 3L laminates.</p><a href={`${prefix}/waterproof-fabric`} class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a></div>
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-200 p-6"><h2 class="text-lg font-semibold text-gray-900">UV Protection</h2><p class="mt-2 text-sm text-gray-600">UPF 50+ certified. Lightweight woven and knit options for outdoor apparel.</p><a href={`${prefix}/sun-protection-fabric`} class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a></div>
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Quick-Dry Moisture Wicking</h2><p class="mt-2 text-sm text-gray-600">Performance knits with 25-min drying time. Engineered moisture transport.</p><a href={`${prefix}/quick-dry-fabric`} class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a></div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6"><h2 class="text-lg font-semibold text-gray-900">Eco-Friendly Recycled</h2><p class="mt-2 text-sm text-gray-600">GRS-certified rPET and recycled nylon. C0 PFC-free DWR available.</p><a href={`${prefix}/eco-friendly-fabric`} class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a></div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/solutions/outdoor-brands`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Explore Solutions</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request a Quote</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Outdoor functional fabric manufacturer. Waterproof breathable, UPF 50+, quick-dry, antimicrobial, stretch, eco-friendly recycled. OEKO-TEX certified. OEM/ODM. Kunshan, China. Exports to 30+ countries.</p></section>
+</Layout>

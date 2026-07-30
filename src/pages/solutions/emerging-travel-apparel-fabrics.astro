@@ -1,0 +1,45 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Functional Fabrics for Travel Apparel Startups | ${SITE.name}`,
+  description: 'Performance fabric solutions for emerging travel clothing brands. Wrinkle-resistant, quick-dry, lightweight, and easy-care textiles with startup-friendly development support.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Emerging Brand Solutions', href: '/solutions/emerging-brands' }, { name: 'Travel Apparel Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Functional Fabrics for Travel Apparel Startups by Seekingtex', description: 'Wrinkle-resistant, quick-dry, lightweight easy-care fabrics for travel clothing startups.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Functional Fabrics for Travel Apparel Startups</h1>
+    <p class="mt-4 text-xl text-gray-500">Create travel clothing that modern explorers love. Wrinkle-resistant, quick-dry, lightweight, and easy-care performance fabrics for emerging travel apparel brands.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Wrinkle-Resistant Wovens</h2>
+        <p class="mt-2 text-sm text-gray-600">Stay crisp through packing and travel. Easy-care woven fabrics for shirts, trousers, and dresses that need minimal ironing.</p>
+        <a href="/products/quick-dry-fabric" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse quick-dry fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Packable</h2>
+        <p class="mt-2 text-sm text-gray-600">Ultra-light fabrics for packable travel wardrobes. Quick-drying, stretch-comfort, and machine washable.</p>
+        <a href="/contact" class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Key Features for Travel Apparel Startups</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Wrinkle Resistant</h3><p class="mt-1 text-sm text-gray-500">Fabrics that stay smooth after packing, flying, and full days of wear. No ironing needed.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Quick Dry</h3><p class="mt-1 text-sm text-gray-500">Dries 3x faster than cotton. Sink-wash and wear again the same day.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Lightweight</h3><p class="mt-1 text-sm text-gray-500">Ultra-light fabrics under 150 gsm for packable travel wardrobes and carry-on only trips.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Easy Care</h3><p class="mt-1 text-sm text-gray-500">Machine washable, no dry cleaning, no special care instructions needed.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/contact" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Start Your Travel Apparel Project</a>
+      <a href="/evidence" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">View Case Studies</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Functional fabrics for travel apparel startups by Seekingtex. Wrinkle-resistant, quick-dry, lightweight, easy-care woven and knit fabrics. Low MOQ, rapid sample development. For emerging travel clothing brands creating performance travel wear.</p></section>
+</Layout>

@@ -43,7 +43,14 @@ export interface Taxonomy {
 }
 
 export type ProductCategory =
-  'sun-protection' | 'waterproof' | 'quick-dry' | 'antibacterial' | 'stretch' | 'breathable' | 'eco-friendly';
+  | 'sun-protection'
+  | 'waterproof'
+  | 'quick-dry'
+  | 'antibacterial'
+  | 'stretch'
+  | 'breathable'
+  | 'eco-friendly'
+  | 'flame-retardant';
 
 export interface ProductSpec {
   label: string;

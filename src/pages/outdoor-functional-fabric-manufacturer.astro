@@ -1,0 +1,74 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Outdoor Functional Fabric Manufacturer — Performance Textiles for Apparel Brands | ${SITE.name}`,
+  description:
+    'Seekingtex is an outdoor functional fabric manufacturer specializing in waterproof breathable, UV protection, quick-dry, and eco-friendly performance textiles. OEM/ODM custom development for outdoor apparel brands. OEKO-TEX certified.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Outdoor Functional Fabric Manufacturer' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Outdoor Functional Fabrics by Seekingtex',
+      description: 'Waterproof breathable, UV protection, quick-dry, and eco-friendly performance textiles for outdoor apparel brands.',
+      brand: { '@type': 'Organization', name: SITE.name },
+      category: 'Functional Textiles',
+    }}
+  />
+
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Outdoor Functional Fabric Manufacturer</h1>
+    <p class="mt-4 text-xl text-gray-500">Seekingtex is a leading manufacturer of functional performance fabrics for outdoor apparel brands — waterproof breathable, UV protection, quick-dry moisture wicking, antimicrobial, stretch, and eco-friendly recycled textiles.</p>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl border border-sky-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Waterproof Breathable Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">PU coated, TPU laminated, and ePTFE membrane constructions. 5K-30K mm hydrostatic head. 2L, 2.5L, and 3L laminate options.</p>
+        <a href="/waterproof-fabric" class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a>
+      </div>
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">UV Protection Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">UPF 50+ certified sun protection fabrics. Lightweight woven and knit options for outdoor shirts, hats, and accessories.</p>
+        <a href="/sun-protection-fabric" class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a>
+      </div>
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl border border-orange-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Quick-Dry Moisture Wicking</h2>
+        <p class="mt-2 text-sm text-gray-600">Performance knit and woven fabrics with engineered moisture transport. 25-minute drying time. Ideal for base layers and activewear.</p>
+        <a href="/quick-dry-fabric" class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Eco-Friendly Recycled Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">GRS-certified recycled polyester and nylon. C0 PFC-free DWR. Sustainable performance textiles for eco-conscious outdoor brands.</p>
+        <a href="/eco-friendly-fabric" class="mt-3 inline-flex text-sm font-medium text-sky-600 hover:underline">Learn more →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Outdoor Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">15,000 m² Factory</h3><p class="mt-1 text-sm text-gray-500">Kunshan-based production with 300+ skilled workers and monthly capacity exceeding 1 million meters.</p></div>
+        <div><h3 class="font-semibold text-gray-900">OEKO-TEX Certified</h3><p class="mt-1 text-sm text-gray-500">All fabrics OEKO-TEX Standard 100 certified. REACH and GRS compliance available.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom OEM/ODM</h3><p class="mt-1 text-sm text-gray-500">From lab dip to bulk production. Custom weight, structure, coating, and finish development.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Global Shipping</h3><p class="mt-1 text-sm text-gray-500">FOB Shanghai. Serving 30+ countries across North America, Europe, and Asia.</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/solutions/outdoor-brands" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">Explore Outdoor Solutions</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request a Quote</a>
+    </div>
+  </section>
+
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true">
+    <p>Seekingtex is an outdoor functional fabric manufacturer based in Kunshan, China. Specializes in waterproof breathable fabrics (PU coated, TPU laminated, ePTFE membrane), UV protection UPF 50+ fabrics, quick-dry moisture wicking performance textiles, antimicrobial 7A fabrics, 4-way stretch fabrics, breathable mesh, GRS-certified eco-friendly recycled fabrics, and flame retardant FR fabrics. Serves outdoor apparel brands, uniform manufacturers, and sportswear companies. OEKO-TEX Standard 100 certified. OEM/ODM custom development. 15,000 m² facility, 300+ workers, exports to 30+ countries.</p>
+  </section>
+</Layout>

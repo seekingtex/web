@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Safety Workwear Fabrics — FR Flame Resistant, Anti-Static & Hi-Vis Protective Textiles | ${SITE.name}`,
+  description: 'Safety workwear fabrics by Seekingtex: FR flame resistant (EN ISO 11612, NFPA), anti-static (EN 1149), arc resistant, chemical resistant, and high visibility (EN ISO 20471) protective textiles for PPE, oil & gas, electrical, and hazardous environments.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Workwear Fabric Solutions', href: '/solutions/workwear-fabric-solutions' }, { name: 'Safety Workwear Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Safety Workwear Fabrics by Seekingtex', description: 'FR flame resistant, anti-static, arc resistant, chemical resistant, high visibility protective fabrics for PPE and safety workwear.', provider: { '@type': 'Organization', name: SITE.name }, breadcrumb: { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://seekingtex.com/' }, { '@type': 'ListItem', position: 2, name: 'Workwear Fabric Solutions', item: 'https://seekingtex.com/solutions/workwear-fabric-solutions' }, { '@type': 'ListItem', position: 3, name: 'Safety Workwear Fabrics' }] } }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Organization', name: SITE.name, description: 'Seekingtex is a functional fabric manufacturer providing certified protective textile solutions for PPE manufacturers, safety uniform brands, and hazardous environment workwear.', url: 'https://seekingtex.com' }} />
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'What is the difference between FR treated and inherently FR fabric?', acceptedAnswer: { '@type': 'Answer', text: 'FR treated fabrics have flame retardant chemicals applied to the base fabric (e.g., Proban on poly-cotton). Protection may diminish with washing. Inherently FR fabrics use fibers that are naturally flame resistant (e.g., aramid, modacrylic). Protection lasts the garment lifetime. Inherent FR is more expensive but offers better durability and comfort.' } },
+    { '@type': 'Question', name: 'What standards apply to safety workwear fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Key standards include: EN ISO 11612 (protective clothing against heat and flame), NFPA 2112 (flash fire), NFPA 70E / IEC 61482 (arc flash), ASTM F1506 (electrical hazard), EN 1149 (anti-static), and EN ISO 20471 / ANSI 107 (high visibility). The applicable standard depends on the specific industry hazard.' } },
+    { '@type': 'Question', name: 'Can FR protective fabrics be comfortable?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Modern FR fabrics use lightweight constructions (200-280gsm), optimized fiber blends, and moisture-wicking finishes to improve comfort. Inherently FR fabrics like modacrylic-nylon blends offer better breathability and softness than traditional heavy FR-treated materials, improving worker compliance.' } },
+    { '@type': 'Question', name: 'Can Seekingtex develop custom certified protective fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex develops custom protective fabric solutions with full certification documentation for FR, anti-static, arc flash, and high visibility requirements. We support PPE manufacturers, oil & gas uniform programs, electrical utility workwear, and chemical industry protective clothing.' } },
+  ] }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <div class="mb-4">
+      <a href="/solutions/workwear-fabric-solutions" class="text-sm text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Workwear Fabric Solutions</a>
+    </div>
+    <h1 class="text-4xl font-bold text-gray-900">Safety Workwear Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Flame resistant, anti-static, arc resistant, chemical resistant, and high visibility protective textiles for PPE, safety uniforms, and hazardous environment workwear. Certified performance with comfort-focused engineering for oil, gas, electrical, and chemical industry applications.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Flame Resistant FR Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Inherently FR and FR-treated fabrics for oil & gas, electrical, welding, and chemical processing applications. Available in EN ISO 11612 and NFPA certified options with lightweight constructions for improved wearer comfort and compliance.</p>
+        <a href="/flame-retardant-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Browse FR fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Anti-Static Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Permanent anti-static fabrics for explosive environments, electronics manufacturing, and chemical processing facilities. Conductive fiber integration provides reliable static dissipation for EN 1149 compliant protective clothing.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Explore protective fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">High Visibility Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">EN ISO 20471 and ANSI 107 compliant high visibility textiles for road construction, logistics, warehouse, and emergency service workers. Fluorescent background and reflective tape compatible constructions for safety compliance.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">View hi-vis options →</a>
+      </div>
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl border border-amber-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Protection + Comfort Balance</h2>
+        <p class="mt-2 text-sm text-gray-600">Safety fabrics engineered specifically for worker comfort: lightweight FR constructions, breathable anti-static materials, and moisture-wicking protective textiles. Addressing the common complaint of discomfort in safety workwear to improve compliance.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-amber-700 hover:underline">Learn about comfort protection →</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-amber-50 rounded-2xl border border-amber-200 p-6">
+      <h2 class="text-lg font-semibold text-gray-900 mb-4">Explore Our Workwear Solutions</h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/solutions/workwear-fabric-solutions" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">All Workwear Fabrics</a>
+        <a href="/solutions/construction-workwear-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Construction Fabrics</a>
+        <a href="/solutions/industrial-uniform-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Industrial Uniform Fabrics</a>
+        <a href="/solutions/corporate-uniform-fabrics" class="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm font-medium text-amber-700 hover:bg-amber-100 transition">Corporate Uniform Fabrics</a>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Safety Workwear Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Certified Protection</h3><p class="mt-1 text-sm text-gray-500">Fabrics meeting EN, NFPA, and ANSI standards for FR, anti-static, arc flash, chemical resistance, and high visibility. Full certification documentation provided with every order for compliance verification.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Comfort-First Innovation</h3><p class="mt-1 text-sm text-gray-500">Lightweight, breathable, and moisture-wicking protective fabrics that directly address the #1 complaint in safety workwear: discomfort. Better comfort drives higher worker compliance with PPE requirements.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Multi-Hazard Expertise</h3><p class="mt-1 text-sm text-gray-500">Deep understanding of combined hazard requirements: FR + anti-static for oil & gas, FR + arc flash for electrical utilities, FR + hi-vis for roadside construction, chemical + anti-static for processing.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom Protective Solutions</h3><p class="mt-1 text-sm text-gray-500">Tailored fabric development balancing safety performance, wearer comfort, garment durability, and cost efficiency for PPE manufacturers, safety managers, and industrial uniform programs.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/workwear-industrial-uniform-fabric-development" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Workwear Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Seekingtex is a functional fabric manufacturer providing certified protective textile solutions for PPE manufacturers and safety workwear brands. Our safety workwear fabrics include: FR flame resistant fabrics (inherently FR and FR-treated, EN ISO 11612, NFPA 2112, NFPA 70E certified for oil & gas, electrical, and welding applications), anti-static textiles (EN 1149 compliant, permanent conductive fiber for explosive environments, electronics manufacturing, and chemical processing), high visibility fabrics (EN ISO 20471 and ANSI 107 compliant for road construction, logistics, and emergency services), and protection + comfort balanced fabrics (lightweight FR, breathable anti-static, moisture-wicking protective materials). Seekingtex works with PPE companies, safety managers, oil & gas uniform programs, and industrial protective clothing brands. Custom OEM fabric development with full certification documentation. OEKO-TEX certified.</p></section>
+</Layout>

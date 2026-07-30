@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Medical Protective Fabric — Fluid Resistant & Breathable Barrier Textiles | ${SITE.name}`,
+    description: 'Medical protective fabrics for isolation gowns, surgical gowns, and PPE. Fluid resistance, breathability, and comfort balanced for healthcare protective apparel applications.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Medical Protective Fabric by Seekingtex', description: 'Fluid resistant, breathable barrier fabrics for medical protective apparel. AAMI PB70 compliant solutions for isolation and surgical gowns.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Medical Protective Fabric</h1>
+    <p class="mt-4 text-xl text-gray-500">Medical protective fabrics for isolation gowns, surgical gowns, and protective apparel. Fluid resistance, breathability, and comfort balanced for healthcare PPE applications.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Fluid Resistant Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">ANSI/AAMI PB70 compliant barrier performance with multiple protection levels for isolation gowns, surgical gowns, and protective apparel.</p>
+        <a href={`${prefix}/products/waterproof-fabric`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse waterproof fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Breathable Protective Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Waterproof breathable membrane construction with optimized air permeability. Protection without compromising wearer comfort during extended clinical use.</p>
+        <a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Comfort</h2>
+        <p class="mt-2 text-sm text-gray-600">Soft hand feel and lightweight structure designed for extended wear. Reduces fatigue and improves compliance with protective apparel protocols.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Request technical consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why PPE Manufacturers Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">AAMI Compliance</h3><p class="mt-1 text-sm text-gray-500">Fabrics engineered to meet ANSI/AAMI PB70 liquid barrier performance standards for medical protective apparel.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Protection + Comfort</h3><p class="mt-1 text-sm text-gray-500">Balanced fluid resistance and breathability — healthcare workers stay protected without overheating.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Lightweight Design</h3><p class="mt-1 text-sm text-gray-500">Reduced fabric weight for improved mobility and reduced physical burden during extended PPE use.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom Development</h3><p class="mt-1 text-sm text-gray-500">Tailored barrier fabric solutions based on specific protection levels and application requirements.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/healthcare-scrub-fabric-development`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Medical Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Medical protective fabric by Seekingtex. Fluid resistant: ANSI/AAMI PB70 compliant for isolation and surgical gowns. Breathable: waterproof breathable membrane, air permeability. Lightweight: soft hand feel, reduced fatigue. Custom development for medical PPE manufacturers. OEKO-TEX certified.</p></section>
+</Layout>

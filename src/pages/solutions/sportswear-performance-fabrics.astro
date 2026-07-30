@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Sportswear Performance Fabrics — Activewear Textile Solutions | ${SITE.name}`,
+  description: 'Performance fabrics for sportswear brands: moisture wicking, lightweight, breathable, and stretch textiles for running, training, yoga, and activewear apparel. Custom OEM development.',
+  ignoreTitleTemplate: true,
+};
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Sportswear Performance Fabrics' }];
+---
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Sportswear Performance Fabrics by Seekingtex', description: 'Moisture wicking, lightweight, breathable, stretch performance fabrics for sportswear and activewear brands.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Sportswear Performance Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Performance fabrics for sportswear brands: moisture wicking, lightweight, breathable, and stretch textiles engineered for running, training, yoga, and activewear apparel.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Moisture Wicking Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Advanced moisture management technology for sportswear. Fast sweat transfer, quick drying, and breathable construction for running and training apparel.</p>
+        <a href="/products/breathable-fabric" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Knit Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Ultra-lightweight performance knits for running shirts, training tops, and base layers. Reduced weight without sacrificing durability or comfort.</p>
+        <a href="/products/stretch-fabric" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse stretch fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Stretch & Recovery Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Four-way stretch fabrics with excellent recovery for yoga, studio, and training wear. Soft hand feel and shape retention through repeated use.</p>
+        <a href="/solutions/yoga-activewear-fabrics" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Explore yoga fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Sustainable Performance Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Eco-friendly sportswear fabrics using recycled polyester, bio-based fibers, and PFAS-free finishing. Performance meets sustainability.</p>
+        <a href="/solutions/sustainable-sports-fabrics" class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Explore sustainable options →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Sportswear Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Application-Based</h3><p class="mt-1 text-sm text-gray-500">Fabric solutions developed for specific sports: running, yoga, training, outdoor — each with tailored performance targets.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Performance Engineering</h3><p class="mt-1 text-sm text-gray-500">Optimized fiber, knit structure, and finishing for moisture, stretch, breathability, and durability performance.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Custom Development</h3><p class="mt-1 text-sm text-gray-500">From concept to production: fabric selection, sample development, testing, and scaling support for sportswear brands.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Brand Differentiation</h3><p class="mt-1 text-sm text-gray-500">Unique fabric stories that help sportswear brands stand out in a competitive market through performance innovation.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href="/evidence/case-studies/running-apparel-lightweight-performance" class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Running Case Study</a>
+      <a href="/contact" class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Sportswear performance fabrics by Seekingtex. Moisture wicking: fast sweat transfer, quick drying, breathable. Lightweight knit: ultra-light for running and training. Stretch and recovery: four-way stretch, shape retention for yoga and studio wear. Sustainable: recycled polyester, bio-based fibers, PFAS-free. Custom OEM development for sportswear and activewear brands. OEKO-TEX certified.</p></section>
+</Layout>

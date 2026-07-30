@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Medical Scrubs Fabric — Stretch, Breathable & Durable Healthcare Textiles | ${SITE.name}`,
+    description: 'Functional medical scrub fabrics engineered for healthcare professionals. Stretch, moisture wicking, breathability, and durable laundering performance for medical uniform brands.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Medical Scrubs Fabric by Seekingtex', description: 'Stretch, breathable, moisture wicking medical scrub fabrics for healthcare uniforms. Polyester-spandex blends with durable laundering performance.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Medical Scrubs Fabric</h1>
+    <p class="mt-4 text-xl text-gray-500">Functional medical scrub fabrics engineered for healthcare professionals. Stretch, moisture wicking, breathability, and durable laundering performance for medical uniform brands and healthcare apparel manufacturers.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Comfort Stretch Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">4-way stretch performance, soft touch finish, 160-200 GSM polyester-spandex construction for unrestricted movement during long shifts.</p>
+        <a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse stretch fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Moisture Wicking Scrubs</h2>
+        <p class="mt-2 text-sm text-gray-600">Moisture management technology with fast sweat transfer and breathable structure for comfort during intensive patient care.</p>
+        <a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl border border-teal-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Durable Medical Textiles</h2>
+        <p class="mt-2 text-sm text-gray-600">Engineered for 200+ industrial wash cycles with color retention, shape stability, and fabric integrity for healthcare institutions.</p>
+        <a href={`${prefix}/products`} class="mt-3 inline-flex text-sm font-medium text-teal-700 hover:underline">View all products →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Medical Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">4-Way Stretch</h3><p class="mt-1 text-sm text-gray-500">Full range of motion for bending, stretching, and patient care during long shifts.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Moisture Management</h3><p class="mt-1 text-sm text-gray-500">Advanced wicking keeps healthcare workers dry and comfortable throughout intensive work.</p></div>
+        <div><h3 class="font-semibold text-gray-900">200+ Wash Durability</h3><p class="mt-1 text-sm text-gray-500">Color, shape, and fabric integrity maintained after repeated industrial launderings.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Soft Touch</h3><p class="mt-1 text-sm text-gray-500">Premium hand feel for direct skin contact — comfortable all-day wear without irritation.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/healthcare-scrub-fabric-development`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Medical Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Medical scrubs fabric by Seekingtex. Comfort stretch: 4-way stretch, soft touch, 160-200 GSM polyester-spandex. Moisture wicking: fast sweat transfer, breathable. Durable: 200+ industrial wash cycles, color retention, shape stability. Custom OEM development for medical uniform brands. OEKO-TEX certified.</p></section>
+</Layout>

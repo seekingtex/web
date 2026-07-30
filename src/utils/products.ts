@@ -11,6 +11,7 @@ const PRODUCT_CATEGORY_LABELS: Record<ProductCategory, string> = {
   stretch: 'Stretch Fabrics',
   breathable: 'Breathable Fabrics',
   'eco-friendly': 'Eco-Friendly Fabrics',
+  'flame-retardant': 'Flame Retardant Fabrics',
 };
 
 export const productCategoryLabels = PRODUCT_CATEGORY_LABELS;
@@ -172,6 +173,7 @@ export const CATEGORY_SLUG_TO_URL: Record<ProductCategory, string> = {
   stretch: 'stretch-fabric',
   breathable: 'breathable-fabric',
   'eco-friendly': 'eco-friendly-fabric',
+  'flame-retardant': 'flame-retardant-fabric',
 };
 
 export const CATEGORY_URL_SET = new Set(Object.values(CATEGORY_SLUG_TO_URL));

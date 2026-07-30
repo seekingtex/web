@@ -1,0 +1,108 @@
+title: Fabric Library
+subtitle: Browse 10,000+ performance fabrics by application, function, or industry. Find the exact material for your next apparel collection.
+hero:
+  title: Functional Fabric Library
+  subtitle: AI-powered fabric discovery — filter by application, performance feature, composition, or end-use industry.
+  actions:
+    - variant: primary
+      text: AI Find My Fabric
+      href: /ai-fabric-finder
+      icon: tabler:sparkles
+    - text: Browse All Categories
+      href: '#categories'
+
+sections:
+  - title: Browse by Application
+    subtitle: Find fabrics for your specific garment type and end-use
+    categories:
+      - title: Sports & Activewear
+        slug: sports-fabric
+        description: Moisture-wicking, 4-way stretch, quick-dry performance textiles for athletic apparel
+        href: /fabric-library/sports-fabric
+        icon: tabler:running
+        subcategories:
+          - Running & Jogging
+          - Yoga & Pilates
+          - Gym & Training
+          - Team Sports
+      - title: Outdoor & Adventure
+        slug: outdoor-fabric
+        description: Waterproof, windproof, breathable shell fabrics for hiking, camping, and alpine sports
+        href: /fabric-library/outdoor-fabric
+        icon: tabler:mountain
+        subcategories:
+          - Hiking Apparel
+          - Ski & Snowboard
+          - Climbing Gear
+          - Camping Equipment
+      - title: Workwear & Industrial
+        slug: workwear-fabric
+        description: Flame-resistant, anti-static, abrasion-resistant fabrics for professional and industrial use
+        href: /fabric-library/workwear-fabric
+        icon: tabler:building-factory
+        subcategories:
+          - Construction
+          - Oil & Gas
+          - Manufacturing
+          - Logistics
+      - title: Medical & Healthcare
+        slug: medical-fabric
+        description: Antimicrobial, fluid-repellent, comfortable fabrics for medical and healthcare environments
+        href: /fabric-library/medical-fabric
+        icon: tabler:heartbeat
+        subcategories:
+          - Hospital Uniforms
+          - Surgical Gowns
+          - Senior Care
+          - Laboratory Wear
+      - title: Fashion Functional
+        slug: fashion-functional-fabric
+        description: Performance-enhanced fabrics for everyday fashion — wrinkle-free, cooling, stretch comfort
+        href: /fabric-library/fashion-functional-fabric
+        icon: tabler:shirt
+        subcategories:
+          - Business Wear
+          - Casual Wear
+          - Denim
+          - Smart Casual
+
+  - title: Browse by Function
+    subtitle: Find fabrics by their key performance feature
+    categories:
+      - title: Sun Protection (UPF 50+)
+        slug: sun-protection-fabric
+        href: /sun-protection-fabric
+      - title: Waterproof & Breathable
+        slug: waterproof-fabric
+        href: /waterproof-fabric
+      - title: Quick-Dry
+        slug: quick-dry-fabric
+        href: /quick-dry-fabric
+      - title: Antibacterial
+        slug: antibacterial-fabric
+        href: /antibacterial-fabric
+      - title: Stretch & Recovery
+        slug: stretch-fabric
+        href: /stretch-fabric
+      - title: Breathable Mesh
+        slug: breathable-fabric
+        href: /breathable-fabric
+      - title: Eco-Friendly
+        slug: eco-friendly-fabric
+        href: /eco-friendly-fabric
+      - title: Flame Retardant
+        slug: flame-retardant-fabric
+        href: /flame-retardant-fabric
+
+  - title: Fabric Development Services
+    subtitle: From concept to production — we help you create the perfect fabric for your brand
+    items:
+      - title: Custom Fabric Development
+        description: Work with our R&D team to develop bespoke fabrics tailored to your specifications
+        href: /fabric-development
+      - title: Low MOQ Startup Program
+        description: Launch your brand with flexible minimum order quantities and sample support
+        href: /startup-brand-program
+      - title: Request a Quote
+        description: Send us your requirements and get a competitive quotation within 24 hours
+        href: /contact

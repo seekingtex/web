@@ -1,0 +1,309 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+---
+
+<Layout
+  metadata={{
+    title: `Sustainable Fabric Solution for Eco-conscious Outdoor Brand — Seekingtex Case Study | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed GRS-certified recycled performance fabric for a Scandinavian eco-conscious outdoor apparel brand balancing sustainability and function.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Sustainable Fabric Solution for an Eco-conscious Outdoor Brand — Seekingtex Case Study',
+      description:
+        'Seekingtex developed GRS-certified recycled performance fabric for a Scandinavian eco-conscious outdoor apparel brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/eco-friendly-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is GRS certification for fabric?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'GRS Global Recycled Standard is a certification that verifies the recycled content in textiles and tracks it through the supply chain. It also covers environmental practices, chemical use, and social responsibility in manufacturing.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can sustainable outdoor fabrics still perform well?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Modern recycled polyester and nylon fabrics achieve the same performance as virgin materials — including UPF 50+ protection, waterproof ratings, moisture wicking, and durability. Seekingtex develops GRS-certified recycled fabrics that meet or exceed standard performance benchmarks.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What eco-friendly fabric options does Seekingtex offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Seekingtex offers GRS-certified recycled polyester and recycled nylon fabrics, OEKO-TEX certified materials, eco-friendly dyeing processes, and sustainable finishing treatments. These are available across multiple fabric categories including outdoor, sportswear, and fashion applications.',
+          },
+        },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Sustainable Fabric Solution</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Sustainable Fabric Solution for an Eco-conscious Outdoor Brand
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      How Seekingtex helped a Scandinavian brand achieve sustainability goals without compromising outdoor performance.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">GRS</div>
+        <div class="text-xs text-gray-500 mt-1">Certified Recycled</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">100%</div>
+        <div class="text-xs text-gray-500 mt-1">rPET Content Achieved</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">4 styles</div>
+        <div class="text-xs text-gray-500 mt-1">Sustainable Collection</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/eco-friendly-fabric.webp"
+        alt="GRS-certified recycled eco-friendly outdoor fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">GRS-Certified Recycled Outdoor Fabric</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is a Scandinavian outdoor apparel brand with a strong commitment to environmental sustainability.
+        The brand had already built its reputation using organic cotton and recycled materials in its lifestyle
+        collection, but faced challenges finding recycled performance fabrics suitable for technical outdoor products.
+      </p>
+      <p>
+        The brand wanted to launch a "Sustainable Performance" collection — outerwear and mid-layer pieces made entirely
+        from recycled materials without compromising on waterproofing, breathability, or durability. They needed a
+        fabric partner with GRS certification and proven experience in recycled performance textiles.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <h3>Achieving Performance Parity with Virgin Materials</h3>
+      <p>
+        The brand's product team had tested recycled fabrics from several suppliers but encountered common problems:
+      </p>
+      <ul>
+        <li><strong>Lower tensile strength</strong> — recycled fibers sometimes showed reduced durability</li>
+        <li><strong>Inconsistent dye uptake</strong> — color matching was difficult across production lots</li>
+        <li><strong>Higher weight</strong> — recycled fabrics were often heavier than virgin alternatives</li>
+        <li>
+          <strong>Limited finishing options</strong> — some functional treatments didn't perform well on recycled substrates
+        </li>
+      </ul>
+      <p>
+        The brand needed a fabric that could match virgin material performance across all key metrics while carrying
+        full GRS chain-of-custody certification.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <h3>Developing a GRS-Certified Recycled Performance Fabric</h3>
+
+      <h3>1. Material Sourcing</h3>
+      <p>
+        Seekingtex sourced GRS-certified post-consumer recycled polyester (rPET) yarn from an approved supplier with
+        full traceability documentation. The yarn quality was verified through tensile testing before production.
+      </p>
+
+      <h3>2. Fabric Construction</h3>
+      <p>
+        A plain-weave construction was selected for the outer layer, providing clean appearance and consistent coating
+        adhesion. The fabric weight was optimized to 120 g/m² — comparable to virgin polyester equivalents.
+      </p>
+
+      <h3>3. Functional Finishing</h3>
+      <p>
+        A solvent-free PU coating was applied for waterproof performance, followed by a C0 DWR finish
+        (fluorocarbon-free) to meet the brand's environmental standards. The combination achieved 5,000 mm hydrostatic
+        head while maintaining breathability.
+      </p>
+
+      <h3>4. Certification Documentation</h3>
+      <p>
+        Seekingtex provided full GRS transaction certificates (TCs) covering the entire supply chain from yarn to
+        finished fabric, along with OEKO-TEX Standard 100 certification for the final product.
+      </p>
+
+      <hr />
+
+      <h2>Development Process</h2>
+      <h3>Step 1: Material Selection</h3>
+      <p>
+        We evaluated multiple rPET yarn sources for consistency. Two suppliers were selected based on fiber quality and
+        certification reliability.
+      </p>
+      <h3>Step 2: Prototype Development</h3>
+      <p>
+        Three fabric constructions were developed and tested. The plain-weave option with PU coating was selected as the
+        best balance of performance and sustainability.
+      </p>
+      <h3>Step 3: Certification Verification</h3>
+      <p>
+        GRS chain-of-custody documentation was prepared and verified. Third-party testing confirmed recycled content met
+        the 100% rPET claim.
+      </p>
+      <h3>Step 4: Production</h3>
+      <p>
+        Bulk production was completed across 4 colorways with consistent quality and full certification documentation
+        for each batch.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <p>
+        The fabric was used across the brand's "Sustainable Performance" collection including a rain shell jacket,
+        packable windbreaker, trail vest, and outdoor pants. The collection was marketed with full sustainability claims
+        backed by GRS certification.
+      </p>
+      <ul>
+        <li><strong>100% rPET content</strong> — fully recycled polyester construction</li>
+        <li><strong>5,000 mm hydrostatic head</strong> — reliable waterproof protection</li>
+        <li><strong>GRS + OEKO-TEX certified</strong> — full traceability and safety</li>
+        <li><strong>Fluorocarbon-free DWR</strong> — environmentally responsible finishing</li>
+      </ul>
+
+      <hr />
+
+      <h2>Why the Customer Chose Seekingtex</h2>
+      <p>
+        The brand had previously struggled to find recycled fabrics that met their technical specifications. Seekingtex
+        demonstrated that recycled materials could achieve performance parity with virgin fabrics, provided complete
+        certification documentation, and offered competitive pricing for certified sustainable materials.
+      </p>
+
+      <hr />
+
+      <h2>Project Summary</h2>
+      <table>
+        <thead><tr><th>Item</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr><td>Customer Type</td><td>Scandinavian Eco-conscious Outdoor Brand</td></tr>
+          <tr><td>Product</td><td>Sustainable Performance Collection</td></tr>
+          <tr><td>Fabric Type</td><td>100% rPET Recycled Polyester</td></tr>
+          <tr><td>Certification</td><td>GRS + OEKO-TEX Standard 100</td></tr>
+          <tr><td>Waterproof Rating</td><td>5,000 mm Hydrostatic Head</td></tr>
+          <tr><td>Result</td><td>4-Style Collection with Full Eco Claims</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>What is GRS certification for fabric?</h3>
+      <p>
+        GRS Global Recycled Standard is a certification that verifies the recycled content in textiles and tracks it
+        through the supply chain. It also covers environmental practices, chemical use, and social responsibility in
+        manufacturing.
+      </p>
+      <h3>Can sustainable outdoor fabrics still perform well?</h3>
+      <p>
+        Yes. Modern recycled polyester and nylon fabrics achieve the same performance as virgin materials. Seekingtex
+        develops GRS-certified recycled fabrics that meet or exceed standard performance benchmarks.
+      </p>
+      <h3>What eco-friendly fabric options does Seekingtex offer?</h3>
+      <p>
+        Seekingtex offers GRS-certified recycled polyester and recycled nylon fabrics, OEKO-TEX certified materials,
+        eco-friendly dyeing processes, and sustainable finishing treatments.
+      </p>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href="/products/eco-friendly-recycled-fabric"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Eco-Friendly Recycled Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">GRS-certified recycled materials for sustainable products</p>
+        </a>
+        <a
+          href="/products/waterproof-breathable"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Waterproof Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Weather protection with eco-friendly finishing options</p>
+        </a>
+        <a
+          href="/products/quick-dry-moisture-wicking"
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Quick-Dry Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Performance moisture management in recycled options</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Develop Your Sustainable Fabric Solution</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">
+        Contact Seekingtex to discuss your sustainable fabric requirements. We provide certified recycled materials for
+        outdoor, sportswear, and fashion applications.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >Discuss Your Project</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-sky-600 hover:text-sky-700 font-medium">&larr; Back to All Case Studies</a>
+    </div>
+  </div>
+</Layout>

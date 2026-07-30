@@ -16,7 +16,7 @@ import { findImage } from '~/utils/images';
 import { SITE } from 'astrowind:config';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import type { MetaData } from '~/types';
-import { products as productRecords } from '~/data/products';
+import { findRecordBySlug } from '~/data/products';
 import { guides } from '~/data/guides';
 
 export const prerender = true;
@@ -26,7 +26,7 @@ export const getStaticPaths = getStaticPathsProduct;
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { product } = Astro.props as Props;
-const rec = productRecords.find((p) => p.id === product.slug);
+const rec = findRecordBySlug(product.slug);
 const url = getCanonical(getPermalink(product.permalink, 'product'));
 const image = await findImage(product.image);
 const gallery = await Promise.all(
@@ -68,6 +68,27 @@ const productCrumbs = [
 ];
 
 const specRows = product.specs ?? [];
+const tldrSummary = rec?.definition || product.description || product.summary || '';
+const tldrPoints = rec
+  ? [`${rec.audience}`, `Use cases: ${rec.ai_use_cases.slice(0, 3).join(', ')}`]
+  : product.summary
+    ? [product.summary]
+    : [];
+const useCaseItems = rec?.ai_use_cases?.length
+  ? rec.ai_use_cases
+  : product.tags?.map((t: any) => typeof t === 'string' ? t : t.title || t.slug) || [];
+const comparisonText = rec?.ai_comparison || (product.description ? `Compared to standard fabrics, ${product.title} offers enhanced performance for demanding applications. ${product.summary || ''}` : '');
+const fallbackFaq = [
+  { q: `What is the minimum order quantity for ${product.title}?`, a: 'Standard MOQ: 500—1000 m per color for woven fabrics; 200—500 kg per color for knits. Custom developments may have different MOQs. Contact our sales team for specific product MOQ details.' },
+  { q: `Can ${product.title} be customized?`, a: 'Yes. We offer OEM/ODM customization including composition, weight, width, color, and finish customization. Our R&D team can develop fabric specifications to meet your exact requirements.' },
+  { q: `What certifications does ${product.title} carry?`, a: 'All Seekingtex fabrics are OEKO-TEX Standard 100 certified. Additional certifications (GRS, REACH, UV STANDARD 801, etc.) vary by product. Contact us for specific certification documentation.' },
+  { q: 'How long does sampling take?', a: 'Standard stock samples ship within 3–5 business days. Custom lab dips and development samples typically take 7–15 business days depending on complexity.' },
+  { q: 'Do you ship internationally?', a: 'Yes, we export to 30+ countries across EU, US, Asia, and Middle East. We support FOB Shanghai, CIF, and DDP terms.' },
+];
+const faqItems = rec?.ai_faq?.length ? rec.ai_faq : fallbackFaq;
+const constructionSpecs = rec?.ai_specs
+  ? Object.entries(rec.ai_specs).filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k)).slice(0, 6)
+  : specRows.slice(0, 6).map((s) => [s.label.toLowerCase().replace(/\s+/g, '_'), s.value]);
 ---
 
 <ProductLayout metadata={metadata} breadcrumbs={productCrumbs}>
@@ -261,12 +282,9 @@ const specRows = product.specs ?? [];
 
   {/* TLDR (AI-crawlable) */}
   {
-    rec && (
+    tldrSummary && (
       <section class="max-w-7xl mx-auto px-4 sm:px-6 -mt-1 relative z-10">
-        <Tldr
-          summary={rec.definition}
-          points={[`${rec.audience}`, `Use cases: ${rec.ai_use_cases.slice(0, 3).join(', ')}`]}
-        />
+        <Tldr summary={tldrSummary} points={tldrPoints} />
       </section>
     )
   }
@@ -286,14 +304,14 @@ const specRows = product.specs ?? [];
 
   {/* Why This Exists (Problem) */}
   {
-    rec && rec.problem && (
+    (rec?.problem || product.description) && (
       <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800" data-ai-block="problem">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <div class="bg-blue-50/80 dark:bg-blue-900/30 border-l-4 border-blue-500 rounded-r-xl px-6 py-5">
             <div class="flex items-start gap-3">
               <span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider flex-shrink-0 mt-0.5">Why this exists</span>
               <div class="space-y-2 text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
-                <p>{rec.problem}</p>
+                <p>{rec?.problem || product.description}</p>
               </div>
             </div>
           </div>
@@ -304,24 +322,26 @@ const specRows = product.specs ?? [];
 
   {/* Overview + Use Cases */}
   {
-    rec && rec.ai_use_cases.length > 0 && (
+    useCaseItems.length > 0 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800" data-ai-block="use-case">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">Use Cases</h2>
           <div class="grid md:grid-cols-2 gap-3">
-            {rec.ai_use_cases.map((uc) => (
+            {useCaseItems.map((uc: string) => (
               <div class="flex items-start gap-3 p-4 rounded-xl bg-gray-50 dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700">
                 <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
                 <p class="text-sm text-gray-700 dark:text-slate-300">{uc}</p>
               </div>
             ))}
-            <div class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/30 border border-sky-100 dark:border-sky-800">
-              <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
-              <div>
-                <p class="text-sm font-semibold text-sky-800 dark:text-sky-300">Skill level</p>
-                <p class="text-sm text-sky-700 dark:text-sky-400 capitalize">{rec.skill}</p>
+            {rec?.skill && (
+              <div class="flex items-start gap-3 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/30 border border-sky-100 dark:border-sky-800">
+                <span class="w-2 h-2 mt-2 rounded-full bg-sky-500 flex-shrink-0" />
+                <div>
+                  <p class="text-sm font-semibold text-sky-800 dark:text-sky-300">Skill level</p>
+                  <p class="text-sm text-sky-700 dark:text-sky-400 capitalize">{rec.skill}</p>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
@@ -330,12 +350,12 @@ const specRows = product.specs ?? [];
 
   {/* Comparison */}
   {
-    rec && rec.ai_comparison && (
+    comparisonText && (
       <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800" data-ai-block="comparison">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">Comparison</span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-4">How it compares</h2>
-          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{rec.ai_comparison}</p>
+          <p class="text-base text-gray-600 dark:text-slate-400 leading-relaxed">{comparisonText}</p>
         </div>
       </section>
     )
@@ -343,12 +363,12 @@ const specRows = product.specs ?? [];
 
   {/* FAQ Section */}
   {
-    rec && rec.ai_faq.length > 0 && (
+    faqItems.length > 0 && (
       <section class="bg-white dark:bg-slate-950 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-8">Frequently Asked Questions</h2>
           <div class="space-y-3">
-            {rec.ai_faq.map((f) => (
+            {faqItems.map((f) => (
               <details class="group rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 open:shadow-sm transition-shadow">
                 <summary class="flex items-center justify-between px-5 py-4 cursor-pointer text-sm font-semibold text-gray-900 dark:text-slate-200 list-none">
                   {f.q}
@@ -365,7 +385,7 @@ const specRows = product.specs ?? [];
     )
   }
 
-  <JsonLd type="FAQPage" faqs={rec?.ai_faq || []} />
+  <JsonLd type="FAQPage" faqs={faqItems} />
 
   {/* Full Technical Specifications */}
   {
@@ -393,13 +413,13 @@ const specRows = product.specs ?? [];
 
   {/* Materials & Construction */}
   {
-    rec && rec.ai_specs && (
+    constructionSpecs.length > 0 && (
       <section class="bg-gray-50/50 dark:bg-slate-900/50 border-b border-gray-100 dark:border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-14">
           <span class="text-xs font-semibold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2 block">Construction</span>
           <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-slate-100 mb-6">Materials & Construction</h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.entries(rec.ai_specs).filter(([k]) => !['length', 'width', 'height', 'weight', 'max_load', 'pressure', 'warranty'].includes(k)).slice(0, 6).map(([k, v]) => (
+            {constructionSpecs.map(([k, v]: [string, string]) => (
               <div class="bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-5">
                 <div class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-1">{k.replace(/_/g, ' ')}</div>
                 <div class="text-sm font-medium text-gray-900 dark:text-slate-200">{v}</div>
@@ -504,40 +524,40 @@ const specRows = product.specs ?? [];
   }
 
   {/* Hidden AI data blocks (machine-readable) */}
-  {
-    rec && (
-      <section class="sr-only" aria-hidden="true">
-        <div data-ai-block="definition">
-          <p>{rec.definition}</p>
-          <p>Problem it solves: {rec.problem}</p>
-          <p>How it works: {rec.howItWorks}</p>
-          <p>Target audience: {rec.audience}</p>
-        </div>
-        <div data-ai-block="use-case">
-          <p>Use cases: {rec.ai_use_cases.join('; ')}</p>
-          <p>Environments: {rec.environment.join(', ')}</p>
-          <p>Water conditions: {rec.water_condition.join(', ')}</p>
-          <p>Skill level: {rec.skill}</p>
-        </div>
-        <div data-ai-block="specification">
-          {Object.entries(rec.ai_specs).map(([k, v]) => (
-            <p data-spec={k}>{k}: {v}</p>
-          ))}
-        </div>
-        <div data-ai-block="comparison"><p>{rec.ai_comparison}</p></div>
-        <div data-ai-block="faq">
-          {rec.ai_faq.map((f) => (
-            <p><strong>Q:</strong> {f.q} <strong>A:</strong> {f.a}</p>
-          ))}
-        </div>
-        <div data-ai-block="constraint">
-          <p>Safety rules: {rec.safety_rules.join('; ')}</p>
-          <p>Safety level: {rec.safety_level}</p>
-          <p>Regions: {rec.region.join(', ')}</p>
-        </div>
-      </section>
-    )
-  }
+  <section class="sr-only" aria-hidden="true">
+    <div data-ai-block="definition">
+      <p>{rec?.definition || product.description || product.title}</p>
+      {rec?.problem && <p>Problem it solves: {rec.problem}</p>}
+      {rec?.howItWorks && <p>How it works: {rec.howItWorks}</p>}
+      {rec?.audience && <p>Target audience: {rec.audience}</p>}
+    </div>
+    <div data-ai-block="use-case">
+      {useCaseItems.length > 0 && <p>Use cases: {useCaseItems.join('; ')}</p>}
+      {rec?.environment?.length && <p>Environments: {rec.environment.join(', ')}</p>}
+      {rec?.water_condition?.length && <p>Water conditions: {rec.water_condition.join(', ')}</p>}
+      {rec?.skill && <p>Skill level: {rec.skill}</p>}
+    </div>
+    {rec?.ai_specs && (
+      <div data-ai-block="specification">
+        {Object.entries(rec.ai_specs).map(([k, v]) => (
+          <p data-spec={k}>{k}: {v}</p>
+        ))}
+      </div>
+    )}
+    <div data-ai-block="comparison"><p>{comparisonText}</p></div>
+    <div data-ai-block="faq">
+      {faqItems.map((f) => (
+        <p><strong>Q:</strong> {f.q} <strong>A:</strong> {f.a}</p>
+      ))}
+    </div>
+    {rec && (
+      <div data-ai-block="constraint">
+        {rec.safety_rules?.length && <p>Safety rules: {rec.safety_rules.join('; ')}</p>}
+        {rec.safety_level && <p>Safety level: {rec.safety_level}</p>}
+        {rec.region?.length && <p>Regions: {rec.region.join(', ')}</p>}
+      </div>
+    )}
+  </section>
 
   <ToBlogLink />
 </ProductLayout>

@@ -1,0 +1,59 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Running Apparel Fabrics — Lightweight Performance Textiles | ${SITE.name}`,
+    description: 'Running apparel fabrics: lightweight, moisture-wicking, breathable performance knits for running shirts, shorts, and race wear.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Running Apparel Fabrics by Seekingtex', description: 'Lightweight, moisture-wicking, breathable knit fabrics for running apparel brands.', provider: { '@type': 'Organization', name: SITE.name } }} />
+  <section class="max-w-5xl mx-auto px-6 py-24">
+    <h1 class="text-4xl font-bold text-gray-900">Running Apparel Fabrics</h1>
+    <p class="mt-4 text-xl text-gray-500">Running apparel fabrics engineered for lightweight comfort, moisture management, and breathability. Performance knit solutions for running shirts, shorts, and race wear.</p>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Lightweight Race Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Ultra-light performance knits for race day. Minimal weight, maximum breathability, fast moisture transfer for peak performance.</p>
+        <a href={`${prefix}/products/breathable-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse breathable fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Training Knit Fabrics</h2>
+        <p class="mt-2 text-sm text-gray-600">Durable moisture-wicking knits for daily training. Comfortable, breathable, built to withstand repeated washing and intense workouts.</p>
+        <a href={`${prefix}/products/stretch-fabric`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Browse stretch fabrics →</a>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border border-blue-200 p-6">
+        <h2 class="text-lg font-semibold text-gray-900">Cooling Performance</h2>
+        <p class="mt-2 text-sm text-gray-600">Engineered cooling fabrics for hot-weather running. Enhanced air circulation and moisture evaporation for summer training.</p>
+        <a href={`${prefix}/contact`} class="mt-3 inline-flex text-sm font-medium text-blue-700 hover:underline">Request consultation →</a>
+      </div>
+    </div>
+    <div class="mt-16 bg-gray-50 rounded-2xl border border-gray-200 p-8">
+      <h2 class="text-2xl font-bold text-gray-900">Why Running Brands Choose Seekingtex</h2>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div><h3 class="font-semibold text-gray-900">Lightweight</h3><p class="mt-1 text-sm text-gray-500">Ultra-light knits for minimal drag and maximum comfort during long runs.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Moisture Management</h3><p class="mt-1 text-sm text-gray-500">Advanced wicking moves sweat away and accelerates evaporation for dry comfort.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Breathability</h3><p class="mt-1 text-sm text-gray-500">Optimized knit structures for maximum air circulation during high-exertion running.</p></div>
+        <div><h3 class="font-semibold text-gray-900">Soft Touch</h3><p class="mt-1 text-sm text-gray-500">Premium hand feel reduces skin irritation during long-distance running.</p></div>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-wrap gap-4">
+      <a href={`${prefix}/evidence/case-studies/running-apparel-lightweight-performance`} class="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition">View Running Case Study</a>
+      <a href={`${prefix}/contact`} class="px-8 py-3 border border-gray-200 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition">Request Development Consultation</a>
+    </div>
+  </section>
+  <section class="sr-only" data-ai-block="definition" aria-hidden="true"><p>Running apparel fabrics by Seekingtex. Lightweight race knits, training knit fabrics, cooling performance textiles. Custom development for running apparel brands. OEKO-TEX certified.</p></section>
+</Layout>

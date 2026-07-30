@@ -1,0 +1,79 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+
+const metadata = {
+  title: `Easy Care Business Casual Collection — Case Study | ${SITE.name}`,
+  description: 'How Seekingtex helped a North American premium casual brand develop wrinkle-resistant, quick-dry fabrics for a modern business casual collection targeting traveling professionals.',
+  ignoreTitleTemplate: true,
+};
+
+const crumbs = [{ name: 'Home', href: '/' }, { name: 'Evidence', href: '/evidence' }, { name: 'Easy Care Collection' }];
+---
+
+<Layout metadata={metadata} breadcrumbs={crumbs}>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'Easy Care Business Casual Collection for North American Premium Brand', description: 'Seekingtex developed wrinkle-resistant, quick-dry fabrics for a North American brand\'s modern business casual collection.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/knit-stretch-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is wrinkle-resistant fabric for travel?', acceptedAnswer: { '@type': 'Answer', text: 'Wrinkle-resistant fabric uses special finishing treatments or fiber blends that help garments resist creasing during wear, packing, and travel. It reduces the need for ironing.' } },
+        { '@type': 'Question', name: 'Can easy-care fabrics look premium?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Modern easy-care fabrics combine wrinkle resistance and quick-dry performance with a premium appearance, soft hand feel, and professional drape suitable for business casual settings.' } },
+        { '@type': 'Question', name: 'What is the best fabric for travel clothing?', acceptedAnswer: { '@type': 'Answer', text: 'Lightweight woven fabrics with wrinkle resistance, quick-dry, and stretch properties are ideal for travel clothing. Polyester blends or high-quality nylon blends offer the best balance of performance and appearance.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href="/" class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href="/evidence" class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Easy Care Collection</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-violet-700 bg-violet-50 px-3 py-1 rounded-full">Premium Casual</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Easy Care Business Casual Collection for North American Premium Brand</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped a North American casual wear brand create a wrinkle-resistant, quick-dry collection for modern professionals.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Wrinkle-</div><div class="text-xs text-gray-500 mt-1">Resistant</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Quick Dry</div><div class="text-xs text-gray-500 mt-1">Easy Care</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-violet-700">Stretch</div><div class="text-xs text-gray-500 mt-1">All-Day Comfort</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>A North American premium casual wear brand catering to urban professionals wanted to expand into business casual apparel. Their target customers — consultants, remote workers, and frequent travelers — needed clothing that could transition from office to dinner to airport without looking wrinkled or requiring special care.</p>
+
+      <h2>The Challenge</h2>
+      <p>Standard business casual fabrics — cotton dress shirts, wool-blend trousers — wrinkle easily, require dry cleaning or ironing, and are uncomfortable for travel or extended wear. The brand needed fabrics that could withstand packing, long flights, and full workdays while maintaining a crisp, professional appearance.</p>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex developed a collection of easy-care stretch woven fabrics using high-performance polyester blends with wrinkle-resistant finishing. The fabrics offered machine washability, quick-dry performance (drying 3x faster than cotton), mechanical stretch for comfort, and a premium hand feel indistinguishable from traditional business casual materials.</p>
+
+      <h2>Results</h2>
+      <ul>
+        <li>New business casual line launched as "Travel Ready" collection</li>
+        <li>90% reduction in customer complaints about wrinkling compared to previous cotton-based line</li>
+        <li>Machine washable proposition attracted frequent travelers and busy professionals</li>
+        <li>Repeat orders for seasonal color updates within the same fabric specification</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-violet-700 to-purple-800 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing an Easy Care Collection?</h2>
+      <p class="text-violet-100 max-w-xl mx-auto mb-6">Contact Seekingtex for wrinkle-resistant, quick-dry fabrics that look premium.</p>
+      <a href="/contact" class="inline-block bg-white text-violet-700 font-semibold px-8 py-3 rounded-xl hover:bg-violet-50 transition-colors">Request Development Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href="/evidence" class="text-violet-700 hover:text-violet-800 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>

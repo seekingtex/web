@@ -1,0 +1,179 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages, defaultLang, ui } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+---
+
+<Layout
+  metadata={{
+    title: `High Performance Ski Wear Fabric Development | ${SITE.name}`,
+    description:
+      'Case study: Seekingtex developed a 3-layer waterproof breathable fabric system for an Alpine ski wear brand.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'High Performance Ski Wear Fabric Development',
+      description: 'Seekingtex developed a 3-layer waterproof breathable fabric system for an Alpine ski wear brand.',
+      author: { '@type': 'Organization', name: SITE.name },
+      image: 'https://seekingtex.com/images/seekingtex/products/waterproof-fabric.webp',
+      datePublished: '2026-07-28',
+      publisher: { '@type': 'Organization', name: SITE.name },
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`/${lang}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`/${lang}/evidence`} class="hover:text-sky-600">{t('home.evidence.title')}</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Ski Wear Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span
+        class="inline-block text-xs font-semibold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full"
+        >Outdoor Apparel</span
+      >
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      High Performance Ski Wear Fabric Development for an Alpine Brand
+    </h1>
+    <p class="text-xl text-gray-500 mb-8">
+      Developing a 3-layer waterproof breathable fabric system for extreme winter conditions.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">20K mm</div>
+        <div class="text-xs text-gray-500 mt-1">Hydrostatic Head</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">15K g/m²</div>
+        <div class="text-xs text-gray-500 mt-1">Breathability</div>
+      </div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-sky-600">60 days</div>
+        <div class="text-xs text-gray-500 mt-1">Development</div>
+      </div>
+    </div>
+
+    <div class="relative h-80 bg-gray-100 rounded-2xl overflow-hidden mb-12">
+      <img
+        src="/images/seekingtex/products/waterproof-fabric.webp"
+        alt="3-layer waterproof breathable ski wear fabric"
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+        <span class="text-white text-sm font-medium">3-Layer Laminate for Ski Wear</span>
+      </div>
+    </div>
+
+    <article
+      class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
+    >
+      <h2>Customer Background</h2>
+      <p>
+        Our customer is an Alpine-region ski wear brand planning to launch a premium ski jacket and bib pant collection.
+        The brand needed a fabric partner who could deliver a complete 3-layer laminate system with verified performance
+        data and competitive pricing for a seasonal product launch.
+      </p>
+
+      <hr />
+
+      <h2>Project Challenge</h2>
+      <p>
+        The brand specified demanding targets: minimum 15,000 mm hydrostatic head (target 20,000 mm), 10,000+ g/m²/24h
+        MVTR breathability (target 15,000), 50,000+ Martindale cycles, under 280 g/m², and good drape without excessive
+        rustling. Several laminate suppliers were evaluated before selecting the membrane technology.
+      </p>
+
+      <hr />
+
+      <h2>Seekingtex Solution</h2>
+      <p>
+        Seekingtex developed a complete 3-layer laminate system: a 75D x 75D nylon 6.6 woven face fabric with C6 DWR, a
+        PTFE-based waterproof breathable membrane laminated via dot-adhesive process, and a lightweight tricot knit
+        backer. The system achieved 20,000 mm hydrostatic head and 15,000 g/m²/24h MVTR.
+      </p>
+
+      <h2>Development Process</h2>
+      <p>
+        Three construction combinations were proposed and small-scale laminate samples were produced. The selected
+        combination was provided for prototype garment production and field testing by skiers. Bulk production followed
+        with inline testing for laminate adhesion and waterproof integrity.
+      </p>
+
+      <hr />
+
+      <h2>Final Result</h2>
+      <ul>
+        <li><strong>Waterproof:</strong> 20,000 mm hydrostatic head — exceeded target</li>
+        <li><strong>Breathable:</strong> 15,000 g/m²/24h MVTR — optimal for high-exertion skiing</li>
+        <li><strong>Durable:</strong> 50,000+ Martindale cycles on face fabric</li>
+        <li><strong>Complete system:</strong> Face fabric + membrane + liner verified</li>
+      </ul>
+    </article>
+
+    <section class="mt-16 pt-8 border-t border-gray-200">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Fabric Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a
+          href={`/${lang}/products/waterproof-breathable`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">
+            Waterproof Breathable Fabric
+          </h3>
+          <p class="text-sm text-gray-500 mt-2">High-performance laminated fabrics</p>
+        </a>
+        <a
+          href={`/${lang}/products/breathable-mesh-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Breathable Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Moisture management for winter sports</p>
+        </a>
+        <a
+          href={`/${lang}/products/stretch-fabric`}
+          class="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-all"
+        >
+          <h3 class="font-semibold text-gray-900 group-hover:text-sky-600 transition-colors">Stretch Fabric</h3>
+          <p class="text-sm text-gray-500 mt-2">Flexibility for ski wear</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="mt-16 bg-gradient-to-r from-sky-600 to-blue-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">{t('home.evidence.ctaTitle')}</h2>
+      <p class="text-sky-100 max-w-xl mx-auto mb-6">{t('home.evidence.ctaDesc')}</p>
+      <a
+        href={`/${lang}/contact`}
+        class="inline-block bg-white text-sky-700 font-semibold px-8 py-3 rounded-xl hover:bg-sky-50 transition-colors"
+        >{t('home.evidence.ctaButton')}</a
+      >
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`/${lang}/evidence`} class="text-sky-600 hover:text-sky-700 font-medium"
+        >&larr; {t('home.evidence.title')}</a
+      >
+    </div>
+  </div>
+</Layout>

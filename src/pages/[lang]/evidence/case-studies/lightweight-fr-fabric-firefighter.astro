@@ -1,0 +1,96 @@
+---
+export const prerender = true;
+
+import Layout from '~/layouts/PageLayout.astro';
+import JsonLd from '~/components/common/JsonLd.astro';
+import { SITE } from 'astrowind:config';
+import { languages } from '~/i18n/config';
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const prefix = lang === 'en' ? '' : `/${lang}`;
+---
+
+<Layout
+  metadata={{
+    title: `Lightweight FR Fabric — Firefighter Protective Clothing Case Study | ${SITE.name}`,
+    description: 'Case study: Seekingtex helped a European firefighter apparel manufacturer develop a lightweight, breathable FR fabric system balancing protection, mobility, and comfort.',
+    ignoreTitleTemplate: true,
+  }}
+>
+  <JsonLd data={{ '@context': 'https://schema.org', '@type': 'Article', headline: 'Lightweight Flame Resistant Fabric for Firefighter Protective Clothing', description: 'Seekingtex developed a lightweight FR protective fabric for a European firefighter apparel manufacturer.', author: { '@type': 'Organization', name: SITE.name }, image: 'https://seekingtex.com/images/seekingtex/products/fr-workwear-texture.webp', datePublished: '2026-07-30', publisher: { '@type': 'Organization', name: SITE.name } }} />
+  <JsonLd
+    data={{
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What challenges do firefighter clothing manufacturers face when selecting fabrics?', acceptedAnswer: { '@type': 'Answer', text: 'Firefighter clothing manufacturers need fabrics that balance flame resistance, thermal protection, breathability, durability, and comfort. The multi-layer system must protect against heat while allowing moisture vapor escape.' } },
+        { '@type': 'Question', name: 'Why are lightweight protective fabrics important?', acceptedAnswer: { '@type': 'Answer', text: 'Lightweight protective fabrics reduce physical burden, improve mobility, reduce fatigue, and increase operational efficiency during prolonged emergency responses.' } },
+        { '@type': 'Question', name: 'Can Seekingtex customize FR fabrics for protective apparel?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Seekingtex provides customized FR textile solutions including fiber blend optimization, weave structure design, and functional finishing for protective apparel applications.' } },
+      ],
+    }}
+  />
+
+  <div class="max-w-4xl mx-auto px-6 py-16">
+    <nav class="text-sm text-gray-500 mb-8">
+      <a href={`${prefix}/`} class="hover:text-sky-600">{SITE.name}</a>
+      <span class="mx-2">/</span>
+      <a href={`${prefix}/evidence`} class="hover:text-sky-600">Evidence</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-900">Firefighter FR Fabric</span>
+    </nav>
+
+    <div class="mb-4">
+      <span class="inline-block text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 px-3 py-1 rounded-full">Protective Apparel</span>
+    </div>
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Lightweight Flame Resistant Fabric for Firefighter Protective Clothing</h1>
+    <p class="text-xl text-gray-500 mb-8">How Seekingtex helped a European firefighter apparel manufacturer develop a lighter, more breathable FR fabric system.</p>
+
+    <div class="grid grid-cols-3 gap-4 mb-12">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">FR</div><div class="text-xs text-gray-500 mt-1">Inherently Flame Resistant</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">30%</div><div class="text-xs text-gray-500 mt-1">Weight Reduction</div></div>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-amber-600">50+</div><div class="text-xs text-gray-500 mt-1">Wash Cycles Stable</div></div>
+    </div>
+
+    <article class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600">
+      <h2>Customer Background</h2>
+      <p>Our customer is a European manufacturer specializing in protective apparel for fire departments, rescue organizations, and industrial safety teams. With evolving safety standards and increasing expectations for comfort, the brand needed to modernize its traditional multi-layer fabric system.</p>
+
+      <h2>The Market Challenge</h2>
+      <p>Traditional firefighter protective clothing uses multi-layer construction for protection, but this creates excessive weight, poor moisture management, and limited mobility. Firefighters carry 50+ lbs of equipment — heavy clothing compounds physical fatigue during prolonged operations.</p>
+
+      <h2>Customer Requirements</h2>
+      <ul>
+        <li><strong>Flame Resistant Protection:</strong> Reliable self-extinguishing with stable thermal properties</li>
+        <li><strong>Lightweight Construction:</strong> Significant weight reduction without compromising safety</li>
+        <li><strong>Improved Moisture Management:</strong> Better sweat wicking and breathability</li>
+        <li><strong>Long-Term Durability:</strong> Maintained performance after 50+ industrial launderings</li>
+      </ul>
+
+      <h2>Seekingtex Solution</h2>
+      <p>Seekingtex analyzed the application environment and optimized fiber blend, weave density, and fabric construction. Three areas received focused development: FR fiber system with stable self-extinguishing properties, engineered wicking channels for moisture transport, and high-tenacity yarns for abrasion resistance.</p>
+
+      <h2>Customer Results</h2>
+      <ul>
+        <li>New turnout gear series with 30% weight reduction</li>
+        <li>Enhanced breathability and moisture management for prolonged operations</li>
+        <li>FR and mechanical properties maintained after 50+ industrial launderings</li>
+        <li>Firefighters reported better mobility and reduced fatigue</li>
+      </ul>
+
+      <blockquote>"Seekingtex did not simply provide a fabric. They worked with us to understand our application requirements and develop a textile solution that balanced protection, comfort, and durability."<br /><em>— Technical Director, European Protective Apparel Manufacturer</em></blockquote>
+    </article>
+
+    <section class="mt-16 bg-gradient-to-r from-amber-600 to-orange-700 rounded-2xl p-10 text-center text-white">
+      <h2 class="text-2xl font-bold mb-3">Developing Protective Textile Solutions?</h2>
+      <p class="text-amber-100 max-w-xl mx-auto mb-6">Our R&D team specializes in FR, durable, and breathable fabric systems for protective apparel manufacturers.</p>
+      <a href={`${prefix}/contact`} class="inline-block bg-white text-amber-700 font-semibold px-8 py-3 rounded-xl hover:bg-amber-50 transition-colors">Request Technical Consultation</a>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a href={`${prefix}/evidence`} class="text-amber-600 hover:text-amber-700 font-medium">&larr; Back to Evidence</a>
+    </div>
+  </div>
+</Layout>
