@@ -29,3 +29,43 @@ visuals:
     image: /images/seekingtex/products/graphene-fabric.webp
   - id: fleece-thermal-lining
     image: /images/seekingtex/products/fleece-fabric.webp
+  - id: compression-recovery-fabric
+    image: /images/seekingtex/products/compression-texture.jpg
+  - id: stretch-knit-fabric
+    image: /images/seekingtex/products/knit-stretch-texture.jpg
+  - id: organic-cotton-fabric
+    image: /images/seekingtex/products/organic-cotton-texture.jpg
+  - id: rpet-recycled-nylon-fabric
+    image: /images/seekingtex/products/rpet-nylon-texture.jpg
+  - id: inherent-fr-fabric
+    image: /images/seekingtex/products/flame-retardant-fabric.webp
+  - id: fr-cotton-polyester-workwear-fabric
+    image: /images/seekingtex/products/fr-workwear-texture.jpg
+  - id: arc-flash-welding-protection-fabric
+    image: /images/seekingtex/products/arc-flash-fabric-texture.jpg
+  - id: upf50-knit-activewear-fabric
+    image: /images/seekingtex/products/activewear-upf-texture.jpg
+  - id: silver-ion-antimicrobial-fabric
+    image: /images/seekingtex/products/antimicrobial-texture.jpg
+  - id: high-airflow-mesh-sportswear-fabric
+    image: /images/seekingtex/products/breathable-mesh-fabric.webp
+  - id: functional-fashion-fabric
+    image: /images/seekingtex/products/functional-fashion-texture.jpg
+  - id: high-density-tactical-fabric
+    image: /images/seekingtex/products/high-density-tactical-texture.jpg
+  - id: triple-protection-workwear-fabric
+    image: /images/seekingtex/products/triple-protection-texture.jpg
+  - id: outdoor-softshell-fabric
+    image: /images/seekingtex/products/outdoor-softshell-texture.jpg
+  - id: polyester-softshell-fabric
+    image: /images/seekingtex/products/polyester-softshell-texture.jpg
+  - id: quick-dry-sports-woven-fabric
+    image: /images/seekingtex/products/quick-dry-woven-texture.jpg
+  - id: yoga-high-stretch-knit
+    image: /images/seekingtex/products/yoga-stretch-knit-texture.jpg
+  - id: yoga-legging-knit-fabric
+    image: /images/seekingtex/products/yoga-legging-knit-texture.jpg
+  - id: cooling-touch-fabric
+    image: /images/seekingtex/products/cooling-touch-texture.jpg
+  - id: light-down-fabric
+    image: /images/seekingtex/products/light-down-texture.jpg

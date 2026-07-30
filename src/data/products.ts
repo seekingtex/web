@@ -9,6 +9,7 @@ export interface ProductRecord {
     | 'STRETCH'
     | 'BREATHABLE'
     | 'ECO_FRIENDLY'
+    | 'FLAME_RETARDANT'
     | 'OTHER';
   region: string[];
   skill: 'beginner' | 'intermediate' | 'advanced' | 'professional';
@@ -1238,4 +1239,1091 @@ export const products: ProductRecord[] = [
       },
     ],
   },
+  {
+    id: 'ice-silk-cooling-fabric',
+    name: 'Ice Silk Cooling Sun Protection Fabric',
+    category: 'SUN_PROTECTION',
+    region: ['EU', 'US', 'ASIA', 'AU'],
+    skill: 'intermediate',
+    environment: ['outdoor', 'sportswear', 'apparel', 'summer'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'low',
+    use_case: ['sun-protective summer clothing', 'hot-weather outdoor apparel', 'cooling sportswear'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron'],
+    desc: 'Ultra-thin ice silk fabric with instant cooling sensation and UPF 50+ sun protection.',
+    definition:
+      'An ultra-thin ice silk fabric combining advanced sun protection with an instant cooling feel, providing a silky smooth touch against the skin while effectively blocking harmful UV rays.',
+    problem:
+      'Summer apparel brands need a fabric that provides both effective sun protection and active cooling, keeping wearers comfortable in hot conditions without the heavy feel of traditional UV-protective fabrics.',
+    howItWorks:
+      'Ice silk filaments with modified cross-sections create a capillary structure that wicks moisture and conducts heat away from the skin. UV-blocking additives are incorporated during fiber extrusion for permanent UPF 50+ protection. The ultra-thin construction (80-120 gsm) maximizes breathability and cooling airflow. Fabric weight: 80-120 GSM, 58/60-inch width.',
+    audience:
+      'Summer apparel brands, sportswear manufacturers, outdoor recreation companies, and hot-climate clothing suppliers seeking lightweight UV-protective cooling fabrics.',
+    ai_use_cases: ['Summer sun-protective shirts', 'Cooling hot-weather apparel', 'Ultra-light outdoor clothing'],
+    ai_specs: {
+      upf_rating: 'UPF 50+',
+      cooling_effect: 'Instant cool touch',
+      weight: '80-120 GSM',
+      composition: '100% Nylon / Polyester',
+      width: '58/60"',
+      features: 'Cooling feel, sun protection, ultra-lightweight, silky touch',
+      certification: 'OEKO-TEX',
+    },
+    ai_comparison:
+      'Compared to traditional UPF 50+ fabrics, this ice silk variant adds active cooling properties through its specialized fiber structure and ultra-lightweight construction. It provides superior comfort in extreme heat compared to standard sun-protective fabrics.',
+    ai_faq: [
+      {
+        q: 'Does the cooling effect wash out?',
+        a: 'The cooling effect is inherent to the fiber structure and does not wash out. The ice silk filaments maintain their thermal conductivity for the life of the fabric.',
+      },
+      {
+        q: 'What is the minimum order quantity?',
+        a: 'Minimum 500 meters per color. Custom colors available at 1000 meters minimum.',
+      },
+    ],
+  },
+  {
+    id: 'tactical-ripstop-fabric',
+    name: 'Tactical Ripstop Nylon Fabric',
+    category: 'WATERPROOF',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'intermediate',
+    environment: ['outdoor', 'industrial', 'military', 'tactical'],
+    water_condition: ['rain', 'humidity', 'mud'],
+    safety_level: 'medium',
+    use_case: ['tactical vests', 'military uniforms', 'backpacks', 'workwear', 'outdoor gear'],
+    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'reapply DWR as needed'],
+    desc: 'Heavy-duty ripstop nylon fabric with tear-resistant reinforcement for tactical and workwear applications.',
+    definition:
+      'A heavy-duty nylon 66 fabric with reinforcing ripstop grids that prevent tear propagation, delivering exceptional durability with water-resistant and abrasion-resistant performance for demanding environments.',
+    problem:
+      'Tactical and workwear brands need a fabric that can withstand extreme abuse - resisting tears, abrasion, and water - while remaining lightweight enough for active use in the field.',
+    howItWorks:
+      'Reinforcing ripstop yarns are woven into the fabric at regular intervals, creating a grid structure that stops tears from propagating. Nylon 66 provides high tensile strength and abrasion resistance. A PU coating adds water resistance. Fabric weight: 150-250 GSM, 58/60-inch width, available with various coatings.',
+    audience:
+      'Tactical gear manufacturers, military uniform suppliers, workwear brands, backpack and outdoor equipment companies.',
+    ai_use_cases: [
+      'Tactical vests and load-bearing equipment',
+      'Military field uniforms',
+      'Heavy-duty backpacks and bags',
+    ],
+    ai_specs: {
+      tear_strength: 'Warp >80N, Weft >60N',
+      weight: '150-250 GSM',
+      composition: '100% Nylon 66',
+      width: '58/60"',
+      features: 'Tear-resistant, abrasion-resistant, water-resistant, PU coating',
+      certification: 'OEKO-TEX, REACH',
+    },
+    ai_comparison:
+      'Compared to standard nylon fabrics, this ripstop construction prevents tear propagation even after puncture, making it significantly more durable in field conditions. It is heavier than pack fabrics but offers superior durability for tactical applications.',
+    ai_faq: [
+      {
+        q: 'Can this fabric be printed with camouflage patterns?',
+        a: 'Yes. The fabric accepts printing and coating. Camouflage patterns are available with 1000 meters MOQ per pattern.',
+      },
+      {
+        q: 'Is the PU coating durable?',
+        a: 'The PU coating provides water resistance for moderate rain. For extended wet conditions, we recommend our TPU laminated variant.',
+      },
+    ],
+  },
+  {
+    id: 'taslan-waterproof-jacket-fabric',
+    name: '228T Taslan Waterproof Jacket Fabric',
+    category: 'WATERPROOF',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'intermediate',
+    environment: ['outdoor', 'apparel', 'sportswear'],
+    water_condition: ['rain', 'light rain', 'humidity'],
+    safety_level: 'low',
+    use_case: ['rain jackets', 'windbreakers', 'lightweight outerwear', 'travel wear'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron high'],
+    desc: 'Lightweight 228T Taslan nylon fabric with waterproof coating, purpose-built for outerwear.',
+    definition:
+      'A lightweight 228T Taslan nylon fabric with a tight weave construction and waterproof coating, delivering reliable weather protection with excellent drape, soft hand feel, and packable convenience for everyday outerwear.',
+    problem:
+      'Apparel brands need a lightweight, packable outerwear fabric that provides reliable rain protection without the bulk or noise of traditional waterproof fabrics, while maintaining a soft, garment-like hand feel.',
+    howItWorks:
+      'The 228T Taslan construction creates a dense, tight weave from textured nylon yarns that provides a soft, matte hand feel. A clear waterproof coating is applied to the back of the fabric, and a DWR (durable water repellent) finish is applied to the face. The lightweight 105 gsm construction allows for easy packing. Fabric weight: 105 GSM, 58/60-inch width.',
+    audience:
+      'Outerwear brands, rain jacket manufacturers, windbreaker producers, and travel apparel companies needing lightweight waterproof fabrics.',
+    ai_use_cases: ['Packable rain jackets', 'Everyday windbreakers', 'Lightweight travel outerwear'],
+    ai_specs: {
+      construction: '228T Taslan',
+      weight: '105 GSM',
+      composition: '100% Nylon',
+      width: '58/60"',
+      features: 'Waterproof coating, lightweight, soft hand, DWR finish',
+      certification: 'OEKO-TEX',
+    },
+    ai_comparison:
+      'Compared to heavier waterproof fabrics, this 228T Taslan is significantly lighter (105 gsm) and packable, with a softer hand feel that resembles non-waterproof fabrics. It provides adequate protection for light to moderate rain but has lower hydrostatic head than heavy-duty waterproof fabrics.',
+    ai_faq: [
+      {
+        q: 'Is this fabric seam-sealable?',
+        a: 'Yes. The coating accepts seam tape for fully waterproof garment construction. We recommend PU seam tape applied at 120-140°C.',
+      },
+      {
+        q: 'What colors are available in stock?',
+        a: '10+ stock colors including black, navy, olive, burgundy, and light grey. Custom colors with 800 meters MOQ.',
+      },
+    ],
+  },
+  {
+    id: '3-layer-hardshell-fabric',
+    name: '3-Layer Hardshell Laminate Fabric',
+    category: 'WATERPROOF',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'professional',
+    environment: ['outdoor', 'sportswear', 'alpine', 'ski'],
+    water_condition: ['rain', 'heavy rain', 'snow', 'sleet'],
+    safety_level: 'high',
+    use_case: ['alpine outerwear', 'ski jackets', 'mountaineering shells', 'high-intensity outdoor apparel'],
+    safety_rules: ['machine wash warm', 'no fabric softener', 'tumble dry low', 'reapply DWR after cleaning'],
+    desc: 'Professional-grade 3-layer laminate fabric with fully waterproof and breathable performance for extreme conditions.',
+    definition:
+      'A professional-grade 3-layer laminate combining a durable outer face fabric, a waterproof breathable membrane, and an inner liner in a single bonded construction, delivering 10,000-20,000mm hydrostatic head waterproofness with 8,000-15,000 g/m2/24h breathability.',
+    problem:
+      'Alpine and ski apparel brands need a fabric that provides complete weather protection while managing high sweat output during intense physical activity, all in a durable bonded construction that does not require a separate lining.',
+    howItWorks:
+      'A durable nylon or polyester face fabric is laminated to a PU or ePTFE waterproof breathable membrane, with a tricot or mesh backer bonded to the inner side. This 3-layer construction eliminates the need for a separate liner, reducing weight and bulk. The bonded construction also protects the membrane from abrasion and contamination. Fabric weight: 180-350 GSM, 58/60-inch width.',
+    audience:
+      'Premium outdoor apparel brands, ski wear manufacturers, mountaineering equipment companies, and high-performance outerwear brands.',
+    ai_use_cases: [
+      'Professional ski and snowboard outerwear',
+      'Alpine mountaineering shells',
+      'High-exertion rain protection',
+    ],
+    ai_specs: {
+      water_column: '10,000-20,000mm',
+      breathability: '8,000-15,000 g/m2/24h',
+      weight: '180-350 GSM',
+      composition: 'Face: Nylon/Polyester / Membrane: PU/EPTFE',
+      width: '58/60"',
+      features: '3-layer bonded, waterproof, breathable, windproof, PFAS-free option',
+      certification: 'OEKO-TEX, BLUESIGN',
+    },
+    ai_comparison:
+      'Compared to 2-layer waterproof constructions, this 3-layer laminate eliminates the need for a separate liner, reducing weight and improving next-to-skin comfort. It provides superior durability and consistent performance compared to coated fabrics, at a higher cost.',
+    ai_faq: [
+      {
+        q: 'What membrane options are available?',
+        a: 'We offer PU membrane (10K/8K) for value, ePTFE membrane (20K/15K) for premium performance, and PFAS-free membrane options for eco-conscious brands.',
+      },
+      {
+        q: 'Is this fabric suitable for seam taping?',
+        a: 'Yes. All our 3-layer laminates are seam-tape compatible. We recommend pre-taped rolls for consistent manufacturing quality.',
+      },
+    ],
+  },
+  {
+    id: 'beach-swim-shorts-fabric',
+    name: 'Quick-Dry Beach & Swim Shorts Fabric',
+    category: 'QUICK_DRY',
+    region: ['EU', 'US', 'ASIA', 'AU'],
+    skill: 'intermediate',
+    environment: ['swimwear', 'beachwear', 'sportswear', 'marine'],
+    water_condition: ['water immersion', 'salt water', 'chlorinated water', 'sweat'],
+    safety_level: 'low',
+    use_case: ['board shorts', 'swim trunks', 'beachwear', 'resort wear'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron', 'rinse after saltwater use'],
+    desc: 'Lightweight quick-dry fabric designed for beach shorts, swim trunks, and resort wear.',
+    definition:
+      'A lightweight quick-dry fabric engineered for swimwear, combining 4-way stretch, chlorine and saltwater resistance, UV protection, and rapid drying for beach and pool apparel.',
+    problem:
+      'Swimwear brands need a fabric that dries rapidly after water exposure, resists chlorine and saltwater degradation, maintains color vibrancy, and provides comfortable stretch for active beach and pool wear.',
+    howItWorks:
+      'Polyester or nylon/spandex yarns are knit or woven with a hydrophobic finish that minimizes water absorption. The filament yarns have low moisture regain (<0.4%), and the open construction allows water to drain quickly. Chlorine-resistant additives prolong fabric life. Fabric weight: 90-150 GSM, 58/60-inch width, available in multiple weaves.',
+    audience: 'Swimwear brands, beach apparel manufacturers, resort wear companies, and active beach lifestyle brands.',
+    ai_use_cases: ['Performance board shorts', 'Swim trunks and beach shorts', 'Resort and vacation apparel'],
+    ai_specs: {
+      drying_time: '20-35 minutes',
+      weight: '90-150 GSM',
+      composition: '100% Polyester / Nylon/Spandex',
+      width: '58/60"',
+      features: 'Quick-dry, chlorine-resistant, UV-resistant, 4-way stretch',
+      certification: 'OEKO-TEX',
+    },
+    ai_comparison:
+      'Compared to standard polyester fabrics, this swim-specific fabric offers superior chlorine and saltwater resistance, faster drying, and better UV stability. It maintains color and stretch recovery significantly longer in pool and ocean environments.',
+    ai_faq: [
+      {
+        q: 'How long does the fabric take to dry?',
+        a: '20-35 minutes in standard conditions (25°C, 60% humidity). The hydrophobic finish and low-moisture-regain yarns ensure rapid water shedding.',
+      },
+      {
+        q: 'Is the fabric resistant to sunscreen stains?',
+        a: 'The fabric has good resistance to sunscreen staining. We recommend rinsing in cold water after use to maintain appearance.',
+      },
+    ],
+  },
+  {
+    id: 'down-jacket-shell-fabric',
+    name: 'Down-Proof Shell Fabric',
+    category: 'BREATHABLE',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'advanced',
+    environment: ['outdoor', 'apparel', 'cold weather'],
+    water_condition: ['snow', 'light rain', 'humidity'],
+    safety_level: 'low',
+    use_case: ['down jackets', 'puffer vests', 'sleeping bags', 'insulated outerwear'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low with tennis balls', 'do not iron'],
+    desc: 'Down-proof woven fabric designed for puffer jackets and insulated outerwear.',
+    definition:
+      'A tightly woven down-proof shell fabric that prevents down and feather leakage while maintaining breathability, water resistance, and windproof performance for insulated outerwear and sleeping bags.',
+    problem:
+      'Down apparel manufacturers need a lightweight shell fabric with a weave tight enough to prevent down migration and feather poking, while still allowing moisture vapor to escape and providing weather protection.',
+    howItWorks:
+      'Micro-denier nylon or polyester yarns are woven in a high-density plain or ripstop construction (>1000 Frazier rating ensures down-proof performance). A calender finish flattens the yarns to close any gaps. A DWR finish provides water resistance. Fabric weight: 40-80 GSM, 58/60-inch width.',
+    audience: 'Down jacket manufacturers, sleeping bag producers, puffer vest makers, and insulated outerwear brands.',
+    ai_use_cases: [
+      'Lightweight down jackets and vests',
+      'Down-filled sleeping bags',
+      'Performance insulated outerwear',
+    ],
+    ai_specs: {
+      down_proof_rating: '>1000 Frazier',
+      weight: '40-80 GSM',
+      composition: '100% Nylon / Polyester',
+      width: '58/60"',
+      features: 'Down-proof, water-resistant, windproof, lightweight, DWR',
+      certification: 'OEKO-TEX, RDS',
+    },
+    ai_comparison:
+      'Compared to standard lining fabrics, this down-proof shell prevents feather leakage through its ultra-tight weave construction. It is lighter than typical outer shell fabrics (40-80 gsm) while providing sufficient strength for down containment.',
+    ai_faq: [
+      {
+        q: 'What is the minimum denier available?',
+        a: 'We offer 10D to 40D yarns. 10D provides the lightest weight for ultralight jackets, while 40D offers increased durability for frequent-use garments.',
+      },
+      {
+        q: 'Is this fabric compatible with down-proof seam construction?',
+        a: 'Yes. Use a smaller needle (60/8 to 70/10) and down-proof seam tape or baffle construction to prevent down leakage at seams.',
+      },
+    ],
+  },
+  {
+    id: 'graphene-thermal-fabric',
+    name: 'Graphene Thermal Insulation Fabric',
+    category: 'ANTIBACTERIAL',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'professional',
+    environment: ['sportswear', 'apparel', 'cold weather', 'health'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'high',
+    use_case: ['thermal underwear', 'winter sportswear', 'insulated linings', 'healthcare textiles'],
+    safety_rules: [
+      'machine wash cold',
+      'do not bleach',
+      'tumble dry low',
+      'do not iron high',
+      'do not use fabric softener',
+    ],
+    desc: 'Advanced graphene-infused thermal fabric providing superior warmth retention and antibacterial properties.',
+    definition:
+      'An advanced thermal fabric incorporating graphene particles into the fiber matrix, delivering far-infrared heat retention, 7A-grade antibacterial protection, and anti-static properties for performance thermal apparel.',
+    problem:
+      'Thermal apparel brands need a fabric that provides superior warmth without bulk, actively retains body heat through far-infrared technology, and offers antibacterial protection for all-day freshness during cold-weather activities.',
+    howItWorks:
+      'Graphene particles are masterbatched into polyester chips before fiber extrusion, creating graphene-infused filaments. When worn, the graphene absorbs body heat and re-emits it as far-infrared radiation, which penetrates tissue and creates a warming effect. The graphene also disrupts bacterial cell membranes, providing 7A-grade antibacterial protection. Fabric weight: 150-260 GSM, 58/60-inch width.',
+    audience:
+      'Thermal underwear manufacturers, winter sportswear brands, outdoor apparel companies, and healthcare textile suppliers.',
+    ai_use_cases: ['Performance thermal base layers', 'Winter sports insulation', 'Antibacterial thermal linings'],
+    ai_specs: {
+      thermal_retention: 'Far-infrared emitting',
+      antibacterial: '7A Grade',
+      weight: '150-260 GSM',
+      composition: 'Polyester/Graphene blends',
+      width: '58/60"',
+      features: 'Far-infrared heat retention, antibacterial, anti-static, durable',
+      certification: 'OEKO-TEX, SGS',
+    },
+    ai_comparison:
+      'Compared to traditional thermal fabrics (fleece, brushed back knits), this graphene-infused fabric actively generates far-infrared heat rather than just trapping body heat. It provides superior warmth-to-weight ratio with added antibacterial and anti-static benefits.',
+    ai_faq: [
+      {
+        q: 'Does the graphene wear off with washing?',
+        a: 'No. Graphene particles are embedded within the fiber matrix during extrusion, making the thermal and antibacterial properties permanent and wash-resistant.',
+      },
+      {
+        q: 'Is graphene safe for skin contact?',
+        a: 'Yes. Graphene is carbon-based and biocompatible. The particles are permanently encapsulated within the polyester fiber, preventing direct skin exposure.',
+      },
+    ],
+  },
+  {
+    id: 'fleece-thermal-lining',
+    name: 'Fleece Thermal Lining Fabric',
+    category: 'QUICK_DRY',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'beginner',
+    environment: ['apparel', 'outdoor', 'cold weather'],
+    water_condition: ['sweat', 'humidity', 'snow'],
+    safety_level: 'low',
+    use_case: ['jacket linings', 'outerwear insulation', 'cold-weather accessories', 'bonded garment liners'],
+    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'do not iron'],
+    desc: 'Soft fleece thermal lining fabric for insulation and comfort in cold-weather apparel.',
+    definition:
+      'A soft fleece thermal lining fabric with brushed surface that traps body heat while maintaining breathability, available in various weights for use as bonded or unbonded insulation in cold-weather garments.',
+    problem:
+      'Outerwear manufacturers need a lining fabric that provides effective thermal insulation with a soft, comfortable hand feel, while managing moisture and breathability to prevent overheating during active use.',
+    howItWorks:
+      'Polyester yarns are knit and the surface is mechanically brushed to create a raised fiber pile that traps still air for thermal insulation. The open knit structure allows moisture vapor to escape, preventing sweat buildup. Available in recycled polyester options. Fabric weight: 180-320 GSM, 58/60-inch width.',
+    audience:
+      'Outerwear manufacturers, jacket lining suppliers, cold-weather accessory makers, and bonded garment producers.',
+    ai_use_cases: ['Insulated jacket linings', 'Cold-weather glove and hat liners', 'Bonded garment insulation layers'],
+    ai_specs: {
+      weight: '180-320 GSM',
+      composition: '100% Polyester / Recycled Polyester',
+      width: '58/60"',
+      features: 'Thermal insulation, soft hand, breathable, moisture management',
+      certification: 'OEKO-TEX, GRS',
+    },
+    ai_comparison:
+      'Compared to synthetic sheet insulation (Thinsulate, PrimaLoft), this fleece lining offers better breathability and moisture management, a softer hand feel against skin, and lower cost. It provides less warmth per unit thickness but superior comfort for active use.',
+    ai_faq: [
+      {
+        q: 'Can this fabric be bonded to outer shells?',
+        a: 'Yes. It is compatible with flame lamination and adhesive bonding for 2-in-1 bonded garment construction.',
+      },
+      {
+        q: 'Is recycled polyester available?',
+        a: 'Yes. We offer GRS-certified recycled polyester versions in most weights. MOQ for recycled options is 1000 meters.',
+      },
+    ],
+  },
+  {
+    id: 'stretch-knit-fabric',
+    name: 'Stretch Knit Fabric',
+    category: 'STRETCH',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'intermediate',
+    environment: ['apparel', 'sportswear', 'casual wear', 'athleisure'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'low',
+    use_case: ['t-shirts', 'dresses', 'athleisure tops', 'yoga wear', 'casual apparel'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron high'],
+    desc: 'Soft stretch knit fabric offering natural elasticity and comfort for casual and athleisure wear.',
+    definition:
+      'A soft jersey knit fabric with spandex blend delivering 2-way (weft) stretch with >90% recovery, combining natural breathability with reliable shape retention for everyday casual and athleisure apparel.',
+    problem:
+      'Casual and athleisure brands need a knit fabric that provides comfortable stretch and shape retention without the technical look or high cost of performance stretch fabrics, suitable for everyday wear.',
+    howItWorks:
+      'Cotton, polyester, or Tencel yarns are knit with spandel core-spun yarns in a single-jersey or interlock construction. The spandex provides elastic recovery, while the natural or cellulosic fibers provide comfort and breathability. Anti-pilling treatment ensures surface aesthetics. Fabric weight: 140-220 GSM, 58/60-inch width.',
+    audience:
+      'Casual apparel brands, athleisure manufacturers, t-shirt producers, and dressmakers seeking comfortable stretch knits.',
+    ai_use_cases: ['Comfort-fit casual t-shirts', 'Athleisure tops and dresses', 'Yoga and studio apparel'],
+    ai_specs: {
+      stretch: '2-way (Weft)',
+      recovery_rate: '>90%',
+      weight: '140-220 GSM',
+      composition: 'Cotton/Spandex / Polyester/Spandex / Tencel/Spandex',
+      width: '58/60"',
+      features: 'Soft hand, breathable, shape retention, anti-pilling',
+      certification: 'OEKO-TEX',
+    },
+    ai_comparison:
+      'Compared to performance 4-way stretch fabrics, this everyday stretch knit offers a more affordable and softer hand feel suitable for casual and athleisure rather than high-compression activewear. It provides adequate stretch for daily comfort with good shape retention.',
+    ai_faq: [
+      {
+        q: 'What fiber blends are available?',
+        a: 'We offer cotton/spandex (natural feel), polyester/spandex (performance), and Tencel/spandex (eco-friendly) options.',
+      },
+      {
+        q: 'Does this fabric pill?',
+        a: 'Our anti-pilling treatment ensures Grade 4 performance on the pilling scale. Proper care extends fabric appearance.',
+      },
+    ],
+  },
+  {
+    id: 'rpet-recycled-nylon-fabric',
+    name: 'rPET Recycled Nylon Fabric',
+    category: 'ECO_FRIENDLY',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'intermediate',
+    environment: ['apparel', 'outdoor', 'sportswear', 'luggage'],
+    water_condition: ['rain', 'humidity', 'sweat'],
+    safety_level: 'low',
+    use_case: ['sustainable outerwear', 'backpacks', 'luggage', 'swimwear', 'technical apparel'],
+    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'do not iron'],
+    desc: 'High-performance recycled nylon fabric made from post-industrial waste, delivering strength with sustainability.',
+    definition:
+      'A high-performance recycled nylon (rPET) fabric manufactured from regenerated nylon waste via mechanical recycling, maintaining the superior strength, durability, and quick-dry properties of virgin nylon with a significantly reduced environmental footprint.',
+    problem:
+      'Sustainable brands need a recycled nylon fabric that performs identically to virgin nylon in terms of strength, durability, and processing, without greenwashing or quality compromises.',
+    howItWorks:
+      'Post-industrial nylon waste is collected, sorted, cleaned, and mechanically shredded into chips. These chips are re-melted and extruded into virgin-quality nylon filaments. The process consumes 30% less energy than virgin nylon production and diverts waste from landfills. GRS certified. Fabric weight: 60-200 GSM, 58/60-inch width.',
+    audience:
+      'Sustainable outerwear brands, eco-conscious backpack manufacturers, luggage companies, and technical apparel brands requiring GRS-certified recycled nylon.',
+    ai_use_cases: [
+      'Sustainable outdoor shells and jackets',
+      'Eco-friendly backpacks and luggage',
+      'Recycled swimwear and sportswear',
+    ],
+    ai_specs: {
+      recycled_content: '100% Recycled Nylon',
+      weight: '60-200 GSM',
+      composition: '100% Recycled Nylon / Recycled Nylon blends',
+      width: '58/60"',
+      features: 'Abrasion resistant, lightweight, quick-dry, UV resistant',
+      certification: 'GRS, OEKO-TEX',
+    },
+    ai_comparison:
+      'Compared to virgin nylon, this recycled version has identical physical and mechanical properties while reducing energy consumption by 30% and diverting industrial waste from landfills. It offers better abrasion resistance than recycled polyester for demanding applications.',
+    ai_faq: [
+      {
+        q: 'Is the quality consistent with virgin nylon?',
+        a: 'Yes. Our recycling process produces filament with the same tenacity, dyeability, and consistency as virgin nylon 6.6.',
+      },
+      {
+        q: 'What is the carbon footprint reduction?',
+        a: 'Approximately 30% energy reduction and 40% CO2 reduction compared to virgin nylon production.',
+      },
+    ],
+  },
+  {
+    id: 'inherent-fr-fabric',
+    name: 'Inherent FR Fabric',
+    category: 'FLAME_RETARDANT',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'professional',
+    environment: ['industrial', 'military', 'electrical', 'welding'],
+    water_condition: ['sweat', 'humidity', 'heat'],
+    safety_level: 'high',
+    use_case: [
+      'welding gear',
+      'electrical utility wear',
+      'firefighter base layers',
+      'military uniforms',
+      'industrial workwear',
+    ],
+    safety_rules: [
+      'machine wash warm',
+      'do not bleach',
+      'tumble dry low',
+      'do not use fabric softener',
+      'do not iron high',
+    ],
+    desc: 'Permanently flame-retardant fabric engineered for protective workwear and industrial safety applications.',
+    definition:
+      'An inherently flame-retardant fabric with FR properties built into the fiber itself that will not wash out or wear off, providing permanent fire protection with self-extinguishing performance for protective workwear.',
+    problem:
+      'Industrial safety managers need a FR fabric that provides permanent, non-degradable flame protection that cannot wash out, ensuring consistent safety performance throughout the garment lifespan without special handling.',
+    howItWorks:
+      'Modacrylic, aramid, and FR viscose fibers are blended and spun into yarns. The FR properties are inherent to the polymer chemistry of these fibers - they do not require topical treatment. When exposed to flame, the fabric forms a char that insulates the wearer and self-extinguishes. Fabric weight: 180-320 GSM, 58/60-inch width.',
+    audience:
+      'Industrial workwear manufacturers, electrical utility suppliers, military uniform producers, and protective clothing brands requiring permanent FR protection.',
+    ai_use_cases: [
+      'Welding and foundry protective wear',
+      'Electrical utility arc flash protection',
+      'Firefighter base layer garments',
+    ],
+    ai_specs: {
+      fr_standard: 'EN 11611, EN 11612, NFPA 70E, ASTM D6413',
+      weight: '180-320 GSM',
+      composition: 'Modacrylic/Cotton / Aramid blends',
+      width: '58/60"',
+      features: 'Inherent FR (will not wash out), self-extinguishing, anti-static, moisture wicking',
+      certification: 'OEKO-TEX, CE certified',
+    },
+    ai_comparison:
+      'Compared to FR-treated (topical) fabrics, this inherent FR fabric maintains its flame-retardant properties for the entire garment lifespan because the FR chemistry is part of the fiber itself. Treated fabrics can lose FR effectiveness after 25-50 washes.',
+    ai_faq: [
+      {
+        q: 'How many washes does the FR protection last?',
+        a: 'The FR protection is permanent and will not wash out. The FR properties are inherent to the fiber, not a topical treatment, so they last for the life of the fabric.',
+      },
+      {
+        q: 'What colors are available?',
+        a: 'Standard colors: navy, royal blue, orange, khaki. Custom colors available with 1500 meters MOQ.',
+      },
+    ],
+  },
+  {
+    id: 'fr-cotton-polyester-workwear-fabric',
+    name: 'FR Cotton Polyester Workwear Fabric',
+    category: 'FLAME_RETARDANT',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'intermediate',
+    environment: ['industrial', 'workwear', 'oil and gas', 'manufacturing'],
+    water_condition: ['sweat', 'humidity', 'light oil'],
+    safety_level: 'high',
+    use_case: ['welding aprons', 'foundry workwear', 'electrical utility uniforms', 'oil and gas coveralls'],
+    safety_rules: [
+      'machine wash warm',
+      'industrial laundry safe',
+      'do not bleach',
+      'tumble dry medium',
+      '50+ wash FR durability',
+    ],
+    desc: 'Flame-retardant treated cotton/polyester blend fabric engineered for heavy-duty industrial workwear and uniform applications.',
+    definition:
+      'A flame-retardant treated cotton/polyester (60/40) blend fabric that combines the comfort and breathability of cotton with the durability of polyester, treated with a durable FR finish meeting international safety standards.',
+    problem:
+      'Industrial workwear brands need a FR fabric that offers the comfort and professional appearance of cotton-rich fabrics while meeting international safety standards, with FR effectiveness that withstands repeated industrial laundering.',
+    howItWorks:
+      'A 60% cotton / 40% polyester blend is treated with a phosphorus-based durable FR finish using a pad-dry-cure process. The FR finish crosslinks with the cellulose in cotton, creating a durable bond that withstands 50+ industrial launderings. The polyester component adds durability and wrinkle resistance. Fabric weight: 200-350 GSM, 58/60-inch width.',
+    audience:
+      'Industrial workwear manufacturers, welding safety suppliers, oil and gas uniform programs, and electrical utility clothing suppliers.',
+    ai_use_cases: [
+      'Welding and foundry workwear',
+      'Electrical utility flame-resistant uniforms',
+      'Oil and gas industry protective coveralls',
+    ],
+    ai_specs: {
+      fr_standard: 'EN 11611, EN ISO 11612, NFPA 2112, ASTM F1506',
+      weight: '200-350 GSM',
+      composition: '60% Cotton / 40% Polyester (FR treated)',
+      width: '58/60"',
+      finish: 'Durable FR finish, anti-static, soil release',
+      colors: 'Navy, Royal Blue, Orange, Red, Khaki, Grey',
+      certification: 'OEKO-TEX, CE certified, UL listed',
+    },
+    ai_comparison:
+      'Compared to 100% cotton FR fabrics, this cotton-polyester blend offers better durability, wrinkle resistance, and faster drying while maintaining similar FR protection. Compared to inherent FR aramid fabrics, it is more cost-effective and has a more comfortable natural hand feel.',
+    ai_faq: [
+      {
+        q: 'How many industrial launderings does the FR treatment last?',
+        a: 'The FR treatment is tested to maintain effectiveness for 50+ industrial launderings when washed according to recommended procedures.',
+      },
+      {
+        q: 'Can this fabric be used for arc flash protection?',
+        a: 'Yes. It meets NFPA 2112 and ASTM F1506 for arc flash protection. ATPV rating varies by fabric weight. Consult our technical team for specific ratings.',
+      },
+    ],
+  },
+  {
+    id: 'arc-flash-welding-protection-fabric',
+    name: 'Arc Flash & Welding Protection Fabric',
+    category: 'FLAME_RETARDANT',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'professional',
+    environment: ['industrial', 'electrical', 'welding', 'heavy industry'],
+    water_condition: ['sweat', 'heat', 'humidity'],
+    safety_level: 'high',
+    use_case: [
+      'arc flash protection',
+      'welding protection',
+      'electrical safety wear',
+      'heavy industrial protective clothing',
+    ],
+    safety_rules: [
+      'machine wash warm',
+      'do not bleach',
+      'tumble dry low',
+      'inspect regularly for damage',
+      'replace if contaminated',
+    ],
+    desc: 'Heavyweight inherent FR fabric designed for arc flash protection and welding applications in high-risk industrial environments.',
+    definition:
+      'A heavyweight inherently flame-retardant fabric engineered from aramid and modacrylic fibers, providing arc thermal performance value (ATPV) ratings of 8-40 cal/cm2 with molten metal splash and welding spark resistance.',
+    problem:
+      'Electrical and welding safety managers need a fabric that provides certified arc flash protection with specific ATPV ratings, while also resisting molten metal splash and providing durable protection in the harshest industrial environments.',
+    howItWorks:
+      'Inherently FR aramid and modacrylic fibers are blended with FR viscose and anti-static fibers, then woven in a heavyweight construction. The fabric provides thermal insulation through char formation when exposed to arc flash or flame. ATPV rating is controlled by fabric weight and construction. Moisture-wicking properties enhance comfort. Fabric weight: 260-450 GSM, 58/60-inch width.',
+    audience:
+      'Electrical utility safety managers, welding supply companies, heavy industry protective clothing buyers, and arc flash safety equipment suppliers.',
+    ai_use_cases: [
+      'Arc flash rated electrical utility wear',
+      'Welding protective clothing and aprons',
+      'High-risk industrial thermal protection',
+    ],
+    ai_specs: {
+      fr_standard: 'NFPA 70E, ASTM F1506, EN 61482-2, EN 11611',
+      atpv_rating: '8-40 cal/cm2 (varies by weight)',
+      weight: '260-450 GSM',
+      composition: 'Aramid / Modacrylic / FR Viscose blends',
+      width: '58/60"',
+      features: 'Inherent FR, arc flash rated, molten metal resistance, anti-static, moisture wicking',
+      certification: 'OEKO-TEX, CE Cat III, UL',
+    },
+    ai_comparison:
+      'Compared to standard FR workwear fabrics, this arc flash-rated fabric provides certified ATPV protection levels with specific cal/cm2 ratings required for electrical safety compliance. It offers superior molten metal resistance compared to FR-treated cotton blends.',
+    ai_faq: [
+      {
+        q: 'What ATPV ratings are available?',
+        a: 'We offer fabrics with ATPV ratings from 8 cal/cm2 (light duty) to 40 cal/cm2 (heavy duty). The rating is determined by fabric weight and composition.',
+      },
+      {
+        q: 'Is this fabric suitable for NFPA 70E compliance?',
+        a: 'Yes. It meets NFPA 70E Hazard Risk Categories 1 through 4 depending on weight. Consult our specification sheet for category-specific recommendations.',
+      },
+    ],
+  },
+  {
+    id: 'functional-fashion-fabric',
+    name: 'Functional Fashion Fabric',
+    category: 'OTHER',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'advanced',
+    environment: ['apparel', 'fashion', 'sportswear', 'outdoor'],
+    water_condition: ['sweat', 'humidity', 'light rain'],
+    safety_level: 'low',
+    use_case: ['running jackets', 'fashion outerwear', 'sportswear', 'urban apparel'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron high'],
+    desc: 'Premium nylon spandex blend fabric with DWR finish and TPU lamination combining fashion aesthetics with technical performance for active lifestyle apparel.',
+    definition:
+      'A premium nylon spandex blend woven fabric engineered with 4-way stretch, DWR (durable water repellent) finish, and TPU lamination, delivering oil repellency, easy care, and functional performance for fashion-forward activewear.',
+    problem:
+      'Fashion brands need a fabric that bridges the gap between style and function — offering technical performance features like water repellency and stretch while maintaining a premium hand feel, drape, and aesthetic suitable for contemporary fashion silhouettes.',
+    howItWorks:
+      'Nylon spandex blend yarns (20D-40D) are woven in a twill construction and treated with a DWR finish for water repellency, followed by TPU lamination for enhanced durability. The spandex content provides 4-way stretch with excellent recovery. The resulting fabric combines a soft, fabric-like hand feel with functional performance. Fabric weight: 80-150 GSM, 58/60-inch width.',
+    audience:
+      'Fashion-forward activewear brands, sportswear manufacturers, urban lifestyle apparel companies, and outdoor fashion labels seeking technical fabrics with premium aesthetics.',
+    ai_use_cases: ['Fashion-forward running jackets', 'Technical urban outerwear', 'Performance lifestyle apparel'],
+    ai_specs: {
+      weight: '80-150 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Nylon Spandex Blend',
+      construction: 'Twill / Plain weave with 4-way stretch',
+      finish: 'DWR + TPU lamination + oil repellent',
+      stretch: '4-way stretch',
+      features: 'Oil repellent, easy care, water resistant, breathable',
+      certification: 'OEKO-TEX Standard 100, BLUESIGN',
+    },
+    ai_comparison:
+      'Compared to standard fashion wovens, this functional fashion fabric adds water repellency, stretch, and durability. Compared to technical outdoor fabrics, it offers superior drape, soft hand feel, and fashion-appropriate aesthetics for lifestyle and urban wear.',
+    ai_faq: [
+      {
+        q: 'What fabric weights are available for fashion applications?',
+        a: 'We offer 80-150 GSM range. Lighter weights (80-100 GSM) for shirts and blouses, mid-weight (120-150 GSM) for jackets and outerwear.',
+      },
+      {
+        q: 'Is the fabric available in fashion colors?',
+        a: 'Yes. We offer fashion-forward color ranges with quick turnaround. Minimum 500 meters per color for standard shades.',
+      },
+    ],
+  },
+  {
+    id: 'high-density-tactical-fabric',
+    name: 'High Density Tactical Fabric',
+    category: 'WATERPROOF',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'professional',
+    environment: ['tactical', 'outdoor', 'industrial', 'military'],
+    water_condition: ['rain', 'mud', 'humidity'],
+    safety_level: 'medium',
+    use_case: ['hiking pants', 'tactical uniforms', 'field gear', 'outdoor workwear'],
+    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'reapply DWR as needed'],
+    desc: 'High-density woven nylon spandex tactical fabric with PU coating offering superior abrasion resistance and 4-way stretch mobility.',
+    definition:
+      'A high-density woven tactical fabric combining nylon spandex blend yarns with PU (polyurethane) coating, delivering exceptional abrasion resistance, high tensile strength, and 4-way stretch mobility for tactical and outdoor performance apparel.',
+    problem:
+      'Tactical and outdoor brands need a fabric that provides extreme durability and abrasion resistance without restricting movement — allowing operators to move freely while the fabric withstands rough terrain, brush, and repeated wear.',
+    howItWorks:
+      'High-density nylon yarns (75D) are woven with spandex in a tight plain weave construction, creating a dense fabric structure that resists abrasion and tearing. A PU coating adds water resistance and further enhances durability. The spandex content provides 4-way stretch for unrestricted mobility. Fabric weight: 180-250 GSM, 58/60-inch width.',
+    audience:
+      'Tactical gear manufacturers, military uniform suppliers, outdoor hiking apparel brands, and law enforcement equipment companies requiring abrasion-resistant stretch fabrics.',
+    ai_use_cases: ['Tactical hiking and field pants', 'Law enforcement duty wear', 'Outdoor adventure apparel'],
+    ai_specs: {
+      weight: '180-250 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Nylon Spandex Blend',
+      construction: 'High-density plain weave',
+      finish: 'PU coating + DWR + abrasion resistant finish',
+      stretch: '4-way stretch',
+      abrasion_resistance: 'ASTM D3884, high performance',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to standard tactical nylons without stretch, this high-density fabric provides 4-way mobility that is critical for tactical operations. Compared to stretch cotton tactical fabrics, it offers superior abrasion resistance, faster drying, and better durability in wet conditions.',
+    ai_faq: [
+      {
+        q: 'What is the abrasion resistance rating?',
+        a: 'Tested per ASTM D3884 with high-performance ratings. Specific cycle counts available upon request based on fabric weight and construction.',
+      },
+      {
+        q: 'Is this fabric available in camouflage patterns?',
+        a: 'Yes. Multi-cam, woodland, desert, and urban patterns available. Custom patterns require 2000 meters MOQ.',
+      },
+    ],
+  },
+  {
+    id: 'triple-protection-workwear-fabric',
+    name: 'Triple Protection Workwear Fabric',
+    category: 'FLAME_RETARDANT',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'advanced',
+    environment: ['industrial', 'workwear', 'oil and gas', 'manufacturing'],
+    water_condition: ['oil', 'water', 'stain', 'humidity'],
+    safety_level: 'high',
+    use_case: ['work pants', 'work jackets', 'industrial coveralls', 'chemical handling wear'],
+    safety_rules: ['machine wash warm', 'industrial laundry safe', 'do not bleach', 'tumble dry medium'],
+    desc: 'Triple protection polyester-cotton workwear fabric with oil repellent, waterproof, and stain-resistant performance for demanding industrial environments.',
+    definition:
+      'A heavy-duty polyester-cotton blend workwear fabric treated with advanced functional finishes providing triple protection — oil repellency, waterproof barrier, and stain resistance — for industrial and occupational apparel requiring multi-hazard defense.',
+    problem:
+      'Industrial workwear brands need a fabric that simultaneously resists oil absorption, blocks water penetration, and prevents stubborn stains from setting, while remaining breathable and comfortable for all-day wear in harsh environments.',
+    howItWorks:
+      'Polyester cotton blend yarns (32S) are woven in a twill construction and treated with a multi-functional finish system. A fluorochemical oil repellent creates a barrier against oil-based liquids, a water-repellent finish prevents water absorption, and a stain-release chemistry allows dirt and stains to wash out easily. Mechanical stretch adds comfort. Fabric weight: 200-300 GSM, 58/60-inch width.',
+    audience:
+      'Industrial workwear manufacturers, oil and gas uniform suppliers, chemical plant safety managers, and maintenance crew apparel providers requiring multi-protection work fabrics.',
+    ai_use_cases: [
+      'Oil and gas industry workwear',
+      'Chemical handling protective apparel',
+      'Heavy-duty industrial maintenance uniforms',
+    ],
+    ai_specs: {
+      weight: '200-300 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Polyester Cotton Blend',
+      construction: 'Twill weave with mechanical stretch',
+      finish: 'Oil repellent + waterproof + stain resistant + mechanical stretch',
+      oil_repellency: 'AATCC 118, Grade 5+',
+      waterproof_rating: 'ISO 811, 5000mm+ hydrostatic head',
+      certification: 'OEKO-TEX Standard 100, CE certified',
+    },
+    ai_comparison:
+      'Compared to standard workwear fabrics with single-function finishes, this triple protection fabric combines oil repellency, waterproofing, and stain resistance in one system. It offers better all-around protection than cotton workwear with a single DWR finish.',
+    ai_faq: [
+      {
+        q: 'How long does the triple protection last?',
+        a: 'The functional finishes maintain effectiveness through 30+ industrial launderings when washed according to recommended procedures.',
+      },
+      {
+        q: 'Is the fabric breathable despite three finishes?',
+        a: 'Yes. The advanced finish system is engineered to maintain breathability (MVTR 3000+ g/m2/24h) while providing multi-surface protection.',
+      },
+    ],
+  },
+  {
+    id: 'outdoor-softshell-fabric',
+    name: 'Outdoor Softshell Fabric',
+    category: 'WATERPROOF',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'advanced',
+    environment: ['outdoor', 'sportswear', 'apparel', 'alpine'],
+    water_condition: ['snow', 'wind', 'light rain', 'humidity'],
+    safety_level: 'low',
+    use_case: ['softshell jackets', 'outdoor mid-layers', 'ski apparel', 'hiking wear'],
+    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'reapply DWR as needed'],
+    desc: 'Warm, windproof, and stretchable polyester-elastane softshell fabric engineered for outdoor performance mid-layer apparel.',
+    definition:
+      'A high-performance polyester-elastane softshell fabric combining thermal insulation, windproof membrane or construction, and bi-directional stretch, designed as a versatile mid-layer or stand-alone outer layer for outdoor activities.',
+    problem:
+      'Outdoor enthusiasts need a fabric that blocks wind and retains warmth without the bulk of traditional insulation, while providing stretch for freedom of movement during active pursuits like hiking, climbing, and skiing.',
+    howItWorks:
+      'Polyester yarns are knit or woven with elastane in a fleece-backed or membrane-laminated construction. A windproof membrane or tight weave blocks wind penetration, while the brushed fleece back traps body heat. The elastane provides 2-way or 4-way stretch for movement. DWR finish sheds light precipitation. Fabric weight: 250-350 GSM, 58/60-inch width.',
+    audience:
+      'Outdoor apparel brands, ski wear manufacturers, hiking gear companies, and alpine sportswear producers seeking warm, windproof, stretchable softshell fabrics.',
+    ai_use_cases: ['All-weather softshell jackets', 'Ski touring mid-layers', 'Active outdoor insulation'],
+    ai_specs: {
+      weight: '250-350 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Polyester + Elastane',
+      construction: 'Woven face + fleece back / membrane laminate',
+      finish: 'DWR + windproof membrane + anti-pilling',
+      stretch: '2-way / 4-way stretch',
+      features: 'Windproof, warm, stretchable, breathable, water repellent',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to hardshell fabrics, softshell offers superior breathability, stretch, and comfort for active use with adequate weather protection for most conditions. It is warmer than a hardshell but less waterproof, making it ideal for cold-weather activities with limited precipitation.',
+    ai_faq: [
+      {
+        q: 'What temperature range is this fabric suitable for?',
+        a: 'Depending on weight and layering, 5°C to -10°C as a stand-alone piece, or lower temperatures when used as a mid-layer under a hardshell.',
+      },
+      {
+        q: 'Is the fabric breathable for high-exertion activities?',
+        a: 'Yes. Softshell fabrics are designed for breathability during active use. Air permeability is controlled to balance wind resistance with moisture vapor escape.',
+      },
+    ],
+  },
+  {
+    id: 'polyester-softshell-fabric',
+    name: 'Polyester Softshell Fabric',
+    category: 'QUICK_DRY',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'advanced',
+    environment: ['sportswear', 'outdoor', 'apparel'],
+    water_condition: ['sweat', 'humidity', 'light rain'],
+    safety_level: 'low',
+    use_case: ['softshell jackets', 'sports mid-layers', 'cycling wear', 'trail running jackets'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron high'],
+    desc: 'Lightweight 100% polyester softshell fabric with TPU lamination offering moisture-wicking breathability and 2-way stretch for active sports.',
+    definition:
+      'A lightweight 100% polyester softshell fabric with TPU (thermoplastic polyurethane) lamination and 2-way mechanical stretch, engineered for moisture-wicking performance, breathable weather protection, and active sport comfort.',
+    problem:
+      'Sports apparel brands need a lightweight softshell that manages moisture during high-exertion activities while providing wind and light rain protection, without the weight and bulk of traditional insulated softshells.',
+    howItWorks:
+      '100% polyester filament yarns (40D) are woven in a twill construction and laminated with a breathable TPU film. The TPU membrane blocks wind and light rain while allowing moisture vapor to escape. The mechanical stretch construction provides 2-way stretch without spandex, ensuring better durability and shape retention. Fabric weight: 150-220 GSM, 58/60-inch width.',
+    audience:
+      'Sports apparel manufacturers, cycling wear brands, trail running equipment companies, and lightweight outerwear producers requiring breathable weather protection.',
+    ai_use_cases: ['Breathable softshell sports jackets', 'Windproof cycling mid-layers', 'Lightweight trail running shells'],
+    ai_specs: {
+      weight: '150-220 GSM',
+      width: '147-152 cm (58-60")',
+      composition: '100% Polyester',
+      construction: 'Twill weave with mechanical stretch',
+      finish: 'TPU lamination + moisture-wicking + DWR',
+      stretch: '2-way mechanical stretch',
+      breathability: 'ASTM E96, high MVTR',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to nylon softshells, this 100% polyester version offers better moisture wicking, faster drying, and lower cost. Compared to non-laminated stretch wovens, the TPU lamination provides superior wind and water resistance while maintaining breathability.',
+    ai_faq: [
+      {
+        q: 'Can this fabric be used for year-round sports?',
+        a: 'Yes. The 150 GSM variant is ideal for summer trail running and cycling. The 220 GSM variant provides additional warmth for cooler conditions.',
+      },
+      {
+        q: 'Does mechanical stretch lose elasticity over time?',
+        a: 'No. Mechanical stretch is permanent — it is engineered into the weave structure and does not degrade like spandex-based stretch. Performance is maintained for the life of the garment.',
+      },
+    ],
+  },
+  {
+    id: 'quick-dry-sports-woven-fabric',
+    name: 'Quick Dry Sports Woven Fabric',
+    category: 'QUICK_DRY',
+    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
+    skill: 'intermediate',
+    environment: ['sportswear', 'outdoor', 'apparel', 'workwear'],
+    water_condition: ['sweat', 'rain', 'humidity'],
+    safety_level: 'low',
+    use_case: ['work jackets', 'outdoor vests', 'sports uniforms', 'fishing apparel'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron'],
+    desc: 'Quick-dry 100% nylon ripstop woven fabric with DWR finish and UPF sun protection for sports and outdoor workwear applications.',
+    definition:
+      'A quick-dry 100% nylon ripstop woven fabric engineered with DWR (durable water repellent) finish and UPF sun protection, delivering rapid moisture evaporation, weather resistance, and durable tear strength for high-exertion sports and outdoor workwear.',
+    problem:
+      'Outdoor workers and sports enthusiasts need a woven fabric that dries rapidly after rain or sweat exposure, provides sun protection, resists tearing, and repels light moisture — all in a lightweight, packable construction.',
+    howItWorks:
+      '100% nylon filament yarns (300D) are woven in a ripstop construction that prevents tear propagation. A DWR finish provides water repellency, while UV stabilizers integrated into the nylon polymer deliver UPF sun protection. The low moisture regain of nylon (4%) ensures rapid drying. Fabric weight: 100-180 GSM, 58/60-inch width.',
+    audience:
+      'Outdoor workwear brands, fishing apparel manufacturers, sports uniform suppliers, and adventure travel clothing companies requiring quick-dry woven performance fabrics.',
+    ai_use_cases: ['Quick-dry outdoor work jackets', 'Fishing and marine apparel', 'Adventure travel clothing'],
+    ai_specs: {
+      weight: '100-180 GSM',
+      width: '147-152 cm (58-60")',
+      composition: '100% Nylon',
+      construction: 'Ripstop weave',
+      finish: 'DWR + UV stabilizer + moisture-wicking',
+      upf_rating: 'UPF 40+',
+      drying_time: '15-25 minutes (standard conditions)',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to polyester quick-dry wovens, this nylon version offers higher tear strength and abrasion resistance, making it more durable for workwear. Compared to cotton work jackets, it dries 5x faster and provides built-in sun protection.',
+    ai_faq: [
+      {
+        q: 'How does this compare to quick-dry knits?',
+        a: 'This woven fabric offers superior durability, wind resistance, and a more structured appearance compared to knit quick-dry fabrics, making it ideal for workwear and structured outerwear.',
+      },
+      {
+        q: 'What colors are available?',
+        a: 'Stock colors include black, navy, olive, khaki, and high-visibility orange. Custom colors require 1000 meters MOQ.',
+      },
+    ],
+  },
+  {
+    id: 'yoga-high-stretch-knit',
+    name: 'Yoga High Stretch Knit Fabric',
+    category: 'STRETCH',
+    region: ['EU', 'US', 'ASIA', 'AU'],
+    skill: 'advanced',
+    environment: ['sportswear', 'apparel', 'yoga', 'fitness'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'low',
+    use_case: ['yoga pants', 'leggings', 'dancewear', 'pilates apparel'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron', 'avoid fabric softener'],
+    desc: 'Ultra-stretch nylon-spandex knit fabric with 4-way recovery designed specifically for yoga and studio movement apparel.',
+    definition:
+      'A premium nylon-spandex circular knit fabric delivering exceptional 4-way stretch with high recovery, moisture-wicking performance, and a soft, second-skin hand feel purpose-engineered for yoga, pilates, and studio movement practice.',
+    problem:
+      'Yoga apparel brands need a fabric that stretches in all directions during complex poses, recovers fully without sagging, wicks moisture during heated sessions, and provides a smooth, non-restrictive fit that moves with the body.',
+    howItWorks:
+      'Nylon micro-filament yarns are knit with high-denier spandex in a circular knit construction. The high spandex content (20-30%) delivers extreme 4-way stretch with >95% recovery. The nylon micro-filaments create a soft, smooth surface with a matte appearance. Moisture-wicking finish accelerates sweat evaporation. Fabric weight: 180-280 GSM, 58/60-inch width.',
+    audience:
+      'Yoga apparel brands, activewear manufacturers, dancewear companies, and studio fitness clothing producers requiring high-stretch performance fabrics.',
+    ai_use_cases: ['Performance yoga leggings and pants', 'Studio dance and barre wear', 'High-stretch pilates apparel'],
+    ai_specs: {
+      weight: '180-280 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Nylon + Spandex',
+      construction: 'Circular knit',
+      finish: 'Moisture-wicking + anti-microbial + anti-pilling',
+      stretch: '4-way stretch, >95% recovery',
+      compression: 'Light to moderate (adjustable)',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to standard stretch knits, this yoga-specific fabric offers higher spandex content for extreme stretch and recovery. It provides a smoother, more compressive feel than general activewear knits, with superior shape retention during repeated stretching.',
+    ai_faq: [
+      {
+        q: 'What spandex percentage is available?',
+        a: 'Standard 25% spandex for yoga applications. Options from 20% (lighter support) to 30% (maximum compression and recovery).',
+      },
+      {
+        q: 'Is this fabric squat-proof?',
+        a: 'Yes. The high-density knit construction and optimal spandex content ensure opacity during maximum stretch, making it squat-proof for yoga and fitness wear.',
+      },
+    ],
+  },
+  {
+    id: 'yoga-legging-knit-fabric',
+    name: 'Yoga Legging Knit Fabric',
+    category: 'STRETCH',
+    region: ['EU', 'US', 'ASIA', 'AU'],
+    skill: 'intermediate',
+    environment: ['sportswear', 'apparel', 'yoga', 'fitness'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'low',
+    use_case: ['yoga leggings', 'activewear bottoms', 'compression tights', 'running tights'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron', 'avoid fabric softener'],
+    desc: 'Smooth, lightweight nylon-spandex single jersey knit with 4-way stretch and antibacterial protection for yoga leggings and performance tights.',
+    definition:
+      'A lightweight nylon-spandex single jersey knit fabric engineered with 4-way stretch, moisture-wicking performance, and silver-ion antibacterial protection, designed for yoga leggings and high-performance activewear bottoms.',
+    problem:
+      'Activewear brands need a fabric that combines the smooth, silky hand feel required for fashionable leggings with the technical performance — 4-way stretch, moisture management, and odor control — demanded by fitness consumers.',
+    howItWorks:
+      'Nylon 6.6 micro-filament yarns (40D) are knit with spandex in a single jersey construction, creating a smooth face and a soft interior. The high filament count creates a silky, luxurious hand feel. Silver-ion antibacterial treatment is integrated during fiber extrusion, providing permanent odor control. Moisture-wicking finish enhances sweat management. Fabric weight: 160-220 GSM, 58/60-inch width.',
+    audience:
+      'Yoga legging manufacturers, activewear brands, compression wear companies, and fitness apparel producers seeking silky, performance-knit fabrics.',
+    ai_use_cases: ['Fashion-performance yoga leggings', 'Anti-odor running tights', 'Compression sports bottoms'],
+    ai_specs: {
+      weight: '160-220 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Nylon 6.6 + Spandex',
+      construction: 'Single jersey circular knit',
+      finish: 'Silver-ion antibacterial + moisture-wicking + anti-pilling',
+      stretch: '4-way stretch, >90% recovery',
+      antibacterial: 'AATCC 100, >99.9% bacterial reduction',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to standard nylon-spandex knits, this legging-specific fabric incorporates permanent silver-ion antibacterial protection that does not wash out. It offers a silkier hand feel and better moisture management than basic activewear knits.',
+    ai_faq: [
+      {
+        q: 'Does the antibacterial treatment wash out?',
+        a: 'No. The silver-ion treatment is integrated into the fiber during extrusion, providing permanent antibacterial protection that lasts the life of the garment.',
+      },
+      {
+        q: 'Is this fabric suitable for screen printing?',
+        a: 'Yes. The smooth jersey surface accepts screen printing and heat transfers. We recommend stretch-compatible inks for best results.',
+      },
+    ],
+  },
+  {
+    id: 'cooling-touch-fabric',
+    name: 'Cooling Touch Fabric',
+    category: 'QUICK_DRY',
+    region: ['EU', 'US', 'ASIA', 'AU'],
+    skill: 'intermediate',
+    environment: ['apparel', 'sportswear', 'summer wear'],
+    water_condition: ['sweat', 'humidity'],
+    safety_level: 'low',
+    use_case: ['summer t-shirts', 'cooling sportswear', 'hot-weather apparel', 'travel clothing'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron'],
+    desc: 'Advanced cooling touch fabric with instant cool-on-contact sensation and moisture-wicking performance for hot-weather apparel.',
+    definition:
+      'An advanced cooling fabric engineered with special fiber cross-sections and mineral additives that create an instant cool-on-contact sensation, combined with capillary moisture-wicking for all-day comfort in hot and humid conditions.',
+    problem:
+      'Summer apparel brands need a fabric that provides an immediate cooling sensation when worn, actively wicks sweat away from the skin, and maintains a comfortable microclimate during hot weather activities without becoming heavy or clingy.',
+    howItWorks:
+      'Nylon or viscose fibers with modified cross-sections create enhanced capillary channels for rapid moisture transport. Cooling mineral additives (such as jade or tourmaline particles) are incorporated into the fiber matrix, creating a heat-conductive path that draws heat away from the skin. The ultra-lightweight construction (80-130 GSM) maximizes airflow. Fabric weight: 80-130 GSM, 58/60-inch width.',
+    audience:
+      'Summer apparel brands, sportswear manufacturers, travel clothing companies, and hot-climate uniform suppliers seeking instant-cooling fabric technology.',
+    ai_use_cases: ['Instant-cool summer t-shirts', 'Hot-weather performance wear', 'Travel and commuter apparel'],
+    ai_specs: {
+      weight: '80-130 GSM',
+      width: '147-152 cm (58-60")',
+      composition: 'Nylon / Viscose blend',
+      construction: 'Single jersey / Ripstop / Twill',
+      finish: 'Cooling mineral finish + moisture-wicking',
+      cooling_effect: 'Qmax >0.2 J/cm2·s (instant cool touch)',
+      features: 'Instant cooling, moisture wicking, ultra-lightweight, quick drying',
+      certification: 'OEKO-TEX Standard 100',
+    },
+    ai_comparison:
+      'Compared to traditional cotton t-shirts, this cooling fabric provides an immediate cool sensation (3-5°C cooler on contact) and dries 4x faster. Compared to standard polyester wicking fabrics, it offers a softer, more natural hand feel with active cooling properties.',
+    ai_faq: [
+      {
+        q: 'Does the cooling effect diminish after washing?',
+        a: 'When mineral additives are embedded in the fiber, the cooling effect is permanent. Topical cooling finishes may diminish after 20-30 washes. Our fiber-embedded cooling is wash-durable.',
+      },
+      {
+        q: 'What is the Qmax rating?',
+        a: 'Qmax >0.2 J/cm2·s, which indicates a strong instant cooling sensation. Higher Qmax values mean greater perceived coolness on skin contact.',
+      },
+    ],
+  },
+  {
+    id: 'light-down-fabric',
+    name: 'Light Down Jacket Fabric',
+    category: 'BREATHABLE',
+    region: ['EU', 'US', 'ASIA'],
+    skill: 'advanced',
+    environment: ['outdoor', 'apparel', 'cold weather'],
+    water_condition: ['snow', 'light rain', 'humidity'],
+    safety_level: 'low',
+    use_case: ['ultralight down jackets', 'packable puffers', 'sleeping bag shells', 'insulated vests'],
+    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low with tennis balls', 'do not iron'],
+    desc: 'Ultra-lightweight 20D nylon down-proof fabric engineered for packable down jackets and insulated outerwear.',
+    definition:
+      'An ultra-lightweight 20D nylon down-proof shell fabric that prevents down migration while providing wind resistance, DWR water repellency, and exceptional packability for ultralight down jackets and premium insulated apparel.',
+    problem:
+      'Ultralight outdoor brands need the lightest possible down-proof fabric that prevents feather leakage, provides adequate weather resistance, and packs down to minimum volume — without sacrificing durability or tear strength.',
+    howItWorks:
+      '20 denier nylon micro-filament yarns are woven in an ultra-high-density construction (calendered finish) that prevents down and feather migration. A DWR (durable water repellent) finish provides light moisture protection. The ultra-fine yarns and lightweight construction (35-45 GSM) enable exceptional packability. Fabric weight: 35-45 GSM, 58/60-inch width.',
+    audience:
+      'Ultralight down jacket manufacturers, premium puffer brands, sleeping bag producers, and packable outerwear companies seeking the lightest possible down-proof shell fabrics.',
+    ai_use_cases: ['Ultralight packable down jackets', 'Premium puffer vests and coats', 'Down sleeping bag shell fabrics'],
+    ai_specs: {
+      weight: '35-45 GSM',
+      width: '147-152 cm (58-60")',
+      composition: '100% Nylon (20D micro-filament)',
+      construction: 'High-density plain weave with calendered finish',
+      finish: 'DWR + down-proof treatment',
+      down_proof: '>1000 Frazier (down-proof certified)',
+      features: 'Ultra-lightweight, down-proof, water-resistant, wind-resistant, packable',
+      certification: 'OEKO-TEX Standard 100, RDS compatible',
+    },
+    ai_comparison:
+      'Compared to standard 10D-20D down-proof fabrics, this 20D version offers an optimal balance of weight savings, tear strength, and down-proof performance. It is significantly lighter than 30D+ fabrics used for heavier down jackets, saving 30-50% in fabric weight.',
+    ai_faq: [
+      {
+        q: 'What is the minimum denier available?',
+        a: '20D is our standard for lightweight down jackets. 10D is available for ultralight specialist applications. 30D is recommended for frequent-use garments requiring higher durability.',
+      },
+      {
+        q: 'Can this fabric be used with synthetic insulation?',
+        a: 'Yes. The down-proof construction also works effectively with synthetic insulation (Primaloft, Thinsulate, 3M Thinsulate) for vegan-friendly or wet-weather insulated garments.',
+      },
+    ],
+  },
 ];
+
+export const mdxSlugToRecordId: Record<string, string> = {
+  'sun-protection-upf50': 'sun-polyester-upf50',
+  'waterproof-breathable': 'wp-breathable-membrane',
+  'quick-dry-moisture-wicking': 'qd-moisture-wicking-poly',
+  'antibacterial-7a': 'ab-silver-ion',
+  '4-way-stretch-fabric': 'st-4way-nylon-spandex',
+  'breathable-mesh-fabric': 'br-high-air-mesh',
+  'eco-friendly-recycled-fabric': 'eco-recycled-pet',
+  'organic-cotton-fabric': 'eco-organic-cotton',
+  'compression-recovery-fabric': 'st-compression-knit',
+  'upf50-knit-activewear-fabric': 'sun-uv-blocking-knit',
+  'silver-ion-antimicrobial-fabric': 'ab-silver-ion',
+  'high-airflow-mesh-sportswear-fabric': 'br-high-air-mesh',
+  'functional-fashion-fabric': 'functional-fashion-fabric',
+  'high-density-tactical-fabric': 'high-density-tactical-fabric',
+  'triple-protection-workwear-fabric': 'triple-protection-workwear-fabric',
+  'outdoor-softshell-fabric': 'outdoor-softshell-fabric',
+  'polyester-softshell-fabric': 'polyester-softshell-fabric',
+  'quick-dry-sports-woven-fabric': 'quick-dry-sports-woven-fabric',
+  'yoga-high-stretch-knit': 'yoga-high-stretch-knit',
+  'yoga-legging-knit-fabric': 'yoga-legging-knit-fabric',
+  'cooling-touch-fabric': 'cooling-touch-fabric',
+  'light-down-fabric': 'light-down-fabric',
+};
+
+export function findRecordBySlug(slug: string): ProductRecord | undefined {
+  const mappedId = mdxSlugToRecordId[slug];
+  if (mappedId) return products.find((p) => p.id === mappedId);
+  return products.find((p) => p.id === slug);
+}
