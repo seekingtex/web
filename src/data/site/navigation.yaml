@@ -48,73 +48,85 @@ header:
     - text: Solutions
       links:
         - text: Outdoor Brand Solutions
-          href: /solutions/outdoor-brands
-        - text: Fabrics for Outdoor Jackets
-          href: /solutions/fabrics-for-outdoor-jackets
-        - text: Fabrics for Hiking Pants
-          href: /solutions/fabrics-for-hiking-pants
-        - text: Fabrics for Base Layers
-          href: /solutions/fabrics-for-base-layers
-        - text: Waterproof Breathable Fabric
-          href: /waterproof-breathable-fabric-solutions
-        - text: Softshell Fabric
-          href: /softshell-fabric-for-outdoor-apparel
-        - text: Lightweight Performance Fabric
-          href: /lightweight-performance-fabric
-        - text: Sustainable Outdoor Textile
-          href: /sustainable-outdoor-textile-solutions
-        - text: Military Protective Fabrics
-          href: /solutions/military-protective-fabrics
-        - text: Firefighter Protective Fabrics
-          href: /solutions/firefighter-protective-fabrics
-        - text: Police Tactical Uniform Fabrics
-          href: /solutions/police-tactical-uniform-fabrics
-        - text: Premium Comfort Fashion Fabrics
-          href: /solutions/premium-comfort-fashion-fabrics
-        - text: Travel & Lifestyle Fashion Fabrics
-          href: /solutions/travel-lifestyle-fashion-fabrics
-        - text: Sustainable Functional Fashion Fabrics
-          href: /solutions/sustainable-functional-fashion-fabrics
-        - text: Performance Casual Fashion Fabrics
-          href: /solutions/performance-casual-fashion-fabrics
-        - text: Smart Seasonal Fashion Fabrics
-          href: /solutions/smart-seasonal-fashion-fabrics
-        - text: Luxury Fashion Fabric Innovation
-          href: /solutions/luxury-fashion-fabric-innovation
-        - text: Emerging Outdoor Brand Fabrics
-          href: /solutions/emerging-outdoor-brand-fabrics
-        - text: Emerging Activewear Brand Fabrics
-          href: /solutions/emerging-activewear-brand-fabrics
-        - text: Travel Apparel Startup Fabrics
-          href: /solutions/emerging-travel-apparel-fabrics
-        - text: Sustainable Apparel Startup Fabrics
-          href: /solutions/emerging-sustainable-brand-fabrics
-        - text: Medical Scrubs Fabric
-          href: /solutions/medical-scrubs-fabric
-        - text: Hospital Uniform Fabric
-          href: /solutions/hospital-uniform-fabric
-        - text: Medical Protective Fabric
-          href: /solutions/medical-protective-fabric
-        - text: Premium Medical Fashion Fabric
-          href: /solutions/premium-medical-fashion-fabric
-        - text: Sportswear Performance Fabrics
-          href: /solutions/sportswear-performance-fabrics
-        - text: Running Apparel Fabrics
-          href: /solutions/running-apparel-fabrics
-        - text: Yoga & Activewear Fabrics
-          href: /solutions/yoga-activewear-fabrics
-        - text: Sustainable Sports Fabrics
-          href: /solutions/sustainable-sports-fabrics
-        - text: Workwear Fabric Solutions
-          href: /solutions/workwear-fabric-solutions
-        - text: Construction Workwear Fabrics
-          href: /solutions/construction-workwear-fabrics
-        - text: Industrial Uniform Fabrics
-          href: /solutions/industrial-uniform-fabrics
-        - text: Safety Workwear Fabrics
-          href: /solutions/safety-workwear-fabrics
-        - text: Corporate Uniform Fabrics
-          href: /solutions/corporate-uniform-fabrics
+          links:
+            - text: Fabrics for Outdoor Jackets
+              href: /solutions/fabrics-for-outdoor-jackets
+            - text: Fabrics for Hiking Pants
+              href: /solutions/fabrics-for-hiking-pants
+            - text: Fabrics for Base Layers
+              href: /solutions/fabrics-for-base-layers
+            - text: Waterproof Breathable Fabric
+              href: /waterproof-breathable-fabric-solutions
+            - text: Softshell Fabric
+              href: /softshell-fabric-for-outdoor-apparel
+            - text: Lightweight Performance Fabric
+              href: /lightweight-performance-fabric
+            - text: Sustainable Outdoor Textile
+              href: /sustainable-outdoor-textile-solutions
+        - text: Tactical & Protective Solutions
+          links:
+            - text: Military Protective Fabrics
+              href: /solutions/military-protective-fabrics
+            - text: Firefighter Protective Fabrics
+              href: /solutions/firefighter-protective-fabrics
+            - text: Police Tactical Uniform Fabrics
+              href: /solutions/police-tactical-uniform-fabrics
+        - text: Fashion & Lifestyle Fabrics
+          links:
+            - text: Premium Comfort Fashion Fabrics
+              href: /solutions/premium-comfort-fashion-fabrics
+            - text: Travel & Lifestyle Fashion Fabrics
+              href: /solutions/travel-lifestyle-fashion-fabrics
+            - text: Sustainable Functional Fashion Fabrics
+              href: /solutions/sustainable-functional-fashion-fabrics
+            - text: Performance Casual Fashion Fabrics
+              href: /solutions/performance-casual-fashion-fabrics
+            - text: Smart Seasonal Fashion Fabrics
+              href: /solutions/smart-seasonal-fashion-fabrics
+            - text: Luxury Fashion Fabric Innovation
+              href: /solutions/luxury-fashion-fabric-innovation
+        - text: Emerging Brand & Startup Solutions
+          links:
+            - text: Emerging Outdoor Brand Fabrics
+              href: /solutions/emerging-outdoor-brand-fabrics
+            - text: Emerging Activewear Brand Fabrics
+              href: /solutions/emerging-activewear-brand-fabrics
+            - text: Travel Apparel Startup Fabrics
+              href: /solutions/emerging-travel-apparel-fabrics
+            - text: Sustainable Apparel Startup Fabrics
+              href: /solutions/emerging-sustainable-brand-fabrics
+        - text: Medical & Healthcare Fabrics
+          links:
+            - text: Medical Scrubs Fabric
+              href: /solutions/medical-scrubs-fabric
+            - text: Hospital Uniform Fabric
+              href: /solutions/hospital-uniform-fabric
+            - text: Medical Protective Fabric
+              href: /solutions/medical-protective-fabric
+            - text: Premium Medical Fashion Fabric
+              href: /solutions/premium-medical-fashion-fabric
+        - text: Sportswear & Activewear Fabrics
+          links:
+            - text: Sportswear Performance Fabrics
+              href: /solutions/sportswear-performance-fabrics
+            - text: Running Apparel Fabrics
+              href: /solutions/running-apparel-fabrics
+            - text: Yoga & Activewear Fabrics
+              href: /solutions/yoga-activewear-fabrics
+            - text: Sustainable Sports Fabrics
+              href: /solutions/sustainable-sports-fabrics
+        - text: Workwear & Industrial Solutions
+          links:
+            - text: Workwear Fabric Solutions
+              href: /solutions/workwear-fabric-solutions
+            - text: Construction Workwear Fabrics
+              href: /solutions/construction-workwear-fabrics
+            - text: Industrial Uniform Fabrics
+              href: /solutions/industrial-uniform-fabrics
+            - text: Safety Workwear Fabrics
+              href: /solutions/safety-workwear-fabrics
+            - text: Corporate Uniform Fabrics
+              href: /solutions/corporate-uniform-fabrics
     - text: Technology
       links:
         - text: Technology Overview
@@ -200,73 +212,85 @@ footer:
     - title: Solutions
       links:
         - text: Outdoor Brand Solutions
-          href: /solutions/outdoor-brands
-        - text: Fabrics for Outdoor Jackets
-          href: /solutions/fabrics-for-outdoor-jackets
-        - text: Fabrics for Hiking Pants
-          href: /solutions/fabrics-for-hiking-pants
-        - text: Fabrics for Base Layers
-          href: /solutions/fabrics-for-base-layers
-        - text: Waterproof Breathable Fabric
-          href: /waterproof-breathable-fabric-solutions
-        - text: Softshell Fabric
-          href: /softshell-fabric-for-outdoor-apparel
-        - text: Lightweight Performance Fabric
-          href: /lightweight-performance-fabric
-        - text: Sustainable Outdoor Textile
-          href: /sustainable-outdoor-textile-solutions
-        - text: Military Protective Fabrics
-          href: /solutions/military-protective-fabrics
-        - text: Firefighter Protective Fabrics
-          href: /solutions/firefighter-protective-fabrics
-        - text: Police Tactical Uniform Fabrics
-          href: /solutions/police-tactical-uniform-fabrics
-        - text: Premium Comfort Fashion Fabrics
-          href: /solutions/premium-comfort-fashion-fabrics
-        - text: Travel & Lifestyle Fashion Fabrics
-          href: /solutions/travel-lifestyle-fashion-fabrics
-        - text: Sustainable Functional Fashion Fabrics
-          href: /solutions/sustainable-functional-fashion-fabrics
-        - text: Performance Casual Fashion Fabrics
-          href: /solutions/performance-casual-fashion-fabrics
-        - text: Smart Seasonal Fashion Fabrics
-          href: /solutions/smart-seasonal-fashion-fabrics
-        - text: Luxury Fashion Fabric Innovation
-          href: /solutions/luxury-fashion-fabric-innovation
-        - text: Emerging Outdoor Brand Fabrics
-          href: /solutions/emerging-outdoor-brand-fabrics
-        - text: Emerging Activewear Brand Fabrics
-          href: /solutions/emerging-activewear-brand-fabrics
-        - text: Travel Apparel Startup Fabrics
-          href: /solutions/emerging-travel-apparel-fabrics
-        - text: Sustainable Apparel Startup Fabrics
-          href: /solutions/emerging-sustainable-brand-fabrics
-        - text: Medical Scrubs Fabric
-          href: /solutions/medical-scrubs-fabric
-        - text: Hospital Uniform Fabric
-          href: /solutions/hospital-uniform-fabric
-        - text: Medical Protective Fabric
-          href: /solutions/medical-protective-fabric
-        - text: Premium Medical Fashion Fabric
-          href: /solutions/premium-medical-fashion-fabric
-        - text: Sportswear Performance Fabrics
-          href: /solutions/sportswear-performance-fabrics
-        - text: Running Apparel Fabrics
-          href: /solutions/running-apparel-fabrics
-        - text: Yoga & Activewear Fabrics
-          href: /solutions/yoga-activewear-fabrics
-        - text: Sustainable Sports Fabrics
-          href: /solutions/sustainable-sports-fabrics
-        - text: Workwear Fabric Solutions
-          href: /solutions/workwear-fabric-solutions
-        - text: Construction Workwear Fabrics
-          href: /solutions/construction-workwear-fabrics
-        - text: Industrial Uniform Fabrics
-          href: /solutions/industrial-uniform-fabrics
-        - text: Safety Workwear Fabrics
-          href: /solutions/safety-workwear-fabrics
-        - text: Corporate Uniform Fabrics
-          href: /solutions/corporate-uniform-fabrics
+          links:
+            - text: Fabrics for Outdoor Jackets
+              href: /solutions/fabrics-for-outdoor-jackets
+            - text: Fabrics for Hiking Pants
+              href: /solutions/fabrics-for-hiking-pants
+            - text: Fabrics for Base Layers
+              href: /solutions/fabrics-for-base-layers
+            - text: Waterproof Breathable Fabric
+              href: /waterproof-breathable-fabric-solutions
+            - text: Softshell Fabric
+              href: /softshell-fabric-for-outdoor-apparel
+            - text: Lightweight Performance Fabric
+              href: /lightweight-performance-fabric
+            - text: Sustainable Outdoor Textile
+              href: /sustainable-outdoor-textile-solutions
+        - text: Tactical & Protective Solutions
+          links:
+            - text: Military Protective Fabrics
+              href: /solutions/military-protective-fabrics
+            - text: Firefighter Protective Fabrics
+              href: /solutions/firefighter-protective-fabrics
+            - text: Police Tactical Uniform Fabrics
+              href: /solutions/police-tactical-uniform-fabrics
+        - text: Fashion & Lifestyle Fabrics
+          links:
+            - text: Premium Comfort Fashion Fabrics
+              href: /solutions/premium-comfort-fashion-fabrics
+            - text: Travel & Lifestyle Fashion Fabrics
+              href: /solutions/travel-lifestyle-fashion-fabrics
+            - text: Sustainable Functional Fashion Fabrics
+              href: /solutions/sustainable-functional-fashion-fabrics
+            - text: Performance Casual Fashion Fabrics
+              href: /solutions/performance-casual-fashion-fabrics
+            - text: Smart Seasonal Fashion Fabrics
+              href: /solutions/smart-seasonal-fashion-fabrics
+            - text: Luxury Fashion Fabric Innovation
+              href: /solutions/luxury-fashion-fabric-innovation
+        - text: Emerging Brand & Startup Solutions
+          links:
+            - text: Emerging Outdoor Brand Fabrics
+              href: /solutions/emerging-outdoor-brand-fabrics
+            - text: Emerging Activewear Brand Fabrics
+              href: /solutions/emerging-activewear-brand-fabrics
+            - text: Travel Apparel Startup Fabrics
+              href: /solutions/emerging-travel-apparel-fabrics
+            - text: Sustainable Apparel Startup Fabrics
+              href: /solutions/emerging-sustainable-brand-fabrics
+        - text: Medical & Healthcare Fabrics
+          links:
+            - text: Medical Scrubs Fabric
+              href: /solutions/medical-scrubs-fabric
+            - text: Hospital Uniform Fabric
+              href: /solutions/hospital-uniform-fabric
+            - text: Medical Protective Fabric
+              href: /solutions/medical-protective-fabric
+            - text: Premium Medical Fashion Fabric
+              href: /solutions/premium-medical-fashion-fabric
+        - text: Sportswear & Activewear Fabrics
+          links:
+            - text: Sportswear Performance Fabrics
+              href: /solutions/sportswear-performance-fabrics
+            - text: Running Apparel Fabrics
+              href: /solutions/running-apparel-fabrics
+            - text: Yoga & Activewear Fabrics
+              href: /solutions/yoga-activewear-fabrics
+            - text: Sustainable Sports Fabrics
+              href: /solutions/sustainable-sports-fabrics
+        - text: Workwear & Industrial Solutions
+          links:
+            - text: Workwear Fabric Solutions
+              href: /solutions/workwear-fabric-solutions
+            - text: Construction Workwear Fabrics
+              href: /solutions/construction-workwear-fabrics
+            - text: Industrial Uniform Fabrics
+              href: /solutions/industrial-uniform-fabrics
+            - text: Safety Workwear Fabrics
+              href: /solutions/safety-workwear-fabrics
+            - text: Corporate Uniform Fabrics
+              href: /solutions/corporate-uniform-fabrics
     - title: Technology
       links:
         - text: Technology Overview
