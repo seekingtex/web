@@ -49,10 +49,6 @@ header:
           href: /news
         - text: Contact
           href: /contact
-    - text: Support
-      links:
-        - text: Contact
-          href: /contact
         - text: FAQ
           href: /faq
         - text: OEM/ODM
@@ -109,10 +105,6 @@ footer:
           href: /factory
         - text: News
           href: /news
-        - text: Contact
-          href: /contact
-    - title: Support
-      links:
         - text: Contact
           href: /contact
         - text: FAQ

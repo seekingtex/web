@@ -145,14 +145,8 @@ header:
           href: /factory
         - text: Case Studies
           href: /evidence
-        - text: Quality & Testing
-          href: /quality
         - text: News
           href: /news
-        - text: Contact
-          href: /contact
-    - text: Support
-      links:
         - text: Contact
           href: /contact
         - text: FAQ
@@ -311,10 +305,6 @@ footer:
           href: /evidence
         - text: News
           href: /news
-        - text: Contact
-          href: /contact
-    - title: Support
-      links:
         - text: Contact
           href: /contact
         - text: FAQ

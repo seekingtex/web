@@ -51,10 +51,6 @@ header:
           href: /news
         - text: 联系我们
           href: /contact
-    - text: 支持
-      links:
-        - text: 联系我们
-          href: /contact
         - text: 常见问题
           href: /faq
         - text: OEM/ODM
@@ -113,10 +109,6 @@ footer:
           href: /evidence
         - text: 新闻
           href: /news
-        - text: 联系我们
-          href: /contact
-    - title: 支持
-      links:
         - text: 联系我们
           href: /contact
         - text: 常见问题
