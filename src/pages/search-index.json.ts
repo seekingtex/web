@@ -56,7 +56,7 @@ const staticPages: { url: string; title: string; excerpt: string; tags: string[]
     tags: ['ai', 'context', 'llm'],
   },
   {
-    url: '/distributors',
+    url: '/oem-odm-manufacturer',
     title: 'Become a Seekingtex Partner',
     excerpt: 'Global distributor and partnership opportunities with Seekingtex functional fabrics.',
     tags: ['distributor', 'partner', 'wholesale'],
@@ -69,13 +69,13 @@ const staticPages: { url: string; title: string; excerpt: string; tags: string[]
     tags: ['guides', 'beginner', 'fabric', 'textile'],
   },
   {
-    url: '/products/bundles',
+    url: '/products',
     title: 'Bundle Deals',
     excerpt: 'Save on Seekingtex fabric sample kits and bulk order packages. Starter packs, full yardage, and more.',
     tags: ['samples', 'bulk', 'ordering', 'save'],
   },
   {
-    url: '/fabric-guide',
+    url: '/learn/fabrics',
     title: 'Fabric Guide',
     excerpt:
       'Find the right functional fabric for your application. Compare UPF ratings, waterproof levels, fabric weights, compositions, and certifications.',
