@@ -292,20 +292,48 @@ const currentLocale = getLangFromUrl(Astro.url);
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 }) => (
-                      <li>
-                        <a
-                          class:list={[
-                            'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === cleanPath },
-                          ]}
-                          href={localizeHref(href2, currentLocale)}
-                          data-entity={entityForHref(href2)}
-                        >
-                          {t(text2, currentLocale)}
-                        </a>
-                      </li>
-                    ))}
+                    {links.map(({ text: text2, href: href2, links: links2 }) =>
+                      links2?.length ? (
+                        <li class="dropdown md:relative">
+                          <button
+                            type="button"
+                            class="first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block w-full text-left whitespace-no-wrap"
+                          >
+                            {t(text2, currentLocale)}
+                            <Icon name="tabler:chevron-right" class="w-3.5 h-3.5 ml-0.5 inline-block" />
+                          </button>
+                          <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute md:left-full md:top-0 pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                            {links2.map(({ text: text3, href: href3 }) => (
+                              <li>
+                                <a
+                                  class:list={[
+                                    'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                                    { 'aw-link-active': href3 === cleanPath },
+                                  ]}
+                                  href={localizeHref(href3, currentLocale)}
+                                  data-entity={entityForHref(href3)}
+                                >
+                                  {t(text3, currentLocale)}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ) : (
+                        <li>
+                          <a
+                            class:list={[
+                              'first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                              { 'aw-link-active': href2 === cleanPath },
+                            ]}
+                            href={localizeHref(href2, currentLocale)}
+                            data-entity={entityForHref(href2)}
+                          >
+                            {t(text2, currentLocale)}
+                          </a>
+                        </li>
+                      )
+                    )}
                   </ul>
                 </>
               ) : (

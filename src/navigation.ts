@@ -6,10 +6,19 @@ const PRODUCT_LIST = '/products';
 
 const headerData = {
   topBarLinks: navData?.header?.topBar ?? [],
-  links: navData?.header?.links?.map((entry: { text?: string; links?: Array<{ text?: string; href?: string }> }) => ({
-    text: entry?.text,
-    links: (entry?.links ?? []).map((l: { text?: string; href?: string }) => ({ text: l?.text, href: l?.href })),
-  })) ?? [
+  links: navData?.header?.links?.map(
+    (entry: {
+      text?: string;
+      links?: Array<{ text?: string; href?: string; links?: Array<{ text?: string; href?: string }> }>;
+    }) => ({
+      text: entry?.text,
+      links: (entry?.links ?? []).map((l) => ({
+        text: l?.text,
+        href: l?.href,
+        links: (l?.links ?? []).map((x: { text?: string; href?: string }) => ({ text: x?.text, href: x?.href })),
+      })),
+    })
+  ) ?? [
     {
       text: 'Fabric Library',
       links: [

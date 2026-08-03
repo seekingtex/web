@@ -110,9 +110,9 @@
   padding: 0 5px;
 }
 
-.dropdown:focus .dropdown-menu,
-.dropdown:focus-within .dropdown-menu,
-.dropdown:hover .dropdown-menu {
+li.dropdown:focus > .dropdown-menu,
+li.dropdown:focus-within > .dropdown-menu,
+li.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
