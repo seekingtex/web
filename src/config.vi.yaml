@@ -6,18 +6,18 @@ site:
   googleSiteVerificationId: ''
 metadata:
   title:
-    default: Seekingtex | Výrobce funkčních tkanin — Ochrana před sluncem, voděodolné a rychleschnoucí textilie
+    default: Seekingtex | Nhà sản xuất vải chức năng — Chống nắng, chống thấm nước & vải nhanh khô
     template: '%s — Seekingtex'
-  description: 'Seekingtex je přední výrobce funkčních tkanin specializující se na ochranu před sluncem (UPF 50+), voděodolné, rychleschnoucí, antibakteriální a výkonnostní tkaniny pro sportovní oblečení, outdoorové vybavení a taktické vybavení. Služby OEM/ODM k dispozici.'
+  description: 'Seekingtex là nhà sản xuất vải chức năng hàng đầu, chuyên về vải chống nắng (UPF 50+), chống thấm nước, nhanh khô, kháng khuẩn và vải hiệu suất cao cho trang phục thể thao, trang phục ngoài trời và thiết bị chiến thuật. Dịch vụ OEM/ODM sẵn có.'
   keywords:
     - Seekingtex
-    - výrobce funkčních tkanin
-    - tkanina na ochranu před sluncem
-    - tkanina UPF 50+
-    - voděodolná tkanina
-    - rychleschnoucí tkanina
-    - výkonnostní tkanina
-    - tkanina na sportovní oblečení
+    - nhà sản xuất vải chức năng
+    - vải chống nắng
+    - vải UPF 50+
+    - vải chống thấm nước
+    - vải nhanh khô
+    - vải hiệu suất cao
+    - vải trang phục thể thao
   author: Seekingtex
   robots:
     index: true
@@ -29,7 +29,7 @@ metadata:
         width: 1200
         height: 628
     type: website
-    locale: cs_CZ
+    locale: vi_VN
   twitter:
     handle: '@Seekingtex'
     site: '@Seekingtex'
@@ -88,10 +88,11 @@ analytics:
 ui:
   theme: 'system'
 
+# ----- Cài đặt trang web theo ngôn ngữ -----
 siteSettings:
   siteName: 'Seekingtex'
-  siteTagline: 'Výrobce funkčních tkanin — Ochrana před sluncem, voděodolné a rychleschnoucí textilie'
-  siteDescription: 'Seekingtex je přední výrobce vysoce výkonných funkčních tkanin, specializující se na UPF 50+ ochranu před sluncem, voděodolné/prodyšné, rychleschnoucí, antibakteriální a strečové textilie pro sportovní oblečení, outdoorové vybavení a průmyslové aplikace. OEM/ODM s globální dopravou.'
+  siteTagline: 'Nhà sản xuất vải chức năng — Chống nắng, chống thấm nước & vải nhanh khô'
+  siteDescription: 'Seekingtex là nhà sản xuất hàng đầu về vải chức năng hiệu suất cao, chuyên về vải chống nắng UPF 50+, chống thấm nước/thoáng khí, nhanh khô, kháng khuẩn và co giãn cho trang phục thể thao, thiết bị ngoài trời và ứng dụng công nghiệp. OEM/ODM với giao hàng toàn cầu.'
   organization:
     name: 'Seekingtex'
     logo: ''
@@ -103,12 +104,12 @@ branding:
   site_name: 'Seekingtex'
   logo_image: ''
   logo_alt: 'Logo Seekingtex'
-  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Všechna práva vyhrazena.'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Bảo lưu mọi quyền.'
   phone: '+86 0512-50178907'
   address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
   email: gzb@seekingtex.com
   whatsapp_number: '+8618651601133'
-  whatsapp_default_message: 'Dobrý den, rád bych se zeptal na vaše funkční tkaniny.'
+  whatsapp_default_message: 'Xin chào, tôi muốn hỏi về vải chức năng của bạn.'
   contact_email_to: gzb@seekingtex.com
   contact_email_provider: resend
   contact_from_email: web@seekingtex.com

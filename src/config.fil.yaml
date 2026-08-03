@@ -6,18 +6,18 @@ site:
   googleSiteVerificationId: ''
 metadata:
   title:
-    default: Seekingtex | Tillverkare av funktionella tyger — Solskydd, vattentäta & snabbtorkande textilier
+    default: Seekingtex | Manufacturer ng Functional Fabrics — Sun Protection, Waterproof, Quick-Dry na Tela
     template: '%s — Seekingtex'
-  description: 'Seekingtex är en ledande tillverkare av funktionella tyger med specialisering inom solskydd (UPF 50+), vattentäta, snabbtorkande, antibakteriella och prestandatyger för sportkläder, utomhuskläder och taktisk utrustning. OEM/ODM-tjänster tillgängliga.'
+  description: 'Ang Seekingtex ay isang nangungunang tagagawa ng functional fabrics na dalubhasa sa sun protection (UPF 50+), waterproof, quick-dry, antibacterial, at performance na tela para sa sportswear, outdoor apparel, at tactical gear. Available ang OEM/ODM services.'
   keywords:
     - Seekingtex
-    - tillverkare av funktionella tyger
-    - solskyddstyg
-    - UPF 50+ tyg
-    - vattentätt tyg
-    - snabbtorkande tyg
-    - prestandatyg
-    - sportklädestyg
+    - tagagawa ng functional fabrics
+    - tela ng sun protection
+    - UPF 50+ na tela
+    - waterproof na tela
+    - quick-dry na tela
+    - performance na tela
+    - tela ng sportswear
   author: Seekingtex
   robots:
     index: true
@@ -29,7 +29,7 @@ metadata:
         width: 1200
         height: 628
     type: website
-    locale: sv_SE
+    locale: fil_PH
   twitter:
     handle: '@Seekingtex'
     site: '@Seekingtex'
@@ -88,11 +88,11 @@ analytics:
 ui:
   theme: 'system'
 
-# ----- Per-language site settings -----
+# ----- Mga setting ng site ayon sa wika -----
 siteSettings:
   siteName: 'Seekingtex'
-  siteTagline: 'Tillverkare av funktionella tyger — Solskydd, vattentäta & snabbtorkande textilier'
-  siteDescription: 'Seekingtex är en ledande tillverkare av högpresterande funktionella tyger med specialisering inom UPF 50+ solskydd, vattentäta/andningsbara, snabbtorkande, antibakteriella och elastiska textilier för sportkläder, utomhusutrustning och industriella applikationer. OEM/ODM med global frakt.'
+  siteTagline: 'Manufacturer ng functional fabrics — Sun protection, waterproof & quick-dry na tela'
+  siteDescription: 'Ang Seekingtex ay isang nangungunang tagagawa ng high-performance functional fabrics na dalubhasa sa UPF 50+ sun protection, waterproof/breathable, quick-dry, antibacterial, at stretch na tela para sa sportswear, outdoor gear, tactical apparel, at industrial application. OEM/ODM na may global shipping.'
   organization:
     name: 'Seekingtex'
     logo: ''
@@ -103,13 +103,13 @@ siteSettings:
 branding:
   site_name: 'Seekingtex'
   logo_image: ''
-  logo_alt: 'Seekingtex logo'
-  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Alla rättigheter förbehållna.'
+  logo_alt: 'Logo ng Seekingtex'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Nakalaan ang lahat ng karapatan.'
   phone: '+86 0512-50178907'
   address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
   email: gzb@seekingtex.com
   whatsapp_number: '+8618651601133'
-  whatsapp_default_message: 'Hej, jag vill fråga om era funktionella tyger.'
+  whatsapp_default_message: 'Hello, nais kong magtanong tungkol sa inyong mga functional fabrics.'
   contact_email_to: gzb@seekingtex.com
   contact_email_provider: resend
   contact_from_email: web@seekingtex.com

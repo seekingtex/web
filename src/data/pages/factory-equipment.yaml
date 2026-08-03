@@ -1,82 +1,73 @@
 hero:
   tagline: Equipment
   title: Manufacturing Equipment & Machinery
-  subtitle: Industrial-grade equipment across cutting, welding, printing, and assembly
+  subtitle: Industrial-grade equipment across weaving, knitting, finishing, and testing
   back_label: Back to Factory
   back_link: /factory
 
 categories:
-  - title: Cutting & Material Preparation
+  - title: Weaving & Knitting
     items:
-      - name: Automatic PVC Cutting Machine
-        spec: CNC-controlled, 6.5 m × 2.5 m, 0.1 mm accuracy
-        desc: Computer-controlled automatic cutting machine for PVC, Hypalon, and advanced construction fabrics. Nesting software optimises material utilisation to below 5% waste.
-      - name: Fabric Spreader
-        spec: 3 m max width, tension-controlled feed
-        desc: Lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting.
+      - name: High-Speed Rapier Weaving Loom
+        spec: 190–360 cm width, 650 rpm max, electronic dobby
+        desc: Computer-controlled rapier loom for weaving performance fabrics with precise yarn tension control. Supports polyester, nylon, cotton, elastane, and blended yarns in plain, twill, satin, and specialty weaves.
+      - name: Circular Knitting Machine
+        spec: 30"–38" diameter, 18–32 gauge, 90 feeders
+        desc: High-speed circular knitting machine for producing jersey, pique, fleece, and rib-knit fabrics. Equipped with positive feed and yarn tension monitoring for consistent fabric quality.
 
-  - title: Tube Welding & Bonding
+  - title: Dyeing & Finishing
     items:
-      - name: Heat Sealing Machine
-        spec: Hot-air welding, variable 200–600 °C, 0.5–5 m/min
-        desc: Hot-air heat sealing machine for bonding and welding PVC and Hypalon tube seams. Used for tacking, sealing, and fusing tube chambers and float joints.
-      - name: Dielectric RF Press
-        spec: 15 kW, platen 2000 × 600 mm
-        desc: Radio-frequency welding press for main longitudinal seams, transom-to-tube joints, and large-chamber fabrication.
-      - name: CNC-Controlled RF Welder
-        spec: 8 kW, XY table 2500 × 1200 mm
-        desc: Programmable curved-seam welding for complex geometries, logo embossing, and precision patchwork.
+      - name: High-Temperature Dyeing Machine
+        spec: 130 °C max, 1:4–1:10 liquor ratio, programmable
+        desc: Pressurized jet dyeing machine for polyester, nylon, and blended fabrics. Precision temperature and pressure control ensures uniform dye penetration and color consistency across batches.
+      - name: Stenter Finishing Frame
+        spec: 8-chamber, 200–240 cm width, hot-air circulation
+        desc: Multi-chamber stenter for heat-setting, drying, and finishing of woven and knitted fabrics. Applies DWR, antimicrobial, UV-blocking, and other functional finishes with uniform coverage.
+      - name: Padding Mangle
+        spec: 2-roll vertical, pneumatic pressure control, 70–90 % pick-up
+        desc: Horizontal padding mangle for chemical application in finishing processes. Consistent squeeze pressure ensures even pick-up of functional finishes across fabric width.
 
-  - title: performance textile Hull Manufacturing
+  - title: Coating & Lamination
     items:
-      - name: Fiberglass Hand-Lay-Up Moulds
-        spec: Multiple moulds for performance textile hulls up to 6 m LOA
-        desc: Traditional hand-lay-up fiberglass moulding with polyester and vinylester resin systems. Each layer is hand-rolled and vacuum-bagged for consistent laminate quality and strength.
-      - name: Gelcoat Spray Booth
-        spec: Temperature-controlled, filtered air ventilation
-        desc: Gelcoat application for performance textile hulls. Provides a high-gloss, UV-resistant finish with precise thickness control.
-      - name: CNC Router (5-axis)
-        spec: 3 m × 2 m × 1 m envelope, water-cooled spindle
-        desc: Machining of hull inserts, console moulds, seat bases, and custom brackets.
+      - name: Knife-Over-Roll Coating Head
+        spec: 200–220 cm working width, adjustable gap 0.1–5 mm
+        desc: Precision coating head for applying PU, PVC, acrylic, and silicone coatings to fabric surfaces. Adjustable blade gap controls coating thickness for consistent performance properties.
+      - name: Hot-Melt Laminating Line
+        spec: 3-roll configuration, 180–200 °C, 5–20 m/min
+        desc: Continuous hot-melt laminating line for bonding membrane layers to fabric substrates. Used for waterproof breathable laminate production and multi-layer fabric construction.
 
-  - title: functional fabric Printing & Decoration
+  - title: Printing & Decoration
     items:
-      - name: Digital Printer
-        spec: High-resolution inkjet, up to 2 m print width
-        desc: Direct-to-fabric digital printing for full-colour functional fabric deck graphics. Prints custom patterns, gradients, and photo-quality images with UV-resistantwater-based inks.
-      - name: Screen Printing Machine
-        spec: Manual and semi-automatic, multi-colour registration
-        desc: Screen printing for functional fabric board logos, brand marks, and repeating patterns. Provides durable, opaque prints with vibrant colour saturation.
+      - name: Digital Rotary Screen Printer
+        spec: 16–20 colour stations, 1.6–2.0 m print width
+        desc: High-precision rotary screen printer for applying performance coatings and surface finishes. Direct-to-fabric digital printing also available for customized patterns and brand markings.
+      - name: Heat Transfer Printing Press
+        spec: 200×150 cm platen, 180–220 °C, pneumatic pressure
+        desc: Heat transfer press for applying sublimation prints and functional films onto finished fabrics. Temperature-controlled platen ensures consistent transfer quality.
 
-  - title: Assembly & Rigging
+  - title: Cutting & Preparation
     items:
-      - name: Engine Hoist
-        spec: 500 kg capacity, adjustable spreader bar
-        desc: Safe mounting of outboard engines from 2.5 to 60 hp.
-      - name: Console Mock-Up Frame
-        spec: Adjustable height and angle
-        desc: Pre-rigging of steering, throttle, and instrument panels before installation.
-      - name: Hydraulic Hose Crimper
-        spec: Up to 1" ID, digital pressure gauge
-        desc: Custom-length hydraulic steering hose assemblies with swaged fittings.
-      - name: Electrical Harness Board
-        spec: 3 m × 1.5 m, pre-printed wiring diagrams
-        desc: Off-boat assembly and testing of complete electrical harnesses.
+      - name: Automatic Fabric Spreading Machine
+        spec: 2.2 m max width, tension-controlled feed, 50 m/min
+        desc: Computer-controlled spreading machine lays fabric in single or multiple plies with controlled tension to prevent distortion before cutting. Integrated flaw detection system marks defects.
+      - name: CNC Fabric Cutting System
+        spec: 2.5 m × 3.5 m cutting area, 80 m/min, 0.1 mm accuracy
+        desc: Automated cutting system with reciprocating knife and drill attachment. Nesting software optimizes material utilization. Cuts multiple plies simultaneously for production efficiency.
 
   - title: Testing & Quality Control
     items:
       - name: Universal Tensile Tester
-        spec: 50 kN,  / ASTM D751
-        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches.
-      - name: Air Retention Test Rig
-        spec: Programmable, 30-min pressure-hold
-        desc: Automated pressure-hold test for every tube chamber before assembly.
-      - name: Seam Peel Tester
-        spec: Motorised 180° peel at 100 mm/min
-        desc: Weld and glued-seam peel strength testing per ISO 6185.
+        spec: 50 kN, ISO / ASTM D5034
+        desc: Breaking force, elongation at break, and tear propagation testing for fabric batches. Full data logging per ASTM D5034 and ISO 13934 standards.
       - name: Xenon-Arc Weathering Chamber
-        spec: 2000 h exposure
-        desc: UV resistance testing for colour change and strength retention.
+        spec: 2000 h exposure, ISO 105-B02
+        desc: Accelerated UV aging and lightfastness testing for color change, strength retention, and coating degradation. Simulates years of sunlight exposure in weeks.
+      - name: Hydrostatic Head Tester
+        spec: 0–50 mbar, ISO 811 / AATCC 127
+        desc: Automated hydrostatic pressure testing for waterproof fabric rating. Programmable pressure ramp rate with real-time data recording.
+      - name: Spectrophotometer
+        spec: D65 illuminant, 10° observer, 400–700 nm
+        desc: Computerized color measurement system for pass/fail color matching against reference standards. CIE Lab color difference reporting for batch consistency.
 
 cta:
   title: Interested in a factory tour?

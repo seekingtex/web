@@ -6,18 +6,18 @@ site:
   googleSiteVerificationId: ''
 metadata:
   title:
-    default: Seekingtex | Toiminnallisten kankaiden valmistaja — Aurinkosuoja, vedenpitävät & nopeasti kuivuvat tekstiilit
+    default: Seekingtex | Pengilang Fabrik Berfungsi — Perlindungan Matahari, Kalis Air & Tekstil Cepat Kering
     template: '%s — Seekingtex'
-  description: 'Seekingtex on johtava toiminnallisten kankaiden valmistaja, joka on erikoistunut aurinkosuojaan (UPF 50+), vedenpitäviin, nopeasti kuivuviin, antibakteerisiin ja suorituskykyisiin kankaisiin urheiluvaatteisiin, ulkoiluvarusteisiin ja taktisiin varusteisiin. OEM/ODM-palvelut saatavilla.'
+  description: 'Seekingtex ialah pengilang fabrik berfungsi terkemuka yang mengkhususkan diri dalam perlindungan matahari (UPF 50+), fabrik kalis air, cepat kering, antibakteria dan berprestasi untuk pakaian sukan, pakaian luar dan peralatan taktikal. Perkhidmatan OEM/ODM tersedia.'
   keywords:
     - Seekingtex
-    - toiminnallisten kankaiden valmistaja
-    - aurinkosuojakangas
-    - UPF 50+ kangas
-    - vedenpitävä kangas
-    - nopeasti kuivuva kangas
-    - suorituskykyinen kangas
-    - urheiluvaate kangas
+    - pengilang fabrik berfungsi
+    - fabrik perlindungan matahari
+    - fabrik UPF 50+
+    - fabrik kalis air
+    - fabrik cepat kering
+    - fabrik berprestasi
+    - fabrik pakaian sukan
   author: Seekingtex
   robots:
     index: true
@@ -29,7 +29,7 @@ metadata:
         width: 1200
         height: 628
     type: website
-    locale: fi_FI
+    locale: ms_MY
   twitter:
     handle: '@Seekingtex'
     site: '@Seekingtex'
@@ -88,10 +88,11 @@ analytics:
 ui:
   theme: 'system'
 
+# ----- Tetapan tapak mengikut bahasa -----
 siteSettings:
   siteName: 'Seekingtex'
-  siteTagline: 'Toiminnallisten kankaiden valmistaja — Aurinkosuoja, vedenpitävät & nopeasti kuivuvat tekstiilit'
-  siteDescription: 'Seekingtex on johtava korkean suorituskyvyn toiminnallisten kankaiden valmistaja, joka on erikoistunut UPF 50+ aurinkosuojaan, vedenpitäviin/hengittäviin, nopeasti kuivuviin, antibakteerisiin ja joustaviin tekstiileihin urheiluvaatteisiin, ulkoiluvarusteisiin ja teollisiin sovelluksiin. OEM/ODM maailmanlaajuisella toimituksella.'
+  siteTagline: 'Pengilang fabrik berfungsi — Perlindungan matahari, kalis air & tekstil cepat kering'
+  siteDescription: 'Seekingtex ialah pengilang fabrik berfungsi berprestasi tinggi terkemuka yang mengkhususkan diri dalam perlindungan matahari UPF 50+, tekstil kalis air/bernafas, cepat kering, antibakteria dan elastik untuk pakaian sukan, peralatan luar dan aplikasi industri. OEM/ODM dengan penghantaran global.'
   organization:
     name: 'Seekingtex'
     logo: ''
@@ -102,13 +103,13 @@ siteSettings:
 branding:
   site_name: 'Seekingtex'
   logo_image: ''
-  logo_alt: 'Seekingtex-logo'
-  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Kaikki oikeudet pidätetään.'
+  logo_alt: 'Logo Seekingtex'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Hak cipta terpelihara.'
   phone: '+86 0512-50178907'
   address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
   email: gzb@seekingtex.com
   whatsapp_number: '+8618651601133'
-  whatsapp_default_message: 'Hei, haluaisin kysyä toiminnallisista kankaistanne.'
+  whatsapp_default_message: 'Hello, saya ingin bertanya tentang fabrik berfungsi anda.'
   contact_email_to: gzb@seekingtex.com
   contact_email_provider: resend
   contact_from_email: web@seekingtex.com

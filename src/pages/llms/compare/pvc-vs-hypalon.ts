@@ -95,7 +95,7 @@ Polyester and nylon are the two dominant synthetic fiber families used for funct
 
 ## Related Resources
 
-- [Full Fabric Materials Comparison](${SITE_URL}/compare/pvc-vs-hypalon)
+- [Full Fabric Materials Comparison](${SITE_URL}/compare/polyester-vs-nylon)
 - [Materials Learning Guide](${SITE_URL}/learn/materials)
 - [Functional Fabric Technology Guide](${SITE_URL}/llms/technology/drop-stitch)
 - [Types of Functional Fabrics](${SITE_URL}/llms/compare/sup-types)

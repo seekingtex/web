@@ -6,18 +6,18 @@ site:
   googleSiteVerificationId: ''
 metadata:
   title:
-    default: Seekingtex | Produsent av funksjonelle stoffer — Solbeskyttelse, vanntette & hurtigtørkende tekstiler
+    default: Seekingtex | Produsen Kain Fungsional — Perlindungan Matahari, Tahan Air & Tekstil Cepat Kering
     template: '%s — Seekingtex'
-  description: 'Seekingtex er en ledende produsent av funksjonelle stoffer med spesialisering innen solbeskyttelse (UPF 50+), vanntette, hurtigtørkende, antibakterielle og ytelsesstoffer for sportsbekledning, utendørsklær og taktisk utstyr. OEM/ODM-tjenester tilgjengelig.'
+  description: 'Seekingtex adalah produsen kain fungsional terkemuka yang mengkhususkan diri pada perlindungan matahari (UPF 50+), kain tahan air, cepat kering, antibakteri, dan berperforma untuk pakaian olahraga, pakaian outdoor, dan perlengkapan taktis. Layanan OEM/ODM tersedia.'
   keywords:
     - Seekingtex
-    - produsent av funksjonelle stoffer
-    - solbeskyttelsesstoff
-    - UPF 50+ stoff
-    - vanntett stoff
-    - hurtigtørkende stoff
-    - ytelsesstoff
-    - sportsbekledning stoff
+    - produsen kain fungsional
+    - kain perlindungan matahari
+    - kain UPF 50+
+    - kain tahan air
+    - kain cepat kering
+    - kain berperforma
+    - kain pakaian olahraga
   author: Seekingtex
   robots:
     index: true
@@ -29,7 +29,7 @@ metadata:
         width: 1200
         height: 628
     type: website
-    locale: nb_NO
+    locale: id_ID
   twitter:
     handle: '@Seekingtex'
     site: '@Seekingtex'
@@ -88,11 +88,11 @@ analytics:
 ui:
   theme: 'system'
 
-# ----- Per-language site settings -----
+# ----- Pengaturan situs per bahasa -----
 siteSettings:
   siteName: 'Seekingtex'
-  siteTagline: 'Produsent av funksjonelle stoffer — Solbeskyttelse, vanntette & hurtigtørkende tekstiler'
-  siteDescription: 'Seekingtex er en ledende produsent av høyytelses funksjonelle stoffer med spesialisering innen UPF 50+ solbeskyttelse, vanntette/pustende, hurtigtørkende, antibakterielle og elastiske tekstiler for sportsbekledning, utendørsutstyr og industrielle applikasjoner. OEM/ODM med global frakt.'
+  siteTagline: 'Produsen kain fungsional — Perlindungan matahari, tahan air & tekstil cepat kering'
+  siteDescription: 'Seekingtex adalah produsen kain fungsional berperforma tinggi terkemuka yang mengkhususkan diri pada perlindungan matahari UPF 50+, tekstil tahan air/bernapas, cepat kering, antibakteri, dan elastis untuk pakaian olahraga, perlengkapan outdoor, dan aplikasi industri. OEM/ODM dengan pengiriman global.'
   organization:
     name: 'Seekingtex'
     logo: ''
@@ -103,13 +103,13 @@ siteSettings:
 branding:
   site_name: 'Seekingtex'
   logo_image: ''
-  logo_alt: 'Seekingtex logo'
-  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Alle rettigheter forbeholdt.'
+  logo_alt: 'Logo Seekingtex'
+  copyright: '© {year} Kunshan Seeking Tex&Tech Co.,Ltd. Semua hak dilindungi undang-undang.'
   phone: '+86 0512-50178907'
   address: 'Room 1106, building 103, Baoyu Plaza, 335 Changjiang North Road, Kunshan, Suzhou, China'
   email: gzb@seekingtex.com
   whatsapp_number: '+8618651601133'
-  whatsapp_default_message: 'Hei, jeg ønsker å spørre om deres funksjonelle stoffer.'
+  whatsapp_default_message: 'Halo, saya ingin menanyakan tentang kain fungsional Anda.'
   contact_email_to: gzb@seekingtex.com
   contact_email_provider: resend
   contact_from_email: web@seekingtex.com

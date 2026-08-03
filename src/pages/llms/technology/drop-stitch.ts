@@ -138,7 +138,7 @@ Yes. Stretch knit fabrics with UPF 50+ are common in swimwear, activewear, and o
 - [All Products](${SITE_URL}/products)
 - [Functional Fabric Technology Learning Guide](${SITE_URL}/learn/drop-stitch-core)
 - [Materials Learning Guide](${SITE_URL}/learn/materials)
-- [Functional Fabric Materials Comparison](${SITE_URL}/llms/compare/pvc-vs-hypalon)
+- [Functional Fabric Materials Comparison](${SITE_URL}/llms/compare/polyester-vs-nylon)
 - [Types of Functional Fabrics](${SITE_URL}/llms/compare/sup-types)
 - [Seekingtex Brand Profile](${SITE_URL}/llms/brand/seekingtex)
 

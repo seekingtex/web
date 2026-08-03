@@ -5,11 +5,11 @@
   "nl": {
     "hero": { "title": "Over Seekingtex", "subtitle": "Technische functionele stoffen voor echte prestaties" }
   },
-  "sv": {
-    "hero": { "title": "Om Seekingtex", "subtitle": "Tekniska funktionella tyger f\u00f6r verkliga prestanda" }
+  "ms": {
+    "hero": { "title": "Tentang Seekingtex", "subtitle": "Fabrik fungsian kejuruteraan untuk prestasi dunia sebenar" }
   },
-  "no": {
-    "hero": { "title": "Om Seekingtex", "subtitle": "Tekniske funksjonelle stoffer for virkelig ytelse" }
+  "fil": {
+    "hero": { "title": "Tungkol sa Seekingtex", "subtitle": "Engineering na functional fabric para sa tunay na performance" }
   },
   "el": {
     "hero": {
@@ -23,10 +23,10 @@
       "subtitle": "Ger\u00e7ek d\u00fcnya performans\u0131 i\u00e7in m\u00fchendislik \u00fcr\u00fcn\u00fc fonksiyonel kuma\u015flar"
     }
   },
-  "fi": {
+  "id": {
     "hero": {
-      "title": "Tietoa Seekingtexist\u00e4",
-      "subtitle": "Tekniset toiminnalliset kankaat todelliseen suorituskykyyn"
+      "title": "Tentang Seekingtex",
+      "subtitle": "Kain fungsional rekayasa untuk performa dunia nyata"
     }
   }
 }

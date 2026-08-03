@@ -513,9 +513,13 @@ const currentLocale = getLangFromUrl(Astro.url);
         document.cookie = 'x-user-locale=' + locale + '; path=/; max-age=31536000; SameSite=Lax';
 
         // Path-based routing for all environments (no subdomain dependency)
-        const langMatch = path.match(/^\/[a-z]{2}(\/|$)/);
+        const localeCodes = Array.from(dialog.querySelectorAll('[data-locale]'))
+          .map((el) => el.getAttribute('data-locale'))
+          .filter(Boolean);
+        const langPattern = new RegExp('^/(' + localeCodes.join('|') + ')(/|$)');
+        const langMatch = path.match(langPattern);
         const newPath = langMatch
-          ? path.replace(/^\/[a-z]{2}(\/|$)/, '/' + locale + '$1')
+          ? path.replace(langPattern, '/' + locale + '$2')
           : '/' + locale + (path === '/' ? '' : path);
         window.location.href = window.location.protocol + '//' + host + newPath;
       });

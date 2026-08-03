@@ -48,6 +48,6 @@ export function resolveLocale(country: string | null, acceptLang: string | null)
 }
 
 export function getCookieLocale(cookie: string): string | null {
-  const match = cookie.match(/(?:^|;\s*)x-user-locale=([a-z]{2})(?:;|$)/);
+  const match = cookie.match(/(?:^|;\s*)x-user-locale=([a-z]{2,3})(?:;|$)/);
   return match ? match[1] : null;
 }

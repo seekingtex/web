@@ -58,14 +58,14 @@
   locale: nl
   textDirection: ltr
   enabled: true
-- code: SV
-  name: Svenska
-  locale: sv
+- code: MS
+  name: Bahasa Melayu
+  locale: ms
   textDirection: ltr
   enabled: true
-- code: NO
-  name: Norsk
-  locale: no
+- code: FIL
+  name: Filipino
+  locale: fil
   textDirection: ltr
   enabled: true
 - code: EL
@@ -78,14 +78,14 @@
   locale: tr
   textDirection: ltr
   enabled: true
-- code: FI
-  name: Suomi
-  locale: fi
+- code: ID
+  name: Bahasa Indonesia
+  locale: id
   textDirection: ltr
   enabled: true
-- code: CS
-  name: Čeština
-  locale: cs
+- code: VI
+  name: Tiếng Việt
+  locale: vi
   textDirection: ltr
   enabled: true
 - code: DA

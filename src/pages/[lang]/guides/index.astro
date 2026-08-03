@@ -50,12 +50,12 @@ const categories = [...new Set(guides.map((g) => g.category))];
 
   <section class="max-w-4xl mx-auto pb-8 px-6">
     <div class="p-6 bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-100 rounded-2xl">
-      <h2 class="text-lg font-semibold text-gray-900">{t('guides.surfingCta')}</h2>
-      <p class="mt-1 text-sm text-gray-500">{t('guides.surfingDesc')}</p>
+      <h2 class="text-lg font-semibold text-gray-900">{t('home.research.title')}</h2>
+      <p class="mt-1 text-sm text-gray-500">{t('home.research.subtitle')}</p>
       <a
-        href={`/${lang}/v2`}
+        href={`/${lang}/knowledge`}
         class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-sky-600 hover:text-sky-700"
-        >{t('guides.browseSurfing')}</a
+        >{t('home.research.browse')}</a
       >
     </div>
 

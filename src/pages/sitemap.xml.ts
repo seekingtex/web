@@ -20,12 +20,12 @@ export async function GET() {
   <sitemap><loc>${base}/ru/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/pl/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/nl/sitemap.xml</loc></sitemap>
-  <sitemap><loc>${base}/sv/sitemap.xml</loc></sitemap>
-  <sitemap><loc>${base}/no/sitemap.xml</loc></sitemap>
+  <sitemap><loc>${base}/ms/sitemap.xml</loc></sitemap>
+  <sitemap><loc>${base}/fil/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/el/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/tr/sitemap.xml</loc></sitemap>
-  <sitemap><loc>${base}/fi/sitemap.xml</loc></sitemap>
-  <sitemap><loc>${base}/cs/sitemap.xml</loc></sitemap>
+  <sitemap><loc>${base}/id/sitemap.xml</loc></sitemap>
+  <sitemap><loc>${base}/vi/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/da/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/ro/sitemap.xml</loc></sitemap>
   <sitemap><loc>${base}/th/sitemap.xml</loc></sitemap>

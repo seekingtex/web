@@ -5,11 +5,11 @@
   "nl": {
     "hero_text": { "title": "Nieuws & Updates", "subtitle": "Laatste nieuws van Seekingtex" }
   },
-  "sv": {
-    "hero_text": { "title": "Nyheter & Uppdateringar", "subtitle": "Senaste nytt från Seekingtex" }
+  "ms": {
+    "hero_text": { "title": "Berita & Kemas Kini", "subtitle": "Terkini daripada Seekingtex" }
   },
-  "no": {
-    "hero_text": { "title": "Nyheter & Oppdateringer", "subtitle": "Siste nytt fra Seekingtex" }
+  "fil": {
+    "hero_text": { "title": "Balita & Update", "subtitle": "Pinakabago mula sa Seekingtex" }
   },
   "el": {
     "hero_text": {
@@ -20,7 +20,7 @@
   "tr": {
     "hero_text": { "title": "Haberler & G\u00fcncellemeler", "subtitle": "Seekingtex\u2019dan son haberler" }
   },
-  "fi": {
-    "hero_text": { "title": "Uutiset & P\u00e4ivitykset", "subtitle": "Uusimmat Seekingtexilta" }
+  "id": {
+    "hero_text": { "title": "Berita & Pembaruan", "subtitle": "Terkini dari Seekingtex" }
   }
 }

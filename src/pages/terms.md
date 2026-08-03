@@ -21,7 +21,7 @@ For the purposes of these Terms and Conditions:
 
 - **Country** refers to: California, United States
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Seekingtex, a marine-engineering company with offices in the European Union.
+- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Seekingtex, a textile engineering company with offices in the European Union.
 
 - **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
 

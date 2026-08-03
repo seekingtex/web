@@ -4,63 +4,63 @@ hero:
   subtitle: Focused on Progress
 
 intro:
-  - Seekingtex's Research and Development (R&D) Center is the driving force behind our mission to revolutionize textile industry equipment. We empower textile industry enthusiasts globally with safer, more comfortable, and more enjoyable products through relentless innovation in high-performance stand-up fabric boards (SUPs) and boats. Our dedicated team of engineers, designers, and passionate textile industry experts are shaping the future of the industry, consistently raising the bar for quality, performance, and sustainability.
-  - Our R&D facility brings together material scientists, naval architects, and production engineers under one roof. From fabric formulation and hull simulation to welding process development and full-scale sea trials, every stage of product development is driven by data and validated by testing.
+  - Seekingtex's Research and Development (R&D) Center is the driving force behind our mission to advance functional textile technology. We empower apparel and gear brands globally with safer, more comfortable, and higher-performance fabrics through relentless innovation in textile engineering. Our dedicated team of engineers, scientists, and textile experts are shaping the future of performance fabrics, consistently raising the bar for quality, performance, and sustainability.
+  - Our R&D facility brings together material scientists, textile engineers, and production specialists under one roof. From fiber formulation and fabric construction to finish development and comprehensive performance testing, every stage of product development is driven by data and validated by rigorous testing.
 
 mission:
   tagline: Our Mission
-  title: Innovating the Future of textile industry
+  title: Innovating the Future of Textiles
   pillars:
     - icon: lightning
       title: Technological Advancement
-      desc: Pioneering new materials, designs, and manufacturing for superior product performance and longevity.
+      desc: Pioneering new fibers, fabric constructions, and finishing technologies for superior performance and longevity.
     - icon: design
       title: User-Centric Design
-      desc: Deeply understanding and exceeding user needs through ergonomic and intuitive product design.
+      desc: Deeply understanding and exceeding end-user needs through ergonomic and application-specific fabric design.
     - icon: globe
       title: Sustainable Practices
-      desc: Minimizing our environmental footprint by utilizing eco-friendly materials and processes.
+      desc: Minimizing environmental footprint by utilizing eco-friendly fibers, low-impact dyes, and resource-efficient processes.
     - icon: shield
       title: Uncompromising Safety
-      desc: Ensuring the highest safety standards through rigorous testing and certification.
+      desc: Ensuring the highest safety standards through OEKO-TEX, REACH, and ISO-certified testing and compliance.
 
 pillars:
   - title: Technological Advancement
-    desc: Pioneering new materials, designs, and manufacturing processes to deliver superior product performance and longevity.
+    desc: Pioneering new fibers, yarns, weaves, and finishing technologies to deliver superior fabric performance and durability.
     icon: tech
   - title: Advanced Materials
-    desc: Investigating cutting-edge PVC, Hypalon, composites, and sustainable alternatives for enhanced product characteristics.
+    desc: Investigating cutting-edge polyester, nylon, elastane, recycled fibers, bio-based alternatives, and functional coating systems for enhanced fabric characteristics.
     icon: materials
   - title: Sustainability
-    desc: 'A Core Commitment: We are dedicated to environmental stewardship through sustainable manufacturing and recyclable materials.'
+    desc: 'A Core Commitment: Dedicated to environmental stewardship through sustainable manufacturing, recycled fibers, and low-impact processes.'
     icon: sustainability
 
 capabilities:
   tagline: Capabilities
   title: R&D Capabilities
-  subtitle: Four core disciplines that give us end-to-end control over product development —from raw material research to final certification.
+  subtitle: Four core disciplines that give us end-to-end control over textile development—from raw material research to finished fabric certification.
   groups:
-    - title: Material Science & Fabric Technology
+    - title: Fiber & Yarn Technology
       items:
-        - PVC and Hypalon formulation analysis and optimisation
-        - UV stabilisation, flame retardancy, and anti-microbial additive development
-        - Multi-layer fabric lamination and adhesion engineering
-        - Accelerated ageing testing (UV, thermal, humidity, salt spray)
-    - title: Hull Engineering & Hydrodynamics
+        - Custom fiber blending, yarn spinning, and filament texturing
+        - Recycled polyester (rPET) and bio-based nylon development
+        - Core-spun, air-jet textured, and filament/twisted yarn engineering
+        - Fiber cross-section modification for moisture management and opacity
+    - title: Fabric Engineering & Design
       items:
-        - Parametric 3D hull design and CFD optimisation
-        - Finite element analysis for structural and impact loads
-        - Scale-model towing tank testing and performance validation
-        - Custom hull development for special mission profiles
-    - title: Welding & Joining Technology
+        - Weave and knit construction design and optimization
+        - 3D fabric simulation and CAD-based pattern engineering
+        - Multi-layer and laminated fabric structure development
+        - Custom fabric development for specific end-use performance targets
+    - title: Finishing & Coating Technology
       items:
-        - RF dielectric welding process development and optimisation
-        - Hot-air, hot-wedge, and ultrasonic welding methods
-        - Adhesive bonding and seam tape qualification
-        - Weld strength modelling and lifetime prediction
+        - DWR, antimicrobial, UV-blocking, and FR finish development
+        - PU, PVC, acrylic, and silicone coating formulation and application
+        - Hot-melt and adhesive lamination process optimization
+        - Finish durability testing: wash resistance, abrasion, and aging
     - title: Testing, Certification & Compliance
       items:
-        - Quality management and CE compliance testing
+        - Quality management and OEKO-TEX / CE compliance testing
         - Independent third-party testing and certification support
         - Custom test protocol development for procurement qualification
         - In-service failure analysis and root-cause investigation
@@ -82,45 +82,45 @@ rd_services:
   tagline: Custom R&D
   title: R&D Services for Partners
   services:
-    - title: Custom Material Development
-      desc: We develop custom fabric formulations, laminate stacks, and adhesive systems tailored to your operating environment and performance targets.
+    - title: Custom Fabric Development
+      desc: We develop custom fiber blends, fabric constructions, finish formulations, and laminate stacks tailored to your performance targets and end-use requirements.
     - title: OEM / ODM Product Engineering
-      desc: From concept sketches to production-ready engineering packages —our team can design, prototype, and validate boats under your brand.
+      desc: From concept sketches to production-ready specifications—our team can design, prototype, and validate fabrics under your brand.
     - title: Third-Party Testing & Certification
-      desc: Use our ISO-compliant test facilities for independent material testing, product validation, and certification support.
+      desc: Use our ISO-compliant test facilities for independent fabric testing, product validation, and certification support.
   cta: Discuss your R&D requirements →
   cta_link: /contact
 
 vision:
   tagline: Our Vision
-  title: Shaping the Future of textile industry
-  body: Seekingtex strives to lead the functional fabrics and functional fabric industry through continuous innovation, unwavering quality, and a steadfast commitment to safety and sustainability —ultimately enriching the experiences of textile industry enthusiasts worldwide. The Seekingtex R&D Center is where passion meets innovation, setting new standards for the textile industry industry.
+  title: Shaping the Future of Textiles
+  body: Seekingtex strives to lead the functional fabrics industry through continuous innovation, unwavering quality, and a steadfast commitment to safety and sustainability—ultimately enriching the experience of apparel and gear brands worldwide. The Seekingtex R&D Center is where passion meets innovation, setting new standards for the textile industry.
 
 labs_section:
   tagline: Labs
   title: Our Laboratories
   labs:
     - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
-      title: PVC Fabric Lab
-      description: Continuous research and testing of PVC and Hypalon tube fabrics for tensile strength, UV resistance, abrasion, and low-temperature flexibility to ensure long-term reliability in marine environments.
+      title: Fabric Formulation Lab
+      description: Continuous research and testing of fabric formulations including fiber blends, weave constructions, and functional finishes. Performance testing for tensile strength, UV resistance, abrasion, and wash durability.
       href: /randdcenter/pvc-fabric-lab
     - image: /images/seekingtex/factory/design discuss2.jpeg
-      title: Hull Engineering Studio
-      description: CAD-driven design and finite element analysis of HDPE, aluminum, and fiberglass hulls. Every hull is digitally simulated for stress distribution and impact resistance before the first prototype is built.
-      href: /randdcenter/hull-engineering
+      title: Textile Engineering Studio
+      description: CAD-driven fabric design and finite element analysis of woven and knitted structures. Every construction is digitally simulated for strength, stretch, and drape before the first sample is produced.
+      href: /randdcenter/fabric-engineering
     - image: /images/seekingtex/factory/functional fabric making3.jpeg
-      title: RF Welding Center
-      description: Dedicated radio-frequency welding facility with precision temperature and pressure control, producing high-strength, airtight seams that meet marine industry standards for high-performance craft.
+      title: Coating & Lamination Lab
+      description: Dedicated coating and lamination facility with precision temperature and pressure control, producing high-performance finished fabrics that meet textile industry standards for quality and consistency.
       href: /randdcenter/rf-welding
     - image: /images/seekingtex/factory/design discuss original.jpeg
-      title: Hydrodynamic Test Tank
-      description: Scale-model testing in our in-house test tank to optimize hull form, planing performance, stability, and fuel efficiency across a range of load and sea conditions.
-      href: /randdcenter/hydrodynamic-test-tank
+      title: Performance Testing Laboratory
+      description: Comprehensive testing for moisture management, water repellency, air permeability, thermal resistance, and colorfastness across a range of fabric constructions and finish types.
+      href: /randdcenter/performance-testing-lab
     - image: /images/seekingtex/products/functional fabric-series/functional fabric-ocean-voyager-1.webp
       title: Prototype Workshop
-      description: Full-scale prototyping and rigging facility where new models are built, fitted, and sea-trialed. Every prototype undergoes a minimum 20-hour in-water test programme before production approval.
+      description: Full-scale prototyping facility where new fabric designs, finished samples, and custom developments are produced, evaluated, and refined. Every prototype undergoes comprehensive testing before production approval.
       href: /randdcenter/prototype-workshop
     - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
       title: Quality & Inspection Lab
-      description: Dedicated quality assurance lab performing tensile testing, air-retention cycling, seam peel tests, and material certification to ensure every boat leaving the workshop meets our published specifications.
+      description: Dedicated quality assurance lab performing tensile testing, dimensional measurement, seam strength tests, and material certification to ensure every fabric roll meets our published specifications.
       href: /randdcenter/quality-inspection-lab

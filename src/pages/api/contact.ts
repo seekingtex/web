@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { randomUUID } from 'node:crypto';
 import yaml from 'js-yaml';
 
+import { env as cfEnv } from 'cloudflare:workers';
+
 import {
   encryptJson,
   getSubmissionsPath,
@@ -271,9 +273,13 @@ export const OPTIONS: APIRoute = async () => {
   return new Response(null, { status: 204, headers: CORS_HEADERS });
 };
 
-export const POST: APIRoute = async ({ request, clientAddress, locals }) => {
+export const POST: APIRoute = async ({ request }) => {
   try {
-    const ip = (clientAddress as string) || request.headers.get('cf-connecting-ip') || '';
+    const ip =
+      request.headers.get('cf-connecting-ip') ||
+      (request.headers.get('x-forwarded-for') || '').split(',')[0].trim() ||
+      request.headers.get('x-real-ip') ||
+      '';
     const userAgent = request.headers.get('user-agent') || undefined;
     const rateKey = ip ? `contact:${ip}` : 'contact:unknown';
     const rl = checkRateLimit(rateKey, DEFAULT_LIMITS.contactForm);
@@ -334,7 +340,7 @@ export const POST: APIRoute = async ({ request, clientAddress, locals }) => {
       return err('Content contains sensitive keywords, submission rejected', 400);
     }
 
-    const env = (locals as any)?.runtime?.env;
+    const env = cfEnv && typeof cfEnv === 'object' ? cfEnv : undefined;
     const branding = await loadBranding(env);
     const token = branding.contact_submissions_pat || (branding as any).github_pat;
     const hasPat = token && typeof token === 'string' && token.startsWith('gh');

@@ -34,7 +34,7 @@ tests:
     image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
   - title: Colorfastness Testing
     description: ISO 105 series tests evaluate colorfastness to light, washing, perspiration, rubbing and water. Each batch is verified for color consistency and retention under specified conditions.
-    image: /images/seekingtex/factory/Stock Boat.webp
+    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
   - title: Dimensional Stability Testing
     description: Fabrics are laundered and dried per AATCC 135 to measure shrinkage and distortion. Dimensional stability is verified to ensure garments maintain shape after repeated washing.
     image: /images/seekingtex/factory/functional fabric making.jpeg

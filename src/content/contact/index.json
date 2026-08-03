@@ -11,16 +11,16 @@
       "subtitle": "Neem contact op met ons team voor monsters, offertes of technische ondersteuning"
     }
   },
-  "sv": {
+  "ms": {
     "hero_text": {
-      "title": "Kontakta oss",
-      "subtitle": "Kontakta v\u00e5rt team f\u00f6r prover, offerter eller teknisk support"
+      "title": "Hubungi Kami",
+      "subtitle": "Hubungi pasukan kami untuk sampel, sebut harga atau sokongan teknikal"
     }
   },
-  "no": {
+  "fil": {
     "hero_text": {
-      "title": "Kontakt oss",
-      "subtitle": "Ta kontakt med v\u00e5rt team for pr\u00f8ver, tilbud eller teknisk st\u00f8tte"
+      "title": "Makipag-ugnayan sa Amin",
+      "subtitle": "Makipag-ugnayan sa aming team para sa mga sample, quote, o teknikal na suporta"
     }
   },
   "el": {
@@ -35,10 +35,10 @@
       "subtitle": "Numuneler, teklifler veya teknik destek i\u00e7in ekibimizle ileti\u015fime ge\u00e7in"
     }
   },
-  "fi": {
+  "id": {
     "hero_text": {
-      "title": "Ota yhteytt\u00e4",
-      "subtitle": "Ota yhteytt\u00e4 tiimiimme n\u00e4ytteiden, tarjousten tai teknisen tuen saamiseksi"
+      "title": "Hubungi Kami",
+      "subtitle": "Hubungi tim kami untuk sampel, penawaran, atau dukungan teknis"
     }
   }
 }
