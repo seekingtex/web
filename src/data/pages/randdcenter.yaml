@@ -100,7 +100,7 @@ labs_section:
   tagline: Labs
   title: Our Laboratories
   labs:
-    - image: /images/seekingtex/randd/Seekingtex-pvc-material-lab.webp
+    - image: /images/seekingtex/randd/seekingtex-pvc-material-lab.webp
       title: Fabric Formulation Lab
       description: Continuous research and testing of fabric formulations including fiber blends, weave constructions, and functional finishes. Performance testing for tensile strength, UV resistance, abrasion, and wash durability.
       href: /randdcenter/pvc-fabric-lab

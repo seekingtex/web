@@ -31,7 +31,7 @@ tests:
     image: /images/seekingtex/factory/producing department2.jpeg
   - title: Antibacterial Activity Testing
     description: AATCC 100 and ISO 20743 test methods quantify bacterial reduction rates against Staphylococcus aureus and Klebsiella pneumoniae. Our antibacterial fabrics achieve 99%+ reduction rates.
-    image: /images/seekingtex/factory/Seekingtex-factory-exterior.webp
+    image: /images/seekingtex/factory/seekingtex-factory-exterior.webp
   - title: Colorfastness Testing
     description: ISO 105 series tests evaluate colorfastness to light, washing, perspiration, rubbing and water. Each batch is verified for color consistency and retention under specified conditions.
     image: /images/seekingtex/factory/UV Resistance Testing.jpeg
