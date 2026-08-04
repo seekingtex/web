@@ -22,13 +22,13 @@ header:
     - text: 应用领域
       links:
         - text: 运动服装
-          href: /applications/sportswear
+          href: /solutions/sportswear-performance-fabrics
         - text: 户外服装
-          href: /applications/outdoor-apparel
+          href: /solutions/outdoor-brands
         - text: 战术与工装
-          href: /applications/tactical-workwear
+          href: /solutions/military-protective-fabrics
         - text: 时尚休闲
-          href: /applications/fashion-casual
+          href: /solutions/performance-casual-fashion-fabrics
     - text: 技术
       links:
         - text: 技术概览
@@ -82,13 +82,13 @@ footer:
     - title: 应用领域
       links:
         - text: 运动服装
-          href: /applications/sportswear
+          href: /solutions/sportswear-performance-fabrics
         - text: 户外服装
-          href: /applications/outdoor-apparel
+          href: /solutions/outdoor-brands
         - text: 战术与工装
-          href: /applications/tactical-workwear
+          href: /solutions/military-protective-fabrics
         - text: 时尚休闲
-          href: /applications/fashion-casual
+          href: /solutions/performance-casual-fashion-fabrics
     - title: 技术
       links:
         - text: 技术概览

@@ -38,13 +38,13 @@ header:
     - text: Applications
       links:
         - text: Sportswear
-          href: /applications/sportswear
+          href: /solutions/sportswear-performance-fabrics
         - text: Outdoor Apparel
-          href: /applications/outdoor-apparel
+          href: /solutions/outdoor-brands
         - text: Tactical & Workwear
-          href: /applications/tactical-workwear
+          href: /solutions/military-protective-fabrics
         - text: Fashion & Casual
-          href: /applications/fashion-casual
+          href: /solutions/performance-casual-fashion-fabrics
     - text: Solutions
       links:
         - text: Outdoor Brand Solutions
@@ -196,13 +196,13 @@ footer:
     - title: Applications
       links:
         - text: Sportswear
-          href: /applications/sportswear
+          href: /solutions/sportswear-performance-fabrics
         - text: Outdoor Apparel
-          href: /applications/outdoor-apparel
+          href: /solutions/outdoor-brands
         - text: Tactical & Workwear
-          href: /applications/tactical-workwear
+          href: /solutions/military-protective-fabrics
         - text: Fashion & Casual
-          href: /applications/fashion-casual
+          href: /solutions/performance-casual-fashion-fabrics
     - title: Solutions
       links:
         - text: Outdoor Brand Solutions
