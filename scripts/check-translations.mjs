@@ -161,7 +161,7 @@ function checkGraphNodes() {
     if (!idMatch) continue;
     const id = idMatch[1];
     // Check that 'name:' has entries for all non-en locales
-    const nameBlock = block.match(/name:\s*\{[^}]+\}/);
+    const nameBlock = block.match(/name:\s*\{([\s\S]*?)^\s*\}/m);
     if (!nameBlock) {
       fail('Node ' + id + ' has no name');
       nodesWithIssues++;
@@ -169,16 +169,16 @@ function checkGraphNodes() {
     }
     for (const l of LOCALES) {
       if (l === 'en') continue;
-      if (!nameBlock[0].includes('"' + l + '"')) {
+      if (!nameBlock[1].includes(l + ':')) {
         warn('Node ' + id + ' missing name for ' + l);
         nodesWithIssues++;
       }
     }
     // Check slug has all languages
-    const slugBlock = block.match(/slug:\s*\{[^}]+\}/);
+    const slugBlock = block.match(/slug:\s*\{([\s\S]*?)^\s*\}/m);
     if (slugBlock) {
       for (const l of LOCALES) {
-        if (!slugBlock[0].includes(l + ':')) {
+        if (!slugBlock[1].includes(l + ':')) {
           warn('Node ' + id + ' missing slug for ' + l);
           nodesWithIssues++;
         }
