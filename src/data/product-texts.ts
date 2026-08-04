@@ -18,7 +18,7 @@ type ProductTexts = Partial<
 
 export const productTexts: Record<string, Record<string, ProductTexts>> = {
   fr: {
-    'upf-50-sun-protection-fabric': {
+    'sun-polyester-upf50': {
       name: 'Tissu de Protection Solaire UPF 50+',
       desc: 'Tissu technique bloquant 98% des rayons UVA et UVB pour une protection solaire certifiée UPF 50+.',
       definition:
@@ -48,7 +48,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    'waterproof-breathable-fabric': {
+    'wp-pu-coated': {
       name: 'Tissu Imperméable et Respirant',
       desc: "Tissu technique imperméable avec membrane respirante, testé de 5 000 mm à 30 000 mm de colonne d'eau.",
       definition:
@@ -78,7 +78,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    'quick-dry-moisture-wicking-fabric': {
+    'qd-moisture-wicking-poly': {
       name: 'Tissu Séchage Rapide et Anti-Transpiration',
       desc: "Tissu technique à évacuation rapide de l'humidité pour les vêtements de sport et actifs.",
       definition:
@@ -108,7 +108,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    '7a-antibacterial-fabric': {
+    'ab-silver-ion': {
       name: 'Tissu Antibactérien 7A',
       desc: "Tissu technique avec traitement antimicrobien à base d'ions d'argent, durable jusqu'à 50 lavages.",
       definition:
@@ -138,7 +138,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    '4-way-stretch-fabric': {
+    'st-4way-nylon-spandex': {
       name: 'Tissu Extensible 4 Directions',
       desc: 'Tissu technique offrant une élasticité dans les quatre sens pour les vêtements de sport et actifs.',
       definition:
@@ -168,7 +168,7 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    'eco-friendly-recycled-polyester-fabric': {
+    'eco-recycled-pet': {
       name: 'Tissu Polyester Recyclé Écologique',
       desc: 'Tissu en polyester recyclé certifié GRS, fabriqué à partir de bouteilles PET post-consommation.',
       definition:
@@ -546,27 +546,27 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Leichter Daunenjackenstoff',
       desc: 'Ultra-leichtes 20D-Nylon-Daunendichtgewebe für Daunenjacken.',
     },
-    'upf-50-sun-protection-fabric': {
+    'sun-polyester-upf50': {
       name: 'UPF 50+ Sonnenschutzgewebe',
       desc: 'Technisches Gewebe mit UPF 50+ Zertifizierung, das 98% der UVA- und UVB-Strahlung blockiert.',
     },
-    'waterproof-breathable-fabric': {
+    'wp-pu-coated': {
       name: 'Wasserdichtes und Atmungsaktives Gewebe',
       desc: 'Mehrschichtiges technisches Gewebe mit wasserdichter Membran von 5.000 bis 30.000 mm Wassersäule.',
     },
-    'quick-dry-moisture-wicking-fabric': {
+    'qd-moisture-wicking-poly': {
       name: 'Schnelltrocknendes Feuchtigkeitstransportgewebe',
       desc: 'Technisches Gewebe mit Kapillarfasersystem für schnellen Feuchtigkeitstransport und Trocknung.',
     },
-    '7a-antibacterial-fabric': {
+    'ab-silver-ion': {
       name: '7A Antibakterielles Gewebe',
       desc: 'Technisches Gewebe mit silberionenbasierter antimikrobieller Ausrüstung, beständig bis 50+ Wäschen.',
     },
-    '4-way-stretch-fabric': {
+    'st-4way-nylon-spandex': {
       name: '4-Wege-Stretchgewebe',
       desc: 'Technisches Gewebe mit Elastandehnung in beide Richtungen für maximale Bewegungsfreiheit.',
     },
-    'eco-friendly-recycled-polyester-fabric': {
+    'eco-recycled-pet': {
       name: 'Ökologisches recyceltes Polyestergewebe',
       desc: 'GRS-zertifiziertes recyceltes Polyestergewebe aus Post-Consumer-PET-Flaschen.',
     },
@@ -612,27 +612,27 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Tecido Leve para Casaco de Penas',
       desc: 'Tecido nylon 20D ultraleve à prova de penas para jaquetas acolchoadas.',
     },
-    'upf-50-sun-protection-fabric': {
+    'sun-polyester-upf50': {
       name: 'Tecido de Proteção Solar UPF 50+',
       desc: 'Tecido técnico que bloqueia 98% dos raios UVA e UVB com certificação UPF 50+.',
     },
-    'waterproof-breathable-fabric': {
+    'wp-pu-coated': {
       name: 'Tecido Impermeável e Transpirável',
       desc: "Tecido técnico multicamadas com membrana impermeável de 5.000 a 30.000 mm de coluna d'água.",
     },
-    'quick-dry-moisture-wicking-fabric': {
+    'qd-moisture-wicking-poly': {
       name: 'Tecido de Secagem Rápida',
       desc: 'Tecido técnico com sistema capilar de fibras para transporte rápido de umidade.',
     },
-    '7a-antibacterial-fabric': {
+    'ab-silver-ion': {
       name: 'Tecido Antibacteriano 7A',
       desc: 'Tecido técnico com tratamento antimicrobiano à base de íons de prata, durável por 50+ lavagens.',
     },
-    '4-way-stretch-fabric': {
+    'st-4way-nylon-spandex': {
       name: 'Tecido Elástico 4 Direções',
       desc: 'Tecido técnico com elastano para elasticidade bidirecional e máxima liberdade de movimento.',
     },
-    'eco-friendly-recycled-polyester-fabric': {
+    'eco-recycled-pet': {
       name: 'Tecido de Poliéster Reciclado Ecológico',
       desc: 'Tecido de poliéster reciclado certificado GRS a partir de garrafas PET pós-consumo.',
     },
@@ -678,27 +678,27 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Tejido Ligero para Chaqueta de Plumas',
       desc: 'Tejido nylon 20D ultraligero a prueba de plumas para chaquetas acolchadas.',
     },
-    'upf-50-sun-protection-fabric': {
+    'sun-polyester-upf50': {
       name: 'Tejido de Protección Solar UPF 50+',
       desc: 'Tejido técnico que bloquea el 98% de los rayos UVA y UVB con certificación UPF 50+.',
     },
-    'waterproof-breathable-fabric': {
+    'wp-pu-coated': {
       name: 'Tejido Impermeable y Transpirable',
       desc: 'Tejido técnico multicapa con membrana impermeable de 5.000 a 30.000 mm de columna de agua.',
     },
-    'quick-dry-moisture-wicking-fabric': {
+    'qd-moisture-wicking-poly': {
       name: 'Tejido de Secado Rápido',
       desc: 'Tejido técnico con sistema capilar de fibras para transporte rápido de humedad.',
     },
-    '7a-antibacterial-fabric': {
+    'ab-silver-ion': {
       name: 'Tejido Antibacteriano 7A',
       desc: 'Tejido técnico con tratamiento antimicrobiano de iones de plata, durable 50+ lavados.',
     },
-    '4-way-stretch-fabric': {
+    'st-4way-nylon-spandex': {
       name: 'Tejido Elástico 4 Direcciones',
       desc: 'Tejido técnico con elastano para elasticidad bidireccional y máxima libertad de movimiento.',
     },
-    'eco-friendly-recycled-polyester-fabric': {
+    'eco-recycled-pet': {
       name: 'Tejido de Poliéster Reciclado Ecológico',
       desc: 'Tejido de poliéster reciclado certificado GRS a partir de botellas PET postconsumo.',
     },
@@ -744,27 +744,27 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Tessuto Leggero per Giacca Imbottita',
       desc: 'Tessuto nylon 20D ultraleggero a prova di piumino per giacche imbottite.',
     },
-    'upf-50-sun-protection-fabric': {
+    'sun-polyester-upf50': {
       name: 'Tessuto Protezione Solare UPF 50+',
       desc: 'Tessuto tecnico che blocca il 98% dei raggi UVA e UVB con certificazione UPF 50+.',
     },
-    'waterproof-breathable-fabric': {
+    'wp-pu-coated': {
       name: 'Tessuto Impermeabile e Traspirante',
       desc: "Tessuto tecnico multistrato con membrana impermeabile da 5.000 a 30.000 mm di colonna d'acqua.",
     },
-    'quick-dry-moisture-wicking-fabric': {
+    'qd-moisture-wicking-poly': {
       name: 'Tessuto Ad Asciugatura Rapida',
       desc: "Tessuto tecnico con sistema capillare per il rapido trasporto dell'umidità.",
     },
-    '7a-antibacterial-fabric': {
+    'ab-silver-ion': {
       name: 'Tessuto Antibatterico 7A',
       desc: "Tessuto tecnico con trattamento antimicrobico a ioni d'argento, durevole per 50+ lavaggi.",
     },
-    '4-way-stretch-fabric': {
+    'st-4way-nylon-spandex': {
       name: 'Tessuto Elasticizzato 4 Direzioni',
       desc: 'Tessuto tecnico con elastan per elasticità bidirezionale e massima libertà di movimento.',
     },
-    'eco-friendly-recycled-polyester-fabric': {
+    'eco-recycled-pet': {
       name: 'Tessuto in Poliestere Riciclato Ecologico',
       desc: 'Tessuto in poliestere riciclato certificato GRS da bottiglie PET post-consumo.',
     },
