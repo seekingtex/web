@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-const SUPPORTED_LANGS = ['en', 'zh', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ja', 'ko', 'ru', 'pl'];
+const SUPPORTED_LANGS = ['en', 'zh', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ja', 'ru', 'pl'];
 const DEFAULT_LANG = 'en';
 
 function isValidLang(lang: string): boolean {

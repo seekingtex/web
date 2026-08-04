@@ -38,7 +38,7 @@ export function slugify(text: string): string {
   return s || 'untitled';
 }
 
-export const nonLatinLangs = new Set(['zh', 'ja', 'ko', 'ar', 'ru']);
+export const nonLatinLangs = new Set(['zh', 'ja', 'ar', 'ru']);
 export const latinLangs = new Set(['en', 'fr', 'de', 'es', 'pt', 'it', 'pl']);
 
 export function isLatinLang(lang: string): boolean {

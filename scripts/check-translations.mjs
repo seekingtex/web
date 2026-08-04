@@ -19,7 +19,7 @@ import { globSync } from 'glob';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-const LOCALES = ['en', 'fr', 'de', 'es', 'pt', 'it', 'ja', 'ko', 'ru', 'pl', 'zh', 'ar'];
+const LOCALES = ['en', 'fr', 'de', 'es', 'pt', 'ar', 'it', 'ja', 'ru', 'pl', 'nl', 'ms', 'fil', 'el', 'id', 'vi', 'zh'];
 const PAGE_TYPES = ['home', 'about', 'contact', 'news'];
 const issues = [];
 const warns = [];

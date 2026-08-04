@@ -38,11 +38,6 @@
   locale: ja
   textDirection: ltr
   enabled: true
-- code: KO
-  name: 한국어
-  locale: ko
-  textDirection: ltr
-  enabled: true
 - code: RU
   name: Русский
   locale: ru
@@ -73,11 +68,6 @@
   locale: el
   textDirection: ltr
   enabled: true
-- code: TR
-  name: Türkçe
-  locale: tr
-  textDirection: ltr
-  enabled: true
 - code: ID
   name: Bahasa Indonesia
   locale: id
@@ -86,21 +76,6 @@
 - code: VI
   name: Tiếng Việt
   locale: vi
-  textDirection: ltr
-  enabled: true
-- code: DA
-  name: Dansk
-  locale: da
-  textDirection: ltr
-  enabled: true
-- code: RO
-  name: Română
-  locale: ro
-  textDirection: ltr
-  enabled: true
-- code: TH
-  name: ภาษาไทย
-  locale: th
   textDirection: ltr
   enabled: true
 - code: ZH

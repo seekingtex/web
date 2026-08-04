@@ -9,7 +9,7 @@ export function buildLlmsTxt(sections: LlmsSection[], extra: { description: stri
   const lines: string[] = [];
   lines.push('# Seekingtex — AI Site Overview');
   lines.push(`> Site: ${SITE_URL}`);
-  lines.push('> Languages: EN, FR, DE, ES, PT, IT, JA, KO, RU, PL, ZH, AR (13 languages)');
+  lines.push('> Languages: EN, ZH, FR, DE, ES, PT, AR, IT, JA, RU, PL, NL, MS, FIL, EL, ID, VI (17 languages)');
   lines.push('');
   lines.push('## Definition');
   lines.push(extra.description);
