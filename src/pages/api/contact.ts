@@ -343,7 +343,7 @@ export const POST: APIRoute = async ({ request }) => {
     const env = cfEnv && typeof cfEnv === 'object' ? cfEnv : undefined;
     const branding = await loadBranding(env);
     const token = branding.contact_submissions_pat || (branding as any).github_pat;
-    const hasPat = token && typeof token === 'string' && token.startsWith('gh');
+    const hasPat = token && typeof token === 'string' && /^(gh|github_pat_)/.test(token);
 
     const destinationEmail = (sanitize(body.email_to, 200) || branding.contact_email_to || '').trim();
     if (!destinationEmail || !EMAIL_RE.test(destinationEmail)) {
@@ -434,6 +434,13 @@ export const POST: APIRoute = async ({ request }) => {
       );
       emailStatus.sent = r.ok;
       if (!r.ok) emailStatus.error = r.error;
+    }
+
+    if (!stored && !emailStatus.attempted) {
+      return err(
+        'Contact delivery is not configured: no submission storage token and no email provider are set. Set CONTACT_SUBMISSIONS_PAT or CONTACT_RESEND_API_KEY and redeploy.',
+        500
+      );
     }
 
     return ok({ id: recordId, receivedAt, stored, email: emailStatus });

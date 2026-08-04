@@ -185,6 +185,41 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
+      - name: Set contact form secrets on all workers
+        run: |
+          cd dist/server
+          WORKERS="seekingtex seekingtex-ai seekingtex-seo seekingtex-admin seekingtex-contact"
+          
+          for w in $WORKERS; do
+            if [ -n "$CONTACT_RESEND_API_KEY" ]; then
+              echo "📧 Setting CONTACT_RESEND_API_KEY on $w..."
+              echo "$CONTACT_RESEND_API_KEY" | \
+                npx wrangler secret put CONTACT_RESEND_API_KEY \
+                  --config wrangler-$w.json \
+                  --name $w 2>&1
+            fi
+            if [ -n "$CONTACT_SUBMISSIONS_PAT" ]; then
+              echo "💾 Setting CONTACT_SUBMISSIONS_PAT on $w..."
+              echo "$CONTACT_SUBMISSIONS_PAT" | \
+                npx wrangler secret put CONTACT_SUBMISSIONS_PAT \
+                  --config wrangler-$w.json \
+                  --name $w 2>&1
+            fi
+            if [ -n "$CONTACT_FROM_EMAIL" ]; then
+              echo "📨 Setting CONTACT_FROM_EMAIL on $w..."
+              echo "$CONTACT_FROM_EMAIL" | \
+                npx wrangler secret put CONTACT_FROM_EMAIL \
+                  --config wrangler-$w.json \
+                  --name $w 2>&1
+            fi
+          done
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CONTACT_RESEND_API_KEY: ${{ secrets.CONTACT_RESEND_API_KEY }}
+          CONTACT_SUBMISSIONS_PAT: ${{ secrets.CONTACT_SUBMISSIONS_PAT }}
+          CONTACT_FROM_EMAIL: ${{ secrets.CONTACT_FROM_EMAIL }}
+
       - name: Disable Cloudflare Pages auto-build
         run: |
           curl -s -X PATCH \
