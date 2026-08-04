@@ -9,22 +9,22 @@ export const SITE_SECTIONS: SiteSection[] = [
   { label: 'Products', path: '/products', sitemap: { entity: 'products', type: 'product', priority: '0.9' } },
   {
     label: 'Sun Protection Fabrics',
-    path: '/products/sun-protection',
+    path: '/sun-protection-fabric',
     sitemap: { entity: 'sun-protection', type: 'product', priority: '0.9' },
   },
   {
     label: 'Waterproof Fabrics',
-    path: '/products/waterproof',
+    path: '/waterproof-fabric',
     sitemap: { entity: 'waterproof', type: 'product', priority: '0.9' },
   },
   {
     label: 'Quick-Dry Fabrics',
-    path: '/products/quick-dry',
+    path: '/quick-dry-fabric',
     sitemap: { entity: 'quick-dry', type: 'product', priority: '0.9' },
   },
   {
     label: 'Antibacterial Fabrics',
-    path: '/products/antibacterial',
+    path: '/antibacterial-fabric',
     sitemap: { entity: 'antibacterial', type: 'product', priority: '0.9' },
   },
   {
@@ -72,7 +72,7 @@ export const SITE_SECTIONS: SiteSection[] = [
   },
   {
     label: 'Cotton vs Polyester Comparison',
-    path: '/compare/cotton-vs-polyester',
+    path: '/compare/natural-vs-synthetic',
     sitemap: { entity: 'cotton-vs-polyester', type: 'compare', priority: '0.7' },
   },
   {
@@ -82,32 +82,32 @@ export const SITE_SECTIONS: SiteSection[] = [
   },
   {
     label: 'PU vs TPU Membrane Comparison',
-    path: '/compare/pu-vs-tpu',
+    path: '/llms/v2/pu-vs-tpu-coating',
     sitemap: { entity: 'pu-vs-tpu', type: 'compare', priority: '0.7' },
   },
   {
     label: 'Recycled vs Virgin Polyester Comparison',
-    path: '/compare/recycled-vs-virgin-polyester',
+    path: '/llms/v2/recycled-vs-virgin-polyester',
     sitemap: { entity: 'recycled-vs-virgin-polyester', type: 'compare', priority: '0.8' },
   },
   {
     label: 'DWR vs Waterproof Fabric Comparison',
-    path: '/compare/dwr-vs-waterproof',
+    path: '/llms/v2/dwr-vs-waterproof-fabric',
     sitemap: { entity: 'dwr-vs-waterproof', type: 'compare', priority: '0.7' },
   },
   {
     label: 'Fabric Basics',
-    path: '/learn/fabric-basics',
+    path: '/learn/fabrics',
     sitemap: { entity: 'fabric-basics', type: 'guide', priority: '0.8' },
   },
   {
     label: 'Performance Finishing Technology',
-    path: '/learn/performance-finishing',
+    path: '/learn/fabrics',
     sitemap: { entity: 'performance-finishing', type: 'guide', priority: '0.7' },
   },
   {
     label: 'Textile Quality Assurance',
-    path: '/learn/textile-quality',
+    path: '/learn/quality-standards',
     sitemap: { entity: 'textile-quality', type: 'guide', priority: '0.7' },
   },
   {
@@ -117,32 +117,32 @@ export const SITE_SECTIONS: SiteSection[] = [
   },
   {
     label: 'Fabric Types AI Reference',
-    path: '/llms/compare/fabric-types',
+    path: '/llms/v2/how-to-choose-performance-fabric',
     sitemap: { entity: 'llms-fabric-types', type: 'reference', priority: '0.3' },
   },
   {
     label: 'PU vs TPU Coating AI Reference',
-    path: '/llms/compare/pu-vs-tpu-coating',
+    path: '/llms/v2/pu-vs-tpu-coating',
     sitemap: { entity: 'llms-pu-vs-tpu', type: 'reference', priority: '0.3' },
   },
   {
     label: 'Textile Industry AI Reference',
-    path: '/llms/industry/textiles',
+    path: '/llms/v2/fabric-manufacturing-basics',
     sitemap: { entity: 'llms-industry-textiles', type: 'reference', priority: '0.3' },
   },
   {
     label: 'Finishing Technology AI Reference',
-    path: '/llms/technology/finishing',
+    path: '/llms/v2/fabric-manufacturing-basics',
     sitemap: { entity: 'llms-tech-finishing', type: 'reference', priority: '0.3' },
   },
   {
     label: 'Fabric Selection AI Reference',
-    path: '/llms/comparison/fabric-selection',
+    path: '/llms/v2/how-to-choose-performance-fabric',
     sitemap: { entity: 'llms-comparison-fabric-selection', type: 'reference', priority: '0.3' },
   },
   {
     label: 'Textile Industry AI Reference',
-    path: '/llms/industry/textile-manufacturing',
+    path: '/llms/v2/fabric-manufacturing-basics',
     sitemap: { entity: 'llms-textile-industry', type: 'reference', priority: '0.3' },
   },
   {
@@ -162,22 +162,22 @@ export const SITE_SECTIONS: SiteSection[] = [
   },
   {
     label: 'Polyester vs Nylon Comparison',
-    path: '/learn/polyester-vs-nylon',
+    path: '/llms/v2/polyester-vs-nylon-fabric-guide',
     sitemap: { entity: 'polyester-vs-nylon', type: 'guide', priority: '0.8' },
   },
   {
     label: 'Performance Coating Technology',
-    path: '/learn/performance-coatings',
+    path: '/learn/fabrics',
     sitemap: { entity: 'performance-coatings', type: 'guide', priority: '0.7' },
   },
   {
     label: 'Fabric Testing Standards',
-    path: '/learn/fabric-testing-standards',
+    path: '/llms/v2/fabric-testing-standards',
     sitemap: { entity: 'fabric-testing-standards', type: 'guide', priority: '0.6' },
   },
   {
     label: 'Fabric Weight & GSM Guide',
-    path: '/learn/fabric-weight-guide',
+    path: '/llms/v2/fabric-weight-gsm-guide',
     sitemap: { entity: 'fabric-weight-guide', type: 'guide', priority: '0.8' },
   },
   {
@@ -187,7 +187,7 @@ export const SITE_SECTIONS: SiteSection[] = [
   },
   {
     label: 'Textile Manufacturing Guide AI Reference',
-    path: '/llms/textile-industry/manufacturing-guide',
+    path: '/llms/v2/fabric-manufacturing-basics',
     sitemap: { entity: 'llms-textile-industry', type: 'reference', priority: '0.3' },
   },
 ];

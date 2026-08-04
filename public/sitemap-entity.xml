@@ -3133,25 +3133,25 @@
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/products/sun-protection</loc>
+    <loc>https://seekingtex.com/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/products/waterproof</loc>
+    <loc>https://seekingtex.com/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/products/quick-dry</loc>
+    <loc>https://seekingtex.com/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/products/antibacterial</loc>
+    <loc>https://seekingtex.com/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.90</priority>
@@ -3295,7 +3295,7 @@
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.70</priority>
@@ -3307,37 +3307,31 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.70</priority>
@@ -3349,38 +3343,14 @@
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.30</priority>
   </url>
@@ -3403,25 +3373,19 @@
     <priority>0.70</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.80</priority>
@@ -3431,12 +3395,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.30</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/zh/</loc>
@@ -3451,25 +3409,25 @@
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/products/sun-protection</loc>
+    <loc>https://seekingtex.com/zh/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/products/waterproof</loc>
+    <loc>https://seekingtex.com/zh/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/products/quick-dry</loc>
+    <loc>https://seekingtex.com/zh/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/products/antibacterial</loc>
+    <loc>https://seekingtex.com/zh/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.54</priority>
@@ -3613,7 +3571,7 @@
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/zh/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.42</priority>
@@ -3625,37 +3583,31 @@
     <priority>0.48</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.48</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/zh/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.48</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.42</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/zh/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
@@ -3667,38 +3619,14 @@
     <priority>0.18</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.18</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.18</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.18</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.18</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.18</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.18</priority>
   </url>
@@ -3721,25 +3649,19 @@
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.48</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.42</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.36</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/zh/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/zh/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.48</priority>
@@ -3749,12 +3671,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.54</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/zh/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.18</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/fr/</loc>
@@ -3769,25 +3685,25 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/products/sun-protection</loc>
+    <loc>https://seekingtex.com/fr/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/products/waterproof</loc>
+    <loc>https://seekingtex.com/fr/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/products/quick-dry</loc>
+    <loc>https://seekingtex.com/fr/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/products/antibacterial</loc>
+    <loc>https://seekingtex.com/fr/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
@@ -3931,7 +3847,7 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/fr/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
@@ -3943,37 +3859,31 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/fr/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/fr/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.49</priority>
@@ -3985,38 +3895,14 @@
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
@@ -4039,25 +3925,19 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/fr/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/fr/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -4067,12 +3947,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/fr/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/de/</loc>
@@ -4087,25 +3961,25 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/products/sun-protection</loc>
+    <loc>https://seekingtex.com/de/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/products/waterproof</loc>
+    <loc>https://seekingtex.com/de/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/products/quick-dry</loc>
+    <loc>https://seekingtex.com/de/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/products/antibacterial</loc>
+    <loc>https://seekingtex.com/de/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
@@ -4249,7 +4123,7 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/de/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
@@ -4261,37 +4135,31 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/de/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/de/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/de/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/de/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/de/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.49</priority>
@@ -4303,38 +4171,14 @@
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/de/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/de/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
@@ -4357,25 +4201,19 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/de/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/de/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/de/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/de/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -4385,12 +4223,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/de/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/es/</loc>
@@ -4405,25 +4237,25 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/products/sun-protection</loc>
+    <loc>https://seekingtex.com/es/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/products/waterproof</loc>
+    <loc>https://seekingtex.com/es/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/products/quick-dry</loc>
+    <loc>https://seekingtex.com/es/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/products/antibacterial</loc>
+    <loc>https://seekingtex.com/es/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
@@ -4567,7 +4399,7 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/es/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
@@ -4579,37 +4411,31 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/es/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/es/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/es/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/es/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/es/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.49</priority>
@@ -4621,38 +4447,14 @@
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/es/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/es/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
@@ -4675,25 +4477,19 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/es/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/es/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/es/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/es/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -4703,12 +4499,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/es/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/pt/</loc>
@@ -4723,25 +4513,25 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/products/sun-protection</loc>
+    <loc>https://seekingtex.com/pt/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/products/waterproof</loc>
+    <loc>https://seekingtex.com/pt/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/products/quick-dry</loc>
+    <loc>https://seekingtex.com/pt/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/products/antibacterial</loc>
+    <loc>https://seekingtex.com/pt/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
@@ -4885,7 +4675,7 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/pt/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
@@ -4897,37 +4687,31 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/pt/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/pt/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.49</priority>
@@ -4939,38 +4723,14 @@
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
@@ -4993,25 +4753,19 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pt/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/pt/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -5021,12 +4775,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pt/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/ar/</loc>
@@ -5041,25 +4789,25 @@
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/products/sun-protection</loc>
+    <loc>https://seekingtex.com/ar/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/products/waterproof</loc>
+    <loc>https://seekingtex.com/ar/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/products/quick-dry</loc>
+    <loc>https://seekingtex.com/ar/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/products/antibacterial</loc>
+    <loc>https://seekingtex.com/ar/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
@@ -5203,7 +4951,7 @@
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/ar/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
@@ -5215,37 +4963,31 @@
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/ar/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.39</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/ar/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.39</priority>
@@ -5257,38 +4999,14 @@
     <priority>0.17</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.17</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.17</priority>
   </url>
@@ -5311,25 +5029,19 @@
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.39</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.33</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ar/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/ar/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
@@ -5339,12 +5051,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ar/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/it/</loc>
@@ -5359,25 +5065,25 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/products/sun-protection</loc>
+    <loc>https://seekingtex.com/it/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/products/waterproof</loc>
+    <loc>https://seekingtex.com/it/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/products/quick-dry</loc>
+    <loc>https://seekingtex.com/it/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/products/antibacterial</loc>
+    <loc>https://seekingtex.com/it/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.63</priority>
@@ -5521,7 +5227,7 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/it/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
@@ -5533,37 +5239,31 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/it/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/it/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/it/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/it/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/it/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.49</priority>
@@ -5575,38 +5275,14 @@
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/it/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/it/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.21</priority>
   </url>
@@ -5629,25 +5305,19 @@
     <priority>0.49</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/it/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.49</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/it/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.42</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/it/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/it/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -5657,12 +5327,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/it/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.21</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/ja/</loc>
@@ -5677,25 +5341,25 @@
     <priority>0.81</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/products/sun-protection</loc>
+    <loc>https://seekingtex.com/ja/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.81</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/products/waterproof</loc>
+    <loc>https://seekingtex.com/ja/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.81</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/products/quick-dry</loc>
+    <loc>https://seekingtex.com/ja/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.81</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/products/antibacterial</loc>
+    <loc>https://seekingtex.com/ja/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.81</priority>
@@ -5839,7 +5503,7 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/ja/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.63</priority>
@@ -5851,37 +5515,31 @@
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/ja/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/ja/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.63</priority>
@@ -5893,38 +5551,14 @@
     <priority>0.27</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.27</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.27</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.27</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.27</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.27</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.27</priority>
   </url>
@@ -5947,25 +5581,19 @@
     <priority>0.63</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.63</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.54</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ja/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/ja/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.72</priority>
@@ -5975,12 +5603,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.81</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ja/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.27</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/ko/</loc>
@@ -5995,25 +5617,25 @@
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/products/sun-protection</loc>
+    <loc>https://seekingtex.com/ko/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/products/waterproof</loc>
+    <loc>https://seekingtex.com/ko/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/products/quick-dry</loc>
+    <loc>https://seekingtex.com/ko/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.72</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/products/antibacterial</loc>
+    <loc>https://seekingtex.com/ko/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.72</priority>
@@ -6157,7 +5779,7 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/ko/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
@@ -6169,37 +5791,31 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/ko/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.56</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/ko/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.56</priority>
@@ -6211,38 +5827,14 @@
     <priority>0.24</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.24</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.24</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.24</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.24</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.24</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.24</priority>
   </url>
@@ -6265,25 +5857,19 @@
     <priority>0.56</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.56</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.48</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ko/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/ko/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.64</priority>
@@ -6293,12 +5879,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.72</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ko/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.24</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/ru/</loc>
@@ -6313,25 +5893,25 @@
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/products/sun-protection</loc>
+    <loc>https://seekingtex.com/ru/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/products/waterproof</loc>
+    <loc>https://seekingtex.com/ru/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/products/quick-dry</loc>
+    <loc>https://seekingtex.com/ru/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/products/antibacterial</loc>
+    <loc>https://seekingtex.com/ru/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.45</priority>
@@ -6475,7 +6055,7 @@
     <priority>0.35</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/ru/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.35</priority>
@@ -6487,37 +6067,31 @@
     <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.35</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.35</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/ru/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.35</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/ru/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.35</priority>
@@ -6529,38 +6103,14 @@
     <priority>0.15</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.15</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.15</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.15</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.15</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.15</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.15</priority>
   </url>
@@ -6583,25 +6133,19 @@
     <priority>0.35</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.40</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.35</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.30</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/ru/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/ru/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.40</priority>
@@ -6611,12 +6155,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.45</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/ru/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.15</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/pl/</loc>
@@ -6631,25 +6169,25 @@
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/products/sun-protection</loc>
+    <loc>https://seekingtex.com/pl/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/products/waterproof</loc>
+    <loc>https://seekingtex.com/pl/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/products/quick-dry</loc>
+    <loc>https://seekingtex.com/pl/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/products/antibacterial</loc>
+    <loc>https://seekingtex.com/pl/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.50</priority>
@@ -6793,7 +6331,7 @@
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/pl/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
@@ -6805,37 +6343,31 @@
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/pl/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.39</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/pl/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.39</priority>
@@ -6847,38 +6379,14 @@
     <priority>0.17</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.17</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.17</priority>
   </url>
@@ -6901,25 +6409,19 @@
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.39</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.33</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/pl/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/pl/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.44</priority>
@@ -6929,12 +6431,6 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/pl/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.17</priority>
   </url>
   <url>
     <loc>https://seekingtex.com/nl/</loc>
@@ -6949,25 +6445,25 @@
     <priority>0.59</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/products/sun-protection</loc>
+    <loc>https://seekingtex.com/nl/sun-protection-fabric</loc>
     <x:entity>sun-protection</x:entity>
     <x:type>product</x:type>
     <priority>0.59</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/products/waterproof</loc>
+    <loc>https://seekingtex.com/nl/waterproof-fabric</loc>
     <x:entity>waterproof</x:entity>
     <x:type>product</x:type>
     <priority>0.59</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/products/quick-dry</loc>
+    <loc>https://seekingtex.com/nl/quick-dry-fabric</loc>
     <x:entity>quick-dry</x:entity>
     <x:type>product</x:type>
     <priority>0.59</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/products/antibacterial</loc>
+    <loc>https://seekingtex.com/nl/antibacterial-fabric</loc>
     <x:entity>antibacterial</x:entity>
     <x:type>product</x:type>
     <priority>0.59</priority>
@@ -7111,7 +6607,7 @@
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/compare/cotton-vs-polyester</loc>
+    <loc>https://seekingtex.com/nl/compare/natural-vs-synthetic</loc>
     <x:entity>cotton-vs-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.45</priority>
@@ -7123,37 +6619,31 @@
     <priority>0.52</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/compare/pu-vs-tpu</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/pu-vs-tpu-coating</loc>
     <x:entity>pu-vs-tpu</x:entity>
     <x:type>compare</x:type>
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/compare/recycled-vs-virgin-polyester</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/recycled-vs-virgin-polyester</loc>
     <x:entity>recycled-vs-virgin-polyester</x:entity>
     <x:type>compare</x:type>
     <priority>0.52</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/compare/dwr-vs-waterproof</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/dwr-vs-waterproof-fabric</loc>
     <x:entity>dwr-vs-waterproof</x:entity>
     <x:type>compare</x:type>
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/learn/fabric-basics</loc>
+    <loc>https://seekingtex.com/nl/learn/fabrics</loc>
     <x:entity>fabric-basics</x:entity>
     <x:type>guide</x:type>
     <priority>0.52</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/learn/performance-finishing</loc>
-    <x:entity>performance-finishing</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.45</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/learn/textile-quality</loc>
+    <loc>https://seekingtex.com/nl/learn/quality-standards</loc>
     <x:entity>textile-quality</x:entity>
     <x:type>guide</x:type>
     <priority>0.45</priority>
@@ -7165,38 +6655,14 @@
     <priority>0.20</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/llms/compare/fabric-types</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/how-to-choose-performance-fabric</loc>
     <x:entity>llms-fabric-types</x:entity>
     <x:type>reference</x:type>
     <priority>0.20</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/llms/compare/pu-vs-tpu-coating</loc>
-    <x:entity>llms-pu-vs-tpu</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/llms/industry/textiles</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/fabric-manufacturing-basics</loc>
     <x:entity>llms-industry-textiles</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/llms/technology/finishing</loc>
-    <x:entity>llms-tech-finishing</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/llms/comparison/fabric-selection</loc>
-    <x:entity>llms-comparison-fabric-selection</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.20</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/llms/industry/textile-manufacturing</loc>
-    <x:entity>llms-textile-industry</x:entity>
     <x:type>reference</x:type>
     <priority>0.20</priority>
   </url>
@@ -7219,25 +6685,19 @@
     <priority>0.45</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/learn/polyester-vs-nylon</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/polyester-vs-nylon-fabric-guide</loc>
     <x:entity>polyester-vs-nylon</x:entity>
     <x:type>guide</x:type>
     <priority>0.52</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/learn/performance-coatings</loc>
-    <x:entity>performance-coatings</x:entity>
-    <x:type>guide</x:type>
-    <priority>0.45</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/learn/fabric-testing-standards</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/fabric-testing-standards</loc>
     <x:entity>fabric-testing-standards</x:entity>
     <x:type>guide</x:type>
     <priority>0.39</priority>
   </url>
   <url>
-    <loc>https://seekingtex.com/nl/learn/fabric-weight-guide</loc>
+    <loc>https://seekingtex.com/nl/llms/v2/fabric-weight-gsm-guide</loc>
     <x:entity>fabric-weight-guide</x:entity>
     <x:type>guide</x:type>
     <priority>0.52</priority>
@@ -7247,11 +6707,5 @@
     <x:entity>textile-industry</x:entity>
     <x:type>industry</x:type>
     <priority>0.59</priority>
-  </url>
-  <url>
-    <loc>https://seekingtex.com/nl/llms/textile-industry/manufacturing-guide</loc>
-    <x:entity>llms-textile-industry</x:entity>
-    <x:type>reference</x:type>
-    <priority>0.20</priority>
   </url>
 </urlset>
