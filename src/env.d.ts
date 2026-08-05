@@ -94,6 +94,7 @@ declare namespace App {
       env: {
         VECTORIZE: FnVectorize;
         AI: Ai;
+        CONTACT_SUBMISSIONS: KVNamespace;
         SESSION_SECRET?: string;
         KEYSTATIC_SECRET?: string;
         NODE_ENV?: string;

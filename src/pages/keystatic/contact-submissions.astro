@@ -3,9 +3,13 @@ export const prerender = false;
 import AdminLayout from '~/layouts/AdminLayout.astro';
 import { verifySessionToken } from '~/lib/auth';
 import { readTokenFromCookies } from '~/lib/token-store';
-import { GitHubClient } from '~/lib/github';
-import { decryptJson, readSubmissionsFile, getSubmissionsPath, type DecryptedSubmission } from '~/lib/contact-crypto';
+import { decryptJson, readSubmissionsFile, type DecryptedSubmission } from '~/lib/contact-crypto';
 import yaml from 'js-yaml';
+
+interface KVNamespace {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string): Promise<void>;
+}
 
 const session = Astro.cookies.get('ks-admin-session')?.value;
 const verified = session ? verifySessionToken(session) : null;
@@ -13,37 +17,70 @@ if (!verified) return Astro.redirect('/login');
 const token = readTokenFromCookies(Astro.cookies);
 if (!token) return Astro.redirect('/keystatic/github-token');
 
-const file = getSubmissionsPath();
+const KV_KEY = 'contact:submissions';
 
 let submissions: DecryptedSubmission[] = [];
-let fileSha = '';
 let loadError: string | null = null;
 let notFound = false;
 
 try {
-  const client = new GitHubClient(token);
-  const f = await client.readFile(file);
-  fileSha = f.sha;
-  const parsed = yaml.load(f.content);
-  const file2 = readSubmissionsFile(parsed);
-  for (const rec of file2.submissions) {
-    try {
-      const data = decryptJson<Record<string, string>>(rec.blob);
-      submissions.push({
-        id: rec.id,
-        receivedAt: rec.receivedAt,
-        ip: rec.ip,
-        userAgent: rec.userAgent,
-        data,
-      });
-    } catch {
-      submissions.push({
-        id: rec.id,
-        receivedAt: rec.receivedAt,
-        ip: rec.ip,
-        userAgent: rec.userAgent,
-        data: { _error: 'Decryption failed — encryption key may have changed' },
-      });
+  const kv = (Astro.locals.runtime?.env as { CONTACT_SUBMISSIONS?: KVNamespace })?.CONTACT_SUBMISSIONS;
+  if (kv) {
+    const raw = await kv.get(KV_KEY);
+    if (raw) {
+      const parsed = yaml.load(raw) ?? {};
+      const file2 = readSubmissionsFile(parsed);
+      for (const rec of file2.submissions) {
+        try {
+          const data = decryptJson<Record<string, string>>(rec.blob);
+          submissions.push({
+            id: rec.id,
+            receivedAt: rec.receivedAt,
+            ip: rec.ip,
+            userAgent: rec.userAgent,
+            data,
+          });
+        } catch {
+          submissions.push({
+            id: rec.id,
+            receivedAt: rec.receivedAt,
+            ip: rec.ip,
+            userAgent: rec.userAgent,
+            data: { _error: 'Decryption failed — encryption key may have changed' },
+          });
+        }
+      }
+    } else {
+      notFound = true;
+    }
+  } else {
+    // Fallback to GitHub if KV not available
+    const { GitHubClient } = await import('~/lib/github');
+    const { getSubmissionsPath } = await import('~/lib/contact-crypto');
+    const file = getSubmissionsPath();
+    const client = new GitHubClient(token);
+    const f = await client.readFile(file);
+    const parsed = yaml.load(f.content) ?? {};
+    const file2 = readSubmissionsFile(parsed);
+    for (const rec of file2.submissions) {
+      try {
+        const data = decryptJson<Record<string, string>>(rec.blob);
+        submissions.push({
+          id: rec.id,
+          receivedAt: rec.receivedAt,
+          ip: rec.ip,
+          userAgent: rec.userAgent,
+          data,
+        });
+      } catch {
+        submissions.push({
+          id: rec.id,
+          receivedAt: rec.receivedAt,
+          ip: rec.ip,
+          userAgent: rec.userAgent,
+          data: { _error: 'Decryption failed — encryption key may have changed' },
+        });
+      }
     }
   }
 } catch (e) {
@@ -54,8 +91,7 @@ try {
     loadError = e instanceof Error ? e.message : 'Failed to read';
   }
 }
-
-const total = submissions.length;
+  const total = submissions.length;
 const recent = submissions.slice(0, 50);
 const fieldLabels: Record<string, string> = {
   firstName: 'First Name',
@@ -101,13 +137,13 @@ function snippet(s: string | undefined, n = 80): string {
     <a href="/keystatic" class="text-sm text-gray-500 hover:underline">← Back to Dashboard</a>
     <h1 class="mt-2 text-2xl font-semibold">Contact Form Submissions</h1>
     <p class="mt-1 text-sm text-gray-500">
-      File: <code class="font-mono">{file}</code> · <span data-total>{total}</span> records total
+      <span data-total>{total}</span> records total
       {total > 50 && <span class="text-amber-600 dark:text-amber-400">(showing latest 50 only)</span>}
     </p>
     <p class="mt-1 text-xs text-gray-500">
-      Content is encrypted with <strong>AES-256-GCM</strong> and stored in the GitHub repository. Key derived from the <code
+      Content is encrypted with <strong>AES-256-GCM</strong> and stored in Cloudflare KV (fallback: GitHub). Key derived from the <code
         class="font-mono">SESSION_SECRET</code
-      > environment variable (or fallback if not set). This file is <strong>not</strong> indexed by the search index.
+      > environment variable. This file is <strong>not</strong> indexed by the search index.
     </p>
   </div>
 
@@ -131,7 +167,7 @@ function snippet(s: string | undefined, n = 80): string {
           , encrypted records will appear here.
         </p>
         <p class="mt-2 text-xs text-gray-400">
-          File <code class="font-mono">{file}</code> will be auto-created on the first submission.
+          Records stored in Cloudflare KV (fallback: GitHub) will appear here after first submission.
         </p>
       </div>
     )
@@ -212,8 +248,7 @@ function snippet(s: string | undefined, n = 80): string {
     submissions.length > 0 && (
       <div class="mt-8 text-xs text-gray-500">
         <p>
-          Storage cap: 1000 records (oldest dropped automatically). To archive, download{' '}
-          <code class="font-mono">{file}</code> and decrypt offline. Key derivation rules in{' '}
+          Storage cap: 1000 records (oldest dropped automatically). Records stored in Cloudflare KV (fallback: GitHub). Key derivation rules in{' '}
           <code class="font-mono">src/lib/contact-crypto.ts</code>.
         </p>
       </div>
@@ -221,6 +256,6 @@ function snippet(s: string | undefined, n = 80): string {
   }
 
   <div class="mt-4 text-xs text-gray-500" data-file-info>
-    SHA: <code class="font-mono">{fileSha || '(not loaded)'}</code>
+    Storage: Cloudflare KV (primary) / GitHub (fallback)
   </div>
 </AdminLayout>

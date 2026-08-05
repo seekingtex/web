@@ -18,6 +18,10 @@ binding = "AI"
 binding = "ASSETS_BUCKET"
 bucket_name = "seekingtex-assets"
 
+[[kv_namespaces]]
+binding = "CONTACT_SUBMISSIONS"
+id = "contact-submissions-kv"
+
 [vars]
 NODE_VERSION = "22"
 NODE_ENV = "production"

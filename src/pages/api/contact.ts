@@ -11,6 +11,7 @@ import {
   emptySubmissionsFile,
   type SubmissionRecord,
   type EncryptedBlob,
+  type SubmissionsFile,
 } from '~/lib/contact-crypto';
 import { GitHubClient } from '~/lib/github';
 import { checkRateLimit, DEFAULT_LIMITS } from '~/lib/rate-limit';
@@ -23,6 +24,7 @@ const secretsData = secrets || {};
 export const prerender = false;
 
 const SUBMISSIONS_PATH = getSubmissionsPath();
+const KV_KEY = 'contact:submissions';
 
 interface IncomingPayload {
   firstName?: string;
@@ -86,8 +88,16 @@ function sanitize(value: unknown, maxLen = 2000): string {
   );
 }
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&' + 'amp;')
+    .replace(/</g, '&' + 'lt;')
+    .replace(/>/g, '&' + 'gt;')
+    .replace(/"/g, '&' + 'quot;')
+    .replace(/'/g, '&' + '#39;');
+}
+
 async function loadBranding(env?: Record<string, unknown>): Promise<BrandingEmailConfig> {
-  // Priority: 1) Cloudflare Worker env secrets, 2) secrets.yaml, 3) config.yaml branding
   const fromEnv = {
     contact_email_provider: (env?.CONTACT_EMAIL_PROVIDER as string) || undefined,
     contact_from_email: (env?.CONTACT_FROM_EMAIL as string) || undefined,
@@ -144,15 +154,6 @@ async function saveSubmissionsWith(
   const client = new GitHubClient(token);
   const content = yaml.dump(file, { lineWidth: 120, noRefs: true, sortKeys: false });
   await client.updateFile(SUBMISSIONS_PATH, content, sha, message);
-}
-
-function escapeHtml(s: string): string {
-  return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
 }
 
 function buildEmailBody(
@@ -342,8 +343,6 @@ export const POST: APIRoute = async ({ request }) => {
 
     const env = cfEnv && typeof cfEnv === 'object' ? cfEnv : undefined;
     const branding = await loadBranding(env);
-    const token = branding.contact_submissions_pat || (branding as { github_pat?: string }).github_pat;
-    const hasPat = token && typeof token === 'string' && /^(gh|github_pat_)/.test(token);
 
     const destinationEmail = (sanitize(body.email_to, 200) || branding.contact_email_to || '').trim();
     if (!destinationEmail || !EMAIL_RE.test(destinationEmail)) {
@@ -357,54 +356,97 @@ export const POST: APIRoute = async ({ request }) => {
     let recordId = '';
     const receivedAt = new Date().toISOString();
 
-    if (hasPat) {
-      let submissionsFile: { v: 1; submissions: SubmissionRecord[] } = emptySubmissionsFile();
-      let submissionsSha = '';
+    // Primary storage: Cloudflare KV (avoids GitHub commit -> rebuild loop)
+    const kv = (env as { CONTACT_SUBMISSIONS?: KVNamespace })?.CONTACT_SUBMISSIONS;
+    if (kv) {
       try {
-        const r = await loadSubmissionsWith(token);
-        submissionsFile = r.file;
-        submissionsSha = r.sha;
-      } catch (e) {
-        const status = (e as { status?: number }).status;
-        if (status !== 404) {
-          return err('Failed to read submissions storage: ' + (e instanceof Error ? e.message : 'unknown'), 500);
+        let submissionsFile: SubmissionsFile = emptySubmissionsFile();
+        const raw = await kv.get(KV_KEY);
+        if (raw) {
+          try {
+            const parsed = yaml.load(raw) ?? {};
+            submissionsFile = readSubmissionsFile(parsed);
+          } catch {
+            submissionsFile = emptySubmissionsFile();
+          }
         }
-      }
 
-      const blob: EncryptedBlob = encryptJson(fields);
-      const record: SubmissionRecord = {
-        id: randomUUID(),
-        receivedAt,
-        ip: ip || undefined,
-        userAgent,
-        blob,
-      };
-      recordId = record.id;
-      submissionsFile.submissions.unshift(record);
-      if (submissionsFile.submissions.length > 1000) {
-        submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
-      }
-
-      try {
-        if (submissionsSha) {
-          await saveSubmissionsWith(
-            token,
-            submissionsFile,
-            submissionsSha,
-            `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
-          );
-        } else {
-          const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
-          const client = new GitHubClient(token);
-          await client.createFile(
-            SUBMISSIONS_PATH,
-            content,
-            `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
-          );
+        const blob: EncryptedBlob = encryptJson(fields);
+        const record: SubmissionRecord = {
+          id: randomUUID(),
+          receivedAt,
+          ip: ip || undefined,
+          userAgent,
+          blob,
+        };
+        recordId = record.id;
+        submissionsFile.submissions.unshift(record);
+        if (submissionsFile.submissions.length > 1000) {
+          submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
         }
+
+        const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
+        await kv.put(KV_KEY, content);
         stored = true;
       } catch (e) {
-        return err('Failed to save submission to GitHub: ' + (e instanceof Error ? e.message : 'unknown'), 500);
+        console.error('KV storage failed, falling back to GitHub:', e);
+        stored = false;
+      }
+    }
+
+    // Fallback: GitHub (for admin panel compatibility if KV unavailable)
+    if (!stored) {
+      const token = branding.contact_submissions_pat || (branding as { github_pat?: string }).github_pat;
+      const hasPat = token && typeof token === 'string' && /^(gh|github_pat_)/.test(token);
+      if (hasPat) {
+        let submissionsFile: { v: 1; submissions: SubmissionRecord[] } = emptySubmissionsFile();
+        let submissionsSha = '';
+        try {
+          const r = await loadSubmissionsWith(token);
+          submissionsFile = r.file;
+          submissionsSha = r.sha;
+        } catch (e) {
+          const status = (e as { status?: number }).status;
+          if (status !== 404) {
+            return err('Failed to read submissions storage: ' + (e instanceof Error ? e.message : 'unknown'), 500);
+          }
+        }
+
+        const blob: EncryptedBlob = encryptJson(fields);
+        const record: SubmissionRecord = {
+          id: randomUUID(),
+          receivedAt,
+          ip: ip || undefined,
+          userAgent,
+          blob,
+        };
+        recordId = record.id;
+        submissionsFile.submissions.unshift(record);
+        if (submissionsFile.submissions.length > 1000) {
+          submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
+        }
+
+        try {
+          if (submissionsSha) {
+            await saveSubmissionsWith(
+              token,
+              submissionsFile,
+              submissionsSha,
+              `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
+            );
+          } else {
+            const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
+            const client = new GitHubClient(token);
+            await client.createFile(
+              SUBMISSIONS_PATH,
+              content,
+              `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
+            );
+          }
+          stored = true;
+        } catch (e) {
+          return err('Failed to save submission to GitHub: ' + (e instanceof Error ? e.message : 'unknown'), 500);
+        }
       }
     }
 
