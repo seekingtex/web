@@ -1,27 +1,27 @@
 slides:
-  - image: /images/seekingtex/hero/design-concept.webp
-    label: Design & Innovation
+  - image: /images/seekingtex/factory/fabric-weaving-production.webp
+    label: Fabric Weaving Production
     categories:
       - SUN_PROTECTION
       - WATERPROOF
       - QUICK_DRY
       - ANTIBACTERIAL
-  - image: /images/seekingtex/hero/rd-team.webp
-    label: R&D Team
+  - image: /images/seekingtex/factory/fabric-quality-testing.webp
+    label: Fabric Quality Testing Lab
     categories:
       - SUN_PROTECTION
       - WATERPROOF
       - QUICK_DRY
       - ANTIBACTERIAL
-  - image: /images/seekingtex/hero/production.webp
-    label: Production Workshop
+  - image: /images/seekingtex/factory/fabric-factory-exterior.webp
+    label: Seekingtex Factory Facility
     categories:
       - SUN_PROTECTION
       - WATERPROOF
       - QUICK_DRY
       - ANTIBACTERIAL
-  - image: /images/seekingtex/hero/facility.webp
-    label: Seekingtex Factory
+  - image: /images/seekingtex/factory/fabric-production-department.webp
+    label: Production Department
     categories:
       - SUN_PROTECTION
       - WATERPROOF
