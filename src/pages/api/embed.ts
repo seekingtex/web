@@ -6,6 +6,7 @@ import {
   estimateTokens,
   quotaResponseHeaders,
   DAILY_NEURON_LIMIT,
+  type QuotaEnv,
 } from '../../lib/ai-quota';
 
 export const prerender = false;
@@ -25,7 +26,7 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'text is required' }), { status: 400 });
   }
 
-  const quota = await checkNeuronQuota(env as any);
+  const quota = await checkNeuronQuota(env as QuotaEnv);
   if (!quota.allowed) {
     return new Response(JSON.stringify({ error: 'Daily AI quota exceeded', ...quota }), {
       status: 429,
@@ -38,7 +39,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const inputTokens = estimateTokens(text);
-    const consume = await consumeNeurons(EMBED_MODEL, inputTokens, 0, env as any);
+    const consume = await consumeNeurons(EMBED_MODEL, inputTokens, 0, env as QuotaEnv);
     if (!consume.allowed) {
       return new Response(
         JSON.stringify({ error: 'Daily AI quota exceeded', remaining: consume.remaining, limit: DAILY_NEURON_LIMIT }),
@@ -52,7 +53,7 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const res = (await (env as any).AI.run(EMBED_MODEL, { text: [text] })) as { data: Array<number[]> };
+    const res = (await (env as { AI: Ai }).AI.run(EMBED_MODEL, { text: [text] })) as { data: Array<number[]> };
     const vector = res.data[0];
 
     return new Response(JSON.stringify({ dimensions: vector.length, vector }), {

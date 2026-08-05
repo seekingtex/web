@@ -12,10 +12,10 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
-const d = useCasesData as any;
-const yamlCases: any[] = d.cases ?? [];
+const d = useCasesData;
+const yamlCases: { id: string; title: string; desc: string; image: string }[] = d.cases ?? [];
 
 const staticUseCases = [
   {
@@ -51,7 +51,7 @@ const staticUseCases = [
 ];
 
 const allUseCases = [
-  ...yamlCases.map((c: any) => ({
+  ...yamlCases.map((c) => ({
     id: c.id,
     title: t(`home.useCases.${c.id}.title`) || c.title,
     desc: t(`home.useCases.${c.id}.desc`) || c.desc,

@@ -95,14 +95,14 @@ const withFaq = geoOutput.filter((g) => g.blocks.some((b) => b.type === 'FAQ')).
                 <span class="font-bold text-xs uppercase tracking-wide text-blue-600">{block.type}</span>
                 {isSteps && Array.isArray(content) && (
                   <ol class="mt-2 space-y-1 list-decimal list-inside">
-                    {content.map((step) => (
+                    {(content as string[]).map((step) => (
                       <li class="text-sm text-gray-600 dark:text-gray-300">{step}</li>
                     ))}
                   </ol>
                 )}
                 {isFaq && Array.isArray(content) && (
                   <div class="mt-2 space-y-2">
-                    {content.map((faqEntry) => (
+                    {(content as { q: string; a: string }[]).map((faqEntry) => (
                       <div>
                         <p class="text-sm font-medium text-gray-900 dark:text-white">Q: {faqEntry.q}</p>
                         <p class="text-sm text-gray-500 mt-0.5">A: {faqEntry.a}</p>

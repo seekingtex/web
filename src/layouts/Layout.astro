@@ -41,7 +41,7 @@ const sameAs = (seo.socialLinks || [])
 
 const siteUrlTrimmed = seo.siteUrl.replace(/\/+$/, '');
 
-const enabledLangs = (Array.isArray(langData) ? langData : []).filter((l: any) => l.enabled !== false);
+const enabledLangs = (Array.isArray(langData) ? langData : []).filter((l) => l.enabled !== false);
 
 const pathname = Astro.url.pathname;
 const pathWithoutLang = removeLang(pathname);
@@ -63,7 +63,7 @@ const textDirection = language === 'ar' ? 'rtl' : defaultTextDir || 'ltr';
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
 
     {
-      enabledLangs.map((l: any) => (
+      enabledLangs.map((l) => (
         <link
           rel="alternate"
           hreflang={l.locale}

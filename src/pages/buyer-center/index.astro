@@ -4,7 +4,9 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { ui, defaultLang } from '~/i18n/config';
 
-const t = (key: string) => (ui as any)['en']?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => ui[defaultLang]?.[key] || key;
+
+const buyersCenterLabel = ui['en']?.['home.resources.buyersCenter'] || 'Buyers Center';
 
 const metadata = {
   title: `Buyer Center | ${SITE.name}`,
@@ -28,7 +30,7 @@ const metadata = {
     <!-- Hero -->
     <section class="text-center mb-14">
       <span class="text-sm font-semibold text-sky-600 tracking-wide uppercase"
-        >{(ui as any)['en']?.['home.resources.buyersCenter'] || 'Buyers Center'}</span
+        >{buyersCenterLabel}</span
       >
       <h1 class="mt-3 text-4xl font-extrabold text-gray-900 dark:text-slate-100">{t('buyerCenter.title')}</h1>
       <p class="mt-3 text-lg text-gray-500 dark:text-slate-400 max-w-2xl mx-auto">{t('buyerCenter.heroDesc')}</p>

@@ -4,7 +4,7 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
-import { getPageContent } from '~/i18n/page-content';
+import { getPageContent, type BlockElement } from '~/i18n/page-content';
 import { languages } from '~/i18n/config';
 
 export async function getStaticPaths() {
@@ -56,7 +56,7 @@ const crumbs = [
 
     <div id="categories" class="space-y-16">
       {
-        (page.sections || []).map((section: any) => (
+        (page.sections || []).map((section: BlockElement) => (
           <section>
             {section.title && (
               <header class="mb-8 text-center max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ const crumbs = [
 
             {section.categories && (
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {section.categories.map((cat: any) => (
+                {section.categories.map((cat: BlockElement) => (
                   <a
                     href={`/${lang}${cat.href}`}
                     class="group block p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary/30 hover:shadow-lg transition-all"
@@ -107,7 +107,7 @@ const crumbs = [
 
             {section.items && (
               <div class="grid md:grid-cols-3 gap-6">
-                {section.items.map((item: any) => (
+                {section.items.map((item: BlockElement) => (
                   <a
                     href={`/${lang}${item.href}`}
                     class="group block p-6 rounded-xl bg-white dark:bg-slate-800/50 border border-gray-100 dark:border-slate-700 hover:border-primary/30 hover:shadow-lg transition-all text-center"

@@ -11,8 +11,8 @@ interface UseCaseEntry {
   image: string;
 }
 
-const d = useCasesData as any;
-const useCases: UseCaseEntry[] = (d.cases ?? []).map((c: any) => ({
+const d = useCasesData;
+const useCases: UseCaseEntry[] = (d.cases ?? []).map((c: UseCaseEntry) => ({
   id: c.id,
   title: c.title,
   desc: c.desc,

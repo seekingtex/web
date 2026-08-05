@@ -16,7 +16,7 @@ interface ResearchTopic {
   readTime: string;
 }
 
-const topics: ResearchTopic[] = (researchData as any)?.topics ?? [];
+const topics: ResearchTopic[] = researchData?.topics ?? [];
 
 const topicMeta: Record<string, { title: string; desc: string; image?: string }> = {
   'upf-uv-protection-technology': {

@@ -44,7 +44,7 @@ interface Props {
   countries?: FieldOption[];
   isDark?: boolean;
   classes?: { container?: string };
-  bg?: any;
+  bg?: string;
 }
 
 const {
@@ -142,7 +142,7 @@ const rows = Object.keys(grouped)
                   </label>
                   <input
                     id={`${id}-${f.name}`}
-                    type={(f.type === 'select' ? 'text' : (f.type ?? 'text')) as any}
+                    type={(f.type === 'select' ? 'text' : (f.type ?? 'text')) as 'text' | 'email'}
                     name={f.name}
                     placeholder={f.placeholder}
                     class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -211,7 +211,7 @@ const rows = Object.keys(grouped)
                       </label>
                       <input
                         id={`${id}-${f.name}`}
-                        type={(f.type === 'email' ? 'email' : f.type === 'tel' ? 'tel' : 'text') as any}
+                        type={f.type === 'email' ? 'email' : f.type === 'tel' ? 'tel' : 'text'}
                         name={f.name}
                         placeholder={f.placeholder}
                         class="py-2 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"

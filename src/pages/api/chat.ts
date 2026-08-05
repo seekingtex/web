@@ -6,6 +6,7 @@ import {
   estimateTokens,
   quotaResponseHeaders,
   DAILY_NEURON_LIMIT,
+  type QuotaEnv,
 } from '../../lib/ai-quota';
 
 export const prerender = false;
@@ -27,12 +28,12 @@ interface Source {
   text: string;
 }
 
-async function embedQuery(query: string, env: any): Promise<number[]> {
+async function embedQuery(query: string, env: { AI: Ai }): Promise<number[]> {
   const res = (await env.AI.run(EMBED_MODEL, { text: [query] })) as { data: Array<number[]> };
   return res.data[0];
 }
 
-async function callLLM(prompt: string, env: any, mode: string): Promise<string> {
+async function callLLM(prompt: string, env: { AI: Ai }, mode: string): Promise<string> {
   const workersModel = MODEL_COST[mode];
   const res = (await env.AI.run(workersModel, {
     messages: [
@@ -60,7 +61,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const mode = body.mode || 'fast';
 
-  const quota = await checkNeuronQuota(env as any);
+  const quota = await checkNeuronQuota(env as QuotaEnv);
   if (!quota.allowed) {
     return new Response(JSON.stringify({ error: 'Daily AI quota exceeded', ...quota }), {
       status: 429,
@@ -73,7 +74,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const embedInputTokens = estimateTokens(question);
-    const embedConsume = await consumeNeurons(EMBED_MODEL, embedInputTokens, 0, env as any);
+    const embedConsume = await consumeNeurons(EMBED_MODEL, embedInputTokens, 0, env as QuotaEnv);
     if (!embedConsume.allowed) {
       return new Response(
         JSON.stringify({
@@ -91,15 +92,15 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const vector = await embedQuery(question, env);
-    const searchResults = await (env as any).VECTORIZE.query(vector, { topK: 5 });
+    const vector = await embedQuery(question, env as { AI: Ai });
+    const searchResults = await (env as { VECTORIZE: FnVectorize }).VECTORIZE.query(vector, { topK: 5 });
 
     const sources: Source[] = (searchResults.matches || [])
-      .filter((m: any) => m.score > 0.25)
-      .map((m: any) => ({
-        url: (m.metadata as any)?.url || '',
-        title: (m.metadata as any)?.title || '',
-        text: ((m.metadata as any)?.text || '').slice(0, 600),
+      .filter((m) => m.score > 0.25)
+      .map((m) => ({
+        url: String(m.metadata?.url || ''),
+        title: String(m.metadata?.title || ''),
+        text: String(m.metadata?.text || '').slice(0, 600),
       }));
 
     const context = sources.map((s, i) => `[${i + 1}] ${s.title} (${s.url})\n${s.text}`).join('\n\n');
@@ -120,7 +121,7 @@ Provide a concise answer with references to the sources when appropriate.`;
     const llmInputTokens = estimateTokens(
       prompt + 'You are a helpful website assistant. Answer based on the provided context.'
     );
-    const llmConsume = await consumeNeurons(llmModel, llmInputTokens, 1024, env as any);
+    const llmConsume = await consumeNeurons(llmModel, llmInputTokens, 1024, env as QuotaEnv);
     if (!llmConsume.allowed) {
       return new Response(
         JSON.stringify({
@@ -138,7 +139,7 @@ Provide a concise answer with references to the sources when appropriate.`;
       );
     }
 
-    const answer = await callLLM(prompt, env, mode);
+    const answer = await callLLM(prompt, env as { AI: Ai }, mode);
 
     return new Response(
       JSON.stringify({
@@ -160,7 +161,7 @@ Provide a concise answer with references to the sources when appropriate.`;
       const llmInputTokens = estimateTokens(
         question + 'You are a helpful website assistant. Answer based on the provided context.'
       );
-      const llmConsume = await consumeNeurons(llmModel, llmInputTokens, 1024, env as any);
+      const llmConsume = await consumeNeurons(llmModel, llmInputTokens, 1024, env as QuotaEnv);
       if (!llmConsume.allowed) {
         return new Response(
           JSON.stringify({
@@ -178,7 +179,7 @@ Provide a concise answer with references to the sources when appropriate.`;
         );
       }
 
-      const fallback = await callLLM(question, env, mode);
+      const fallback = await callLLM(question, env as { AI: Ai }, mode);
       return new Response(JSON.stringify({ answer: fallback, sources: [], note: 'RAG unavailable, used direct LLM' }), {
         status: 200,
         headers: {

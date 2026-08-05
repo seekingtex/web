@@ -4,7 +4,10 @@ import JsonLd from '~/components/common/JsonLd.astro';
 import { SITE } from 'astrowind:config';
 import { ui, defaultLang } from '~/i18n/config';
 
-const t = (key: string) => (ui as any)['en']?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) =>
+  (ui as Record<string, Record<string, string>>)['en']?.[key] ||
+  (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] ||
+  key;
 
 const metadata = {
   title: `Our People | ${SITE.name}`,

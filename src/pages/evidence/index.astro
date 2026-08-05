@@ -37,7 +37,7 @@ interface DeploymentPhoto {
   context: string;
 }
 
-const d = evidenceData as any;
+const d = evidenceData;
 const caseStudies: CaseStudy[] = d.case_studies ?? [];
 const certifications: Certification[] = d.certifications ?? [];
 const testResults: TestResult[] = d.test_results ?? [];

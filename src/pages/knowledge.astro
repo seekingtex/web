@@ -36,7 +36,7 @@ const metadata = {
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       {
-        (clusters.items || []).map((cluster) => (
+        (clusters.items || []).map((cluster: { icon?: string; title?: string; description?: string; topics?: string[] }) => (
           <div class="p-8 rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800">
             <div class="w-12 h-12 bg-sky-50 dark:bg-sky-900/30 rounded-xl flex items-center justify-center text-sky-600">
               {cluster.icon && <Icon name={cluster.icon} class="w-6 h-6" />}
@@ -44,7 +44,7 @@ const metadata = {
             <h3 class="mt-5 text-xl font-bold text-gray-900 dark:text-slate-100">{cluster.title || ''}</h3>
             <p class="mt-2 text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{cluster.description || ''}</p>
             <ul class="mt-5 space-y-2">
-              {(cluster.topics || []).map((topic) => (
+              {(cluster.topics || []).map((topic: string) => (
                 <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
                   <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
                   {topic}
@@ -69,7 +69,7 @@ const metadata = {
       </div>
       <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
         {
-          (featured.items || []).map((item) => (
+          (featured.items || []).map((item: { href?: string; title?: string }) => (
             <a
               href={item.href || '#'}
               class="block p-5 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 text-center hover:shadow-md transition-shadow"

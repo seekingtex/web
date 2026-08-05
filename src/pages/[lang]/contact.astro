@@ -14,43 +14,77 @@ export async function getStaticPaths() {
 }
 
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 import countryData from '~/data/site/countries.yaml';
 import formTextData from '~/data/site/contact-form-text.yaml';
 const lang = Astro.params.lang || 'en';
 const page = getPageContent(lang, 'contact');
-const data = page && Object.keys(page).length > 0 ? page : {};
+const data = page;
 
-const ft: any = formTextData ?? {};
+const ft = formTextData ?? {};
 
 function t(record: Record<string, string> | undefined, fallback = ''): string {
   return record?.[lang] || record?.en || fallback;
 }
 
-const ht = data.hero_text ?? {};
-const form = data.contact_form ?? {};
-const other = data.features2_other_ways ?? {};
+const ht = data.hero_text;
+const form = data.contact_form;
+const other = data.features2_other_ways;
 
-const fields = (form.fields ?? []).map((f: any) => {
-  const trans = (ft.fields ?? []).find((tf: any) => tf.name === f.name);
+interface ContactFieldRaw {
+  name?: string;
+  label?: string;
+  row?: number;
+  type?: string;
+  placeholder?: string;
+  withCountryCode?: boolean;
+  rows?: number;
+  optionsKey?: string;
+  options?: Array<{ value: string; label: string }>;
+}
+
+interface ContactField {
+  name: string;
+  label: string;
+  row: number;
+  type?: 'text' | 'email' | 'tel' | 'textarea' | 'select';
+  placeholder?: string;
+  withCountryCode?: boolean;
+  rows?: number;
+  optionsKey?: string;
+  options?: Array<{ value: string; label: string }>;
+}
+
+const fields = ((form.fields ?? []) as unknown as ContactFieldRaw[]).map((f) => {
+  const trans = (ft.fields ?? []).find(
+    (tf: { name?: string; label?: Record<string, string>; placeholder?: Record<string, string> }) => tf.name === f.name
+  );
+  const base: ContactField = {
+    name: f.name ?? '',
+    label: f.label ?? '',
+    row: f.row ?? 0,
+    type: f.type as ContactField['type'],
+    placeholder: f.placeholder,
+    withCountryCode: f.withCountryCode,
+    rows: f.rows,
+    optionsKey: f.optionsKey,
+    options: f.options,
+  };
   if (trans) {
-    return {
-      ...f,
-      label: t(trans.label, f.label),
-      placeholder: t(trans.placeholder, f.placeholder ?? ''),
-    };
+    base.label = t(trans.label, base.label);
+    base.placeholder = t(trans.placeholder, base.placeholder ?? '');
   }
-  return f;
+  return base;
 });
 
 const countries =
-  (countryData as any).countries?.map((c: any) => ({
+  countryData.countries?.map((c: { value: string; tel?: string; label?: Record<string, string> }) => ({
     value: c.value,
     label: c.label?.[lang] || c.label?.en || c.value,
   })) ?? [];
 
 const countryCodes =
-  (countryData as any).countries?.map((c: any) => ({
+  countryData.countries?.map((c: { value: string; tel?: string; label?: Record<string, string> }) => ({
     code: c.tel,
     label: `${c.label?.[lang] || c.label?.en || c.value} ${c.tel}`,
   })) ?? [];
@@ -69,7 +103,7 @@ const consent = form.consent
     }
   : undefined;
 
-const brandingData: any = branding ?? {};
+const brandingData = branding ?? {};
 const resolvedEmailTo =
   (form.email_to && String(form.email_to).trim()) || (brandingData.contact_email_to as string) || '';
 
@@ -202,9 +236,9 @@ const metadata = {
       <Features2
         title={other.title}
         tagline={other.tagline}
-        columns={other.columns}
+        columns={(other.columns as number | undefined) ?? 3}
         items={other.items}
-        isDark={other.isDark}
+        isDark={other.isDark ?? false}
       />
     </div>
   </section>

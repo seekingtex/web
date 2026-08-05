@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { getProducts } from '~/utils/products';
+import type { Product } from '~/types';
 
 const metadata = {
   title: `Product Comparison —${SITE.name}`,
@@ -11,7 +12,12 @@ const metadata = {
 
 const products = await getProducts();
 
-const comparisonRows = [
+const comparisonRows: Array<{
+  label: string;
+  key: string;
+  transform?: (v: string) => string;
+  getter?: (p: Product) => string;
+}> = [
   { label: 'Category', key: 'categoryLabel' as const, transform: (v: string) => v },
   {
     label: 'UPF Rating',
@@ -81,6 +87,9 @@ const comparisonRows = [
     },
   },
 ];
+
+const rowValue = (row: { key: string; getter?: (p: Product) => string }, p: Product) =>
+  row.getter ? row.getter(p) : String(p[row.key as keyof Product] ?? '');
 ---
 
 <Layout metadata={metadata}>
@@ -122,7 +131,7 @@ const comparisonRows = [
                   {row.label}
                 </td>
                 {products.map((p) => {
-                  const value = row.getter ? row.getter(p) : (p as any)[row.key];
+                  const value = rowValue(row, p);
                   return <td class="px-4 py-3 text-center text-gray-600 border-b border-gray-200">{value || '-'}</td>;
                 })}
               </tr>

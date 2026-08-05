@@ -44,11 +44,11 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as Record<string, unknown>;
   if (parsed && typeof parsed === 'object') {
     for (const key of Object.keys(defaultData)) {
       if (parsed[key] && typeof parsed[key] === 'object') {
-        data[key] = { ...defaultData[key], ...parsed[key] };
+        data[key] = { ...defaultData[key], ...(parsed[key] as Record<string, string>) };
       }
     }
   }

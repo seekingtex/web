@@ -6,6 +6,7 @@ import {
   estimateTokens,
   quotaResponseHeaders,
   DAILY_NEURON_LIMIT,
+  type QuotaEnv,
 } from '../../lib/ai-quota';
 
 export const prerender = false;
@@ -27,7 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const topK = Math.min(body.topK || 5, 20);
 
-  const quota = await checkNeuronQuota(env as any);
+  const quota = await checkNeuronQuota(env as QuotaEnv);
   if (!quota.allowed) {
     return new Response(JSON.stringify({ error: 'Daily AI quota exceeded', ...quota }), {
       status: 429,
@@ -40,7 +41,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   try {
     const inputTokens = estimateTokens(query);
-    const consume = await consumeNeurons(EMBED_MODEL, inputTokens, 0, env as any);
+    const consume = await consumeNeurons(EMBED_MODEL, inputTokens, 0, env as QuotaEnv);
     if (!consume.allowed) {
       return new Response(
         JSON.stringify({ error: 'Daily AI quota exceeded', remaining: consume.remaining, limit: DAILY_NEURON_LIMIT }),
@@ -54,19 +55,19 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const aiRes = (await (env as any).AI.run(EMBED_MODEL, { text: [query] })) as { data: Array<number[]> };
+    const aiRes = (await (env as { AI: Ai }).AI.run(EMBED_MODEL, { text: [query] })) as { data: Array<number[]> };
     const vector = aiRes.data[0];
 
-    const results = await (env as any).VECTORIZE.query(vector, { topK });
+    const results = await (env as { VECTORIZE: FnVectorize }).VECTORIZE.query(vector, { topK });
 
     const matches = (results.matches || [])
-      .filter((m: any) => m.score > 0.25)
-      .map((m: any) => ({
+      .filter((m) => m.score > 0.25)
+      .map((m) => ({
         id: m.id,
         score: Math.round(m.score * 10000) / 10000,
-        title: (m.metadata as any)?.title || '',
-        url: (m.metadata as any)?.url || '',
-        text: ((m.metadata as any)?.text || '').slice(0, 400),
+        title: String(m.metadata?.title || ''),
+        url: String(m.metadata?.url || ''),
+        text: String(m.metadata?.text || '').slice(0, 400),
       }));
 
     return new Response(JSON.stringify({ query, results: matches, total: matches.length }), {

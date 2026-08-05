@@ -61,7 +61,7 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as Partial<typeof data>;
   if (parsed && typeof parsed === 'object') {
     if (parsed.site) data.site = { ...data.site, ...parsed.site };
     if (parsed.metadata) data.metadata = { ...data.metadata, ...parsed.metadata };

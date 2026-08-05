@@ -23,11 +23,12 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   } catch {
     return errorResponse('Invalid request format', 400);
   }
+  const raw = (body ?? {}) as { oldUrl?: unknown; newUrl?: unknown; oldName?: unknown; newName?: unknown };
   const rule: RefactorRule = {
-    oldUrl: typeof (body as any)?.oldUrl === 'string' ? (body as any).oldUrl.trim() : undefined,
-    newUrl: typeof (body as any)?.newUrl === 'string' ? (body as any).newUrl.trim() : undefined,
-    oldName: typeof (body as any)?.oldName === 'string' ? (body as any).oldName.trim() : undefined,
-    newName: typeof (body as any)?.newName === 'string' ? (body as any).newName.trim() : undefined,
+    oldUrl: typeof raw.oldUrl === 'string' ? raw.oldUrl.trim() : undefined,
+    newUrl: typeof raw.newUrl === 'string' ? raw.newUrl.trim() : undefined,
+    oldName: typeof raw.oldName === 'string' ? raw.oldName.trim() : undefined,
+    newName: typeof raw.newName === 'string' ? raw.newName.trim() : undefined,
   };
   if (!rule.oldUrl && !rule.oldName) {
     rule.oldUrl = '';

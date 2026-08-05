@@ -86,7 +86,7 @@ function pageContentPlugin(): Plugin {
         pageNames = [];
       }
 
-      const data: Record<string, any> = {};
+      const data: Record<string, unknown> = {};
       for (const lang of pageLangs) {
         for (const pname of pageNames) {
           const filePath =

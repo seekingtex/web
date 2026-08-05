@@ -9,7 +9,9 @@ interface Page {
 
 interface Env {
   VECTORIZE: FnVectorize;
-  AI: any;
+  AI: {
+    run(model: string, input: Record<string, unknown>): Promise<{ data: Array<number[]> }>;
+  };
   SITEMAP_URL?: string;
   SITE_URL?: string;
 }

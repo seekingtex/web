@@ -10,7 +10,7 @@ import Tldr from '~/components/common/Tldr.astro';
 import { contentV2Records } from '~/data/content-v2';
 import cfg from '~/config.yaml';
 import { getEntityGraphJsonLd } from '~/lib/geo-v7/entity-graph';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 import heroImagesData from '~/data/site/hero-images.yaml';
 import techCardsData from '~/data/site/tech-cards.yaml';
 import productVisualsData from '~/data/site/product-visuals.yaml';
@@ -31,7 +31,7 @@ interface HeroSlide {
   label: string;
   categories: string[];
 }
-const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
+const heroSlides: HeroSlide[] = (heroImagesData?.slides || []).filter((s: { image?: string }) => s?.image?.trim()) || [
   {
     image: '/images/seekingtex/categories/sun-protection-fabrics.webp',
     label: 'Sun Protection Fabrics',
@@ -64,7 +64,7 @@ const defaultVisuals: Record<string, string> = {
   'eco-friendly-recycled': '/images/seekingtex/products/eco-friendly-fabric.webp',
   'flame-retardant': '/images/seekingtex/products/flame-retardant-fabric.webp',
 };
-const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
+const rawVisuals = (productVisualsData?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
 const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
 
@@ -110,7 +110,7 @@ const defaultUseCases = [
     img: '/images/seekingtex/products/eco-friendly-fabric.webp',
   },
 ];
-const rawCases = ((useCasesData as any)?.cases || []) as Array<{
+const rawCases = (useCasesData?.cases || []) as Array<{
   id: string;
   title: string;
   desc: string;
@@ -130,7 +130,7 @@ const useCases = rawCases.length
     }))
   : defaultUseCases;
 
-const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
+const rawPoints = (proofPointsData?.points || []) as Array<{
   id: string;
   metric: string;
   label: string;
@@ -1348,7 +1348,7 @@ const faqCategories = [
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       {
-        ((techCardsData as any)?.cards || []).map((card: any) => (
+        (techCardsData?.cards || []).map((card: { image?: string; title?: string; description?: string; badge?: string }) => (
           <div class="relative bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-shadow overflow-hidden">
             <div class="absolute inset-0">
               <img
@@ -1665,7 +1665,7 @@ const faqCategories = [
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
       {
-        ((testimonialsData as any)?.testimonials || []).map((t: { name: string; quote: string; rating: number }) => (
+        (testimonialsData?.testimonials || []).map((t: { name: string; quote: string; rating: number }) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-6">
             <div class="flex text-amber-400 text-lg">{'⭐'.repeat(t.rating || 5)}</div>
             <p class="mt-4 text-gray-600 text-sm italic">"{t.quote}"</p>
@@ -1830,18 +1830,18 @@ const faqCategories = [
     <div class="max-w-6xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-sm font-medium text-sky-600 tracking-wide uppercase"
-          >{(learnData as any)?.tagline || 'Learn'}</span
+          >{learnData?.tagline || 'Learn'}</span
         >
         <h2 class="mt-4 text-4xl font-semibold text-gray-900">
-          {(learnData as any)?.title || 'New to Performance Fabrics?'}
+          {learnData?.title || 'New to Performance Fabrics?'}
         </h2>
         <p class="mt-4 text-lg text-gray-500">
-          {(learnData as any)?.subtitle || 'Everything you need to know before you source functional textiles.'}
+          {learnData?.subtitle || 'Everything you need to know before you source functional textiles.'}
         </p>
       </div>
       <div class="grid md:grid-cols-4 gap-6">
         {
-          ((learnData as any)?.cards || []).map((card: { href: string; image: string; title: string }) => (
+          (learnData?.cards || []).map((card: { href: string; image: string; title: string }) => (
             <a
               href={card.href}
               class="group bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"

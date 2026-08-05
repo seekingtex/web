@@ -1,11 +1,11 @@
 import type { APIRoute } from 'astro';
 import { env } from 'cloudflare:workers';
-import { checkNeuronQuota, DAILY_NEURON_LIMIT } from '../../../lib/ai-quota';
+import { checkNeuronQuota, DAILY_NEURON_LIMIT, type QuotaEnv } from '../../../lib/ai-quota';
 
 export const prerender = false;
 
 export const GET: APIRoute = async () => {
-  const quota = await checkNeuronQuota(env as any);
+  const quota = await checkNeuronQuota(env as QuotaEnv);
   return new Response(
     JSON.stringify({
       service: 'workers-ai',

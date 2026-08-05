@@ -55,9 +55,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { badges?: Badge[] };
   if (parsed?.badges && Array.isArray(parsed.badges)) {
-    badges = parsed.badges.map((b: any, i: number) => ({
+    badges = parsed.badges.map((b: Badge, i: number) => ({
       icon: b.icon || defaults[i]?.icon || '\u2B50',
       title: b.title || defaults[i]?.title || '',
       desc: b.desc || defaults[i]?.desc || '',

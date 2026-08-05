@@ -37,7 +37,7 @@ const metadata = {
 };
 const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Factory' }];
 
-const renderIntro = (text) => text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+const renderIntro = (text: string) => text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>

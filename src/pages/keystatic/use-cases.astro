@@ -78,9 +78,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { cases?: UseCaseEntry[] };
   if (parsed?.cases && Array.isArray(parsed.cases)) {
-    cases = parsed.cases.map((c: any, i: number) => ({
+    cases = parsed.cases.map((c: UseCaseEntry, i: number) => ({
       id: c.id || defaultCases[i]?.id || '',
       title: c.title || defaultCases[i]?.title || '',
       desc: c.desc || defaultCases[i]?.desc || '',

@@ -18,14 +18,14 @@ const tests = page.tests || [];
 const commitment = page.commitment || {};
 const testingSection = page.testing_section || {};
 
-const t = (s) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
+const t = (s: string | undefined) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
 
 const metadata = {
   title: `Quality Testing & Assurance — Performance & Durability — ${SITE.name}`,
   description: `${SITE.name}'s quality testing program covers tensile strength, GSM, color fastness, UV resistance, abrasion, tear strength, and water repellency testing. Every fabric roll is certified before shipping.`,
 };
 
-const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.tagline }];
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.tagline || 'Quality' }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>

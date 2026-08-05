@@ -1,6 +1,6 @@
 ---
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 
 const siteName = branding?.site_name?.trim() || 'Seekingtex';
 const initial = (siteName || '').charAt(0).toUpperCase() || 'V';

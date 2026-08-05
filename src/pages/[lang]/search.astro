@@ -5,7 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { defaultLang, ui } from '~/i18n/config';
 
 const { lang = defaultLang } = Astro.params;
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
 const q = Astro.url.searchParams.get('q') || '';
 const pageTitle = q ? `Search: ${q}` : t('search.title') || 'Search';

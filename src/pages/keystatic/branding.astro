@@ -14,7 +14,7 @@ if (!token) return Astro.redirect('/keystatic/github-token');
 const file = 'src/config.yaml';
 getRepoInfo();
 
-let data: Record<string, any> = {
+let data: Record<string, string> = {
   site_name: 'Seekingtex',
   logo_image: '',
   logo_alt: 'Seekingtex logo',
@@ -42,9 +42,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as Record<string, unknown>;
   if (parsed?.branding && typeof parsed.branding === 'object') {
-    data = { ...data, ...parsed.branding };
+    data = { ...data, ...(parsed.branding as Record<string, string>) };
   }
   fullConfigStr = JSON.stringify(parsed || {});
   sha = f.sha;

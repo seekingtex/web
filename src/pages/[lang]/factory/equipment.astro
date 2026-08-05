@@ -45,7 +45,7 @@ const metadata = {
         <div>
           <h2 class="text-2xl font-bold mb-6">{cat.title}</h2>
           <div class="grid gap-4">
-            {cat.items.map((eq) => (
+            {(cat.items || []).map((eq) => (
               <div class="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">

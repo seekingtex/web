@@ -20,8 +20,8 @@ const socialPacks = getAllSocialPacks().slice(0, 3);
 const regions = BRAND.regions;
 
 const socialLinks = (SITE_SETTINGS?.socialLinks || [])
-  .map((s) => s?.url)
-  .filter((u): u is string => typeof u === 'string' && u.length > 0);
+  .map((s: { url?: string }) => s?.url)
+  .filter((u: string | undefined): u is string => typeof u === 'string' && u.length > 0);
 ---
 
 <Layout metadata={metadata}>

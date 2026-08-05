@@ -19,8 +19,9 @@ function readSiteUrl(): string {
   try {
     const configPath = path.join(root, 'src', 'config.yaml');
     const raw = fs.readFileSync(configPath, 'utf8');
-    const config = yaml.load(raw) as any;
-    return config?.site?.site || 'https://seekingtex.com';
+    const config = yaml.load(raw) as Record<string, unknown>;
+    const site = (config?.site as Record<string, unknown> | undefined)?.site;
+    return typeof site === 'string' && site ? site : 'https://seekingtex.com';
   } catch {
     return 'https://seekingtex.com';
   }

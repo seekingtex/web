@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
 const metadata = {
   title: `Research & Knowledge Center | ${SITE.name}`,
@@ -26,7 +26,7 @@ interface ResearchTopic {
   readTime: string;
 }
 
-const topics: ResearchTopic[] = (researchData as any)?.topics ?? [];
+const topics: ResearchTopic[] = researchData?.topics ?? [];
 
 const topicMeta: Record<string, { titleKey: string; descKey: string }> = {
   'waterproof-breathable-technology': {

@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 import { getSeoSettings } from '~/utils/seo-settings';
 import { getLangFromUrl } from '~/i18n/utils';
 import { ui } from '~/i18n/config';
@@ -185,7 +185,7 @@ const navTextMap: Record<string, string> = {
 function t(text: string | undefined, locale: string): string {
   const key = text ? navTextMap[text] : undefined;
   if (key) {
-    const translated = (ui as any)[locale]?.[key];
+    const translated = (ui as Record<string, Record<string, string>>)[locale]?.[key];
     if (translated) return translated;
   }
   return text ?? '';

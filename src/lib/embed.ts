@@ -4,7 +4,9 @@ const embedCache = new Map<string, { embedding: number[]; cachedAt: number }>();
 const CACHE_TTL = 86400000;
 
 export interface EmbedEnv {
-  AI?: any;
+  AI: {
+    run(model: string, input: Record<string, unknown>): Promise<unknown>;
+  };
 }
 
 export async function embed(text: string, env: EmbedEnv): Promise<number[]> {

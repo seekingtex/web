@@ -52,9 +52,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { cards?: Card[] };
   if (parsed?.cards && Array.isArray(parsed.cards)) {
-    cards = parsed.cards.map((c: any, i: number) => ({
+    cards = parsed.cards.map((c: Card, i: number) => ({
       badge: c.badge || defaults[i]?.badge || '',
       title: c.title || defaults[i]?.title || '',
       description: c.description || defaults[i]?.description || '',

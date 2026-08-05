@@ -22,7 +22,7 @@ const metadata = {
   title: `${hero.title} — ${SITE.name} Brand Assets`,
   description: `Download product images, logos, brand kits, PDF catalogs, and marketing videos for ${SITE.name} functional fabrics.`,
 };
-const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title }];
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title || 'Media' }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -40,7 +40,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title }];
           <p class="mt-1 text-sm text-muted">{sec.desc}</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {sec.items.map((item) => (
+          {(sec.items || []).map((item) => (
             <div class="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md transition-all cursor-pointer">
               <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-lg">
                 {sec.id === 'videos' ? '▶️' : sec.id === 'catalogs' ? '📄' : sec.id === 'logo-brand-kit' ? '🎨' : '🖼️'}

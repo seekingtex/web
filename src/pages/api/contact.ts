@@ -17,8 +17,8 @@ import { checkRateLimit, DEFAULT_LIMITS } from '~/lib/rate-limit';
 import cfg from '~/config.yaml';
 import secrets from '~/data/site/secrets.yaml';
 
-const brandingData = (cfg as any)?.branding || {};
-const secretsData = (secrets as any) || {};
+const brandingData = cfg?.branding || {};
+const secretsData = secrets || {};
 
 export const prerender = false;
 
@@ -115,7 +115,7 @@ async function loadBranding(env?: Record<string, unknown>): Promise<BrandingEmai
       fromEnv.contact_submissions_pat ||
       secretsData.contact_submissions_pat ||
       brandingData.contact_submissions_pat ||
-      (brandingData as any).github_pat ||
+      (brandingData as { github_pat?: string }).github_pat ||
       '',
   };
 }
@@ -342,7 +342,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const env = cfEnv && typeof cfEnv === 'object' ? cfEnv : undefined;
     const branding = await loadBranding(env);
-    const token = branding.contact_submissions_pat || (branding as any).github_pat;
+    const token = branding.contact_submissions_pat || (branding as { github_pat?: string }).github_pat;
     const hasPat = token && typeof token === 'string' && /^(gh|github_pat_)/.test(token);
 
     const destinationEmail = (sanitize(body.email_to, 200) || branding.contact_email_to || '').trim();

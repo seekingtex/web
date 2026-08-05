@@ -21,7 +21,7 @@ const cta = page.cta ?? {};
 const crumbs = [
   { name: 'Home', href: `/${lang}/` },
   { name: 'Factory', href: `/${lang}/factory` },
-  { name: hero.title },
+  { name: hero.title || 'Process' },
 ];
 
 const metadata = {

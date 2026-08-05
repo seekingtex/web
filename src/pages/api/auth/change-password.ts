@@ -48,7 +48,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
     const repo = 'Seekingtex/web';
     const branch = 'main';
     const filePath = 'src/data/admin-auth.json';
-    const githubToken = (import.meta.env as any).GITHUB_TOKEN;
+    const githubToken = (import.meta.env as Record<string, string | undefined>).GITHUB_TOKEN;
 
     if (!githubToken) {
       return new Response(

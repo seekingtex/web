@@ -6,10 +6,8 @@ const KEY_LENGTH = 32;
 const SALT = 'Seekingtex.contact.submissions.v1';
 
 function deriveKey(): Buffer {
-  const secret =
-    (import.meta.env as any).SESSION_SECRET ||
-    (import.meta.env as any).KEYSTATIC_SECRET ||
-    randomBytes(32).toString('hex');
+  const env = import.meta.env as Record<string, string | undefined>;
+  const secret = env.SESSION_SECRET || env.KEYSTATIC_SECRET || randomBytes(32).toString('hex');
   return scryptSync(`${SALT}::${secret}`, SALT, KEY_LENGTH);
 }
 
@@ -51,10 +49,11 @@ export function isEncryptedBlob(v: unknown): v is EncryptedBlob {
   return (
     !!v &&
     typeof v === 'object' &&
-    (v as any).v === 1 &&
-    typeof (v as any).iv === 'string' &&
-    typeof (v as any).ct === 'string' &&
-    typeof (v as any).tag === 'string'
+    'v' in v &&
+    v.v === 1 &&
+    typeof (v as unknown as { iv: unknown }).iv === 'string' &&
+    typeof (v as unknown as { ct: unknown }).ct === 'string' &&
+    typeof (v as unknown as { tag: unknown }).tag === 'string'
   );
 }
 

@@ -57,9 +57,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { faqs?: FaqEntry[] };
   if (parsed?.faqs && Array.isArray(parsed.faqs)) {
-    faqs = parsed.faqs.map((item: any, i: number) => ({
+    faqs = parsed.faqs.map((item: FaqEntry, i: number) => ({
       q: item.q || defaultFaqs[i]?.q || '',
       a: item.a || defaultFaqs[i]?.a || '',
     }));

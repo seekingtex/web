@@ -4,7 +4,7 @@ export const prerender = true;
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { languages } from '~/i18n/config';
-import { getPageContent } from '~/i18n/page-content';
+import { getPageContent, type BlockElement } from '~/i18n/page-content';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -40,7 +40,7 @@ const metadata = {
   <section class="max-w-4xl mx-auto pb-24 px-6">
     <div class="space-y-12">
       {
-        sections.map((sec: any, i: number) => (
+        sections.map((sec: BlockElement, i: number) => (
           <div class="grid md:grid-cols-2 gap-8 items-center">
             {i % 2 === 0 ? (
               <>
@@ -72,7 +72,7 @@ const metadata = {
       <h2 class="font-semibold text-gray-900">{related.title || 'Related'}</h2>
       <div class="mt-3 flex flex-wrap gap-3 text-sm">
         {
-          (related.links || []).map((link: any) => (
+          (related.links || []).map((link: BlockElement) => (
             <a
               href={`/${lang}${link.url}`}
               class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"

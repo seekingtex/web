@@ -30,8 +30,10 @@ async function fetchGscData(env: Env): Promise<typeof sampleTopQueries> {
       }),
     });
     if (!res.ok) return sampleTopQueries;
-    const json: any = await res.json();
-    return (json.rows || []).map((r: any) => ({
+    const json: unknown = await res.json();
+    const rows = (json as { rows?: Array<{ keys: string[]; impressions: number; clicks: number; ctr: number; position: number }> })
+      .rows;
+    return (rows || []).map((r) => ({
       query: r.keys[0],
       page: r.keys[1],
       impressions: r.impressions,

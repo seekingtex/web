@@ -182,7 +182,7 @@ const navTextMap: Record<string, string> = {
 function t(text: string | undefined, locale: string): string {
   const key = text ? navTextMap[text] : undefined;
   if (key) {
-    const translated = (ui as any)[locale]?.[key];
+    const translated = (ui as Record<string, Record<string, string>>)[locale]?.[key];
     if (translated) return translated;
   }
   return text ?? '';

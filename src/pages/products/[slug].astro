@@ -30,7 +30,7 @@ const rec = findRecordBySlug(product.slug);
 const url = getCanonical(getPermalink(product.permalink, 'product'));
 const image = await findImage(product.image);
 const gallery = await Promise.all(
-  (product.gallery ?? []).map(async (g) => ({
+  (product.gallery ?? []).map(async (g: { url: string; alt?: string }) => ({
     raw: await findImage(g.url),
     alt: g.alt || product.title,
   }))
@@ -76,7 +76,7 @@ const tldrPoints = rec
     : [];
 const useCaseItems = rec?.ai_use_cases?.length
   ? rec.ai_use_cases
-  : product.tags?.map((t: any) => typeof t === 'string' ? t : t.title || t.slug) || [];
+  : product.tags?.map((t: string | { title?: string; slug?: string }) => typeof t === 'string' ? t : t.title || t.slug || '') || [];
 const comparisonText = rec?.ai_comparison || (product.description ? `Compared to standard fabrics, ${product.title} offers enhanced performance for demanding applications. ${product.summary || ''}` : '');
 const fallbackFaq = [
   { q: `What is the minimum order quantity for ${product.title}?`, a: 'Standard MOQ: 500—1000 m per color for woven fabrics; 200—500 kg per color for knits. Custom developments may have different MOQs. Contact our sales team for specific product MOQ details.' },

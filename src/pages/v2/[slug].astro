@@ -19,7 +19,10 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const lang = 'en';
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) =>
+  (ui as Record<string, Record<string, string>>)[lang]?.[key] ||
+  (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] ||
+  key;
 
 function notNull<T>(x: T | null | undefined): x is T {
   return x != null;

@@ -26,8 +26,22 @@ function jsonResponse(data: unknown): Response {
   });
 }
 
-async function kvGet(env: any, ns: string, key: string, fallback: string): Promise<string | null> {
-  const kv = env[ns];
+interface KvLike {
+  get(key: string): Promise<string | null>;
+  put(key: string, value: string): Promise<void>;
+  delete?(key: string): Promise<void>;
+}
+
+interface BootstrapEnv {
+  WF_LANG?: KvLike;
+  WF_NAV?: KvLike;
+  WF_GEO?: KvLike;
+  WF_PRODUCTS?: KvLike;
+  WF_CACHE?: KvLike;
+}
+
+async function kvGet(env: BootstrapEnv | undefined, ns: keyof BootstrapEnv, key: string, fallback: string): Promise<string | null> {
+  const kv = env?.[ns];
   if (!kv) return null;
   let val = await kv.get(key);
   if (!val && fallback !== key) {
@@ -36,15 +50,15 @@ async function kvGet(env: any, ns: string, key: string, fallback: string): Promi
   return val;
 }
 
-async function kvPut(kv: any, key: string, value: string): Promise<void> {
+async function kvPut(kv: KvLike, key: string, value: string): Promise<void> {
   await kv.put(key, value);
 }
 
 export const GET: APIRoute = async ({ request, locals }) => {
   const url = new URL(request.url);
-  const lang = url.searchParams.get('lang') || (locals as any)?.lang || DEFAULT_LANG;
+  const lang = url.searchParams.get('lang') || locals.lang || DEFAULT_LANG;
   const resolvedLang = isValidLang(lang) ? lang : DEFAULT_LANG;
-  const env = (locals as any)?.runtime?.env;
+  const env = locals.runtime?.env as BootstrapEnv | undefined;
 
   const [langConfigRaw, navRaw, geoRaw, productsListRaw] = await Promise.all([
     kvGet(env, 'WF_LANG', `lang:${resolvedLang}`, `lang:${DEFAULT_LANG}`),
@@ -66,7 +80,7 @@ export const GET: APIRoute = async ({ request, locals }) => {
 export const POST: APIRoute = async ({ request, locals }) => {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/api\/bootstrap/, '');
-  const env = (locals as any)?.runtime?.env;
+  const env = locals.runtime?.env as BootstrapEnv | undefined;
 
   if (path !== '/product' && path !== '/nav') {
     return respond({ error: 'Unknown endpoint' }, 404);
@@ -77,7 +91,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     return respond({ error: 'Content-Type must be application/json' }, 400);
   }
 
-  let body: any;
+  let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
@@ -87,32 +101,32 @@ export const POST: APIRoute = async ({ request, locals }) => {
   if (path === '/product') {
     const { id, lang: bodyLang, data } = body;
     if (!id || !data) return respond({ error: 'Missing id or data' }, 400);
-    const productLang = bodyLang || DEFAULT_LANG;
+    const productLang = (bodyLang as string) || DEFAULT_LANG;
     const kv = env?.WF_PRODUCTS;
     if (!kv) return respond({ error: 'WF_PRODUCTS KV not bound' }, 500);
 
-    await kvPut(kv, `product:${id}:${productLang}`, JSON.stringify(data));
+    await kvPut(kv, `product:${String(id)}:${productLang}`, JSON.stringify(data));
 
     const listRaw = await kv.get('list:global');
     const list = listRaw ? JSON.parse(listRaw) : [];
-    const idx = list.findIndex((p: any) => p.id === id);
+    const idx = list.findIndex((p: { id?: unknown }) => p.id === id);
     if (idx >= 0) list[idx] = { ...list[idx], ...data, id };
     else list.push({ id, ...data });
     await kvPut(kv, 'list:global', JSON.stringify(list));
 
-    if (env?.WF_CACHE) await env.WF_CACHE.delete(`bootstrap:${productLang}`);
+    if (env?.WF_CACHE) await env.WF_CACHE.delete?.('bootstrap:' + productLang);
     return jsonResponse({ success: true, id, lang: productLang });
   }
 
   if (path === '/nav') {
     const { lang: bodyLang, data } = body;
     if (!data) return respond({ error: 'Missing data' }, 400);
-    const navLang = bodyLang || DEFAULT_LANG;
+    const navLang = (bodyLang as string) || DEFAULT_LANG;
     const kv = env?.WF_NAV;
     if (!kv) return respond({ error: 'WF_NAV KV not bound' }, 500);
 
     await kvPut(kv, `nav:${navLang}`, JSON.stringify(data));
-    if (env?.WF_CACHE) await env.WF_CACHE.delete(`bootstrap:${navLang}`);
+    if (env?.WF_CACHE) await env.WF_CACHE.delete?.('bootstrap:' + navLang);
     return jsonResponse({ success: true, lang: navLang });
   }
 

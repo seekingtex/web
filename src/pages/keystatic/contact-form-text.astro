@@ -133,6 +133,12 @@ const defaultData = {
   ],
 };
 
+interface FieldText {
+  name: string;
+  label: Record<string, string>;
+  placeholder: Record<string, string>;
+}
+
 let data = JSON.parse(JSON.stringify(defaultData));
 let sha = '';
 let loadError: string | null = null;
@@ -141,11 +147,11 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as Record<string, unknown>;
   if (parsed && typeof parsed === 'object') {
     data = { ...defaultData, ...parsed };
     if (parsed.fields && Array.isArray(parsed.fields)) {
-      data.fields = parsed.fields.map((f: any, i: number) => ({ ...(defaultData.fields[i] || {}), ...f }));
+      data.fields = (parsed.fields as FieldText[]).map((f, i: number) => ({ ...(defaultData.fields[i] || {}), ...f }));
     }
   }
   sha = f.sha;
@@ -190,7 +196,7 @@ try {
                       rows="2"
                       class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                     >
-                      {((data as any)[key] || {})[locale] || ''}
+                      {(data[key] || {})[locale] || ''}
                     </textarea>
                   </div>
                 ))}
@@ -205,7 +211,7 @@ try {
     <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 space-y-6">
       <h2 class="text-base font-semibold">Form Fields</h2>
       {
-        (data.fields || []).map((field: any, i: number) => (
+        (data.fields || []).map((field: FieldText, i: number) => (
           <div class="border border-gray-100 dark:border-gray-700 rounded-lg p-4 space-y-3">
             <h3 class="text-sm font-semibold text-gray-500">{field.name}</h3>
             <input type="hidden" name={'field' + i + '.name'} value={field.name} />
@@ -218,7 +224,7 @@ try {
                     <input
                       type="text"
                       name={'field' + i + '.label.' + locale}
-                      value={((field.label || {}) as any)[locale] || ''}
+                      value={((field.label || {}) as Record<string, string>)[locale] || ''}
                       class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                     />
                   </div>
@@ -234,7 +240,7 @@ try {
                     <input
                       type="text"
                       name={'field' + i + '.placeholder.' + locale}
-                      value={((field.placeholder || {}) as any)[locale] || ''}
+                      value={((field.placeholder || {}) as Record<string, string>)[locale] || ''}
                       class="w-full mt-1 px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900 text-sm"
                     />
                   </div>

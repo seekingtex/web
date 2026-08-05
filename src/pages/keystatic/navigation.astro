@@ -36,7 +36,45 @@ const localeLabels: Record<string, string> = {
 };
 const locales = Object.keys(localeLabels);
 
-let data: Record<string, any> = {};
+interface NavLinkItem {
+  text?: string;
+  href?: string;
+}
+interface NavHeaderGroup {
+  text?: string;
+  links?: NavLinkItem[];
+}
+interface NavHeaderAction {
+  text?: string;
+  href?: string;
+  variant?: string;
+}
+interface NavFooterGroup {
+  title?: string;
+  links?: NavLinkItem[];
+}
+interface NavSocialLink {
+  ariaLabel?: string;
+  icon?: string;
+  href?: string;
+}
+interface NavHeader {
+  topBar?: NavLinkItem[];
+  links?: NavHeaderGroup[];
+  actions?: NavHeaderAction[];
+}
+interface NavFooter {
+  links?: NavFooterGroup[];
+  secondaryLinks?: NavLinkItem[];
+  socialLinks?: NavSocialLink[];
+  footNote?: string;
+}
+interface NavData {
+  header?: NavHeader;
+  footer?: NavFooter;
+}
+
+let data: NavData = {};
 let sha = '';
 let loadError: string | null = null;
 
@@ -53,7 +91,7 @@ try {
     }
   }
   const yamlMod = await import('js-yaml');
-  data = (yamlMod.load(f.content) as Record<string, any>) ?? {};
+  data = (yamlMod.load(f.content) as NavData) ?? {};
   sha = f.sha;
 } catch (err) {
   loadError = err instanceof Error ? err.message : 'Load failed';
@@ -135,7 +173,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-topbar-list class="space-y-2">
             {
-              (topBar ?? []).map((l: any) => (
+              (topBar ?? []).map((l: NavLinkItem) => (
                 <div data-topbar-row class="flex gap-2">
                   <input
                     type="text"
@@ -211,7 +249,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-header-groups class="space-y-3">
             {
-              (header.links ?? []).map((g: any) => (
+              (header.links ?? []).map((g: NavHeaderGroup) => (
                 <div
                   data-header-group-row
                   class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
@@ -244,7 +282,7 @@ const footer = data?.footer ?? {};
                       </button>
                     </div>
                     <div data-header-links-list class="space-y-1.5">
-                      {(g.links ?? []).map((l: any) => (
+                      {(g.links ?? []).map((l: NavLinkItem) => (
                         <div data-header-link-row class="flex gap-1">
                           <input
                             type="text"
@@ -342,7 +380,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-header-actions-list class="space-y-2">
             {
-              (header.actions ?? []).map((a: any) => (
+              (header.actions ?? []).map((a: NavHeaderAction) => (
                 <div
                   data-header-action-row
                   class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"
@@ -448,7 +486,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-footer-groups class="space-y-3">
             {
-              (footer.links ?? []).map((g: any) => (
+              (footer.links ?? []).map((g: NavFooterGroup) => (
                 <div
                   data-footer-group-row
                   class="rounded-md border border-gray-200 dark:border-gray-700 p-3 space-y-2 bg-gray-50 dark:bg-gray-900/50"
@@ -481,7 +519,7 @@ const footer = data?.footer ?? {};
                       </button>
                     </div>
                     <div data-footer-links-list class="space-y-1.5">
-                      {(g.links ?? []).map((l: any) => (
+                      {(g.links ?? []).map((l: NavLinkItem) => (
                         <div data-footer-link-row class="flex gap-1">
                           <input
                             type="text"
@@ -594,7 +632,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-secondary-list class="space-y-2">
             {
-              (footer.secondaryLinks ?? []).map((l: any) => (
+              (footer.secondaryLinks ?? []).map((l: NavLinkItem) => (
                 <div data-secondary-row class="flex gap-2">
                   <input
                     type="text"
@@ -663,7 +701,7 @@ const footer = data?.footer ?? {};
           </div>
           <div data-social-list class="space-y-2">
             {
-              (footer.socialLinks ?? []).map((s: any) => (
+              (footer.socialLinks ?? []).map((s: NavSocialLink) => (
                 <div
                   data-social-row
                   class="rounded-md border border-gray-200 dark:border-gray-700 p-3 grid grid-cols-4 gap-2 bg-gray-50 dark:bg-gray-900/50"

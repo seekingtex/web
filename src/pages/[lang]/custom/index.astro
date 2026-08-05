@@ -126,7 +126,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Custom Lab' }];
                 <span class="text-sky-600 font-bold shrink-0">&mdash;</span>
                 <span class="text-gray-600">
                   <strong class="text-gray-900">{p.highlight}</strong>
-                  {p.text.slice((p.highlight || '').length)}
+                  {(p.text || '').slice((p.highlight || '').length)}
                 </span>
               </li>
             ))

@@ -45,9 +45,9 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
-const d = evidenceData as any;
+const d = evidenceData;
 const caseStudies: CaseStudy[] = d.case_studies ?? [];
 const certifications: Certification[] = d.certifications ?? [];
 const testResults: TestResult[] = d.test_results ?? [];

@@ -1,6 +1,6 @@
 ---
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 
 export interface Props {
   id?: string;
@@ -13,7 +13,7 @@ export interface Props {
   zoom?: number;
 }
 
-const br = branding as any;
+const br = branding;
 const {
   id = 'map',
   title,

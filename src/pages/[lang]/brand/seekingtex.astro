@@ -5,20 +5,21 @@ import Layout from '~/layouts/PageLayout.astro';
 import { BRAND } from '~/lib/seo/brand-os';
 import { languages } from '~/i18n/config';
 import { getPageContent } from '~/i18n/page-content';
+import type { BlockElement } from '~/i18n/page-content';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params;
-const page = getPageContent(lang, 'brand-seekingtex') || {};
-const hero = page.hero || {};
-const timeline = page.timeline || [];
-const philosophy = page.philosophy || {};
-const engineeringDna = page.engineeringDna || {};
-const productEcosystem = page.productEcosystem || {};
-const trustSignals = page.trustSignals || {};
-const comparison = page.comparison || {};
+const page = getPageContent(lang, 'brand-seekingtex');
+const hero = page.hero ?? {};
+const timeline = page.timeline ?? [];
+const philosophy = page.philosophy ?? {};
+const engineeringDna = page.engineeringDna ?? {};
+const productEcosystem = page.productEcosystem ?? {};
+const trustSignals = page.trustSignals ?? {};
+const comparison = page.comparison ?? {};
 const philosophyPillars = philosophy.pillars || [];
 const engineeringAreas = engineeringDna.areas || [];
 const productCategories = productEcosystem.categories || [];
@@ -129,7 +130,7 @@ const metadata = {
     </div>
     <div class="mt-12 grid md:grid-cols-4 gap-6">
       {
-        philosophyPillars.map((p: any) => (
+        philosophyPillars.map((p: { title?: string; body?: string }) => (
           <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
             <h3 class="text-lg font-bold text-gray-900">{p.title}</h3>
             <p class="mt-3 text-sm text-gray-500 leading-relaxed">{p.body}</p>
@@ -149,7 +150,7 @@ const metadata = {
         <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gray-300 md:-translate-x-px"></div>
         <div class="space-y-12">
           {
-            timeline.map((entry: any) => {
+            timeline.map((entry: { year?: string; title?: string; body?: string }) => {
               const idx = timeline.indexOf(entry);
               const isLeft = idx % 2 === 0;
               return (
@@ -166,7 +167,7 @@ const metadata = {
                     )}
                   </div>
                   <div class="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-sky-600 text-white flex items-center justify-center text-sm font-bold shadow-lg mx-auto md:mx-0">
-                    {entry.year.slice(2)}
+                    {(entry.year || '').slice(2)}
                   </div>
                   <div class="md:w-1/2">
                     {!isLeft && (
@@ -198,12 +199,12 @@ const metadata = {
     </div>
     <div class="grid md:grid-cols-2 gap-8">
       {
-        engineeringAreas.map((area: any) => (
+        engineeringAreas.map((area: BlockElement) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-8">
             <h3 class="text-xl font-bold text-gray-900">{area.title}</h3>
             <p class="mt-3 text-gray-500 leading-relaxed">{area.body}</p>
             <div class="mt-4 flex flex-wrap gap-2">
-              {(area.items || []).map((item: string) => (
+              {(area.items || []).map((item: BlockElement) => (
                 <span class="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-medium rounded-full">{item}</span>
               ))}
             </div>
@@ -220,11 +221,11 @@ const metadata = {
     </div>
     <div class="mt-16 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       {
-        productCategories.map((cat: any) => (
+        productCategories.map((cat: BlockElement) => (
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8">
             <h3 class="text-xl font-bold text-white">{cat.name}</h3>
             <div class="mt-6 space-y-4">
-              {(cat.items || []).map((item: any) => (
+              {(cat.items || []).map((item: BlockElement) => (
                 <div class="border-b border-white/10 pb-4 last:border-0 last:pb-0">
                   <span class="text-sky-300 font-semibold">{item.name}</span>
                   <p class="text-sm text-white/60 mt-1">{item.desc}</p>
@@ -249,7 +250,7 @@ const metadata = {
           <p class="mt-3 text-gray-500 leading-relaxed">{trustSignals.manufacturing?.body}</p>
           <div class="mt-6 grid grid-cols-2 gap-4">
             {
-              (trustSignals.manufacturing?.stats || []).map((s: any) => (
+              (trustSignals.manufacturing?.stats || []).map((s: BlockElement) => (
                 <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
                   <span class="block text-2xl font-bold text-sky-600">{s.value}</span>
                   <span class="text-xs text-gray-500">{s.label}</span>
@@ -263,7 +264,7 @@ const metadata = {
           <p class="mt-3 text-gray-500 leading-relaxed">{trustSignals.quality?.body}</p>
           <ul class="mt-6 space-y-3">
             {
-              (trustSignals.quality?.items || []).map((item: string) => (
+              (trustSignals.quality?.items || []).map((item: BlockElement) => (
                 <li class="flex items-start gap-3 text-sm text-gray-600">
                   <svg
                     class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"
@@ -287,7 +288,7 @@ const metadata = {
         <p class="mt-3 text-gray-500 leading-relaxed">{trustSignals.global?.body}</p>
         <div class="mt-6 flex flex-wrap justify-center gap-3">
           {
-            BRAND.regions.map((r: any) => (
+            BRAND.regions.map((r: { flag: string; name: string }) => (
               <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white rounded-full border border-gray-200 text-sm">
                 <span>{r.flag}</span>
                 <span>{r.name}</span>

@@ -31,9 +31,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { items?: TrustItem[] };
   if (parsed?.items && Array.isArray(parsed.items)) {
-    items = parsed.items.map((item: any, i: number) => ({
+    items = parsed.items.map((item: TrustItem, i: number) => ({
       label: item.label || defaultItems[i]?.label || '',
     }));
   }

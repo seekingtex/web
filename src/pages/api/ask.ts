@@ -8,6 +8,7 @@ import {
   estimateTokens,
   quotaResponseHeaders,
   DAILY_NEURON_LIMIT,
+  type QuotaEnv,
 } from '../../lib/ai-quota';
 
 export const prerender = false;
@@ -28,7 +29,7 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'question is required' }), { status: 400 });
   }
 
-  const quota = await checkNeuronQuota(env as any);
+  const quota = await checkNeuronQuota(env as QuotaEnv);
   if (!quota.allowed) {
     return new Response(JSON.stringify({ error: 'Daily AI quota exceeded', ...quota }), {
       status: 429,
@@ -45,18 +46,18 @@ export const POST: APIRoute = async ({ request }) => {
     let ragContext = '';
     if (env.AI && env.VECTORIZE) {
       const embedTokens = estimateTokens(question);
-      const embedQuota = await consumeNeurons(EMBED_MODEL, embedTokens, 0, env as any);
+      const embedQuota = await consumeNeurons(EMBED_MODEL, embedTokens, 0, env as QuotaEnv);
       if (embedQuota.allowed) {
-        const aiRes = (await (env as any).AI.run(EMBED_MODEL, { text: [question] })) as { data: Array<number[]> };
+        const aiRes = (await (env as { AI: Ai }).AI.run(EMBED_MODEL, { text: [question] })) as { data: Array<number[]> };
         const vector = aiRes.data[0];
-        const searchResults = await (env as any).VECTORIZE.query(vector, { topK: 5 });
+        const searchResults = await (env as { VECTORIZE: FnVectorize }).VECTORIZE.query(vector, { topK: 5 });
         const sources = (searchResults.matches || [])
-          .filter((m: any) => m.score > 0.25)
-          .map((m: any) => ((m.metadata as any)?.text || '').slice(0, 600));
+          .filter((m) => m.score > 0.25)
+          .map((m) => String(m.metadata?.text || '').slice(0, 600));
         if (sources.length) {
           ragContext =
             '\n\nAdditional context from knowledge base:\n' +
-            sources.map((s: any, i: number) => `[${i + 1}] ${s}`).join('\n\n');
+            sources.map((s: string, i: number) => `[${i + 1}] ${s}`).join('\n\n');
         }
       }
     }
@@ -92,7 +93,7 @@ Warning:
     const prompt = `PRODUCT CATALOG:\n${JSON.stringify(structuredContext.products, null, 2)}\n\nCATEGORY INTELLIGENCE:\n${JSON.stringify(structuredContext.productGraph, null, 2)}${ragContext}\n\nQuestion: ${question}`;
 
     const llmInputTokens = estimateTokens(systemPrompt + '\n' + prompt);
-    const llmQuota = await consumeNeurons(LLM_MODEL, llmInputTokens, 1024, env as any);
+    const llmQuota = await consumeNeurons(LLM_MODEL, llmInputTokens, 1024, env as QuotaEnv);
     if (!llmQuota.allowed) {
       return new Response(
         JSON.stringify({ error: 'Daily AI quota exceeded', remaining: llmQuota.remaining, limit: DAILY_NEURON_LIMIT }),
@@ -106,7 +107,7 @@ Warning:
       );
     }
 
-    const llmRes = (await (env as any).AI.run(LLM_MODEL, {
+    const llmRes = (await (env as { AI: Ai }).AI.run(LLM_MODEL, {
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: prompt },

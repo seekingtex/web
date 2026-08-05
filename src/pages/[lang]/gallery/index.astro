@@ -22,7 +22,7 @@ const metadata = {
   title: `${hero.title} — ${SITE.name}`,
   description: `Browse the ${SITE.name} gallery — ${hero.subtitle}`,
 };
-const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title }];
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title || 'Gallery' }];
 ---
 
 <Layout metadata={metadata} breadcrumbs={crumbs}>
@@ -41,7 +41,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.title }];
           <p class="mt-1 text-sm text-muted">{album.desc}</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {album.images.map((src) => (
+          {(album.images || []).map((src) => (
             <div class="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]">
               <img
                 src={src}

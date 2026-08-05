@@ -10,7 +10,10 @@ import { defaultLang, ui } from '~/i18n/config';
 
 const lang = Astro.locals.lang;
 
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) =>
+  (ui as Record<string, Record<string, string>>)[lang]?.[key] ||
+  (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] ||
+  key;
 
 const metadata = {
   title: `FAQ — ${SITE.name}`,

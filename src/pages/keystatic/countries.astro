@@ -23,7 +23,13 @@ const localeLabels: Record<string, string> = {
   pt: 'Português',
 };
 
-let countries: any[] = [];
+interface Country {
+  value: string;
+  label: Record<string, string>;
+  tel: string;
+}
+
+let countries: Country[] = [];
 let sha = '';
 let loadError: string | null = null;
 
@@ -31,7 +37,7 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { countries?: Country[] };
   if (parsed?.countries && Array.isArray(parsed.countries)) {
     countries = parsed.countries;
   }

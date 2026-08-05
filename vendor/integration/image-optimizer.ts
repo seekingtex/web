@@ -31,10 +31,11 @@ export default function imageOptimizer(): AstroIntegration {
         try {
           const output = execSync(`node "${scriptPath}" "${outDir}"`, { encoding: 'utf-8', timeout: 60000 });
           console.log(output.trim());
-        } catch (err: any) {
-          console.error(`[image-optimizer] Failed: ${err.message}`);
-          if (err.stdout) console.log(err.stdout);
-          if (err.stderr) console.error(err.stderr);
+        } catch (err) {
+          const e = err as { message?: string; stdout?: string; stderr?: string };
+          console.error(`[image-optimizer] Failed: ${e.message}`);
+          if (e.stdout) console.log(e.stdout);
+          if (e.stderr) console.error(e.stderr);
         }
       },
     },

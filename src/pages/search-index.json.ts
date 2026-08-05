@@ -19,11 +19,11 @@ function excerpt(s: string, n = 140): string {
   return s.slice(0, n - 1).trim() + '...';
 }
 
-function plainText(value: any): string {
+function plainText(value: unknown): string {
   if (value == null) return '';
   if (typeof value === 'string') return value;
   if (Array.isArray(value)) return value.map(plainText).join(' ');
-  if (typeof value === 'object') return Object.values(value).map(plainText).join(' ');
+  if (typeof value === 'object') return Object.values(value as Record<string, unknown>).map(plainText).join(' ');
   return String(value);
 }
 
@@ -219,20 +219,20 @@ const guides: { slug: string; title: string; excerpt: string; tags: string[] }[]
 ];
 
 export const GET: APIRoute = async () => {
-  const items: any[] = [];
+  const items: Array<Record<string, unknown>> = [];
 
   try {
     const posts = await getCollection('post');
     for (const post of posts) {
       if (post.data.draft) continue;
       const body = post.body || '';
-      const fm: any = post.data;
+      const fm: Record<string, unknown> = post.data as Record<string, unknown>;
       items.push({
         title: fm.title || 'Untitled',
         url: `${SITE}/news/${post.id.replace(/\.(md|mdx)$/i, '')}`,
-        excerpt: excerpt(fm.excerpt || fm.summary || fm.description || stripHtml(body)),
+        excerpt: excerpt(String(fm.excerpt || fm.summary || fm.description || stripHtml(body))),
         type: 'article',
-        tags: fm.tags || [],
+        tags: (fm.tags as string[]) || [],
       });
     }
   } catch {
@@ -244,17 +244,17 @@ export const GET: APIRoute = async () => {
     for (const product of products) {
       if (product.data.draft) continue;
       const body = product.body || '';
-      const fm: any = product.data;
-      const price = fm.price || {};
+      const fm: Record<string, unknown> = product.data as Record<string, unknown>;
+      const price = (fm.price as Record<string, unknown>) || {};
       items.push({
         title: fm.title || 'Untitled',
         url: `${SITE}/products/${product.id.replace(/\.(md|mdx)$/i, '')}`,
-        excerpt: excerpt(fm.excerpt || fm.summary || fm.description || stripHtml(body)),
+        excerpt: excerpt(String(fm.excerpt || fm.summary || fm.description || stripHtml(body))),
         type: 'product',
         image: fm.image || '',
         price: price.amount || '',
         currency: price.currency || 'USD',
-        tags: fm.tags || [fm.category].filter(Boolean),
+        tags: (fm.tags as string[]) || [(fm.category as string)].filter(Boolean),
       });
     }
   } catch {
@@ -265,20 +265,20 @@ export const GET: APIRoute = async () => {
   for (const slug of pageSlugs) {
     const modulePath = `/src/data/pages/${slug}.yaml`;
     const raw = pageRawModules[modulePath];
-    let data: any = {};
+    let data: Record<string, unknown> = {};
     if (raw) {
       try {
-        data = yaml.load(raw) || {};
+        data = (yaml.load(raw) as Record<string, unknown>) || {};
       } catch {
         /* noop */
       }
     }
     const heroKey = slug === 'home' || slug === 'about' ? 'hero' : 'hero_text';
-    const hero = data[heroKey] || {};
+    const hero = (data[heroKey] as Record<string, unknown>) || {};
     const sectionTitles: string[] = [];
     for (const [k, v] of Object.entries(data)) {
       if (k === heroKey) continue;
-      const t = (v as any)?.title;
+      const t = (v as Record<string, unknown>)?.title;
       if (typeof t === 'string') sectionTitles.push(t);
     }
     const url = slug === 'home' ? `${SITE}/` : `${SITE}/${slug}`;
@@ -287,8 +287,7 @@ export const GET: APIRoute = async () => {
     items.push({
       title,
       url,
-      excerpt: excerpt(plainText(hero?.subtitle || hero?.content || sectionTitles.join(' '))),
-      type: 'page',
+      excerpt: excerpt(plainText(hero?.subtitle || hero?.content || sectionTitles.join(' '))),      type: 'page',
       tags: [slug, ...sectionTitles].slice(0, 6),
     });
   }

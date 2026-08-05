@@ -9,17 +9,16 @@ let _sessionSecret: string | null = null;
 
 function getSecret(): string {
   if (_sessionSecret) return _sessionSecret;
-  const s =
-    (import.meta.env as any).SESSION_SECRET ||
-    (import.meta.env as any).KEYSTATIC_SECRET ||
-    randomBytes(32).toString('hex');
+  const env = import.meta.env as Record<string, string | undefined>;
+  const s = env.SESSION_SECRET || env.KEYSTATIC_SECRET || randomBytes(32).toString('hex');
   _sessionSecret = s;
   return s;
 }
 
 function getCredentials() {
-  const envUser = (import.meta.env as any).ADMIN_USERNAME;
-  const envPass = (import.meta.env as any).ADMIN_PASSWORD;
+  const env = import.meta.env as Record<string, string | undefined>;
+  const envUser = env.ADMIN_USERNAME;
+  const envPass = env.ADMIN_PASSWORD;
 
   if (envUser && envPass) {
     return { username: envUser, password: envPass };
@@ -45,8 +44,8 @@ function getCredentials() {
 export function verifyCredentials(inputUsername: string, inputPassword: string): boolean {
   const creds = getCredentials();
   if (inputUsername !== creds.username) return false;
-  if ('passwordHash' in creds) {
-    return verifyHash(inputPassword, (creds as any).passwordHash);
+  if ('passwordHash' in creds && creds.passwordHash) {
+    return verifyHash(inputPassword, creds.passwordHash);
   }
   return inputPassword === (creds as { password: string }).password;
 }

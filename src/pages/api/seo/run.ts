@@ -5,13 +5,13 @@ import { runAllRules } from '~/lib/seo/rule-engine';
 import { generateTaskList } from '~/lib/seo/task-list';
 import { generateGeoBlocks } from '~/lib/seo/geo-generator';
 import { exportTasksMarkdown, exportTasksCsv } from '~/lib/seo/task-exporter';
-import { saveTasksToKv, saveGeoToKv } from '~/lib/seo/kv-store';
+import { saveTasksToKv, saveGeoToKv, type SeoKvEnv } from '~/lib/seo/kv-store';
 
 export const prerender = false;
 
 export const GET: APIRoute = async ({ url, locals }) => {
   const format = url.searchParams.get('format') || 'json';
-  const env = (locals as any).runtime?.env || {};
+    const env = (locals.runtime?.env as SeoKvEnv) || {};
 
   const rules = runAllRules(sampleTopQueries, sampleLowCtrPages, contentV2Records);
   const tasks = generateTaskList(sampleTopQueries, sampleLowCtrPages, contentV2Records);
@@ -65,7 +65,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
     const body = await request.json();
     const gscData = body.queries || sampleTopQueries;
     const pageData = body.pages || sampleLowCtrPages;
-    const env = (locals as any).runtime?.env || {};
+  const env = (locals.runtime?.env as SeoKvEnv) || {};
 
     const rules = runAllRules(gscData, pageData, contentV2Records);
     const tasks = generateTaskList(gscData, pageData, contentV2Records);

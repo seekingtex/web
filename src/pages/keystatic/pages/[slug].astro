@@ -34,6 +34,8 @@ if (!token) return Astro.redirect('/keystatic/github-token');
 const slug = Astro.params.slug;
 let page: PageSpec | undefined = slug ? PAGE_BY_SLUG[slug] : undefined;
 
+const sectionDataOf = (key: string) => (data?.[key] ?? {}) as Record<string, never>;
+
 // If not found in local schemas, try fetching from API
 if (!page && slug) {
   try {
@@ -43,8 +45,8 @@ if (!page && slug) {
     });
     if (res.ok) {
       const data2 = await res.json();
-      const pages = (data2.pages || []) as PageSpec[];
-      page = pages.find((p: any) => p.slug === slug && p.defined);
+      const pages = (data2.pages || []) as Array<PageSpec & { defined?: boolean }>;
+      page = pages.find((p) => p.slug === slug && p.defined);
     }
   } catch {
     // noop
@@ -52,7 +54,7 @@ if (!page && slug) {
 }
 if (!page) return Astro.redirect('/keystatic/pages');
 
-let data: Record<string, any> = {};
+let data: Record<string, unknown> = {};
 let sha = '';
 let loadError: string | null = null;
 
@@ -60,7 +62,7 @@ try {
   const client = new GitHubClient(token);
   const file = await client.readFile(page.file);
   const yamlMod = await import('js-yaml');
-  data = (yamlMod.load(file.content) as Record<string, any>) ?? {};
+  data = (yamlMod.load(file.content) as Record<string, unknown>) ?? {};
   sha = file.sha;
 } catch (err) {
   loadError = err instanceof Error ? err.message : 'Failed to read';
@@ -93,7 +95,7 @@ try {
   <form id="page-form" class="space-y-6 pb-32" data-file={page.file} data-sha={sha}>
     {
       page.sections.map((section) => {
-        const sectionData = data?.[section.key] ?? {};
+        const sectionData = sectionDataOf(section.key);
         const prefix = `s_${section.key}`;
         return (
           <details
@@ -450,7 +452,7 @@ try {
           for (const name of fieldNames) {
             const lbl = d[`fieldLabel__${name}`];
             if (lbl) {
-              const def /** @type {Record<string, any>} */ = { name: name, label: lbl, row: rowOf(name) };
+              const def /** @type {Record<string, unknown>} */ = { name: name, label: lbl, row: rowOf(name) };
               if (name === 'message') {
                 def.type = 'textarea';
                 def['rows'] = 6;

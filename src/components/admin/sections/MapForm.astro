@@ -1,7 +1,15 @@
 ---
 export interface Props {
   prefix: string;
-  data: Record<string, any>;
+  data: {
+    title?: string;
+    subtitle?: string;
+    address?: string;
+    latitude?: string;
+    longitude?: string;
+    zoom?: number;
+    embedUrl?: string;
+  };
 }
 
 const { prefix, data } = Astro.props;

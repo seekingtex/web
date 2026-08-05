@@ -16,7 +16,7 @@ if (!activeCategory) {
   return Astro.redirect('/' + lang + '/404');
 }
 
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
 const allProducts = await getProducts();
 const filteredProducts = allProducts.filter((p) => p.category?.toLowerCase() === activeCategory);

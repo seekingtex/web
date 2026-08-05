@@ -16,7 +16,7 @@ const page = getPageContent(lang, 'randdcenter');
 
 const { hero, intro, capabilities, rd_numbers, rd_services, labs_section } = page;
 
-const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.tagline }];
+const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: hero.tagline || 'R&D Center' }];
 
 const metadata = {
   title: `R&D Center — ${SITE.name}`,
@@ -43,11 +43,11 @@ const metadata = {
     </div>
     <div class="grid md:grid-cols-2 gap-6">
       {
-        capabilities.groups.map((cap) => (
+        (capabilities.groups || []).map((cap) => (
           <div class="p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950">
             <h3 class="text-lg font-bold mb-3">{cap.title}</h3>
             <ul class="space-y-2">
-              {cap.items.map((item) => (
+              {(cap.items || []).map((item) => (
                 <li class="flex items-start gap-2 text-sm text-muted">
                   <span class="mt-1 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                   <span>{item}</span>
@@ -67,7 +67,7 @@ const metadata = {
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       {
-        rd_numbers.stats.map((stat) => (
+        (rd_numbers.stats || []).map((stat) => (
           <div class="p-6 rounded-xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-center">
             <span class="block text-3xl font-bold text-primary">{stat.value}</span>
             <span class="text-sm text-muted mt-1">{stat.label}</span>
@@ -85,7 +85,7 @@ const metadata = {
       </div>
       <div class="grid md:grid-cols-3 gap-6 text-sm">
         {
-          rd_services.services.map((svc) => (
+          (rd_services.services || []).map((svc) => (
             <div class="p-5 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800">
               <h3 class="font-bold mb-2">{svc.title}</h3>
               <p class="text-muted">{svc.desc}</p>
@@ -111,7 +111,7 @@ const metadata = {
     </div>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {
-        labs_section.labs.map((lab) => (
+        (labs_section.labs || []).map((lab) => (
           <a
             href={`/${lang}${lab.href}`}
             class="block rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 overflow-hidden shadow-sm hover:shadow-md transition-shadow hover:border-primary/50 group"

@@ -25,7 +25,7 @@ const certifications = page.certifications || [];
 const certificationsSection = page.certifications_section || {};
 const cta = page.cta || {};
 
-const t = (s) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
+const t = (s: string | undefined) => (typeof s === 'string' ? s.replace(/\{SITE\}/g, SITE.name) : s);
 
 const metadata = {
   title: `About ${SITE.name} 鈥?Brand & Manufacturer`,

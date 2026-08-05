@@ -16,7 +16,7 @@ import {
   CATEGORY_SLUG_TO_URL,
 } from '~/utils/products';
 import { PRODUCT_LIST, getCanonical, getPermalink } from '~/utils/permalinks';
-import type { MetaData } from '~/types';
+import type { MetaData, ProductCategory } from '~/types';
 import JsonLd from '~/components/common/JsonLd.astro';
 import { languages, defaultLang, ui } from '~/i18n/config';
 
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 }
 
 const { lang } = Astro.params;
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
 const products = await getProducts();
 const categories = await getProductCategories();
@@ -42,7 +42,7 @@ const activeCategory = [
 ].includes(rawCategory)
   ? rawCategory
   : null;
-const filteredProducts = activeCategory ? products.filter((p) => p.category === (activeCategory as any)) : products;
+const filteredProducts = activeCategory ? products.filter((p) => p.category === (activeCategory as ProductCategory)) : products;
 const totalCount = products.length;
 const hidden = !isProductsEnabled() || !isProductsListEnabled();
 

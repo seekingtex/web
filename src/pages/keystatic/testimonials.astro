@@ -46,9 +46,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { testimonials?: TestimonialEntry[] };
   if (parsed?.testimonials && Array.isArray(parsed.testimonials)) {
-    testimonials = parsed.testimonials.map((item: any, i: number) => ({
+    testimonials = parsed.testimonials.map((item: TestimonialEntry, i: number) => ({
       name: item.name || defaultTestimonials[i]?.name || '',
       quote: item.quote || defaultTestimonials[i]?.quote || '',
       rating: typeof item.rating === 'number' ? item.rating : defaultTestimonials[i]?.rating || 5,

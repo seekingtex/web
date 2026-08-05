@@ -1,7 +1,7 @@
 import { verifySessionToken } from './auth';
 
 function getGeoToken(): string {
-  return (import.meta.env as any).GEO_API_TOKEN || '';
+  return (import.meta.env as Record<string, string | undefined>).GEO_API_TOKEN || '';
 }
 
 export function authorizeGeoApi(request: Request): { ok: true } | { ok: false; status: number; error: string } {

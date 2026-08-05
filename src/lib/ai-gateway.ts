@@ -31,7 +31,13 @@ const MODELS: Record<AiMode, string> = {
   quality: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
 };
 
-export async function routeToLLM(req: GatewayRequest, env: { AI: any } & QuotaEnv): Promise<GatewayResponse> {
+export interface LlmEnv {
+  AI: {
+    run(model: string, input: Record<string, unknown>): Promise<{ response: string }>;
+  };
+}
+
+export async function routeToLLM(req: GatewayRequest, env: LlmEnv & QuotaEnv): Promise<GatewayResponse> {
   const mode = req.mode || 'fast';
   const system = req.system || 'You are a helpful website assistant.';
   const maxTokens = req.maxTokens || 1024;

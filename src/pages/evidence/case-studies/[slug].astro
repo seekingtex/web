@@ -16,16 +16,17 @@ interface CaseStudy {
   result: string;
   image: string;
   tags: string[];
+  fullArticle?: boolean;
   outcome_metrics: { label: string; value: string }[];
 }
 
 export function getStaticPaths() {
-  const d = evidenceData as any;
+  const d = evidenceData;
   const studies: CaseStudy[] = d.case_studies ?? [];
-  return studies.filter((cs) => !(cs as any).fullArticle).map((cs) => ({ params: { slug: cs.id } }));
+  return studies.filter((cs) => !cs.fullArticle).map((cs) => ({ params: { slug: cs.id } }));
 }
 
-const d = evidenceData as any;
+const d = evidenceData;
 const allCaseStudies: CaseStudy[] = d.case_studies ?? [];
 
 const { slug } = Astro.params;

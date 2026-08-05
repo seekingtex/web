@@ -78,7 +78,7 @@ const metadata = {
                 image: '/images/seekingtex/tech/tech-eco-friendly.webp',
               },
             ]
-        ).map((sec: any, i: number) => {
+        ).map((sec, i: number) => {
           const isReversed = i % 2 === 1;
           return (
             <div class="grid md:grid-cols-2 gap-8 items-center">
@@ -121,7 +121,7 @@ const metadata = {
                 { text: 'Guides', url: '/guides' },
                 { text: 'Products', url: '/products' },
               ]
-          ).map((link: any) => (
+          ).map((link) => (
             <a
               href={link.url}
               class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"

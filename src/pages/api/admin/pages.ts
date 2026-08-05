@@ -67,17 +67,26 @@ async function getFileSha(client: import('~/lib/github').GitHubClient, path: str
   }
 }
 
+interface PageDef {
+  slug?: string;
+  label?: string;
+  path?: string;
+  permalink?: string;
+  file?: string;
+  sections?: unknown[];
+}
+
 /** Load page definitions from src/data/site/pages.yaml on GitHub */
-async function loadPageDefs(client: import('~/lib/github').GitHubClient): Promise<any[]> {
+async function loadPageDefs(client: import('~/lib/github').GitHubClient): Promise<PageDef[]> {
   const content = await tryRead(client, 'src/data/site/pages.yaml');
   if (!content) return [];
   const yamlMod = await import('js-yaml');
   const parsed = yamlMod.load(content);
-  return Array.isArray(parsed) ? parsed : [];
+  return Array.isArray(parsed) ? (parsed as PageDef[]) : [];
 }
 
 /** Save page definitions to src/data/site/pages.yaml */
-async function savePageDefs(client: import('~/lib/github').GitHubClient, defs: any[], message: string): Promise<void> {
+async function savePageDefs(client: import('~/lib/github').GitHubClient, defs: PageDef[], message: string): Promise<void> {
   const yamlMod = await import('js-yaml');
   const content = yamlMod.dump(defs, { lineWidth: 120, noRefs: true, sortKeys: false, quotingType: "'" });
   const sha = await getFileSha(client, 'src/data/site/pages.yaml');
@@ -97,7 +106,7 @@ export const GET: APIRoute = async ({ cookies }) => {
   // 1. Load known page definitions from pages.yaml
   let knownDefs = await loadPageDefs(client);
   if (!Array.isArray(knownDefs)) knownDefs = [];
-  const knownSlugs = new Set(knownDefs.map((d: any) => d.slug));
+  const knownSlugs = new Set(knownDefs.map((d: PageDef) => d.slug));
 
   // 2. Discover YAML files in src/data/pages/ (top level only)
   const discovered: Array<{ name: string; slug: string; defined: boolean }> = [];
@@ -115,7 +124,7 @@ export const GET: APIRoute = async ({ cookies }) => {
   }
 
   // 3. Build response: known definitions + discovered pages
-  const pages = knownDefs.map((d: any) => ({
+  const pages = knownDefs.map((d: PageDef) => ({
     slug: d.slug,
     label: d.label || d.slug,
     path: d.path || '/',
@@ -191,19 +200,19 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   try {
     // 2. Load and update page definitions
     const defs = await loadPageDefs(client);
-    const existingIdx = defs.findIndex((d: any) => d.slug === slug);
-    const newDef: any = { slug, label, path, permalink, file: existingFile, sections };
+    const existingIdx = defs.findIndex((d: PageDef) => d.slug === slug);
+    const newDef: PageDef = { slug, label, path, permalink, file: existingFile, sections };
     if (existingIdx >= 0) {
       defs[existingIdx] = newDef;
     } else {
       defs.push(newDef);
     }
-    defs.sort((a: any, b: any) => a.slug.localeCompare(b.slug));
+    defs.sort((a: PageDef, b: PageDef) => (a.slug || '').localeCompare(b.slug || ''));
     await savePageDefs(client, defs, `feat: add page definition for "${slug}"`);
 
     // 3. Create content YAML file if it doesn't exist
     if (!existingContent) {
-      const defaultContent: Record<string, any> = {};
+      const defaultContent: Record<string, unknown> = {};
       for (const sec of sections) {
         defaultContent[sec.key] = emptySectionTemplate(sec.type);
       }

@@ -28,7 +28,7 @@ const values = page.steps2_values ?? {};
 const milestones = page.steps2_milestones ?? {};
 const locations = page.features2_locations ?? {};
 
-const about = (aboutData as any) || {};
+const about = aboutData || {};
 const origin = about.origin || {};
 const philosophy = about.philosophy || {};
 const design = about.design || {};
@@ -84,7 +84,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'About' }];
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {
-          (philosophy.cards || []).map((card: any) => (
+          (philosophy.cards || []).map((card: { emoji?: string; title?: string; description?: string }) => (
             <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
               <div class="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-2xl">
                 {card.emoji || ''}
@@ -123,7 +123,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'About' }];
         </div>
         <div class="mt-8 grid grid-cols-3 gap-4">
           {
-            (design.stats || []).map((s: any) => (
+            (design.stats || []).map((s: { value?: string; label?: string }) => (
               <div class="text-center p-4 bg-gray-50 dark:bg-slate-800 rounded-xl">
                 <div class="text-2xl font-bold text-sky-600">{s.value || ''}</div>
                 <div class="text-xs text-gray-500 dark:text-slate-400 mt-1" set:html={s.label || ''} />
@@ -143,12 +143,17 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'About' }];
   <Features3
     title={wwb.title}
     subtitle={wwb.subtitle}
-    columns={wwb.columns}
+    columns={(wwb.columns as number) ?? 2}
     isBeforeContent={wwb.isBeforeContent}
     items={wwb.items}
   />
 
-  <Features3 columns={more.columns} isAfterContent={more.isAfterContent} items={more.items} image={more.image} />
+  <Features3
+    columns={(more.columns as number) ?? 3}
+    isAfterContent={more.isAfterContent}
+    items={more.items}
+    image={more.image}
+  />
 
   <Steps2 title={values.title} subtitle={values.subtitle} items={values.items} />
 
@@ -159,5 +164,10 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'About' }];
     items={milestones.items}
   />
 
-  <Features2 title={locations.title} tagline={locations.tagline} columns={locations.columns} items={locations.items} />
+  <Features2
+    title={locations.title}
+    tagline={locations.tagline}
+    columns={(locations.columns as number) ?? 3}
+    items={locations.items}
+  />
 </Layout>

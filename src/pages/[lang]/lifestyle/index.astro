@@ -20,7 +20,7 @@ const community = page.community_section ?? {};
 const ctaSection = page.cta_section ?? {};
 
 const metadata = {
-  title: `${hero.title.replace(/<br\s*\/?>/gi, ' ')} — ${SITE.name}`,
+  title: `${(hero.title || '').replace(/<br\s*\/?>/gi, ' ')} — ${SITE.name}`,
   description: `${SITE.name} lifestyle — ${hero.subtitle}`,
 };
 const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Lifestyle' }];

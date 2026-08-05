@@ -16,12 +16,14 @@ export interface Props {
   subtitle?: string;
 }
 
-const yamlBadges: Badge[] = ((trustData as any)?.badges || []).map((b: any) => ({
-  icon: b.icon || '\u2B50',
-  title: b.title || '',
-  desc: b.desc || '',
-  variant: b.variant || 'standard',
-}));
+const yamlBadges: Badge[] = (trustData?.badges || []).map(
+  (b: { icon?: string; title?: string; desc?: string; variant?: string }) => ({
+    icon: b.icon || '\u2B50',
+    title: b.title || '',
+    desc: b.desc || '',
+    variant: b.variant || 'standard',
+  })
+);
 
 const defaultBadges: Badge[] =
   yamlBadges.length > 0

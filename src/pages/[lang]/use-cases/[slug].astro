@@ -24,7 +24,7 @@ export function getStaticPaths() {
 }
 
 const lang = getLangFromUrl(Astro.url);
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 const { slug } = Astro.params;
 const node = nodes.find((n) => (n.slug && (n.slug[lang] || n.id)) === slug);
 const page = node ? useCaseFromNode(node, lang) : null;

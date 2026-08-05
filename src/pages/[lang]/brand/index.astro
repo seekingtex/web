@@ -27,7 +27,7 @@ const coreProducts = products.filter((p) =>
 const socialPacks = getAllSocialPacks().slice(0, 3);
 const regions = BRAND.regions;
 
-const f = (s) => {
+const f = (s: string | undefined) => {
   if (typeof s !== 'string') return s;
   return s.replace(/\{BRAND\}/g, BRAND.name).replace(/\{count\}/g, String(regions.length));
 };

@@ -11,7 +11,8 @@ declare module '@fontsource/*';
 
 // Astro virtual module injected by pageContentPlugin — all YAML page data
 declare module 'astro:page-content' {
-  const content: Record<string, any>;
+  import type { PageContent } from './i18n/page-content';
+  const content: Record<string, PageContent>;
   export default content;
 }
 

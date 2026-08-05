@@ -55,9 +55,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { points?: PointEntry[] };
   if (parsed?.points && Array.isArray(parsed.points)) {
-    points = parsed.points.map((p: any, i: number) => ({
+    points = parsed.points.map((p: PointEntry, i: number) => ({
       id: p.id || defaultPoints[i]?.id || '',
       metric: p.metric || defaultPoints[i]?.metric || '',
       label: p.label || defaultPoints[i]?.label || '',

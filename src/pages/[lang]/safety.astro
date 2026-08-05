@@ -5,7 +5,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
 import { products } from '~/data/products';
 import { languages } from '~/i18n/config';
-import { getPageContent } from '~/i18n/page-content';
+import { getPageContent, type BlockElement } from '~/i18n/page-content';
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
@@ -42,7 +42,7 @@ const safetyProducts = products.filter((p) => p.id === 'life-vest-classic' || p.
   <section class="max-w-4xl mx-auto pb-24 px-6">
     <div class="grid md:grid-cols-3 gap-8">
       {
-        certifications.map((cert: any) => (
+        certifications.map((cert: BlockElement) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-6">
             <h2 class="text-lg font-semibold text-gray-900">{cert.title}</h2>
             <p class="mt-2 text-sm text-gray-600">{cert.description}</p>
@@ -76,7 +76,7 @@ const safetyProducts = products.filter((p) => p.id === 'life-vest-classic' || p.
       <h2 class="font-semibold text-gray-900">{related.title || 'Related'}</h2>
       <div class="mt-3 flex flex-wrap gap-3 text-sm">
         {
-          (related.links || []).map((link: any) => (
+          (related.links || []).map((link: BlockElement) => (
             <a
               href={`/${lang}${link.url}`}
               class="px-3 py-1.5 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-sky-300"

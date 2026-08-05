@@ -53,13 +53,13 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as Record<string, unknown>;
   if (parsed) {
     tagline = typeof parsed.tagline === 'string' ? parsed.tagline : tagline;
     title = typeof parsed.title === 'string' ? parsed.title : title;
     subtitle = typeof parsed.subtitle === 'string' ? parsed.subtitle : subtitle;
     if (parsed.cards && Array.isArray(parsed.cards)) {
-      cards = parsed.cards.map((item: any, i: number) => ({
+      cards = parsed.cards.map((item: CardEntry, i: number) => ({
         href: item.href || defaultCards[i]?.href || '',
         image: item.image || defaultCards[i]?.image || '',
         title: item.title || defaultCards[i]?.title || '',

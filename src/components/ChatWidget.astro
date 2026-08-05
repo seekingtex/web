@@ -1,11 +1,14 @@
 ---
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 import { getLangFromUrl } from '~/i18n/utils';
 import { defaultLang, ui } from '~/i18n/config';
 
 const lang = getLangFromUrl(Astro.url);
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) =>
+  (ui as Record<string, Record<string, string>>)[lang]?.[key] ||
+  (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] ||
+  key;
 
 const siteName = (branding?.site_name ?? 'Seekingtex').toString();
 const phoneRaw = (branding?.whatsapp_number || '').toString().replace(/[^\d+]/g, '');

@@ -43,7 +43,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Trust' }];
   <Features3
     title={certs.title}
     subtitle={certs.subtitle}
-    columns={certs.columns}
+    columns={(certs.columns as number) ?? 3}
     isBeforeContent={certs.isBeforeContent}
     items={certs.items}
   />
@@ -57,7 +57,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Trust' }];
 
   <Steps2 title={steps.title} subtitle={steps.subtitle} items={steps.items} />
 
-  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={faqs.columns} items={faqs.items} />
+  <FAQs title={faqs.title} subtitle={faqs.subtitle} columns={(faqs.columns as number) ?? 2} items={faqs.items} />
 
   <CallToAction title={cta.title} subtitle={cta.subtitle} actions={cta.actions} />
 </Layout>

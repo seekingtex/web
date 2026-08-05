@@ -37,9 +37,9 @@ try {
   const client = new GitHubClient(token);
   const f = await client.readFile(file);
   const yamlMod = await import('js-yaml');
-  const parsed = yamlMod.load(f.content) as Record<string, any>;
+  const parsed = yamlMod.load(f.content) as { visuals?: VisualEntry[] };
   if (parsed?.visuals && Array.isArray(parsed.visuals)) {
-    visuals = parsed.visuals.map((v: any, i: number) => ({
+    visuals = parsed.visuals.map((v: VisualEntry, i: number) => ({
       id: v.id || defaultVisuals[i]?.id || '',
       image: v.image || defaultVisuals[i]?.image || '',
     }));

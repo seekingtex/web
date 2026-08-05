@@ -7,6 +7,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getPageContent } from '~/i18n/page-content';
+import type { BlockElement } from '~/i18n/page-content';
 import { languages } from '~/i18n/config';
 
 export async function getStaticPaths() {
@@ -44,7 +45,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {
-        (featured.items || []).map((item: any) => (
+        (featured.items || []).map((item: BlockElement) => (
           <a
             href={item.href || '#'}
             class="group block p-6 rounded-2xl border border-gray-200 dark:border-slate-700 hover:shadow-lg transition-shadow"
@@ -76,11 +77,11 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Learn' }];
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {
-          (categories.columns || []).map((col: any) => (
+          ((categories.columns as BlockElement[] | undefined) || []).map((col: BlockElement) => (
             <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
               <h3 class="text-lg font-semibold text-gray-900 dark:text-slate-100 mb-4">{col.title || ''}</h3>
               <ul class="space-y-3">
-                {(col.items || []).map((item: string) => (
+                {(col.items || []).map((item: string | BlockElement) => (
                   <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-slate-400">
                     <span class="mt-1 w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
                     {item}

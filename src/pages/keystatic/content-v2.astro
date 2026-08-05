@@ -25,7 +25,24 @@ const difficultyLabels: Record<string, string> = {
   advanced: 'Advanced',
 };
 
-let records: any[] = [];
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
+interface ContentRecord {
+  slug: string;
+  category: string;
+  difficulty: string;
+  title: string;
+  type: string;
+  faq?: FaqItem[];
+  relatedGuides?: string[];
+  relatedProducts?: string[];
+  [key: string]: string | FaqItem[] | string[] | undefined;
+}
+
+let records: ContentRecord[] = [];
 let sha = '';
 let loadError: string | null = null;
 
@@ -188,7 +205,7 @@ try {
                   </button>
                 </div>
                 <div data-faq-list data-idx={i} class="space-y-2">
-                  {(r.faq || []).map((f: any, fi: number) => (
+                  {(r.faq || []).map((f: FaqItem, fi: number) => (
                     <div data-faq-row class="flex gap-2 items-start">
                       <div class="flex-1 space-y-1">
                         <input

@@ -11,7 +11,7 @@ import TrustBadges from '~/components/common/TrustBadges.astro';
 import Tldr from '~/components/common/Tldr.astro';
 import { contentV2Records } from '~/data/content-v2';
 import cfg from '~/config.yaml';
-const branding = (cfg as any)?.branding || {};
+const branding = cfg?.branding || {};
 import heroImagesData from '~/data/site/hero-images.yaml';
 import techCardsData from '~/data/site/tech-cards.yaml';
 import productVisualsData from '~/data/site/product-visuals.yaml';
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 const page = getPageContent(lang);
 
-const t = (key: string) => (ui as any)[lang]?.[key] || (ui as any)[defaultLang]?.[key] || key;
+const t = (key: string) => (ui as Record<string, Record<string, string>>)[lang]?.[key] || (ui as Record<string, Record<string, string>>)[defaultLang]?.[key] || key;
 
 const metadata = {
   title: SITE.name,
@@ -46,7 +46,7 @@ interface HeroSlide {
   label: string;
   categories: string[];
 }
-const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any) => s?.image?.trim()) || [
+const heroSlides: HeroSlide[] = (heroImagesData?.slides || []).filter((s: { image?: string }) => s?.image?.trim()) || [
   {
     image: '/images/seekingtex/categories/performance-fabrics.webp',
     label: t('home.category.sun_protection'),
@@ -70,7 +70,7 @@ const heroSlides: HeroSlide[] = (heroImagesData as any)?.slides?.filter((s: any)
 ];
 
 const defaultVisuals: Record<string, string> = {};
-const rawVisuals = ((productVisualsData as any)?.visuals || []) as Array<{ id: string; image: string }>;
+const rawVisuals = (productVisualsData?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
 const productVisuals: Record<string, string> = { ...defaultVisuals, ...yamlVisuals };
 
@@ -107,7 +107,7 @@ const defaultUseCases = [
     img: '/images/seekingtex/fabrics/performance-fabric-1.webp',
   },
 ];
-const rawCases = ((useCasesData as any)?.cases || []) as Array<{
+const rawCases = (useCasesData?.cases || []) as Array<{
   id: string;
   title: string;
   desc: string;
@@ -127,7 +127,7 @@ const useCases = rawCases.length
     }))
   : defaultUseCases;
 
-const rawPoints = ((proofPointsData as any)?.points || []) as Array<{
+const rawPoints = (proofPointsData?.points || []) as Array<{
   id: string;
   metric: string;
   label: string;
@@ -243,7 +243,7 @@ const faqCategories = [
   { id: 'sourcing', label: t('faq.tab.sourcing') || 'Sourcing Guide' },
 ];
 
-const rawTestimonials = ((testimonialsData as any)?.testimonials || []) as Array<{
+const rawTestimonials = (testimonialsData?.testimonials || []) as Array<{
   name: string;
   quote: string;
   rating: number;
@@ -273,7 +273,7 @@ const testimonialItems = rawTestimonials.length
     }))
   : defaultTestimonials;
 
-const rawLearn = (learnData as any) || {};
+const rawLearn = learnData || {};
 const learnCards = rawLearn?.cards?.length
   ? rawLearn.cards.map((card: { href: string; image: string; title: string }, i: number) => ({
       href: '/' + lang + card.href,
@@ -356,7 +356,7 @@ const activeCategories = catalogCategories
   .map((cat) => ({ ...cat, items: groupedProducts[cat.key] || [] }))
   .filter((c) => c.items.length > 0);
 
-const rawTrustBar = ((trustBarData as any)?.items || []) as Array<{ label: string }>;
+const rawTrustBar = (trustBarData?.items || []) as Array<{ label: string }>;
 const trustLabels = ['stable', 'travel', 'tested'];
 const trustBarItems = rawTrustBar.length
   ? rawTrustBar.map((item, i) => ({
@@ -615,7 +615,7 @@ const boardItems = [
       class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-x-12 gap-y-2 text-xs font-medium text-gray-500 uppercase tracking-wider"
     >
       {
-        trustBarItems.map((item: any) => (
+        trustBarItems.map((item: { label: string }) => (
           <span class="flex items-center gap-2">
             <span class="w-1.5 h-1.5 rounded-full bg-[#06b6d4]" /> {item.label}
           </span>
@@ -1463,7 +1463,7 @@ const boardItems = [
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       {
-        ((techCardsData as any)?.cards || []).map((card: any) => (
+        (techCardsData?.cards || []).map((card: { image?: string; title?: string; description?: string; badge?: string }) => (
           <div class="relative bg-white border border-gray-200 rounded-2xl p-8 text-center hover:shadow-md transition-shadow overflow-hidden">
             <div class="absolute inset-0">
               <img
@@ -1829,7 +1829,7 @@ const boardItems = [
     </div>
     <div class="mt-12 grid md:grid-cols-3 gap-8">
       {
-        testimonialItems.map((item: any) => (
+        testimonialItems.map((item: { name: string; quote: string; rating: number }) => (
           <div class="bg-white border border-gray-200 rounded-2xl p-6">
             <div class="flex text-amber-400 text-lg">{'★'.repeat(item.rating)}</div>
             <p class="mt-4 text-gray-600 text-sm italic">{item.quote}</p>
@@ -2013,7 +2013,7 @@ const boardItems = [
       </div>
       <div class="grid md:grid-cols-4 gap-6">
         {
-          learnCards.map((card: any) => (
+          learnCards.map((card: { href: string; image: string; title: string }) => (
             <a
               href={card.href}
               class="group bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"

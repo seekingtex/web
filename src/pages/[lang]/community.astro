@@ -6,7 +6,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE } from 'astrowind:config';
-import { getPageContent } from '~/i18n/page-content';
+import { getPageContent, type BlockElement } from '~/i18n/page-content';
 import { languages } from '~/i18n/config';
 
 export async function getStaticPaths() {
@@ -48,7 +48,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Community' }];
     </div>
     <div class="space-y-12">
       {
-        (stories.items || []).map((item: any) => (
+        (stories.items || []).map((item: BlockElement) => (
           <div class="flex flex-col md:flex-row gap-8 items-start bg-white dark:bg-slate-800 rounded-2xl p-8 border border-gray-200 dark:border-slate-700">
             {item.image && (
               <div class="w-full md:w-64 h-48 rounded-xl overflow-hidden flex-shrink-0 bg-gray-100 dark:bg-slate-700">
@@ -87,7 +87,7 @@ const crumbs = [{ name: 'Home', href: `/${lang}/` }, { name: 'Community' }];
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {
-          (locations.regions || []).map((region: any) => (
+          (locations.regions || []).map((region: BlockElement) => (
             <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-200 dark:border-slate-700">
               <h3 class="font-semibold text-gray-900 dark:text-slate-100 mb-2">{region.title || ''}</h3>
               <p class="text-sm text-gray-500 dark:text-slate-400 leading-relaxed">{region.description || ''}</p>
