@@ -20,7 +20,7 @@ bucket_name = "seekingtex-assets"
 
 [[kv_namespaces]]
 binding = "CONTACT_SUBMISSIONS"
-id = "contact-submissions-kv"
+id = "76c742b6484342e894b3403f35c4310a"
 
 [vars]
 NODE_VERSION = "22"

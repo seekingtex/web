@@ -15,8 +15,10 @@ const CF_API = 'https://api.cloudflare.com/client/v4';
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID || process.env.CF_ACCOUNT_ID;
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN || process.env.CF_API_TOKEN;
 
-// binding name -> namespace title used to find-or-create
-const NAMESPACES = [{ binding: 'CONTACT_SUBMISSIONS', title: 'contact-submissions-kv' }];
+// binding name -> existing namespace to reuse (id + title)
+const NAMESPACES = [
+  { binding: 'CONTACT_SUBMISSIONS', title: 'seeking', id: '76c742b6484342e894b3403f35c4310a' },
+];
 
 async function cf(method, path, body) {
   const url = `${CF_API}${path}`;
@@ -43,7 +45,7 @@ async function main() {
 
   const results = [];
   for (const ns of NAMESPACES) {
-    // 1. Find existing namespace by title
+    // 1. Prefer an existing namespace by id, then by title
     let existing = null;
     let cursor = null;
     do {
@@ -52,7 +54,7 @@ async function main() {
         `/accounts/${ACCOUNT_ID}/storage/kv/namespaces?per_page=50${cursor ? `&cursor=${encodeURIComponent(cursor)}` : ''}`
       );
       for (const item of list) {
-        if (item.title === ns.title) {
+        if (item.id === ns.id || item.title === ns.title) {
           existing = item;
           break;
         }
@@ -63,7 +65,10 @@ async function main() {
     let id;
     if (existing) {
       id = existing.id;
-      console.log(`  [ok] KV namespace "${ns.title}" already exists (id=${id})`);
+      console.log(`  [ok] KV namespace "${ns.title}" found (id=${id})`);
+    } else if (ns.id) {
+      id = ns.id;
+      console.log(`  [ok] Using configured KV namespace id=${id}`);
     } else {
       const created = await cf('POST', `/accounts/${ACCOUNT_ID}/storage/kv/namespaces`, { title: ns.title });
       id = created.id;

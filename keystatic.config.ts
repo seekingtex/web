@@ -648,9 +648,9 @@ export default config({
           description: 'Get from https://resend.com/api-keys. Or set as Cloudflare secret: CONTACT_RESEND_API_KEY',
         }),
         contact_submissions_pat: fields.text({
-          label: 'GitHub PAT for Submissions',
+          label: 'GitHub PAT for Submissions (deprecated)',
           description:
-            'Optional. Scoped GitHub token for encrypted contact form storage. Or set as Cloudflare secret: CONTACT_SUBMISSIONS_PAT',
+            'No longer used. Submissions are stored in Cloudflare KV (CONTACT_SUBMISSIONS binding) so saving a form never triggers a GitHub rebuild.',
         }),
         gmap_api_key: fields.text({
           label: 'Google Maps API Key',

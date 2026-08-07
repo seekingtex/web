@@ -113,19 +113,19 @@ The navigation editor (`src/pages/keystatic/navigation.astro`) shows a static wa
 
 ## Contact Form (encrypted submissions + email)
 
-`/contact` is **SSR** (`prerender = false`) so the math captcha cookie can be set on every request. `POST /api/contact` is a Cloudflare Pages Function that:
+`/contact` is **SSR** (`prerender = false`) so the math captcha cookie can be set on every request. `POST /api/contact` is a Cloudflare Worker route that:
 
 1. Validates the HMAC-signed captcha cookie (`src/lib/contact-captcha.ts`).
 2. Sanitises + validates 10 fields (First/Last Name, Company, Address, Zip, Country, E-mail, TEL with country code, Subject, Message).
 3. Encrypts the payload with **AES-256-GCM** (key derived from `SESSION_SECRET` env var or fallback) — `src/lib/contact-crypto.ts`.
-4. Appends the encrypted record to `src/data/contact/submissions.enc.json` via GitHub API using the **service-account Fine-grained PAT** stored in `branding.yaml` (`contact_submissions_pat`).
+4. Appends the encrypted record to the **Cloudflare KV namespace** bound as `CONTACT_SUBMISSIONS` (key `contact:submissions`). KV is the **only** write path — submissions never commit to GitHub, so a form submission never triggers a CI rebuild. The real KV namespace ID is injected at deploy time from the GitHub Actions secret `CONTACT_SUBMISSIONS_KV_ID` (see `scripts/setup-kv-infra.mjs`).
 5. Optionally sends an email via **Resend** with `Reply-To` set to the submitter — `src/pages/api/contact.ts` `sendEmailViaResend()`. Cloudflare Email Workers cannot send arbitrary outbound mail, so a transactional service is required.
 
-Admin can read submissions at `/keystatic/contact-submissions` (decryption happens in the admin's session). The submissions file is **not** read by `search-index.json.ts` (it only scans `pages/`, `post/`, `product/`).
+Admin can read submissions at `/keystatic/contact-submissions` (decryption happens in the admin's session, KV first with a read-only GitHub fallback). The submissions file is **not** read by `search-index.json.ts` (it only scans `pages/`, `post/`, `product/`).
 
-**Rate limiting + honeypot** (`src/lib/rate-limit.ts` + `src/components/widgets/Contact.astro`): `/api/contact` enforces **5 submissions per IP per hour** via an in-memory sliding window (`contact:<ip>` key). On overflow it returns HTTP 429 with `Retry-After`, `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` headers. The contact form also has a hidden `email_confirm` honeypot field (`position:absolute; left:-9999px; tabindex=-1; aria-hidden=true`); if a bot fills it, the API returns HTTP 200 with a fake UUID but skips both the GitHub write and the email — so the bot can't tell it was caught. The map is per-Worker-isolate (no Cloudflare KV / DO), so under high traffic the effective limit is `5 × isolate_count`. For single-tenant or low-traffic sites this is sufficient.
+**Rate limiting + honeypot** (`src/lib/rate-limit.ts` + `src/components/widgets/Contact.astro`): `/api/contact` enforces **5 submissions per IP per hour** via an in-memory sliding window (`contact:<ip>` key). On overflow it returns HTTP 429 with `Retry-After`, `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` headers. The contact form also has a hidden `email_confirm` honeypot field (`position:absolute; left:-9999px; tabindex=-1; aria-hidden=true`); if a bot fills it, the API returns HTTP 200 with a fake UUID but skips both the KV write and the email — so the bot can't tell it was caught. The map is per-Worker-isolate (no Cloudflare KV / DO), so under high traffic the effective limit is `5 × isolate_count`. For single-tenant or low-traffic sites this is sufficient.
 
-**Security note:** `contact_submissions_pat` and `contact_resend_api_key` live in the public GitHub repo (bundled into the Cloudflare Worker). Use a separate Fine-grained PAT scoped to a single repo with Contents R/W only, and rotate the Resend key periodically.
+**Security note:** `contact_resend_api_key` lives in the public GitHub repo (bundled into the Cloudflare Worker). Rotate the Resend key periodically. Submissions are stored encrypted in KV, so no plaintext PII sits in the repo.
 
 ## Important: Subdomain Routing Requires `output: 'server'`
 
