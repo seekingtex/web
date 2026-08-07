@@ -6,14 +6,12 @@ import { env as cfEnv } from 'cloudflare:workers';
 
 import {
   encryptJson,
-  getSubmissionsPath,
   readSubmissionsFile,
   emptySubmissionsFile,
   type SubmissionRecord,
   type EncryptedBlob,
   type SubmissionsFile,
 } from '~/lib/contact-crypto';
-import { GitHubClient } from '~/lib/github';
 import { checkRateLimit, DEFAULT_LIMITS } from '~/lib/rate-limit';
 import cfg from '~/config.yaml';
 import secrets from '~/data/site/secrets.yaml';
@@ -23,7 +21,6 @@ const secretsData = secrets || {};
 
 export const prerender = false;
 
-const SUBMISSIONS_PATH = getSubmissionsPath();
 const KV_KEY = 'contact:submissions';
 
 interface IncomingPayload {
@@ -49,8 +46,6 @@ interface BrandingEmailConfig {
   contact_resend_api_key?: string;
   contact_from_email?: string;
   contact_from_name?: string;
-  contact_submissions_pat?: string;
-  github_pat?: string;
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -103,7 +98,6 @@ async function loadBranding(env?: Record<string, unknown>): Promise<BrandingEmai
     contact_from_email: (env?.CONTACT_FROM_EMAIL as string) || undefined,
     contact_from_name: (env?.CONTACT_FROM_NAME as string) || undefined,
     contact_resend_api_key: (env?.CONTACT_RESEND_API_KEY as string) || undefined,
-    contact_submissions_pat: (env?.CONTACT_SUBMISSIONS_PAT as string) || undefined,
     gmap_api_key: (env?.GMAP_API_KEY as string) || undefined,
   };
 
@@ -121,39 +115,7 @@ async function loadBranding(env?: Record<string, unknown>): Promise<BrandingEmai
       fromEnv.contact_from_name || secretsData.contact_from_name || brandingData.contact_from_name || 'Seekingtex',
     contact_resend_api_key:
       fromEnv.contact_resend_api_key || secretsData.contact_resend_api_key || brandingData.contact_resend_api_key || '',
-    contact_submissions_pat:
-      fromEnv.contact_submissions_pat ||
-      secretsData.contact_submissions_pat ||
-      brandingData.contact_submissions_pat ||
-      (brandingData as { github_pat?: string }).github_pat ||
-      '',
   };
-}
-
-async function loadSubmissionsWith(
-  token: string
-): Promise<{ sha: string; file: { v: 1; submissions: SubmissionRecord[] } }> {
-  const client = new GitHubClient(token);
-  const f = await client.readFile(SUBMISSIONS_PATH);
-  let parsed: unknown;
-  try {
-    parsed = yaml.load(f.content) ?? {};
-  } catch {
-    parsed = {};
-  }
-  const file = readSubmissionsFile(parsed);
-  return { sha: f.sha, file };
-}
-
-async function saveSubmissionsWith(
-  token: string,
-  file: { v: 1; submissions: SubmissionRecord[] },
-  sha: string,
-  message: string
-): Promise<void> {
-  const client = new GitHubClient(token);
-  const content = yaml.dump(file, { lineWidth: 120, noRefs: true, sortKeys: false });
-  await client.updateFile(SUBMISSIONS_PATH, content, sha, message);
 }
 
 function buildEmailBody(
@@ -356,98 +318,46 @@ export const POST: APIRoute = async ({ request }) => {
     let recordId = '';
     const receivedAt = new Date().toISOString();
 
-    // Primary storage: Cloudflare KV (avoids GitHub commit -> rebuild loop)
+    // Storage: Cloudflare KV only (submissions must never trigger a GitHub commit/rebuild)
     const kv = (env as { CONTACT_SUBMISSIONS?: KVNamespace })?.CONTACT_SUBMISSIONS;
-    if (kv) {
-      try {
-        let submissionsFile: SubmissionsFile = emptySubmissionsFile();
-        const raw = await kv.get(KV_KEY);
-        if (raw) {
-          try {
-            const parsed = yaml.load(raw) ?? {};
-            submissionsFile = readSubmissionsFile(parsed);
-          } catch {
-            submissionsFile = emptySubmissionsFile();
-          }
-        }
-
-        const blob: EncryptedBlob = encryptJson(fields);
-        const record: SubmissionRecord = {
-          id: randomUUID(),
-          receivedAt,
-          ip: ip || undefined,
-          userAgent,
-          blob,
-        };
-        recordId = record.id;
-        submissionsFile.submissions.unshift(record);
-        if (submissionsFile.submissions.length > 1000) {
-          submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
-        }
-
-        const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
-        await kv.put(KV_KEY, content);
-        stored = true;
-      } catch (e) {
-        console.error('KV storage failed, falling back to GitHub:', e);
-        stored = false;
-      }
+    if (!kv) {
+      return err(
+        'Contact storage is not configured: CONTACT_SUBMISSIONS KV binding missing. Add the CONTACT_SUBMISSIONS_KV_ID secret and redeploy.',
+        500
+      );
     }
-
-    // Fallback: GitHub (for admin panel compatibility if KV unavailable)
-    if (!stored) {
-      const token = branding.contact_submissions_pat || (branding as { github_pat?: string }).github_pat;
-      const hasPat = token && typeof token === 'string' && /^(gh|github_pat_)/.test(token);
-      if (hasPat) {
-        let submissionsFile: { v: 1; submissions: SubmissionRecord[] } = emptySubmissionsFile();
-        let submissionsSha = '';
+    try {
+      let submissionsFile: SubmissionsFile = emptySubmissionsFile();
+      const raw = await kv.get(KV_KEY);
+      if (raw) {
         try {
-          const r = await loadSubmissionsWith(token);
-          submissionsFile = r.file;
-          submissionsSha = r.sha;
-        } catch (e) {
-          const status = (e as { status?: number }).status;
-          if (status !== 404) {
-            return err('Failed to read submissions storage: ' + (e instanceof Error ? e.message : 'unknown'), 500);
-          }
-        }
-
-        const blob: EncryptedBlob = encryptJson(fields);
-        const record: SubmissionRecord = {
-          id: randomUUID(),
-          receivedAt,
-          ip: ip || undefined,
-          userAgent,
-          blob,
-        };
-        recordId = record.id;
-        submissionsFile.submissions.unshift(record);
-        if (submissionsFile.submissions.length > 1000) {
-          submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
-        }
-
-        try {
-          if (submissionsSha) {
-            await saveSubmissionsWith(
-              token,
-              submissionsFile,
-              submissionsSha,
-              `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
-            );
-          } else {
-            const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
-            const client = new GitHubClient(token);
-            await client.createFile(
-              SUBMISSIONS_PATH,
-              content,
-              `Contact form: ${fields.subject || fields.firstName} (${record.id.slice(0, 8)})`
-            );
-          }
-          stored = true;
-        } catch (e) {
-          return err('Failed to save submission to GitHub: ' + (e instanceof Error ? e.message : 'unknown'), 500);
+          const parsed = yaml.load(raw) ?? {};
+          submissionsFile = readSubmissionsFile(parsed);
+        } catch {
+          submissionsFile = emptySubmissionsFile();
         }
       }
+
+      const blob: EncryptedBlob = encryptJson(fields);
+      const record: SubmissionRecord = {
+        id: randomUUID(),
+        receivedAt,
+        ip: ip || undefined,
+        userAgent,
+        blob,
+      };
+      recordId = record.id;
+      submissionsFile.submissions.unshift(record);
+      if (submissionsFile.submissions.length > 1000) {
+        submissionsFile.submissions = submissionsFile.submissions.slice(0, 1000);
+      }
+
+      const content = yaml.dump(submissionsFile, { lineWidth: 120, noRefs: true, sortKeys: false });
+      await kv.put(KV_KEY, content);
+      stored = true;
+    } catch (e) {
+      console.error('KV storage failed:', e);
+      return err('Failed to store submission: ' + (e instanceof Error ? e.message : 'unknown'), 500);
     }
 
     const emailStatus: { attempted: boolean; sent: boolean; provider?: string; error?: string } = {
@@ -476,13 +386,6 @@ export const POST: APIRoute = async ({ request }) => {
       );
       emailStatus.sent = r.ok;
       if (!r.ok) emailStatus.error = r.error;
-    }
-
-    if (!stored && !emailStatus.attempted) {
-      return err(
-        'Contact delivery is not configured: no submission storage token and no email provider are set. Set CONTACT_SUBMISSIONS_PAT or CONTACT_RESEND_API_KEY and redeploy.',
-        500
-      );
     }
 
     return ok({ id: recordId, receivedAt, stored, email: emailStatus });
