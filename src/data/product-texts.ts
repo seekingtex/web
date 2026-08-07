@@ -385,65 +385,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
         },
       ],
     },
-    'yoga-high-stretch-knit': {
-      name: 'Tissu Maille Ultra-Extensible Yoga',
-      desc: 'Maille nylon-spandex ultra-extensible avec récupération 4 directions pour les vêtements de yoga.',
-      definition:
-        'Une maille circulaire premium nylon-spandex offrant une extensibilité 4 directions exceptionnelle avec une récupération élevée pour le yoga, le pilates et les vêtements de studio.',
-      problem:
-        'Les marques de yoga ont besoin d\'un tissu qui s\'étend dans toutes les directions pendant les postures complexes.',
-      howItWorks:
-        'Des micro-filaments de nylon sont tricotés avec du spandex haute densité en construction circulaire. La teneur élevée en spandex (20-30%) offre une extensibilité 4 directions avec >95% de récupération. Poids : 180-280 GSM.',
-      audience:
-        'Marques de yoga, fabricants de vêtements de sport, entreprises de danse.',
-      ai_use_cases: ['Leggings de yoga performants', 'Vêtements de danse studio', 'Vêtements de pilates'],
-      ai_specs: {
-        weight: '180-280 GSM',
-        width: '147-152 cm (58-60")',
-        composition: 'Nylon + Spandex',
-        construction: 'Maille circulaire',
-        stretch: '4 directions, >95% récupération',
-        certification: 'OEKO-TEX Standard 100',
-      },
-      ai_comparison:
-        'Comparé aux mailles extensibles standard, ce tissu yoga offre une teneur en spandex plus élevée pour une extensibilité extrême.',
-      ai_faq: [
-        {
-          q: 'Quel pourcentage de spandex est disponible ?',
-          a: '25% standard pour le yoga. Options de 20% à 30%.',
-        },
-      ],
-    },
-    'yoga-legging-knit-fabric': {
-      name: 'Tissu Maille Legging Yoga',
-      desc: 'Maille jersey simple nylon-spandex avec extensibilité 4 directions et protection antibactérienne aux ions d\'argent.',
-      definition:
-        'Une maille jersey simple nylon-spandex légère avec extensibilité 4 directions, performance d\'évacuation de l\'humidité et protection antibactérienne aux ions d\'argent.',
-      problem:
-        'Les marques de vêtements actifs ont besoin d\'un tissu qui combine un toucher soyeux avec une performance technique.',
-      howItWorks:
-        'Des micro-filaments de nylon 6.6 (40D) sont tricotés avec du spandex en jersey simple. Un traitement antibactérien aux ions d\'argent est intégré lors de l\'extrusion des fibres. Poids : 160-220 GSM.',
-      audience:
-        'Fabricants de leggings yoga, marques de vêtements actifs, entreprises de compression.',
-      ai_use_cases: ['Leggings yoga mode-performance', 'Collants anti-odeurs', 'Vêtements de sport compressifs'],
-      ai_specs: {
-        weight: '160-220 GSM',
-        width: '147-152 cm (58-60")',
-        composition: 'Nylon 6.6 + Spandex',
-        construction: 'Jersey simple circulaire',
-        stretch: '4 directions, >90% récupération',
-        antibacterial: 'AATCC 100, >99.9% réduction',
-        certification: 'OEKO-TEX Standard 100',
-      },
-      ai_comparison:
-        'Comparé aux mailles nylon-spandex standard, ce tissu de legging intègre une protection antibactérienne permanente aux ions d\'argent.',
-      ai_faq: [
-        {
-          q: 'Le traitement antibactérien se lave-t-il ?',
-          a: 'Non. Les ions d\'argent sont intégrés dans la fibre lors de l\'extrusion, garantissant une protection permanente.',
-        },
-      ],
-    },
     'cooling-touch-fabric': {
       name: 'Tissu Toucher Frais',
       desc: 'Tissu rafraîchissant instantané avec fibres minérales pour les vêtements par temps chaud.',
@@ -530,14 +471,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Schnelltrocknendes Sportgewebe',
       desc: 'Schnelltrocknendes Nylon-Ripstop-Gewebe mit DWR und UPF-Sonnenschutz.',
     },
-    'yoga-high-stretch-knit': {
-      name: 'Yoga-Hochdehn-Strickstoff',
-      desc: 'Nylon-Spandex-Maschenware mit 4-Wege-Dehnung für Yoga-Bekleidung.',
-    },
-    'yoga-legging-knit-fabric': {
-      name: 'Yoga-Leggings-Strickstoff',
-      desc: 'Glatter Nylon-Spandex-Jersey mit 4-Wege-Dehnung und antibakteriellem Schutz.',
-    },
     'cooling-touch-fabric': {
       name: 'Kühlender Berührungsstoff',
       desc: 'Sofort kühlender Stoff mit Mineralfasern für Sommerbekleidung.',
@@ -595,14 +528,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'quick-dry-sports-woven-fabric': {
       name: 'Tecido Esportivo de Secagem Rápida',
       desc: 'Tecido nylon ripstop de secagem rápida com DWR e proteção solar UPF.',
-    },
-    'yoga-high-stretch-knit': {
-      name: 'Tecido de Malha Ultra Elástica para Yoga',
-      desc: 'Malha nylon-spandex com elasticidade 4 direções para roupas de yoga.',
-    },
-    'yoga-legging-knit-fabric': {
-      name: 'Tecido de Malha para Legging Yoga',
-      desc: 'Malha jersey nylon-spandex com elasticidade 4 direções e proteção antibacteriana.',
     },
     'cooling-touch-fabric': {
       name: 'Tecido Toque Fresco',
@@ -662,14 +587,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
       name: 'Tejido Deportivo de Secado Rápido',
       desc: 'Tejido nylon ripstop de secado rápido con DWR y protección solar UPF.',
     },
-    'yoga-high-stretch-knit': {
-      name: 'Tejido de Punto Ultra Elástico para Yoga',
-      desc: 'Punto nylon-spandex con elasticidad 4 direcciones para ropa de yoga.',
-    },
-    'yoga-legging-knit-fabric': {
-      name: 'Tejido de Punto para Leggings Yoga',
-      desc: 'Punto jersey nylon-spandex con elasticidad 4 direcciones y protección antibacteriana.',
-    },
     'cooling-touch-fabric': {
       name: 'Tejido Toque Fresco',
       desc: 'Tejido refrescante instantáneo con fibras minerales para ropa de verano.',
@@ -727,14 +644,6 @@ export const productTexts: Record<string, Record<string, ProductTexts>> = {
     'quick-dry-sports-woven-fabric': {
       name: 'Tessuto Sportivo ad Asciugatura Rapida',
       desc: 'Tessuto nylon ripstop ad asciugatura rapida con DWR e protezione solare UPF.',
-    },
-    'yoga-high-stretch-knit': {
-      name: 'Tessuto Maglia Ultra-Estensibile per Yoga',
-      desc: 'Maglia nylon-spandex con elasticità 4 direzioni per abbigliamento yoga.',
-    },
-    'yoga-legging-knit-fabric': {
-      name: 'Tessuto Maglia per Leggings Yoga',
-      desc: 'Maglia jersey nylon-spandex con elasticità 4 direzioni e protezione antibatterica.',
     },
     'cooling-touch-fabric': {
       name: 'Tessuto Tocco Fresco',

@@ -164,50 +164,6 @@ export const products: ProductRecord[] = [
     ],
   },
   {
-    id: 'sun-uv-blocking-knit',
-    name: 'UV-Blocking Knit Fabric',
-    category: 'SUN_PROTECTION',
-    region: ['EU', 'US', 'ASIA'],
-    skill: 'intermediate',
-    environment: ['outdoor', 'sportswear', 'apparel'],
-    water_condition: ['sweat', 'humidity'],
-    safety_level: 'high',
-    use_case: ['t-shirts', 'leggings', 'running apparel', 'cycling wear'],
-    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron'],
-    desc: 'Circular knit fabric with UV-blocking yarn technology providing UPF 50+ protection with 4-way stretch comfort.',
-    definition:
-      'A circular-knit fabric incorporating UV-blocking polyester yarns with mechanical stretch, delivering UPF 50+ protection and superior comfort for high-movement athletic apparel.',
-    problem:
-      'Athletic brands need a stretch-knit fabric that provides certified UV protection without sacrificing moisture management, four-way stretch, or the soft hand feel required for next-to-skin performance wear.',
-    howItWorks:
-      'UV-blocking polyester yarns with integrated ceramic masterbatch are knit in a single-jersey construction with elastane for 4-way stretch. The open knit structure allows airflow while the yarn-level UV additives provide permanent protection. Fabric weight: 150 gsm, 65-inch width.',
-    audience:
-      'Athletic apparel brands, activewear manufacturers, running and cycling clothing companies, and outdoor sport brands.',
-    ai_use_cases: ['UV-protective running and training wear', 'Cycling jerseys and shorts', 'Performance base layers'],
-    ai_specs: {
-      weight: '150 gsm',
-      width: '165 cm (65")',
-      composition: '92% Polyester / 8% Elastane',
-      construction: 'Single jersey circular knit',
-      finish: 'Moisture-wicking + UV stabilizer masterbatch',
-      upf_rating: 'UPF 50+',
-      stretch: '4-way mechanical stretch',
-      certification: 'UV STANDARD 801, OEKO-TEX Standard 100',
-    },
-    ai_comparison:
-      'Compared to woven UV-protective fabrics, this knit offers superior stretch and comfort for high-movement activities. It provides better breathability than coated UV fabrics while maintaining permanent protection that will not crack or peel.',
-    ai_faq: [
-      {
-        q: 'Does the stretch affect UV protection?',
-        a: 'No. The UV-blocking yarns maintain their protective properties at up to 30% stretch. Protection is certified in both relaxed and stretched states.',
-      },
-      {
-        q: 'What elastane percentage options are available?',
-        a: 'Standard is 8% elastane. We also offer 6% and 10% elastane options depending on desired stretch recovery.',
-      },
-    ],
-  },
-  {
     id: 'sun-protection-mesh',
     name: 'Sun Protection Mesh Fabric',
     category: 'SUN_PROTECTION',
@@ -923,50 +879,6 @@ export const products: ProductRecord[] = [
     ],
   },
   {
-    id: 'st-compression-knit',
-    name: 'Compression Stretch Knit Fabric',
-    category: 'STRETCH',
-    region: ['EU', 'US', 'ASIA'],
-    skill: 'professional',
-    environment: ['sportswear', 'medical', 'apparel'],
-    water_condition: ['sweat', 'moisture'],
-    safety_level: 'high',
-    use_case: ['compression garments', 'medical hosiery', 'recovery wear', 'sports braces'],
-    safety_rules: ['hand wash cold', 'do not bleach', 'air dry flat', 'do not wring'],
-    desc: 'Engineered circular knit fabric with graduated compression profile for medical and athletic compression applications.',
-    definition:
-      'An engineered circular knit fabric with precisely controlled stretch and compression characteristics, designed for graduated compression garments that apply controlled pressure for medical and athletic performance applications.',
-    problem:
-      'Medical and athletic brands need a fabric that delivers consistent, calibrated compression pressure across the garment with precise stretch-recovery properties that can be engineered for specific body zones.',
-    howItWorks:
-      'High-denier spandex is knit with nylon in a controlled circular knit structure. Compression levels are engineered by varying knit tension, spandex denier, and stitch density. Graduated compression is achieved by knitting different zones with different stretch characteristics. Fabric weight: 230 gsm, 38-inch width (tubular knit).',
-    audience:
-      'Compression garment manufacturers, medical hosiery companies, athletic recovery wear brands, and orthopedic support producers.',
-    ai_use_cases: ['Graduated compression sportswear', 'Medical compression hosiery', 'Post-surgery recovery garments'],
-    ai_specs: {
-      weight: '230 gsm',
-      width: '97 cm (38") tubular',
-      composition: '70% Nylon / 30% Elastane (high-denier)',
-      construction: 'Circular knit (rib or interlock)',
-      finish: 'Moisture-wicking + anti-microbial + flat-seam compatible',
-      compression: '15-30 mmHg (medical grade option available)',
-      stretch: '100% warp, 60% weft (adjustable)',
-      certification: 'OEKO-TEX Standard 100, ASTM F1868',
-    },
-    ai_comparison:
-      'Compared to standard stretch knits, this compression knit delivers medical-grade graduated compression with zonal engineering. Standard stretch fabrics are designed for comfort, while this fabric is engineered for precise pressure application.',
-    ai_faq: [
-      {
-        q: 'What compression levels are available?',
-        a: 'We offer light (8-15 mmHg), moderate (15-20 mmHg), firm (20-30 mmHg), and medical (30-40 mmHg) compression grades.',
-      },
-      {
-        q: 'Can you engineer zonal compression?',
-        a: 'Yes. Our circular knit technology allows different compression zones within the same garment by varying stitch structure and elastane content per zone.',
-      },
-    ],
-  },
-  {
     id: 'br-high-air-mesh',
     name: 'High Air Permeability Mesh Fabric',
     category: 'BREATHABLE',
@@ -1011,50 +923,6 @@ export const products: ProductRecord[] = [
       {
         q: 'Can this mesh be used as a filter media?',
         a: 'Yes. The precise and consistent hole size makes it suitable for coarse filtration and particle separation applications.',
-      },
-    ],
-  },
-  {
-    id: 'br-tricot-liner',
-    name: 'Breathable Tricot Liner Fabric',
-    category: 'BREATHABLE',
-    region: ['EU', 'US', 'ASIA'],
-    skill: 'beginner',
-    environment: ['apparel', 'sportswear', 'outdoor'],
-    water_condition: ['sweat', 'humidity'],
-    safety_level: 'low',
-    use_case: ['jacket linings', 'glove liners', 'sleeping bag liners', 'garment interlinings'],
-    safety_rules: ['machine wash warm', 'do not bleach', 'tumble dry low', 'do not iron'],
-    desc: 'Ultra-lightweight nylon tricot knit with engineered micro-channel surface for moisture vapor transport and thermal comfort.',
-    definition:
-      'An ultra-lightweight nylon tricot warp-knit fabric with engineered micro-channel surface texture that enhances moisture vapor transport and creates a thermal comfort microclimate for garment lining applications.',
-    problem:
-      'Outerwear and sleeping bag manufacturers need a lining fabric that feels comfortable against skin, transports moisture vapor away from the body, and reduces the clammy feeling in waterproof garments.',
-    howItWorks:
-      'Nylon micro-denier filaments are knit in a tricot construction with a micro-grooved surface texture. The grooves create capillary channels that transport moisture vapor laterally, spreading it over a larger area for faster evaporation. The open tricot structure provides natural air permeability. Fabric weight: 55 gsm, 60-inch width.',
-    audience:
-      'Outerwear manufacturers, sleeping bag producers, glove and accessory makers, and garment lining suppliers.',
-    ai_use_cases: ['Breathable jacket linings', 'Thermal sleeping bag liners', 'Moisture-management glove liners'],
-    ai_specs: {
-      weight: '55 gsm',
-      width: '152 cm (60")',
-      composition: '100% Nylon (micro-denier)',
-      construction: 'Tricot warp knit',
-      finish: 'Hydrophilic wicking + anti-static + anti-pilling',
-      air_permeability: '120 cfm (ASTM D737)',
-      moisture_vapor_transport: 'AATCC 197: 12cm/10min vertical wicking',
-      certification: 'OEKO-TEX Standard 100',
-    },
-    ai_comparison:
-      'Compared to standard taffeta linings, this tricot liner offers superior moisture transport and breathability. It is softer against skin and reduces the cold, clammy feeling common in waterproof outerwear with standard linings.',
-    ai_faq: [
-      {
-        q: 'Does this fabric cause static cling?',
-        a: 'The anti-static finish minimizes static buildup. For extreme low-humidity environments, we recommend our conductive-fiber variant.',
-      },
-      {
-        q: 'Can this be laminated to waterproof fabrics?',
-        a: 'Yes. This is an excellent drop-liner for 2.5-layer waterproof constructions, providing a soft next-to-skin feel without a full 3-layer laminate weight.',
       },
     ],
   },
@@ -1594,49 +1462,6 @@ export const products: ProductRecord[] = [
     ],
   },
   {
-    id: 'stretch-knit-fabric',
-    name: 'Stretch Knit Fabric',
-    category: 'STRETCH',
-    region: ['EU', 'US', 'ASIA', 'GLOBAL'],
-    skill: 'intermediate',
-    environment: ['apparel', 'sportswear', 'casual wear', 'athleisure'],
-    water_condition: ['sweat', 'humidity'],
-    safety_level: 'low',
-    use_case: ['t-shirts', 'dresses', 'athleisure tops', 'yoga wear', 'casual apparel'],
-    safety_rules: ['machine wash cold', 'do not bleach', 'tumble dry low', 'do not iron high'],
-    desc: 'Soft stretch knit fabric offering natural elasticity and comfort for casual and athleisure wear.',
-    definition:
-      'A soft jersey knit fabric with spandex blend delivering 2-way (weft) stretch with >90% recovery, combining natural breathability with reliable shape retention for everyday casual and athleisure apparel.',
-    problem:
-      'Casual and athleisure brands need a knit fabric that provides comfortable stretch and shape retention without the technical look or high cost of performance stretch fabrics, suitable for everyday wear.',
-    howItWorks:
-      'Cotton, polyester, or Tencel yarns are knit with spandel core-spun yarns in a single-jersey or interlock construction. The spandex provides elastic recovery, while the natural or cellulosic fibers provide comfort and breathability. Anti-pilling treatment ensures surface aesthetics. Fabric weight: 140-220 GSM, 58/60-inch width.',
-    audience:
-      'Casual apparel brands, athleisure manufacturers, t-shirt producers, and dressmakers seeking comfortable stretch knits.',
-    ai_use_cases: ['Comfort-fit casual t-shirts', 'Athleisure tops and dresses', 'Yoga and studio apparel'],
-    ai_specs: {
-      stretch: '2-way (Weft)',
-      recovery_rate: '>90%',
-      weight: '140-220 GSM',
-      composition: 'Cotton/Spandex / Polyester/Spandex / Tencel/Spandex',
-      width: '58/60"',
-      features: 'Soft hand, breathable, shape retention, anti-pilling',
-      certification: 'OEKO-TEX',
-    },
-    ai_comparison:
-      'Compared to performance 4-way stretch fabrics, this everyday stretch knit offers a more affordable and softer hand feel suitable for casual and athleisure rather than high-compression activewear. It provides adequate stretch for daily comfort with good shape retention.',
-    ai_faq: [
-      {
-        q: 'What fiber blends are available?',
-        a: 'We offer cotton/spandex (natural feel), polyester/spandex (performance), and Tencel/spandex (eco-friendly) options.',
-      },
-      {
-        q: 'Does this fabric pill?',
-        a: 'Our anti-pilling treatment ensures Grade 4 performance on the pilling scale. Proper care extends fabric appearance.',
-      },
-    ],
-  },
-  {
     id: 'rpet-recycled-nylon-fabric',
     name: 'rPET Recycled Nylon Fabric',
     category: 'ECO_FRIENDLY',
@@ -2120,94 +1945,6 @@ export const products: ProductRecord[] = [
     ],
   },
   {
-    id: 'yoga-high-stretch-knit',
-    name: 'Yoga High Stretch Knit Fabric',
-    category: 'STRETCH',
-    region: ['EU', 'US', 'ASIA', 'AU'],
-    skill: 'advanced',
-    environment: ['sportswear', 'apparel', 'yoga', 'fitness'],
-    water_condition: ['sweat', 'humidity'],
-    safety_level: 'low',
-    use_case: ['yoga pants', 'leggings', 'dancewear', 'pilates apparel'],
-    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron', 'avoid fabric softener'],
-    desc: 'Ultra-stretch nylon-spandex knit fabric with 4-way recovery designed specifically for yoga and studio movement apparel.',
-    definition:
-      'A premium nylon-spandex circular knit fabric delivering exceptional 4-way stretch with high recovery, moisture-wicking performance, and a soft, second-skin hand feel purpose-engineered for yoga, pilates, and studio movement practice.',
-    problem:
-      'Yoga apparel brands need a fabric that stretches in all directions during complex poses, recovers fully without sagging, wicks moisture during heated sessions, and provides a smooth, non-restrictive fit that moves with the body.',
-    howItWorks:
-      'Nylon micro-filament yarns are knit with high-denier spandex in a circular knit construction. The high spandex content (20-30%) delivers extreme 4-way stretch with >95% recovery. The nylon micro-filaments create a soft, smooth surface with a matte appearance. Moisture-wicking finish accelerates sweat evaporation. Fabric weight: 180-280 GSM, 58/60-inch width.',
-    audience:
-      'Yoga apparel brands, activewear manufacturers, dancewear companies, and studio fitness clothing producers requiring high-stretch performance fabrics.',
-    ai_use_cases: ['Performance yoga leggings and pants', 'Studio dance and barre wear', 'High-stretch pilates apparel'],
-    ai_specs: {
-      weight: '180-280 GSM',
-      width: '147-152 cm (58-60")',
-      composition: 'Nylon + Spandex',
-      construction: 'Circular knit',
-      finish: 'Moisture-wicking + anti-microbial + anti-pilling',
-      stretch: '4-way stretch, >95% recovery',
-      compression: 'Light to moderate (adjustable)',
-      certification: 'OEKO-TEX Standard 100',
-    },
-    ai_comparison:
-      'Compared to standard stretch knits, this yoga-specific fabric offers higher spandex content for extreme stretch and recovery. It provides a smoother, more compressive feel than general activewear knits, with superior shape retention during repeated stretching.',
-    ai_faq: [
-      {
-        q: 'What spandex percentage is available?',
-        a: 'Standard 25% spandex for yoga applications. Options from 20% (lighter support) to 30% (maximum compression and recovery).',
-      },
-      {
-        q: 'Is this fabric squat-proof?',
-        a: 'Yes. The high-density knit construction and optimal spandex content ensure opacity during maximum stretch, making it squat-proof for yoga and fitness wear.',
-      },
-    ],
-  },
-  {
-    id: 'yoga-legging-knit-fabric',
-    name: 'Yoga Legging Knit Fabric',
-    category: 'STRETCH',
-    region: ['EU', 'US', 'ASIA', 'AU'],
-    skill: 'intermediate',
-    environment: ['sportswear', 'apparel', 'yoga', 'fitness'],
-    water_condition: ['sweat', 'humidity'],
-    safety_level: 'low',
-    use_case: ['yoga leggings', 'activewear bottoms', 'compression tights', 'running tights'],
-    safety_rules: ['machine wash cold', 'do not bleach', 'drip dry', 'do not iron', 'avoid fabric softener'],
-    desc: 'Smooth, lightweight nylon-spandex single jersey knit with 4-way stretch and antibacterial protection for yoga leggings and performance tights.',
-    definition:
-      'A lightweight nylon-spandex single jersey knit fabric engineered with 4-way stretch, moisture-wicking performance, and silver-ion antibacterial protection, designed for yoga leggings and high-performance activewear bottoms.',
-    problem:
-      'Activewear brands need a fabric that combines the smooth, silky hand feel required for fashionable leggings with the technical performance — 4-way stretch, moisture management, and odor control — demanded by fitness consumers.',
-    howItWorks:
-      'Nylon 6.6 micro-filament yarns (40D) are knit with spandex in a single jersey construction, creating a smooth face and a soft interior. The high filament count creates a silky, luxurious hand feel. Silver-ion antibacterial treatment is integrated during fiber extrusion, providing permanent odor control. Moisture-wicking finish enhances sweat management. Fabric weight: 160-220 GSM, 58/60-inch width.',
-    audience:
-      'Yoga legging manufacturers, activewear brands, compression wear companies, and fitness apparel producers seeking silky, performance-knit fabrics.',
-    ai_use_cases: ['Fashion-performance yoga leggings', 'Anti-odor running tights', 'Compression sports bottoms'],
-    ai_specs: {
-      weight: '160-220 GSM',
-      width: '147-152 cm (58-60")',
-      composition: 'Nylon 6.6 + Spandex',
-      construction: 'Single jersey circular knit',
-      finish: 'Silver-ion antibacterial + moisture-wicking + anti-pilling',
-      stretch: '4-way stretch, >90% recovery',
-      antibacterial: 'AATCC 100, >99.9% bacterial reduction',
-      certification: 'OEKO-TEX Standard 100',
-    },
-    ai_comparison:
-      'Compared to standard nylon-spandex knits, this legging-specific fabric incorporates permanent silver-ion antibacterial protection that does not wash out. It offers a silkier hand feel and better moisture management than basic activewear knits.',
-    ai_faq: [
-      {
-        q: 'Does the antibacterial treatment wash out?',
-        a: 'No. The silver-ion treatment is integrated into the fiber during extrusion, providing permanent antibacterial protection that lasts the life of the garment.',
-      },
-      {
-        q: 'Is this fabric suitable for screen printing?',
-        a: 'Yes. The smooth jersey surface accepts screen printing and heat transfers. We recommend stretch-compatible inks for best results.',
-      },
-    ],
-  },
-  {
     id: 'cooling-touch-fabric',
     name: 'Cooling Touch Fabric',
     category: 'QUICK_DRY',
@@ -2306,8 +2043,6 @@ export const mdxSlugToRecordId: Record<string, string> = {
   'breathable-mesh-fabric': 'br-high-air-mesh',
   'eco-friendly-recycled-fabric': 'eco-recycled-pet',
   'organic-cotton-fabric': 'eco-organic-cotton',
-  'compression-recovery-fabric': 'st-compression-knit',
-  'upf50-knit-activewear-fabric': 'sun-uv-blocking-knit',
   'silver-ion-antimicrobial-fabric': 'ab-silver-ion',
   'high-airflow-mesh-sportswear-fabric': 'br-high-air-mesh',
   'functional-fashion-fabric': 'functional-fashion-fabric',
@@ -2316,8 +2051,6 @@ export const mdxSlugToRecordId: Record<string, string> = {
   'outdoor-softshell-fabric': 'outdoor-softshell-fabric',
   'polyester-softshell-fabric': 'polyester-softshell-fabric',
   'quick-dry-sports-woven-fabric': 'quick-dry-sports-woven-fabric',
-  'yoga-high-stretch-knit': 'yoga-high-stretch-knit',
-  'yoga-legging-knit-fabric': 'yoga-legging-knit-fabric',
   'cooling-touch-fabric': 'cooling-touch-fabric',
   'light-down-fabric': 'light-down-fabric',
 };

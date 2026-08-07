@@ -80,7 +80,6 @@ Closed-loop water systems, energy-efficient production, recycled fiber sourcing,
 ## Product Ecosystem
 
 ### Sun Protection (UPF 50+) Fabrics
-- **UPF 50+ Knits:** Stretch knit fabrics for activewear and swimwear with maximum UV protection
 - **UPF 50+ Wovens:** Lightweight woven fabrics for shirts, pants, and outdoor apparel
 - **Cooling UPF:** Integrated cooling technology with UPF protection for extreme heat environments
 
