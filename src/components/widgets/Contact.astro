@@ -109,7 +109,14 @@ const rows = Object.keys(grouped)
         style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none"
       >
         <label for={`${id}-email-confirm`}>Do not fill this</label>
-        <input id={`${id}-email-confirm`} type="text" name="email_confirm" tabindex="-1" autocomplete="off" />
+        <input
+          id={`${id}-email-confirm`}
+          type="text"
+          name="email_confirm"
+          tabindex="-1"
+          autocomplete="new-password"
+          aria-hidden="true"
+        />
       </div>
       <div data-form-fields>
         {
@@ -304,6 +311,9 @@ const rows = Object.keys(grouped)
         for (const [k, v] of fd.entries()) {
           if (typeof v === 'string') data[k] = v.trim();
         }
+        // Honeypot field may be auto-filled by browser extensions — never send it.
+        // Bots that post directly to /api/contact with a filled honeypot are still rejected server-side.
+        delete data.email_confirm;
         const cc = data.tel_countryCode || '';
         if (data.tel) data.tel = `${cc} ${data.tel}`.trim();
         delete data.tel_countryCode;
