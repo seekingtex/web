@@ -55,14 +55,14 @@ const heroSlides: HeroSlide[] = (heroImagesData?.slides || []).filter((s: { imag
 ];
 
 const defaultVisuals: Record<string, string> = {
-  'sun-protection-upf50': '/images/seekingtex/products/sun-protection-fabric.webp',
-  'waterproof-breathable': '/images/seekingtex/products/waterproof-breathable-fabric.webp',
-  'quick-dry-moisture-wicking': '/images/seekingtex/products/quick-dry-fabric.webp',
-  'antibacterial-7a': '/images/seekingtex/products/antibacterial-fabric.webp',
-  'stretch-4way': '/images/seekingtex/products/4way-stretch-fabric.webp',
-  'breathable-mesh': '/images/seekingtex/products/breathable-mesh-fabric.webp',
-  'eco-friendly-recycled': '/images/seekingtex/products/eco-friendly-fabric.webp',
-  'flame-retardant': '/images/seekingtex/products/flame-retardant-fabric.webp',
+  'sun-polyester-upf50': '/images/seekingtex/products/sun-protection-fabric.webp',
+  'wp-breathable-membrane': '/images/seekingtex/products/waterproof-breathable-fabric.webp',
+  'qd-moisture-wicking-poly': '/images/seekingtex/products/quick-dry-fabric.webp',
+  'ab-silver-ion': '/images/seekingtex/products/antibacterial-fabric.webp',
+  'st-4way-nylon-spandex': '/images/seekingtex/products/4way-stretch-fabric.webp',
+  'br-high-air-mesh': '/images/seekingtex/products/breathable-mesh-fabric.webp',
+  'eco-recycled-pet': '/images/seekingtex/products/eco-friendly-fabric.webp',
+  'fr-cotton-polyester-workwear-fabric': '/images/seekingtex/products/flame-retardant-fabric.webp',
 };
 const rawVisuals = (productVisualsData?.visuals || []) as Array<{ id: string; image: string }>;
 const yamlVisuals = Object.fromEntries(rawVisuals.map((v) => [v.id, v.image]).filter(([, img]) => img));
@@ -705,7 +705,7 @@ const faqCategories = [
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
         <div
           class="h-36 bg-cover bg-center"
-          style="background-image: url('/images/seekingtex/hero/seekingtex-hero-design-concept.webp')"
+          style="background-image: url('/images/seekingtex/philosophy/performance-first-design.jpg')"
         >
         </div>
         <div class="p-6">
@@ -733,7 +733,7 @@ const faqCategories = [
       <div class="bg-white border border-gray-200 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
         <div
           class="h-36 bg-cover bg-center"
-          style="background-image: url('/images/seekingtex/categories/seekingtex-rescue-operations.webp')"
+          style="background-image: url('/images/seekingtex/philosophy/certification-as-standard.webp')"
         >
         </div>
         <div class="p-6">
@@ -763,13 +763,13 @@ const faqCategories = [
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div
-            class="h-36 bg-cover bg-center"
-            style="background-image: url('/images/seekingtex/hero/factory-gate.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">Wrong fabric for the use</h3>
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('/images/seekingtex/philosophy/wrong-fabric-for-the-use.avif')"
+        >
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900">Wrong fabric for the use</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
               A lightweight fashion fabric used for outdoor workwear. A non-breathable membrane in activewear. Fabric
               pushed beyond its design envelope leads to poor performance and user discomfort.
@@ -777,13 +777,13 @@ const faqCategories = [
           </div>
         </div>
         <div class="bg-white rounded-2xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden">
-          <div
-            class="h-36 bg-cover bg-center"
-            style="background-image: url('/images/seekingtex/categories/seekingtex-accessories-category.webp')"
-          >
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-semibold text-gray-900">One-spec-fits-none claims</h3>
+        <div
+          class="h-36 bg-cover bg-center"
+          style="background-image: url('/images/seekingtex/philosophy/one-spec-fits-none-claims.webp')"
+        >
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-semibold text-gray-900">One-spec-fits-none claims</h3>
             <p class="mt-3 text-gray-500 text-sm leading-relaxed">
               Many brands label everything "high performance." Without clear certified specifications and third-party
               test reports, buyers cannot make informed decisions.

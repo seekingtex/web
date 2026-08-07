@@ -1,18 +1,52 @@
 visuals:
-  - id: sun-protection-upf50
-    image: /images/seekingtex/products/sun-protection-fabric.webp
-  - id: waterproof-breathable
-    image: /images/seekingtex/products/waterproof-fabric.webp
-  - id: quick-dry-moisture-wicking
-    image: /images/seekingtex/products/quick-dry-fabric.webp
-  - id: antibacterial-7a
-    image: /images/seekingtex/products/antibacterial-fabric.webp
-  - id: 4-way-stretch-fabric
-    image: /images/seekingtex/products/stretch-fabric.webp
-  - id: breathable-mesh-fabric
-    image: /images/seekingtex/products/breathable-fabric.webp
-  - id: eco-friendly-recycled-fabric
-    image: /images/seekingtex/products/eco-friendly-fabric.webp
+  - id: sun-polyester-upf50
+    image: /images/seekingtex/products/upf50-sun-protection-polyester-fabric.webp
+  - id: sun-nylon-upf50
+    image: /images/seekingtex/products/upf50-nylon-sun-protection-fabric.webp
+  - id: sun-cotton-synth-blend
+    image: /images/seekingtex/products/upf50-cotton-synthetic-blend.jpg
+  - id: sun-protection-mesh
+    image: /images/seekingtex/products/sun-protection-mesh-fabric.webp
+  - id: wp-pu-coated
+    image: /images/seekingtex/products/waterproof-breathable-pu-coated-fabric.webp
+  - id: wp-tpu-laminate
+    image: /images/seekingtex/products/waterproof-tpu-laminated-fabric.webp
+  - id: wp-pvc-coated
+    image: /images/seekingtex/products/waterproof-pvc-coated-polyester.webp
+  - id: wp-breathable-membrane
+    image: /images/seekingtex/products/waterproof-breathable-membrane-fabric.jpg
+  - id: wp-seam-sealed
+    image: /images/seekingtex/products/waterproof-seam-sealed-fabric.webp
+  - id: qd-moisture-wicking-poly
+    image: /images/seekingtex/products/moisture-wicking-polyester-fabric.webp
+  - id: qd-nylon-tricot
+    image: /images/seekingtex/products/quick-dry-nylon-tricot.webp
+  - id: qd-hydrophilic-treated
+    image: /images/seekingtex/products/hydrophilic-treated-quick-dry-fabric.webp
+  - id: qd-dri-release
+    image: /images/seekingtex/products/dri-release-polyester-cotton-blend.webp
+  - id: ab-silver-ion
+    image: /images/seekingtex/products/silver-ion-antibacterial-fabric.webp
+  - id: ab-zinc-oxide
+    image: /images/seekingtex/products/zinc-oxide-antimicrobial-fabric.webp
+  - id: ab-chitosan
+    image: /images/seekingtex/products/chitosan-treated-antibacterial-fabric.webp
+  - id: ab-photocatalytic
+    image: /images/seekingtex/products/photocatalytic-self-cleaning-fabric.webp
+  - id: st-4way-nylon-spandex
+    image: /images/seekingtex/products/4-way-stretch-nylon-spandex-fabric.webp
+  - id: st-2way-polyester
+    image: /images/seekingtex/products/2-way-stretch-polyester-fabric.png
+  - id: br-high-air-mesh
+    image: /images/seekingtex/products/high-air-permeability-mesh-fabric.jpg
+  - id: br-microporous
+    image: /images/seekingtex/products/breathable-mesh-fabric.webp
+  - id: eco-recycled-pet
+    image: /images/seekingtex/products/recycled-polyester-fabric-rpet.png
+  - id: eco-organic-cotton
+    image: /images/seekingtex/products/organic-cotton-functional-fabric.png
+  - id: eco-biodegradable-pla
+    image: /images/seekingtex/products/biodegradable-pla-fabric.webp
   - id: ice-silk-cooling-fabric
     image: /images/seekingtex/products/cooling-fabric.webp
   - id: tactical-ripstop-fabric
@@ -29,26 +63,14 @@ visuals:
     image: /images/seekingtex/products/graphene-fabric.webp
   - id: fleece-thermal-lining
     image: /images/seekingtex/products/fleece-fabric.webp
-  - id: compression-recovery-fabric
-    image: /images/seekingtex/products/compression-texture.jpg
-  - id: stretch-knit-fabric
-    image: /images/seekingtex/products/knit-stretch-texture.jpg
-  - id: organic-cotton-fabric
-    image: /images/seekingtex/products/organic-cotton-texture.jpg
   - id: rpet-recycled-nylon-fabric
     image: /images/seekingtex/products/rpet-nylon-texture.jpg
   - id: inherent-fr-fabric
     image: /images/seekingtex/products/flame-retardant-fabric.webp
   - id: fr-cotton-polyester-workwear-fabric
-    image: /images/seekingtex/products/fr-workwear-texture.jpg
+    image: /images/seekingtex/products/fr-workwear-texture.webp
   - id: arc-flash-welding-protection-fabric
     image: /images/seekingtex/products/arc-flash-fabric-texture.jpg
-  - id: upf50-knit-activewear-fabric
-    image: /images/seekingtex/products/activewear-upf-texture.jpg
-  - id: silver-ion-antimicrobial-fabric
-    image: /images/seekingtex/products/antimicrobial-texture.jpg
-  - id: high-airflow-mesh-sportswear-fabric
-    image: /images/seekingtex/products/breathable-mesh-fabric.webp
   - id: functional-fashion-fabric
     image: /images/seekingtex/products/functional-fashion-texture.jpg
   - id: high-density-tactical-fabric
@@ -61,10 +83,6 @@ visuals:
     image: /images/seekingtex/products/polyester-softshell-texture.jpg
   - id: quick-dry-sports-woven-fabric
     image: /images/seekingtex/products/quick-dry-woven-texture.jpg
-  - id: yoga-high-stretch-knit
-    image: /images/seekingtex/products/yoga-stretch-knit-texture.jpg
-  - id: yoga-legging-knit-fabric
-    image: /images/seekingtex/products/yoga-legging-knit-texture.jpg
   - id: cooling-touch-fabric
     image: /images/seekingtex/products/cooling-touch-texture.jpg
   - id: light-down-fabric
