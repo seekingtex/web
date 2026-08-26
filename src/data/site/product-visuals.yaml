@@ -2,7 +2,7 @@ visuals:
   - id: sun-polyester-upf50
     image: /images/seekingtex/products/upf50-sun-protection-polyester-fabric.webp
   - id: sun-nylon-upf50
-    image: /images/seekingtex/products/upf50-nylon-sun-protection-fabric.webp
+    image: /images/seekingtex/products/upf50-nylon-sun-protection-fabric.png
   - id: sun-cotton-synth-blend
     image: /images/seekingtex/products/upf50-cotton-synthetic-blend.jpg
   - id: sun-protection-mesh
@@ -22,7 +22,7 @@ visuals:
   - id: qd-nylon-tricot
     image: /images/seekingtex/products/quick-dry-nylon-tricot.webp
   - id: qd-hydrophilic-treated
-    image: /images/seekingtex/products/hydrophilic-treated-quick-dry-fabric.webp
+    image: /images/seekingtex/products/hydrophilic-treated-quick-dry-fabric.png
   - id: qd-dri-release
     image: /images/seekingtex/products/dri-release-polyester-cotton-blend.webp
   - id: ab-silver-ion
