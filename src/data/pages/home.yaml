@@ -21,7 +21,7 @@ hero_carousel:
   autoplay_interval: 5000
   slides:
     - image:
-        src: /images/seekingtex/hero/hero-fabrics.webp
+        src: /images/seekingtex/hero/hero-fabrics.png
         alt: Seekingtex functional fabric production facility overview — textile manufacturing workshop
       tagline: Welcome
       title: |
@@ -36,7 +36,7 @@ hero_carousel:
           href: /contact
           variant: secondary
     - image:
-        src: /images/seekingtex/hero/hero-quality.webp
+        src: /images/seekingtex/hero/hero-quality.png
         alt: Seekingtex fabric quality control and testing laboratory
       tagline: Craftsmanship
       title: |
@@ -48,7 +48,7 @@ hero_carousel:
           href: /about
           variant: primary
     - image:
-        src: /images/seekingtex/hero/hero-support.webp
+        src: /images/seekingtex/hero/hero-support.png
         alt: Seekingtex customer service and technical support team
       tagline: Support
       title: |
@@ -110,7 +110,7 @@ content_workshop:
     - title: Tested before it reaches you
       description: Every batch is tested for UPF rating, water resistance, tensile strength, and performance properties before leaving our facility.
   image:
-    src: /images/seekingtex/hero/production-workshop.webp
+    src: /images/seekingtex/hero/production-workshop.png
     alt: Seekingtex textile production facility — quality craftsmanship in Kunshan workshop
 
 steps:
@@ -132,7 +132,7 @@ steps:
       description: Your order ships from our facility with complete test reports and certification documents.
       icon: tabler:heart
   image:
-    src: /images/seekingtex/hero/production-dept.webp
+    src: /images/seekingtex/hero/production-dept.png
     alt: Seekingtex fabric quality testing process — performance textile production
 
 blog_latest:

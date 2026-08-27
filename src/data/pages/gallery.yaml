@@ -7,14 +7,14 @@ albums:
   - title: Functional Fabrics
     desc: UPF 50+ sun protection, waterproof breathable, quick-dry, antibacterial and stretch fabrics for various applications.
     images:
-      - /images/seekingtex/hero/hero-fabrics.webp
-      - /images/seekingtex/hero/production-workshop.webp
-      - /images/seekingtex/hero/production-dept.webp
+      - /images/seekingtex/hero/hero-fabrics.png
+      - /images/seekingtex/hero/production-workshop.png
+      - /images/seekingtex/hero/production-dept.png
   - title: Factory & Workshop
     desc: Our textile manufacturing facility in Kunshan, China.
     images:
-      - /images/seekingtex/hero/hero-quality.webp
-      - /images/seekingtex/hero/hero-support.webp
+      - /images/seekingtex/hero/hero-quality.png
+      - /images/seekingtex/hero/hero-support.png
       - /images/seekingtex/factory/Seekingtex factory.png
       - /images/seekingtex/factory/design-discuss.png
 

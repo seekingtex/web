@@ -23,22 +23,22 @@ workshops_section:
   workshops:
     - title: Knitting & Weaving
       description: Advanced circular knitting machines and rapier weaving looms produce high-quality fabric substrates. Computer-controlled tension systems ensure consistent fabric density and uniform structure across every roll.
-      image: /images/seekingtex/hero/production-dept.webp
+      image: /images/seekingtex/hero/production-dept.png
     - title: Dyeing & Finishing
       description: Precision dyeing workshop with programmable jet dyeing machines and padding lines. Color matching via spectrophotometry ensures batch-to-batch consistency. Finishing processes include heat setting, sanforizing, and anti-pilling treatments.
-      image: /images/seekingtex/hero/production-workshop.webp
+      image: /images/seekingtex/hero/production-workshop.png
     - title: Functional Coating & Lamination
       description: Coating lines apply PU, PVC, silicone, and acrylic finishes for waterproof, UV-blocking, and antibacterial properties. Lamination lines bond membranes and functional layers with precise temperature and pressure control.
       image: /images/seekingtex/factory/design-discuss.png
     - title: Printing & Embossing
       description: Digital printing and rotary screen printing for custom patterns and branding. Embossing and calendering lines add texture, gloss control, and surface effects for specialized applications.
-      image: /images/seekingtex/hero/hero-fabrics.webp
+      image: /images/seekingtex/hero/hero-fabrics.png
     - title: Inspection & Rewinding
       description: Automated inspection lines scan every meter of fabric for defects using vision systems. Fabric is rewound, measured, and packaged according to customer specifications.
-      image: /images/seekingtex/hero/hero-quality.webp
+      image: /images/seekingtex/hero/hero-quality.png
     - title: Quality Testing Laboratory
       description: Dedicated quality lab equipped with standardized testing equipment for UPF rating, waterproofness, tensile strength, abrasion, colorfastness, and dimensional stability. Operates independently from production.
-      image: /images/seekingtex/hero/hero-support.webp
+      image: /images/seekingtex/hero/hero-support.png
 
 equipment_section:
   tagline: Equipment
