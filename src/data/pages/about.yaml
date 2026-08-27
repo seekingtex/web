@@ -1,7 +1,7 @@
 hero:
   tagline: About us
   image:
-    src: /images/seekingtex/factory/Seekingtex factory.webp
+    src: /images/seekingtex/factory/Seekingtex factory.png
     alt: Seekingtex factory and production facility
   title: |
     Textile engineering, <br />
@@ -51,7 +51,7 @@ features3_more:
       description: Recycled polyester and sustainable textile solutions for eco-conscious brands.
       icon: tabler:leaf
   image:
-    src: /images/seekingtex/factory/design-discuss.webp
+    src: /images/seekingtex/factory/design-discuss.png
     alt: Textile design and engineering discussion
 
 steps2_values:

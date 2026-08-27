@@ -15,8 +15,8 @@ albums:
     images:
       - /images/seekingtex/hero/hero-quality.webp
       - /images/seekingtex/hero/hero-support.webp
-      - /images/seekingtex/factory/Seekingtex factory.webp
-      - /images/seekingtex/factory/design-discuss.webp
+      - /images/seekingtex/factory/Seekingtex factory.png
+      - /images/seekingtex/factory/design-discuss.png
 
 cta:
   title: Want to see more?
