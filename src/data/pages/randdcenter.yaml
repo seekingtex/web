@@ -100,27 +100,27 @@ labs_section:
   tagline: Labs
   title: Our Laboratories
   labs:
-    - image: /images/seekingtex/randd/seekingtex-pvc-material-lab.webp
+    - image: /images/seekingtex/randd/seekingtex-pvc-material-lab.png
       title: Fabric Formulation Lab
       description: Continuous research and testing of fabric formulations including fiber blends, weave constructions, and functional finishes. Performance testing for tensile strength, UV resistance, abrasion, and wash durability.
       href: /randdcenter/pvc-fabric-lab
-    - image: /images/seekingtex/factory/design discuss2.jpeg
+    - image: /images/seekingtex/factory/design discuss2.png
       title: Textile Engineering Studio
       description: CAD-driven fabric design and finite element analysis of woven and knitted structures. Every construction is digitally simulated for strength, stretch, and drape before the first sample is produced.
       href: /randdcenter/fabric-engineering
-    - image: /images/seekingtex/factory/functional fabric making3.jpeg
+    - image: /images/seekingtex/factory/functional fabric making3.png
       title: Coating & Lamination Lab
       description: Dedicated coating and lamination facility with precision temperature and pressure control, producing high-performance finished fabrics that meet textile industry standards for quality and consistency.
       href: /randdcenter/rf-welding
-    - image: /images/seekingtex/factory/design discuss original.jpeg
+    - image: /images/seekingtex/factory/design discuss original.png
       title: Performance Testing Laboratory
       description: Comprehensive testing for moisture management, water repellency, air permeability, thermal resistance, and colorfastness across a range of fabric constructions and finish types.
       href: /randdcenter/performance-testing-lab
-    - image: /images/seekingtex/products/functional fabric-series/functional fabric-ocean-voyager-1.webp
+    - image: /images/seekingtex/products/functional fabric-series/functional fabric-ocean-voyager-1.png
       title: Prototype Workshop
       description: Full-scale prototyping facility where new fabric designs, finished samples, and custom developments are produced, evaluated, and refined. Every prototype undergoes comprehensive testing before production approval.
       href: /randdcenter/prototype-workshop
-    - image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+    - image: /images/seekingtex/factory/UV Resistance Testing.png
       title: Quality & Inspection Lab
       description: Dedicated quality assurance lab performing tensile testing, dimensional measurement, seam strength tests, and material certification to ensure every fabric roll meets our published specifications.
       href: /randdcenter/quality-inspection-lab

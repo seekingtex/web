@@ -16,7 +16,7 @@ stats:
 tests:
   - title: UPF Rating Testing
     description: Fabric samples are tested using spectrophotometry per UV Standard 801 and AS/NZS 4399 to determine the UPF rating. Each batch is verified to meet UPF 50+ standards for effective sun protection.
-    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+    image: /images/seekingtex/factory/UV Resistance Testing.png
   - title: Water Repellency & Hydrostatic Head Testing
     description: Fabrics undergo spray rating tests (ISO 4920) and hydrostatic pressure tests (ISO 811) to measure water resistance. Results are classified from water-resistant to waterproof at specified pressure ratings.
     image: /images/seekingtex/factory/Pressure Testing.jpeg
@@ -34,7 +34,7 @@ tests:
     image: /images/seekingtex/factory/seekingtex-factory-exterior.webp
   - title: Colorfastness Testing
     description: ISO 105 series tests evaluate colorfastness to light, washing, perspiration, rubbing and water. Each batch is verified for color consistency and retention under specified conditions.
-    image: /images/seekingtex/factory/UV Resistance Testing.jpeg
+    image: /images/seekingtex/factory/UV Resistance Testing.png
   - title: Dimensional Stability Testing
     description: Fabrics are laundered and dried per AATCC 135 to measure shrinkage and distortion. Dimensional stability is verified to ensure garments maintain shape after repeated washing.
     image: /images/seekingtex/factory/functional fabric making.jpeg
