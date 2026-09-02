@@ -19,25 +19,25 @@ tests:
     image: /images/seekingtex/factory/UV Resistance Testing.png
   - title: Water Repellency & Hydrostatic Head Testing
     description: Fabrics undergo spray rating tests (ISO 4920) and hydrostatic pressure tests (ISO 811) to measure water resistance. Results are classified from water-resistant to waterproof at specified pressure ratings.
-    image: /images/seekingtex/factory/Pressure Testing.jpeg
+    image: /images/seekingtex/factory/Pressure Testing.png
   - title: Moisture Management / Drying Rate Testing
     description: AATCC 195 and similar protocols measure vertical wicking, absorption rate, and drying time to validate quick-dry performance. Fabrics must demonstrate rapid moisture transport and evaporation.
-    image: /images/seekingtex/factory/producing department.jpeg
+    image: /images/seekingtex/factory/producing department.png
   - title: Abrasion Resistance Testing
     description: Fabric samples are subjected to controlled abrasion cycles using the Martindale method (ISO 12947) to measure resistance to wear. Results ensure durability for the intended end-use application.
-    image: /images/seekingtex/factory/PVC material.jpeg
+    image: /images/seekingtex/factory/PVC material.png
   - title: Tensile & Tear Strength Testing
     description: ASTM D5034 and ISO 13937 methods measure warp and weft tensile strength and tear propagation resistance. Every batch must meet minimum strength specifications before release.
-    image: /images/seekingtex/factory/producing department2.jpeg
+    image: /images/seekingtex/factory/producing department2.png
   - title: Antibacterial Activity Testing
     description: AATCC 100 and ISO 20743 test methods quantify bacterial reduction rates against Staphylococcus aureus and Klebsiella pneumoniae. Our antibacterial fabrics achieve 99%+ reduction rates.
-    image: /images/seekingtex/factory/seekingtex-factory-exterior.webp
+    image: /images/seekingtex/factory/seekingtex-factory-exterior.png
   - title: Colorfastness Testing
     description: ISO 105 series tests evaluate colorfastness to light, washing, perspiration, rubbing and water. Each batch is verified for color consistency and retention under specified conditions.
     image: /images/seekingtex/factory/UV Resistance Testing.png
   - title: Dimensional Stability Testing
     description: Fabrics are laundered and dried per AATCC 135 to measure shrinkage and distortion. Dimensional stability is verified to ensure garments maintain shape after repeated washing.
-    image: /images/seekingtex/factory/functional fabric making.jpeg
+    image: /images/seekingtex/factory/functional fabric making.png
 
 testing_section:
   tagline: Testing Procedures
