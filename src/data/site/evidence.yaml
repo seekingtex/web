@@ -280,7 +280,7 @@ case_studies:
     challenge: Leading European outdoor brand needed a lightweight UPF 50+ woven fabric with DWR finish for their summer hiking collection 鈥?OEKO-TEX certified, delivered in 60 days.
     solution: Developed a 110 g/m虏 plain-weave recycled polyester fabric, applied nano-DWR finish, and coordinated third-party UPF and hydrostatic head testing. Completed lab dip to bulk in 52 days.
     result: 52 days from signed PO to FOB Shanghai. 12,000 meters across 3 colors. Repeat order received before first container arrived.
-    image: /images/seekingtex/products/fabric-rolls.webp
+    image: /images/seekingtex/products/eval-european-outdoor-brand.png
     tags: [OEM, Outdoor, UPF, Recycled]
     outcome_metrics:
       - label: Lead Time
@@ -297,7 +297,7 @@ case_studies:
     challenge: ASEAN uniform manufacturer needed a FR-treated poly-cotton twill fabric for a government workwear tender 鈥?with EN ISO 11612 certification and antimicrobial finish.
     solution: Engineered a 65/35 poly-cotton twill with Proban FR treatment, added antibacterial finish, and provided full EN ISO 11612 and OEKO-TEX certification documentation.
     result: Tender awarded for 50,000 sets. 98% first-pass yield during garment cutting. Repeat order confirmed for 30,000 additional sets.
-    image: /images/seekingtex/products/fabric-rolls.webp
+    image: /images/seekingtex/products/eval-asean-uniform-manufacturer.png
     tags: [OEM, Workwear, FR, Antibacterial]
     outcome_metrics:
       - label: Garment Sets
@@ -376,15 +376,15 @@ spec_sheets:
     href: /products#eco
 
 deployment_photos:
-  - image: /images/seekingtex/hero/hero-5.webp
+  - image: /images/seekingtex/hero/hero-5.png
     caption: Fabric rolls at our Suzhou factory ready for shipment
     context: Factory
-  - image: /images/seekingtex/hero/hero-scenic.webp
+  - image: /images/seekingtex/hero/hero-scenic.png
     caption: Quality inspection team reviewing fabric samples
     context: Quality Control
-  - image: /images/seekingtex/products/seekingtex-production-department.webp
+  - image: /images/seekingtex/products/seekingtex-production-department.png
     caption: Weaving production line at our Suzhou manufacturing facility
     context: Manufacturing
-  - image: /images/seekingtex/factory/seekingtex-production-department.webp
+  - image: /images/seekingtex/factory/seekingtex-production-department.png
     caption: Ready-to-ship fabric inventory awaiting container loading
     context: Logistics
