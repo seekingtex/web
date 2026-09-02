@@ -307,23 +307,6 @@ case_studies:
       - label: Certification
         value: EN ISO 11612
 
-  - id: us-activewear-startup
-    client: US Activewear Startup
-    product: Moisture-Wicking Recycled Knit
-    industry: Startup / Sportswear
-    challenge: US activewear startup needed a recycled polyester knit fabric with moisture-wicking finish, quick-dry performance, and GRS certification for their eco-friendly yoga line.
-    solution: Sourced GRS-certified recycled polyester yarn, developed a 160 g/m虏 single jersey knit, applied moisture-wicking finish, and provided full GRS certification chain-of-custody documentation.
-    result: Launched in 30+ US boutique retailers. 15,000+ units sold in first 6 months with 95% sell-through rate. Featured in two sustainability-focused publications.
-    image: /images/seekingtex/products/fabric-rolls.webp
-    tags: [OEM, Knit, Recycled, GRS]
-    outcome_metrics:
-      - label: Retailers
-        value: 30+
-      - label: First 6 Months
-        value: 15,000 units
-      - label: Sell-Through
-        value: 95%
-
   - id: workwear-industrial-uniform-fabric-development
     client: European Professional Workwear Brand
     product: Lightweight Stretch Ripstop Workwear Fabric System
